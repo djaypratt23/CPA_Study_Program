@@ -1,0 +1,439 @@
+[
+  {
+    "id": "far-rev2-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company sells a $900 bundle of two items that sell separately for $600 and $400. How much revenue is allocated to the $600 item?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$600",
+        "explanation": "The bundle discount must be allocated.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$500",
+        "explanation": "That splits the price evenly.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$540",
+        "explanation": "Correct. 600 ÷ 1,000 × 900."
+      },
+      {
+        "id": "d",
+        "text": "$500 plus the $100 discount",
+        "explanation": "The discount is spread proportionally.",
+        "trap": "other"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Allocate by relative standalone selling prices: 600 / (600 + 400) × 900 = **540**; the other item gets 360.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-rev2-chk1",
+    "pool": "lesson",
+    "stem": "A seller offers a volume rebate. Based on extensive experience, there's a wide range of possible rebate amounts. Which method should it use to estimate the variable consideration?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Most likely amount",
+        "explanation": "Best when there are only two possible outcomes.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Ignore variable consideration until the rebate is paid",
+        "explanation": "Variable consideration is estimated at inception.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Minimum possible amount always",
+        "explanation": "The constraint limits estimates; it isn't a required 'minimum' method.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Expected value",
+        "explanation": "Correct. Best for many possible outcomes with experience to weight them."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Use the method that better predicts the amount: expected value for a large number of similar contracts/outcomes; most likely amount for binary outcomes.",
+    "skill": "application"
+  },
+  {
+    "id": "far-rev2-chk2",
+    "pool": "lesson",
+    "stem": "A company is building custom equipment with no alternative use to the company; the contract gives it an enforceable right to payment for work performed to date plus a reasonable margin. How is revenue recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Over time, measuring progress toward completion",
+        "explanation": "Correct. No alternative use + enforceable right to payment for performance to date → over-time recognition."
+      },
+      {
+        "id": "b",
+        "text": "At a point in time, when the equipment is delivered",
+        "explanation": "The third over-time criterion is met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "When the customer pays in full",
+        "explanation": "Cash timing doesn't determine recognition.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only when the contract is completed",
+        "explanation": "Completed-contract isn't the model under ASC 606.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "No alternative use + enforceable right to payment for performance to date → over-time recognition.",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-rev2-01",
+    "pool": "practice",
+    "stem": "A contractor can earn a $50,000 bonus only if a project finishes by June 30; otherwise it earns nothing extra. It estimates an 80% chance of finishing on time and concludes a significant reversal is not probable. Base fee: $400,000. What is the transaction price?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$440,000",
+        "explanation": "This uses the expected value (80% × 50,000), but a binary outcome calls for the most likely amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$400,000",
+        "explanation": "The constraint doesn't apply here.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$450,000",
+        "explanation": "Correct. Most likely amount: bonus earned."
+      },
+      {
+        "id": "d",
+        "text": "$410,000",
+        "explanation": "This uses the 20% probability of missing.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Two possible outcomes → most likely amount (50,000). Not constrained → transaction price = 400,000 + 50,000 = **450,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-rev2-02",
+    "pool": "practice",
+    "stem": "A company sells goods for $242,000 payable in two years (a significant financing component exists). The cash selling price is $200,000 (implicit rate 10%). How much revenue is recognized when the goods are delivered?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$242,000",
+        "explanation": "The financing element is interest, not revenue from the goods.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "Correct. Revenue at the cash selling price; 42,000 is interest income over two years."
+      },
+      {
+        "id": "c",
+        "text": "$220,000",
+        "explanation": "This discounts for only one year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$0 until payment",
+        "explanation": "Revenue is recognized when control transfers.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Adjust for the significant financing component: revenue = present value = 242,000 ÷ 1.10² = **200,000**; interest income is recognized over the payment period.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-rev2-03",
+    "pool": "practice",
+    "stem": "A retailer sells 2,000 units at $50 each (cost $30) with a right of return and expects 4% to be returned. What revenue and refund liability are recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Revenue $100,000; refund liability $0",
+        "explanation": "Expected returns reduce revenue.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Revenue $96,000; refund liability $2,400",
+        "explanation": "The refund liability is at the selling price, not cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Revenue $98,000; refund liability $2,000",
+        "explanation": "This uses 2% instead of 4%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Revenue $96,000; refund liability $4,000",
+        "explanation": "Correct. Gross sales 100,000; expected returns 4% = 4,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Gross sales 100,000; expected returns 4% = 4,000. Revenue **96,000**; refund liability **4,000**; asset for recovery of goods 2,400 (80 units × $30).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-rev2-04",
+    "pool": "practice",
+    "stem": "A company sells a bundle for $1,500: product A (SSP $1,000), product B (SSP $600), and a service C (SSP $400). What is allocated to service C?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300",
+        "explanation": "Correct. 400 ÷ 2,000 × 1,500."
+      },
+      {
+        "id": "b",
+        "text": "$400",
+        "explanation": "This ignores the bundle discount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$500",
+        "explanation": "Equal split has no basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0 (residual)",
+        "explanation": "The residual approach applies only when SSP is highly variable or uncertain.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Total SSP = 2,000; discount 25%. C = 400 / 2,000 × 1,500 = **300**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-rev2-05",
+    "pool": "practice",
+    "stem": "Which situation requires revenue to be recognized **over time**?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A retailer sells a television to a customer in a store",
+        "explanation": "Control transfers at a point in time.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A cleaning company provides monthly office cleaning",
+        "explanation": "Correct. The customer simultaneously receives and consumes the benefit."
+      },
+      {
+        "id": "c",
+        "text": "A manufacturer ships standard parts FOB shipping point",
+        "explanation": "Point in time at shipment.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A developer sells a finished condominium unit",
+        "explanation": "Point in time when control passes.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Routine services consumed as performed meet the first over-time criterion.",
+    "skill": "application"
+  },
+  {
+    "id": "far-rev2-06",
+    "pool": "practice",
+    "stem": "A contractor uses cost-to-cost. Contract price $8,000,000. Year 1 costs $2,000,000; estimated total costs $6,400,000. What is Year 1 gross profit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$500,000",
+        "explanation": "Correct. 31.25% × 8,000,000 = 2,500,000 revenue − 2,000,000 cost."
+      },
+      {
+        "id": "b",
+        "text": "$1,600,000",
+        "explanation": "That's the total expected gross profit.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$2,500,000",
+        "explanation": "That's revenue, not gross profit.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Profit is recognized as progress occurs.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Progress = 2,000,000 / 6,400,000 = 31.25%. Revenue = 2,500,000. Gross profit = **500,000** (= 31.25% × 1,600,000).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-rev2-07",
+    "pool": "practice",
+    "stem": "At the end of Year 2, a fixed-price contract of $3,000,000 has revised estimated total costs of $3,200,000. Cumulative costs to date are $2,400,000, and $150,000 of gross profit was recognized in Year 1. What loss is recognized in Year 2?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "This ignores that 150,000 of profit was already recognized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "This recognizes only the proportional loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$350,000",
+        "explanation": "Correct. Reverse the 150,000 profit and recognize the entire 200,000 expected loss."
+      },
+      {
+        "id": "d",
+        "text": "$150,000",
+        "explanation": "This only reverses prior profit.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "An expected loss on a contract is recognized in full immediately. Cumulative loss to recognize by end of Year 2 = 200,000; Year 1 recognized +150,000 → Year 2 loss = **350,000**.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-rev2-08",
+    "pool": "practice",
+    "stem": "A company pays a 5% sales commission ($30,000) to obtain a 3-year service contract. How is the commission accounted for?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Expensed immediately",
+        "explanation": "Incremental costs of obtaining a contract longer than one year are capitalized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Capitalized and amortized over the 3-year contract (consistent with the transfer of services)",
+        "explanation": "Correct. ASC 340-40: incremental costs of obtaining a contract are capitalized if expected to be recovered and amortized systematically; the expedient to expense applies only when amortization would be ≤ 1 year."
+      },
+      {
+        "id": "c",
+        "text": "Deducted from contract revenue",
+        "explanation": "Commissions to employees aren't consideration payable to the customer.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Capitalized and never amortized",
+        "explanation": "The asset is amortized as services transfer.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 340-40: incremental costs of obtaining a contract are capitalized if expected to be recovered and amortized systematically; the expedient to expense applies only when amortization would be ≤ 1 year.",
+    "skill": "application"
+  },
+  {
+    "id": "far-rev2-09",
+    "pool": "practice",
+    "stem": "A company has performed work and recognized $60,000 of revenue, but it can bill the customer only after completing a second milestone. What is recognized on the balance sheet?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accounts receivable of $60,000",
+        "explanation": "The right to payment is conditional on further performance.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Contract liability of $60,000",
+        "explanation": "A liability arises when the customer pays before performance.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Contract asset of $60,000",
+        "explanation": "Correct. A contract asset represents a right to consideration that is conditional on something other than the passage of time; it becomes a receivable when unconditional."
+      },
+      {
+        "id": "d",
+        "text": "Nothing until billed",
+        "explanation": "Revenue recognized creates an asset.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A contract asset represents a right to consideration that is conditional on something other than the passage of time; it becomes a receivable when unconditional.",
+    "skill": "application"
+  },
+  {
+    "id": "far-rev2-10",
+    "pool": "practice",
+    "stem": "A software company sells a license for $50,000 and 1 year of support. The support's SSP is observable at $10,000; the license's SSP is highly uncertain because it's never sold alone and prices vary widely. Using the residual approach, how much is allocated to the license if the bundle price is $56,000?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "That is the invoice amount for the license, not the allocation.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "b",
+        "text": "$46,000",
+        "explanation": "Correct. 56,000 − 10,000."
+      },
+      {
+        "id": "c",
+        "text": "$56,000",
+        "explanation": "Support must receive its observable SSP.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$28,000",
+        "explanation": "Equal split has no basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Residual approach: total price − observable SSP of other obligations = 56,000 − 10,000 = **46,000** to the license.",
+    "skill": "application",
+    "calc": true
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "id": "far-tbs-u9-construction",
+  "section": "FAR",
+  "unitId": "far-u9",
+  "moduleIds": ["far-revenue-measurement"],
+  "pool": "practice",
+  "title": "Long-term contract with a loss year — Summit Builders",
+  "minutes": 18,
+  "skill": "analysis",
+  "instructions": "Summit Builders is constructing a distribution center on the customer's land for a fixed price of **$12,000,000**. Summit concludes revenue is recognized over time and measures progress with the **cost-to-cost** method. Enter losses as negative numbers.",
+  "exhibits": [
+    { "title": "Contract data", "content": "| | Year 1 | Year 2 | Year 3 |\n|---|---:|---:|---:|\n| Cumulative costs incurred | 3,000,000 | 7,200,000 | 12,400,000 |\n| Estimated costs to complete | 6,000,000 | 5,300,000 | 0 |" }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "gp",
+      "prompt": "Compute the gross profit (loss) recognized each year.",
+      "rows": [
+        { "id": "y1rev", "label": "Year 1 revenue", "answer": 4000000, "tolerance": 0, "explanation": "3,000,000 ÷ 9,000,000 = 33.3%; × 12,000,000 = **4,000,000**." },
+        { "id": "y1", "label": "Year 1 gross profit", "answer": 1000000, "tolerance": 0, "explanation": "4,000,000 − 3,000,000 = **1,000,000**." },
+        { "id": "y2", "label": "Year 2 gross profit (loss)", "answer": -1500000, "tolerance": 0, "explanation": "Estimated total cost 12,500,000 > price → expected loss 500,000, recognized in full. Year 2 = −500,000 cumulative − 1,000,000 already recognized = **(1,500,000)**." },
+        { "id": "y3", "label": "Year 3 gross profit (loss)", "answer": 100000, "tolerance": 0, "explanation": "Actual total loss = 12,000,000 − 12,400,000 = (400,000). Cumulative recognized through Year 2 = (500,000). Year 3 = **+100,000**." }
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) best supports recognizing Summit's revenue over time?",
+      "excerpts": [
+        { "id": "a", "citation": "ASC 606-10-25-30 (paraphrase)", "text": "If a performance obligation is not satisfied over time, the entity satisfies it at a point in time, considering indicators such as a present right to payment, legal title, physical possession, and customer acceptance." },
+        { "id": "b", "citation": "ASC 606-10-25-27(b) (paraphrase)", "text": "An entity transfers control over time if its performance creates or enhances an asset (for example, work in process) that the customer controls as the asset is created or enhanced." },
+        { "id": "c", "citation": "ASC 606-10-32-8 (paraphrase)", "text": "An entity estimates variable consideration using either the expected value or the most likely amount, whichever better predicts the consideration to which it will be entitled." },
+        { "id": "d", "citation": "ASC 340-40-25-1 (paraphrase)", "text": "The incremental costs of obtaining a contract with a customer are recognized as an asset if the entity expects to recover them." }
+      ],
+      "answer": "b",
+      "explanation": "The building is on the customer's land, so the customer controls the asset as it is constructed — the second over-time criterion."
+    }
+  ]
+}

@@ -4,12 +4,31 @@
     "pool": "lesson",
     "stem": "Best guess: a lumber company's normal operating cycle is 20 months. It has trade receivables due in 16 months. How are they classified?",
     "choices": [
-      { "id": "a", "text": "Noncurrent, because they are due after 12 months", "explanation": "Twelve months is only the test when the operating cycle is shorter than a year.", "trap": "overgeneralization" },
-      { "id": "b", "text": "Current, because they will be collected within the operating cycle", "explanation": "Correct. The longer of one year or the operating cycle governs." },
-      { "id": "c", "text": "Split: 12 months' worth current, the rest noncurrent", "explanation": "Receivables are not prorated by month for classification.", "trap": "other" },
-      { "id": "d", "text": "Current only if the company intends to factor them", "explanation": "Intent to factor is irrelevant to the classification rule.", "trap": "irrelevant-fact" }
+      {
+        "id": "a",
+        "text": "Current, because they will be collected within the operating cycle",
+        "explanation": "Correct. The longer of one year or the operating cycle governs."
+      },
+      {
+        "id": "b",
+        "text": "Noncurrent, because they are due after 12 months",
+        "explanation": "Twelve months is only the test when the operating cycle is shorter than a year.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Split: 12 months' worth current, the rest noncurrent",
+        "explanation": "Receivables are not prorated by month for classification.",
+        "trap": "other"
+      },
+      {
+        "id": "d",
+        "text": "Current only if the company intends to factor them",
+        "explanation": "Intent to factor is irrelevant to the classification rule.",
+        "trap": "irrelevant-fact"
+      }
     ],
-    "answer": "b",
+    "answer": "a",
     "explanation": "Current = within one year **or the operating cycle, whichever is longer**. With a 20-month cycle, a 16-month receivable is current.",
     "skill": "application"
   },
@@ -18,10 +37,29 @@
     "pool": "lesson",
     "stem": "Which item is classified as a **current** asset?",
     "choices": [
-      { "id": "a", "text": "Cash set aside in a sinking fund to retire bonds in five years", "explanation": "Cash restricted for a noncurrent purpose is noncurrent.", "trap": "wrong-classification" },
-      { "id": "b", "text": "Cash surrender value of officers' life insurance", "explanation": "Generally noncurrent — not expected to be realized in the current cycle.", "trap": "wrong-classification" },
-      { "id": "c", "text": "Insurance premiums prepaid for the next six months", "explanation": "Correct. Prepaids consumed within a year are current assets." },
-      { "id": "d", "text": "Land held for a future factory", "explanation": "Held for long-term use — a noncurrent investment.", "trap": "wrong-classification" }
+      {
+        "id": "a",
+        "text": "Cash set aside in a sinking fund to retire bonds in five years",
+        "explanation": "Cash restricted for a noncurrent purpose is noncurrent.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Cash surrender value of officers' life insurance",
+        "explanation": "Generally noncurrent — not expected to be realized in the current cycle.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Insurance premiums prepaid for the next six months",
+        "explanation": "Correct. Prepaids consumed within a year are current assets."
+      },
+      {
+        "id": "d",
+        "text": "Land held for a future factory",
+        "explanation": "Held for long-term use — a noncurrent investment.",
+        "trap": "wrong-classification"
+      }
     ],
     "answer": "c",
     "explanation": "Current assets are realized, sold, or **consumed** within a year or the operating cycle. Prepaids are consumed in operations.",
@@ -32,10 +70,29 @@
     "pool": "lesson",
     "stem": "A company declared a 10% stock dividend during the year. What is the effect on **total** stockholders' equity?",
     "choices": [
-      { "id": "a", "text": "Decrease equal to the fair value of shares distributed", "explanation": "That is the transfer out of retained earnings, but it goes into paid-in capital — no net change.", "trap": "partial-computation" },
-      { "id": "b", "text": "No effect", "explanation": "Correct. A stock dividend reclassifies within equity; no assets leave the company." },
-      { "id": "c", "text": "Increase equal to the par value of shares distributed", "explanation": "Common stock rises, but retained earnings falls by at least the same amount.", "trap": "partial-computation" },
-      { "id": "d", "text": "Decrease equal to the par value of shares distributed", "explanation": "No resources leave the entity, so total equity cannot decrease.", "trap": "wrong-rule" }
+      {
+        "id": "a",
+        "text": "Decrease equal to the fair value of shares distributed",
+        "explanation": "That is the transfer out of retained earnings, but it goes into paid-in capital — no net change.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "No effect",
+        "explanation": "Correct. A stock dividend reclassifies within equity; no assets leave the company."
+      },
+      {
+        "id": "c",
+        "text": "Increase equal to the par value of shares distributed",
+        "explanation": "Common stock rises, but retained earnings falls by at least the same amount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Decrease equal to the par value of shares distributed",
+        "explanation": "No resources leave the entity, so total equity cannot decrease.",
+        "trap": "wrong-rule"
+      }
     ],
     "answer": "b",
     "explanation": "Stock dividends move amounts from retained earnings to common stock/APIC. Total equity is unchanged.",
@@ -46,10 +103,29 @@
     "pool": "practice",
     "stem": "At December 31, a company had: cash $25,000; accounts receivable (net) $65,000; inventory $80,000; equipment (net) $150,000; accounts payable $45,000; accrued interest $5,000; and a note payable of $100,000, of which $20,000 is due next year. What is working capital?",
     "choices": [
-      { "id": "a", "text": "$120,000", "explanation": "This omits the $20,000 current portion of the note: 170,000 − 50,000.", "trap": "partial-computation" },
-      { "id": "b", "text": "$20,000", "explanation": "This treats the entire $100,000 note as current.", "trap": "wrong-classification" },
-      { "id": "c", "text": "$250,000", "explanation": "This adds equipment to current assets.", "trap": "wrong-classification" },
-      { "id": "d", "text": "$100,000", "explanation": "Correct. CA 170,000 − CL 70,000 = 100,000." }
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "This omits the $20,000 current portion of the note: 170,000 − 50,000.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "This treats the entire $100,000 note as current.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$250,000",
+        "explanation": "This adds equipment to current assets.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Correct. CA 170,000 − CL 70,000 = 100,000."
+      }
     ],
     "answer": "d",
     "explanation": "Current assets: 25,000 + 65,000 + 80,000 = **170,000**. Current liabilities: 45,000 + 5,000 + 20,000 (current portion of the note) = **70,000**. Working capital = 170,000 − 70,000 = **100,000**.",
@@ -61,10 +137,29 @@
     "pool": "practice",
     "stem": "On December 31, Year 1, a borrower violated a covenant on a long-term loan, making the debt callable on demand. On January 20, Year 2 (before the statements were issued), the lender waived its right to call the debt for 18 months. How should the loan be classified at December 31, Year 1?",
     "choices": [
-      { "id": "a", "text": "Noncurrent, because the lender waived the call right for more than one year", "explanation": "Correct. A waiver obtained before issuance for more than one year from the balance sheet date permits noncurrent classification." },
-      { "id": "b", "text": "Current, because the violation existed at the balance sheet date", "explanation": "The violation alone would make it current, but the qualifying waiver changes the answer.", "trap": "partial-computation" },
-      { "id": "c", "text": "Current, because events after year-end cannot affect classification", "explanation": "GAAP specifically considers waivers obtained before the statements are issued.", "trap": "wrong-rule" },
-      { "id": "d", "text": "Split evenly between current and noncurrent", "explanation": "There is no split rule for covenant violations.", "trap": "other" }
+      {
+        "id": "a",
+        "text": "Noncurrent, because the lender waived the call right for more than one year",
+        "explanation": "Correct. A waiver obtained before issuance for more than one year from the balance sheet date permits noncurrent classification."
+      },
+      {
+        "id": "b",
+        "text": "Current, because the violation existed at the balance sheet date",
+        "explanation": "The violation alone would make it current, but the qualifying waiver changes the answer.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Current, because events after year-end cannot affect classification",
+        "explanation": "GAAP specifically considers waivers obtained before the statements are issued.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Split evenly between current and noncurrent",
+        "explanation": "There is no split rule for covenant violations.",
+        "trap": "other"
+      }
     ],
     "answer": "a",
     "explanation": "Callable debt is current unless the creditor waives or loses the right to demand repayment for more than one year (or the operating cycle) from the balance sheet date. The 18-month waiver qualifies.",
@@ -75,10 +170,29 @@
     "pool": "practice",
     "stem": "Beginning retained earnings were $500,000. During the year, net income was $120,000, cash dividends declared were $40,000 (of which $10,000 was unpaid at year-end), and a prior-year error that understated expenses by $20,000 (pretax) was discovered. The tax rate is 25%. What is ending retained earnings?",
     "choices": [
-      { "id": "a", "text": "$580,000", "explanation": "This ignores the prior-period adjustment.", "trap": "partial-computation" },
-      { "id": "b", "text": "$565,000", "explanation": "Correct. 500,000 − 15,000 + 120,000 − 40,000 = 565,000." },
-      { "id": "c", "text": "$560,000", "explanation": "This subtracts the correction pretax (20,000) instead of net of tax.", "trap": "wrong-rule" },
-      { "id": "d", "text": "$575,000", "explanation": "This deducts only the $30,000 of dividends paid; retained earnings drops when dividends are declared.", "trap": "wrong-period" }
+      {
+        "id": "a",
+        "text": "$580,000",
+        "explanation": "This ignores the prior-period adjustment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$565,000",
+        "explanation": "Correct. 500,000 − 15,000 + 120,000 − 40,000 = 565,000."
+      },
+      {
+        "id": "c",
+        "text": "$560,000",
+        "explanation": "This subtracts the correction pretax (20,000) instead of net of tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$575,000",
+        "explanation": "This deducts only the $30,000 of dividends paid; retained earnings drops when dividends are declared.",
+        "trap": "wrong-period"
+      }
     ],
     "answer": "b",
     "explanation": "Prior-period adjustment: understated expenses overstated prior income by 20,000 × (1 − 0.25) = **15,000** after tax, reducing opening RE. Ending RE = 500,000 − 15,000 + 120,000 − 40,000 declared = **565,000**.",
@@ -90,10 +204,29 @@
     "pool": "practice",
     "stem": "A company owes a supplier $50,000 and the same supplier owes the company $30,000 for an unrelated rebate. There is no legal agreement allowing the amounts to be netted. How should these be presented?",
     "choices": [
-      { "id": "a", "text": "Net payable of $20,000", "explanation": "Netting requires a legally enforceable right of setoff, which is absent.", "trap": "wrong-rule" },
-      { "id": "b", "text": "Net payable of $20,000 with the gross amounts disclosed", "explanation": "Disclosure does not cure the lack of a setoff right.", "trap": "overgeneralization" },
-      { "id": "c", "text": "Receivable of $30,000 and payable of $50,000", "explanation": "Correct. Without a right of setoff, present gross." },
-      { "id": "d", "text": "Payable of $50,000 only; the rebate is recognized when collected", "explanation": "A valid receivable is recognized when earned, not when collected.", "trap": "wrong-period" }
+      {
+        "id": "a",
+        "text": "Net payable of $20,000",
+        "explanation": "Netting requires a legally enforceable right of setoff, which is absent.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Net payable of $20,000 with the gross amounts disclosed",
+        "explanation": "Disclosure does not cure the lack of a setoff right.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Receivable of $30,000 and payable of $50,000",
+        "explanation": "Correct. Without a right of setoff, present gross."
+      },
+      {
+        "id": "d",
+        "text": "Payable of $50,000 only; the rebate is recognized when collected",
+        "explanation": "A valid receivable is recognized when earned, not when collected.",
+        "trap": "wrong-period"
+      }
     ],
     "answer": "c",
     "explanation": "ASC 210-20 permits offsetting only when a right of setoff exists (determinable amounts, mutual debts, intent to set off, legally enforceable). Otherwise present gross.",
@@ -104,10 +237,29 @@
     "pool": "practice",
     "stem": "Which of the following is reported in accumulated other comprehensive income rather than retained earnings?",
     "choices": [
-      { "id": "a", "text": "Unrealized holding gain on trading debt securities", "explanation": "Trading securities' unrealized gains go through net income, and thus retained earnings.", "trap": "wrong-classification" },
-      { "id": "b", "text": "Correction of an error in prior-year revenue", "explanation": "Error corrections adjust opening retained earnings.", "trap": "wrong-classification" },
-      { "id": "c", "text": "Dividends declared on preferred stock", "explanation": "Dividends reduce retained earnings.", "trap": "wrong-classification" },
-      { "id": "d", "text": "Unrealized holding loss on available-for-sale debt securities (not credit-related)", "explanation": "Correct. Non-credit unrealized AFS changes go to OCI, accumulating in AOCI." }
+      {
+        "id": "a",
+        "text": "Unrealized holding gain on trading debt securities",
+        "explanation": "Trading securities' unrealized gains go through net income, and thus retained earnings.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Correction of an error in prior-year revenue",
+        "explanation": "Error corrections adjust opening retained earnings.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Dividends declared on preferred stock",
+        "explanation": "Dividends reduce retained earnings.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Unrealized holding loss on available-for-sale debt securities (not credit-related)",
+        "explanation": "Correct. Non-credit unrealized AFS changes go to OCI, accumulating in AOCI."
+      }
     ],
     "answer": "d",
     "explanation": "OCI items include AFS debt security unrealized gains/losses (excluding credit losses), foreign currency translation adjustments, and certain pension/postretirement items. They accumulate in AOCI, a separate equity component.",
@@ -118,10 +270,29 @@
     "pool": "practice",
     "stem": "Treasury stock acquired for $40,000 should be presented on the balance sheet as:",
     "choices": [
-      { "id": "a", "text": "A current asset, if the company intends to reissue it within a year", "explanation": "A company cannot own itself; treasury stock is never an asset.", "trap": "wrong-classification" },
-      { "id": "b", "text": "A reduction of total stockholders' equity", "explanation": "Correct. Treasury stock is a contra-equity account." },
-      { "id": "c", "text": "A long-term investment", "explanation": "Own shares are not an investment asset.", "trap": "wrong-classification" },
-      { "id": "d", "text": "A reduction of retained earnings only", "explanation": "Under the cost method it is shown as a separate deduction from total equity, not netted only against retained earnings.", "trap": "partial-computation" }
+      {
+        "id": "a",
+        "text": "A current asset, if the company intends to reissue it within a year",
+        "explanation": "A company cannot own itself; treasury stock is never an asset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A reduction of total stockholders' equity",
+        "explanation": "Correct. Treasury stock is a contra-equity account."
+      },
+      {
+        "id": "c",
+        "text": "A long-term investment",
+        "explanation": "Own shares are not an investment asset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A reduction of retained earnings only",
+        "explanation": "Under the cost method it is shown as a separate deduction from total equity, not netted only against retained earnings.",
+        "trap": "partial-computation"
+      }
     ],
     "answer": "b",
     "explanation": "Treasury stock (cost method) is shown as a deduction from total stockholders' equity. It is not an asset regardless of intent to reissue.",
@@ -132,10 +303,29 @@
     "pool": "practice",
     "stem": "A retailer's balance sheet includes: dividends payable $15,000; unearned revenue for gift cards expected to be redeemed within 6 months $25,000; bonds payable due in 8 years $400,000; income taxes payable $30,000. Total current liabilities are:",
     "choices": [
-      { "id": "a", "text": "$70,000", "explanation": "Correct. 15,000 + 25,000 + 30,000 = 70,000." },
-      { "id": "b", "text": "$45,000", "explanation": "This omits unearned revenue, which is an obligation to deliver goods within the year.", "trap": "partial-computation" },
-      { "id": "c", "text": "$470,000", "explanation": "Bonds due in 8 years are noncurrent.", "trap": "wrong-classification" },
-      { "id": "d", "text": "$55,000", "explanation": "This omits dividends payable, a liability once declared.", "trap": "partial-computation" }
+      {
+        "id": "a",
+        "text": "$70,000",
+        "explanation": "Correct. 15,000 + 25,000 + 30,000 = 70,000."
+      },
+      {
+        "id": "b",
+        "text": "$45,000",
+        "explanation": "This omits unearned revenue, which is an obligation to deliver goods within the year.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$470,000",
+        "explanation": "Bonds due in 8 years are noncurrent.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$55,000",
+        "explanation": "This omits dividends payable, a liability once declared.",
+        "trap": "partial-computation"
+      }
     ],
     "answer": "a",
     "explanation": "Current liabilities: dividends payable 15,000 + unearned revenue 25,000 + income taxes payable 30,000 = **70,000**. The bonds are noncurrent.",
@@ -147,10 +337,29 @@
     "pool": "practice",
     "stem": "A company reports total assets of $900,000, current liabilities of $150,000, and long-term liabilities of $250,000. Current assets are $330,000. What is total stockholders' equity, and what is working capital?",
     "choices": [
-      { "id": "a", "text": "Equity $750,000; working capital $180,000", "explanation": "Equity must subtract all liabilities, not just current ones.", "trap": "partial-computation" },
-      { "id": "b", "text": "Equity $500,000; working capital $80,000", "explanation": "Working capital uses current liabilities only: 330,000 − 150,000.", "trap": "wrong-rule" },
-      { "id": "c", "text": "Equity $500,000; working capital $180,000", "explanation": "Correct. 900,000 − 400,000 = 500,000; 330,000 − 150,000 = 180,000." },
-      { "id": "d", "text": "Equity $650,000; working capital $180,000", "explanation": "This subtracts only long-term liabilities.", "trap": "partial-computation" }
+      {
+        "id": "a",
+        "text": "Equity $750,000; working capital $180,000",
+        "explanation": "Equity must subtract all liabilities, not just current ones.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Equity $500,000; working capital $80,000",
+        "explanation": "Working capital uses current liabilities only: 330,000 − 150,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Equity $500,000; working capital $180,000",
+        "explanation": "Correct. 900,000 − 400,000 = 500,000; 330,000 − 150,000 = 180,000."
+      },
+      {
+        "id": "d",
+        "text": "Equity $650,000; working capital $180,000",
+        "explanation": "This subtracts only long-term liabilities.",
+        "trap": "partial-computation"
+      }
     ],
     "answer": "c",
     "explanation": "Equity = assets − all liabilities = 900,000 − (150,000 + 250,000) = **500,000**. Working capital = 330,000 − 150,000 = **180,000**.",
@@ -162,10 +371,29 @@
     "pool": "practice",
     "stem": "Which statement about the statement of changes in equity is correct?",
     "choices": [
-      { "id": "a", "text": "It reconciles only retained earnings", "explanation": "It reconciles each component of equity, not just retained earnings.", "trap": "partial-computation" },
-      { "id": "b", "text": "It reports dividends when paid rather than when declared", "explanation": "Dividends reduce retained earnings on the declaration date.", "trap": "wrong-period" },
-      { "id": "c", "text": "It excludes treasury stock transactions because they are not income", "explanation": "Treasury stock is a component of equity and its changes are shown.", "trap": "wrong-rule" },
-      { "id": "d", "text": "It reconciles the beginning and ending balances of each component of equity, either as a statement or in the notes", "explanation": "Correct. ASC 505-10 requires disclosure of changes in each equity component." }
+      {
+        "id": "a",
+        "text": "It reconciles only retained earnings",
+        "explanation": "It reconciles each component of equity, not just retained earnings.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "It reports dividends when paid rather than when declared",
+        "explanation": "Dividends reduce retained earnings on the declaration date.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "It excludes treasury stock transactions because they are not income",
+        "explanation": "Treasury stock is a component of equity and its changes are shown.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It reconciles the beginning and ending balances of each component of equity, either as a statement or in the notes",
+        "explanation": "Correct. ASC 505-10 requires disclosure of changes in each equity component."
+      }
     ],
     "answer": "d",
     "explanation": "The changes in each separate component of equity (stock, APIC, retained earnings, AOCI, treasury stock, NCI) must be disclosed, in a separate statement or in the notes.",
@@ -176,10 +404,29 @@
     "pool": "practice",
     "stem": "A company with a 9-month operating cycle holds: a note receivable due in 14 months; a certificate of deposit maturing in 10 months; a customer deposit it must refund in 3 months. Which items are current?",
     "choices": [
-      { "id": "a", "text": "The note receivable and the CD are current assets; the customer deposit is a current liability", "explanation": "The note is due in 14 months — beyond one year, which is longer than the 9-month cycle.", "trap": "overgeneralization" },
-      { "id": "b", "text": "The CD is a current asset and the customer deposit is a current liability; the note receivable is noncurrent", "explanation": "Correct. One year governs because it is longer than the 9-month cycle." },
-      { "id": "c", "text": "Only the customer deposit is current", "explanation": "The CD matures in 10 months — within one year.", "trap": "partial-computation" },
-      { "id": "d", "text": "All three are noncurrent because the cycle is less than one year", "explanation": "A shorter cycle means one year is the test, not that nothing is current.", "trap": "reversed" }
+      {
+        "id": "a",
+        "text": "The note receivable and the CD are current assets; the customer deposit is a current liability",
+        "explanation": "The note is due in 14 months — beyond one year, which is longer than the 9-month cycle.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "The CD is a current asset and the customer deposit is a current liability; the note receivable is noncurrent",
+        "explanation": "Correct. One year governs because it is longer than the 9-month cycle."
+      },
+      {
+        "id": "c",
+        "text": "Only the customer deposit is current",
+        "explanation": "The CD matures in 10 months — within one year.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "All three are noncurrent because the cycle is less than one year",
+        "explanation": "A shorter cycle means one year is the test, not that nothing is current.",
+        "trap": "reversed"
+      }
     ],
     "answer": "b",
     "explanation": "Use the longer of one year or the operating cycle — here, one year. CD (10 months): current asset. Customer deposit (3 months): current liability. Note (14 months): noncurrent.",
@@ -190,10 +437,29 @@
     "pool": "practice",
     "stem": "A company declared a property dividend, distributing land with a carrying amount of $60,000 and a fair value of $85,000. By how much does retained earnings decrease as a result of the dividend (ignoring the separately recognized gain's effect on net income)?",
     "choices": [
-      { "id": "a", "text": "$60,000", "explanation": "Property dividends are recorded at fair value, not carrying amount.", "trap": "wrong-rule" },
-      { "id": "b", "text": "$25,000", "explanation": "That is the gain recognized on remeasuring the land, not the dividend.", "trap": "distractor-number" },
-      { "id": "c", "text": "$85,000", "explanation": "Correct. The land is remeasured to fair value (gain $25,000) and the dividend reduces retained earnings by fair value." },
-      { "id": "d", "text": "$0, because no cash was distributed", "explanation": "Any dividend of assets reduces retained earnings.", "trap": "wrong-rule" }
+      {
+        "id": "a",
+        "text": "$60,000",
+        "explanation": "Property dividends are recorded at fair value, not carrying amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$25,000",
+        "explanation": "That is the gain recognized on remeasuring the land, not the dividend.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$85,000",
+        "explanation": "Correct. The land is remeasured to fair value (gain $25,000) and the dividend reduces retained earnings by fair value."
+      },
+      {
+        "id": "d",
+        "text": "$0, because no cash was distributed",
+        "explanation": "Any dividend of assets reduces retained earnings.",
+        "trap": "wrong-rule"
+      }
     ],
     "answer": "c",
     "explanation": "Remeasure the asset to fair value: gain 85,000 − 60,000 = 25,000 (in net income). Then Dr Retained earnings 85,000 / Cr Property dividend payable 85,000.",
@@ -205,10 +471,29 @@
     "pool": "practice",
     "stem": "In a set of consolidated financial statements, where is the noncontrolling interest in a subsidiary presented?",
     "choices": [
-      { "id": "a", "text": "Within equity, separately from the parent's equity", "explanation": "Correct. NCI is equity of the consolidated entity, shown separately." },
-      { "id": "b", "text": "As a liability", "explanation": "NCI is an ownership interest, not an obligation.", "trap": "wrong-classification" },
-      { "id": "c", "text": "Between liabilities and equity (mezzanine) in all cases", "explanation": "Mezzanine presentation applies only to certain redeemable interests under SEC rules, not NCI generally.", "trap": "overgeneralization" },
-      { "id": "d", "text": "It is not presented because it is eliminated in consolidation", "explanation": "The parent's investment is eliminated; the outside owners' interest remains.", "trap": "reversed" }
+      {
+        "id": "a",
+        "text": "Within equity, separately from the parent's equity",
+        "explanation": "Correct. NCI is equity of the consolidated entity, shown separately."
+      },
+      {
+        "id": "b",
+        "text": "As a liability",
+        "explanation": "NCI is an ownership interest, not an obligation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Between liabilities and equity (mezzanine) in all cases",
+        "explanation": "Mezzanine presentation applies only to certain redeemable interests under SEC rules, not NCI generally.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "It is not presented because it is eliminated in consolidation",
+        "explanation": "The parent's investment is eliminated; the outside owners' interest remains.",
+        "trap": "reversed"
+      }
     ],
     "answer": "a",
     "explanation": "Noncontrolling interest is presented within consolidated equity, separately from the equity attributable to the parent (ASC 810-10-45).",

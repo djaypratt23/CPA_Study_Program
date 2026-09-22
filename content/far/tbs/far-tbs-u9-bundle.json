@@ -1,0 +1,48 @@
+{
+  "id": "far-tbs-u9-bundle",
+  "section": "FAR",
+  "unitId": "far-u9",
+  "moduleIds": ["far-revenue-contracts", "far-revenue-measurement"],
+  "pool": "practice",
+  "title": "Five-step revenue analysis — Clearwave Systems",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Clearwave Systems (calendar year-end) signed two contracts during Year 1. Apply ASC 606 to determine performance obligations, allocate the transaction price, and compute Year 1 revenue.",
+  "exhibits": [
+    { "title": "Contract 1 — Metro Hospital", "content": "Signed and delivered **October 1, Year 1**. Price: **$1,800,000**, due in 30 days.\n\n| Promise | Standalone selling price |\n|---|---:|\n| Imaging hardware (works without Clearwave's installation) | 1,200,000 |\n| Installation (standard; other firms offer it) — completed October 1 | 300,000 |\n| 24 months of technical support starting October 1 | 500,000 |\n\nThe hardware comes with Clearwave's standard 1-year warranty against defects." },
+    { "title": "Contract 2 — Delta Logistics", "content": "Consulting engagement completed **December 15, Year 1**. Fixed fee **$60,000** plus a performance bonus based on cost savings achieved, determined in March, Year 2:\n\n| Bonus | Probability |\n|---|---:|\n| $20,000 | 50% |\n| $10,000 | 30% |\n| $0 | 20% |\n\nClearwave has extensive experience with similar contracts and concludes that including the estimate will not result in a significant reversal." }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "po",
+      "prompt": "Contract 1 — analyze the promises.",
+      "rows": [
+        { "id": "p1", "label": "Number of performance obligations", "options": ["1", "2", "3", "4"], "answer": "3", "explanation": "Hardware, installation, and support are each distinct. The standard warranty is an assurance-type warranty — not a separate obligation." },
+        { "id": "p2", "label": "Standard 1-year warranty", "options": ["Separate performance obligation", "Accrue warranty cost (assurance-type)", "Reduce the transaction price"], "answer": "Accrue warranty cost (assurance-type)", "explanation": "It only assures the hardware works as promised." },
+        { "id": "p3", "label": "Timing for the support revenue", "options": ["Point in time — October 1", "Over time — 24 months", "When the customer pays"], "answer": "Over time — 24 months", "explanation": "The customer simultaneously receives and consumes support as it's provided." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "alloc",
+      "prompt": "Contract 1 — allocation and Year 1 revenue.",
+      "rows": [
+        { "id": "a1", "label": "Transaction price allocated to hardware", "answer": 1080000, "tolerance": 0, "explanation": "1,200,000 ÷ 2,000,000 × 1,800,000 = **1,080,000** (a 10% bundle discount spread proportionally)." },
+        { "id": "a2", "label": "Transaction price allocated to installation", "answer": 270000, "tolerance": 0, "explanation": "300,000 ÷ 2,000,000 × 1,800,000 = **270,000**." },
+        { "id": "a3", "label": "Transaction price allocated to support", "answer": 450000, "tolerance": 0, "explanation": "500,000 ÷ 2,000,000 × 1,800,000 = **450,000**." },
+        { "id": "r1", "label": "Contract 1 revenue for Year 1", "answer": 1406250, "tolerance": 1, "explanation": "Hardware 1,080,000 + installation 270,000 + support 450,000 × 3/24 (56,250) = **1,406,250**." },
+        { "id": "cl", "label": "Contract liability at December 31, Year 1 (the customer paid in full in October)", "answer": 393750, "tolerance": 1, "explanation": "Unearned support = 450,000 − 56,250 = **393,750**." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "var",
+      "prompt": "Contract 2 — variable consideration.",
+      "rows": [
+        { "id": "ev", "label": "Estimated bonus included in the transaction price", "answer": 13000, "tolerance": 0, "explanation": "Several possible outcomes → expected value: 0.5 × 20,000 + 0.3 × 10,000 + 0.2 × 0 = **13,000**." },
+        { "id": "r2", "label": "Contract 2 revenue for Year 1", "answer": 73000, "tolerance": 0, "explanation": "The service is complete, so recognize 60,000 + 13,000 = **73,000**; true up in Year 2 when the bonus is known." }
+      ]
+    }
+  ]
+}

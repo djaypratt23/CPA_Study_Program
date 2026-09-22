@@ -12,14 +12,14 @@
       },
       {
         "id": "b",
-        "text": "Noncurrent",
-        "explanation": "Correct. The refinancing on a long-term basis was completed before issuance."
-      },
-      {
-        "id": "c",
         "text": "Split 50/50",
         "explanation": "No split rule exists; the refinanced amount is noncurrent.",
         "trap": "other"
+      },
+      {
+        "id": "c",
+        "text": "Noncurrent",
+        "explanation": "Correct. The refinancing on a long-term basis was completed before issuance."
       },
       {
         "id": "d",
@@ -28,7 +28,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Issuing long-term debt after year-end but before issuance, for the purpose of refinancing, demonstrates the ability to refinance → noncurrent (to the extent refinanced).",
     "skill": "application"
   },
@@ -73,8 +73,9 @@
     "choices": [
       {
         "id": "a",
-        "text": "$20,000 gain in income from continuing operations",
-        "explanation": "Correct. Gain = 780,000 − 760,000 = 20,000, reported in income (not extraordinary)."
+        "text": "$20,000 credit to additional paid-in capital",
+        "explanation": "Extinguishment of debt with third parties affects income.",
+        "trap": "wrong-classification"
       },
       {
         "id": "b",
@@ -90,12 +91,11 @@
       },
       {
         "id": "d",
-        "text": "$20,000 credit to additional paid-in capital",
-        "explanation": "Extinguishment of debt with third parties affects income.",
-        "trap": "wrong-classification"
+        "text": "$20,000 gain in income from continuing operations",
+        "explanation": "Correct. Gain = 780,000 − 760,000 = 20,000, reported in income (not extraordinary)."
       }
     ],
-    "answer": "a",
+    "answer": "d",
     "explanation": "Gain = 780,000 − 760,000 = **20,000**, reported in income (not extraordinary).",
     "skill": "application",
     "calc": true
@@ -141,8 +141,9 @@
     "choices": [
       {
         "id": "a",
-        "text": "$13,717",
-        "explanation": "Correct. 171,468 × 8%."
+        "text": "$14,266",
+        "explanation": "This straight-lines the discount (28,532 ÷ 2).",
+        "trap": "wrong-rule"
       },
       {
         "id": "b",
@@ -152,9 +153,8 @@
       },
       {
         "id": "c",
-        "text": "$14,266",
-        "explanation": "This straight-lines the discount (28,532 ÷ 2).",
-        "trap": "wrong-rule"
+        "text": "$13,717",
+        "explanation": "Correct. 171,468 × 8%."
       },
       {
         "id": "d",
@@ -163,7 +163,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "a",
+    "answer": "c",
     "explanation": "Effective interest: 171,468 × 8% = **13,717**.",
     "skill": "application",
     "calc": true
