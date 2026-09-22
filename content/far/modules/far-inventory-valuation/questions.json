@@ -1,0 +1,438 @@
+[
+  {
+    "id": "far-iv-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a FIFO retailer holds goods costing $30,000. They could now be bought for $26,000 and sold for $33,000 with $4,000 of selling costs. At what amount is inventory reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$26,000",
+        "explanation": "Replacement cost is not the test for FIFO companies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$29,000",
+        "explanation": "Correct. NRV = 33,000 − 4,000 = 29,000, which is below cost."
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Cost exceeds NRV, so a write-down is required.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$33,000",
+        "explanation": "Inventory is never written up to selling price.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "FIFO uses lower of cost and NRV: min(30,000, 33,000 − 4,000 = 29,000) = **29,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iv-chk1",
+    "pool": "lesson",
+    "stem": "A LIFO company's item: cost $80; replacement cost $70; selling price $100; costs to sell $12; normal profit $20. What is the LCM value?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$70",
+        "explanation": "Correct. Replacement cost (70) lies between the floor (68) and ceiling (88), so it is market, and it is below cost."
+      },
+      {
+        "id": "b",
+        "text": "$68",
+        "explanation": "That is the floor, but replacement cost (70) is above the floor, so it is market.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$88",
+        "explanation": "That is the ceiling (NRV).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$80",
+        "explanation": "Cost exceeds market (70), so write down.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ceiling = 100 − 12 = 88; floor = 88 − 20 = 68. Replacement cost 70 is between them → market = 70. LCM = min(80, 70) = **70**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iv-chk2",
+    "pool": "lesson",
+    "stem": "Year 1 ending inventory was overstated by $12,000 and not discovered. Ignoring taxes, what is the effect on Year 2 net income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Overstated by $12,000",
+        "explanation": "That is the Year 1 effect.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "Understated by $12,000",
+        "explanation": "Correct. Year 2 beginning inventory is overstated, so Year 2 COGS is overstated."
+      },
+      {
+        "id": "c",
+        "text": "No effect",
+        "explanation": "The error flows into Year 2 through beginning inventory.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Understated by $24,000",
+        "explanation": "The effect in each year equals the error amount.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Overstated Year 1 ending inventory → overstated Year 2 beginning inventory → overstated Year 2 COGS → Year 2 net income **understated by 12,000**. Retained earnings is correct by the end of Year 2.",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-iv-01",
+    "pool": "practice",
+    "stem": "A company using average cost has inventory with cost $250,000, estimated selling price $280,000, estimated completion costs $20,000, and shipping costs $15,000. What amount is reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$250,000",
+        "explanation": "NRV (245,000) is below cost, so a write-down is needed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$260,000",
+        "explanation": "This deducts only completion costs.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$245,000",
+        "explanation": "Correct. NRV = 280,000 − 20,000 − 15,000."
+      },
+      {
+        "id": "d",
+        "text": "$280,000",
+        "explanation": "Inventory is never reported above cost.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "NRV = 280,000 − 20,000 − 15,000 = 245,000 < cost 250,000 → report **245,000** (loss of 5,000).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iv-02",
+    "pool": "practice",
+    "stem": "Under U.S. GAAP, which inventory costing method uses the lower of cost or **market** (with ceiling and floor) rather than lower of cost and NRV?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "FIFO",
+        "explanation": "FIFO uses lower of cost and NRV.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Weighted average",
+        "explanation": "Average cost uses lower of cost and NRV.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Specific identification",
+        "explanation": "Uses lower of cost and NRV.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "LIFO",
+        "explanation": "Correct. LIFO and the retail method retain LCM."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASU 2015-11 moved all methods except LIFO and the retail inventory method to lower of cost and NRV.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-iv-03",
+    "pool": "practice",
+    "stem": "A LIFO item has cost $45, replacement cost $36, NRV $44, and normal profit $6. What is the LCM value?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$36",
+        "explanation": "Replacement cost is below the floor (44 − 6 = 38), so the floor is market.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$38",
+        "explanation": "Correct. Middle of 36, 44, 38 is 38."
+      },
+      {
+        "id": "c",
+        "text": "$44",
+        "explanation": "That is the ceiling; market is the middle value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$45",
+        "explanation": "Cost exceeds market, so a write-down is needed.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Ceiling 44; floor 44 − 6 = 38; replacement 36. Middle value = **38**; LCM = min(45, 38) = 38.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iv-04",
+    "pool": "practice",
+    "stem": "Beginning inventory $150,000; purchases $650,000; sales $900,000. The company's markup is 25% **on cost**. Using the gross profit method, what is estimated ending inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$125,000",
+        "explanation": "This applies 25% as the gross profit rate on sales (900,000 × 75% = 675,000).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$80,000",
+        "explanation": "Correct. GP% on sales = 20%; COGS = 720,000; 800,000 − 720,000."
+      },
+      {
+        "id": "c",
+        "text": "$225,000",
+        "explanation": "This treats the 25% markup times sales as inventory — a number that has nothing to do with goods on hand.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$575,000",
+        "explanation": "This subtracts gross profit rather than COGS.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Markup on cost 25% → GP on sales = 0.25 ÷ 1.25 = 20%. Estimated COGS = 900,000 × 0.80 = 720,000. Ending = 150,000 + 650,000 − 720,000 = **80,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iv-05",
+    "pool": "practice",
+    "stem": "Why does the conventional (LCM) retail method exclude net markdowns from the cost-to-retail ratio?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "To produce a lower ratio and thus approximate lower of cost or market",
+        "explanation": "Correct. Leaving markdowns out of the denominator keeps it larger, so the cost ratio is smaller and ending inventory at cost is lower — approximating LCM."
+      },
+      {
+        "id": "b",
+        "text": "Because markdowns never affect ending inventory at retail",
+        "explanation": "Markdowns reduce ending retail; they are just excluded from the ratio.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "To approximate FIFO",
+        "explanation": "The FIFO retail method excludes beginning inventory, not markdowns.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Because markdowns are recorded as expenses",
+        "explanation": "Markdowns are price reductions, not expenses.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Leaving markdowns out of the denominator keeps it larger, so the cost ratio is smaller and ending inventory at cost is lower — approximating LCM.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-iv-06",
+    "pool": "practice",
+    "stem": "Retail method data: beginning inventory cost $30,000 / retail $50,000; purchases cost $170,000 / retail $300,000; net markups $10,000; net markdowns $20,000; sales $280,000. What is ending inventory at cost under the conventional (lower of cost or market) retail method?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$33,333",
+        "explanation": "Correct. Ratio 200,000 ÷ 360,000 = 55.6%; ending retail 60,000 × 55.6%."
+      },
+      {
+        "id": "b",
+        "text": "$35,294",
+        "explanation": "This includes markdowns in the ratio (200,000 ÷ 340,000) — the average-cost retail method.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$34,286",
+        "explanation": "This excludes markups from the ratio's denominator (200,000 ÷ 350,000 × 60,000).",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "That is ending inventory at retail, not cost.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Goods available: cost 200,000; retail 50,000 + 300,000 + 10,000 markups = 360,000 (markdowns excluded for LCM). Ratio = 55.56%. Ending retail = 360,000 − 20,000 − 280,000 = 60,000. Ending cost = 60,000 × 55.56% = **33,333**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iv-07",
+    "pool": "practice",
+    "stem": "A FIFO company wrote inventory down from $90,000 cost to $78,000 NRV in Year 1. In Year 2, before any of the goods are sold, NRV recovers to $95,000. What is reported at the end of Year 2 (annual statements)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$95,000",
+        "explanation": "Inventory is never written above original cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$90,000, reversing the write-down",
+        "explanation": "U.S. GAAP prohibits reversing annual write-downs.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$78,000",
+        "explanation": "Correct. The written-down amount becomes the new cost basis."
+      },
+      {
+        "id": "d",
+        "text": "$84,000",
+        "explanation": "There is no averaging of old and new values.",
+        "trap": "other"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under U.S. GAAP, a write-down creates a new cost basis that is not written back up in later annual periods (IFRS would permit reversal up to original cost). Recoveries within the same fiscal year's interim periods are the exception.",
+    "skill": "application"
+  },
+  {
+    "id": "far-iv-08",
+    "pool": "practice",
+    "stem": "Year 1 ending inventory was understated by $20,000; the error was never corrected. Ignoring taxes, which statement is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Year 1 net income was overstated by $20,000",
+        "explanation": "Understated ending inventory overstates COGS, understating income.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Year 2 net income was understated by $20,000",
+        "explanation": "Year 2 beginning inventory is understated, so Year 2 COGS is understated and income overstated.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Retained earnings at the end of Year 1 was correct",
+        "explanation": "It was understated by 20,000 at the end of Year 1.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Retained earnings at the end of Year 2 was correct",
+        "explanation": "Correct. The Year 1 understatement and Year 2 overstatement offset."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Year 1: COGS overstated, net income and retained earnings understated by 20,000. Year 2: beginning inventory understated → COGS understated → net income overstated by 20,000. By end of Year 2 retained earnings is correct (counterbalancing error).",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-iv-09",
+    "pool": "practice",
+    "stem": "Inventory items for a FIFO company (cost / NRV): A $10,000 / $12,000; B $15,000 / $11,000; C $8,000 / $9,000. What is inventory under LCNRV applied **item by item**, and applied to **total** inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Item by item $29,000; total $32,000",
+        "explanation": "Correct. Item: 10,000 + 11,000 + 8,000; total: min(33,000, 32,000)."
+      },
+      {
+        "id": "b",
+        "text": "Item by item $32,000; total $29,000",
+        "explanation": "Reversed — item-by-item always gives the lower (or equal) result.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Both $29,000",
+        "explanation": "Applying to the total allows NRV excesses to offset shortfalls.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Both $33,000",
+        "explanation": "That is total cost, ignoring the write-down on B.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Item by item: A 10,000 (cost), B 11,000 (NRV), C 8,000 (cost) = **29,000**. Total: cost 33,000 vs. NRV 32,000 → **32,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iv-10",
+    "pool": "practice",
+    "stem": "Which situation is an appropriate use of the gross profit method?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Determining ending inventory for audited annual financial statements",
+        "explanation": "A physical count or perpetual records are required for annual statements.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Estimating inventory destroyed in a flood for an insurance claim",
+        "explanation": "Correct. The gross profit method estimates inventory for interim reports, casualty losses, and reasonableness tests."
+      },
+      {
+        "id": "c",
+        "text": "Replacing the annual physical count for tax purposes",
+        "explanation": "It is an estimate, not a substitute for a count.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Valuing inventory at lower of cost and NRV",
+        "explanation": "The gross profit method estimates quantity-at-cost; it does not perform LCNRV.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The gross profit method estimates inventory for interim reports, casualty losses, and reasonableness tests. It is not acceptable for annual GAAP statements.",
+    "skill": "remembering"
+  }
+]

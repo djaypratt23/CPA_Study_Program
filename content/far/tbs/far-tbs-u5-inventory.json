@@ -1,0 +1,54 @@
+{
+  "id": "far-tbs-u5-inventory",
+  "section": "FAR",
+  "unitId": "far-u5",
+  "moduleIds": ["far-inventory-cost", "far-inventory-valuation"],
+  "pool": "practice",
+  "title": "Inventory cost flow & valuation — Brook Outdoor Gear",
+  "minutes": 18,
+  "skill": "analysis",
+  "instructions": "Brook Outdoor Gear sells one model of camp stove and uses a **periodic** system. Compute inventory under each method, then evaluate the year-end valuation memo.",
+  "exhibits": [
+    { "title": "Stove activity for the year", "content": "| Date | Units | Unit cost |\n|---|---:|---:|\n| Beginning inventory | 400 | $15 |\n| April purchase | 600 | $16 |\n| July purchase | 500 | $18 |\n| October purchase | 300 | $19 |\n\nUnits sold during the year: **1,350**." },
+    { "title": "Year-end market data", "content": "Expected selling price per stove: **$20**. Expected costs to sell per stove: **$3.50**. Current replacement cost: **$16.20**. Normal profit margin: **$2.00** per stove." }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "cost",
+      "prompt": "Compute (round to the nearest dollar).",
+      "rows": [
+        { "id": "ga", "label": "Cost of goods available for sale", "answer": 30300, "tolerance": 0, "explanation": "6,000 + 9,600 + 9,000 + 5,700 = **30,300** for 1,800 units." },
+        { "id": "fe", "label": "FIFO ending inventory", "answer": 8400, "tolerance": 0, "explanation": "450 units remain: 300 × 19 + 150 × 18 = **8,400**." },
+        { "id": "le", "label": "LIFO ending inventory", "answer": 6800, "tolerance": 0, "explanation": "400 × 15 + 50 × 16 = **6,800**." },
+        { "id": "lc", "label": "LIFO cost of goods sold", "answer": 23500, "tolerance": 0, "explanation": "30,300 − 6,800 = **23,500**." },
+        { "id": "wa", "label": "Weighted-average ending inventory", "answer": 7575, "tolerance": 1, "explanation": "30,300 ÷ 1,800 = 16.8333 × 450 = **7,575**." },
+        { "id": "res", "label": "LIFO reserve (FIFO − LIFO)", "answer": 1600, "tolerance": 0, "explanation": "8,400 − 6,800 = **1,600**." }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "val",
+      "prompt": "Answer the valuation questions. NRV per unit = 20.00 − 3.50 = 16.50.",
+      "rows": [
+        { "id": "v1", "label": "If Brook uses FIFO, the year-end carrying amount per unit is…", "options": ["$16.20", "$16.50", "$18.67", "$14.50"], "answer": "$16.50", "explanation": "FIFO → lower of cost and NRV. FIFO unit cost = 8,400 ÷ 450 = 18.67 > NRV 16.50 → write down to **$16.50**." },
+        { "id": "v2", "label": "If Brook uses LIFO, market per unit is…", "options": ["$16.20", "$16.50", "$14.50", "$15.11"], "answer": "$16.20", "explanation": "Ceiling 16.50; floor 16.50 − 2.00 = 14.50; replacement 16.20 is in between → market 16.20." },
+        { "id": "v3", "label": "Under LIFO, is a write-down required?", "options": ["Yes", "No"], "answer": "No", "explanation": "LIFO unit cost = 6,800 ÷ 450 = 15.11 < market 16.20 → no write-down." }
+      ]
+    },
+    {
+      "kind": "docreview",
+      "id": "memo",
+      "prompt": "Review the controller's draft memo and correct any errors.",
+      "segments": [
+        { "text": "Because prices rose during the year, " },
+        { "id": "m1", "original": "LIFO reports lower cost of goods sold than FIFO", "options": ["LIFO reports lower cost of goods sold than FIFO", "LIFO reports higher cost of goods sold than FIFO", "LIFO and FIFO report the same cost of goods sold"], "answer": "LIFO reports higher cost of goods sold than FIFO", "explanation": "With rising prices LIFO expenses the newest, highest costs (23,500 vs. FIFO 21,900)." },
+        { "text": ". If we adopt LIFO for tax purposes, we " },
+        { "id": "m2", "original": "may continue to use FIFO in our financial statements", "options": ["may continue to use FIFO in our financial statements", "must also use LIFO in our financial statements", "must obtain SEC approval"], "answer": "must also use LIFO in our financial statements", "explanation": "The LIFO conformity rule requires LIFO for book purposes when used for tax." },
+        { "text": ". Any FIFO write-down to net realizable value " },
+        { "id": "m3", "original": "may not be reversed in later years even if prices recover", "options": ["may not be reversed in later years even if prices recover", "must be reversed when prices recover", "is recorded in other comprehensive income"], "answer": "may not be reversed in later years even if prices recover", "explanation": "Correct as written: under U.S. GAAP the written-down amount becomes the new cost basis." },
+        { "text": "." }
+      ]
+    }
+  ]
+}

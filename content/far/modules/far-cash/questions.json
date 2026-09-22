@@ -1,0 +1,437 @@
+[
+  {
+    "id": "far-cash-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: on December 1 a company bought a 6-month Treasury bill that matures on May 31. Is it a cash equivalent at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, because it is highly liquid",
+        "explanation": "Liquidity alone is not enough; the original maturity to the holder must be 3 months or less.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "No, because its original maturity to the holder exceeded 3 months",
+        "explanation": "Correct. Six months at acquisition — a short-term investment."
+      },
+      {
+        "id": "c",
+        "text": "Yes, because it matures within the next year",
+        "explanation": "That test is for current classification, not cash equivalents.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No, because Treasury bills are never cash equivalents",
+        "explanation": "T-bills with a 3-month-or-less original maturity are classic cash equivalents.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Cash equivalents have an original maturity **to the holder** of three months or less at acquisition. A 6-month bill fails, regardless of time remaining at year-end.",
+    "skill": "application"
+  },
+  {
+    "id": "far-cash-chk1",
+    "pool": "lesson",
+    "stem": "A company holds: checking account $52,000; petty cash $300; a customer's postdated check $4,000; a 60-day commercial paper investment bought when issued $25,000; postage stamps $150. What is cash and cash equivalents?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$81,450",
+        "explanation": "This includes the postdated check and stamps.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$52,300",
+        "explanation": "This excludes the qualifying commercial paper.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$77,300",
+        "explanation": "Correct. 52,000 + 300 + 25,000."
+      },
+      {
+        "id": "d",
+        "text": "$81,300",
+        "explanation": "This includes the postdated check, which is a receivable.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Checking 52,000 + petty cash 300 + 60-day commercial paper 25,000 = **77,300**. Postdated checks are receivables; stamps are prepaid.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cash-chk2",
+    "pool": "lesson",
+    "stem": "Which reconciling item requires a journal entry on the company's books?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deposit in transit",
+        "explanation": "Already recorded in the books; the bank will record it soon.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Outstanding check",
+        "explanation": "Already recorded in the books.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "A bank error charging another company's check to this account",
+        "explanation": "The bank corrects its own error; no book entry.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Bank service charge",
+        "explanation": "Correct. Book-side items need entries."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Only items the books haven't recorded (service charges, NSF checks, bank collections, interest, book errors) require adjusting entries.",
+    "skill": "application"
+  },
+  {
+    "id": "far-cash-01",
+    "pool": "practice",
+    "stem": "At December 31 a company's records show: cash in bank $120,000; a 90-day certificate of deposit purchased December 15 $50,000; a 1-year CD purchased in July $30,000; a legally restricted compensating balance of $10,000 included in the $120,000; travel advances to employees $2,000. What amount is reported as unrestricted cash and cash equivalents?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$170,000",
+        "explanation": "This includes the legally restricted compensating balance.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$160,000",
+        "explanation": "Correct. 120,000 − 10,000 + 50,000."
+      },
+      {
+        "id": "c",
+        "text": "$190,000",
+        "explanation": "The 1-year CD is a short-term investment, and restricted cash is excluded.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$110,000",
+        "explanation": "The 90-day CD qualifies as a cash equivalent.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Unrestricted cash = 120,000 − 10,000 restricted = 110,000. Add the 90-day CD (original maturity ≤ 3 months) 50,000 → **160,000**. The 1-year CD is an investment; travel advances are receivables.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cash-02",
+    "pool": "practice",
+    "stem": "Balance per bank $62,000; deposits in transit $8,500; outstanding checks $11,200; the bank mistakenly charged the company's account $400 for another customer's check. What is the correct cash balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$59,300",
+        "explanation": "This ignores the bank error.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$58,900",
+        "explanation": "This subtracts the bank error; it should be added back.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$59,700",
+        "explanation": "Correct. 62,000 + 8,500 − 11,200 + 400."
+      },
+      {
+        "id": "d",
+        "text": "$81,700",
+        "explanation": "This adds outstanding checks.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Bank side: 62,000 + 8,500 − 11,200 + 400 (erroneous charge added back) = **59,700**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cash-03",
+    "pool": "practice",
+    "stem": "Balance per books $35,000. Unrecorded items: bank collected a $4,000 note plus $120 interest; service charge $25; NSF customer check $1,300. The company recorded a $650 customer payment as $560. What is the correct cash balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$37,885",
+        "explanation": "Correct. 35,000 + 4,120 − 25 − 1,300 + 90."
+      },
+      {
+        "id": "b",
+        "text": "$37,705",
+        "explanation": "This subtracts the recording error instead of adding it.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$37,795",
+        "explanation": "This omits the recording error.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$40,485",
+        "explanation": "This adds the NSF check instead of subtracting it.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "35,000 + 4,000 + 120 − 25 − 1,300 + (650 − 560 = 90) = **37,885**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cash-04",
+    "pool": "practice",
+    "stem": "A company has a $15,000 overdraft in its payroll account at Bank A and $40,000 in its operating account at Bank B. How is this presented?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cash of $25,000",
+        "explanation": "Offset is allowed only at the same bank with a right of offset.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Cash of $40,000 and a current liability of $15,000",
+        "explanation": "Correct. Overdrafts are current liabilities."
+      },
+      {
+        "id": "c",
+        "text": "Cash of $40,000 and disclosure only of the overdraft",
+        "explanation": "An overdraft is a liability, not just a disclosure.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Cash of $55,000",
+        "explanation": "An overdraft reduces, not increases, available cash.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Overdrafts are current liabilities. Netting against positive balances is permitted only for accounts at the same bank where a right of offset exists.",
+    "skill": "application"
+  },
+  {
+    "id": "far-cash-05",
+    "pool": "practice",
+    "stem": "A company maintains a $100,000 compensating balance under a formal loan agreement that legally restricts withdrawal. The loan is short-term. How should the $100,000 be presented?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Included in cash with no disclosure",
+        "explanation": "Restricted balances must be separated or at least disclosed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Deducted from the loan balance",
+        "explanation": "Cash and debt are not offset this way.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Reported as a noncurrent investment",
+        "explanation": "For a short-term loan, the restricted cash is current.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Reported separately as restricted cash within current assets",
+        "explanation": "Correct. Legally restricted compensating balances are segregated as restricted cash — current if related to short-term borrowing, noncurrent if related to long-term borrowing — with disclosure of the arrangement."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Legally restricted compensating balances are segregated as restricted cash — current if related to short-term borrowing, noncurrent if related to long-term borrowing — with disclosure of the arrangement.",
+    "skill": "application"
+  },
+  {
+    "id": "far-cash-06",
+    "pool": "practice",
+    "stem": "Which item is included in cash and cash equivalents?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A 3-year Treasury note purchased 2 months before maturity",
+        "explanation": "Correct. Original maturity to the holder is 2 months."
+      },
+      {
+        "id": "b",
+        "text": "A customer's check returned NSF",
+        "explanation": "An NSF check is a receivable.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "An IOU from the company president",
+        "explanation": "A receivable from an officer.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A 4-month certificate of deposit purchased at issuance",
+        "explanation": "Original maturity exceeds 3 months.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Maturity is measured from the date the holder acquires the investment. A Treasury note bought within 3 months of maturity qualifies.",
+    "skill": "application"
+  },
+  {
+    "id": "far-cash-07",
+    "pool": "practice",
+    "stem": "Balance per bank $18,750; balance per books $16,920. Deposit in transit $2,300; outstanding checks $3,940; bank service charge $60; the bank credited $250 of interest. What is the correct balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$17,110",
+        "explanation": "Correct. Bank: 18,750 + 2,300 − 3,940 = 17,110; books: 16,920 − 60 + 250 = 17,110."
+      },
+      {
+        "id": "b",
+        "text": "$16,730",
+        "explanation": "This reverses the interest and service charge on the book side.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$20,390",
+        "explanation": "This reverses both bank-side items: 18,750 − 2,300 + 3,940.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$17,420",
+        "explanation": "This ignores the service charge and adds the interest twice.",
+        "trap": "other"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Both sides agree at **17,110** — the proof that the reconciliation is complete.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cash-08",
+    "pool": "practice",
+    "stem": "After preparing a bank reconciliation, which journal entry is required for a customer's $900 check returned NSF?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dr Cash 900 / Cr Accounts receivable 900",
+        "explanation": "Reversed — cash decreased.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Dr Bad debt expense 900 / Cr Cash 900",
+        "explanation": "The customer still owes the money; it is reinstated as a receivable, not expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Dr Accounts receivable 900 / Cr Cash 900",
+        "explanation": "Correct. The receivable is reinstated."
+      },
+      {
+        "id": "d",
+        "text": "No entry; the bank will correct it",
+        "explanation": "An NSF check is not a bank error.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The deposit the company recorded did not clear, so cash is reduced and the customer's receivable is reinstated.",
+    "skill": "application"
+  },
+  {
+    "id": "far-cash-09",
+    "pool": "practice",
+    "stem": "Cash of $500,000 is held in a fund required by a bond indenture to retire bonds in 7 years. How is it classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Current asset — cash",
+        "explanation": "It is restricted for a noncurrent purpose.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Cash equivalent",
+        "explanation": "Restricted for long-term debt retirement.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A reduction of bonds payable",
+        "explanation": "Sinking funds are not offset against the debt.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Noncurrent asset (e.g., long-term investments or restricted cash)",
+        "explanation": "Correct. A bond sinking fund is restricted for a noncurrent purpose and reported as a noncurrent asset (though included in restricted cash totals in the statement of cash flows)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A bond sinking fund is restricted for a noncurrent purpose and reported as a noncurrent asset (though included in restricted cash totals in the statement of cash flows).",
+    "skill": "application"
+  },
+  {
+    "id": "far-cash-10",
+    "pool": "practice",
+    "stem": "A company wrote check #1045 for $1,760 to a supplier but recorded it in the cash disbursements journal as $1,670. The check cleared the bank for $1,760. On the bank reconciliation, this error is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Added to the bank balance",
+        "explanation": "The bank processed it correctly.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Deducted from the book balance ($90)",
+        "explanation": "Correct. The books under-recorded the disbursement by $90."
+      },
+      {
+        "id": "c",
+        "text": "Added to the book balance ($90)",
+        "explanation": "Cash was reduced more than recorded.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Deducted from the bank balance ($1,760)",
+        "explanation": "The check has cleared; it isn't outstanding.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Book error: the payment was 1,760 but recorded as 1,670 → books overstate cash by 90. Deduct 90 on the book side and record Dr Accounts payable 90 / Cr Cash 90.",
+    "skill": "application",
+    "calc": true
+  }
+]

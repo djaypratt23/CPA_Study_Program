@@ -1,0 +1,54 @@
+{
+  "id": "far-tbs-u5-cash-receivables",
+  "section": "FAR",
+  "unitId": "far-u5",
+  "moduleIds": ["far-cash", "far-receivables"],
+  "pool": "practice",
+  "title": "Bank reconciliation & credit losses — Summit Office Supply",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Summit Office Supply's controller needs the December 31 bank reconciliation and the year-end credit loss adjustment. Use the exhibits.",
+  "exhibits": [
+    { "title": "Bank reconciliation data", "content": "- Balance per bank statement: **$84,600**\n- Balance per general ledger: **$77,160**\n- Deposits in transit: **$9,200**\n- Outstanding checks: **$12,750**\n- The bank charged Summit's account **$300** for a check written by another company (bank error).\n- The bank collected a note receivable for Summit: **$5,000** principal plus **$75** interest (not yet recorded by Summit).\n- Bank service charges: **$45**.\n- A customer's check for **$1,200** was returned NSF.\n- Check #2291 to a supplier (on account) was written and cleared for **$2,480** but recorded by Summit as **$2,840**." },
+    { "title": "Receivables aging, December 31", "content": "| Age | Balance | Expected loss rate |\n|---|---:|---:|\n| Current | 420,000 | 1% |\n| 31–60 days | 95,000 | 5% |\n| 61–90 days | 40,000 | 20% |\n| Over 90 days | 15,000 | 60% |\n\nAllowance for credit losses: January 1 balance **$16,000** credit; write-offs during the year **$13,500**; recoveries **$700**. The loss rates reflect current conditions and supportable forecasts." }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "rec",
+      "prompt": "Complete the bank reconciliation.",
+      "rows": [
+        { "id": "cb", "label": "Correct cash balance — bank side", "answer": 81350, "tolerance": 0, "explanation": "84,600 + 9,200 − 12,750 + 300 (bank error added back) = **81,350**." },
+        { "id": "ck", "label": "Book-side adjustment for check #2291 (enter + or −)", "answer": 360, "tolerance": 0, "explanation": "The check was 2,480 but recorded as 2,840 — cash was reduced 360 too much. **+360**." },
+        { "id": "cbk", "label": "Correct cash balance — book side", "answer": 81350, "tolerance": 0, "explanation": "77,160 + 5,075 − 45 − 1,200 + 360 = **81,350** — agrees with the bank side." }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "je",
+      "prompt": "Record the single compound adjusting entry for all book-side reconciling items.",
+      "accounts": ["Cash", "Notes receivable", "Interest revenue", "Bank service charge expense", "Accounts receivable", "Accounts payable", "Allowance for credit losses", "Credit loss expense"],
+      "maxLines": 7,
+      "lines": [
+        { "account": "Cash", "debit": 4190 },
+        { "account": "Bank service charge expense", "debit": 45 },
+        { "account": "Accounts receivable", "debit": 1200 },
+        { "account": "Notes receivable", "credit": 5000 },
+        { "account": "Interest revenue", "credit": 75 },
+        { "account": "Accounts payable", "credit": 360 }
+      ],
+      "explanation": "Net cash change = +5,075 − 45 − 1,200 + 360 = **+4,190**. Debits: Cash 4,190; Service charge expense 45; Accounts receivable 1,200 (NSF reinstated). Credits: Notes receivable 5,000; Interest revenue 75; Accounts payable 360 (the overstated payment reduced AP by too much, so AP is restored). Total debits = credits = 5,435."
+    },
+    {
+      "kind": "numeric",
+      "id": "cl",
+      "prompt": "Compute the credit loss amounts.",
+      "rows": [
+        { "id": "req", "label": "Required allowance at December 31", "answer": 25950, "tolerance": 0, "explanation": "4,200 + 4,750 + 8,000 + 9,000 = **25,950**." },
+        { "id": "un", "label": "Allowance balance before adjustment (credit)", "answer": 3200, "tolerance": 0, "explanation": "16,000 − 13,500 + 700 = **3,200** credit." },
+        { "id": "exp", "label": "Credit loss expense for the year", "answer": 22750, "tolerance": 0, "explanation": "25,950 − 3,200 = **22,750**." },
+        { "id": "net", "label": "Net accounts receivable reported", "answer": 544050, "tolerance": 0, "explanation": "570,000 − 25,950 = **544,050**. (The NSF check reinstated in the bank reconciliation is assumed to be already reflected in the aging.)" }
+      ]
+    }
+  ]
+}
