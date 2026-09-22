@@ -1,0 +1,439 @@
+[
+  {
+    "id": "far-seq-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company buys back its own shares for $40,000 and later resells them for $46,000. How is the $6,000 difference reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Gain on the income statement",
+        "explanation": "Transactions in a company's own stock never create income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Additional paid-in capital",
+        "explanation": "Correct. Reissuing treasury stock above cost credits APIC–treasury stock; there is no gain."
+      },
+      {
+        "id": "c",
+        "text": "Retained earnings",
+        "explanation": "Retained earnings is reduced only for shortfalls after APIC is used up.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Other comprehensive income",
+        "explanation": "Owner transactions aren't OCI.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Reissuing treasury stock above cost credits APIC–treasury stock; there is no gain.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-seq-chk1",
+    "pool": "lesson",
+    "stem": "Treasury shares bought for $50,000 are reissued for $41,000. APIC–treasury stock has a $3,000 balance from earlier transactions. What is the effect on retained earnings?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect",
+        "explanation": "The shortfall exceeds APIC–treasury stock.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Decrease of $9,000",
+        "explanation": "APIC–treasury stock must be used first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Decrease of $6,000",
+        "explanation": "Correct. Shortfall 9,000 − 3,000 APIC."
+      },
+      {
+        "id": "d",
+        "text": "Decrease of $3,000",
+        "explanation": "That's the APIC available, not the remaining shortfall.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Shortfall = 50,000 − 41,000 = 9,000. Use APIC–treasury stock (3,000) first; remaining **6,000** reduces retained earnings.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-seq-chk2",
+    "pool": "lesson",
+    "stem": "A company with 50,000 shares of $2 par common stock outstanding (market price $30) declares a 10% stock dividend. By how much does retained earnings decrease?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Small stock dividends are recorded at fair value, not par.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$150,000",
+        "explanation": "Correct. 5,000 shares × $30."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Stock dividends reduce retained earnings.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$1,500,000",
+        "explanation": "That's the total market value of all outstanding shares.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A 10% dividend is small (< 20–25%): record at fair value. 5,000 shares × $30 = **150,000** (common stock 10,000; APIC 140,000).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-seq-01",
+    "pool": "practice",
+    "stem": "A company issued 5,000 shares of $10 par common stock in exchange for land. The stock is actively traded at $48 per share; the land's appraised value is $230,000. At what amount is the land recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Par value is not a measure of fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$230,000",
+        "explanation": "The stock's quoted price is more clearly determinable than an appraisal.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$240,000",
+        "explanation": "Correct. 5,000 × $48."
+      },
+      {
+        "id": "d",
+        "text": "$235,000",
+        "explanation": "No averaging of the two measures.",
+        "trap": "other"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Use the more clearly determinable fair value — an active market price of 48 × 5,000 = **240,000**. Common stock 50,000; APIC 190,000.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-seq-02",
+    "pool": "practice",
+    "stem": "A company issued 1,000 shares of preferred stock and 2,000 shares of common stock together for $150,000. The preferred has a market value of $60 per share; the common has no established market value. How much is allocated to common stock (incremental method)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$90,000",
+        "explanation": "Correct. 150,000 − 60,000."
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "This allocates two-thirds by share count.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$60,000",
+        "explanation": "That's the preferred allocation.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$75,000",
+        "explanation": "Equal split has no basis.",
+        "trap": "other"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Only preferred has a known value (1,000 × 60 = 60,000); common gets the remainder: **90,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-seq-03",
+    "pool": "practice",
+    "stem": "Which transaction **decreases** total stockholders' equity?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A 2-for-1 stock split",
+        "explanation": "No change to total equity.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "A 10% stock dividend",
+        "explanation": "Reclassification within equity.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Reissuing treasury stock below cost",
+        "explanation": "Reissuance increases equity by the cash received.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Declaring a cash dividend",
+        "explanation": "Correct. Retained earnings falls and a liability is recorded."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Cash dividend declaration: Dr Retained earnings / Cr Dividends payable — equity down. Splits and stock dividends don't change total equity; reissuing treasury stock increases it.",
+    "skill": "application"
+  },
+  {
+    "id": "far-seq-04",
+    "pool": "practice",
+    "stem": "A company declared a property dividend of investment securities with a carrying amount of $85,000 and a fair value of $110,000. What amounts are recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Gain $25,000; retained earnings decreases $110,000",
+        "explanation": "Correct. Remeasure the securities to fair value (gain 25,000), then Dr Retained earnings 110,000 / Cr Property dividends payable 110,000."
+      },
+      {
+        "id": "b",
+        "text": "No gain; retained earnings decreases $85,000",
+        "explanation": "Property dividends are remeasured to fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Gain $25,000; retained earnings decreases $85,000",
+        "explanation": "The dividend is recorded at fair value.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Gain $25,000 credited to APIC",
+        "explanation": "The gain goes to income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Remeasure the securities to fair value (gain 25,000), then Dr Retained earnings 110,000 / Cr Property dividends payable 110,000.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-seq-05",
+    "pool": "practice",
+    "stem": "A company has 20,000 shares of $50 par, 6% **noncumulative** preferred and 100,000 common shares. No dividends were declared last year. This year it declares $100,000 of dividends. How much goes to common?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Correct. Preferred receives only the current 60,000; common gets 40,000."
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "This treats the preferred as cumulative (two years = 120,000).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "Preferred has priority for the current year's dividend.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Dividends aren't split equally between classes.",
+        "trap": "other"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Preferred annual dividend = 20,000 × 50 × 6% = 60,000. Noncumulative → no arrears. Common = 100,000 − 60,000 = **40,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-seq-06",
+    "pool": "practice",
+    "stem": "A company with 200,000 shares of $1 par common stock declares a 2-for-1 stock split. Which is true after the split?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "400,000 shares of $0.50 par; retained earnings unchanged",
+        "explanation": "Correct. A stock split doubles shares and halves par; the common stock account total and retained earnings are unchanged (memo entry only)."
+      },
+      {
+        "id": "b",
+        "text": "400,000 shares of $1 par; retained earnings decreases $200,000",
+        "explanation": "That describes a 100% stock dividend at par.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "200,000 shares of $2 par",
+        "explanation": "That's a reverse split.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "400,000 shares; APIC increases",
+        "explanation": "A split changes only shares and par.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A stock split doubles shares and halves par; the common stock account total and retained earnings are unchanged (memo entry only).",
+    "skill": "application"
+  },
+  {
+    "id": "far-seq-07",
+    "pool": "practice",
+    "stem": "A company with 100,000 shares of $1 par common stock (market price $15) declares a 40% stock dividend. What is the entry?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dr Retained earnings 600,000 / Cr Common stock 40,000 / Cr APIC 560,000",
+        "explanation": "Large stock dividends are recorded at par, not fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Dr Retained earnings 40,000 / Cr Common stock dividend distributable 40,000",
+        "explanation": "Correct. A 40% dividend is large (> 20–25%) → record at par: 40,000 shares × $1 = 40,000, credited to common stock dividend distributable (equity) until issued."
+      },
+      {
+        "id": "c",
+        "text": "No entry",
+        "explanation": "That's a stock split.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Dr Retained earnings 40,000 / Cr Dividends payable 40,000",
+        "explanation": "Stock dividends are not liabilities.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A 40% dividend is large (> 20–25%) → record at par: 40,000 shares × $1 = **40,000**, credited to common stock dividend distributable (equity) until issued.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-seq-08",
+    "pool": "practice",
+    "stem": "How are dividends in arrears on cumulative preferred stock reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a current liability",
+        "explanation": "They aren't liabilities until declared.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a reduction of retained earnings",
+        "explanation": "No entry is made until declaration.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Disclosed in the notes (total and per share)",
+        "explanation": "Correct. Dividends in arrears are disclosed, not accrued; a liability arises only on declaration."
+      },
+      {
+        "id": "d",
+        "text": "As a long-term liability",
+        "explanation": "Not a liability.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Dividends in arrears are disclosed, not accrued; a liability arises only on declaration.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-seq-09",
+    "pool": "practice",
+    "stem": "Costs of $12,000 were incurred to issue new common stock (legal and underwriting fees). How are they accounted for?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Expensed as incurred",
+        "explanation": "Stock issuance costs reduce the proceeds.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Capitalized as an asset and amortized",
+        "explanation": "They are not assets.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Charged to retained earnings",
+        "explanation": "They reduce paid-in capital, not retained earnings.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Deducted from additional paid-in capital",
+        "explanation": "Correct. Direct costs of issuing equity reduce the proceeds recorded in APIC."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Direct costs of issuing equity reduce the proceeds recorded in APIC.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-seq-10",
+    "pool": "practice",
+    "stem": "On the date of record for a previously declared cash dividend, what entry is made?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dr Retained earnings / Cr Dividends payable",
+        "explanation": "That's the declaration-date entry.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "No entry",
+        "explanation": "Correct. The record date only identifies who will be paid."
+      },
+      {
+        "id": "c",
+        "text": "Dr Dividends payable / Cr Cash",
+        "explanation": "That's the payment-date entry.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Dr Cash / Cr Dividends payable",
+        "explanation": "No cash is received.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Declaration: liability and RE reduction. Record date: no entry. Payment date: pay the liability.",
+    "skill": "remembering"
+  }
+]

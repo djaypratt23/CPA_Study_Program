@@ -1,0 +1,58 @@
+{
+  "id": "far-tbs-u8-equity",
+  "section": "FAR",
+  "unitId": "far-u8",
+  "moduleIds": ["far-equity", "far-payables", "far-debt-other"],
+  "pool": "practice",
+  "title": "Equity transactions & liability classification — Oakmont Corp.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Oakmont Corp. (calendar year) had the equity and liability events below. Record the treasury stock reissuance, compute the equity amounts, and review the controller's draft note.",
+  "exhibits": [
+    { "title": "Equity at January 1, Year 2", "content": "- Preferred stock, 6% cumulative, $100 par, **8,000** shares — $800,000 (dividends **one year in arrears**)\n- Common stock, $5 par, **300,000** shares issued and outstanding — $1,500,000\n- APIC — common: $2,400,000\n- APIC — treasury stock: **$0**\n- Retained earnings: $3,100,000" },
+    { "title": "Year 2 events", "content": "1. Mar 1: purchased **10,000** common shares as treasury stock at **$18**.\n2. Jun 1: reissued **6,000** treasury shares at **$15**.\n3. Nov 15: declared total cash dividends of **$150,000**, payable January 10.\n4. Dec 31: net income **$620,000**.\n5. A $500,000 note due May 1, Year 3 was refinanced on February 1, Year 3 (before the statements were issued) with a 4-year note of **$500,000**." }
+  ],
+  "parts": [
+    {
+      "kind": "journal",
+      "id": "je",
+      "prompt": "Record the June 1 reissuance of treasury stock (cost method).",
+      "accounts": ["Cash", "Treasury stock", "APIC — treasury stock", "Retained earnings", "Common stock", "Loss on treasury stock"],
+      "maxLines": 4,
+      "lines": [
+        { "account": "Cash", "debit": 90000 },
+        { "account": "Retained earnings", "debit": 18000 },
+        { "account": "Treasury stock", "credit": 108000 }
+      ],
+      "explanation": "Cash 6,000 × 15 = 90,000; cost 6,000 × 18 = 108,000. Shortfall 18,000; APIC–treasury stock has no balance, so retained earnings absorbs it. No loss account is ever used."
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the Year 2 amounts.",
+      "rows": [
+        { "id": "pref", "label": "Dividends allocated to preferred", "answer": 96000, "tolerance": 0, "explanation": "Annual preferred = 800,000 × 6% = 48,000. One year in arrears + current = **96,000**." },
+        { "id": "com", "label": "Dividends allocated to common", "answer": 54000, "tolerance": 0, "explanation": "150,000 − 96,000 = **54,000**." },
+        { "id": "ts", "label": "Treasury stock balance at Dec 31 (enter as a positive number)", "answer": 72000, "tolerance": 0, "explanation": "4,000 remaining shares × 18 = **72,000**." },
+        { "id": "re", "label": "Retained earnings at Dec 31", "answer": 3552000, "tolerance": 0, "explanation": "3,100,000 − 18,000 (treasury shortfall) − 150,000 dividends + 620,000 = **3,552,000**." },
+        { "id": "out", "label": "Common shares outstanding at Dec 31", "answer": 296000, "tolerance": 0, "explanation": "300,000 issued − 4,000 still in treasury = **296,000**." }
+      ]
+    },
+    {
+      "kind": "docreview",
+      "id": "memo",
+      "prompt": "Review the controller's draft note and correct any errors.",
+      "segments": [
+        { "text": "The loss on reissuance of treasury stock was reported " },
+        { "id": "d1", "original": "in other income and expense", "options": ["in other income and expense", "as a reduction of retained earnings", "in other comprehensive income"], "answer": "as a reduction of retained earnings", "explanation": "Treasury stock transactions never produce income statement gains or losses; with no APIC–treasury stock, the shortfall reduces retained earnings." },
+        { "text": ". Preferred dividends in arrears at January 1 were " },
+        { "id": "d2", "original": "recorded as a liability at the end of Year 1", "options": ["recorded as a liability at the end of Year 1", "disclosed in the notes at the end of Year 1", "charged to Year 1 net income"], "answer": "disclosed in the notes at the end of Year 1", "explanation": "Arrears are disclosed, not accrued, until declared." },
+        { "text": ". The $500,000 note due May 1, Year 3 is classified as " },
+        { "id": "d3", "original": "a current liability", "options": ["a current liability", "a noncurrent liability"], "answer": "a noncurrent liability", "explanation": "It was refinanced on a long-term basis before the statements were issued." },
+        { "text": ". The cash dividend declared November 15 is reported as " },
+        { "id": "d4", "original": "a current liability at December 31", "options": ["a current liability at December 31", "a reduction of retained earnings only when paid", "a disclosure only"], "answer": "a current liability at December 31", "explanation": "Correct as written: declaration creates a liability." },
+        { "text": "." }
+      ]
+    }
+  ]
+}

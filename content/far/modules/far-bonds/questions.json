@@ -1,0 +1,438 @@
+[
+  {
+    "id": "far-bond-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company issues bonds with a 6% stated rate when the market rate for similar bonds is 7%. How are the bonds issued?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At a premium",
+        "explanation": "A premium occurs when the stated rate exceeds the market rate.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "At par",
+        "explanation": "Only when stated and market rates are equal.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "At a discount",
+        "explanation": "Correct. Investors pay less to earn 7% on 6% coupons."
+      },
+      {
+        "id": "d",
+        "text": "It depends on the bond's maturity date",
+        "explanation": "Maturity affects the size of the discount, not whether there is one.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Market rate > stated rate → the bonds sell below face (a discount), raising the investors' yield to the market rate.",
+    "skill": "application"
+  },
+  {
+    "id": "far-bond-chk1",
+    "pool": "lesson",
+    "stem": "Bonds with a face amount of $300,000 were issued for $288,000. Interest is paid annually at 5%; the market rate at issuance was 6%. What is interest expense for the first year (effective interest method)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000",
+        "explanation": "That is the cash coupon.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$17,280",
+        "explanation": "Correct. 288,000 × 6%."
+      },
+      {
+        "id": "c",
+        "text": "$18,000",
+        "explanation": "This applies the market rate to face value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$14,400",
+        "explanation": "This applies the stated rate to the carrying amount.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Interest expense = carrying amount × market rate = 288,000 × 6% = **17,280**; discount amortization = 2,280.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-bond-chk2",
+    "pool": "lesson",
+    "stem": "On April 1, a company issued $400,000 of 9% bonds at par. Interest is paid semiannually on January 1 and July 1. How much cash did the company receive?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$400,000",
+        "explanation": "Investors also pay accrued interest from January 1.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$391,000",
+        "explanation": "This subtracts the accrued interest instead of adding it.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$418,000",
+        "explanation": "This adds six months of interest.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$409,000",
+        "explanation": "Correct. 400,000 + (400,000 × 9% × 3/12 = 9,000)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Accrued interest January 1–April 1 = 400,000 × 9% × 3/12 = 9,000. Cash received = 400,000 + 9,000 = **409,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-bond-01",
+    "pool": "practice",
+    "stem": "A company issues $200,000 of 5-year, 7% bonds paying interest semiannually when the market rate is 8%. Which inputs price the bond?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "3.5% coupon per period, 4% market rate per period, 10 periods",
+        "explanation": "Correct. Halve both rates and double the number of periods."
+      },
+      {
+        "id": "b",
+        "text": "7% coupon, 8% market rate, 5 periods",
+        "explanation": "Semiannual bonds require per-period rates and periods.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "3.5% coupon, 8% market rate, 10 periods",
+        "explanation": "The market rate must also be halved.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "7% coupon, 4% market rate, 10 periods",
+        "explanation": "The coupon rate must also be per period.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Semiannual: coupon = 7,000 per period (3.5% × 200,000), discount rate 4%, 10 periods.",
+    "skill": "application"
+  },
+  {
+    "id": "far-bond-02",
+    "pool": "practice",
+    "stem": "Using the inputs in the previous item ($200,000 face, 3.5% per period, 4% market per period, 10 periods), the issue price is closest to:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "Par only if market rate equals coupon rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$191,889",
+        "explanation": "Correct. PV of 200,000 at 4% for 10 periods plus PV of 7,000 per period."
+      },
+      {
+        "id": "c",
+        "text": "$208,111",
+        "explanation": "A premium would require the market rate to be below the coupon.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$135,113",
+        "explanation": "That is only the PV of the face amount.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "PV face = 200,000 × 0.67556 = 135,113; PV coupons = 7,000 × 8.11090 = 56,776. Price ≈ **191,889** (a discount).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-bond-03",
+    "pool": "practice",
+    "stem": "A bond issued at a discount is amortized using the effective interest method. Over the bond's life, interest expense each period:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Increases",
+        "explanation": "Correct. Carrying amount rises, so expense (carrying amount × market rate) rises."
+      },
+      {
+        "id": "b",
+        "text": "Decreases",
+        "explanation": "That pattern applies to premium bonds.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Stays constant",
+        "explanation": "That describes straight-line amortization.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Equals the cash coupon",
+        "explanation": "For discount bonds, expense exceeds the coupon.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Discount amortization increases the carrying amount each period; interest expense is a constant rate on a growing base.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-bond-04",
+    "pool": "practice",
+    "stem": "Bonds with a face value of $800,000 and a carrying amount of $780,000 pay 6% interest annually; the market rate at issue was 7%. What is the carrying amount after the next payment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$788,000",
+        "explanation": "This applies the 7% market rate to face value (56,000) instead of the carrying amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$786,600",
+        "explanation": "Correct. 780,000 + (54,600 − 48,000)."
+      },
+      {
+        "id": "c",
+        "text": "$773,400",
+        "explanation": "This subtracts the amortization.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$780,000",
+        "explanation": "Amortization changes the carrying amount.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Interest expense = 780,000 × 7% = 54,600. Cash = 800,000 × 6% = 48,000. Discount amortization = 6,600 → carrying amount **786,600**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-bond-05",
+    "pool": "practice",
+    "stem": "A company issued $1,000,000 of bonds at 101 and paid $15,000 of debt issuance costs. How is the debt presented immediately after issuance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Bonds payable $1,000,000 net of a $5,000 net discount: carrying amount $995,000",
+        "explanation": "Correct. 1,010,000 − 15,000 = 995,000."
+      },
+      {
+        "id": "b",
+        "text": "Bonds payable $1,010,000 and a $15,000 deferred charge asset",
+        "explanation": "Issuance costs are a direct deduction from the debt, not an asset.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "Bonds payable $1,000,000 and $15,000 expense",
+        "explanation": "Issuance costs are amortized over the debt's life.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Bonds payable $1,025,000",
+        "explanation": "Costs reduce, not increase, the carrying amount.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Proceeds 1,010,000 (premium 10,000) less issuance costs 15,000 = net carrying amount **995,000** (ASC 835-30-45-1A).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-bond-06",
+    "pool": "practice",
+    "stem": "Which statement about bond premium amortization under the effective interest method is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Interest expense exceeds the cash paid",
+        "explanation": "That is a discount bond.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "The premium amortized each period decreases over time",
+        "explanation": "The amortization amount increases for premiums too.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Interest expense is less than the cash paid, and the carrying amount decreases toward face",
+        "explanation": "Correct. Premium bonds: expense = carrying amount × lower market rate < cash coupon; the difference reduces the carrying amount toward face."
+      },
+      {
+        "id": "d",
+        "text": "The carrying amount increases toward face value",
+        "explanation": "Premium bonds start above face and decline.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Premium bonds: expense = carrying amount × lower market rate < cash coupon; the difference reduces the carrying amount toward face. The amortization amount grows each period.",
+    "skill": "application"
+  },
+  {
+    "id": "far-bond-07",
+    "pool": "practice",
+    "stem": "A 10-year, $500,000 bond was issued at a $40,000 discount. Straight-line amortization produces results not materially different from the effective interest method. What is annual interest expense if the stated rate is 6% (annual payments)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "This omits discount amortization.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$34,000",
+        "explanation": "Correct. 30,000 cash + 4,000 amortization."
+      },
+      {
+        "id": "c",
+        "text": "$26,000",
+        "explanation": "Discount amortization adds to expense.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$27,600",
+        "explanation": "This applies 6% to the proceeds.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Cash interest = 500,000 × 6% = 30,000; straight-line amortization = 40,000 ÷ 10 = 4,000; expense = **34,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-bond-08",
+    "pool": "practice",
+    "stem": "Where is an unamortized bond discount reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As an asset (deferred charge)",
+        "explanation": "A discount is a contra-liability.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a reduction of bonds payable",
+        "explanation": "Correct. Bonds payable are reported net of unamortized discount (or plus unamortized premium)."
+      },
+      {
+        "id": "c",
+        "text": "As an expense at issuance",
+        "explanation": "It's amortized over the bond's life.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "As a reduction of equity",
+        "explanation": "It's part of the debt's carrying amount.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Bonds payable are reported net of unamortized discount (or plus unamortized premium).",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-bond-09",
+    "pool": "practice",
+    "stem": "On July 1, Year 1, a company issued $600,000 of 10-year, 8% bonds at par, with interest payable annually each June 30. What interest payable is accrued on December 31, Year 1 (calendar year)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$48,000",
+        "explanation": "That's a full year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Interest accrues with time.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$24,000",
+        "explanation": "Correct. 600,000 × 8% × 6/12."
+      },
+      {
+        "id": "d",
+        "text": "$12,000",
+        "explanation": "That's 3 months.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "July 1–December 31 = 6 months: 600,000 × 8% × 6/12 = **24,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-bond-10",
+    "pool": "practice",
+    "stem": "Bonds were issued at a premium. If the company used straight-line amortization instead of the effective interest method, how would interest expense in the **first** year compare?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Straight-line expense would be lower in the first year",
+        "explanation": "Correct. Straight-line amortizes an equal amount; effective interest amortizes less premium early, so its early expense is higher."
+      },
+      {
+        "id": "b",
+        "text": "Straight-line expense would be higher in the first year",
+        "explanation": "Reversed — effective-interest expense is the higher one early in a premium bond's life.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "They would be identical every year",
+        "explanation": "Only total interest over the life is identical.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Straight-line is prohibited, so the comparison is irrelevant",
+        "explanation": "Straight-line is allowed when not materially different.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Early in a premium bond's life, effective-interest amortization is small (expense close to the coupon). Straight-line amortizes an average amount, so its first-year expense is lower.",
+    "skill": "analysis"
+  }
+]

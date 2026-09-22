@@ -1,0 +1,441 @@
+[
+  {
+    "id": "far-pay-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a store collects $5,300 from a customer for merchandise priced at $5,000 plus 6% sales tax. How much revenue does the store recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,300",
+        "explanation": "Sales tax collected is owed to the government, not revenue.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Correct. The $300 is a sales tax liability."
+      },
+      {
+        "id": "c",
+        "text": "$4,982",
+        "explanation": "This removes 6% of 5,300 as though tax were part of the price.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$4,700",
+        "explanation": "Tax is added to, not subtracted from, the $5,000 price.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Revenue = 5,000. The 300 of tax collected is Sales taxes payable.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-pay-chk1",
+    "pool": "lesson",
+    "stem": "Employees are paid every Friday for a 5-day week ending that day; weekly payroll is $50,000. December 31 falls on a Wednesday. What wages payable should be accrued at year-end?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Only Monday–Wednesday (3 days) have been worked.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "This accrues only 2 days.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Correct. 3/5 × 50,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Unpaid wages earned must be accrued.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Daily wages = 10,000. Monday–Wednesday = 3 days → **30,000** wages payable.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-pay-chk2",
+    "pool": "lesson",
+    "stem": "Employees earn vacation that carries over to future years and is paid on termination. Unused earned vacation at year-end is estimated at $80,000. Sick days accumulate but are paid only for actual illness; unused sick days total $30,000. What liability is accrued?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$110,000",
+        "explanation": "Nonvesting sick pay need not be accrued.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Reversed — vacation meets the criteria.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Vesting vacation must be accrued.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$80,000",
+        "explanation": "Correct. Vesting vacation for services already rendered, probable and estimable → accrue 80,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Vesting vacation for services already rendered, probable and estimable → accrue 80,000. Sick pay paid only for actual illness that doesn't vest is not required to be accrued.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-pay-01",
+    "pool": "practice",
+    "stem": "A company uses the **net** method. It bought $30,000 of goods on terms 2/10, n/30 and paid after 20 days. What is recorded when paying?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dr AP 30,000 / Cr Cash 30,000",
+        "explanation": "Under the net method AP was recorded at 29,400.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Dr AP 29,400 / Dr Purchase discounts lost 600 / Cr Cash 30,000",
+        "explanation": "Correct. Net method: AP recorded at 29,400."
+      },
+      {
+        "id": "c",
+        "text": "Dr AP 29,400 / Cr Cash 29,400",
+        "explanation": "After the discount period the full 30,000 is owed.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Dr AP 30,000 / Cr Purchase discounts 600 / Cr Cash 29,400",
+        "explanation": "That is a gross-method payment within the discount period.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Net method: AP recorded at 29,400. Paying late costs 30,000; the 600 difference is purchase discounts lost (a financing-type expense).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-pay-02",
+    "pool": "practice",
+    "stem": "A company's total receipts from sales, including an 8% sales tax, were $540,000, all credited to Sales. What amount should be reclassified to sales taxes payable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$43,200",
+        "explanation": "This applies 8% to the tax-inclusive total.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Correct. 540,000 − 540,000 ÷ 1.08."
+      },
+      {
+        "id": "c",
+        "text": "$500,000",
+        "explanation": "That is the corrected sales amount, not the tax to reclassify.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Sales tax is a liability, not revenue.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Sales = 540,000 ÷ 1.08 = 500,000. Tax = **40,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-pay-03",
+    "pool": "practice",
+    "stem": "Gross payroll is $200,000. Federal income tax withheld is $32,000; the FICA rate is 7.65% for both employee and employer; federal and state unemployment taxes total $3,000. What is the employer's total payroll tax expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,300",
+        "explanation": "This omits unemployment taxes.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$33,600",
+        "explanation": "This includes the employee's FICA, which is a withholding, not the employer's expense.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$18,300",
+        "explanation": "Correct. Employer FICA 15,300 + unemployment 3,000."
+      },
+      {
+        "id": "d",
+        "text": "$50,300",
+        "explanation": "This includes income tax withheld and employee FICA.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Employer payroll tax expense = matching FICA (200,000 × 7.65% = 15,300) + unemployment taxes 3,000 = **18,300**. Withholdings are liabilities funded by employees.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-pay-04",
+    "pool": "practice",
+    "stem": "Which statement about accounts payable is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Trade payables due within one year are measured at their face amount, not discounted",
+        "explanation": "Correct. Payables arising from normal trade terms due within about a year are recorded at face; ASC 835-30 exempts them from interest imputation."
+      },
+      {
+        "id": "b",
+        "text": "Accounts payable must be recorded at present value",
+        "explanation": "Short-term trade payables are exempt from imputing interest.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Accounts payable are recorded when the invoice is paid",
+        "explanation": "They're recorded when goods or services are received (title passes).",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Accounts payable include amounts owed to banks under lines of credit",
+        "explanation": "Bank borrowings are notes/loans payable.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Payables arising from normal trade terms due within about a year are recorded at face; ASC 835-30 exempts them from interest imputation.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-pay-05",
+    "pool": "practice",
+    "stem": "A manager's bonus equals 20% of net income after deducting both the bonus and income taxes. Income before the bonus and taxes is $345,000; the tax rate is 25%, and the bonus is deductible. What is the bonus?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$69,000",
+        "explanation": "This takes 20% of income before bonus and taxes.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$51,750",
+        "explanation": "This ignores that the bonus reduces the income it's based on (20% × 75% × 345,000).",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$57,500",
+        "explanation": "This deducts the bonus but ignores taxes (B = 0.2 × (345,000 − B)).",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$45,000",
+        "explanation": "Correct. B = 0.20 × 0.75 × (345,000 − B) → 1.15B = 51,750."
+      }
+    ],
+    "answer": "d",
+    "explanation": "B = 0.20 × (345,000 − B) × (1 − 0.25) = 0.15 × (345,000 − B) → 1.15B = 51,750 → **B = 45,000**. Check: (345,000 − 45,000) × 0.75 = 225,000 × 20% = 45,000 ✓.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-pay-06",
+    "pool": "practice",
+    "stem": "A company's employees earned $12,000 of vacation during the year that vests and will be paid next year at current pay rates. How is it reported at year-end?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Expense and liability of $12,000 this year",
+        "explanation": "Correct. Vested vacation for services already rendered is accrued."
+      },
+      {
+        "id": "b",
+        "text": "Expense next year when vacation is taken",
+        "explanation": "The obligation arises as employees earn it.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Disclosed only",
+        "explanation": "All four accrual criteria are met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Recorded as a prepaid asset",
+        "explanation": "It's an obligation, not an asset.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Vested (or accumulating) vacation related to services already rendered, probable and estimable → accrue now.",
+    "skill": "application"
+  },
+  {
+    "id": "far-pay-07",
+    "pool": "practice",
+    "stem": "A company receives a utility bill of $4,800 on January 10 covering December 1–31 usage. The statements for December 31 have not been issued. How much utilities payable is reported at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0, because the bill arrived in January",
+        "explanation": "The expense was incurred in December.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$4,800",
+        "explanation": "Correct. The cost relates to December."
+      },
+      {
+        "id": "c",
+        "text": "$2,400",
+        "explanation": "All December usage is accrued.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$400",
+        "explanation": "Treating the bill as a monthly average over a year has no basis.",
+        "trap": "other"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Accrue expenses in the period incurred: Dr Utilities expense 4,800 / Cr Utilities payable 4,800.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-pay-08",
+    "pool": "practice",
+    "stem": "Under the gross method, a company bought $50,000 of merchandise on terms 1/15, n/45 and paid within 15 days. What amount of cash is paid, and how is the discount recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000; no discount recorded",
+        "explanation": "Paying within the discount period earns the 1% discount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$49,500; purchase discounts lost of $500",
+        "explanation": "'Discounts lost' is a net-method account used only when discounts are missed.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$49,500; the $500 discount reduces inventory (or purchase discounts)",
+        "explanation": "Correct. Gross method: AP recorded at 50,000."
+      },
+      {
+        "id": "d",
+        "text": "$49,000; purchase discounts of $1,000",
+        "explanation": "The discount is 1%, not 2%.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Gross method: AP recorded at 50,000. Payment within 15 days: Dr AP 50,000 / Cr Cash 49,500 / Cr Inventory (or Purchase discounts) 500.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-pay-09",
+    "pool": "practice",
+    "stem": "Which item is **not** a liability at year-end?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Income tax withheld from employees but not yet remitted",
+        "explanation": "The company owes it to the government.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Cash dividends declared but not yet paid",
+        "explanation": "Declared dividends are a liability.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Customer deposits for goods to be delivered next month",
+        "explanation": "An obligation to deliver or refund.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Stock dividend distributable",
+        "explanation": "Correct. It's an equity account — no assets will be paid."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A stock dividend distributable is reported in equity (common stock dividend distributable), since settlement is in shares, not assets.",
+    "skill": "application"
+  },
+  {
+    "id": "far-pay-10",
+    "pool": "practice",
+    "stem": "On December 1, a company issued a 3-month, 6% note payable of $80,000 to a supplier for inventory. What interest payable is accrued at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,200",
+        "explanation": "This is the full 3 months of interest.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$4,800",
+        "explanation": "This is a full year of interest.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "$400",
+        "explanation": "Correct. 80,000 × 6% × 1/12."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Interest accrues with time even though it's paid at maturity.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Interest for December = 80,000 × 6% × 1/12 = **400**.",
+    "skill": "application",
+    "calc": true
+  }
+]

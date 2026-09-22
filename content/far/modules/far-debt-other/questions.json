@@ -1,0 +1,437 @@
+[
+  {
+    "id": "far-dbt-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: at December 31 a company has a $300,000 note due March 31. On February 15, before the statements are issued, it issues $300,000 of 10-year bonds and uses the proceeds to pay the note. How is the note classified at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Current, because it is due within one year",
+        "explanation": "A completed long-term refinancing before issuance permits noncurrent classification.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Noncurrent",
+        "explanation": "Correct. The refinancing on a long-term basis was completed before issuance."
+      },
+      {
+        "id": "c",
+        "text": "Split 50/50",
+        "explanation": "No split rule exists; the refinanced amount is noncurrent.",
+        "trap": "other"
+      },
+      {
+        "id": "d",
+        "text": "Disclosed only",
+        "explanation": "The note is recognized; the question is classification.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Issuing long-term debt after year-end but before issuance, for the purpose of refinancing, demonstrates the ability to refinance → noncurrent (to the extent refinanced).",
+    "skill": "application"
+  },
+  {
+    "id": "far-dbt-chk1",
+    "pool": "lesson",
+    "stem": "At December 31 a company has $500,000 of notes due in April. In January (before issuance), it signs a non-cancelable 3-year financing agreement allowing it to borrow up to $350,000 to refinance the notes; the lender is financially capable and no violations exist. How much of the notes is classified as noncurrent?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$500,000",
+        "explanation": "Only the amount available under the agreement qualifies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$150,000",
+        "explanation": "That's the current portion.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "A qualifying financing agreement allows noncurrent classification.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$350,000",
+        "explanation": "Correct. A qualifying financing agreement permits noncurrent classification up to the amount available — 350,000 noncurrent; 150,000 current."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A qualifying financing agreement permits noncurrent classification up to the amount available — 350,000 noncurrent; 150,000 current.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dbt-chk2",
+    "pool": "lesson",
+    "stem": "A company retires bonds with a carrying amount of $780,000 by paying $760,000 in the open market. How is the difference reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000 gain in income from continuing operations",
+        "explanation": "Correct. Gain = 780,000 − 760,000 = 20,000, reported in income (not extraordinary)."
+      },
+      {
+        "id": "b",
+        "text": "$20,000 loss in income from continuing operations",
+        "explanation": "Paying less than carrying amount is a gain.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$20,000 gain as an extraordinary item",
+        "explanation": "Extraordinary items no longer exist.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000 credit to additional paid-in capital",
+        "explanation": "Extinguishment of debt with third parties affects income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gain = 780,000 − 760,000 = **20,000**, reported in income (not extraordinary).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dbt-01",
+    "pool": "practice",
+    "stem": "A company purchased land by issuing a $200,000 noninterest-bearing note due in 2 years. The market rate is 8%; the land's fair value is not reliably determinable. At what amount is the land recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "The note must be recorded at present value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$168,000",
+        "explanation": "This deducts simple interest.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$171,468",
+        "explanation": "Correct. 200,000 ÷ 1.08²."
+      },
+      {
+        "id": "d",
+        "text": "$185,185",
+        "explanation": "This discounts for only one year.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "PV = 200,000 × 0.85734 = **171,468**. The 28,532 discount is interest expense over two years.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dbt-02",
+    "pool": "practice",
+    "stem": "Using the previous facts (note recorded at $171,468; 8%), what is interest expense in Year 1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$13,717",
+        "explanation": "Correct. 171,468 × 8%."
+      },
+      {
+        "id": "b",
+        "text": "$16,000",
+        "explanation": "This applies 8% to face.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$14,266",
+        "explanation": "This straight-lines the discount (28,532 ÷ 2).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Imputed interest is recognized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Effective interest: 171,468 × 8% = **13,717**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dbt-03",
+    "pool": "practice",
+    "stem": "At December 31, a company has a $1,000,000 note due June 30 of next year. On January 20, it paid off the note using cash on hand, and on February 5 (before issuing its statements) it issued $1,000,000 of 5-year bonds. How is the note classified at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Noncurrent, because long-term debt was issued before the statements",
+        "explanation": "The note was repaid with current assets before the refinancing.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Current",
+        "explanation": "Correct. It was settled with current assets."
+      },
+      {
+        "id": "c",
+        "text": "Half current, half noncurrent",
+        "explanation": "No proportional rule applies.",
+        "trap": "other"
+      },
+      {
+        "id": "d",
+        "text": "Removed from the balance sheet at December 31",
+        "explanation": "It was outstanding at December 31.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "If a short-term obligation is repaid with current assets after the balance sheet date and new long-term debt is issued later, the obligation was settled with current assets — it remains current.",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-dbt-04",
+    "pool": "practice",
+    "stem": "Bonds with a face amount of $2,000,000 and an unamortized premium of $40,000 are retired at 98. What is the gain or loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000 loss",
+        "explanation": "This ignores the premium.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$80,000 gain",
+        "explanation": "Correct. 2,040,000 − 1,960,000."
+      },
+      {
+        "id": "c",
+        "text": "$40,000 gain",
+        "explanation": "This compares the price with face only.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$80,000 loss",
+        "explanation": "Paying less than carrying amount is a gain.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Carrying amount = 2,040,000. Reacquisition = 1,960,000. Gain = **80,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dbt-05",
+    "pool": "practice",
+    "stem": "Which disclosure is required for long-term debt?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Aggregate maturities for each of the five years following the balance sheet date",
+        "explanation": "Correct. ASC 470-10-50-1: disclose combined aggregate maturities and sinking fund requirements for each of the five years after the balance sheet date."
+      },
+      {
+        "id": "b",
+        "text": "Fair value of the lender's collateral",
+        "explanation": "Not a debtor disclosure requirement.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Names of all bondholders",
+        "explanation": "Not required.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Maturities for each of the next ten years",
+        "explanation": "The requirement is five years.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 470-10-50-1: disclose combined aggregate maturities and sinking fund requirements for each of the five years after the balance sheet date.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-dbt-06",
+    "pool": "practice",
+    "stem": "A company violates a debt covenant at year-end, making $3,000,000 of long-term debt callable. The lender has not waived its rights, and there is no grace period. How is the debt classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Noncurrent, because the original maturity is 5 years away",
+        "explanation": "Callable debt is current.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Current",
+        "explanation": "Correct. Obligations callable by the creditor at the balance sheet date because of a violation are current unless waived for more than a year or curable within a grace period."
+      },
+      {
+        "id": "c",
+        "text": "Noncurrent with disclosure",
+        "explanation": "Disclosure doesn't change classification.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Current only to the extent of next year's scheduled payment",
+        "explanation": "The entire callable amount is current.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Obligations callable by the creditor at the balance sheet date because of a violation are current unless waived for more than a year or curable within a grace period.",
+    "skill": "application"
+  },
+  {
+    "id": "far-dbt-07",
+    "pool": "practice",
+    "stem": "Bonds with face $500,000, unamortized discount $12,000, and unamortized issuance costs $3,000 are repurchased for $480,000. What is the gain or loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000 gain",
+        "explanation": "Correct. Net carrying 485,000 − 480,000."
+      },
+      {
+        "id": "b",
+        "text": "$8,000 gain",
+        "explanation": "This ignores issuance costs (488,000 − 480,000).",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$20,000 gain",
+        "explanation": "This compares with face.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$5,000 loss",
+        "explanation": "Paying less than the net carrying amount is a gain.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Net carrying amount = 500,000 − 12,000 − 3,000 = 485,000. Gain = 485,000 − 480,000 = **5,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dbt-08",
+    "pool": "practice",
+    "stem": "A company signs a 1-year, $50,000 note payable to a bank with interest at the market rate, paid at maturity. How is it initially recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At $50,000",
+        "explanation": "Correct. A note bearing a market rate of interest is recorded at face."
+      },
+      {
+        "id": "b",
+        "text": "At present value below $50,000",
+        "explanation": "Discounting applies when interest is below market or absent.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "At $50,000 plus accrued interest",
+        "explanation": "Interest accrues over time, not at issuance.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Not recorded until repaid",
+        "explanation": "A borrowing is recorded when cash is received.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "When a note carries a reasonable market rate, face equals present value; interest is accrued as time passes.",
+    "skill": "application"
+  },
+  {
+    "id": "far-dbt-09",
+    "pool": "practice",
+    "stem": "A note of $400,000 is due in 3 months. Management intends to refinance it long-term but has no agreement or refinancing in place when the statements are issued. How is it classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Noncurrent, based on management's intent",
+        "explanation": "Intent must be demonstrated by action or a qualifying agreement.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Current",
+        "explanation": "Correct. Without an actual long-term refinancing or a qualifying financing agreement before issuance, the obligation is current."
+      },
+      {
+        "id": "c",
+        "text": "Noncurrent if the company has a history of refinancing",
+        "explanation": "History doesn't satisfy the criteria.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Half current, half noncurrent",
+        "explanation": "No such split.",
+        "trap": "other"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Without an actual long-term refinancing or a qualifying financing agreement before issuance, the obligation is current.",
+    "skill": "application"
+  },
+  {
+    "id": "far-dbt-10",
+    "pool": "practice",
+    "stem": "What is the effect on the balance sheet of converting a short-term note to long-term via a completed refinancing before statement issuance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Working capital increases",
+        "explanation": "Correct. Current liabilities decrease, working capital rises."
+      },
+      {
+        "id": "b",
+        "text": "Total liabilities decrease",
+        "explanation": "The debt still exists; only its classification changes.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Working capital decreases",
+        "explanation": "Reclassifying out of current liabilities increases working capital.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Equity increases",
+        "explanation": "Classification doesn't affect equity.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Reclassifying debt from current to noncurrent reduces current liabilities, increasing working capital and the current ratio; total liabilities are unchanged.",
+    "skill": "analysis"
+  }
+]
