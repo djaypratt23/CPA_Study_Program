@@ -1,0 +1,58 @@
+{
+  "id": "far-tbs-u10-income-taxes",
+  "section": "FAR",
+  "unitId": "far-u10",
+  "moduleIds": ["far-income-taxes"],
+  "pool": "practice",
+  "title": "Income tax provision — Keystone Manufacturing",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Prepare Keystone Manufacturing's Year 2 income tax provision. The enacted federal rate is **21%** for all years; ignore state taxes. There is no valuation allowance.",
+  "exhibits": [
+    { "title": "Book-tax differences, Year 2", "content": "Pretax financial (book) income: **$1,500,000**.\n\n| Item | Amount |\n|---|---:|\n| Municipal bond interest included in book income | 40,000 |\n| Fines paid to a regulator (expensed for books) | 15,000 |\n| Tax depreciation in excess of book depreciation | 120,000 |\n| Bad debt expense (book) in excess of write-offs (tax) | 30,000 |\n| Rent received in advance for Year 3 (taxable when received) | 60,000 |\n| Installment-sale gain recognized for books, taxable in future years | 80,000 |" },
+    { "title": "Deferred tax balances, January 1, Year 2", "content": "- Deferred tax liability: **$21,000** (cumulative taxable temporary differences of $100,000)\n- Deferred tax asset: **$4,200** (cumulative deductible temporary differences of $20,000)" }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify each Year 2 item.",
+      "options": ["Permanent difference", "Temporary — creates/increases DTA", "Temporary — creates/increases DTL"],
+      "rows": [
+        { "id": "c1", "label": "Municipal bond interest", "answer": "Permanent difference", "explanation": "Never taxable." },
+        { "id": "c2", "label": "Fines", "answer": "Permanent difference", "explanation": "Never deductible." },
+        { "id": "c3", "label": "Excess tax depreciation", "answer": "Temporary — creates/increases DTL", "explanation": "Future taxable amounts when book depreciation exceeds tax later." },
+        { "id": "c4", "label": "Bad debt expense in excess of write-offs", "answer": "Temporary — creates/increases DTA", "explanation": "Deductible later when accounts are written off." },
+        { "id": "c5", "label": "Rent received in advance", "answer": "Temporary — creates/increases DTA", "explanation": "Already taxed; future book revenue won't be taxed again." },
+        { "id": "c6", "label": "Installment-sale gain", "answer": "Temporary — creates/increases DTL", "explanation": "Taxable in future years." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "prov",
+      "prompt": "Compute the Year 2 provision.",
+      "rows": [
+        { "id": "ti", "label": "Taxable income", "answer": 1365000, "tolerance": 0, "explanation": "1,500,000 − 40,000 + 15,000 − 120,000 + 30,000 + 60,000 − 80,000 = **1,365,000**." },
+        { "id": "cur", "label": "Current income tax expense", "answer": 286650, "tolerance": 0, "explanation": "1,365,000 × 21% = **286,650**." },
+        { "id": "dtl", "label": "Deferred tax liability, Dec 31", "answer": 63000, "tolerance": 0, "explanation": "(100,000 + 120,000 + 80,000) × 21% = **63,000**." },
+        { "id": "dta", "label": "Deferred tax asset, Dec 31", "answer": 23100, "tolerance": 0, "explanation": "(20,000 + 30,000 + 60,000) × 21% = **23,100**." },
+        { "id": "def", "label": "Deferred income tax expense", "answer": 23100, "tolerance": 0, "explanation": "ΔDTL 42,000 − ΔDTA 18,900 = **23,100**." },
+        { "id": "tot", "label": "Total income tax expense", "answer": 309750, "tolerance": 0, "explanation": "286,650 + 23,100 = **309,750**. Check: 21% × (1,500,000 − 40,000 + 15,000) = 309,750." }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "je",
+      "prompt": "Record the Year 2 income tax provision in one entry.",
+      "accounts": ["Income tax expense", "Income taxes payable", "Deferred tax asset", "Deferred tax liability", "Valuation allowance", "Retained earnings"],
+      "maxLines": 5,
+      "lines": [
+        { "account": "Income tax expense", "debit": 309750 },
+        { "account": "Deferred tax asset", "debit": 18900 },
+        { "account": "Income taxes payable", "credit": 286650 },
+        { "account": "Deferred tax liability", "credit": 42000 }
+      ],
+      "explanation": "Expense 309,750 and DTA increase 18,900 (debits) = taxes payable 286,650 + DTL increase 42,000 (credits) = 328,650."
+    }
+  ]
+}

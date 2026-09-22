@@ -1,0 +1,51 @@
+{
+  "id": "far-tbs-u10-fair-value",
+  "section": "FAR",
+  "unitId": "far-u10",
+  "moduleIds": ["far-fair-value"],
+  "pool": "practice",
+  "title": "Fair value measurements — Prairie Grain Cooperative",
+  "minutes": 15,
+  "skill": "application",
+  "instructions": "Prairie Grain Cooperative reports several items at fair value at December 31. Determine the fair value hierarchy levels and compute the fair value of its wheat inventory held for trading.",
+  "exhibits": [
+    { "title": "Items measured at fair value", "content": "1. **Listed equity securities** — valued at NYSE closing prices.\n2. **Interest rate swap** — valued with a model using observable LIBOR-replacement (SOFR) forward curves.\n3. **Investment in a private agritech startup** — valued with a DCF using management's revenue projections and a discount rate derived from internal estimates.\n4. **Corporate bonds** — valued using quoted prices for similar bonds, as the specific bonds trade infrequently." },
+    { "title": "Wheat inventory (100,000 bushels)", "content": "| Market | Price per bushel | Transaction cost per bushel | Transport cost per bushel | Share of Prairie's historical volume |\n|---|---:|---:|---:|---:|\n| Chicago exchange | 6.20 | 0.30 | 0.40 | 85% |\n| Local elevator | 6.00 | 0.05 | 0.10 | 15% |" }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "lvl",
+      "prompt": "Select the fair value hierarchy level for each item.",
+      "options": ["Level 1", "Level 2", "Level 3"],
+      "rows": [
+        { "id": "l1", "label": "1. Listed equity securities", "answer": "Level 1", "explanation": "Quoted prices, identical assets, active market." },
+        { "id": "l2", "label": "2. Interest rate swap", "answer": "Level 2", "explanation": "Model with observable market inputs." },
+        { "id": "l3", "label": "3. Private startup investment", "answer": "Level 3", "explanation": "Significant unobservable inputs (management projections)." },
+        { "id": "l4", "label": "4. Corporate bonds", "answer": "Level 2", "explanation": "Quoted prices for similar items / inactive markets." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "wheat",
+      "prompt": "Wheat inventory.",
+      "rows": [
+        { "id": "pp", "label": "Fair value per bushel", "answer": 5.8, "tolerance": 0.001, "explanation": "Chicago is the principal market (greatest volume). Fair value = 6.20 − 0.40 transport = **5.80**. Transaction costs aren't deducted — and the local elevator's higher net (5.85) is irrelevant when a principal market exists." },
+        { "id": "tot", "label": "Total fair value of the wheat", "answer": 580000, "tolerance": 0, "explanation": "100,000 × 5.80 = **580,000**." }
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) explains why the Chicago exchange price is used even though the local elevator would net more per bushel?",
+      "excerpts": [
+        { "id": "a", "citation": "ASC 820-10-35-5 (paraphrase)", "text": "A fair value measurement assumes the transaction takes place in the principal market for the asset or, in the absence of a principal market, in the most advantageous market." },
+        { "id": "b", "citation": "ASC 820-10-35-9B (paraphrase)", "text": "The price in the principal (or most advantageous) market is not adjusted for transaction costs, but is adjusted for costs to transport the asset to that market if location is a characteristic of the asset." },
+        { "id": "c", "citation": "ASC 820-10-35-37 (paraphrase)", "text": "Inputs are categorized into three levels, giving the highest priority to quoted prices in active markets for identical assets." },
+        { "id": "d", "citation": "ASC 825-10-25-4 (paraphrase)", "text": "The fair value option may be elected on an instrument-by-instrument basis and is irrevocable." }
+      ],
+      "answer": "a",
+      "explanation": "When a principal market exists, it is used even if another market offers a better net price at the measurement date. (Excerpt b explains the cost adjustments, not the market choice.)"
+    }
+  ]
+}
