@@ -1,0 +1,114 @@
+# Financial Accounting and Reporting (FAR) — structure per the AICPA Uniform
+# CPA Examination Blueprints effective 2026-01-01. See docs/BLUEPRINT_NOTES.md.
+# Blueprint updates should only require editing this file.
+id: FAR
+name: Financial Accounting and Reporting
+kind: core
+status: scaffold  # flipped to "full" once every module has content (M8)
+blueprintEffective: '2026-01-01'
+description: >-
+  Financial reporting under U.S. GAAP for business entities, plus not-for-profit and
+  state and local government concepts. Heavy on application and analysis:
+  record, measure, and present transactions correctly.
+exam:
+  durationMinutes: 240
+  testlets:
+    - { kind: mcq, count: 25 }
+    - { kind: mcq, count: 25 }
+    - { kind: tbs, count: 2 }
+    - { kind: tbs, count: 3 }
+    - { kind: tbs, count: 2 }
+  breakAfterTestlet: 3
+  breakMinutes: 15
+  weighting: { mcq: 50, tbs: 50 }
+  passingScore: 75
+skillAllocation:
+  - { level: remembering, min: 5, max: 15 }
+  - { level: application, min: 45, max: 55 }
+  - { level: analysis, min: 35, max: 45 }
+areas:
+  - id: FAR-I
+    title: 'Area I: Financial Reporting'
+    allocation: { min: 30, max: 40 }
+    units:
+      - id: far-u1
+        title: Conceptual Framework & Financial Statements
+        modules:
+          - { id: far-conceptual-framework, title: 'Conceptual framework & standard setting' }
+          - { id: far-balance-sheet-equity, title: 'Balance sheet & statement of changes in equity' }
+          - { id: far-income-statement-oci, title: 'Income statement, OCI & discontinued operations' }
+          - { id: far-cash-flows, title: 'Statement of cash flows' }
+      - id: far-u2
+        title: Notes, Ratios & Public Company Reporting
+        modules:
+          - { id: far-notes-disclosures, title: 'Notes, related parties & risk disclosures' }
+          - { id: far-ratios, title: 'Financial ratios & performance metrics' }
+          - { id: far-sec-segments, title: 'SEC reporting & segment reporting' }
+          - { id: far-eps, title: 'Earnings per share' }
+      - id: far-u3
+        title: Consolidations & Special Purpose Frameworks
+        modules:
+          - { id: far-consolidations, title: 'Consolidated statements & intercompany eliminations' }
+          - { id: far-special-purpose, title: 'Special purpose frameworks (cash & tax basis)' }
+      - id: far-u4
+        title: 'Not-for-Profits, Governments & Benefit Plans'
+        modules:
+          - { id: far-nfp-statements, title: 'Not-for-profit financial statements' }
+          - { id: far-nfp-revenue, title: 'Not-for-profit contributions & revenue' }
+          - { id: far-government, title: 'State & local government reporting concepts' }
+          - { id: far-benefit-plans, title: 'Employee benefit plan financial statements' }
+  - id: FAR-II
+    title: 'Area II: Select Balance Sheet Accounts'
+    allocation: { min: 30, max: 40 }
+    units:
+      - id: far-u5
+        title: 'Cash, Receivables & Inventory'
+        modules:
+          - { id: far-cash, title: 'Cash, cash equivalents & bank reconciliations' }
+          - { id: far-receivables, title: 'Receivables & credit losses' }
+          - { id: far-inventory-cost, title: 'Inventory cost flow methods' }
+          - { id: far-inventory-valuation, title: 'Inventory valuation, estimation & errors' }
+      - id: far-u6
+        title: 'Property, Plant & Equipment and Intangibles'
+        modules:
+          - { id: far-ppe-acquisition, title: 'PP&E: acquisition cost & capitalized interest' }
+          - { id: far-depreciation, title: 'Depreciation, disposals & exchanges' }
+          - { id: far-impairment, title: 'Impairment of long-lived assets' }
+          - { id: far-intangibles, title: 'Intangible assets & goodwill' }
+      - id: far-u7
+        title: Investments
+        modules:
+          - { id: far-debt-securities, title: 'Investments in debt securities' }
+          - { id: far-equity-investments, title: 'Equity securities & the equity method' }
+      - id: far-u8
+        title: Liabilities & Equity
+        modules:
+          - { id: far-payables, title: 'Payables & accrued liabilities' }
+          - { id: far-bonds, title: 'Bonds payable' }
+          - { id: far-debt-other, title: 'Notes, debt classification & extinguishment' }
+          - { id: far-equity, title: "Stockholders' equity" }
+  - id: FAR-III
+    title: 'Area III: Select Transactions'
+    allocation: { min: 25, max: 35 }
+    units:
+      - id: far-u9
+        title: Revenue Recognition
+        modules:
+          - { id: far-revenue-contracts, title: 'Revenue I: contracts & performance obligations' }
+          - { id: far-revenue-measurement, title: 'Revenue II: price, allocation & timing' }
+      - id: far-u10
+        title: Income Taxes & Fair Value
+        modules:
+          - { id: far-income-taxes, title: 'Accounting for income taxes' }
+          - { id: far-fair-value, title: 'Fair value measurement' }
+      - id: far-u11
+        title: Leases (Lessee)
+        modules:
+          - { id: far-leases-finance, title: 'Leases I: classification & finance leases' }
+          - { id: far-leases-operating, title: 'Leases II: operating leases & special issues' }
+      - id: far-u12
+        title: 'Changes, Contingencies & Subsequent Events'
+        modules:
+          - { id: far-accounting-changes, title: 'Accounting changes & error corrections' }
+          - { id: far-contingencies, title: 'Contingencies & commitments' }
+          - { id: far-subsequent-events, title: 'Subsequent events' }

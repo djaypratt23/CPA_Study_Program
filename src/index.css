@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue-600 dark:outline-blue-400;
+  }
+}
+
+@utility card {
+  @apply rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900;
+}
+@utility btn {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-blue-700 text-white hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-500;
+}
+@utility btn-secondary {
+  @apply btn border border-slate-300 bg-white text-slate-800 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800;
+}
+@utility btn-ghost {
+  @apply btn text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800;
+}
+@utility input {
+  @apply min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100;
+}
+@utility label {
+  @apply mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300;
+}
+@utility chip {
+  @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+}
+@utility muted {
+  @apply text-slate-600 dark:text-slate-400;
+}
+@utility h1 {
+  @apply text-2xl font-bold tracking-tight;
+}
+@utility h2 {
+  @apply text-lg font-semibold;
+}
+
+/* Lesson typography */
+.prose-lesson {
+  @apply leading-relaxed text-slate-800 dark:text-slate-200;
+}
+.prose-lesson h2 {
+  @apply mt-8 mb-3 text-xl font-bold text-slate-900 dark:text-white;
+}
+.prose-lesson h3 {
+  @apply mt-6 mb-2 text-lg font-semibold text-slate-900 dark:text-white;
+}
+.prose-lesson p {
+  @apply my-3;
+}
+.prose-lesson ul {
+  @apply my-3 list-disc pl-6;
+}
+.prose-lesson ol {
+  @apply my-3 list-decimal pl-6;
+}
+.prose-lesson li {
+  @apply my-1;
+}
+.prose-lesson strong {
+  @apply font-semibold text-slate-900 dark:text-white;
+}
+.prose-lesson a {
+  @apply text-blue-700 underline dark:text-blue-400;
+}
+.prose-lesson blockquote {
+  @apply my-4 rounded-r-lg border-l-4 border-amber-400 bg-amber-50 px-4 py-2 dark:border-amber-500 dark:bg-amber-950/40;
+}
+.prose-lesson table {
+  @apply my-4 w-full border-collapse text-sm;
+}
+.prose-lesson th {
+  @apply border border-slate-300 bg-slate-100 px-2 py-1 text-left font-semibold dark:border-slate-700 dark:bg-slate-800;
+}
+.prose-lesson td {
+  @apply border border-slate-300 px-2 py-1 align-top dark:border-slate-700;
+}
+.prose-lesson code {
+  @apply rounded bg-slate-100 px-1 py-0.5 text-[0.9em] dark:bg-slate-800;
+}
+.prose-lesson .table-wrap {
+  @apply overflow-x-auto;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
