@@ -1,0 +1,51 @@
+{
+  "id": "far-tbs-u11-operating-lease",
+  "section": "FAR",
+  "unitId": "far-u11",
+  "moduleIds": ["far-leases-operating"],
+  "pool": "practice",
+  "title": "Operating lease with escalating rent — Juniper Retail",
+  "minutes": 16,
+  "skill": "application",
+  "instructions": "On January 1, Year 1, Juniper Retail signed a 4-year operating lease for a store. Payments are due at the END of each year. The discount rate is **6%**. Round to whole dollars.",
+  "exhibits": [
+    { "title": "Payment schedule", "content": "| Year | Payment (Dec 31) |\n|---|---:|\n| 1 | 40,000 |\n| 2 | 44,000 |\n| 3 | 48,000 |\n| 4 | 52,000 |\n\nPresent value of the payments at 6%: **$158,386**. No initial direct costs or incentives." }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "op",
+      "prompt": "Compute the Year 1 amounts.",
+      "rows": [
+        { "id": "cost", "label": "Straight-line lease cost", "answer": 46000, "tolerance": 0, "explanation": "(40,000 + 44,000 + 48,000 + 52,000) ÷ 4 = **46,000**." },
+        { "id": "int", "label": "Interest accretion on the lease liability", "answer": 9503, "tolerance": 1, "explanation": "158,386 × 6% = **9,503**." },
+        { "id": "liab", "label": "Lease liability at December 31", "answer": 127889, "tolerance": 2, "explanation": "158,386 + 9,503 − 40,000 = **127,889**." },
+        { "id": "am", "label": "ROU asset amortization", "answer": 36497, "tolerance": 2, "explanation": "46,000 − 9,503 = **36,497** (the plug)." },
+        { "id": "rou", "label": "ROU asset at December 31", "answer": 121889, "tolerance": 2, "explanation": "158,386 − 36,497 = **121,889**. It's 6,000 below the liability — the accrued rent (46,000 cost − 40,000 paid)." }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "pres",
+      "prompt": "Presentation in Juniper's Year 1 financial statements.",
+      "rows": [
+        { "id": "p1", "label": "Income statement", "options": ["Single lease cost in operating expenses", "Interest expense and amortization expense", "Rent expense equal to cash paid"], "answer": "Single lease cost in operating expenses", "explanation": "Operating leases report one straight-line lease cost." },
+        { "id": "p2", "label": "Statement of cash flows — the $40,000 payment", "options": ["Operating activities", "Financing activities", "Investing activities", "Split: financing principal, operating interest"], "answer": "Operating activities", "explanation": "All operating lease payments are operating cash flows." },
+        { "id": "p3", "label": "Obtaining the ROU asset in exchange for the lease liability", "options": ["Investing outflow", "Financing inflow", "Supplemental noncash disclosure"], "answer": "Supplemental noncash disclosure", "explanation": "No cash changed hands at commencement." }
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) requires the single straight-line cost for Juniper's lease?",
+      "excerpts": [
+        { "id": "a", "citation": "ASC 842-20-25-5 (paraphrase)", "text": "For a finance lease, a lessee recognizes amortization of the right-of-use asset and interest on the lease liability." },
+        { "id": "b", "citation": "ASC 842-20-25-6 (paraphrase)", "text": "For an operating lease, a lessee recognizes a single lease cost, calculated so that the remaining cost of the lease is allocated over the remaining lease term on a generally straight-line basis." },
+        { "id": "c", "citation": "ASC 842-10-25-2 (paraphrase)", "text": "A lessee classifies a lease as a finance lease if it meets any of five criteria, including transfer of ownership and a lease term for the major part of the asset's remaining economic life." },
+        { "id": "d", "citation": "ASC 842-20-25-2 (paraphrase)", "text": "A lessee may elect not to recognize right-of-use assets and lease liabilities for short-term leases." }
+      ],
+      "answer": "b",
+      "explanation": "ASC 842-20-25-6 prescribes the single straight-line lease cost for operating leases."
+    }
+  ]
+}

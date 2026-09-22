@@ -1,0 +1,55 @@
+{
+  "id": "far-tbs-u11-finance-lease",
+  "section": "FAR",
+  "unitId": "far-u11",
+  "moduleIds": ["far-leases-finance"],
+  "pool": "practice",
+  "title": "Lease classification & a finance lease — Granite Logistics",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Granite Logistics (a public company, calendar year-end) entered four leases on January 1, Year 1. Classify each, then account for the forklift fleet lease. Use the PV factor in the exhibit and round to whole dollars.",
+  "exhibits": [
+    { "title": "Lease terms", "content": "| Lease | Term | Asset's remaining economic life | PV of payments ÷ fair value | Other terms |\n|---|---:|---:|---:|---|\n| A. Forklift fleet | 4 years | 5 years | 88% | None |\n| B. Office floor | 7 years | 40 years | 22% | Renewal at market rates, not reasonably certain |\n| C. Custom packaging line | 3 years | 10 years | 35% | Built to Granite's specs; no alternative use to lessor |\n| D. Delivery van | 3 years | 8 years | 45% | Purchase option at $1, exercise reasonably certain |" },
+    { "title": "Forklift lease (Lease A) details", "content": "- Payments: **$120,000** per year, due each **January 1**, beginning at commencement.\n- The rate implicit in the lease is not known; Granite's incremental borrowing rate is **7%**.\n- PV of an annuity due, 7%, 4 periods: **3.62432**.\n- No initial direct costs, incentives, or residual value guarantee. Straight-line amortization." }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify each lease.",
+      "options": ["Finance lease", "Operating lease"],
+      "rows": [
+        { "id": "a", "label": "A. Forklift fleet", "answer": "Finance lease", "explanation": "Term is 80% of economic life (major part)." },
+        { "id": "b", "label": "B. Office floor", "answer": "Operating lease", "explanation": "No OWNES criterion is met." },
+        { "id": "c", "label": "C. Custom packaging line", "answer": "Finance lease", "explanation": "Specialized asset with no alternative use to the lessor." },
+        { "id": "d", "label": "D. Delivery van", "answer": "Finance lease", "explanation": "Purchase option reasonably certain to be exercised." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "fin",
+      "prompt": "Lease A — compute (Year 1).",
+      "rows": [
+        { "id": "l0", "label": "Lease liability / ROU asset at commencement", "answer": 434918, "tolerance": 2, "explanation": "120,000 × 3.62432 = **434,918**." },
+        { "id": "int", "label": "Interest expense for Year 1", "answer": 22044, "tolerance": 2, "explanation": "After the January 1 payment the liability is 314,918; × 7% = **22,044**." },
+        { "id": "am", "label": "ROU asset amortization for Year 1", "answer": 108730, "tolerance": 2, "explanation": "434,918 ÷ 4 (lease term, shorter than 5-year life; no ownership transfer) = **108,730**." },
+        { "id": "liab", "label": "Lease liability at December 31, Year 1 (before the Jan 1, Year 2 payment)", "answer": 336962, "tolerance": 2, "explanation": "314,918 + 22,044 accrued interest = **336,962** (of which 120,000 is due within a year)." }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "je",
+      "prompt": "Record Lease A's December 31, Year 1 adjusting entries (interest and amortization) as one compound entry.",
+      "accounts": ["Interest expense", "Amortization expense", "Lease liability", "Right-of-use asset", "Cash", "Lease cost"],
+      "maxLines": 4,
+      "lines": [
+        { "account": "Interest expense", "debit": 22044 },
+        { "account": "Amortization expense", "debit": 108730 },
+        { "account": "Lease liability", "credit": 22044 },
+        { "account": "Right-of-use asset", "credit": 108730 }
+      ],
+      "tolerance": 2,
+      "explanation": "Interest accrues on the liability (credited to the lease liability or interest payable); the ROU asset is amortized straight-line (credit the asset or accumulated amortization). A finance lease reports two expenses, not a single lease cost."
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+[
+  {
+    "id": "far-lsf-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: under current GAAP, which lessee leases appear on the balance sheet?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only finance (formerly capital) leases",
+        "explanation": "Operating leases are recognized too under ASC 842.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Both finance and operating leases, except short-term leases if the lessee elects the exemption",
+        "explanation": "Correct. ASC 842 requires lessees to recognize ROU assets and lease liabilities for all leases other than short-term leases for which the policy election is made."
+      },
+      {
+        "id": "c",
+        "text": "None; leases are disclosed only",
+        "explanation": "Leases create ROU assets and lease liabilities.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only leases longer than 5 years",
+        "explanation": "The threshold is 12 months (short-term exemption).",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 842 requires lessees to recognize ROU assets and lease liabilities for all leases other than short-term leases for which the policy election is made.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-lsf-chk1",
+    "pool": "lesson",
+    "stem": "A lessee leases a machine for 4 years. The machine's remaining economic life is 10 years; the PV of payments is 70% of fair value; no ownership transfer or purchase option; the machine is standard. How is the lease classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Finance lease, because the term exceeds 12 months",
+        "explanation": "Length over 12 months only means it's not short-term.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Finance lease, because PV exceeds 50% of fair value",
+        "explanation": "The threshold is substantially all (≈90%).",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "Operating lease",
+        "explanation": "Correct. None of the five criteria is met."
+      },
+      {
+        "id": "d",
+        "text": "Short-term lease",
+        "explanation": "The term is 4 years.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Ownership: no. Purchase option: no. PV 70% < ~90%. Term 40% < ~75% of life. Not specialized. → **Operating**.",
+    "skill": "application"
+  },
+  {
+    "id": "far-lsf-chk2",
+    "pool": "lesson",
+    "stem": "How does a lessee classify the principal portion of finance lease payments in the statement of cash flows?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Operating activities",
+        "explanation": "Operating classification applies to the interest portion (and to operating lease payments).",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Investing activities",
+        "explanation": "The ROU asset was obtained through financing, not a cash purchase.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Financing activities",
+        "explanation": "Correct. Finance leases: principal repayments → financing; interest → operating."
+      },
+      {
+        "id": "d",
+        "text": "Noncash disclosure only",
+        "explanation": "Payments are cash outflows.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Finance leases: principal repayments → financing; interest → operating. Obtaining the ROU asset itself is a noncash disclosure.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-lsf-01",
+    "pool": "practice",
+    "stem": "Which feature alone makes a lease a **finance** lease for the lessee?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The lease term is 3 years for an asset with a 20-year life",
+        "explanation": "15% isn't a major part of the life.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The lease includes a purchase option priced so low that exercise is reasonably certain",
+        "explanation": "Correct. A purchase option the lessee is reasonably certain to exercise is one of the five finance lease criteria."
+      },
+      {
+        "id": "c",
+        "text": "The lessee pays property taxes and insurance",
+        "explanation": "Executory cost arrangements don't affect classification.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Payments increase each year with inflation (CPI)",
+        "explanation": "Index-based payments don't determine classification by themselves.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A purchase option the lessee is reasonably certain to exercise is one of the five finance lease criteria.",
+    "skill": "application"
+  },
+  {
+    "id": "far-lsf-02",
+    "pool": "practice",
+    "stem": "A lessee's lease payments are $80,000 per year for 5 years, paid at the **end** of each year. The rate implicit in the lease isn't readily determinable; the incremental borrowing rate is 7% (PV of ordinary annuity, 7%, 5 = 4.10020). What is the initial lease liability?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$400,000",
+        "explanation": "Payments must be discounted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$350,977",
+        "explanation": "This uses an annuity-due factor (4.38721), but payments are at the end of each year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$328,016",
+        "explanation": "Correct. 80,000 × 4.10020."
+      },
+      {
+        "id": "d",
+        "text": "$248,016",
+        "explanation": "This subtracts the first payment even though payments are in arrears.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Ordinary annuity (payments in arrears): 80,000 × 4.10020 = **328,016**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-lsf-03",
+    "pool": "practice",
+    "stem": "At commencement, a lessee's lease liability is $200,000. It paid $5,000 of initial direct costs and received a $3,000 lease incentive from the lessor. No payments were made at commencement. What is the ROU asset?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$202,000",
+        "explanation": "Correct. 200,000 + 5,000 − 3,000."
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "IDC and incentives adjust the ROU asset.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$208,000",
+        "explanation": "Incentives received reduce, not increase, the ROU asset.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$198,000",
+        "explanation": "IDC increase the ROU asset.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ROU asset = liability 200,000 + IDC 5,000 − incentives 3,000 (+ prepaid lease payments, none) = **202,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-lsf-04",
+    "pool": "practice",
+    "stem": "Which discount rate should a public company lessee use when the rate implicit in the lease is not readily determinable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The risk-free rate",
+        "explanation": "That's an election available to private companies only.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "The prime rate",
+        "explanation": "Not specified by the standard.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "The lessee's weighted-average cost of capital",
+        "explanation": "Not the prescribed rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The lessee's incremental borrowing rate",
+        "explanation": "Correct. Use the rate implicit in the lease if readily determinable; otherwise the incremental borrowing rate."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Use the rate implicit in the lease if readily determinable; otherwise the incremental borrowing rate. Non-PBEs may elect a risk-free rate by asset class.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-lsf-05",
+    "pool": "practice",
+    "stem": "A finance lease ROU asset of $150,000 relates to a 5-year lease of equipment with an 8-year useful life. Ownership transfers to the lessee at the end of the lease. What is annual amortization (straight-line, no residual)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "Use useful life when ownership transfers.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$18,750",
+        "explanation": "Correct. 150,000 ÷ 8."
+      },
+      {
+        "id": "c",
+        "text": "$21,429",
+        "explanation": "Averaging the two periods has no basis.",
+        "trap": "other"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Finance lease ROU assets are amortized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "When ownership transfers (or a purchase option is reasonably certain), amortize over the asset's useful life: 150,000 ÷ 8 = **18,750**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-lsf-06",
+    "pool": "practice",
+    "stem": "A lease requires variable payments equal to 2% of the lessee's store sales in addition to fixed rent. How are the variable payments treated at commencement?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Included in the lease liability at estimated future sales",
+        "explanation": "Usage/performance-based variable payments are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Excluded from the liability and expensed as incurred",
+        "explanation": "Correct. Only variable payments that depend on an index or rate are included (at the commencement index)."
+      },
+      {
+        "id": "c",
+        "text": "Included at the maximum possible amount",
+        "explanation": "No maximum is used.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Recorded as a separate derivative",
+        "explanation": "Not a derivative under these facts.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Only variable payments that depend on an index or rate are included (at the commencement index). Sales- or usage-based payments are expensed when incurred.",
+    "skill": "application"
+  },
+  {
+    "id": "far-lsf-07",
+    "pool": "practice",
+    "stem": "Year 1 of a finance lease: interest expense $12,000; ROU amortization $40,000; cash payment $45,000. What is the total Year 1 expense on the income statement?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$45,000",
+        "explanation": "That's the cash paid; finance leases report interest and amortization.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Interest is also expensed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$52,000",
+        "explanation": "Correct. 12,000 + 40,000."
+      },
+      {
+        "id": "d",
+        "text": "$97,000",
+        "explanation": "Cash payments aren't added to expenses.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Finance lease expense = interest 12,000 + amortization 40,000 = **52,000** (front-loaded compared with the cash paid).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-lsf-08",
+    "pool": "practice",
+    "stem": "A company rents a warehouse for 10 months with no purchase option and elects the short-term lease exemption. How does it account for the rent?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Recognize an ROU asset and lease liability",
+        "explanation": "The short-term exemption avoids recognition.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Recognize rent expense on a straight-line basis over the term, with no ROU asset or liability",
+        "explanation": "Correct. Short-term leases (≤ 12 months, no purchase option reasonably certain) may be expensed straight-line if the lessee elects the exemption by asset class."
+      },
+      {
+        "id": "c",
+        "text": "Treat it as a finance lease",
+        "explanation": "Short-term leases aren't capitalized under the election.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Disclose only; no expense until the end",
+        "explanation": "Rent is expensed over the term.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Short-term leases (≤ 12 months, no purchase option reasonably certain) may be expensed straight-line if the lessee elects the exemption by asset class.",
+    "skill": "application"
+  },
+  {
+    "id": "far-lsf-09",
+    "pool": "practice",
+    "stem": "A lessee guarantees the lessor that the leased asset will be worth at least $20,000 at the end of the lease. It expects the asset to be worth $15,000. What amount related to the guarantee is included in lease payments?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Only the amount probable of being owed is included.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$15,000",
+        "explanation": "That's the expected value of the asset, not the shortfall.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "Correct. The expected shortfall 20,000 − 15,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Amounts probable of being owed under a guarantee are included.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 842 includes amounts probable of being owed under residual value guarantees: 20,000 − 15,000 = **5,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-lsf-10",
+    "pool": "practice",
+    "stem": "A company contracts for data-center capacity. The supplier may move the company's servers to any of its identical racks at any time at negligible cost and would benefit from doing so. Does the contract contain a lease?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, because the company uses physical equipment",
+        "explanation": "There must be an identified asset; substantive substitution rights prevent that.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "No, because the supplier has a substantive right to substitute the asset",
+        "explanation": "Correct. Without an identified asset there is no lease — it's a service contract."
+      },
+      {
+        "id": "c",
+        "text": "Yes, if the contract exceeds 12 months",
+        "explanation": "Term length doesn't create an identified asset.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "No, because data-center contracts are always service contracts",
+        "explanation": "Some capacity arrangements are leases when a specific asset is identified and controlled.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A lease requires an identified asset. If the supplier has the practical ability to substitute alternative assets and would benefit economically from doing so, the right is substantive and there's no lease (ASC 842-10-15-10).",
+    "skill": "analysis"
+  }
+]
