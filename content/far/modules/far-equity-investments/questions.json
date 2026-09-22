@@ -1,0 +1,438 @@
+[
+  {
+    "id": "far-eq-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company owns 5% of a public company's common stock. The stock's market value rose $20,000 this year. Where is the gain reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Other comprehensive income",
+        "explanation": "Equity securities no longer use OCI (since ASU 2016-01).",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Net income",
+        "explanation": "Correct. Equity securities with readily determinable fair values: FV through net income."
+      },
+      {
+        "id": "c",
+        "text": "Not recorded until sold",
+        "explanation": "Equity securities are remeasured to fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As an increase in the equity-method investment",
+        "explanation": "5% with no influence isn't equity method.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Equity securities with readily determinable fair values are measured at fair value with changes in **net income**.",
+    "skill": "application"
+  },
+  {
+    "id": "far-eq-chk1",
+    "pool": "lesson",
+    "stem": "A company owns 8% of a privately held company whose shares have no readily determinable fair value. It elects the measurement alternative. Its cost was $400,000. This year, the investee sold identical shares to a new investor in an orderly transaction at a price implying $460,000 for the company's stake. What is the carrying amount?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$400,000",
+        "explanation": "Observable price changes for identical securities must be recognized under the alternative.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$460,000, with a $60,000 gain in net income",
+        "explanation": "Correct. Measurement alternative: cost ± observable price changes in orderly transactions for identical or similar securities of the same issuer, recognized in net income."
+      },
+      {
+        "id": "c",
+        "text": "$460,000, with a $60,000 gain in OCI",
+        "explanation": "Adjustments go to net income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$430,000, averaging old and new values",
+        "explanation": "No averaging.",
+        "trap": "other"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Measurement alternative: cost ± observable price changes in orderly transactions for identical or similar securities of the same issuer, recognized in net income.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eq-chk2",
+    "pool": "lesson",
+    "stem": "Under the equity method, how does the investor record cash dividends received from the investee?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dividend income",
+        "explanation": "Under the equity method, income is recognized as the investee earns it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A reduction of the investment account",
+        "explanation": "Correct. Dr Cash / Cr Investment."
+      },
+      {
+        "id": "c",
+        "text": "An increase in the investment account",
+        "explanation": "Dividends reduce the investee's equity and thus the investment.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Other comprehensive income",
+        "explanation": "Dividends are not OCI.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Dr Cash / Cr Investment. The investor already recognized its share of earnings; dividends convert part of that investment into cash.",
+    "skill": "application"
+  },
+  {
+    "id": "far-eq-01",
+    "pool": "practice",
+    "stem": "Which factor most strongly indicates significant influence even though the investor owns only 15% of the investee's voting stock?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The investor has two of seven seats on the investee's board and supplies critical technology",
+        "explanation": "Correct. Board representation, participation in policy-making, material intercompany transactions, interchange of personnel, or technological dependency can indicate significant influence below 20%."
+      },
+      {
+        "id": "b",
+        "text": "The investee's stock trades on a national exchange",
+        "explanation": "Liquidity doesn't indicate influence.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "The investor receives regular dividends",
+        "explanation": "Passive investors receive dividends too.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "The investment is large in dollar terms",
+        "explanation": "Size in dollars doesn't create influence.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Board representation, participation in policy-making, material intercompany transactions, interchange of personnel, or technological dependency can indicate significant influence below 20%.",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-eq-02",
+    "pool": "practice",
+    "stem": "On January 1, an investor paid $900,000 for 25% of an investee (book value = fair value; no basis difference). The investee reported net income of $480,000 and paid dividends of $200,000. What is the investment balance at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,020,000",
+        "explanation": "This ignores dividends.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$970,000",
+        "explanation": "Correct. 900,000 + 120,000 − 50,000."
+      },
+      {
+        "id": "c",
+        "text": "$900,000",
+        "explanation": "The equity method adjusts for income and dividends.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$1,180,000",
+        "explanation": "This adds 100% of the investee's income and subtracts 100% of its dividends (900,000 + 480,000 − 200,000).",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "900,000 + 25% × 480,000 (120,000) − 25% × 200,000 (50,000) = **970,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eq-03",
+    "pool": "practice",
+    "stem": "An investor bought 40% of an investee for $1,000,000 when the investee's book value was $2,000,000. The excess relates to a building with a 20-year remaining life that is undervalued by $500,000 (at 100%). The investee earned $300,000. What is equity in investee income for the year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "This omits the extra depreciation on the building.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$110,000",
+        "explanation": "Correct. 40% × 300,000 − (40% × 500,000 ÷ 20)."
+      },
+      {
+        "id": "c",
+        "text": "$95,000",
+        "explanation": "This depreciates 100% of the undervaluation (500,000 ÷ 20 = 25,000).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "This amortizes the full 200,000 excess over 10 years.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Excess = 1,000,000 − 800,000 = 200,000 = 40% × 500,000 building undervaluation (no goodwill). Extra depreciation = 200,000 ÷ 20 = 10,000. Equity income = 120,000 − 10,000 = **110,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eq-04",
+    "pool": "practice",
+    "stem": "An investor owns 30% of an investee, and the investment's carrying amount is $90,000. The investee reports a net loss of $400,000. The investor has no guarantees or commitments. What loss does the investor recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "Losses stop when the investment reaches zero, absent commitments.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The investor must recognize its share of losses until the investment reaches zero.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$90,000",
+        "explanation": "Correct. The investment is reduced to zero; the remaining 30,000 is tracked but not recognized."
+      },
+      {
+        "id": "d",
+        "text": "$400,000",
+        "explanation": "The investor records only its share.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Share of loss = 30% × 400,000 = 120,000, but the investment can't go below zero without a commitment. Recognize **90,000**; suspend 30,000 until future income covers it.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-eq-05",
+    "pool": "practice",
+    "stem": "An investor using the equity method owns 25% of an investee. The investee reports other comprehensive income of $80,000 (unrealized gains on its AFS debt securities). How does the investor report this?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ignore it; only net income is picked up",
+        "explanation": "The investor also picks up its share of the investee's OCI.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$20,000 in net income",
+        "explanation": "OCI stays in OCI.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$80,000 in OCI",
+        "explanation": "Only the investor's share is recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000 in its own OCI, increasing the investment",
+        "explanation": "Correct. The investor records its proportionate share of the investee's OCI (25% × 80,000 = 20,000) in its own OCI and adjusts the investment."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The investor records its proportionate share of the investee's OCI (25% × 80,000 = 20,000) in its own OCI and adjusts the investment.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eq-06",
+    "pool": "practice",
+    "stem": "A company held 10% of an investee (accounted for at fair value) and on July 1 bought an additional 20%, obtaining significant influence. Under current GAAP, how is the change to the equity method applied?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Retroactively, restating prior periods as if the equity method always applied",
+        "explanation": "ASU 2016-07 eliminated retroactive adjustment.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Prospectively, adding the cost of the new shares to the current basis of the existing investment",
+        "explanation": "Correct. ASU 2016-07: when an investment becomes qualified for the equity method, add the cost of the additional interest to the investor's existing basis and apply the equity method prospectively."
+      },
+      {
+        "id": "c",
+        "text": "By recognizing a gain equal to the fair value of all shares held",
+        "explanation": "No such gain arises from the change.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "By continuing fair value accounting for the original 10%",
+        "explanation": "The whole investment switches to the equity method.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASU 2016-07: when an investment becomes qualified for the equity method, add the cost of the additional interest to the investor's existing basis and apply the equity method prospectively.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-eq-07",
+    "pool": "practice",
+    "stem": "Investor (35%) sold inventory to its equity-method investee at a gross profit of $60,000. At year-end, the investee still holds one-half of the goods. How much does the investor defer from its equity in investee income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "This defers 100% of the unrealized profit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$21,000",
+        "explanation": "This applies 35% to the full profit instead of the portion still held.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$10,500",
+        "explanation": "Correct. 60,000 × ½ × 35%."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Intra-entity profits in ending inventory must be deferred.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Unrealized profit = 60,000 × ½ = 30,000. The investor defers its 35% share: **10,500**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eq-08",
+    "pool": "practice",
+    "stem": "A company buys 2% of a public company's shares for $50,000 on October 1 and receives a $1,000 dividend in December. Year-end fair value is $47,000. What is the total effect on the company's net income for the year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$(2,000)",
+        "explanation": "Correct. 1,000 dividend income − 3,000 unrealized loss."
+      },
+      {
+        "id": "b",
+        "text": "$1,000",
+        "explanation": "This omits the unrealized loss.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$(3,000)",
+        "explanation": "This omits dividend income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$(4,000)",
+        "explanation": "This treats the dividend as reducing the investment.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Dividend income +1,000; unrealized loss 50,000 − 47,000 = −3,000 (net income, not OCI). Net effect **−2,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eq-09",
+    "pool": "practice",
+    "stem": "Which of the following is true about goodwill implicit in an equity-method investment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It is amortized over 10 years",
+        "explanation": "Equity-method goodwill is not amortized (except under a private-company election).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It is reported separately as goodwill on the investor's balance sheet",
+        "explanation": "It remains part of the investment account.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "It is not amortized, and the investment as a whole is tested for other-than-temporary impairment",
+        "explanation": "Correct. Equity-method goodwill is embedded in the investment, not amortized (for public entities), and not separately tested; the entire investment is reviewed for other-than-temporary declines in value."
+      },
+      {
+        "id": "d",
+        "text": "It is expensed immediately",
+        "explanation": "Goodwill is part of the investment's cost.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Equity-method goodwill is embedded in the investment, not amortized (for public entities), and not separately tested; the entire investment is reviewed for other-than-temporary declines in value.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-eq-10",
+    "pool": "practice",
+    "stem": "A company owns 22% of an investee's voting stock. Another shareholder owns the remaining 78% and has repeatedly rejected the company's requests for board representation and financial information. The investee's shares are publicly traded. How should the company account for its investment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Equity method, because ownership exceeds 20%",
+        "explanation": "The 20% presumption is rebutted when evidence shows the investor cannot exercise significant influence.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Consolidation",
+        "explanation": "22% does not give control.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Fair value, with changes in net income",
+        "explanation": "Correct. Without significant influence, the stake is an equity security with a readily determinable fair value."
+      },
+      {
+        "id": "d",
+        "text": "Cost method with no remeasurement",
+        "explanation": "The measurement alternative is only for securities without readily determinable fair values.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The 20% threshold is a presumption. Opposition by a majority owner who denies board seats and information indicates no significant influence, so the investment is measured at fair value through net income (ASC 321).",
+    "skill": "analysis"
+  }
+]

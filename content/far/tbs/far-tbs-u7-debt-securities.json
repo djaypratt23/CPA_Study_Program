@@ -1,0 +1,51 @@
+{
+  "id": "far-tbs-u7-debt-securities",
+  "section": "FAR",
+  "unitId": "far-u7",
+  "moduleIds": ["far-debt-securities"],
+  "pool": "practice",
+  "title": "Bond investment amortization & classification — Lakeshore Insurance",
+  "minutes": 18,
+  "skill": "application",
+  "instructions": "On January 1, Year 1, Lakeshore Insurance bought Harper Corp. bonds: face **$400,000**, stated rate **5%** paid annually each December 31, maturing in 4 years. The market rate was **7%**, and Lakeshore paid **$372,902**. Use the effective interest method; round to whole dollars.",
+  "exhibits": [
+    { "title": "Year-end fair values", "content": "| Date | Fair value of the Harper bonds |\n|---|---:|\n| Dec 31, Year 1 | 378,000 |\n| Dec 31, Year 2 | 390,000 |\n\nNo credit losses are expected." }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "amort",
+      "prompt": "Complete the amortization schedule.",
+      "rows": [
+        { "id": "i1", "label": "Year 1 interest income", "answer": 26103, "tolerance": 1, "explanation": "372,902 × 7% = **26,103**." },
+        { "id": "a1", "label": "Year 1 discount amortization", "answer": 6103, "tolerance": 1, "explanation": "26,103 − 20,000 cash (400,000 × 5%) = **6,103**." },
+        { "id": "c1", "label": "Amortized cost, Dec 31 Year 1", "answer": 379005, "tolerance": 1, "explanation": "372,902 + 6,103 = **379,005**." },
+        { "id": "i2", "label": "Year 2 interest income", "answer": 26530, "tolerance": 1, "explanation": "379,005 × 7% = **26,530**." },
+        { "id": "c2", "label": "Amortized cost, Dec 31 Year 2", "answer": 385535, "tolerance": 1, "explanation": "379,005 + (26,530 − 20,000 = 6,530) = **385,535**." }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Report the Year 1 amounts under each classification.",
+      "rows": [
+        { "id": "d1", "label": "If classified HTM — Dec 31, Year 1 balance sheet amount", "options": ["$372,902", "$378,000", "$379,005", "$400,000"], "answer": "$379,005", "explanation": "HTM is carried at amortized cost." },
+        { "id": "d2", "label": "If classified AFS — Dec 31, Year 1 balance sheet amount", "options": ["$372,902", "$378,000", "$379,005", "$400,000"], "answer": "$378,000", "explanation": "AFS is carried at fair value." },
+        { "id": "d3", "label": "If classified AFS — where does the Year 1 unrealized loss go?", "options": ["Net income", "Other comprehensive income", "Not recognized"], "answer": "Other comprehensive income", "explanation": "Non-credit unrealized losses on AFS debt securities go to OCI." },
+        { "id": "d4", "label": "If classified trading — where does the Year 1 unrealized loss go?", "options": ["Net income", "Other comprehensive income", "Not recognized"], "answer": "Net income", "explanation": "Trading securities' fair value changes flow through net income." }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "je",
+      "prompt": "Assume AFS. Record the December 31, Year 2 fair value adjustment (a valuation account is used; its Year 1 balance was a $1,005 credit).",
+      "accounts": ["Fair value adjustment — AFS", "Unrealized holding gain/loss — OCI", "Unrealized holding gain/loss — net income", "Investment in debt securities", "Interest income"],
+      "maxLines": 3,
+      "lines": [
+        { "account": "Fair value adjustment — AFS", "debit": 5470 },
+        { "account": "Unrealized holding gain/loss — OCI", "credit": 5470 }
+      ],
+      "explanation": "Required Year 2 balance = 390,000 − 385,535 = 4,465 debit. Existing balance = 1,005 credit (378,000 − 379,005). Adjustment = 4,465 + 1,005 = **5,470** debit, credited to OCI."
+    }
+  ]
+}

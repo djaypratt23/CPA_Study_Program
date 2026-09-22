@@ -1,0 +1,41 @@
+{
+  "id": "far-tbs-u7-equity",
+  "section": "FAR",
+  "unitId": "far-u7",
+  "moduleIds": ["far-equity-investments"],
+  "pool": "practice",
+  "title": "Equity investments portfolio — Crestview Industries",
+  "minutes": 18,
+  "skill": "analysis",
+  "instructions": "Crestview Industries holds several equity investments at December 31, Year 1. Determine the accounting model for each and compute the equity-method amounts for its investment in Delmar Co.",
+  "exhibits": [
+    { "title": "Investment summary", "content": "| Investee | Ownership | Facts |\n|---|---:|---|\n| Alpine Corp. | 3% | Listed on NYSE; no board seat |\n| Delmar Co. | 25% | Two of eight board seats; purchased Jan 1, Year 1 |\n| Everly Inc. | 12% | Private; no observable prices; Crestview supplies 70% of Everly's inventory and has a board seat |\n| Fenwick LLC | 65% | Crestview appoints the majority of managers |\n| Glenco Ltd. | 6% | Private; no readily determinable fair value; no influence |" },
+    { "title": "Delmar Co. acquisition data", "content": "- Crestview paid **$2,500,000** for 25% of Delmar on January 1, Year 1.\n- Delmar's book value on that date was **$8,000,000**.\n- Delmar's inventory was undervalued by **$400,000** (all sold during Year 1).\n- Delmar's patent was undervalued by **$1,200,000**; remaining life **8 years**.\n- Any remaining excess is goodwill.\n- Delmar's Year 1 net income: **$1,600,000**; dividends paid: **$500,000**." }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "model",
+      "prompt": "Select the accounting model for each investment.",
+      "options": ["Fair value through net income", "Measurement alternative (cost ± observable price changes)", "Equity method", "Consolidation"],
+      "rows": [
+        { "id": "m1", "label": "Alpine Corp.", "answer": "Fair value through net income", "explanation": "No influence and a readily determinable fair value." },
+        { "id": "m2", "label": "Delmar Co.", "answer": "Equity method", "explanation": "25% with board representation → significant influence." },
+        { "id": "m3", "label": "Everly Inc.", "answer": "Equity method", "explanation": "Below 20%, but a board seat and material supply relationship indicate significant influence." },
+        { "id": "m4", "label": "Fenwick LLC", "answer": "Consolidation", "explanation": "65% and control of management → consolidate." },
+        { "id": "m5", "label": "Glenco Ltd.", "answer": "Measurement alternative (cost ± observable price changes)", "explanation": "No influence and no readily determinable fair value → may elect the measurement alternative." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "eq",
+      "prompt": "Delmar Co. — compute (Year 1).",
+      "rows": [
+        { "id": "ex", "label": "Excess of cost over Crestview's share of book value", "answer": 500000, "tolerance": 0, "explanation": "2,500,000 − 25% × 8,000,000 (2,000,000) = **500,000**." },
+        { "id": "gw", "label": "Goodwill embedded in the investment", "answer": 100000, "tolerance": 0, "explanation": "500,000 − inventory 100,000 (25% × 400,000) − patent 300,000 (25% × 1,200,000) = **100,000**." },
+        { "id": "inc", "label": "Equity in Delmar income", "answer": 262500, "tolerance": 0, "explanation": "25% × 1,600,000 = 400,000 − inventory excess 100,000 (all sold) − patent amortization 37,500 (300,000 ÷ 8) = **262,500**." },
+        { "id": "bal", "label": "Investment in Delmar, Dec 31 Year 1", "answer": 2637500, "tolerance": 0, "explanation": "2,500,000 + 262,500 − 125,000 dividends (25% × 500,000) = **2,637,500**." }
+      ]
+    }
+  ]
+}
