@@ -194,7 +194,7 @@ export const TRAP_TYPES = [
 export const Choice = z.object({
   id: z.enum(['a', 'b', 'c', 'd']),
   text: z.string().min(1),
-  explanation: z.string().min(10),
+  explanation: z.string().min(15, 'explain why this choice is right or wrong (15+ characters)'),
   trap: z.enum(TRAP_TYPES).optional(),
 })
 

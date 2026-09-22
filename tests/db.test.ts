@@ -11,9 +11,9 @@ const q = Mcq.parse({
   stem: 'Which item is a cash equivalent?',
   choices: [
     { id: 'a', text: 'A 60-day T-bill bought 60 days before maturity', explanation: 'Right: original maturity to the holder of 3 months or less.' },
-    { id: 'b', text: 'A 6-month CD', explanation: 'Too long a maturity.', trap: 'wrong-rule' },
+    { id: 'b', text: 'A 6-month CD', explanation: 'Original maturity exceeds three months.', trap: 'wrong-rule' },
     { id: 'c', text: 'Postdated check received', explanation: 'A receivable, not cash.', trap: 'wrong-classification' },
-    { id: 'd', text: 'Compensating balance (legally restricted)', explanation: 'Restricted.', trap: 'overgeneralization' },
+    { id: 'd', text: 'Compensating balance (legally restricted)', explanation: 'Legally restricted balances are not available cash.', trap: 'overgeneralization' },
   ],
   answer: 'a',
   explanation: 'Cash equivalents mature within 3 months of acquisition.',
