@@ -1,0 +1,207 @@
+[
+  {
+    "id": "far-con-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: Parent owns 80% of Sub. During the year Parent sold $100,000 of inventory to Sub. What amount of this intercompany sale is eliminated from consolidated sales?",
+    "choices": [
+      { "id": "a", "text": "$80,000", "explanation": "Intercompany transactions are eliminated in full, not by ownership percentage.", "trap": "wrong-rule" },
+      { "id": "b", "text": "$20,000", "explanation": "That is the NCI percentage applied to the sale — irrelevant to elimination.", "trap": "distractor-number" },
+      { "id": "c", "text": "$100,000", "explanation": "Correct. 100% of intercompany sales are eliminated regardless of ownership." },
+      { "id": "d", "text": "$0 — the sale was at fair value", "explanation": "Arm's-length pricing does not avoid elimination.", "trap": "irrelevant-fact" }
+    ],
+    "answer": "c",
+    "explanation": "The consolidated entity cannot sell to itself. Eliminate the full $100,000 from sales and cost of goods sold.",
+    "skill": "application"
+  },
+  {
+    "id": "far-con-chk1",
+    "pool": "lesson",
+    "stem": "Sub sold inventory to Parent for $50,000; Sub's cost was $40,000. At year-end, Parent held 40% of it. What unrealized profit is eliminated from consolidated inventory?",
+    "choices": [
+      { "id": "a", "text": "$10,000", "explanation": "That is the total intercompany profit; 60% has been realized through outside sales.", "trap": "partial-computation" },
+      { "id": "b", "text": "$4,000", "explanation": "Correct. 10,000 profit × 40% still held." },
+      { "id": "c", "text": "$20,000", "explanation": "This takes 40% of the selling price, not of the profit.", "trap": "wrong-rule" },
+      { "id": "d", "text": "$6,000", "explanation": "This uses the 60% already sold to outsiders.", "trap": "reversed" }
+    ],
+    "answer": "b",
+    "explanation": "Intercompany profit = 50,000 − 40,000 = 10,000. Unrealized portion = 10,000 × 40% = **4,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-con-chk2",
+    "pool": "lesson",
+    "stem": "Where is the noncontrolling interest's share of a subsidiary's net income reported?",
+    "choices": [
+      { "id": "a", "text": "As an expense deducted before consolidated net income", "explanation": "Current GAAP reports consolidated net income first, then attributes it.", "trap": "outdated-rule" },
+      { "id": "b", "text": "Only in the statement of changes in equity", "explanation": "It must appear on the face of the income statement.", "trap": "partial-computation" },
+      { "id": "c", "text": "It is not reported; only the parent's share is consolidated", "explanation": "100% of the sub's income is consolidated and then attributed.", "trap": "wrong-rule" },
+      { "id": "d", "text": "As an attribution of consolidated net income on the face of the income statement", "explanation": "Correct. Show 'attributable to NCI' and 'attributable to parent'." }
+    ],
+    "answer": "d",
+    "explanation": "ASC 810 requires consolidated net income to include all of the subsidiary's income, with separate attribution to the parent and the NCI on the face of the statement.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-con-01",
+    "pool": "practice",
+    "stem": "Parent owns 60% of the voting stock of Sub. Under the voting interest model, how should Parent account for Sub in its general-purpose financial statements?",
+    "choices": [
+      { "id": "a", "text": "Equity method", "explanation": "The equity method is for significant influence without control.", "trap": "wrong-classification" },
+      { "id": "b", "text": "Consolidate Sub", "explanation": "Correct. Ownership over 50% generally gives a controlling financial interest." },
+      { "id": "c", "text": "Fair value through net income", "explanation": "Fair value accounting applies to small, non-influential equity stakes.", "trap": "wrong-classification" },
+      { "id": "d", "text": "Consolidate only 60% of Sub's assets and liabilities", "explanation": "Consolidation includes 100% of Sub's assets and liabilities, with NCI for the outside 40%.", "trap": "partial-computation" }
+    ],
+    "answer": "b",
+    "explanation": "More than 50% of voting shares → control → consolidate 100% of the subsidiary, presenting the 40% outside interest as noncontrolling interest.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-con-02",
+    "pool": "practice",
+    "stem": "Parent's sales were $1,500,000 and Sub's sales were $700,000, including $200,000 of sales to Parent. Parent resold all of those goods to outsiders during the year. What is consolidated sales?",
+    "choices": [
+      { "id": "a", "text": "$2,200,000", "explanation": "This double counts the internal sale.", "trap": "partial-computation" },
+      { "id": "b", "text": "$1,800,000", "explanation": "This eliminates the intercompany sale twice.", "trap": "wrong-rule" },
+      { "id": "c", "text": "$2,000,000", "explanation": "Correct. 1,500,000 + 700,000 − 200,000." },
+      { "id": "d", "text": "$2,100,000", "explanation": "This eliminates only half of the intercompany sale.", "trap": "partial-computation" }
+    ],
+    "answer": "c",
+    "explanation": "Consolidated sales = 1,500,000 + 700,000 − 200,000 intercompany = **2,000,000**. Whether the goods were resold affects unrealized profit, not the sales elimination.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-con-03",
+    "pool": "practice",
+    "stem": "Parent sold goods to Sub for $120,000 that cost Parent $90,000. Sub still held one-third of them at year-end. Parent's COGS was $700,000 and Sub's COGS was $400,000 before eliminations. What is consolidated cost of goods sold?",
+    "choices": [
+      { "id": "a", "text": "$990,000", "explanation": "Correct. 1,100,000 − 120,000 + 10,000 unrealized profit = 990,000." },
+      { "id": "b", "text": "$980,000", "explanation": "This subtracts the unrealized profit instead of adding it.", "trap": "wrong-sign" },
+      { "id": "c", "text": "$1,100,000", "explanation": "No eliminations were made.", "trap": "partial-computation" },
+      { "id": "d", "text": "$1,010,000", "explanation": "This eliminates only the cost (90,000) instead of the sale price, then adds nothing.", "trap": "wrong-rule" }
+    ],
+    "answer": "a",
+    "explanation": "Combined COGS 1,100,000. Eliminate the internal sale: −120,000. Unrealized profit = (120,000 − 90,000) × 1/3 = 10,000, which increases COGS: **990,000**. Check: goods sold to outsiders cost the group 90,000 × 2/3 = 60,000; the 80,000 Sub recorded is reduced to 60,000.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-con-04",
+    "pool": "practice",
+    "stem": "At year-end Parent had a $75,000 receivable from Sub and Sub had a $75,000 payable to Parent. How is this reported in the consolidated balance sheet?",
+    "choices": [
+      { "id": "a", "text": "Receivable of $75,000 and payable of $75,000", "explanation": "An entity cannot owe itself; both are eliminated.", "trap": "overgeneralization" },
+      { "id": "b", "text": "Both balances are eliminated", "explanation": "Correct. Intercompany receivables and payables are removed entirely." },
+      { "id": "c", "text": "A net receivable of $0 disclosed as a related-party balance", "explanation": "Eliminated intercompany balances are not related-party disclosures in consolidated statements.", "trap": "wrong-rule" },
+      { "id": "d", "text": "Only the NCI's share is eliminated", "explanation": "Intercompany balances are eliminated 100%.", "trap": "wrong-rule" }
+    ],
+    "answer": "b",
+    "explanation": "Intercompany balances are eliminated in full on the consolidation worksheet (Dr Payable to Parent / Cr Receivable from Sub).",
+    "skill": "application"
+  },
+  {
+    "id": "far-con-05",
+    "pool": "practice",
+    "stem": "On January 1, Parent sold land with a carrying amount of $150,000 to its wholly owned subsidiary for $210,000. Sub still owns the land at December 31. At what amount is the land reported in the consolidated balance sheet?",
+    "choices": [
+      { "id": "a", "text": "$210,000", "explanation": "This keeps the intercompany markup.", "trap": "partial-computation" },
+      { "id": "b", "text": "$60,000", "explanation": "That is the gain, not the land's carrying amount.", "trap": "distractor-number" },
+      { "id": "c", "text": "$180,000", "explanation": "There's no averaging; the full gain is unrealized.", "trap": "other" },
+      { "id": "d", "text": "$150,000", "explanation": "Correct. The $60,000 gain is eliminated; land returns to the group's original carrying amount." }
+    ],
+    "answer": "d",
+    "explanation": "Eliminate the 60,000 gain (Dr Gain on sale 60,000 / Cr Land 60,000). Consolidated land = **150,000**. Land isn't depreciated, so the gain stays deferred until the land is sold outside the group.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-con-06",
+    "pool": "practice",
+    "stem": "Parent owns 90% of Sub. Sub paid total dividends of $50,000 during the year. What dividends appear in the consolidated statement of changes in equity as reducing the parent's equity?",
+    "choices": [
+      { "id": "a", "text": "$50,000", "explanation": "Sub's dividends are not dividends of the consolidated parent shareholders.", "trap": "wrong-rule" },
+      { "id": "b", "text": "Only the parent's own dividends to its shareholders; Sub's dividends to Parent are eliminated and the $5,000 paid to outsiders reduces NCI", "explanation": "Correct. Intercompany dividends are eliminated; outside dividends reduce NCI." },
+      { "id": "c", "text": "$45,000", "explanation": "The $45,000 paid to Parent is intercompany and eliminated.", "trap": "partial-computation" },
+      { "id": "d", "text": "$5,000", "explanation": "The $5,000 to outside owners reduces NCI, not parent equity.", "trap": "wrong-classification" }
+    ],
+    "answer": "b",
+    "explanation": "Of Sub's 50,000: 45,000 to Parent is eliminated against Parent's dividend income; 5,000 to outside shareholders reduces the NCI balance. Consolidated retained earnings reflects only Parent's own dividends.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-con-07",
+    "pool": "practice",
+    "stem": "Sub (80% owned) reported net income of $300,000, including $25,000 of unrealized profit on inventory it sold to Parent (upstream) that Parent still holds. What is the noncontrolling interest in consolidated net income?",
+    "choices": [
+      { "id": "a", "text": "$60,000", "explanation": "This ignores the upstream unrealized profit, which affects the subsidiary's realized income.", "trap": "partial-computation" },
+      { "id": "b", "text": "$65,000", "explanation": "This adds the unrealized profit instead of deducting it.", "trap": "wrong-sign" },
+      { "id": "c", "text": "$55,000", "explanation": "Correct. 20% × (300,000 − 25,000) = 55,000." },
+      { "id": "d", "text": "$275,000", "explanation": "That is Sub's realized income, not the NCI share.", "trap": "partial-computation" }
+    ],
+    "answer": "c",
+    "explanation": "For upstream sales, the seller is Sub, so the unrealized profit reduces Sub's realized income: 300,000 − 25,000 = 275,000. NCI share = 20% × 275,000 = **55,000**.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-con-08",
+    "pool": "practice",
+    "stem": "On January 1, Year 1, Parent sold equipment (carrying amount $40,000) to Sub for $60,000. Sub depreciates it straight-line over 4 years. In the Year 1 consolidation, what adjustment is made to depreciation expense?",
+    "choices": [
+      { "id": "a", "text": "Decrease depreciation expense by $5,000", "explanation": "Correct. (60,000 − 40,000) ÷ 4 = 5,000 excess depreciation is removed." },
+      { "id": "b", "text": "Increase depreciation expense by $5,000", "explanation": "Sub's depreciation is overstated by the markup; the adjustment reduces it.", "trap": "wrong-sign" },
+      { "id": "c", "text": "Decrease depreciation expense by $20,000", "explanation": "That is the total gain, eliminated separately.", "trap": "distractor-number" },
+      { "id": "d", "text": "No adjustment; only the gain is eliminated", "explanation": "Excess depreciation must be removed each year.", "trap": "partial-computation" }
+    ],
+    "answer": "a",
+    "explanation": "Sub's depreciation = 60,000 ÷ 4 = 15,000; group basis depreciation = 40,000 ÷ 4 = 10,000. Eliminate the 5,000 excess each year; over 4 years this realizes the 20,000 gain.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-con-09",
+    "pool": "practice",
+    "stem": "Which of the following is **not** eliminated when preparing consolidated statements?",
+    "choices": [
+      { "id": "a", "text": "Parent's investment in Sub account", "explanation": "The investment is eliminated against Sub's equity.", "trap": "reversed" },
+      { "id": "b", "text": "Interest Sub paid to Parent on an intercompany loan", "explanation": "Intercompany interest is eliminated.", "trap": "reversed" },
+      { "id": "c", "text": "Sub's sales to unrelated customers", "explanation": "Correct. Transactions with outsiders are the substance of consolidated results." },
+      { "id": "d", "text": "Dividends Sub paid to Parent", "explanation": "Intercompany dividends are eliminated.", "trap": "reversed" }
+    ],
+    "answer": "c",
+    "explanation": "Only transactions within the group are eliminated. Sales to outside customers remain in consolidated revenue.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-con-10",
+    "pool": "practice",
+    "stem": "Parent sells merchandise to Sub at 25% above cost. Sub's ending inventory includes $50,000 of goods purchased from Parent. What unrealized profit is eliminated?",
+    "choices": [
+      { "id": "a", "text": "$12,500", "explanation": "This applies 25% to the transfer price; the markup is on cost.", "trap": "wrong-rule" },
+      { "id": "b", "text": "$10,000", "explanation": "Correct. Cost = 50,000 ÷ 1.25 = 40,000; profit = 10,000." },
+      { "id": "c", "text": "$40,000", "explanation": "That is Parent's cost of the goods.", "trap": "distractor-number" },
+      { "id": "d", "text": "$50,000", "explanation": "The entire inventory is not profit.", "trap": "wrong-rule" }
+    ],
+    "answer": "b",
+    "explanation": "A 25% markup on cost means transfer price = 125% of cost. Cost = 50,000 ÷ 1.25 = 40,000. Unrealized profit = 50,000 − 40,000 = **10,000** (20% of the transfer price).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-con-11",
+    "pool": "practice",
+    "stem": "Parent owns 100% of Sub. Parent's accounts receivable are $300,000 and Sub's are $180,000. Parent's receivables include $40,000 due from Sub for merchandise. What is consolidated accounts receivable?",
+    "choices": [
+      { "id": "a", "text": "$480,000", "explanation": "This leaves the intercompany receivable in.", "trap": "partial-computation" },
+      { "id": "b", "text": "$400,000", "explanation": "This eliminates the intercompany amount twice.", "trap": "wrong-rule" },
+      { "id": "c", "text": "$260,000", "explanation": "This subtracts the receivable from Parent only and omits Sub's receivables.", "trap": "partial-computation" },
+      { "id": "d", "text": "$440,000", "explanation": "Correct. 300,000 + 180,000 − 40,000." }
+    ],
+    "answer": "d",
+    "explanation": "Combined 480,000 − intercompany 40,000 = **440,000**. The matching 40,000 payable in Sub's books is eliminated too.",
+    "skill": "application",
+    "calc": true
+  }
+]

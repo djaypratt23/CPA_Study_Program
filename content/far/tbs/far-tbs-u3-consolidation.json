@@ -1,0 +1,55 @@
+{
+  "id": "far-tbs-u3-consolidation",
+  "section": "FAR",
+  "unitId": "far-u3",
+  "moduleIds": ["far-consolidations"],
+  "pool": "practice",
+  "title": "Consolidation eliminations — Pine Holdings & Cedar Co.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Pine Holdings owns **100%** of Cedar Co. Prepare the Year 2 consolidation worksheet eliminating entries described below and compute selected consolidated balances. Ignore income taxes.",
+  "exhibits": [
+    { "title": "Separate-company data, Year 2", "content": "| Account | Pine | Cedar |\n|---|---:|---:|\n| Sales | 2,000,000 | 900,000 |\n| Cost of goods sold | 1,200,000 | 560,000 |\n| Accounts receivable | 310,000 | 140,000 |\n| Inventory (Dec 31) | 260,000 | 180,000 |\n| Equipment (net) | 700,000 | 410,000 |" },
+    { "title": "Intercompany transactions", "content": "1. During Year 2 Pine sold merchandise to Cedar for **$150,000**; Pine's cost was **$100,000**. Cedar's December 31 inventory includes **40%** of these goods.\n2. At December 31, Cedar owed Pine **$30,000** for these purchases.\n3. On **January 1, Year 2**, Cedar sold equipment to Pine for **$84,000**. Cedar's carrying amount was **$60,000** (cost $100,000, accumulated depreciation $40,000). Pine depreciates it straight-line over **4 years**, no salvage. The gain is in Cedar's income; the equipment is in Pine's net equipment." }
+  ],
+  "parts": [
+    {
+      "kind": "journal",
+      "id": "je1",
+      "prompt": "Entry 1: eliminate the intercompany inventory sale and the unrealized profit in ending inventory (one combined entry).",
+      "accounts": ["Sales", "Cost of goods sold", "Inventory", "Accounts receivable", "Accounts payable", "Retained earnings", "Gain on sale of equipment", "Equipment (net)"],
+      "maxLines": 4,
+      "lines": [
+        { "account": "Sales", "debit": 150000 },
+        { "account": "Cost of goods sold", "credit": 130000 },
+        { "account": "Inventory", "credit": 20000 }
+      ],
+      "explanation": "Eliminate the full internal sale (Dr Sales 150,000 / Cr COGS 150,000), then defer unrealized profit: (150,000 − 100,000) × 40% = 20,000 (Dr COGS 20,000 / Cr Inventory 20,000). Combined: Dr Sales 150,000; Cr COGS 130,000; Cr Inventory 20,000."
+    },
+    {
+      "kind": "journal",
+      "id": "je2",
+      "prompt": "Entry 2: eliminate the intercompany gain on the equipment sale and the Year 2 excess depreciation. Record the equipment adjustment net (the exhibit shows equipment net of depreciation).",
+      "accounts": ["Gain on sale of equipment", "Equipment (net)", "Depreciation expense", "Cost of goods sold", "Retained earnings", "Accumulated depreciation"],
+      "maxLines": 4,
+      "lines": [
+        { "account": "Gain on sale of equipment", "debit": 24000 },
+        { "account": "Depreciation expense", "credit": 6000 },
+        { "account": "Equipment (net)", "credit": 18000 }
+      ],
+      "explanation": "Gain = 84,000 − 60,000 = 24,000 — eliminate it. Pine's depreciation 84,000 ÷ 4 = 21,000 vs. group basis 60,000 ÷ 4 = 15,000 → excess 6,000 removed. Net equipment overstated by 24,000 − 6,000 = 18,000."
+    },
+    {
+      "kind": "numeric",
+      "id": "bal",
+      "prompt": "Compute these consolidated Year 2 amounts.",
+      "rows": [
+        { "id": "sales", "label": "Consolidated sales", "answer": 2750000, "tolerance": 0, "explanation": "2,000,000 + 900,000 − 150,000 = **2,750,000**." },
+        { "id": "cogs", "label": "Consolidated cost of goods sold", "answer": 1630000, "tolerance": 0, "explanation": "1,200,000 + 560,000 − 150,000 + 20,000 = **1,630,000**." },
+        { "id": "ar", "label": "Consolidated accounts receivable", "answer": 420000, "tolerance": 0, "explanation": "310,000 + 140,000 − 30,000 intercompany = **420,000**." },
+        { "id": "inv", "label": "Consolidated inventory", "answer": 420000, "tolerance": 0, "explanation": "260,000 + 180,000 − 20,000 unrealized profit = **420,000**." },
+        { "id": "eq", "label": "Consolidated equipment (net)", "answer": 1092000, "tolerance": 0, "explanation": "700,000 + 410,000 − 18,000 = **1,092,000**. Check: group carrying amount of the transferred equipment = 60,000 − 15,000 = 45,000 vs. Pine's 84,000 − 21,000 = 63,000." }
+      ]
+    }
+  ]
+}

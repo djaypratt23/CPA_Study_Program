@@ -1,0 +1,53 @@
+{
+  "id": "far-tbs-u4-government-plans",
+  "section": "FAR",
+  "unitId": "far-u4",
+  "moduleIds": ["far-government", "far-benefit-plans"],
+  "pool": "practice",
+  "title": "Government funds & a city retirement plan — City of Millbrook",
+  "minutes": 18,
+  "skill": "application",
+  "instructions": "The City of Millbrook is assembling its annual comprehensive financial report. Classify its activities and fund balances, then compute the change in net assets for the defined contribution plan it sponsors for employees (the plan issues separate GAAP financial statements under FASB ASC 962).",
+  "exhibits": [
+    { "title": "City activities", "content": "- **A.** Municipal golf course financed by greens fees charged to the public.\n- **B.** Central garage that repairs vehicles for police, fire, and parks and bills each department at cost.\n- **C.** Gasoline tax revenue legally restricted by state law to road maintenance.\n- **D.** Accumulating resources to pay principal and interest on general obligation bonds.\n- **E.** Taxes collected on behalf of the county school district and remitted monthly." },
+    { "title": "General fund balance items", "content": "- Supplies inventory **$25,000**.\n- **$400,000** set aside by city council ordinance for a future fire station.\n- **$150,000** of a federal grant that may be used only for public health.\n- **$90,000** the finance director (delegated authority) intends to use for software upgrades." },
+    { "title": "Employee 401(k)-type plan data", "content": "| Item | Amount |\n|---|---:|\n| Net assets, beginning | 6,400,000 |\n| Participant contributions | 780,000 |\n| City contributions (incl. $30,000 receivable at year-end) | 390,000 |\n| Dividends and interest | 150,000 |\n| Net appreciation in fair value | 520,000 |\n| Benefits paid | 610,000 |\n| Administrative expenses | 25,000 |" }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "funds",
+      "prompt": "Select the fund type for each activity.",
+      "options": ["General fund", "Special revenue fund", "Debt service fund", "Capital projects fund", "Enterprise fund", "Internal service fund", "Custodial fund", "Permanent fund"],
+      "rows": [
+        { "id": "a", "label": "A — Golf course", "answer": "Enterprise fund", "explanation": "Fees charged to external users → enterprise (proprietary)." },
+        { "id": "b", "label": "B — Central garage", "answer": "Internal service fund", "explanation": "Services to other departments on a cost-reimbursement basis." },
+        { "id": "c", "label": "C — Gasoline tax for roads", "answer": "Special revenue fund", "explanation": "Proceeds of a specific revenue source restricted to a purpose other than debt service or capital projects." },
+        { "id": "d", "label": "D — Paying general obligation debt", "answer": "Debt service fund", "explanation": "Accumulates resources for general long-term debt principal and interest." },
+        { "id": "e", "label": "E — School district taxes", "answer": "Custodial fund", "explanation": "Resources held for another government, not in a trust → custodial (fiduciary)." }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "fb",
+      "prompt": "Classify each general fund balance item (GASB 54).",
+      "options": ["Nonspendable", "Restricted", "Committed", "Assigned", "Unassigned"],
+      "rows": [
+        { "id": "f1", "label": "Supplies inventory $25,000", "answer": "Nonspendable", "explanation": "Not in spendable form." },
+        { "id": "f2", "label": "Council ordinance for fire station $400,000", "answer": "Committed", "explanation": "Formal action by the highest decision-making authority." },
+        { "id": "f3", "label": "Federal grant for public health $150,000", "answer": "Restricted", "explanation": "Externally imposed by a grantor." },
+        { "id": "f4", "label": "Finance director's intended software upgrade $90,000", "answer": "Assigned", "explanation": "Intended use set by an official with delegated authority." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "plan",
+      "prompt": "Compute for the employee plan's Year 2 statements.",
+      "rows": [
+        { "id": "add", "label": "Total additions", "answer": 1840000, "tolerance": 0, "explanation": "780,000 + 390,000 + 150,000 + 520,000 = **1,840,000** (the $30,000 receivable is already included, on the accrual basis)." },
+        { "id": "ded", "label": "Total deductions", "answer": 635000, "tolerance": 0, "explanation": "610,000 + 25,000 = **635,000**." },
+        { "id": "end", "label": "Net assets available for benefits, end of year", "answer": 7605000, "tolerance": 0, "explanation": "6,400,000 + 1,840,000 − 635,000 = **7,605,000**." }
+      ]
+    }
+  ]
+}

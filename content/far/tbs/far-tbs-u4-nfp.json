@@ -1,0 +1,41 @@
+{
+  "id": "far-tbs-u4-nfp",
+  "section": "FAR",
+  "unitId": "far-u4",
+  "moduleIds": ["far-nfp-revenue", "far-nfp-statements"],
+  "pool": "practice",
+  "title": "Not-for-profit revenue & activities — Harbor Literacy Alliance",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Harbor Literacy Alliance (a private NFP) is preparing its Year 2 statement of activities. Classify each transaction, then compute the change in each net asset class.",
+  "exhibits": [
+    { "title": "Year 2 transactions", "content": "1. Unrestricted cash gifts: **$620,000**.\n2. A foundation pledged **$150,000**, payable in Year 3, restricted to the adult-reading program. The pledge is unconditional; ignore discounting.\n3. A corporation promised **$100,000** if Harbor raises **$100,000** of new donations by March 31, Year 3; otherwise the promise lapses. Harbor has raised **$40,000** of qualifying gifts.\n4. Harbor spent **$90,000** on the adult-reading program, fully satisfying restrictions from gifts received in Year 1.\n5. A CPA firm audited Harbor's books free of charge; Harbor would otherwise have paid **$18,000**.\n6. Volunteers without special skills tutored children; fair value **$45,000**.\n7. Members pay **$100** dues and receive a magazine worth **$20**; 1,000 members paid in Year 2.\n8. Expenses (including the audit and adult-reading program): program **$560,000**, management & general **$120,000**, fundraising **$60,000**." }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "How should Harbor report each item in Year 2?",
+      "options": ["Revenue — without donor restrictions", "Revenue — with donor restrictions", "Not recognized", "Exchange revenue (ASC 606)", "Refundable advance / liability"],
+      "rows": [
+        { "id": "r2", "label": "Item 2: foundation pledge", "answer": "Revenue — with donor restrictions", "explanation": "Unconditional promise → recognize when received; purpose and time restricted." },
+        { "id": "r3", "label": "Item 3: corporate matching promise", "answer": "Not recognized", "explanation": "Matching barrier + right of release → conditional; the barrier is not yet met, and no cash was received." },
+        { "id": "r5", "label": "Item 5: donated audit services", "answer": "Revenue — without donor restrictions", "explanation": "Specialized skills that would otherwise be purchased → recognize $18,000 revenue and expense." },
+        { "id": "r6", "label": "Item 6: volunteer tutoring", "answer": "Not recognized", "explanation": "No specialized skills and no nonfinancial asset created → not recognized (may be disclosed)." },
+        { "id": "r7", "label": "Item 7: the $20 magazine portion of dues", "answer": "Exchange revenue (ASC 606)", "explanation": "Members receive commensurate value for $20; the remaining $80 is a contribution." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the Year 2 amounts.",
+      "rows": [
+        { "id": "contrib", "label": "Contribution revenue without donor restrictions (items 1, 5, 7)", "answer": 718000, "tolerance": 0, "explanation": "620,000 + 18,000 + (1,000 × 80 = 80,000) = **718,000**." },
+        { "id": "exch", "label": "Exchange (membership benefit) revenue", "answer": 20000, "tolerance": 0, "explanation": "1,000 × 20 = **20,000**." },
+        { "id": "rel", "label": "Net assets released from restrictions", "answer": 90000, "tolerance": 0, "explanation": "The adult-reading spending satisfied **90,000** of prior restrictions." },
+        { "id": "chgu", "label": "Change in net assets without donor restrictions", "answer": 88000, "tolerance": 0, "explanation": "718,000 + 20,000 + 90,000 − (560,000 + 120,000 + 60,000 = 740,000) = **88,000**." },
+        { "id": "chgr", "label": "Change in net assets with donor restrictions", "answer": 60000, "tolerance": 0, "explanation": "+150,000 pledge − 90,000 released = **60,000**." }
+      ]
+    }
+  ]
+}

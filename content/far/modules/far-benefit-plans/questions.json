@@ -1,0 +1,434 @@
+[
+  {
+    "id": "far-ebp-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a 401(k) participant has borrowed $20,000 from her own account under the plan's loan program. How does the plan report the loan?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As an investment at fair value",
+        "explanation": "Participant loans are classified as notes receivable, not investments.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As a note receivable from participants at unpaid principal plus accrued interest",
+        "explanation": "Correct. Participant loans are notes receivable from participants measured at unpaid principal plus accrued but unpaid interest (ASC 962-310)."
+      },
+      {
+        "id": "c",
+        "text": "As a benefit payment",
+        "explanation": "A loan must be repaid; it is not a distribution.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It is not reported by the plan",
+        "explanation": "The loan is a plan asset.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Participant loans are notes receivable from participants measured at unpaid principal plus accrued but unpaid interest (ASC 962-310).",
+    "skill": "application"
+  },
+  {
+    "id": "far-ebp-chk1",
+    "pool": "lesson",
+    "stem": "Which item is a **deduction** in a DC plan's statement of changes in net assets available for benefits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Rollover contributions from participants' prior plans",
+        "explanation": "Rollovers are additions.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Net appreciation in fair value of investments",
+        "explanation": "Appreciation is an addition.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Benefits paid to participants",
+        "explanation": "Correct. Deductions: benefits paid and administrative expenses (and net depreciation, if any)."
+      },
+      {
+        "id": "d",
+        "text": "Employer contributions receivable",
+        "explanation": "Employer contributions are additions.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Deductions: benefits paid and administrative expenses (and net depreciation, if any). Additions: contributions, rollovers, and investment income.",
+    "skill": "application"
+  },
+  {
+    "id": "far-ebp-chk2",
+    "pool": "lesson",
+    "stem": "What additional information does a defined **benefit** plan report that a defined contribution plan does not?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fair value of investments",
+        "explanation": "Both plan types report investments at fair value.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Benefits paid during the year",
+        "explanation": "Both report benefits paid.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Participant loans",
+        "explanation": "Loans are typical of DC plans.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Actuarial present value of accumulated plan benefits and changes in it",
+        "explanation": "Correct. ASC 960 requires DB plans to present information about the actuarial present value of accumulated plan benefits (vested and nonvested) and the effects of significant changes."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 960 requires DB plans to present information about the actuarial present value of accumulated plan benefits (vested and nonvested) and the effects of significant changes.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-ebp-01",
+    "pool": "practice",
+    "stem": "Which financial statements are required for a defined contribution plan?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Statement of net assets available for benefits and statement of changes in net assets available for benefits",
+        "explanation": "Correct. DC plans present a statement of net assets available for benefits and a statement of changes in net assets available for benefits."
+      },
+      {
+        "id": "b",
+        "text": "Balance sheet, income statement, and statement of cash flows",
+        "explanation": "Plans use net-assets-available-for-benefits statements; a cash flow statement is encouraged only in limited cases.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Statement of accumulated plan benefits only",
+        "explanation": "That information is for DB plans and is in addition to net assets statements.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Statement of activities",
+        "explanation": "That is an NFP statement.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "DC plans present a statement of net assets available for benefits and a statement of changes in net assets available for benefits.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-ebp-02",
+    "pool": "practice",
+    "stem": "A DC plan's beginning net assets were $8,000,000. Contributions totaled $1,100,000, investment income (including net appreciation) was $640,000, benefits paid were $900,000, and administrative expenses were $40,000. What are ending net assets available for benefits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$9,740,000",
+        "explanation": "This omits all deductions.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$8,800,000",
+        "explanation": "Correct. 8,000,000 + 1,100,000 + 640,000 − 900,000 − 40,000."
+      },
+      {
+        "id": "c",
+        "text": "$8,840,000",
+        "explanation": "This omits administrative expenses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$8,160,000",
+        "explanation": "This omits investment income.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "8,000,000 + 1,100,000 + 640,000 − 900,000 − 40,000 = **8,800,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-ebp-03",
+    "pool": "practice",
+    "stem": "How are a DC plan's investments in mutual funds and common stocks measured?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Historical cost",
+        "explanation": "Plan investments are reported at fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Lower of cost or market",
+        "explanation": "LCM is not the plan measurement basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Fair value",
+        "explanation": "Correct. Plan investments are measured at fair value; the exception is fully benefit-responsive investment contracts in DC plans, reported at contract value."
+      },
+      {
+        "id": "d",
+        "text": "Contract value",
+        "explanation": "Contract value applies to fully benefit-responsive investment contracts only.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Plan investments are measured at fair value; the exception is fully benefit-responsive investment contracts in DC plans, reported at contract value.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-ebp-04",
+    "pool": "practice",
+    "stem": "In a DB plan, the actuarial present value of accumulated plan benefits is based on:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Employees' service rendered to date, generally without projected future salary increases",
+        "explanation": "Correct. Accumulated plan benefits are future benefit payments attributable to service already rendered under the plan's provisions, discounted for the time value of money and probability of payment."
+      },
+      {
+        "id": "b",
+        "text": "Projected service and future salary levels",
+        "explanation": "That describes the employer's projected benefit obligation under ASC 715.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Contributions made to date",
+        "explanation": "DB benefits depend on the formula, not contributions.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The fair value of plan investments",
+        "explanation": "That measures assets, not benefits.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Accumulated plan benefits are future benefit payments attributable to service already rendered under the plan's provisions, discounted for the time value of money and probability of payment.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-ebp-05",
+    "pool": "practice",
+    "stem": "At year-end, the employer owes a DC plan $75,000 of matching contributions for the last pay period, required under the plan document. How does the plan report this?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Not reported until received",
+        "explanation": "Plans use the accrual basis.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "Employer contributions receivable of $75,000 and an addition to net assets",
+        "explanation": "Correct. Contributions receivable are recorded when due under the plan's terms or a formal commitment, increasing net assets available for benefits."
+      },
+      {
+        "id": "c",
+        "text": "Disclosed in the notes only",
+        "explanation": "It is recognized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "As a liability of the plan",
+        "explanation": "The employer owes the plan; it is a plan asset.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Contributions receivable are recorded when due under the plan's terms or a formal commitment, increasing net assets available for benefits.",
+    "skill": "application"
+  },
+  {
+    "id": "far-ebp-06",
+    "pool": "practice",
+    "stem": "A plan's investments had realized gains of $300,000 and unrealized losses of $450,000 during the year. How are these presented in the statement of changes in net assets?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Realized gains as additions; unrealized losses in other comprehensive income",
+        "explanation": "Plans do not report OCI.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only the realized gain is reported",
+        "explanation": "Unrealized changes are included since investments are at fair value.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Separate lines for realized and unrealized, as required",
+        "explanation": "Plans typically present a single net appreciation (depreciation) line.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Net depreciation in fair value of investments of $150,000",
+        "explanation": "Correct. Realized and unrealized are combined."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Net appreciation (depreciation) in fair value combines realized and unrealized gains and losses: 300,000 − 450,000 = **(150,000)**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-ebp-07",
+    "pool": "practice",
+    "stem": "Which factor affecting the actuarial present value of accumulated plan benefits must a DB plan disclose if significant?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Changes in the fair value of plan investments",
+        "explanation": "That affects net assets, not accumulated benefits.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Plan amendments",
+        "explanation": "Correct. Amendments, changes in the nature of the plan, and changes in actuarial assumptions are disclosed."
+      },
+      {
+        "id": "c",
+        "text": "The employer's net income",
+        "explanation": "Not relevant to plan benefits.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Administrative expenses",
+        "explanation": "These reduce net assets; they don't change accumulated benefits.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Significant effects of plan amendments, changes in the nature of the plan, and changes in actuarial assumptions on accumulated plan benefits are disclosed.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-ebp-08",
+    "pool": "practice",
+    "stem": "A plan's statement shows: investments at fair value $5,200,000; notes receivable from participants $180,000; employer contributions receivable $40,000; accrued administrative expenses $15,000. What are net assets available for benefits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,405,000",
+        "explanation": "Correct. 5,200,000 + 180,000 + 40,000 − 15,000."
+      },
+      {
+        "id": "b",
+        "text": "$5,420,000",
+        "explanation": "This ignores the liability.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$5,225,000",
+        "explanation": "This excludes participant loans, which are plan assets.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$5,185,000",
+        "explanation": "This subtracts the loans instead of adding them.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Net assets = total assets (5,200,000 + 180,000 + 40,000 = 5,420,000) − liabilities 15,000 = **5,405,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-ebp-09",
+    "pool": "practice",
+    "stem": "Which statement about the relationship between a sponsoring employer and its benefit plan is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The plan's assets are included in the employer's balance sheet",
+        "explanation": "Plan assets are held in trust and are separate from the employer's assets (the employer reports only a funded status for DB plans).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The plan is a separate reporting entity with its own financial statements",
+        "explanation": "Correct. An employee benefit plan is a separate reporting entity."
+      },
+      {
+        "id": "c",
+        "text": "The plan's statements follow ASC 715",
+        "explanation": "ASC 715 governs the employer's accounting; plan accounting is ASC 960/962/965.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Only defined benefit plans prepare financial statements",
+        "explanation": "DC plans also prepare them.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "An employee benefit plan is a separate reporting entity. Plan accounting (ASC 960/962/965) differs from the employer's accounting for benefit cost (ASC 715).",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-ebp-10",
+    "pool": "practice",
+    "stem": "For a DB plan, when may information about accumulated plan benefits be presented?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only as of the end of the plan year",
+        "explanation": "The beginning of the year is also permitted.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Only in the Form 5500, not in GAAP statements",
+        "explanation": "GAAP requires the information.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As of either the beginning or the end of the plan year",
+        "explanation": "Correct. ASC 960 permits accumulated plan benefit information as of the beginning or end of the plan year (if as of the beginning, prior-year net assets are also presented)."
+      },
+      {
+        "id": "d",
+        "text": "Every third year, when an actuarial valuation is done",
+        "explanation": "It is required each year.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 960 permits accumulated plan benefit information as of the beginning or end of the plan year (if as of the beginning, prior-year net assets are also presented).",
+    "skill": "remembering"
+  }
+]
