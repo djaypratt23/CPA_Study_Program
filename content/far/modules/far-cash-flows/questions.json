@@ -1,0 +1,218 @@
+[
+  {
+    "id": "far-scf-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: where does **interest paid** on a bank loan appear in a U.S. GAAP statement of cash flows?",
+    "choices": [
+      { "id": "a", "text": "Financing activities, with the loan principal", "explanation": "Principal is financing, but interest paid is operating under U.S. GAAP.", "trap": "overgeneralization" },
+      { "id": "b", "text": "Operating activities", "explanation": "Correct. Interest is an expense in net income, so its cash payment is operating." },
+      { "id": "c", "text": "Investing activities", "explanation": "Borrowing costs are not investments.", "trap": "wrong-classification" },
+      { "id": "d", "text": "Only in a supplemental noncash disclosure", "explanation": "Interest paid is a cash outflow; the amount paid is also disclosed, but it is operating.", "trap": "wrong-rule" }
+    ],
+    "answer": "b",
+    "explanation": "Under U.S. GAAP, interest paid, interest received, and dividends received are operating. Dividends paid are financing.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-scf-chk1",
+    "pool": "lesson",
+    "stem": "A company sold equipment with a carrying amount of $50,000 for $65,000 cash. How is this reported under the indirect method?",
+    "choices": [
+      { "id": "a", "text": "$65,000 investing inflow; $15,000 gain added to net income in operating activities", "explanation": "The gain must be subtracted, not added, or cash would be double counted.", "trap": "wrong-sign" },
+      { "id": "b", "text": "$15,000 investing inflow only", "explanation": "The full proceeds, not the gain, are the investing inflow.", "trap": "partial-computation" },
+      { "id": "c", "text": "$65,000 investing inflow; $15,000 gain subtracted from net income in operating activities", "explanation": "Correct. Full proceeds are investing; the gain is removed from operating to avoid double counting." },
+      { "id": "d", "text": "$65,000 operating inflow", "explanation": "Sales of PP&E are investing activities.", "trap": "wrong-classification" }
+    ],
+    "answer": "c",
+    "explanation": "Show the full $65,000 proceeds as investing. Because the $15,000 gain is inside net income, subtract it in the operating section.",
+    "skill": "application"
+  },
+  {
+    "id": "far-scf-chk2",
+    "pool": "lesson",
+    "stem": "Sales were $500,000; accounts receivable (net) was $60,000 at the beginning and $85,000 at the end of the year. How much cash was collected from customers?",
+    "choices": [
+      { "id": "a", "text": "$525,000", "explanation": "An increase in receivables means less cash than sales, not more.", "trap": "wrong-sign" },
+      { "id": "b", "text": "$475,000", "explanation": "Correct. 500,000 + 60,000 − 85,000 = 475,000." },
+      { "id": "c", "text": "$415,000", "explanation": "This subtracts the entire ending balance and ignores the beginning balance collected.", "trap": "partial-computation" },
+      { "id": "d", "text": "$500,000", "explanation": "This assumes no change in receivables.", "trap": "partial-computation" }
+    ],
+    "answer": "b",
+    "explanation": "Cash collected = sales + beginning AR − ending AR = 500,000 + 60,000 − 85,000 = **475,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-scf-01",
+    "pool": "practice",
+    "stem": "Net income was $200,000. Depreciation was $35,000; accounts receivable increased $18,000; inventory increased $12,000; accounts payable increased $9,000; and there was a $6,000 loss on sale of land. What is net cash provided by operating activities (indirect method)?",
+    "choices": [
+      { "id": "a", "text": "$220,000", "explanation": "Correct. 200,000 + 35,000 + 6,000 − 18,000 − 12,000 + 9,000 = 220,000." },
+      { "id": "b", "text": "$208,000", "explanation": "This subtracts the loss instead of adding it back.", "trap": "wrong-sign" },
+      { "id": "c", "text": "$280,000", "explanation": "This adds the increases in AR and inventory instead of subtracting them (200,000 + 35,000 + 6,000 + 18,000 + 12,000 + 9,000).", "trap": "wrong-sign" },
+      { "id": "d", "text": "$214,000", "explanation": "This omits the add-back of the loss on sale of land.", "trap": "partial-computation" }
+    ],
+    "answer": "a",
+    "explanation": "200,000 + 35,000 depreciation + 6,000 loss − 18,000 AR − 12,000 inventory + 9,000 AP = **220,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-scf-02",
+    "pool": "practice",
+    "stem": "Which is a **financing** activity?",
+    "choices": [
+      { "id": "a", "text": "Interest paid on bonds payable", "explanation": "Interest paid is operating under U.S. GAAP.", "trap": "overgeneralization" },
+      { "id": "b", "text": "Dividends received from an investee", "explanation": "Dividends received are operating (up to cumulative earnings for equity-method investees).", "trap": "reversed" },
+      { "id": "c", "text": "Purchase of treasury stock", "explanation": "Correct. Transactions with owners are financing." },
+      { "id": "d", "text": "Loan made to a supplier", "explanation": "Lending to others is investing.", "trap": "wrong-classification" }
+    ],
+    "answer": "c",
+    "explanation": "Financing: issuing/repurchasing equity, paying dividends, borrowing and repaying principal. Buying treasury stock is a financing outflow.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-scf-03",
+    "pool": "practice",
+    "stem": "A company acquired land worth $400,000 by paying $100,000 cash and signing a $300,000 note to the seller. How is this reported?",
+    "choices": [
+      { "id": "a", "text": "Investing outflow of $400,000 and financing inflow of $300,000", "explanation": "The note was not a cash inflow; only the cash paid is a cash flow.", "trap": "wrong-rule" },
+      { "id": "b", "text": "Investing outflow of $100,000; $300,000 note disclosed as a noncash investing and financing activity", "explanation": "Correct. Only the cash paid is a cash flow; the seller-financed portion is a noncash disclosure." },
+      { "id": "c", "text": "Nothing in the statement, only a disclosure of $400,000", "explanation": "The $100,000 cash paid is a real investing outflow.", "trap": "partial-computation" },
+      { "id": "d", "text": "Operating outflow of $100,000", "explanation": "Land purchases are investing.", "trap": "wrong-classification" }
+    ],
+    "answer": "b",
+    "explanation": "Only cash moves appear in the body: $100,000 investing outflow. Seller financing of $300,000 is a noncash investing and financing activity, disclosed separately.",
+    "skill": "application"
+  },
+  {
+    "id": "far-scf-04",
+    "pool": "practice",
+    "stem": "Cost of goods sold was $600,000. Inventory increased by $30,000 and accounts payable to suppliers increased by $20,000. What was cash paid to suppliers?",
+    "choices": [
+      { "id": "a", "text": "$590,000", "explanation": "This subtracts the inventory increase instead of adding it.", "trap": "wrong-sign" },
+      { "id": "b", "text": "$650,000", "explanation": "This adds the payable increase; a larger payable means less cash paid.", "trap": "wrong-sign" },
+      { "id": "c", "text": "$630,000", "explanation": "This adjusts only for the inventory change.", "trap": "partial-computation" },
+      { "id": "d", "text": "$610,000", "explanation": "Correct. 600,000 + 30,000 − 20,000 = 610,000." }
+    ],
+    "answer": "d",
+    "explanation": "Purchases = COGS + ΔInventory = 600,000 + 30,000 = 630,000. Cash paid = purchases − ΔAP = 630,000 − 20,000 = **610,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-scf-05",
+    "pool": "practice",
+    "stem": "Under ASU 2016-15, how are cash payments for debt prepayment or extinguishment costs classified?",
+    "choices": [
+      { "id": "a", "text": "Financing activities", "explanation": "Correct. They relate to settling a financing arrangement." },
+      { "id": "b", "text": "Operating activities, since they are expensed", "explanation": "Although expensed, ASU 2016-15 specifically classifies them as financing.", "trap": "overgeneralization" },
+      { "id": "c", "text": "Investing activities", "explanation": "They do not relate to investments.", "trap": "wrong-classification" },
+      { "id": "d", "text": "Noncash disclosure only", "explanation": "They are cash payments.", "trap": "wrong-rule" }
+    ],
+    "answer": "a",
+    "explanation": "ASC 230-10-45-15 (as amended) classifies debt prepayment and extinguishment costs, including third-party costs and premiums paid, as financing outflows.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-scf-06",
+    "pool": "practice",
+    "stem": "An entity using the direct method for operating activities must also:",
+    "choices": [
+      { "id": "a", "text": "Present investing activities using the indirect method", "explanation": "Investing and financing are always gross; there is no indirect version of them.", "trap": "irrelevant-fact" },
+      { "id": "b", "text": "Present a separate reconciliation of net income to net cash from operating activities", "explanation": "Correct. The reconciliation is required regardless." },
+      { "id": "c", "text": "Omit disclosure of interest and taxes paid", "explanation": "Direct-method statements show those payments; no exemption from reconciliation results.", "trap": "wrong-rule" },
+      { "id": "d", "text": "Obtain FASB approval", "explanation": "The direct method is encouraged, not restricted.", "trap": "other" }
+    ],
+    "answer": "b",
+    "explanation": "ASC 230 encourages the direct method but requires the reconciliation of net income to operating cash flows either way.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-scf-07",
+    "pool": "practice",
+    "stem": "During the year a company: issued common stock for $500,000 cash; paid dividends of $80,000 (declared $100,000); repaid $150,000 of bond principal; and paid $40,000 of bond interest. What is net cash from financing activities?",
+    "choices": [
+      { "id": "a", "text": "$230,000", "explanation": "This also subtracts interest paid, which is operating.", "trap": "wrong-classification" },
+      { "id": "b", "text": "$250,000", "explanation": "This uses dividends declared rather than paid.", "trap": "wrong-period" },
+      { "id": "c", "text": "$270,000", "explanation": "Correct. 500,000 − 80,000 − 150,000 = 270,000." },
+      { "id": "d", "text": "$420,000", "explanation": "This omits the bond principal repayment.", "trap": "partial-computation" }
+    ],
+    "answer": "c",
+    "explanation": "Financing: +500,000 stock − 80,000 dividends **paid** − 150,000 principal = **270,000**. Interest paid is operating.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-scf-08",
+    "pool": "practice",
+    "stem": "How is the purchase of securities classified as **trading** reported?",
+    "choices": [
+      { "id": "a", "text": "Operating activities", "explanation": "Correct. Trading securities are acquired for resale, like inventory." },
+      { "id": "b", "text": "Investing activities", "explanation": "Investing applies to securities not acquired specifically for resale.", "trap": "overgeneralization" },
+      { "id": "c", "text": "Financing activities", "explanation": "Buying others' securities is never financing.", "trap": "wrong-classification" },
+      { "id": "d", "text": "Excluded because trading securities are cash equivalents", "explanation": "Trading securities are not automatically cash equivalents.", "trap": "wrong-rule" }
+    ],
+    "answer": "a",
+    "explanation": "Cash flows from securities acquired specifically for resale (trading) are classified by their nature — generally operating.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-scf-09",
+    "pool": "practice",
+    "stem": "Net income was $75,000. Accounts receivable decreased $9,000, unearned revenue decreased $4,000, depreciation was $20,000, and deferred tax liability increased $3,000. What is cash from operating activities?",
+    "choices": [
+      { "id": "a", "text": "$95,000", "explanation": "This omits the working-capital and deferred tax adjustments.", "trap": "partial-computation" },
+      { "id": "b", "text": "$111,000", "explanation": "This adds the unearned revenue decrease.", "trap": "wrong-sign" },
+      { "id": "c", "text": "$85,000", "explanation": "This subtracts the receivables decrease (75,000 + 20,000 + 3,000 − 9,000 − 4,000).", "trap": "wrong-sign" },
+      { "id": "d", "text": "$103,000", "explanation": "Correct. 75,000 + 20,000 + 3,000 + 9,000 − 4,000 = 103,000." }
+    ],
+    "answer": "d",
+    "explanation": "75,000 + 20,000 depreciation + 3,000 deferred tax (noncash expense) + 9,000 AR decrease − 4,000 unearned revenue decrease = **103,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-scf-10",
+    "pool": "practice",
+    "stem": "A company's cash balances include restricted cash held in escrow. How is restricted cash treated in the statement of cash flows?",
+    "choices": [
+      { "id": "a", "text": "Excluded from beginning and ending balances; deposits into escrow are investing outflows", "explanation": "That was prior practice; ASU 2016-18 includes restricted cash in the totals.", "trap": "outdated-rule" },
+      { "id": "b", "text": "Included with cash and cash equivalents in the beginning and ending totals; transfers to/from restricted cash are not cash flows", "explanation": "Correct. ASU 2016-18 folds restricted cash into the reconciled totals." },
+      { "id": "c", "text": "Reported as a separate fourth category of cash flows", "explanation": "There are only three categories.", "trap": "other" },
+      { "id": "d", "text": "Disclosed only, with no effect on the reconciled totals", "explanation": "Restricted cash is part of the reconciled totals.", "trap": "wrong-rule" }
+    ],
+    "answer": "b",
+    "explanation": "Under ASC 230 (ASU 2016-18), restricted cash and restricted cash equivalents are included with cash and cash equivalents when reconciling beginning and ending amounts.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-scf-11",
+    "pool": "practice",
+    "stem": "Equipment with an original cost of $80,000 and accumulated depreciation of $50,000 was sold at a loss of $7,000. Depreciation expense for the year was $25,000. What amount is reported as an investing inflow from the sale?",
+    "choices": [
+      { "id": "a", "text": "$30,000", "explanation": "That is the carrying amount; the sale was at a loss.", "trap": "partial-computation" },
+      { "id": "b", "text": "$37,000", "explanation": "This adds the loss to carrying amount instead of subtracting it.", "trap": "wrong-sign" },
+      { "id": "c", "text": "$23,000", "explanation": "Correct. Carrying amount 30,000 − loss 7,000 = 23,000 proceeds." },
+      { "id": "d", "text": "$73,000", "explanation": "This subtracts the loss from original cost.", "trap": "distractor-number" }
+    ],
+    "answer": "c",
+    "explanation": "Carrying amount = 80,000 − 50,000 = 30,000. A 7,000 loss means proceeds were 30,000 − 7,000 = **23,000** (investing inflow). The 7,000 loss is added back in operating activities.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-scf-12",
+    "pool": "practice",
+    "stem": "Which is disclosed as a noncash investing and financing activity?",
+    "choices": [
+      { "id": "a", "text": "Conversion of bonds payable into common stock", "explanation": "Correct. Debt is exchanged for equity with no cash." },
+      { "id": "b", "text": "Depreciation expense", "explanation": "Depreciation is a noncash operating adjustment, not an investing/financing disclosure.", "trap": "wrong-classification" },
+      { "id": "c", "text": "A 2-for-1 stock split", "explanation": "A split does not change any asset, liability, or equity total — nothing to disclose here.", "trap": "overgeneralization" },
+      { "id": "d", "text": "Payment of accounts payable", "explanation": "That is a cash operating outflow.", "trap": "wrong-rule" }
+    ],
+    "answer": "a",
+    "explanation": "Significant noncash investing and financing activities — debt-to-equity conversions, assets acquired with debt or stock, ROU assets obtained for lease liabilities — are disclosed separately.",
+    "skill": "application"
+  }
+]

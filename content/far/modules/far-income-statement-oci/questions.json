@@ -1,0 +1,218 @@
+[
+  {
+    "id": "far-iso-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company's warehouse is destroyed by a rare earthquake, causing a $500,000 loss. How is it reported on the income statement?",
+    "choices": [
+      { "id": "a", "text": "As an extraordinary item, net of tax, below continuing operations", "explanation": "The extraordinary-item category was eliminated by ASU 2015-01.", "trap": "outdated-rule" },
+      { "id": "b", "text": "As a separate line item within income from continuing operations, before tax", "explanation": "Correct. Unusual or infrequent items are shown separately in continuing operations, pretax." },
+      { "id": "c", "text": "Directly in retained earnings", "explanation": "Losses flow through net income; only error corrections adjust retained earnings directly.", "trap": "wrong-rule" },
+      { "id": "d", "text": "In other comprehensive income", "explanation": "Casualty losses are not OCI items.", "trap": "wrong-classification" }
+    ],
+    "answer": "b",
+    "explanation": "Unusual and/or infrequent items appear as a separate component of income from continuing operations (or in the notes), and are **not** reported net of tax.",
+    "skill": "application"
+  },
+  {
+    "id": "far-iso-chk1",
+    "pool": "lesson",
+    "stem": "Which item belongs in operating income on a multiple-step income statement?",
+    "choices": [
+      { "id": "a", "text": "Interest expense on bonds", "explanation": "Financing cost — typically in other income and expense.", "trap": "wrong-classification" },
+      { "id": "b", "text": "Loss on sale of discontinued segment", "explanation": "Reported in discontinued operations, net of tax.", "trap": "wrong-classification" },
+      { "id": "c", "text": "Sales commissions", "explanation": "Correct. A selling expense is an operating expense." },
+      { "id": "d", "text": "Unrealized gain on AFS debt securities", "explanation": "An OCI item — not in net income at all.", "trap": "wrong-classification" }
+    ],
+    "answer": "c",
+    "explanation": "Operating income = gross profit − operating (selling, general, administrative) expenses. Commissions are selling expenses.",
+    "skill": "application"
+  },
+  {
+    "id": "far-iso-chk2",
+    "pool": "lesson",
+    "stem": "Early in the year, a company sold an AFS debt security, realizing a $10,000 gain that had been included in OCI in a prior year. What is the reclassification adjustment's effect on this year's OCI (ignore taxes)?",
+    "choices": [
+      { "id": "a", "text": "OCI decreases by $10,000", "explanation": "Correct. The gain moves from AOCI into net income; OCI shows a $10,000 reclassification out." },
+      { "id": "b", "text": "OCI increases by $10,000", "explanation": "The gain was already in OCI previously; it is removed, not added again.", "trap": "reversed" },
+      { "id": "c", "text": "No effect on OCI; only net income increases", "explanation": "Without a reclassification the gain would be counted twice in comprehensive income.", "trap": "partial-computation" },
+      { "id": "d", "text": "Retained earnings is credited directly", "explanation": "The realized gain goes through net income, not directly to retained earnings.", "trap": "wrong-rule" }
+    ],
+    "answer": "a",
+    "explanation": "Net income includes the $10,000 realized gain; OCI includes a −$10,000 reclassification adjustment, so comprehensive income counts it only once (in the year it arose in OCI).",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-iso-01",
+    "pool": "practice",
+    "stem": "A company has sales $900,000; COGS $540,000; selling expenses $120,000; administrative expenses $90,000; interest expense $15,000; gain on sale of equipment $5,000. What is operating income?",
+    "choices": [
+      { "id": "a", "text": "$140,000", "explanation": "This also subtracts interest and adds the gain — those are non-operating.", "trap": "wrong-classification" },
+      { "id": "b", "text": "$360,000", "explanation": "That is gross profit, before operating expenses.", "trap": "partial-computation" },
+      { "id": "c", "text": "$240,000", "explanation": "This omits administrative expenses.", "trap": "partial-computation" },
+      { "id": "d", "text": "$150,000", "explanation": "Correct. 900,000 − 540,000 − 120,000 − 90,000 = 150,000." }
+    ],
+    "answer": "d",
+    "explanation": "Gross profit 900,000 − 540,000 = 360,000. Operating income = 360,000 − 120,000 − 90,000 = **150,000**. Interest and the equipment gain are other income/expense.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iso-02",
+    "pool": "practice",
+    "stem": "Which disposal is most likely reported as a discontinued operation?",
+    "choices": [
+      { "id": "a", "text": "Sale of one of 300 similar retail stores in a region the company continues to serve", "explanation": "One store among many is not a strategic shift with a major effect.", "trap": "overgeneralization" },
+      { "id": "b", "text": "Sale of the company's entire consumer electronics division, which provided 30% of revenue, to exit that business", "explanation": "Correct. Exiting a major line of business is a strategic shift with a major effect." },
+      { "id": "c", "text": "Sale of an obsolete manufacturing machine", "explanation": "A single asset is not a component; any gain or loss is in continuing operations.", "trap": "wrong-classification" },
+      { "id": "d", "text": "Closing a product line that is fully integrated with other lines and whose cash flows cannot be separated", "explanation": "Without distinguishable operations and cash flows it is not a component.", "trap": "irrelevant-fact" }
+    ],
+    "answer": "b",
+    "explanation": "Discontinued operations require a component disposed of or held for sale that represents a **strategic shift with a major effect** (e.g., a major line of business or geographic area).",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-iso-03",
+    "pool": "practice",
+    "stem": "During Year 3 a company sold a component that qualifies as a discontinued operation. The component's Year 3 operating income was $80,000 (pretax) and the loss on its sale was $200,000 (pretax). The tax rate is 21%. What amount is reported as discontinued operations?",
+    "choices": [
+      { "id": "a", "text": "Loss of $94,800", "explanation": "Correct. (80,000 − 200,000) × (1 − 0.21) = (94,800)." },
+      { "id": "b", "text": "Loss of $120,000", "explanation": "This is the pretax amount; discontinued operations are reported net of tax.", "trap": "partial-computation" },
+      { "id": "c", "text": "Loss of $158,000, with the $80,000 operating income in continuing operations", "explanation": "The component's operating results belong in discontinued operations too.", "trap": "wrong-classification" },
+      { "id": "d", "text": "Loss of $78,000", "explanation": "This taxes the disposal loss (158,000 after tax) but adds back the operating income pretax (80,000), mixing bases.", "trap": "other" }
+    ],
+    "answer": "a",
+    "explanation": "Combine operating results and the disposal loss: 80,000 − 200,000 = (120,000) pretax. Net of 21% tax: (120,000) × 0.79 = **(94,800)**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iso-04",
+    "pool": "practice",
+    "stem": "A component classified as held for sale at year-end has a carrying amount of $2,000,000, fair value of $1,850,000, and expected costs to sell of $50,000. What impairment loss (pretax) is recognized?",
+    "choices": [
+      { "id": "a", "text": "$150,000", "explanation": "This ignores costs to sell.", "trap": "partial-computation" },
+      { "id": "b", "text": "$200,000", "explanation": "Correct. 2,000,000 − (1,850,000 − 50,000) = 200,000." },
+      { "id": "c", "text": "$50,000", "explanation": "Only the selling costs — the fair value decline is also a loss.", "trap": "partial-computation" },
+      { "id": "d", "text": "$0 until the sale is completed", "explanation": "Held-for-sale assets are written down when classified, not when sold.", "trap": "wrong-period" }
+    ],
+    "answer": "b",
+    "explanation": "Held for sale is measured at the lower of carrying amount or fair value less cost to sell: 1,850,000 − 50,000 = 1,800,000. Loss = 2,000,000 − 1,800,000 = **200,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iso-05",
+    "pool": "practice",
+    "stem": "Which item is reported in other comprehensive income?",
+    "choices": [
+      { "id": "a", "text": "Unrealized gain on an investment in common stock of another company (no significant influence)", "explanation": "Equity securities with readily determinable fair values report unrealized gains in net income.", "trap": "outdated-rule" },
+      { "id": "b", "text": "Foreign currency translation adjustment of a foreign subsidiary", "explanation": "Correct. Translation adjustments go to OCI." },
+      { "id": "c", "text": "Unrealized loss on trading debt securities", "explanation": "Trading securities' changes go to net income.", "trap": "wrong-classification" },
+      { "id": "d", "text": "Correction of a prior-year inventory error", "explanation": "Error corrections adjust beginning retained earnings.", "trap": "wrong-classification" }
+    ],
+    "answer": "b",
+    "explanation": "OCI includes pension items, AFS debt unrealized gains/losses, foreign currency translation, and cash flow hedge effective portions. Equity securities' fair value changes have gone to net income since ASU 2016-01.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-iso-06",
+    "pool": "practice",
+    "stem": "Net income was $300,000. During the year: unrealized gain on AFS debt securities $20,000; foreign currency translation loss $8,000; and dividends declared $50,000. All amounts are net of tax. What is comprehensive income?",
+    "choices": [
+      { "id": "a", "text": "$262,000", "explanation": "Dividends are distributions to owners, not part of comprehensive income.", "trap": "wrong-classification" },
+      { "id": "b", "text": "$320,000", "explanation": "This omits the translation loss.", "trap": "partial-computation" },
+      { "id": "c", "text": "$312,000", "explanation": "Correct. 300,000 + 20,000 − 8,000 = 312,000." },
+      { "id": "d", "text": "$328,000", "explanation": "The translation adjustment is a loss, not a gain.", "trap": "wrong-sign" }
+    ],
+    "answer": "c",
+    "explanation": "Comprehensive income = net income + OCI = 300,000 + 20,000 − 8,000 = **312,000**. Dividends are owner transactions, excluded from comprehensive income.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iso-07",
+    "pool": "practice",
+    "stem": "How must comprehensive income be presented under U.S. GAAP?",
+    "choices": [
+      { "id": "a", "text": "Only in the statement of changes in equity", "explanation": "This option was eliminated; OCI must be in a performance statement.", "trap": "outdated-rule" },
+      { "id": "b", "text": "Only in the notes to the financial statements", "explanation": "Comprehensive income must be presented on the face of the statements.", "trap": "wrong-rule" },
+      { "id": "c", "text": "Either in a single continuous statement or in two separate but consecutive statements", "explanation": "Correct. Those are the two permitted formats." },
+      { "id": "d", "text": "Only as a single combined statement of comprehensive income", "explanation": "Two consecutive statements are also permitted.", "trap": "overgeneralization" }
+    ],
+    "answer": "c",
+    "explanation": "ASC 220 permits one continuous statement of comprehensive income or two consecutive statements (income statement, then comprehensive income).",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-iso-08",
+    "pool": "practice",
+    "stem": "Before income taxes, a company had income from continuing operations of $400,000, including a $60,000 loss from an unusual lawsuit settlement. The tax rate is 25%. What is income from continuing operations?",
+    "choices": [
+      { "id": "a", "text": "$300,000", "explanation": "Correct. 400,000 × 0.75 = 300,000; the unusual item stays within continuing operations." },
+      { "id": "b", "text": "$345,000", "explanation": "This adds back the lawsuit loss net of tax, as if it were reported separately below continuing operations.", "trap": "outdated-rule" },
+      { "id": "c", "text": "$255,000", "explanation": "This deducts the lawsuit loss a second time; it is already included in the $400,000.", "trap": "partial-computation" },
+      { "id": "d", "text": "$400,000", "explanation": "Income taxes must be deducted.", "trap": "partial-computation" }
+    ],
+    "answer": "a",
+    "explanation": "The unusual loss is already inside the $400,000 pretax figure and stays in continuing operations. Income from continuing operations = 400,000 − 25% tax = **300,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iso-09",
+    "pool": "practice",
+    "stem": "A company classifies a component as held for sale in Year 2 and presents comparative Year 1 and Year 2 income statements. How are the component's Year 1 results presented?",
+    "choices": [
+      { "id": "a", "text": "Left in continuing operations, since the decision was made in Year 2", "explanation": "Comparative periods are recast for comparability.", "trap": "wrong-period" },
+      { "id": "b", "text": "Reclassified to discontinued operations in the Year 1 column", "explanation": "Correct. All periods presented show the component in discontinued operations." },
+      { "id": "c", "text": "Shown as a prior-period adjustment to retained earnings", "explanation": "A reclassification is not an error correction.", "trap": "wrong-rule" },
+      { "id": "d", "text": "Omitted from Year 1 entirely", "explanation": "The results are reclassified, not removed.", "trap": "other" }
+    ],
+    "answer": "b",
+    "explanation": "Discontinued operations are presented for all periods shown, so prior-period income statements are recast to move the component's results out of continuing operations.",
+    "skill": "application"
+  },
+  {
+    "id": "far-iso-10",
+    "pool": "practice",
+    "stem": "An asset group classified as held for sale:",
+    "choices": [
+      { "id": "a", "text": "Continues to be depreciated over its remaining useful life", "explanation": "Depreciation stops once an asset is classified as held for sale.", "trap": "wrong-rule" },
+      { "id": "b", "text": "Is measured at fair value, with gains above carrying amount recognized", "explanation": "Gains are recognized only to the extent of previously recognized losses; it is not written up above carrying amount.", "trap": "overgeneralization" },
+      { "id": "c", "text": "Must be sold within 90 days", "explanation": "The sale must generally be probable within one year.", "trap": "distractor-number" },
+      { "id": "d", "text": "Is measured at the lower of carrying amount or fair value less cost to sell and is not depreciated", "explanation": "Correct. This is exactly the held-for-sale measurement rule." }
+    ],
+    "answer": "d",
+    "explanation": "ASC 360-10-35: held-for-sale assets are measured at the lower of carrying amount or fair value less cost to sell, and depreciation ceases. Subsequent recoveries are recognized only up to cumulative losses previously recognized.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-iso-11",
+    "pool": "practice",
+    "stem": "A company presents OCI items before tax. Which presentation of related income taxes is acceptable?",
+    "choices": [
+      { "id": "a", "text": "Income taxes on OCI are included in income tax expense on continuing operations", "explanation": "Taxes follow the item (intraperiod allocation); OCI taxes are not in continuing-operations tax expense.", "trap": "wrong-rule" },
+      { "id": "b", "text": "A single amount for the aggregate income tax effect of OCI items, with the tax on each item disclosed", "explanation": "Correct. Before-tax presentation with one aggregate tax line is permitted; the per-item tax effect is disclosed." },
+      { "id": "c", "text": "No tax effect is recognized on OCI items", "explanation": "OCI items have tax effects that must be allocated to them.", "trap": "wrong-rule" },
+      { "id": "d", "text": "Taxes on OCI are recorded directly to retained earnings", "explanation": "They are allocated to OCI, not retained earnings.", "trap": "wrong-classification" }
+    ],
+    "answer": "b",
+    "explanation": "OCI components may be shown net of tax, or before tax with one line for the aggregate tax effect. Either way, the tax effect of each component is disclosed (ASC 220-10-45).",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-iso-12",
+    "pool": "practice",
+    "stem": "Income from continuing operations before taxes is $500,000 and the tax rate is 30%. A discontinued component had a pretax operating loss of $40,000 and a pretax gain on disposal of $140,000. What is net income?",
+    "choices": [
+      { "id": "a", "text": "$420,000", "explanation": "Correct. Continuing: 350,000. Discontinued: (−40,000 + 140,000) × 0.7 = 70,000. Total 420,000." },
+      { "id": "b", "text": "$450,000", "explanation": "This adds the discontinued operations amount pretax.", "trap": "partial-computation" },
+      { "id": "c", "text": "$448,000", "explanation": "This includes only the gain net of tax and ignores the operating loss.", "trap": "partial-computation" },
+      { "id": "d", "text": "$350,000", "explanation": "This omits discontinued operations entirely.", "trap": "partial-computation" }
+    ],
+    "answer": "a",
+    "explanation": "Continuing operations: 500,000 × (1 − 0.30) = **350,000**. Discontinued: (−40,000 + 140,000) = 100,000 pretax × 0.70 = **70,000**. Net income = **420,000**.",
+    "skill": "application",
+    "calc": true
+  }
+]

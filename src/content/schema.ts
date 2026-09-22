@@ -119,10 +119,13 @@ export type Lesson = LessonFrontmatter & {
 
 /* Structured blocks embedded in lesson Markdown as fenced code blocks. */
 
+// YAML turns bare numbers like `1.6` into numbers; prose fields accept either and become strings.
+const Text = z.union([z.string(), z.number()]).transform(String)
+
 export const WorkedBlock = z.object({
   title: z.string(),
   scenario: z.string(),
-  steps: z.array(z.object({ label: z.string(), work: z.string(), result: z.string().optional() })).min(1),
+  steps: z.array(z.object({ label: Text, work: Text, result: Text.optional() })).min(1),
   insight: z.string().optional(),
 })
 
@@ -132,12 +135,12 @@ export const FadedBlock = z.object({
   steps: z
     .array(
       z.object({
-        label: z.string(),
-        work: z.string().optional(), // shown when the step is given
+        label: Text,
+        work: Text.optional(), // shown when the step is given
         answer: z.number().optional(), // when present, the learner must compute it
         tolerance: z.number().min(0).default(0.5),
         hint: z.string().optional(),
-        solution: z.string().optional(), // shown after an attempt
+        solution: Text.optional(), // shown after an attempt
       }),
     )
     .min(1),

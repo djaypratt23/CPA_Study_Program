@@ -1,0 +1,57 @@
+{
+  "id": "far-tbs-u2-analysis",
+  "section": "FAR",
+  "unitId": "far-u2",
+  "moduleIds": ["far-ratios", "far-sec-segments", "far-notes-disclosures"],
+  "pool": "practice",
+  "title": "Ratios, segments & related parties — Coastal Brands",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Coastal Brands, a public company, is preparing its annual report. Use the exhibits to compute ratios, determine reportable segments, and identify the authoritative guidance for a related-party matter.",
+  "exhibits": [
+    { "title": "Selected financial data", "content": "| Item | Beginning of year | End of year |\n|---|---:|---:|\n| Cash | 60,000 | 80,000 |\n| Accounts receivable, net | 140,000 | 160,000 |\n| Inventory | 210,000 | 250,000 |\n| Prepaid expenses | 10,000 | 10,000 |\n| Current liabilities | 250,000 | 300,000 |\n| Total assets | 1,800,000 | 2,200,000 |\n| Total stockholders' equity | 900,000 | 1,100,000 |\n\nNet sales (all on credit): **3,000,000**. Cost of goods sold: **1,840,000**. Net income: **200,000**. No preferred stock." },
+    { "title": "Operating segment data ($000s)", "content": "| Segment | Revenue (external + intersegment) | Profit (loss) | Assets |\n|---|---:|---:|---:|\n| Apparel | 1,700 | 260 | 1,000 |\n| Footwear | 700 | (120) | 500 |\n| Accessories | 250 | 30 | 150 |\n| Home goods | 200 | 10 | 250 |\n| Online marketplace | 150 | (20) | 100 |" },
+    { "title": "Email from the controller", "content": "Our CEO's sister owns the logistics firm we used for $400,000 of shipping this year. The draft note says the rates were 'comparable to market,' but we never obtained competing bids." }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "ratios",
+      "prompt": "Compute these ratios using year-end balances or averages as indicated. Enter ratios to two decimals and days to one decimal (365-day year).",
+      "rows": [
+        { "id": "cr", "label": "Current ratio (year-end)", "answer": 1.67, "tolerance": 0.01, "explanation": "Current assets = 80,000 + 160,000 + 250,000 + 10,000 = 500,000 ÷ 300,000 = **1.67**." },
+        { "id": "qr", "label": "Quick ratio (year-end)", "answer": 0.8, "tolerance": 0.01, "explanation": "(80,000 + 160,000) ÷ 300,000 = **0.80**." },
+        { "id": "dso", "label": "Days sales outstanding (average receivables)", "answer": 18.3, "tolerance": 0.1, "explanation": "Average AR = 150,000. Turnover = 3,000,000 ÷ 150,000 = 20. DSO = 365 ÷ 20 = **18.3** days." },
+        { "id": "it", "label": "Inventory turnover (average inventory)", "answer": 8, "tolerance": 0.01, "explanation": "Average inventory = 230,000. 1,840,000 ÷ 230,000 = **8.00** times." },
+        { "id": "roe", "label": "Return on equity, as a percentage (average equity)", "answer": 20, "tolerance": 0.1, "explanation": "Average equity = 1,000,000. 200,000 ÷ 1,000,000 = **20%**." },
+        { "id": "at", "label": "Asset turnover (average total assets)", "answer": 1.5, "tolerance": 0.01, "explanation": "Average assets = 2,000,000. 3,000,000 ÷ 2,000,000 = **1.50**." }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "seg",
+      "prompt": "Is each operating segment reportable under the 10% quantitative tests?",
+      "options": ["Reportable", "Not reportable"],
+      "rows": [
+        { "id": "s1", "label": "Apparel", "answer": "Reportable", "explanation": "Revenue 1,700 ≥ 300 (10% of 3,000)." },
+        { "id": "s2", "label": "Footwear", "answer": "Reportable", "explanation": "Revenue 700 ≥ 300; also |loss| 120 ≥ 30 (10% of the greater of total profits 300 or total losses 140)." },
+        { "id": "s3", "label": "Accessories", "answer": "Reportable", "explanation": "Revenue 250 < 300, but profit 30 = 10% of 300 → meets the profit test (and assets 150 < 200 fails)." },
+        { "id": "s4", "label": "Home goods", "answer": "Reportable", "explanation": "Revenue 200 < 300 and profit 10 < 30, but assets 250 ≥ 200 (10% of 2,000) → meets the asset test." },
+        { "id": "s5", "label": "Online marketplace", "answer": "Not reportable", "explanation": "Revenue 150 < 300; |loss| 20 < 30; assets 100 < 200 → fails all three 10% tests. (Reportable segments' external revenue must still be checked against the 75% test.)" }
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "rp",
+      "prompt": "Which excerpt (paraphrased for study) addresses the 'comparable to market' language in the draft related-party note?",
+      "excerpts": [
+        { "id": "a", "citation": "ASC 850-10-50-1 (paraphrase)", "text": "Financial statements disclose material related-party transactions, including the nature of the relationship, a description of the transactions, dollar amounts, and amounts due to or from related parties." },
+        { "id": "b", "citation": "ASC 850-10-50-5 (paraphrase)", "text": "Related-party transactions cannot be presumed to be carried out on an arm's-length basis; representations that they were on terms equivalent to arm's-length transactions are not made unless such representations can be substantiated." },
+        { "id": "c", "citation": "ASC 275-10-50-16 (paraphrase)", "text": "Concentrations are disclosed if they make the entity vulnerable to the risk of a near-term severe impact and it is at least reasonably possible that the events could occur in the near term." },
+        { "id": "d", "citation": "ASC 280-10-50-42 (paraphrase)", "text": "If revenues from a single external customer amount to 10 percent or more of revenues, the entity discloses that fact, the total amount, and the segments reporting the revenues." }
+      ],
+      "answer": "b",
+      "explanation": "The 'comparable to market' claim is an arm's-length representation. Without competing bids it cannot be substantiated, so it must be removed (850-10-50-5). The other disclosures in 850-10-50-1 are still required."
+    }
+  ]
+}

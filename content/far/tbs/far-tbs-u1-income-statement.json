@@ -1,0 +1,66 @@
+{
+  "id": "far-tbs-u1-income-statement",
+  "section": "FAR",
+  "unitId": "far-u1",
+  "moduleIds": ["far-income-statement-oci", "far-conceptual-framework"],
+  "pool": "practice",
+  "title": "Income statement & discontinued operations — Brightline Corp.",
+  "minutes": 18,
+  "skill": "analysis",
+  "instructions": "Brightline Corp. is finalizing its Year 2 statement of income and comprehensive income. Use the trial balance extract and the memo to compute the required amounts, then review the draft disclosure for errors. Tax rate: **25%** on all items.",
+  "exhibits": [
+    {
+      "title": "Pretax amounts, Year 2",
+      "content": "| Item | Amount |\n|---|---:|\n| Net sales | 2,400,000 |\n| Cost of goods sold | 1,440,000 |\n| Selling, general & administrative | 520,000 |\n| Interest expense | 40,000 |\n| Loss from hurricane damage (unusual) | 60,000 |\n| Outdoor Division: operating loss for Year 2 | 90,000 |\n| Outdoor Division: loss on sale | 110,000 |\n| Unrealized gain on AFS debt securities (pretax) | 16,000 |\n\n*Revenues and expenses of the Outdoor Division are **excluded** from the lines above except for its two separately listed items.*"
+    },
+    {
+      "title": "Memo from the CFO",
+      "content": "In October we sold our entire Outdoor Division to exit the recreational products market, which represented about 25% of revenue. Its operations and cash flows were tracked separately. The hurricane loss was the first in the company's 40-year history."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "is",
+      "prompt": "Compute the following Year 2 amounts.",
+      "rows": [
+        { "id": "gp", "label": "Gross profit", "answer": 960000, "tolerance": 0, "explanation": "2,400,000 − 1,440,000 = **960,000**." },
+        { "id": "oi", "label": "Operating income", "answer": 440000, "tolerance": 0, "explanation": "960,000 − 520,000 SG&A = **440,000**." },
+        { "id": "pretax", "label": "Income from continuing operations before income taxes", "answer": 340000, "tolerance": 0, "explanation": "440,000 − 40,000 interest − 60,000 hurricane loss = **340,000**. The unusual loss stays in continuing operations, pretax." },
+        { "id": "cont", "label": "Income from continuing operations", "answer": 255000, "tolerance": 0, "explanation": "340,000 × (1 − 0.25) = **255,000**." },
+        { "id": "disc", "label": "Discontinued operations, net of tax (enter a loss as negative)", "answer": -150000, "tolerance": 0, "explanation": "(90,000 + 110,000) = 200,000 pretax loss × 0.75 = **(150,000)**." },
+        { "id": "ni", "label": "Net income", "answer": 105000, "tolerance": 0, "explanation": "255,000 − 150,000 = **105,000**." },
+        { "id": "ci", "label": "Comprehensive income", "answer": 117000, "tolerance": 0, "explanation": "OCI = 16,000 × 0.75 = 12,000. Comprehensive income = 105,000 + 12,000 = **117,000**." }
+      ]
+    },
+    {
+      "kind": "docreview",
+      "id": "memo",
+      "prompt": "Review the draft note. For each highlighted phrase, keep it or select the correct replacement.",
+      "segments": [
+        { "text": "The loss from hurricane damage is presented " },
+        { "id": "d1", "original": "as an extraordinary item, net of tax", "options": ["as an extraordinary item, net of tax", "as a separate line within income from continuing operations, before tax", "in other comprehensive income"], "answer": "as a separate line within income from continuing operations, before tax", "explanation": "Extraordinary items were eliminated (ASU 2015-01). Unusual or infrequent items are separate components of continuing operations, pretax." },
+        { "text": ". The sale of the Outdoor Division qualifies as a discontinued operation because it " },
+        { "id": "d2", "original": "represents a strategic shift that has a major effect on operations and financial results", "options": ["represents a strategic shift that has a major effect on operations and financial results", "resulted in a loss", "was completed within one year"], "answer": "represents a strategic shift that has a major effect on operations and financial results", "explanation": "This is the correct criterion; the original wording is right. A loss or timing alone does not make a disposal a discontinued operation." },
+        { "text": ". Prior-year results of the Outdoor Division " },
+        { "id": "d3", "original": "remain in continuing operations", "options": ["remain in continuing operations", "have been reclassified to discontinued operations", "have been adjusted through retained earnings"], "answer": "have been reclassified to discontinued operations", "explanation": "Comparative periods are recast so the component appears in discontinued operations for all periods presented." },
+        { "text": ". The unrealized gain on available-for-sale debt securities is reported " },
+        { "id": "d4", "original": "in net income", "options": ["in net income", "in other comprehensive income", "directly in retained earnings"], "answer": "in other comprehensive income", "explanation": "Unrealized (non-credit) gains and losses on AFS debt securities go to OCI." },
+        { "text": "." }
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) governs whether the Outdoor Division is reported as a discontinued operation?",
+      "excerpts": [
+        { "id": "e1", "citation": "ASC 225-20-45 (paraphrase)", "text": "A material event that is unusual in nature or occurs infrequently is reported as a separate component of income from continuing operations or disclosed in the notes." },
+        { "id": "e2", "citation": "ASC 205-20-45 (paraphrase)", "text": "The disposal of a component or group of components is reported in discontinued operations if it represents a strategic shift that has, or will have, a major effect on the entity's operations and financial results." },
+        { "id": "e3", "citation": "ASC 220-10-45 (paraphrase)", "text": "An entity reports comprehensive income either in a single continuous statement or in two separate but consecutive statements." },
+        { "id": "e4", "citation": "ASC 360-10-35 (paraphrase)", "text": "A long-lived asset classified as held for sale is measured at the lower of its carrying amount or fair value less cost to sell and is not depreciated." }
+      ],
+      "answer": "e2",
+      "explanation": "Topic 205-20 sets the strategic-shift criterion for discontinued operations. The other excerpts address unusual items, comprehensive income presentation, and held-for-sale measurement."
+    }
+  ]
+}

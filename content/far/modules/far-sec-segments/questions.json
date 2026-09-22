@@ -1,0 +1,202 @@
+[
+  {
+    "id": "far-sec-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which SEC form reports a public company's fourth-quarter results?",
+    "choices": [
+      { "id": "a", "text": "Form 10-Q for Q4", "explanation": "There is no Q4 10-Q; the annual report covers the fourth quarter.", "trap": "overgeneralization" },
+      { "id": "b", "text": "Form 8-K only", "explanation": "8-Ks report specific current events; earnings releases may be furnished on 8-K, but the required annual report is the 10-K.", "trap": "wrong-rule" },
+      { "id": "c", "text": "Form 10-K", "explanation": "Correct. The annual report covers the full year, including Q4." },
+      { "id": "d", "text": "Form S-1", "explanation": "S-1 is for registering new securities.", "trap": "wrong-classification" }
+    ],
+    "answer": "c",
+    "explanation": "10-Qs are filed for the first three quarters. The 10-K (annual) covers the fourth quarter.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-sec-chk1",
+    "pool": "lesson",
+    "stem": "A company with a public float of $1.2 billion has a December 31 year-end. By when must it file its Form 10-K?",
+    "choices": [
+      { "id": "a", "text": "60 days after year-end", "explanation": "Correct. Large accelerated filers (≥ $700 million float) have 60 days." },
+      { "id": "b", "text": "75 days after year-end", "explanation": "That is the accelerated-filer deadline.", "trap": "wrong-classification" },
+      { "id": "c", "text": "90 days after year-end", "explanation": "That is the non-accelerated deadline.", "trap": "wrong-classification" },
+      { "id": "d", "text": "40 days after year-end", "explanation": "40 days is the 10-Q deadline for accelerated filers.", "trap": "distractor-number" }
+    ],
+    "answer": "a",
+    "explanation": "Public float of $700 million or more → large accelerated filer → 10-K due within 60 days.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-sec-chk2",
+    "pool": "lesson",
+    "stem": "One customer accounts for 14% of a public company's consolidated revenue. What must be disclosed?",
+    "choices": [
+      { "id": "a", "text": "The customer's name and the amount of revenue", "explanation": "The identity of the customer is not required.", "trap": "overgeneralization" },
+      { "id": "b", "text": "The fact that one customer exceeds 10%, the amount of revenue, and the segment(s) reporting it", "explanation": "Correct. Fact, amount, and segment are required; the customer is not named." },
+      { "id": "c", "text": "Nothing, unless the customer is a related party", "explanation": "The major-customer disclosure applies to any single customer at 10%+.", "trap": "wrong-rule" },
+      { "id": "d", "text": "Only that concentrations exist, with no amount", "explanation": "The amount of revenue from the customer is required.", "trap": "partial-computation" }
+    ],
+    "answer": "b",
+    "explanation": "ASC 280 entity-wide disclosures: if revenue from one external customer is 10% or more, disclose that fact, the total amount, and the segment(s) — not the customer's identity.",
+    "skill": "application"
+  },
+  {
+    "id": "far-sec-01",
+    "pool": "practice",
+    "stem": "Which regulation governs the form and content of the financial statements included in SEC filings?",
+    "choices": [
+      { "id": "a", "text": "Regulation S-K", "explanation": "S-K covers non-financial-statement disclosures such as MD&A and risk factors.", "trap": "reversed" },
+      { "id": "b", "text": "Regulation FD", "explanation": "Reg FD addresses selective disclosure to analysts.", "trap": "irrelevant-fact" },
+      { "id": "c", "text": "Securities Act of 1933, Section 5", "explanation": "Section 5 concerns registration requirements, not statement format.", "trap": "wrong-rule" },
+      { "id": "d", "text": "Regulation S-X", "explanation": "Correct. S-X prescribes the form and content of financial statements." }
+    ],
+    "answer": "d",
+    "explanation": "Regulation S-X = financial statements; Regulation S-K = narrative disclosures (business, MD&A, risk factors, compensation).",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-sec-02",
+    "pool": "practice",
+    "stem": "An accelerated filer's quarter ended March 31. What is the deadline for its Form 10-Q?",
+    "choices": [
+      { "id": "a", "text": "40 days after quarter-end", "explanation": "Correct. Large accelerated and accelerated filers have 40 days." },
+      { "id": "b", "text": "45 days after quarter-end", "explanation": "45 days applies to non-accelerated filers.", "trap": "wrong-classification" },
+      { "id": "c", "text": "60 days after quarter-end", "explanation": "60 days is the large accelerated filer's 10-K deadline.", "trap": "distractor-number" },
+      { "id": "d", "text": "4 business days after quarter-end", "explanation": "4 business days is the 8-K timeframe.", "trap": "distractor-number" }
+    ],
+    "answer": "a",
+    "explanation": "10-Q deadlines: 40 days (large accelerated and accelerated), 45 days (others).",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-sec-03",
+    "pool": "practice",
+    "stem": "Which event most clearly requires a Form 8-K filing?",
+    "choices": [
+      { "id": "a", "text": "Hiring a new mid-level sales manager", "explanation": "Not a reportable event; 8-K covers certain officer and director changes.", "trap": "overgeneralization" },
+      { "id": "b", "text": "Dismissal of the company's independent auditor", "explanation": "Correct. Changes in the certifying accountant are a specific 8-K item." },
+      { "id": "c", "text": "A routine quarterly dividend consistent with past practice", "explanation": "Routine dividends are not a required 8-K item.", "trap": "irrelevant-fact" },
+      { "id": "d", "text": "Completing the annual physical inventory count", "explanation": "An ordinary operating activity.", "trap": "irrelevant-fact" }
+    ],
+    "answer": "b",
+    "explanation": "Form 8-K items include entry into material agreements, completion of significant acquisitions, bankruptcy, changes in the certifying accountant, non-reliance on previously issued statements, and changes in directors or principal officers.",
+    "skill": "application"
+  },
+  {
+    "id": "far-sec-04",
+    "pool": "practice",
+    "stem": "Which is **not** a criterion for a component to be an operating segment?",
+    "choices": [
+      { "id": "a", "text": "It engages in activities from which it earns revenues and incurs expenses", "explanation": "This is one of the three criteria.", "trap": "reversed" },
+      { "id": "b", "text": "Its operating results are regularly reviewed by the chief operating decision maker", "explanation": "This is one of the three criteria.", "trap": "reversed" },
+      { "id": "c", "text": "It generates at least 10% of consolidated revenue", "explanation": "Correct. The 10% tests determine which operating segments are **reportable**, not whether something is an operating segment." },
+      { "id": "d", "text": "Discrete financial information is available for it", "explanation": "This is one of the three criteria.", "trap": "reversed" }
+    ],
+    "answer": "c",
+    "explanation": "Operating segment definition: business activities + CODM regular review + discrete financial information. The 10% thresholds apply afterward to decide reportability.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-sec-05",
+    "pool": "practice",
+    "stem": "Segment revenues (external + intersegment, in $000s): P 4,000; Q 1,500; R 900; S 600; T 400. Which segments meet the **revenue** test?",
+    "choices": [
+      { "id": "a", "text": "P and Q only", "explanation": "R (900) also exceeds the 740 threshold.", "trap": "partial-computation" },
+      { "id": "b", "text": "P, Q, and R", "explanation": "Correct. Combined 7,400 × 10% = 740; P, Q, R exceed it." },
+      { "id": "c", "text": "P, Q, R, and S", "explanation": "S (600) is below 740.", "trap": "overgeneralization" },
+      { "id": "d", "text": "P only", "explanation": "Q and R also exceed 10%.", "trap": "partial-computation" }
+    ],
+    "answer": "b",
+    "explanation": "Combined revenue = 4,000 + 1,500 + 900 + 600 + 400 = 7,400. Threshold = 740. P (4,000), Q (1,500), and R (900) pass.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-sec-06",
+    "pool": "practice",
+    "stem": "Segment results: L $500,000 profit; M $100,000 profit; N $(900,000) loss; O $(200,000) loss. What is the threshold for the profit-or-loss test?",
+    "choices": [
+      { "id": "a", "text": "$60,000", "explanation": "This uses total profits (600,000), but total losses are greater.", "trap": "partial-computation" },
+      { "id": "b", "text": "$50,000", "explanation": "This nets profits and losses (−500,000), which is not the method.", "trap": "wrong-rule" },
+      { "id": "c", "text": "$170,000", "explanation": "This adds profits and absolute losses (1,700,000).", "trap": "wrong-rule" },
+      { "id": "d", "text": "$110,000", "explanation": "Correct. Greater of profits (600,000) or |losses| (1,100,000) = 1,100,000 × 10%." }
+    ],
+    "answer": "d",
+    "explanation": "Combined profits = 600,000; combined losses = 1,100,000 (absolute). Use the greater: 1,100,000 × 10% = **110,000**. L, N, and O pass; M (100,000) fails this test.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-sec-07",
+    "pool": "practice",
+    "stem": "A company's reportable segments generate external revenue of $6.3 million; consolidated revenue is $9 million. What must the company do?",
+    "choices": [
+      { "id": "a", "text": "Nothing — 70% is adequate", "explanation": "The minimum is 75%.", "trap": "distractor-number" },
+      { "id": "b", "text": "Identify additional operating segments as reportable until external revenue of reportable segments is at least $6.75 million", "explanation": "Correct. 75% × 9 million = 6.75 million." },
+      { "id": "c", "text": "Combine all segments into one", "explanation": "Aggregation has specific criteria; the 75% test requires adding segments.", "trap": "wrong-rule" },
+      { "id": "d", "text": "Report the shortfall as 'all other' and stop", "explanation": "The 75% test must be satisfied by reportable segments.", "trap": "partial-computation" }
+    ],
+    "answer": "b",
+    "explanation": "6.3 ÷ 9.0 = 70% < 75%. Add segments (even those below the 10% tests) until reportable segments' external revenue ≥ 75% of consolidated revenue (6.75 million).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-sec-08",
+    "pool": "practice",
+    "stem": "Under the SEC's filer definitions, a company with a public float of $500 million (and annual revenue above $100 million) is a(n):",
+    "choices": [
+      { "id": "a", "text": "Large accelerated filer", "explanation": "That requires a public float of $700 million or more.", "trap": "distractor-number" },
+      { "id": "b", "text": "Non-accelerated filer", "explanation": "Its float exceeds $75 million and revenue exceeds the SRC revenue test.", "trap": "wrong-classification" },
+      { "id": "c", "text": "Accelerated filer", "explanation": "Correct. $75 million ≤ float < $700 million." },
+      { "id": "d", "text": "Emerging growth company, by definition", "explanation": "EGC status depends on revenue and time since IPO, not float in this range.", "trap": "irrelevant-fact" }
+    ],
+    "answer": "c",
+    "explanation": "Accelerated filer: public float of at least $75 million but less than $700 million (and not eligible for the smaller-reporting-company revenue exception). 10-K due in 75 days; 10-Q in 40 days.",
+    "skill": "application"
+  },
+  {
+    "id": "far-sec-09",
+    "pool": "practice",
+    "stem": "Which statement about segment disclosures after ASU 2023-07 is correct?",
+    "choices": [
+      { "id": "a", "text": "Public entities disclose significant segment expenses that are regularly provided to the CODM", "explanation": "Correct. This is the core ASU 2023-07 enhancement." },
+      { "id": "b", "text": "Entities with a single reportable segment are exempt from segment disclosures", "explanation": "ASU 2023-07 requires single-segment entities to provide all segment disclosures.", "trap": "outdated-rule" },
+      { "id": "c", "text": "Private companies must follow ASC 280", "explanation": "ASC 280 applies to public business entities.", "trap": "overgeneralization" },
+      { "id": "d", "text": "The identity of major customers must be disclosed", "explanation": "Only the fact, amount, and segment — not identity.", "trap": "wrong-rule" }
+    ],
+    "answer": "a",
+    "explanation": "ASU 2023-07 adds disclosure of significant segment expenses provided to the CODM, the CODM's title/position, interim segment disclosures, and applies the requirements to single-segment public entities.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-sec-10",
+    "pool": "practice",
+    "stem": "Operating segments' assets (in $ millions): 1 — 50; 2 — 22; 3 — 9; 4 — 8; 5 — 11. Segment 4 fails the revenue and profit tests. Is segment 4 reportable under the asset test?",
+    "choices": [
+      { "id": "a", "text": "Yes, because 8 exceeds 5% of total assets", "explanation": "The threshold is 10%, not 5%.", "trap": "distractor-number" },
+      { "id": "b", "text": "Yes, because every segment with assets must be reported", "explanation": "Only segments meeting a threshold (or needed for the 75% test) are reportable.", "trap": "overgeneralization" },
+      { "id": "c", "text": "Yes, because assets are compared with consolidated equity", "explanation": "The asset test compares with combined segment assets.", "trap": "wrong-rule" },
+      { "id": "d", "text": "No, because 8 is less than 10% of combined assets (10)", "explanation": "Correct. Combined assets 100 × 10% = 10." }
+    ],
+    "answer": "d",
+    "explanation": "Combined segment assets = 50 + 22 + 9 + 8 + 11 = 100. Threshold = 10. Segment 4 (8) fails, so it is not reportable unless needed for the 75% test.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-sec-11",
+    "pool": "practice",
+    "stem": "Which item is included in Regulation S-K rather than Regulation S-X?",
+    "choices": [
+      { "id": "a", "text": "Required balance sheet line items for a commercial company", "explanation": "Balance sheet form and content is S-X.", "trap": "reversed" },
+      { "id": "b", "text": "Management's discussion and analysis (MD&A)", "explanation": "Correct. MD&A is S-K Item 303." },
+      { "id": "c", "text": "Number of years of audited income statements required", "explanation": "Financial statement requirements are S-X.", "trap": "reversed" },
+      { "id": "d", "text": "Financial statement schedules (e.g., valuation accounts)", "explanation": "Schedules are governed by S-X.", "trap": "reversed" }
+    ],
+    "answer": "b",
+    "explanation": "S-K covers narrative disclosures such as description of business, risk factors, MD&A (Item 303), and executive compensation. S-X covers the financial statements and schedules.",
+    "skill": "remembering"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "id": "far-tbs-u2-eps",
+  "section": "FAR",
+  "unitId": "far-u2",
+  "moduleIds": ["far-eps"],
+  "pool": "practice",
+  "title": "Basic and diluted EPS — Northgate Industries",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Northgate Industries is a public company with a calendar year-end. Compute its Year 2 EPS using the exhibits. Round per-share amounts to two decimals; round share counts to whole shares.",
+  "exhibits": [
+    { "title": "Common share activity, Year 2", "content": "| Date | Event |\n|---|---|\n| Jan 1 | 150,000 shares outstanding |\n| Mar 1 | Issued 30,000 shares for cash |\n| Jun 30 | Distributed a 10% stock dividend |\n| Nov 1 | Purchased 12,000 shares of treasury stock |" },
+    { "title": "Other information", "content": "- Net income: **$800,000**. Tax rate: **25%**.\n- Preferred stock: 5% **noncumulative**, $500,000 par, **not convertible**; the Year 2 dividend was declared.\n- Employee stock options: **15,000** shares at an exercise price of **$40**, outstanding all year.\n- Warrants: **8,000** shares at **$65**, outstanding all year.\n- 4% convertible bonds, face **$2,000,000**, issued at par in Year 1, convertible into **20,000** common shares.\n- Average market price of common stock in Year 2: **$60**." }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "calc",
+      "prompt": "Compute the following.",
+      "rows": [
+        { "id": "wa", "label": "Weighted-average common shares for basic EPS", "answer": 190500, "tolerance": 0, "explanation": "Stock dividend is retroactive: 150,000 × 1.10 = 165,000 (12 months); 30,000 × 1.10 = 33,000 × 10/12 = 27,500; treasury −12,000 × 2/12 = −2,000. Total **190,500**." },
+        { "id": "num", "label": "Numerator for basic EPS", "answer": 775000, "tolerance": 0, "explanation": "800,000 − declared noncumulative preferred dividend (500,000 × 5% = 25,000) = **775,000**." },
+        { "id": "basic", "label": "Basic EPS", "answer": 4.07, "tolerance": 0.01, "explanation": "775,000 ÷ 190,500 = **4.07**." },
+        { "id": "opt", "label": "Incremental shares from employee stock options", "answer": 5000, "tolerance": 0, "explanation": "Proceeds 15,000 × 40 = 600,000 ÷ average price 60 = 10,000 repurchased. 15,000 − 10,000 = **5,000**." },
+        { "id": "int", "label": "Amount added to the numerator for the convertible bonds", "answer": 60000, "tolerance": 0, "explanation": "2,000,000 × 4% = 80,000 × (1 − 0.25) = **60,000**. Incremental EPS 60,000 ÷ 20,000 = 3.00 — dilutive." },
+        { "id": "den", "label": "Denominator for diluted EPS", "answer": 215500, "tolerance": 0, "explanation": "190,500 + 5,000 options + 20,000 bond shares = **215,500** (warrants excluded)." },
+        { "id": "dil", "label": "Diluted EPS", "answer": 3.87, "tolerance": 0.01, "explanation": "(775,000 + 60,000) ÷ 215,500 = 835,000 ÷ 215,500 = **3.87**." }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "treat",
+      "prompt": "Indicate the treatment of each item in computing Year 2 diluted EPS.",
+      "options": ["Include — dilutive", "Exclude — antidilutive", "Retroactive adjustment", "Not applicable"],
+      "rows": [
+        { "id": "t1", "label": "Employee stock options ($40 exercise)", "answer": "Include — dilutive", "explanation": "Average price $60 > $40 exercise price → dilutive." },
+        { "id": "t2", "label": "Warrants ($65 exercise)", "answer": "Exclude — antidilutive", "explanation": "Exercise price $65 exceeds the $60 average price → out of the money." },
+        { "id": "t3", "label": "4% convertible bonds", "answer": "Include — dilutive", "explanation": "Incremental EPS $3.00 is below basic EPS and below EPS after options ($3.96)." },
+        { "id": "t4", "label": "June 30 stock dividend", "answer": "Retroactive adjustment", "explanation": "Stock dividends restate shares as of the beginning of the period — not time-weighted." }
+      ]
+    }
+  ]
+}

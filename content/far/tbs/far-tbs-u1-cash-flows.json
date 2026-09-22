@@ -1,0 +1,61 @@
+{
+  "id": "far-tbs-u1-cash-flows",
+  "section": "FAR",
+  "unitId": "far-u1",
+  "moduleIds": ["far-cash-flows", "far-balance-sheet-equity"],
+  "pool": "practice",
+  "title": "Statement of cash flows — Lakeview Supply",
+  "minutes": 18,
+  "skill": "application",
+  "instructions": "Lakeview Supply uses the **indirect method**. Using the exhibits, complete the operating section and classify the listed transactions. Enter amounts as whole dollars; enter decreases in cash as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Comparative balance sheet data",
+      "content": "| Account | Dec 31, Year 1 | Dec 31, Year 2 |\n|---|---:|---:|\n| Cash | 42,000 | 61,000 |\n| Accounts receivable, net | 88,000 | 103,000 |\n| Inventory | 130,000 | 118,000 |\n| Prepaid insurance | 6,000 | 9,000 |\n| Equipment | 400,000 | 440,000 |\n| Accumulated depreciation | (160,000) | (170,000) |\n| Accounts payable | 74,000 | 81,000 |\n| Wages payable | 12,000 | 10,000 |\n| Notes payable (long-term) | 150,000 | 120,000 |\n| Common stock | 100,000 | 130,000 |\n| Additional paid-in capital | 100,000 | 100,000 |\n| Retained earnings | 70,000 | 120,000 |"
+    },
+    {
+      "title": "Year 2 additional information",
+      "content": "- Net income for Year 2 was **$85,000**.\n- Equipment with a cost of **$60,000** and accumulated depreciation of **$45,000** was sold for **$20,000** cash.\n- New equipment was purchased for cash.\n- Cash dividends of **$35,000** were declared and paid.\n- Common stock was issued for cash.\n- A note payable principal payment was made in cash."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "ops",
+      "prompt": "Complete the operating activities section.",
+      "rows": [
+        { "id": "dep", "label": "Depreciation expense", "answer": 55000, "tolerance": 0, "explanation": "Accumulated depreciation roll-forward: beginning 160,000 − 45,000 (removed on sale) + depreciation = ending 170,000, so depreciation = **55,000**. Add back." },
+        { "id": "gain", "label": "(Gain) or loss on sale of equipment", "answer": -5000, "tolerance": 0, "explanation": "Carrying amount 60,000 − 45,000 = 15,000; proceeds 20,000 → gain of 5,000. **Subtract** it (enter −5,000); the proceeds are investing." },
+        { "id": "ar", "label": "Change in accounts receivable", "answer": -15000, "tolerance": 0, "explanation": "AR increased 103,000 − 88,000 = 15,000 → subtract (−15,000)." },
+        { "id": "inv", "label": "Change in inventory", "answer": 12000, "tolerance": 0, "explanation": "Inventory decreased 130,000 − 118,000 = 12,000 → add." },
+        { "id": "pre", "label": "Change in prepaid insurance", "answer": -3000, "tolerance": 0, "explanation": "Prepaid increased 3,000 → subtract." },
+        { "id": "ap", "label": "Change in accounts payable", "answer": 7000, "tolerance": 0, "explanation": "AP increased 7,000 → add." },
+        { "id": "wp", "label": "Change in wages payable", "answer": -2000, "tolerance": 0, "explanation": "Wages payable decreased 2,000 → subtract." },
+        { "id": "cfo", "label": "Net cash provided by operating activities", "answer": 134000, "tolerance": 0, "explanation": "85,000 + 55,000 − 5,000 − 15,000 + 12,000 − 3,000 + 7,000 − 2,000 = **134,000**." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "other",
+      "prompt": "Compute the investing and financing amounts.",
+      "rows": [
+        { "id": "purch", "label": "Cash paid for new equipment", "answer": 100000, "tolerance": 0, "explanation": "Equipment roll-forward: 400,000 − 60,000 sold + purchases = 440,000 → purchases = **100,000**." },
+        { "id": "cfi", "label": "Net cash from investing activities", "answer": -80000, "tolerance": 0, "explanation": "Proceeds 20,000 − purchases 100,000 = **(80,000)**." },
+        { "id": "cff", "label": "Net cash from financing activities", "answer": -35000, "tolerance": 0, "explanation": "Stock issued +30,000 (130,000 − 100,000); note principal paid −30,000 (150,000 − 120,000); dividends paid −35,000. Net = **(35,000)**." },
+        { "id": "chk", "label": "Net change in cash (should agree with the balance sheets)", "answer": 19000, "tolerance": 0, "explanation": "134,000 − 80,000 − 35,000 = **19,000**, which agrees with cash rising from 42,000 to 61,000." }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "class",
+      "prompt": "Classify each Year 2 item as it would appear in Lakeview's statement of cash flows.",
+      "options": ["Operating", "Investing", "Financing", "Noncash disclosure", "Not reported"],
+      "rows": [
+        { "id": "c1", "label": "Dividends paid to shareholders", "answer": "Financing", "explanation": "Distributions to owners are financing." },
+        { "id": "c2", "label": "Interest paid on the note payable", "answer": "Operating", "explanation": "Interest paid is operating under U.S. GAAP." },
+        { "id": "c3", "label": "Proceeds from sale of equipment", "answer": "Investing", "explanation": "Full proceeds from PP&E sales are investing." },
+        { "id": "c4", "label": "Acquired a delivery van by signing a 3-year note to the dealer (no cash)", "answer": "Noncash disclosure", "explanation": "Asset acquired with debt, no cash — disclose as a noncash investing and financing activity." }
+      ]
+    }
+  ]
+}

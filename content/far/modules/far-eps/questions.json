@@ -1,0 +1,474 @@
+[
+  {
+    "id": "far-eps-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company had 1,000,000 shares all year and declared a 2-for-1 stock split on December 1. What weighted-average share count is used for the year's EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "1,083,333",
+        "explanation": "This time-weights the split (1 month × 2,000,000); splits are retroactive.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "1,000,000",
+        "explanation": "This ignores the split; EPS must reflect the new share structure.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "2,000,000",
+        "explanation": "Correct. Splits are applied retroactively as if they occurred at the start of the period."
+      },
+      {
+        "id": "d",
+        "text": "1,500,000",
+        "explanation": "There's no averaging convention for splits.",
+        "trap": "other"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Stock splits and stock dividends are retroactively applied to all periods presented. 1,000,000 × 2 = **2,000,000** for the full year.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-chk1",
+    "pool": "lesson",
+    "stem": "Net income $900,000. Noncumulative preferred stock: annual dividend $50,000, **not declared** this year. Weighted-average common shares: 300,000. Basic EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2.83",
+        "explanation": "This subtracts the undeclared noncumulative dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$3.00",
+        "explanation": "Correct. Undeclared noncumulative dividends are not subtracted: 900,000 ÷ 300,000."
+      },
+      {
+        "id": "c",
+        "text": "$3.17",
+        "explanation": "Preferred dividends are never added to net income for basic EPS.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$2.67",
+        "explanation": "This subtracts double the dividend.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Noncumulative preferred dividends reduce the numerator only when declared. EPS = 900,000 ÷ 300,000 = **$3.00**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-chk2",
+    "pool": "lesson",
+    "stem": "Basic EPS is $1.50. A convertible preferred stock issue would add $120,000 to the numerator and 60,000 shares to the denominator if converted. Is it included in diluted EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes; all convertible securities are included",
+        "explanation": "Only dilutive securities are included.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Yes, because it adds shares",
+        "explanation": "Adding shares is not enough; the effect on EPS must be a decrease.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Only if the preferred dividends were declared",
+        "explanation": "Declaration affects the numerator adjustment, not inclusion.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "No; its incremental EPS of $2.00 exceeds basic EPS, so it is antidilutive",
+        "explanation": "Correct. 120,000 ÷ 60,000 = $2.00 > $1.50."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Incremental EPS = 120,000 ÷ 60,000 = $2.00. Including it would raise EPS above $1.50, so it is antidilutive and excluded.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-eps-01",
+    "pool": "practice",
+    "stem": "On January 1, 60,000 common shares were outstanding. On May 1, 12,000 shares were issued for cash. On September 1, 6,000 shares were reacquired as treasury stock. Calendar year. What is the weighted-average number of shares?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "66,000",
+        "explanation": "Correct. 60,000 + 12,000 × 8/12 − 6,000 × 4/12 = 60,000 + 8,000 − 2,000."
+      },
+      {
+        "id": "b",
+        "text": "72,000",
+        "explanation": "This counts the issuance for the full year and ignores the treasury shares.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "68,000",
+        "explanation": "This ignores the treasury stock purchase.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "64,000",
+        "explanation": "This weights the issuance for 4 months and treasury for 8 months — reversed.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "60,000 × 12/12 = 60,000; 12,000 × 8/12 (May–Dec) = 8,000; −6,000 × 4/12 (Sep–Dec) = −2,000. Total **66,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-02",
+    "pool": "practice",
+    "stem": "A company has 50,000 common shares outstanding all year. On March 1 of the following year, before the statements are issued, it distributes a 10% stock dividend. What share count is used for the current year's EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "50,000, because the dividend occurred after year-end",
+        "explanation": "Stock dividends before issuance are applied retroactively.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "55,000",
+        "explanation": "Correct. The 10% stock dividend is applied retroactively: 50,000 × 1.10."
+      },
+      {
+        "id": "c",
+        "text": "50,833",
+        "explanation": "This time-weights the dividend; it is retroactive, not weighted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "45,000",
+        "explanation": "A stock dividend increases shares.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Stock dividends and splits after the balance sheet date but before issuance are reflected retroactively in EPS for all periods presented: 50,000 × 1.10 = **55,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-03",
+    "pool": "practice",
+    "stem": "Net income was $1,200,000. There are 20,000 shares of $100 par, 5% **cumulative** preferred stock; no dividends were declared this year or last year. Weighted-average common shares: 400,000. What is basic EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2.75",
+        "explanation": "Correct. (1,200,000 − 100,000) ÷ 400,000 = 2.75."
+      },
+      {
+        "id": "b",
+        "text": "$3.00",
+        "explanation": "Cumulative preferred dividends are subtracted even if not declared.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$2.50",
+        "explanation": "This subtracts two years of dividends; arrears from the prior year were already deducted last year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$2.95",
+        "explanation": "This subtracts only 5% of the $400,000 of common shares rather than the preferred dividend.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Current-year cumulative dividend = 20,000 × $100 × 5% = 100,000, subtracted whether or not declared. Basic EPS = (1,200,000 − 100,000) ÷ 400,000 = **$2.75**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-04",
+    "pool": "practice",
+    "stem": "Options to buy 12,000 shares at $25 were outstanding all year. The average market price was $40; the year-end price was $50. How many incremental shares are included in diluted EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "6,000",
+        "explanation": "This uses the year-end price of $50 instead of the average price.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "12,000",
+        "explanation": "The treasury stock method assumes proceeds buy back shares.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "4,500",
+        "explanation": "Correct. 12,000 − (300,000 ÷ 40 = 7,500) = 4,500."
+      },
+      {
+        "id": "d",
+        "text": "7,500",
+        "explanation": "That is the number of shares repurchased, not the incremental shares.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Proceeds = 12,000 × $25 = 300,000. Shares repurchased at the **average** price = 300,000 ÷ 40 = 7,500. Incremental = 12,000 − 7,500 = **4,500**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-05",
+    "pool": "practice",
+    "stem": "$2,000,000 of 6% convertible bonds (each $1,000 bond converts into 25 shares) were outstanding all year. Tax rate 21%. What are the if-converted adjustments?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Add $120,000 to the numerator and 50,000 shares",
+        "explanation": "Interest must be added back net of tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Add $94,800 to the numerator and 50,000 shares",
+        "explanation": "Correct. 120,000 × (1 − 0.21) = 94,800; 2,000 bonds × 25 = 50,000 shares."
+      },
+      {
+        "id": "c",
+        "text": "Add $94,800 to the numerator and 25,000 shares",
+        "explanation": "2,000 bonds × 25 shares = 50,000, not 25,000.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Subtract $94,800 from the numerator and add 50,000 shares",
+        "explanation": "Interest saved on conversion increases income.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Interest = 2,000,000 × 6% = 120,000; after tax = 120,000 × 0.79 = **94,800** added back. Shares = (2,000,000 ÷ 1,000) × 25 = **50,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-06",
+    "pool": "practice",
+    "stem": "Warrants to buy 10,000 shares at $50 were outstanding all year. The average market price was $45. How do the warrants affect diluted EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Add 1,111 incremental shares",
+        "explanation": "This computes shares as if the warrants were in the money; they are not.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Add 10,000 shares",
+        "explanation": "Out-of-the-money warrants are antidilutive.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Reduce the denominator by 1,111 shares",
+        "explanation": "Antidilutive securities are excluded, not netted.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "No effect; they are antidilutive",
+        "explanation": "Correct. The exercise price exceeds the average market price."
+      }
+    ],
+    "answer": "d",
+    "explanation": "When the exercise price ($50) exceeds the average market price ($45), the treasury stock method would reduce shares — antidilutive — so the warrants are excluded.",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-eps-07",
+    "pool": "practice",
+    "stem": "Which entities are **required** to present earnings per share?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Public entities (whose common stock or potential common stock trades publicly or that are filing to do so)",
+        "explanation": "Correct. ASC 260 applies to public entities."
+      },
+      {
+        "id": "b",
+        "text": "All entities presenting GAAP financial statements",
+        "explanation": "Nonpublic entities are not required to present EPS.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Only companies with potentially dilutive securities",
+        "explanation": "Basic EPS is required for public entities regardless.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only companies with preferred stock",
+        "explanation": "Preferred stock affects the calculation, not the requirement.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "EPS is required for entities with publicly traded common stock or potential common stock (or in the process of issuing it). Nonpublic entities that choose to present EPS must follow ASC 260.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-eps-08",
+    "pool": "practice",
+    "stem": "Net income was $600,000. Convertible preferred dividends of $60,000 were declared and paid. Weighted-average common shares were 200,000. The preferred stock is convertible into 40,000 common shares and was outstanding all year. What is diluted EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2.50",
+        "explanation": "Correct. Add back the $60,000 dividends and 40,000 shares: 600,000 ÷ 240,000 = 2.50 (below basic of 2.70, so dilutive)."
+      },
+      {
+        "id": "b",
+        "text": "$2.25",
+        "explanation": "This adds the shares but forgets to add back the preferred dividends (540,000 ÷ 240,000).",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$2.70",
+        "explanation": "That is basic EPS; the conversion is dilutive and must be included.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$3.00",
+        "explanation": "This adds back the dividends but not the conversion shares (600,000 ÷ 200,000).",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Basic EPS = (600,000 − 60,000) ÷ 200,000 = **$2.70**. Incremental EPS of the preferred = 60,000 ÷ 40,000 = $1.50 < 2.70 → dilutive. Diluted EPS = (540,000 + 60,000) ÷ (200,000 + 40,000) = **$2.50**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-09",
+    "pool": "practice",
+    "stem": "Basic EPS is $4.00. Security X has incremental EPS of $1.20; Security Y has incremental EPS of $3.40. In what order are they tested for dilution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Y first, then X",
+        "explanation": "The most dilutive (lowest incremental EPS) is tested first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "X first, then Y",
+        "explanation": "Correct. Start with the lowest incremental EPS (most dilutive)."
+      },
+      {
+        "id": "c",
+        "text": "Order does not matter",
+        "explanation": "Sequencing can change which securities end up antidilutive.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "In order of issuance date",
+        "explanation": "Dilution ranking, not issue date, determines order.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 260 requires considering potential common shares in sequence from most dilutive to least dilutive, based on each security's incremental EPS.",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-eps-10",
+    "pool": "practice",
+    "stem": "Common shares outstanding January 1: 90,000. On July 1, a 3-for-1 stock split. On October 1, 30,000 new shares were issued (post-split). Calendar year. Weighted-average shares?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "285,000",
+        "explanation": "This weights the October issuance for 6 months instead of 3 (270,000 + 30,000 × 6/12).",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "277,500",
+        "explanation": "Correct. 270,000 (retroactive split) + 30,000 × 3/12 = 7,500."
+      },
+      {
+        "id": "c",
+        "text": "300,000",
+        "explanation": "This counts the October issuance for the whole year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "187,500",
+        "explanation": "This time-weights the split (90,000 × 6/12 + 270,000 × 6/12 = 180,000 + 7,500).",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Split is retroactive: 90,000 × 3 = 270,000 for the full year. October issuance: 30,000 × 3/12 = 7,500. Total **277,500**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-11",
+    "pool": "practice",
+    "stem": "Where must a public company present diluted EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only in the notes",
+        "explanation": "Basic and diluted EPS for continuing operations and net income are presented on the face.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "On the face of the income statement for income from continuing operations and net income",
+        "explanation": "Correct. Discontinued-operations EPS may be on the face or in the notes."
+      },
+      {
+        "id": "c",
+        "text": "In the statement of cash flows",
+        "explanation": "Cash flow per share is not permitted to be reported.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Only when diluted EPS differs from basic by more than 3%",
+        "explanation": "There is no materiality threshold in the presentation requirement.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 260-10-45 requires basic and diluted EPS on the face of the income statement for income from continuing operations and net income, with equal prominence.",
+    "skill": "remembering"
+  }
+]
