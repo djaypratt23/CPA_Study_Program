@@ -1,0 +1,55 @@
+{
+  "id": "far-tbs-u6-ppe",
+  "section": "FAR",
+  "unitId": "far-u6",
+  "moduleIds": ["far-ppe-acquisition", "far-depreciation"],
+  "pool": "practice",
+  "title": "PP&E costs, depreciation & capitalized interest — Ridgeway Foods",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Ridgeway Foods (calendar year-end) is expanding. Classify the costs, compute depreciation on a new machine, and compute capitalized interest on its new plant. Round to the nearest dollar.",
+  "exhibits": [
+    { "title": "Costs incurred", "content": "1. Purchase price of land for a new plant, including an old barn: **$600,000**\n2. Cost to demolish the barn: **$18,000**\n3. Paving of the employee parking lot: **$75,000**\n4. Architect fees for the plant: **$95,000**\n5. Annual property taxes on the land for the year after purchase: **$9,000**\n6. Freight to deliver a packaging machine: **$4,000**\n7. Training employees to use the machine: **$7,000**" },
+    { "title": "Packaging machine", "content": "Placed in service **July 1, Year 1**. Invoice price **$150,000**; freight **$4,000**; installation and testing **$6,000**. Estimated salvage **$16,000**; useful life **6 years**. Ridgeway takes a half year of depreciation in the year of acquisition (the machine was in service exactly six months)." },
+    { "title": "Plant construction (Year 1)", "content": "Expenditures: **$900,000** on Feb 1; **$600,000** on Jun 1; **$300,000** on Nov 1. Construction continues into Year 2.\n\nDebt outstanding all year: **$1,000,000** construction loan at **6%**; other general debt **$3,000,000** at **8%**." }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify each cost.",
+      "options": ["Land", "Land improvements", "Building", "Equipment", "Expense"],
+      "rows": [
+        { "id": "c1", "label": "1. Land and barn purchase price", "answer": "Land", "explanation": "The barn will be razed, so the whole price is land." },
+        { "id": "c2", "label": "2. Demolishing the barn", "answer": "Land", "explanation": "Preparing newly acquired land for its intended use." },
+        { "id": "c3", "label": "3. Parking lot paving", "answer": "Land improvements", "explanation": "Limited-life improvement — depreciable, separate from land." },
+        { "id": "c4", "label": "4. Architect fees", "answer": "Building", "explanation": "Necessary cost of constructing the plant." },
+        { "id": "c5", "label": "5. Property taxes after purchase", "answer": "Expense", "explanation": "Ongoing carrying cost, not an acquisition cost." },
+        { "id": "c6", "label": "6. Machine freight", "answer": "Equipment", "explanation": "Cost of bringing the machine to its location." },
+        { "id": "c7", "label": "7. Employee training", "answer": "Expense", "explanation": "Training is not necessary to make the machine ready for use." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "dep",
+      "prompt": "Packaging machine depreciation.",
+      "rows": [
+        { "id": "cost", "label": "Capitalized cost of the machine", "answer": 160000, "tolerance": 0, "explanation": "150,000 + 4,000 + 6,000 = **160,000**." },
+        { "id": "sl1", "label": "Year 1 depreciation — straight-line", "answer": 12000, "tolerance": 1, "explanation": "(160,000 − 16,000) ÷ 6 = 24,000 per year × 6/12 = **12,000**." },
+        { "id": "ddb1", "label": "Year 1 depreciation — double-declining balance", "answer": 26667, "tolerance": 1, "explanation": "Rate 2/6 = 33.33%. First depreciation year 160,000 × 1/3 = 53,333; half in Year 1 = **26,667**." },
+        { "id": "ddb2", "label": "Year 2 depreciation — double-declining balance", "answer": 44444, "tolerance": 1, "explanation": "Second half of depreciation year 1 (26,667) + first half of depreciation year 2 ((160,000 − 53,333) × 1/3 = 35,556 × ½ = 17,778) = **44,444**." },
+        { "id": "syd1", "label": "Year 1 depreciation — sum-of-the-years'-digits", "answer": 20571, "tolerance": 1, "explanation": "SYD = 21. First depreciation year 144,000 × 6/21 = 41,143; half = **20,571**." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "int",
+      "prompt": "Interest capitalized on the plant in Year 1.",
+      "rows": [
+        { "id": "waae", "label": "Weighted-average accumulated expenditures", "answer": 1225000, "tolerance": 0, "explanation": "900,000 × 11/12 + 600,000 × 7/12 + 300,000 × 2/12 = 825,000 + 350,000 + 50,000 = **1,225,000**." },
+        { "id": "avoid", "label": "Avoidable interest", "answer": 78000, "tolerance": 0, "explanation": "1,000,000 × 6% = 60,000 + (225,000 × 8% = 18,000) = **78,000**." },
+        { "id": "cap", "label": "Interest capitalized", "answer": 78000, "tolerance": 0, "explanation": "Lesser of avoidable 78,000 and actual (60,000 + 240,000 = 300,000) → **78,000**." }
+      ]
+    }
+  ]
+}

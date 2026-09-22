@@ -1,0 +1,441 @@
+[
+  {
+    "id": "far-dep-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a machine costs $100,000 with a $10,000 salvage value and a 5-year life. What is Year 1 depreciation under double-declining balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$36,000",
+        "explanation": "This applies 40% to cost minus salvage; DDB ignores salvage in the base.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Correct. 100,000 × (2 ÷ 5)."
+      },
+      {
+        "id": "c",
+        "text": "$18,000",
+        "explanation": "That is straight-line.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "This uses the straight-line rate (20%) on cost.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "DDB rate = 2 ÷ 5 = 40%, applied to the beginning carrying amount (100,000): **40,000**. Salvage limits only the final years.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dep-chk1",
+    "pool": "lesson",
+    "stem": "Equipment costing $60,000 with a $6,000 salvage value and a 3-year life is depreciated by sum-of-the-years'-digits. What is Year 2 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$27,000",
+        "explanation": "That is Year 1 (54,000 × 3/6).",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "This uses cost rather than depreciable base (60,000 × 2/6).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$18,000",
+        "explanation": "Correct. 54,000 × 2/6."
+      },
+      {
+        "id": "d",
+        "text": "$9,000",
+        "explanation": "That is Year 3 (54,000 × 1/6).",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "SYD = 3 + 2 + 1 = 6. Depreciable base = 54,000. Year 2 = 54,000 × 2/6 = **18,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dep-chk2",
+    "pool": "lesson",
+    "stem": "A company exchanges land (carrying amount $200,000, fair value $260,000) for similar land with a fair value of $260,000. The exchange **lacks** commercial substance and no cash changes hands. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60,000",
+        "explanation": "Gains are deferred when an exchange lacks commercial substance (and no boot is received).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. The new land is recorded at 200,000; the gain is deferred."
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "There is no proportional recognition without boot.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$(60,000) loss",
+        "explanation": "Fair value exceeds carrying amount — there's no loss.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Without commercial substance and without boot, the new asset takes the carrying amount of the asset given up (200,000), and the 60,000 gain is deferred.",
+    "skill": "application"
+  },
+  {
+    "id": "far-dep-01",
+    "pool": "practice",
+    "stem": "A machine was purchased on April 1, Year 1, for $84,000. Salvage value is $12,000 and useful life is 6 years. Using straight-line depreciation, what is accumulated depreciation at December 31, Year 2 (calendar year)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$24,000",
+        "explanation": "This takes two full years.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$21,000",
+        "explanation": "Correct. 12,000 × 21/12."
+      },
+      {
+        "id": "c",
+        "text": "$24,500",
+        "explanation": "This ignores salvage value (84,000 ÷ 6 × 21/12).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$12,000",
+        "explanation": "That is only one full year.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Annual SL = (84,000 − 12,000) ÷ 6 = 12,000. April 1, Year 1 to Dec 31, Year 2 = 21 months → 12,000 × 21/12 = **21,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dep-02",
+    "pool": "practice",
+    "stem": "A truck costing $50,000 (salvage $5,000, 4-year life) is depreciated by double-declining balance. What is depreciation in Year 3?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,250",
+        "explanation": "Correct. Year 1 25,000; Year 2 12,500; Year 3 12,500 × 50% = 6,250 (carrying amount 6,250 stays above salvage 5,000)."
+      },
+      {
+        "id": "b",
+        "text": "$5,625",
+        "explanation": "This applies 50% to (cost − salvage) each year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$11,250",
+        "explanation": "This is straight-line on the depreciable base.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$1,250",
+        "explanation": "This forces the asset to salvage in Year 3.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Rate = 50%. Y1: 50,000 × 50% = 25,000 (CA 25,000). Y2: 12,500 (CA 12,500). Y3: 12,500 × 50% = **6,250** (CA 6,250 ≥ salvage 5,000). Y4 is limited to 1,250.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dep-03",
+    "pool": "practice",
+    "stem": "A mine was acquired for $4,800,000 with estimated restoration costs of $400,000 and residual land value of $200,000. Estimated recoverable ore is 1,000,000 tons. In Year 1, 150,000 tons were extracted and 120,000 tons sold. What depletion is charged to cost of goods sold in Year 1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$750,000",
+        "explanation": "That is depletion on tons extracted; unsold tons remain in inventory.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$576,000",
+        "explanation": "This ignores restoration and residual value (4.80 × 120,000).",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$600,000",
+        "explanation": "Correct. Rate $5.00/ton × 120,000 tons sold."
+      },
+      {
+        "id": "d",
+        "text": "$648,000",
+        "explanation": "This adds residual value instead of subtracting it (5,400,000 ÷ 1,000,000 × 120,000).",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Depletion base = 4,800,000 + 400,000 − 200,000 = 5,000,000 ÷ 1,000,000 tons = $5.00/ton. Extracted 150,000 × 5 = 750,000; of that, 120,000 tons sold → **600,000** in COGS; 150,000 stays in inventory.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dep-04",
+    "pool": "practice",
+    "stem": "After 3 years of straight-line depreciation on equipment costing $150,000 (no salvage, 10-year life), management revises the total useful life to 8 years with no salvage. What is Year 4 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$18,750",
+        "explanation": "This applies the new total life to the original cost (150,000 ÷ 8).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$15,000",
+        "explanation": "This ignores the change in estimate.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "This adds a catch-up for prior years (150,000 ÷ 8 = 18,750 plus 3 × 3,750 shortfall); changes in estimate are never retroactive.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$21,000",
+        "explanation": "Correct. Carrying amount 105,000 ÷ 5 remaining years."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Accumulated depreciation after 3 years = 45,000; carrying amount 105,000. Remaining life = 8 − 3 = 5 years. Year 4 = 105,000 ÷ 5 = **21,000** (prospective).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dep-05",
+    "pool": "practice",
+    "stem": "On October 1, a company sold equipment for $22,000. The equipment cost $70,000, had accumulated depreciation of $42,000 at the previous December 31, and is depreciated $8,000 per year straight-line. What is the gain or loss on the sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Loss of $6,000",
+        "explanation": "This omits depreciation for January–September.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Gain of $2,000",
+        "explanation": "This takes a full year of depreciation (8,000) instead of 9 months, giving a 20,000 carrying amount.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Gain of $0",
+        "explanation": "Correct. Carrying amount at Oct 1 = 70,000 − 48,000 = 22,000; proceeds 22,000."
+      },
+      {
+        "id": "d",
+        "text": "Loss of $48,000",
+        "explanation": "That confuses proceeds with accumulated depreciation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Depreciation Jan–Sep = 8,000 × 9/12 = 6,000 → accumulated 48,000. Carrying amount = 22,000. Proceeds 22,000 → **no gain or loss**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dep-06",
+    "pool": "practice",
+    "stem": "Which change is accounted for prospectively as a change in accounting estimate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A change from FIFO to weighted-average inventory",
+        "explanation": "That is a change in accounting principle, applied retrospectively.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Correcting depreciation that was computed with the wrong cost basis",
+        "explanation": "That is an error correction.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A change from double-declining balance to straight-line depreciation",
+        "explanation": "Correct. A change in depreciation method is a change in estimate effected by a change in principle."
+      },
+      {
+        "id": "d",
+        "text": "A change from the completed-contract to the percentage-of-completion method for all contracts",
+        "explanation": "That is a change in principle.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 250: a change in depreciation, amortization, or depletion method is a change in estimate effected by a change in principle — applied prospectively.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-dep-07",
+    "pool": "practice",
+    "stem": "A company exchanges equipment (cost $120,000, accumulated depreciation $70,000, fair value $40,000) plus $15,000 cash for a new machine. The exchange has commercial substance. At what amount is the new machine recorded, and what gain or loss results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$55,000; loss of $10,000",
+        "explanation": "Correct. FV 40,000 + cash 15,000; FV 40,000 − CA 50,000 = (10,000)."
+      },
+      {
+        "id": "b",
+        "text": "$65,000; no gain or loss",
+        "explanation": "This uses carrying amount plus cash, which applies only when a gain is deferred.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$55,000; gain of $10,000",
+        "explanation": "Fair value is below carrying amount — a loss.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$40,000; loss of $10,000",
+        "explanation": "The cash paid is part of the new asset's cost.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "With commercial substance: new asset = FV given up 40,000 + cash 15,000 = **55,000**. Loss = 40,000 − (120,000 − 70,000) = **(10,000)**, recognized.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dep-08",
+    "pool": "practice",
+    "stem": "In a nonmonetary exchange that lacks commercial substance, the fair value of the asset given up is less than its carrying amount. Which statement is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Losses are always recognized, whether or not the exchange has commercial substance",
+        "explanation": "Correct. Deferral applies only to gains in exchanges lacking commercial substance."
+      },
+      {
+        "id": "b",
+        "text": "Losses are deferred when the exchange lacks commercial substance",
+        "explanation": "Only gains are deferred.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Losses are recognized only if cash is received",
+        "explanation": "Losses are recognized regardless of boot.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Losses are recorded in other comprehensive income",
+        "explanation": "Losses go to earnings.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Deferral applies only to gains in exchanges lacking commercial substance. Losses indicate the asset given up was overstated and are recognized immediately.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-dep-09",
+    "pool": "practice",
+    "stem": "A company uses units-of-production depreciation. Machine cost $250,000, salvage $25,000, estimated output 450,000 units. Output was 80,000 units in Year 1 and 110,000 units in Year 2. What is the carrying amount at the end of Year 2?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$155,000",
+        "explanation": "Correct. Rate $0.50/unit; depreciation 95,000; 250,000 − 95,000."
+      },
+      {
+        "id": "b",
+        "text": "$130,000",
+        "explanation": "This subtracts salvage from the carrying amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$144,444",
+        "explanation": "This ignores salvage in the rate (250,000 ÷ 450,000 × 190,000 = 105,556).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$195,000",
+        "explanation": "This includes only Year 2 depreciation.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Rate = (250,000 − 25,000) ÷ 450,000 = $0.50. Two years' output 190,000 × 0.50 = 95,000. Carrying amount = 250,000 − 95,000 = **155,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-dep-10",
+    "pool": "practice",
+    "stem": "A company exchanges a machine (carrying amount $40,000, fair value $50,000) for a similar machine with a fair value of $45,000 plus $5,000 cash received. The exchange lacks commercial substance. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Recognizing the full gain requires commercial substance.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "When boot is received in an exchange lacking commercial substance, a proportional gain is recognized.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$1,000",
+        "explanation": "Correct. 10,000 × (5,000 ÷ 50,000)."
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "This recognizes gain equal to the cash received.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Total gain = 50,000 − 40,000 = 10,000. Boot = 5,000 ÷ 50,000 = 10% (< 25%, so still nonmonetary). Recognized gain = 10,000 × 10% = **1,000**. New machine = 40,000 − 5,000 + 1,000 = 36,000 (= FV 45,000 − deferred gain 9,000).",
+    "skill": "analysis",
+    "calc": true
+  }
+]

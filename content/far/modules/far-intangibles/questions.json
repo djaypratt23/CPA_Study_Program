@@ -1,0 +1,438 @@
+[
+  {
+    "id": "far-int-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company spends $3 million over five years building its brand through advertising. How much is recorded as an intangible asset?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000,000",
+        "explanation": "Internally generated brand value is not capitalized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The brand's current fair value",
+        "explanation": "Internally developed intangibles aren't recorded at fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Correct. Advertising and internal brand development are expensed."
+      },
+      {
+        "id": "d",
+        "text": "$600,000 per year, amortized",
+        "explanation": "There's no asset to amortize.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Internally developed intangibles (brands, goodwill) are expensed as incurred. Only purchased intangibles and certain direct costs (e.g., registration fees) are capitalized.",
+    "skill": "application"
+  },
+  {
+    "id": "far-int-chk1",
+    "pool": "lesson",
+    "stem": "A patent was purchased for $96,000 when it had 16 years of remaining legal life; the company expects to use it for 8 years. What is annual amortization?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,000",
+        "explanation": "This uses legal life, which is longer than useful life.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$12,000",
+        "explanation": "Correct. 96,000 ÷ 8."
+      },
+      {
+        "id": "c",
+        "text": "$4,800",
+        "explanation": "This uses the 20-year statutory term.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Patents are finite-lived and amortized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Amortize over the shorter of legal (16) and useful (8) life: 96,000 ÷ 8 = **12,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-int-chk2",
+    "pool": "lesson",
+    "stem": "Which of the following is capitalized as an intangible asset?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Legal fees to incorporate the company",
+        "explanation": "Organization costs are expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Costs of opening a new store",
+        "explanation": "Start-up costs are expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Purchase price of a customer list bought from a competitor",
+        "explanation": "Correct. Purchased intangibles are capitalized at cost."
+      },
+      {
+        "id": "d",
+        "text": "Salaries of engineers developing a new product",
+        "explanation": "Internal development is expensed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Purchased intangibles are capitalized at cost. Organization, start-up, and internal development costs are expensed.",
+    "skill": "application"
+  },
+  {
+    "id": "far-int-01",
+    "pool": "practice",
+    "stem": "A company registered a trademark it developed internally, paying $12,000 in registration and legal fees. It spent $150,000 designing the logo and $400,000 advertising it. The trademark can be renewed indefinitely at minimal cost. What is the trademark's carrying amount and annual amortization?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$562,000; amortized over 10 years",
+        "explanation": "Design and advertising are expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$162,000; not amortized",
+        "explanation": "Design costs are internal development — expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$12,000; amortized over 10 years",
+        "explanation": "A renewable trademark the company intends to renew is indefinite-lived.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$12,000; not amortized",
+        "explanation": "Correct. Only direct registration/legal fees are capitalized (12,000)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Only direct registration/legal fees are capitalized (12,000). With indefinite renewal at minimal cost, the trademark is indefinite-lived — not amortized, tested annually for impairment.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-int-02",
+    "pool": "practice",
+    "stem": "Patent carrying amount on January 1 was $60,000 (5 years of remaining useful life). The company spent $20,000 to **unsuccessfully** defend it and the court invalidated the patent. What is the total expense for the year related to the patent?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$16,000",
+        "explanation": "This capitalizes the defense and keeps amortizing ((60,000 + 20,000) ÷ 5), but the patent is invalid and the defense failed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$80,000",
+        "explanation": "Correct. Expense the 20,000 defense and write off the 60,000 patent."
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "The invalidated patent must also be written off.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$12,000",
+        "explanation": "This records only normal amortization.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Unsuccessful defense costs are expensed (20,000), and an invalidated patent has no future benefit → write off 60,000. Total **80,000**.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-int-03",
+    "pool": "practice",
+    "stem": "A company acquires another for $5,000,000. Fair values: identifiable assets $6,200,000 (including a previously unrecorded trade name of $500,000); liabilities $1,700,000. What goodwill is recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000,000",
+        "explanation": "This excludes the trade name from identifiable assets.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "Correct. 5,000,000 − (6,200,000 − 1,700,000)."
+      },
+      {
+        "id": "c",
+        "text": "$(1,200,000)",
+        "explanation": "This ignores liabilities.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The price exceeds net identifiable assets.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Net identifiable assets = 6,200,000 − 1,700,000 = 4,500,000 (trade name included — it's identifiable). Goodwill = 5,000,000 − 4,500,000 = **500,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-int-04",
+    "pool": "practice",
+    "stem": "Which intangible asset is generally considered indefinite-lived?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A patent with 12 years of legal life remaining",
+        "explanation": "Patents have finite legal lives.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A 5-year franchise agreement with no renewal rights",
+        "explanation": "Finite — the term is fixed.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A trade name the company intends to renew indefinitely at minimal cost",
+        "explanation": "Correct. An intangible is indefinite-lived when no legal, regulatory, contractual, competitive, or economic factor limits its useful life — e.g., a renewable trade name."
+      },
+      {
+        "id": "d",
+        "text": "A customer list",
+        "explanation": "Customer relationships erode — finite.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "An intangible is indefinite-lived when no legal, regulatory, contractual, competitive, or economic factor limits its useful life — e.g., a renewable trade name.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-int-05",
+    "pool": "practice",
+    "stem": "A franchise was purchased on July 1, Year 1, for $240,000 with a 10-year term; the company expects to use it for the full term. What is amortization for Year 1 (calendar year)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$24,000",
+        "explanation": "This takes a full year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$12,000",
+        "explanation": "Correct. 24,000 × 6/12."
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "This uses a 12-year life.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Amortization begins when the asset is available for use.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Annual amortization 240,000 ÷ 10 = 24,000; July–December = **12,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-int-06",
+    "pool": "practice",
+    "stem": "How is a bargain purchase in a business combination accounted for?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As negative goodwill amortized over 5 years",
+        "explanation": "Negative goodwill is not deferred.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a reduction of the acquired assets' fair values until they reach zero",
+        "explanation": "Current GAAP re-checks measurements and then recognizes a gain.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a gain in earnings on the acquisition date, after reassessing the measurements",
+        "explanation": "Correct. ASC 805-30-25-2: after reassessing identification and measurement, any excess of net assets over consideration is recognized as a bargain purchase gain in earnings."
+      },
+      {
+        "id": "d",
+        "text": "As a direct credit to additional paid-in capital",
+        "explanation": "Bargain purchases are not equity transactions.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 805-30-25-2: after reassessing identification and measurement, any excess of net assets over consideration is recognized as a bargain purchase gain in earnings.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-int-07",
+    "pool": "practice",
+    "stem": "A company changed its assessment of a license from indefinite-lived to finite-lived (4 remaining years) at the start of the year. Carrying amount $200,000; fair value $170,000. What is the total charge to earnings this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "This amortizes the pre-impairment amount without testing.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$42,500",
+        "explanation": "This amortizes the impaired amount but omits the impairment loss.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "This records impairment only.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$72,500",
+        "explanation": "Correct. Impairment 30,000 + amortization 170,000 ÷ 4 = 42,500."
+      }
+    ],
+    "answer": "d",
+    "explanation": "When an indefinite life becomes finite, test for impairment first (loss 200,000 − 170,000 = 30,000), then amortize the new carrying amount over the remaining life: 170,000 ÷ 4 = 42,500. Total **72,500**.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-int-08",
+    "pool": "practice",
+    "stem": "Which cost incurred in obtaining a patent through internal research is capitalized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Salaries of the research team",
+        "explanation": "Research costs are expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Legal fees to file and register the patent",
+        "explanation": "Correct. For internally developed patents, only direct costs of obtaining legal protection (filing, registration, legal fees) are capitalized; R&D is expensed."
+      },
+      {
+        "id": "c",
+        "text": "Materials used in developing prototypes",
+        "explanation": "Development costs are expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Overhead allocated to the research lab",
+        "explanation": "Research overhead is expensed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "For internally developed patents, only direct costs of obtaining legal protection (filing, registration, legal fees) are capitalized; R&D is expensed.",
+    "skill": "application"
+  },
+  {
+    "id": "far-int-09",
+    "pool": "practice",
+    "stem": "Which statement about goodwill is correct for a public business entity?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It is amortized over a maximum of 40 years",
+        "explanation": "Amortization for public entities ended in 2002.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "It can be recognized when a company's market value exceeds its book value",
+        "explanation": "Internally generated goodwill is not recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It is not amortized but is tested for impairment at least annually at the reporting-unit level",
+        "explanation": "Correct. Public entities do not amortize goodwill; they test it for impairment at least annually at the reporting-unit level (ASC 350-20)."
+      },
+      {
+        "id": "d",
+        "text": "It is reported as a reduction of equity",
+        "explanation": "Goodwill is an asset.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Public entities do not amortize goodwill; they test it for impairment at least annually at the reporting-unit level (ASC 350-20).",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-int-10",
+    "pool": "practice",
+    "stem": "A company paid $30,000 in legal fees to successfully defend a patent on January 1, Year 4. The patent's carrying amount was $120,000 with 6 years of remaining useful life. What is Year 4 amortization?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Correct. (120,000 + 30,000) ÷ 6."
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "This expenses the legal fees instead of capitalizing them.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "This expenses the fees and adds regular amortization.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "That's the legal fee amount.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Successful defense costs are capitalized: 120,000 + 30,000 = 150,000 ÷ 6 = **25,000**.",
+    "skill": "application",
+    "calc": true
+  }
+]

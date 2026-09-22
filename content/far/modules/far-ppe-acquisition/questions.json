@@ -1,0 +1,440 @@
+[
+  {
+    "id": "far-ppe-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company buys land with an old warehouse on it, intending to build a new store. It pays $15,000 to demolish the warehouse and sells scrap for $2,000. How is the $13,000 net cost treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Added to the cost of the land",
+        "explanation": "Correct. Demolition prepares the land for its intended use."
+      },
+      {
+        "id": "b",
+        "text": "Added to the cost of the new building",
+        "explanation": "Demolition relates to preparing the land, not constructing the building.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Expensed as a loss",
+        "explanation": "The old warehouse was never used by the company; its removal is part of acquiring usable land.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Capitalized as a land improvement and depreciated",
+        "explanation": "Land preparation costs are part of nondepreciable land.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Costs to remove an unwanted structure from newly acquired land (net of salvage) are part of the land's cost.",
+    "skill": "application"
+  },
+  {
+    "id": "far-ppe-chk1",
+    "pool": "lesson",
+    "stem": "A company bought a machine for $50,000 (terms 2/10, n/30, paid within 10 days). It paid $1,500 freight, $400 insurance in transit, $2,100 installation, and $800 to repair damage caused when its own employees dropped the machine during installation. What is the machine's cost?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$53,000",
+        "explanation": "Correct. 49,000 + 1,500 + 400 + 2,100."
+      },
+      {
+        "id": "b",
+        "text": "$54,000",
+        "explanation": "This uses the gross price and ignores the cash discount taken.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$53,800",
+        "explanation": "The repair of self-inflicted damage is not a necessary cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$49,000",
+        "explanation": "This omits freight, transit insurance, and installation.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Net price 50,000 × 98% = 49,000 + freight 1,500 + transit insurance 400 + installation 2,100 = **53,000**. The 800 repair of accidental damage is expensed.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-ppe-chk2",
+    "pool": "lesson",
+    "stem": "Which expenditure on a delivery truck already in service should be **capitalized**?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Replacing worn tires with similar tires",
+        "explanation": "Routine maintenance — expense.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Annual oil changes and tune-ups",
+        "explanation": "Ordinary maintenance — expense.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Repainting the truck in the company's colors",
+        "explanation": "Cosmetic and recurring — expense.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Installing a larger engine that extends the truck's useful life by three years",
+        "explanation": "Correct. It extends useful life."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Expenditures that extend useful life, increase capacity, or improve efficiency are capitalized; ordinary repairs and maintenance are expensed.",
+    "skill": "application"
+  },
+  {
+    "id": "far-ppe-01",
+    "pool": "practice",
+    "stem": "A company paid $400,000 for land and an old building it planned to raze. Additional costs: title insurance $3,000; demolition $25,000; proceeds from salvaged materials $5,000; grading $8,000; architect fees for the new building $40,000; new parking lot $60,000. What is the cost of the land?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$431,000",
+        "explanation": "Correct. 400,000 + 3,000 + 25,000 − 5,000 + 8,000."
+      },
+      {
+        "id": "b",
+        "text": "$436,000",
+        "explanation": "This ignores the salvage proceeds.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$491,000",
+        "explanation": "The parking lot is a depreciable land improvement.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$471,000",
+        "explanation": "Architect fees belong to the building.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Land = 400,000 + 3,000 title + 25,000 demolition − 5,000 salvage + 8,000 grading = **431,000**. Architect fees → building; parking lot → land improvements.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-ppe-02",
+    "pool": "practice",
+    "stem": "A company purchased land, a building, and equipment for $1,200,000. Appraised values: land $400,000; building $900,000; equipment $200,000. What cost is assigned to the building?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$900,000",
+        "explanation": "This uses the appraisal rather than allocating the actual price.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$720,000",
+        "explanation": "Correct. 900,000 ÷ 1,500,000 × 1,200,000."
+      },
+      {
+        "id": "c",
+        "text": "$400,000",
+        "explanation": "That is equal-split thinking (1,200,000 ÷ 3).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$600,000",
+        "explanation": "This allocates half the price to the building without using relative values.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Building share = 900,000 ÷ 1,500,000 = 60%. 60% × 1,200,000 = **720,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-ppe-03",
+    "pool": "practice",
+    "stem": "Which asset qualifies for capitalization of interest during construction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Inventory that a winery routinely produces in large quantities",
+        "explanation": "Routinely produced inventory does not qualify.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A building already in use that is being repainted",
+        "explanation": "Assets in use do not qualify.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A corporate headquarters the company is constructing for its own use",
+        "explanation": "Correct. Qualifying assets include those constructed for an entity's own use and discrete projects built for sale or lease."
+      },
+      {
+        "id": "d",
+        "text": "Land held for future development with no development activities under way",
+        "explanation": "Land doesn't qualify unless it is being developed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Qualifying assets include those constructed for an entity's own use and discrete projects built for sale or lease.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-ppe-04",
+    "pool": "practice",
+    "stem": "Weighted-average accumulated expenditures on a qualifying asset were $2,000,000. The company has a $1,500,000 specific construction loan at 7% and other debt of $4,000,000 at a weighted-average rate of 10%. Actual interest incurred was $505,000. How much interest is capitalized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$140,000",
+        "explanation": "This applies the 7% specific rate to all 2,000,000 of WAAE.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "This applies the 10% general rate to all 2,000,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$505,000",
+        "explanation": "Only avoidable interest is capitalized, capped at actual interest.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$155,000",
+        "explanation": "Correct. 1,500,000 × 7% + 500,000 × 10%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Specific loan: 1,500,000 × 7% = 105,000. Excess WAAE 500,000 × 10% = 50,000. Avoidable = **155,000** (< actual 505,000), so capitalize 155,000.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-ppe-05",
+    "pool": "practice",
+    "stem": "Construction expenditures (calendar year, project continues into next year): $300,000 on March 1 and $480,000 on September 1. What are weighted-average accumulated expenditures for the year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$780,000",
+        "explanation": "This ignores how long each amount was outstanding.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$410,000",
+        "explanation": "Correct. 300,000 × 10/12 + 480,000 × 4/12 = 250,000 + 160,000."
+      },
+      {
+        "id": "c",
+        "text": "$385,000",
+        "explanation": "This counts March 1 as 9 months outstanding (300,000 × 9/12 + 160,000); March through December is 10 months.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$390,000",
+        "explanation": "This is a simple average of the two amounts.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "March 1 → 10 months outstanding: 250,000. September 1 → 4 months: 160,000. WAAE = **410,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-ppe-06",
+    "pool": "practice",
+    "stem": "When does a company stop capitalizing interest on a building it is constructing for its own use?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "When the building is substantially complete and ready for its intended use",
+        "explanation": "Correct. The capitalization period ends when the asset is substantially complete and ready for its intended use (ASC 835-20-25-5)."
+      },
+      {
+        "id": "b",
+        "text": "When the construction loan is fully repaid",
+        "explanation": "Capitalization depends on the asset's readiness, not the loan balance.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "At the end of the fiscal year in which construction began",
+        "explanation": "Capitalization continues across years while construction is in progress.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "When the first expenditure is made",
+        "explanation": "That is when capitalization begins, not ends.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The capitalization period ends when the asset is substantially complete and ready for its intended use (ASC 835-20-25-5). Brief interruptions don't stop it; substantial suspensions do.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-ppe-07",
+    "pool": "practice",
+    "stem": "A company incurs these costs related to a new factory building: construction contract $2,000,000; architect fees $120,000; building permit $8,000; excavation for the foundation $45,000; interest capitalized $60,000; landscaping of the grounds with a limited life $30,000. What is the building's cost?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,263,000",
+        "explanation": "This includes the landscaping, a land improvement.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$2,173,000",
+        "explanation": "This omits the capitalized interest.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$2,233,000",
+        "explanation": "Correct. 2,000,000 + 120,000 + 8,000 + 45,000 + 60,000."
+      },
+      {
+        "id": "d",
+        "text": "$2,128,000",
+        "explanation": "This omits excavation and capitalized interest.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Building = contract 2,000,000 + architect 120,000 + permit 8,000 + excavation 45,000 + capitalized interest 60,000 = **2,233,000**. Limited-life landscaping is a land improvement.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-ppe-08",
+    "pool": "practice",
+    "stem": "A company is legally required to dismantle an offshore platform at the end of its 20-year life. The present value of the estimated dismantling cost is $3,000,000. At installation, how is this recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Expense of $3,000,000",
+        "explanation": "The cost is capitalized into the asset, not expensed immediately.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Increase the platform's cost and record an asset retirement obligation of $3,000,000",
+        "explanation": "Correct. ASC 410-20: recognize the ARO at fair value when incurred and capitalize the same amount as part of the asset."
+      },
+      {
+        "id": "c",
+        "text": "Disclose only, since the cost occurs in 20 years",
+        "explanation": "A legal obligation is recognized at fair value when incurred.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Record the undiscounted future cost as a liability",
+        "explanation": "AROs are measured at fair value, typically a present value.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 410-20: recognize the ARO at fair value when incurred and capitalize the same amount as part of the asset. Depreciate the asset; accrete the liability over time.",
+    "skill": "application"
+  },
+  {
+    "id": "far-ppe-09",
+    "pool": "practice",
+    "stem": "A company replaced the roof of its warehouse at a cost of $180,000; the new roof extends the building's life by 10 years. The old roof's cost and accumulated depreciation are known: $90,000 and $70,000. What is the correct accounting?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Expense $180,000 as a repair",
+        "explanation": "The expenditure extends useful life — capitalize.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Capitalize $180,000 and keep the old roof on the books",
+        "explanation": "Leaving the replaced component overstates the asset.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Capitalize $180,000; remove the old roof's cost and accumulated depreciation, recognizing a $20,000 loss",
+        "explanation": "Correct. Substitution approach: capitalize the new component (180,000) and derecognize the old one (cost 90,000, accumulated depreciation 70,000) → loss on disposal 20,000."
+      },
+      {
+        "id": "d",
+        "text": "Capitalize $90,000, the difference between new and old roof costs",
+        "explanation": "The full cost of the new roof is capitalized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Substitution approach: capitalize the new component (180,000) and derecognize the old one (cost 90,000, accumulated depreciation 70,000) → loss on disposal **20,000**.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-ppe-10",
+    "pool": "practice",
+    "stem": "A company received a building as a donation from a city to induce it to relocate. The building's fair value is $2,500,000. How does the company record the donation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Building at $2,500,000 and contribution revenue (gain) of $2,500,000",
+        "explanation": "Correct. Contributions received by business entities are recorded at fair value as income."
+      },
+      {
+        "id": "b",
+        "text": "Building at $0, since nothing was paid",
+        "explanation": "Nonreciprocal transfers are recognized at fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Building at $2,500,000 and additional paid-in capital",
+        "explanation": "Donations from non-owners are not capital contributions.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "Disclose the donation only",
+        "explanation": "The building must be recognized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Contributions received by a business entity (other than from owners) are recognized at fair value as revenue or gain in the period received (ASC 958-605 by analogy / ASC 845 nonreciprocal transfers).",
+    "skill": "application",
+    "needsReview": true,
+    "reviewNote": "Business-entity accounting for government grants/contributions has limited explicit U.S. GAAP guidance (ASU 2021-10 adds disclosures). Confirm expected answer against current exam materials."
+  }
+]

@@ -1,0 +1,438 @@
+[
+  {
+    "id": "far-imp-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: equipment has a carrying amount of $500,000, undiscounted future cash flows of $540,000, and a fair value of $420,000. What impairment loss is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Fair value matters only if the asset fails the recoverability test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. Undiscounted cash flows exceed the carrying amount, so the asset is recoverable."
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Undiscounted cash flows are compared, not subtracted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$120,000",
+        "explanation": "This compares cash flows with fair value.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Step 1: 500,000 < 540,000 undiscounted cash flows → recoverable → **no impairment**, even though fair value is lower.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-imp-chk1",
+    "pool": "lesson",
+    "stem": "An asset group held and used has a carrying amount of $2,000,000, undiscounted future cash flows of $1,800,000, present value of future cash flows of $1,500,000, and fair value of $1,450,000. What is the impairment loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "That's the recoverability gap; the loss is measured to fair value.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "This measures to present value of cash flows rather than fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$550,000",
+        "explanation": "Correct. 2,000,000 − 1,450,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The carrying amount exceeds undiscounted cash flows, so it is impaired.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Not recoverable (2,000,000 > 1,800,000). Loss = carrying amount − fair value = **550,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-imp-chk2",
+    "pool": "lesson",
+    "stem": "Which impairment loss can be reversed in a later period under U.S. GAAP?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Goodwill",
+        "explanation": "Goodwill impairments are never reversed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A factory held and used",
+        "explanation": "Held-and-used losses are not reversed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "An asset classified as held for sale, up to the losses previously recognized",
+        "explanation": "Correct. Only assets held for sale may be written back up — and only to the extent of cumulative losses previously recognized."
+      },
+      {
+        "id": "d",
+        "text": "An indefinite-lived trademark",
+        "explanation": "Indefinite-lived intangible impairments are not reversed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Only assets held for sale may be written back up — and only to the extent of cumulative losses previously recognized.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-imp-01",
+    "pool": "practice",
+    "stem": "Which event is most likely an indicator that a long-lived asset held and used should be tested for recoverability?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A significant decrease in the market price of the asset",
+        "explanation": "Correct. ASC 360 indicators include a significant decrease in market price, adverse changes in use or condition, adverse legal or business factors, cost overruns, continuing losses, and expected early disposal."
+      },
+      {
+        "id": "b",
+        "text": "A routine increase in accumulated depreciation",
+        "explanation": "Normal depreciation is not an impairment indicator.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Payment of a regular dividend",
+        "explanation": "Dividends are unrelated to asset recoverability.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "A decision to extend the asset's useful life after an upgrade",
+        "explanation": "That suggests greater, not lower, recoverability.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 360 indicators include a significant decrease in market price, adverse changes in use or condition, adverse legal or business factors, cost overruns, continuing losses, and expected early disposal.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-imp-02",
+    "pool": "practice",
+    "stem": "After recognizing an impairment loss on equipment held and used, the company should:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Continue depreciating the original cost",
+        "explanation": "The written-down amount is the new basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Depreciate the new carrying amount over the remaining useful life",
+        "explanation": "Correct. The impaired carrying amount becomes the new cost basis and is depreciated over the asset's remaining useful life."
+      },
+      {
+        "id": "c",
+        "text": "Stop depreciating the equipment",
+        "explanation": "Depreciation stops only for assets held for sale.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Reverse the loss if fair value increases next year",
+        "explanation": "Reversal is prohibited for assets held and used.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The impaired carrying amount becomes the new cost basis and is depreciated over the asset's remaining useful life.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-imp-03",
+    "pool": "practice",
+    "stem": "A trademark with an indefinite life has a carrying amount of $800,000 and a fair value of $650,000. Undiscounted cash flows attributable to it are $1,000,000. What impairment loss is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0, because undiscounted cash flows exceed carrying amount",
+        "explanation": "The recoverability step applies to held-and-used assets, not indefinite-lived intangibles.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$350,000",
+        "explanation": "This compares cash flows with fair value.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "This compares undiscounted cash flows with carrying amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$150,000",
+        "explanation": "Correct. 800,000 − 650,000 — a one-step fair value test."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Indefinite-lived intangibles use a one-step test: carrying amount vs. fair value. Loss = 800,000 − 650,000 = **150,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-imp-04",
+    "pool": "practice",
+    "stem": "A reporting unit has a carrying amount of $12,000,000 including goodwill of $2,000,000. Its fair value is $10,500,000. What goodwill impairment loss does a public company recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,500,000",
+        "explanation": "Correct. 12,000,000 − 10,500,000, less than the 2,000,000 goodwill."
+      },
+      {
+        "id": "b",
+        "text": "$2,000,000",
+        "explanation": "The loss is the excess of carrying amount over fair value, capped at goodwill — not automatically all goodwill.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$500,000",
+        "explanation": "This subtracts the excess from goodwill.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The carrying amount exceeds fair value.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASU 2017-04: loss = carrying amount − fair value = **1,500,000**, limited to goodwill (2,000,000).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-imp-05",
+    "pool": "practice",
+    "stem": "A reporting unit's carrying amount is $8,000,000 including goodwill of $900,000. Fair value is $6,800,000. What is the goodwill impairment loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,200,000",
+        "explanation": "The loss cannot exceed the goodwill balance.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$900,000",
+        "explanation": "Correct. The 1,200,000 excess is capped at goodwill."
+      },
+      {
+        "id": "c",
+        "text": "$300,000",
+        "explanation": "This is the excess over goodwill, not the loss.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Carrying amount exceeds fair value.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Excess = 8,000,000 − 6,800,000 = 1,200,000, capped at goodwill of **900,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-imp-06",
+    "pool": "practice",
+    "stem": "An asset held for sale was written down from $400,000 to $300,000 (fair value less cost to sell) last year. This year, fair value less cost to sell is $360,000. What is reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000; no gain",
+        "explanation": "Recoveries on held-for-sale assets are recognized up to previous losses.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$400,000; gain of $100,000",
+        "explanation": "The gain is limited to the recovery (60,000).",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$360,000; gain of $60,000",
+        "explanation": "Correct. Held-for-sale assets are remeasured each period; gains are recognized up to cumulative losses previously recognized (100,000)."
+      },
+      {
+        "id": "d",
+        "text": "$360,000; credit to OCI of $60,000",
+        "explanation": "The recovery gain goes to income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Held-for-sale assets are remeasured each period; gains are recognized up to cumulative losses previously recognized (100,000). The 60,000 recovery is within that limit.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-imp-07",
+    "pool": "practice",
+    "stem": "In which order should a company test assets for impairment when both a long-lived asset group and the goodwill of the same reporting unit may be impaired?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Goodwill first, then the long-lived assets",
+        "explanation": "The reporting unit's carrying amount must reflect other impairments first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Long-lived assets first, then goodwill",
+        "explanation": "Correct. Test and adjust other assets (and asset groups) first, then test goodwill using the adjusted carrying amount of the reporting unit."
+      },
+      {
+        "id": "c",
+        "text": "Simultaneously, allocating one combined loss",
+        "explanation": "They are separate tests.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Order does not matter",
+        "explanation": "Order affects the reporting unit's carrying amount and thus goodwill.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Test and adjust other assets (and asset groups) first, then test goodwill using the adjusted carrying amount of the reporting unit.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-imp-08",
+    "pool": "practice",
+    "stem": "A private company elects the accounting alternative for goodwill. Which treatment applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Goodwill is amortized, generally over 10 years or less, and tested for impairment when a triggering event occurs",
+        "explanation": "Correct. The PCC alternative lets private companies amortize goodwill straight-line over 10 years (or less, if more appropriate) and test only upon a triggering event, at the entity or reporting-unit level."
+      },
+      {
+        "id": "b",
+        "text": "Goodwill is written off immediately",
+        "explanation": "Immediate write-off isn't permitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Goodwill is tested annually at the reporting-unit level and never amortized",
+        "explanation": "That is the public-company model.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Goodwill is amortized over 40 years",
+        "explanation": "That was a pre-2002 rule.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The PCC alternative lets private companies amortize goodwill straight-line over 10 years (or less, if more appropriate) and test only upon a triggering event, at the entity or reporting-unit level.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-imp-09",
+    "pool": "practice",
+    "stem": "A machine has carrying amount $360,000. Management expects undiscounted net cash inflows of $340,000 over its remaining life and could sell it today for $300,000 with $10,000 of selling costs. It plans to keep using it. What is the impairment loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$70,000",
+        "explanation": "This measures to fair value less cost to sell, which applies to held-for-sale assets.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "That is the recoverability shortfall, not the measure.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Undiscounted cash flows are below the carrying amount, so it is impaired.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "Correct. Held and used: 360,000 − fair value 300,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Recoverability fails (360,000 > 340,000). For assets held and used, measure to **fair value** (300,000) — selling costs aren't deducted: loss = **60,000**.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-imp-10",
+    "pool": "practice",
+    "stem": "Where is an impairment loss on a long-lived asset held and used reported in a business entity's income statement?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In income from continuing operations",
+        "explanation": "Correct. It is typically part of operating income (unless the asset is in a discontinued operation)."
+      },
+      {
+        "id": "b",
+        "text": "In other comprehensive income",
+        "explanation": "Impairment losses go to earnings.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As an extraordinary item, net of tax",
+        "explanation": "Extraordinary items no longer exist.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a prior-period adjustment",
+        "explanation": "Impairment reflects a current-period event.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 360-10-45-4: impairment losses on assets held and used are included in income from continuing operations before income taxes (in operating income if presented).",
+    "skill": "remembering"
+  }
+]

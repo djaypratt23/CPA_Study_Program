@@ -1,0 +1,54 @@
+{
+  "id": "far-tbs-u6-impairment",
+  "section": "FAR",
+  "unitId": "far-u6",
+  "moduleIds": ["far-impairment", "far-intangibles"],
+  "pool": "practice",
+  "title": "Impairment testing & intangibles — Vantage Media",
+  "minutes": 18,
+  "skill": "analysis",
+  "instructions": "Vantage Media (a public company) is completing its year-end impairment reviews. Use the exhibit to compute the required amounts, record the equipment impairment, and identify the governing guidance.",
+  "exhibits": [
+    { "title": "Year-end asset data", "content": "| Asset | Carrying amount | Undiscounted future cash flows | Fair value |\n|---|---:|---:|---:|\n| Printing equipment (held and used) | 1,400,000 | 1,250,000 | 1,050,000 |\n| Studio building (held and used) | 3,000,000 | 3,600,000 | 2,700,000 |\n| Radio license (indefinite life) | 900,000 | 1,500,000 | 820,000 |\n| Magazine trade name (indefinite life) | 400,000 | n/a | 460,000 |\n\n**Digital reporting unit:** carrying amount **$6,500,000**, including goodwill of **$800,000** (after the asset impairments above). Fair value of the reporting unit: **$5,600,000**.\n\nThe printing equipment had accumulated depreciation of $600,000 on cost of $2,000,000." }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "loss",
+      "prompt": "Compute each impairment loss (enter 0 if none).",
+      "rows": [
+        { "id": "eq", "label": "Printing equipment", "answer": 350000, "tolerance": 0, "explanation": "Not recoverable (1,400,000 > 1,250,000). Loss = 1,400,000 − 1,050,000 = **350,000**." },
+        { "id": "bl", "label": "Studio building", "answer": 0, "tolerance": 0, "explanation": "Recoverable: undiscounted cash flows 3,600,000 exceed carrying amount → **no impairment**, even though fair value is lower." },
+        { "id": "rl", "label": "Radio license", "answer": 80000, "tolerance": 0, "explanation": "Indefinite-lived: one-step test. 900,000 − 820,000 = **80,000**. (Undiscounted cash flows are irrelevant.)" },
+        { "id": "tn", "label": "Magazine trade name", "answer": 0, "tolerance": 0, "explanation": "Fair value exceeds carrying amount → **0**; no write-up either." },
+        { "id": "gw", "label": "Goodwill — Digital reporting unit", "answer": 800000, "tolerance": 0, "explanation": "Excess 6,500,000 − 5,600,000 = 900,000, capped at goodwill of **800,000**." }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "je",
+      "prompt": "Record the printing equipment impairment. Vantage eliminates accumulated depreciation and reduces the asset to its new cost basis.",
+      "accounts": ["Impairment loss", "Accumulated depreciation", "Equipment", "Goodwill", "Other comprehensive income", "Retained earnings"],
+      "maxLines": 4,
+      "lines": [
+        { "account": "Impairment loss", "debit": 350000 },
+        { "account": "Accumulated depreciation", "debit": 600000 },
+        { "account": "Equipment", "credit": 950000 }
+      ],
+      "explanation": "New cost basis = fair value 1,050,000. Remove accumulated depreciation 600,000 and reduce equipment from 2,000,000 to 1,050,000 (credit 950,000); the 350,000 difference is the loss."
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) explains why the studio building is NOT impaired even though its fair value is below its carrying amount?",
+      "excerpts": [
+        { "id": "a", "citation": "ASC 350-30-35-19 (paraphrase)", "text": "An intangible asset not subject to amortization is tested for impairment at least annually by comparing its fair value with its carrying amount." },
+        { "id": "b", "citation": "ASC 360-10-35-17 (paraphrase)", "text": "An impairment loss is recognized only if the carrying amount of a long-lived asset (group) is not recoverable and exceeds its fair value. The carrying amount is not recoverable if it exceeds the sum of the undiscounted cash flows expected from the asset's use and eventual disposition." },
+        { "id": "c", "citation": "ASC 350-20-35-8 (paraphrase)", "text": "Goodwill impairment is the amount by which a reporting unit's carrying amount exceeds its fair value, limited to the goodwill allocated to it." },
+        { "id": "d", "citation": "ASC 360-10-35-43 (paraphrase)", "text": "A long-lived asset classified as held for sale is measured at the lower of its carrying amount or fair value less cost to sell." }
+      ],
+      "answer": "b",
+      "explanation": "Assets held and used are impaired only if they fail the undiscounted cash flow recoverability test first. The building passes (3.6M > 3.0M), so no loss is recognized."
+    }
+  ]
+}
