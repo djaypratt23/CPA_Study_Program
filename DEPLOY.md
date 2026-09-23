@@ -31,6 +31,17 @@ The app uses hash routing (`/#/module/...`), so deep links work without a `_redi
 
 GitHub Actions (`.github/workflows/ci.yml`) runs the same checks on every push, independently of Cloudflare.
 
+## GitHub Pages mirror
+
+On pushes to `main`, the same workflow also publishes a copy to
+https://djaypratt23.github.io/CPA_Study_Program/. It builds with `BASE_PATH=/CPA_Study_Program/` because GitHub
+Pages serves the site from a subpath.
+
+This requires **Settings → Pages → Build and deployment → Source: GitHub Actions**. If the source is
+*Deploy from a branch*, GitHub publishes the raw repository files instead of the built app, and the page loads
+blank. The mirror's live commit is at `/CPA_Study_Program/version.json`. To roll it back, re-run an older
+successful *CI & Deploy* run from the Actions tab.
+
 ## Checking which commit is live
 
 Open `https://<project-name>.pages.dev/version.json`:
