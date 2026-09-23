@@ -1,0 +1,451 @@
+[
+  {
+    "id": "reg-ot-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: what is the combined self-employment tax rate (before the wage base cap)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "7.65%",
+        "explanation": "That's the employee share of FICA.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "12.4%",
+        "explanation": "That's only the Social Security portion.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "15.3%",
+        "explanation": "Correct. SE tax = 12.4% Social Security + 2.9% Medicare."
+      },
+      {
+        "id": "d",
+        "text": "2.9%",
+        "explanation": "That's only the Medicare portion.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "SE tax = 12.4% Social Security + 2.9% Medicare.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ot-chk1",
+    "pool": "lesson",
+    "stem": "A self-employed taxpayer has net profit of $50,000 and no wages. What is the SE tax (rounded)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,650",
+        "explanation": "Omits the 92.35% factor.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$6,200",
+        "explanation": "Uses only the Social Security rate.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$3,825",
+        "explanation": "Uses only half the rate.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$7,065",
+        "explanation": "Correct. $50,000 × 92.35% × 15.3%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "50,000 × 0.9235 × 0.153 = **7,065**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-chk2",
+    "pool": "lesson",
+    "stem": "A single taxpayer has MAGI of $230,000, including $40,000 of net investment income. What is the net investment income tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,140",
+        "explanation": "Correct. 3.8% × lesser of $40,000 or $30,000."
+      },
+      {
+        "id": "b",
+        "text": "$1,520",
+        "explanation": "Uses all net investment income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$8,740",
+        "explanation": "Applies 3.8% to all MAGI.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "MAGI exceeds $200,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "NIIT = 3.8% × lesser of NII (40,000) or excess MAGI (30,000) = **1,140**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-01",
+    "pool": "practice",
+    "stem": "Which item is added back in computing AMTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Qualified residence interest on acquisition debt",
+        "explanation": "Acquisition-debt interest is allowed for AMT.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Charitable contributions",
+        "explanation": "Charity is allowed for AMT.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "State income taxes deducted as an itemized deduction",
+        "explanation": "Correct. Taxes deducted for regular tax aren't allowed for AMT."
+      },
+      {
+        "id": "d",
+        "text": "Municipal interest on general obligation bonds",
+        "explanation": "Only private activity bond interest is a preference.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Taxes deducted for regular tax aren't allowed for AMT.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ot-02",
+    "pool": "practice",
+    "stem": "An employee exercises incentive stock options with a $40,000 bargain element and holds the shares. What is the tax effect in the year of exercise?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000 of ordinary income",
+        "explanation": "ISOs don't create regular-tax income at exercise.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Nothing for any purpose",
+        "explanation": "The spread is an AMT adjustment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$40,000 capital gain",
+        "explanation": "No sale has occurred.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "No regular tax, but a $40,000 AMT adjustment",
+        "explanation": "Correct. The ISO bargain element is an AMT adjustment at exercise."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The ISO bargain element is an AMT adjustment at exercise.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ot-03",
+    "pool": "practice",
+    "stem": "Single taxpayer, 2025 AMTI of $700,000. What is the AMT exemption after the phase-out?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$88,100",
+        "explanation": "The exemption is phased out.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Not fully phased out.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$69,688",
+        "explanation": "Correct. $88,100 − 25% × ($700,000 − $626,350)."
+      },
+      {
+        "id": "d",
+        "text": "$137,000",
+        "explanation": "That's the joint exemption.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Reduction = 25% × 73,650 = 18,412.50; exemption = 88,100 − 18,412.50 = **69,687.50**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-04",
+    "pool": "practice",
+    "stem": "A 12-year-old has $5,000 of interest income and no earned income in 2025. How much is taxed at the parents' rate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "The first $2,700 isn't.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The kiddie tax applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$2,700",
+        "explanation": "That's the threshold.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$2,300",
+        "explanation": "Correct. $5,000 − $2,700."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Unearned income above $2,700 is taxed at the parents' rate.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-05",
+    "pool": "practice",
+    "stem": "A taxpayer's prior-year AGI was $120,000 and prior-year tax was $18,000. What minimum total of withholding and estimates avoids the underpayment penalty this year (using the prior-year safe harbor)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$16,200",
+        "explanation": "That's 90% of the prior year; the prior-year safe harbor is 100%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$18,000",
+        "explanation": "Correct. 100% of prior-year tax."
+      },
+      {
+        "id": "c",
+        "text": "$19,800",
+        "explanation": "110% applies only if prior-year AGI exceeded $150,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$1,000",
+        "explanation": "That's the de minimis threshold.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Safe harbor: 100% of prior-year tax (110% if prior-year AGI > $150,000).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-06",
+    "pool": "practice",
+    "stem": "A married couple filing jointly has combined wages of $300,000. How much additional Medicare tax applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$450",
+        "explanation": "Correct. 0.9% × ($300,000 − $250,000)."
+      },
+      {
+        "id": "b",
+        "text": "$900",
+        "explanation": "Uses the $200,000 single threshold.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$2,700",
+        "explanation": "Applies 0.9% to all wages.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Wages exceed the threshold.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "0.9% × 50,000 = **450** (employers withhold only on wages over $200,000 per employee; the return reconciles).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-07",
+    "pool": "practice",
+    "stem": "A taxpayer has $150,000 of wages and $60,000 of net self-employment income in 2025. On what amount of net SE earnings does the 12.4% Social Security portion apply?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$55,410 (all of net SE earnings)",
+        "explanation": "Only up to the remaining wage base.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$26,100",
+        "explanation": "Correct. $176,100 − $150,000 remaining wage base (less than $55,410)."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Wages are below the wage base.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "Uses net profit before the 92.35% factor and ignores the cap.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Net SE earnings = 60,000 × 92.35% = 55,410; Social Security applies only to the 26,100 of wage base remaining. Medicare (2.9%) applies to all 55,410.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-08",
+    "pool": "practice",
+    "stem": "When is the fourth-quarter estimated tax payment for 2025 due for an individual?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "December 15, 2025",
+        "explanation": "That's a corporate due date.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "January 15, 2026",
+        "explanation": "Correct. Individual estimates: April 15, June 15, September 15, and January 15 of the following year."
+      },
+      {
+        "id": "c",
+        "text": "April 15, 2026",
+        "explanation": "That's the return due date.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "December 31, 2025",
+        "explanation": "That isn't an estimated tax due date.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Individual estimates: April 15, June 15, September 15, and January 15 of the following year.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ot-09",
+    "pool": "practice",
+    "stem": "Why does AMT paid because of ISO exercises create a minimum tax credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Because ISOs are permanently excluded",
+        "explanation": "ISO gain is eventually taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Because it's a timing (deferral) item — the credit prevents double taxation when regular tax later exceeds tentative minimum tax",
+        "explanation": "Correct. AMT from deferral items (ISOs, depreciation) generates a credit usable in later years; exclusion items (SALT) don't."
+      },
+      {
+        "id": "c",
+        "text": "Because all AMT is refundable",
+        "explanation": "AMT isn't generally refundable.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Because the credit is required for municipal bonds",
+        "explanation": "Private activity bond interest is an exclusion item.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AMT from deferral items (ISOs, depreciation) generates a credit usable in later years; exclusion items (SALT) don't.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ot-10",
+    "pool": "practice",
+    "stem": "Net earnings from self-employment are $350. How much SE tax is due?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0 — SE tax applies only if net SE earnings are $400 or more",
+        "explanation": "Correct. No SE tax is due when net SE earnings are under $400."
+      },
+      {
+        "id": "b",
+        "text": "$53.55",
+        "explanation": "The $400 threshold isn't met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$49.45",
+        "explanation": "The $400 threshold isn't met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$26.78",
+        "explanation": "The $400 threshold isn't met.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "No SE tax is due when net SE earnings are under $400.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

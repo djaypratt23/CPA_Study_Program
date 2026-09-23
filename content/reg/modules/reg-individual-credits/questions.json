@@ -1,0 +1,455 @@
+[
+  {
+    "id": "reg-cr-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which is generally more valuable to a taxpayer — a $1,000 credit or a $1,000 deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The $1,000 deduction",
+        "explanation": "A deduction saves only $1,000 × the marginal rate.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "It depends on filing status only",
+        "explanation": "The key difference is dollar-for-dollar vs. rate-based.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "They are always equal",
+        "explanation": "A deduction's value depends on the marginal rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The $1,000 credit",
+        "explanation": "Correct. A credit reduces tax dollar for dollar."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Credits reduce tax dollar for dollar; deductions reduce taxable income.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-chk1",
+    "pool": "lesson",
+    "stem": "A single parent with MAGI of $90,000 has two children, ages 8 and 12. What is the 2025 child tax credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4,400",
+        "explanation": "Correct. 2 × $2,200, no phase-out."
+      },
+      {
+        "id": "b",
+        "text": "$4,000",
+        "explanation": "Uses the pre-2025 $2,000 amount.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$1,000",
+        "explanation": "That's the credit for other dependents amount.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$3,400",
+        "explanation": "Uses the refundable portion.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "2025 CTC: $2,200 per qualifying child under 17; the single phase-out starts at $200,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date for 2025. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "reg-cr-chk2",
+    "pool": "lesson",
+    "stem": "A student in her second year of college has $4,500 of qualified tuition. Her parents' MAGI is $120,000 (joint). What is the American opportunity credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,500",
+        "explanation": "Correct. $2,000 + 25% × $2,000."
+      },
+      {
+        "id": "b",
+        "text": "$4,500",
+        "explanation": "The credit is capped.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$900",
+        "explanation": "That's 20% — the LLC rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "MAGI is below the joint phase-out.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AOTC = 100% of the first $2,000 + 25% of the next $2,000 = $2,500.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-01",
+    "pool": "practice",
+    "stem": "A married couple (both working, AGI $90,000) pays $7,500 for day care for their two children. What is the child and dependent care credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,500",
+        "explanation": "Uses the one-child limit.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$2,100",
+        "explanation": "Uses the 35% rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$1,200",
+        "explanation": "Correct. 20% × $6,000."
+      },
+      {
+        "id": "d",
+        "text": "$1,500 (20% × $7,500)",
+        "explanation": "Expenses are capped at $6,000.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Expenses capped at $6,000 for two or more; AGI over $43,000 → 20%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-02",
+    "pool": "practice",
+    "stem": "Which credit is fully **nonrefundable**?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Earned income credit",
+        "explanation": "The EIC is refundable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "American opportunity credit",
+        "explanation": "40% is refundable.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Premium tax credit",
+        "explanation": "The premium tax credit is refundable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Lifetime learning credit",
+        "explanation": "Correct. The LLC is nonrefundable."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The LLC is nonrefundable.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-03",
+    "pool": "practice",
+    "stem": "A graduate student (MAGI $50,000, single) pays $12,000 of tuition. Which education credit applies, and how much?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Lifetime learning, $2,000",
+        "explanation": "Correct. 20% × $10,000 maximum."
+      },
+      {
+        "id": "b",
+        "text": "American opportunity, $2,500",
+        "explanation": "Graduate study isn't within the first 4 years of postsecondary education.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Lifetime learning, $2,400",
+        "explanation": "Expenses are capped at $10,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "No credit",
+        "explanation": "The LLC is available.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "LLC: 20% of up to $10,000 of expenses per return.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-04",
+    "pool": "practice",
+    "stem": "A taxpayer's 18-year-old son (a full-time student) is his dependent. Which credit may he claim for his son?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Child tax credit of $2,200",
+        "explanation": "The CTC requires a child under 17.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Dependent care credit",
+        "explanation": "The child is over 13 and not disabled.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Credit for other dependents of $500",
+        "explanation": "Correct. Dependents who don't qualify for the CTC may qualify for the $500 credit for other dependents."
+      },
+      {
+        "id": "d",
+        "text": "No credit",
+        "explanation": "The other-dependent credit applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Dependents who don't qualify for the CTC may qualify for the $500 credit for other dependents.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-05",
+    "pool": "practice",
+    "stem": "What portion of the American opportunity credit is refundable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "0%",
+        "explanation": "Part is refundable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "25%",
+        "explanation": "Not the refundable percentage.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "100%",
+        "explanation": "Only 40% of the AOTC is refundable.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "40%, up to $1,000",
+        "explanation": "Correct. AOTC: 40% refundable (up to $1,000 per student)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "AOTC: 40% refundable (up to $1,000 per student).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-06",
+    "pool": "practice",
+    "stem": "A couple's AGI is $25,000 (only one spouse works full time; the other earns $3,000 part time). They pay $4,000 of day care for one child. What expenses are eligible for the dependent care credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4,000",
+        "explanation": "Limited to $3,000 for one child and the lower earner's income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$3,000",
+        "explanation": "Correct. Lesser of $3,000 cap, $4,000 paid, and the lower earner's $3,000."
+      },
+      {
+        "id": "c",
+        "text": "$6,000",
+        "explanation": "That's the two-child limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The lower earner has earned income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Eligible expenses are limited by the cap and by each spouse's earned income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-07",
+    "pool": "practice",
+    "stem": "Which taxpayer can't claim either education credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A single parent with MAGI of $70,000 paying her son's tuition",
+        "explanation": "Below the phase-out, so eligible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A married taxpayer filing separately",
+        "explanation": "Correct. MFS filers can't claim education credits."
+      },
+      {
+        "id": "c",
+        "text": "A joint filer with MAGI of $150,000",
+        "explanation": "Below the joint phase-out.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A taxpayer taking one job-skills course",
+        "explanation": "The LLC is available.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Married filing separately taxpayers can't claim the AOTC or LLC.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-08",
+    "pool": "practice",
+    "stem": "Which credit is refundable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Credit for other dependents",
+        "explanation": "The ODC is nonrefundable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Foreign tax credit",
+        "explanation": "The FTC is nonrefundable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Earned income credit",
+        "explanation": "Correct. The EIC is refundable."
+      },
+      {
+        "id": "d",
+        "text": "Child and dependent care credit",
+        "explanation": "Nonrefundable for 2025.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The EIC is refundable.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-09",
+    "pool": "practice",
+    "stem": "A homeowner installs rooftop solar panels, paying $20,000 in March 2025. What residential clean energy credit is available?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0 — the credit expired in 2024",
+        "explanation": "The credit applies to 2025 expenditures.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$6,000 (30%)",
+        "explanation": "Correct. The 30% residential clean energy credit applies to expenditures made through December 31, 2025 (OBBBA ended it for later expenditures)."
+      },
+      {
+        "id": "c",
+        "text": "$2,000",
+        "explanation": "That's a different credit's cap.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "The credit is a percentage.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The 30% residential clean energy credit applies to expenditures made through December 31, 2025 (OBBBA ended it for later expenditures).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date for 2025. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "reg-cr-10",
+    "pool": "practice",
+    "stem": "A single parent with one qualifying child has MAGI of $210,500. By how much is the 2025 child tax credit reduced?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$500",
+        "explanation": "Rounds the excess down instead of up.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$550",
+        "explanation": "Correct. $10,500 over the threshold → 11 increments × $50."
+      },
+      {
+        "id": "c",
+        "text": "$525",
+        "explanation": "The phase-out uses whole $1,000 increments.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "MAGI exceeds the $200,000 threshold.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The CTC phases out by $50 per $1,000 or fraction thereof over the threshold.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]

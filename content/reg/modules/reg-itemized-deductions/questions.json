@@ -1,0 +1,455 @@
+[
+  {
+    "id": "reg-id-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: medical expenses are deductible to the extent they exceed what percentage of AGI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "7.5%",
+        "explanation": "Correct. §213: unreimbursed medical expenses above 7.5% of AGI."
+      },
+      {
+        "id": "b",
+        "text": "2%",
+        "explanation": "That was the floor for miscellaneous deductions.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "10%",
+        "explanation": "10% is the casualty loss floor.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "50%",
+        "explanation": "That isn't the medical floor.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§213: unreimbursed medical expenses above 7.5% of AGI.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-id-chk1",
+    "pool": "lesson",
+    "stem": "A single taxpayer (MAGI $120,000) paid $9,000 of state income tax and $14,000 of property tax in 2025. What is the SALT deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "The pre-2025 cap.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "The cap isn't a deduction amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$23,000",
+        "explanation": "Correct. Under the $40,000 cap for 2025."
+      },
+      {
+        "id": "d",
+        "text": "$14,000",
+        "explanation": "Both taxes are deductible.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For 2025 the SALT cap is $40,000 (MAGI under $500,000), so the full $23,000 is deductible.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount for 2025. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "reg-id-chk2",
+    "pool": "lesson",
+    "stem": "A single taxpayer has QBI of $60,000 and taxable income before the QBI deduction of $70,000 (no capital gains). What is the QBI deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$14,000",
+        "explanation": "The QBI component is smaller.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The taxpayer qualifies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$60,000",
+        "explanation": "It's a percentage deduction.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$12,000",
+        "explanation": "Correct. Lesser of 20% × $60,000 or 20% × $70,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Below the threshold: lesser of 20% of QBI (12,000) or 20% of taxable income (14,000).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-id-01",
+    "pool": "practice",
+    "stem": "AGI is $80,000. Unreimbursed medical expenses are $9,500. What is the medical deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,500",
+        "explanation": "Correct. $9,500 − $6,000."
+      },
+      {
+        "id": "b",
+        "text": "$9,500",
+        "explanation": "The 7.5% floor applies.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$1,500",
+        "explanation": "Uses a 10% floor.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Expenses exceed the floor.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "7.5% × 80,000 = 6,000; 9,500 − 6,000 = **3,500**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-id-02",
+    "pool": "practice",
+    "stem": "A taxpayer donates stock held 3 years (basis $4,000; FMV $15,000) to a public charity. AGI is $100,000. What is the deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4,000",
+        "explanation": "Long-term capital gain property is deducted at FMV.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$11,000",
+        "explanation": "That's the appreciation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Correct. Within the 30% limit ($30,000)."
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "That's the limit, not the deduction.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "LTCG property to a public charity: FMV, limited to 30% of AGI.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-id-03",
+    "pool": "practice",
+    "stem": "Which tax is **not** deductible as an itemized deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "State income tax",
+        "explanation": "Deductible (subject to the SALT cap).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Real property tax on a U.S. home",
+        "explanation": "U.S. real property tax is deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Local personal property tax based on a car's value",
+        "explanation": "Ad valorem personal property tax is deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Real property tax on a vacation home in France",
+        "explanation": "Correct. Foreign real property taxes aren't deductible."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Foreign real property taxes are nondeductible for individuals (except in a trade or business).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-id-04",
+    "pool": "practice",
+    "stem": "A taxpayer has $12,000 of investment interest expense and $8,000 of net investment income. What is deductible this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000, with $4,000 carried forward",
+        "explanation": "Correct. §163(d): investment interest is deductible up to net investment income; the excess carries forward."
+      },
+      {
+        "id": "b",
+        "text": "$12,000",
+        "explanation": "Limited to net investment income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Up to net investment income is deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$4,000",
+        "explanation": "That's the carryforward.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§163(d): investment interest is deductible up to net investment income; the excess carries forward.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-id-05",
+    "pool": "practice",
+    "stem": "A taxpayer pays $500 for a charity dinner worth $120. What is the charitable deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$500",
+        "explanation": "The value received must be subtracted.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$120",
+        "explanation": "That's the value received.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$380",
+        "explanation": "Correct. Quid pro quo contributions: deduct the payment minus the FMV of goods or services received."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The excess over value received is deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Quid pro quo contributions: deduct the payment minus the FMV of goods or services received.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-id-06",
+    "pool": "practice",
+    "stem": "A home in a federally declared disaster area is damaged: loss after insurance $30,000; AGI $100,000. What is the casualty deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "The $100 and 10%-of-AGI floors apply.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Federally declared disaster losses are deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "Omits the $100 floor.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$19,900",
+        "explanation": "Correct. $30,000 − $100 − $10,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "(30,000 − 100) − 10% × 100,000 = **19,900**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-id-07",
+    "pool": "practice",
+    "stem": "A taxpayer's home mortgage (acquisition debt taken in 2020) is $900,000. What portion of the interest is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All of it",
+        "explanation": "The $750,000 limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "750/900 of the interest",
+        "explanation": "Correct. Acquisition debt incurred after December 15, 2017 is limited to $750,000."
+      },
+      {
+        "id": "c",
+        "text": "None",
+        "explanation": "Some is deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Interest on $1 million",
+        "explanation": "That's the pre-2018 limit for older loans.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Acquisition debt incurred after December 15, 2017 is limited to $750,000.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-id-08",
+    "pool": "practice",
+    "stem": "Which statement about the QBI deduction is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's available only to taxpayers who itemize",
+        "explanation": "It's available regardless.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It reduces taxable income but not AGI, and is available with the standard deduction",
+        "explanation": "Correct. §199A is a below-the-line deduction available to itemizers and non-itemizers."
+      },
+      {
+        "id": "c",
+        "text": "It's a refundable credit",
+        "explanation": "It's a deduction.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "It applies to W-2 wages",
+        "explanation": "Wages aren't QBI.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§199A is a below-the-line deduction available to itemizers and non-itemizers.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-id-09",
+    "pool": "practice",
+    "stem": "Which contribution requires a qualified appraisal to be deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,000 of cash",
+        "explanation": "Cash never needs an appraisal.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A painting worth $8,000",
+        "explanation": "Correct. Noncash property over $5,000."
+      },
+      {
+        "id": "c",
+        "text": "Clothing worth $300",
+        "explanation": "Under the threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Publicly traded stock worth $50,000",
+        "explanation": "Publicly traded securities are exempt from the appraisal rule.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Noncash contributions over $5,000 (other than publicly traded securities) need a qualified appraisal.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-id-10",
+    "pool": "practice",
+    "stem": "For 2025, a waiter with MAGI of $60,000 received $18,000 of qualified tips. How are they treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Excluded from gross income",
+        "explanation": "Tips remain in gross income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Included in gross income, with a deduction of $18,000 available whether or not he itemizes",
+        "explanation": "Correct. OBBBA: qualified tips are deductible up to $25,000 for 2025–2028 (phased out above $150,000 MAGI); they remain income and subject to payroll taxes."
+      },
+      {
+        "id": "c",
+        "text": "Included, with no deduction",
+        "explanation": "The 2025 tips deduction applies.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "Deductible only up to $10,000",
+        "explanation": "The cap is $25,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "OBBBA: qualified tips are deductible up to $25,000 for 2025–2028 (phased out above $150,000 MAGI); they remain income and subject to payroll taxes.",
+    "skill": "application",
+    "difficulty": 2,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount for 2025. Verify against current IRS guidance and exam materials."
+  }
+]

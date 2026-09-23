@@ -1,0 +1,104 @@
+{
+  "id": "reg-tbs-u5-taxable-income",
+  "section": "REG",
+  "unitId": "reg-u5",
+  "moduleIds": [
+    "reg-adjustments",
+    "reg-itemized-deductions",
+    "reg-individual-credits"
+  ],
+  "pool": "practice",
+  "title": "From gross income to taxable income — the Chen family",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Lin and Wei Chen file jointly for 2025. They have two children, ages 6 and 10. Compute the amounts below (round to the nearest dollar). Assume the QBI deduction is below the threshold and that QBI is net profit reduced by the deductible half of SE tax.",
+  "exhibits": [
+    {
+      "title": "Income",
+      "content": "- Combined wages: **$150,000**\n- Interest on a bank account: **$2,000**\n- Wei's Schedule C (graphic design) net profit: **$30,000**"
+    },
+    {
+      "title": "Payments",
+      "content": "| Item | Amount |\n|---|---:|\n| HSA contribution (family HDHP coverage), made by the Chens | 4,000 |\n| Unreimbursed medical expenses | 15,000 |\n| State income tax | 9,000 |\n| Real estate tax on their home | 8,000 |\n| Mortgage interest (acquisition debt $420,000) | 12,000 |\n| Cash contributions to their church | 3,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "a",
+      "prompt": "Compute AGI.",
+      "rows": [
+        {
+          "id": "se",
+          "label": "Wei's self-employment tax",
+          "answer": 4239,
+          "tolerance": 1,
+          "explanation": "30,000 × 92.35% × 15.3% = **4,239**."
+        },
+        {
+          "id": "hse",
+          "label": "Deduction for half of SE tax",
+          "answer": 2119,
+          "tolerance": 1,
+          "explanation": "4,239 ÷ 2 ≈ **2,119**."
+        },
+        {
+          "id": "agi",
+          "label": "Adjusted gross income",
+          "answer": 175881,
+          "tolerance": 2,
+          "explanation": "150,000 + 2,000 + 30,000 − 2,119 − 4,000 (HSA) = **175,881**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "b",
+      "prompt": "Compute deductions and taxable income.",
+      "rows": [
+        {
+          "id": "med",
+          "label": "Deductible medical expenses",
+          "answer": 1809,
+          "tolerance": 2,
+          "explanation": "15,000 − 7.5% × 175,881 (13,191) = **1,809**."
+        },
+        {
+          "id": "it",
+          "label": "Total itemized deductions",
+          "answer": 33809,
+          "tolerance": 3,
+          "explanation": "1,809 + 17,000 (SALT under the $40,000 cap) + 12,000 + 3,000 = **33,809** — more than the $31,500 standard deduction, so they itemize."
+        },
+        {
+          "id": "qbi",
+          "label": "QBI deduction",
+          "answer": 5576,
+          "tolerance": 2,
+          "explanation": "20% × (30,000 − 2,119) = **5,576** (less than 20% of taxable income before QBI)."
+        },
+        {
+          "id": "ti",
+          "label": "Taxable income",
+          "answer": 136496,
+          "tolerance": 5,
+          "explanation": "175,881 − 33,809 − 5,576 = **136,496**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "c",
+      "prompt": "Credits.",
+      "rows": [
+        {
+          "id": "ctc",
+          "label": "Child tax credit",
+          "answer": 4400,
+          "tolerance": 0,
+          "explanation": "2 × $2,200; MAGI is below $400,000: **4,400**."
+        }
+      ]
+    }
+  ]
+}

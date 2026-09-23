@@ -1,0 +1,113 @@
+{
+  "id": "reg-tbs-u5-credits-amt",
+  "section": "REG",
+  "unitId": "reg-u5",
+  "moduleIds": [
+    "reg-individual-credits",
+    "reg-amt-other-taxes"
+  ],
+  "pool": "practice",
+  "title": "Credits and other taxes — three clients",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Compute the 2025 amounts for three unrelated clients, then classify the credits.",
+  "exhibits": [
+    {
+      "title": "Clients",
+      "content": "1. **Dana** (MFJ, AGI $95,000; both spouses work) paid $7,200 of after-school care for two children, ages 9 and 11.\n2. **Eli** (single, MAGI $60,000) paid $5,000 of tuition for his first year of college (half-time) and $900 of required books.\n3. **Fay** (single) has 2025 taxable income of $180,000, which reflects $25,000 of state and local taxes deducted. She also exercised ISOs with a $90,000 bargain element and received $5,000 of private activity bond interest. Her regular tax is $36,000. Her AMT exemption isn't phased out; use 26% for AMTI up to $239,100 over the exemption."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "dc",
+          "label": "Dana — child and dependent care credit",
+          "answer": 1200,
+          "tolerance": 0,
+          "explanation": "Expenses capped at 6,000 × 20% (AGI over $43,000) = **1,200**."
+        },
+        {
+          "id": "ao",
+          "label": "Eli — American opportunity credit",
+          "answer": 2500,
+          "tolerance": 0,
+          "explanation": "Qualified expenses 5,900 (tuition + required books): 2,000 + 25% × 2,000 = **2,500**."
+        },
+        {
+          "id": "aor",
+          "label": "Eli — refundable portion of the AOTC",
+          "answer": 1000,
+          "tolerance": 0,
+          "explanation": "40% × 2,500 = **1,000**."
+        },
+        {
+          "id": "amti",
+          "label": "Fay — AMTI",
+          "answer": 300000,
+          "tolerance": 0,
+          "explanation": "180,000 + 25,000 SALT + 90,000 ISO + 5,000 PAB interest = **300,000**."
+        },
+        {
+          "id": "tmt",
+          "label": "Fay — tentative minimum tax",
+          "answer": 55094,
+          "tolerance": 1,
+          "explanation": "(300,000 − 88,100) × 26% = **55,094**."
+        },
+        {
+          "id": "amt",
+          "label": "Fay — AMT",
+          "answer": 19094,
+          "tolerance": 1,
+          "explanation": "55,094 − 36,000 = **19,094**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "rf",
+      "prompt": "Classify each credit.",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Child and dependent care credit (2025)",
+          "answer": "Nonrefundable",
+          "explanation": "It can't reduce tax below zero."
+        },
+        {
+          "id": "r2",
+          "label": "American opportunity credit",
+          "answer": "Partially refundable",
+          "explanation": "40% is refundable."
+        },
+        {
+          "id": "r3",
+          "label": "Earned income credit",
+          "answer": "Refundable",
+          "explanation": "Fully refundable."
+        },
+        {
+          "id": "r4",
+          "label": "Lifetime learning credit",
+          "answer": "Nonrefundable",
+          "explanation": "It can't reduce tax below zero."
+        },
+        {
+          "id": "r5",
+          "label": "Child tax credit",
+          "answer": "Partially refundable",
+          "explanation": "The additional child tax credit is refundable up to $1,700 per child."
+        }
+      ],
+      "options": [
+        "Refundable",
+        "Partially refundable",
+        "Nonrefundable"
+      ]
+    }
+  ]
+}
