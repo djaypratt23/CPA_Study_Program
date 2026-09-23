@@ -1,0 +1,67 @@
+{
+  "id": "reg-tbs-x5-corporate",
+  "section": "REG",
+  "unitId": "reg-u6",
+  "moduleIds": [
+    "reg-c-corp-income"
+  ],
+  "pool": "exam",
+  "title": "Form 1120 — Keystone Corp.",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Keystone Corp. reports 2025 book net income of **$800,000**. Compute taxable income and tax.",
+  "exhibits": [
+    {
+      "title": "Items included in book net income",
+      "content": "| Item | Amount |\n|---|---:|\n| Federal income tax expense | 200,000 |\n| Municipal bond interest | 20,000 |\n| Dividends from a 10%-owned domestic corporation | 40,000 |\n| Premiums on key-person life insurance (Keystone is beneficiary) | 6,000 |\n| Fines | 4,000 |\n| Business meals | 14,000 |\n| Charitable contributions (cash) | 60,000 |\n| Book depreciation | 100,000 |"
+    },
+    {
+      "title": "Other",
+      "content": "Tax depreciation is **$150,000**. There are no carryovers."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "pre",
+          "label": "Taxable income before charitable contributions and DRD",
+          "answer": 1007000,
+          "tolerance": 0,
+          "explanation": "800,000 + 200,000 − 20,000 + 6,000 + 4,000 + 7,000 + 60,000 − 50,000 = **1,007,000**."
+        },
+        {
+          "id": "ch",
+          "label": "Charitable deduction",
+          "answer": 60000,
+          "tolerance": 0,
+          "explanation": "Limit 100,700; all 60,000 is deductible."
+        },
+        {
+          "id": "drd",
+          "label": "Dividends-received deduction",
+          "answer": 20000,
+          "tolerance": 0,
+          "explanation": "50% × 40,000 = **20,000**."
+        },
+        {
+          "id": "ti",
+          "label": "Taxable income",
+          "answer": 927000,
+          "tolerance": 0,
+          "explanation": "1,007,000 − 60,000 − 20,000 = **927,000**."
+        },
+        {
+          "id": "tax",
+          "label": "Income tax",
+          "answer": 194670,
+          "tolerance": 0,
+          "explanation": "927,000 × 21% = **194,670**."
+        }
+      ]
+    }
+  ]
+}

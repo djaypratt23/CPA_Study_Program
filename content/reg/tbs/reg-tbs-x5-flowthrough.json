@@ -1,0 +1,89 @@
+{
+  "id": "reg-tbs-x5-flowthrough",
+  "section": "REG",
+  "unitId": "reg-u7",
+  "moduleIds": [
+    "reg-s-corporations",
+    "reg-partnerships"
+  ],
+  "pool": "exam",
+  "title": "Flow-through entities — Ann and Leo",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Answer the questions for two unrelated owners of flow-through entities in 2025.",
+  "exhibits": [
+    {
+      "title": "Ann — Jade Inc. (S corporation, never a C corporation)",
+      "content": "Ann owns 60%. Her stock basis at January 1 was **$20,000**, and she has a **$15,000** direct loan to Jade. Jade's 2025 results: ordinary loss $(70,000); long-term capital gain $5,000; tax-exempt interest $2,000; nondeductible expenses $1,000. No distributions."
+    },
+    {
+      "title": "Leo — Harbor Partners",
+      "content": "Leo sells his 25% interest for **$90,000** cash. His outside basis, including his **$20,000** share of partnership liabilities, is **$50,000**. His share of the partnership's unrealized receivables and inventory appreciation (§751) is **$8,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "a",
+      "prompt": "Ann.",
+      "rows": [
+        {
+          "id": "sb",
+          "label": "Stock basis before the loss",
+          "answer": 23600,
+          "tolerance": 0,
+          "explanation": "20,000 + 3,000 LTCG + 1,200 exempt interest − 600 nondeductible = **23,600**."
+        },
+        {
+          "id": "al",
+          "label": "Deductible share of the ordinary loss",
+          "answer": 38600,
+          "tolerance": 0,
+          "explanation": "Stock basis 23,600 + debt basis 15,000 = **38,600** of her 42,000 share."
+        },
+        {
+          "id": "sus",
+          "label": "Suspended loss",
+          "answer": 3400,
+          "tolerance": 0,
+          "explanation": "42,000 − 38,600 = **3,400**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "l",
+      "prompt": "Leo.",
+      "rows": [
+        {
+          "id": "ar",
+          "label": "Amount realized",
+          "answer": 110000,
+          "tolerance": 0,
+          "explanation": "90,000 cash + 20,000 liabilities relieved = **110,000**."
+        },
+        {
+          "id": "g",
+          "label": "Total gain",
+          "answer": 60000,
+          "tolerance": 0,
+          "explanation": "110,000 − 50,000 = **60,000**."
+        },
+        {
+          "id": "ord",
+          "label": "Ordinary income (§751)",
+          "answer": 8000,
+          "tolerance": 0,
+          "explanation": "Hot assets: **8,000**."
+        },
+        {
+          "id": "cap",
+          "label": "Capital gain",
+          "answer": 52000,
+          "tolerance": 0,
+          "explanation": "60,000 − 8,000 = **52,000**."
+        }
+      ]
+    }
+  ]
+}

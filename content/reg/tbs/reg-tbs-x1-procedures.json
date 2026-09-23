@@ -1,0 +1,127 @@
+{
+  "id": "reg-tbs-x1-procedures",
+  "section": "REG",
+  "unitId": "reg-u1",
+  "moduleIds": [
+    "reg-preparer-penalties",
+    "reg-irs-procedures",
+    "reg-circular-230"
+  ],
+  "pool": "exam",
+  "title": "Penalties, deadlines, and practice rules — Quinn & Dale CPAs",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Answer the questions for clients of Quinn & Dale CPAs. Assume no reasonable cause, no fraud, and no extensions unless stated.",
+  "exhibits": [
+    {
+      "title": "Client facts",
+      "content": "1. **Garza** filed her 2024 return on August 20, 2025 (due April 15, 2025), showing $10,000 of tax due, which she paid with the return.\n2. An IRS exam of **Hall**'s return found a $30,000 underpayment due to negligence.\n3. A Quinn & Dale preparer took an undisclosed position without substantial authority on a return for which the firm was paid $3,000.\n4. **Ives** filed his 2022 return on March 1, 2023 (due April 15, 2023). He omitted 10% of gross income.\n5. **Jin** received a statutory notice of deficiency and wants to contest it without paying first."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "p",
+      "prompt": "Compute the penalties.",
+      "rows": [
+        {
+          "id": "ftp",
+          "label": "Garza — failure-to-pay penalty",
+          "answer": 250,
+          "tolerance": 0,
+          "explanation": "5 months (any part counts) × 0.5% × 10,000 = **250**."
+        },
+        {
+          "id": "ftf",
+          "label": "Garza — failure-to-file penalty after reduction",
+          "answer": 2250,
+          "tolerance": 0,
+          "explanation": "5 × 4.5% × 10,000 = **2,250**."
+        },
+        {
+          "id": "acc",
+          "label": "Hall — accuracy-related penalty",
+          "answer": 6000,
+          "tolerance": 0,
+          "explanation": "20% × 30,000 = **6,000**."
+        },
+        {
+          "id": "prep",
+          "label": "Preparer penalty (§6694(a))",
+          "answer": 1500,
+          "tolerance": 0,
+          "explanation": "Greater of $1,000 or 50% × $3,000 = **1,500**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Deadlines and forums",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Last day for the IRS to assess Ives's 2022 tax",
+          "options": [
+            "March 1, 2026",
+            "April 15, 2026",
+            "April 15, 2029"
+          ],
+          "answer": "April 15, 2026",
+          "explanation": "3 years from the due date (the 10% omission doesn't trigger the 6-year rule)."
+        },
+        {
+          "id": "d2",
+          "label": "Jin's forum",
+          "options": [
+            "U.S. Tax Court",
+            "U.S. District Court",
+            "Court of Federal Claims"
+          ],
+          "answer": "U.S. Tax Court",
+          "explanation": "No prepayment is required."
+        },
+        {
+          "id": "d3",
+          "label": "Jin's deadline to petition (U.S. address)",
+          "options": [
+            "30 days",
+            "90 days",
+            "3 years"
+          ],
+          "answer": "90 days",
+          "explanation": "§6213."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "c",
+      "prompt": "Is each practice permitted under Circular 230?",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Charging Hall a contingent fee to represent him in the exam of his original return",
+          "answer": "Permitted",
+          "explanation": "An exception under §10.27."
+        },
+        {
+          "id": "c2",
+          "label": "Signing a return with a disclosed position that has a reasonable basis",
+          "answer": "Permitted",
+          "explanation": "Disclosed positions need only a reasonable basis."
+        },
+        {
+          "id": "c3",
+          "label": "Keeping Garza's W-2s until her unpaid fee is settled",
+          "answer": "Not permitted",
+          "explanation": "Client records needed for compliance must be returned."
+        }
+      ],
+      "options": [
+        "Permitted",
+        "Not permitted"
+      ]
+    }
+  ]
+}

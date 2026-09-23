@@ -1,0 +1,85 @@
+{
+  "id": "reg-tbs-x4-individual",
+  "section": "REG",
+  "unitId": "reg-u5",
+  "moduleIds": [
+    "reg-adjustments",
+    "reg-itemized-deductions",
+    "reg-gross-income"
+  ],
+  "pool": "exam",
+  "title": "Individual taxable income — Sam and Pat Lee",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Sam and Pat Lee are married, file jointly, have no dependents, and are under 65. Compute their 2025 amounts. Use a standard deduction of $31,500.",
+  "exhibits": [
+    {
+      "title": "Income",
+      "content": "- Wages: **$140,000**\n- Qualified dividends: **$3,000**\n- Taxable interest: **$1,000**\n- Interest on municipal bonds: **$2,000**\n- Long-term capital gain: **$5,000**; short-term capital loss: **$9,000**"
+    },
+    {
+      "title": "Payments",
+      "content": "- Student loan interest: **$2,500**\n- Classroom supplies bought by Pat, a public school teacher: **$450**\n- Unreimbursed medical expenses: **$12,000**\n- State income and real estate taxes: **$9,500**\n- Home mortgage interest (acquisition debt): **$11,000**\n- Cash charitable contributions: **$4,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "gi",
+          "label": "Gross income",
+          "answer": 141000,
+          "tolerance": 0,
+          "explanation": "140,000 + 3,000 + 1,000 − 3,000 (net capital loss limit) = **141,000**; municipal interest is excluded."
+        },
+        {
+          "id": "agi",
+          "label": "Adjusted gross income",
+          "answer": 138200,
+          "tolerance": 0,
+          "explanation": "141,000 − 2,500 student loan interest − 300 educator expenses = **138,200**."
+        },
+        {
+          "id": "med",
+          "label": "Deductible medical expenses",
+          "answer": 1635,
+          "tolerance": 1,
+          "explanation": "12,000 − 7.5% × 138,200 (10,365) = **1,635**."
+        },
+        {
+          "id": "it",
+          "label": "Total itemized deductions",
+          "answer": 26135,
+          "tolerance": 1,
+          "explanation": "1,635 + 9,500 + 11,000 + 4,000 = **26,135**."
+        },
+        {
+          "id": "ded",
+          "label": "Deduction used (standard or itemized)",
+          "answer": 31500,
+          "tolerance": 0,
+          "explanation": "The standard deduction (31,500) is larger."
+        },
+        {
+          "id": "ti",
+          "label": "Taxable income",
+          "answer": 106700,
+          "tolerance": 0,
+          "explanation": "138,200 − 31,500 = **106,700**."
+        },
+        {
+          "id": "cl",
+          "label": "Capital loss carryforward to 2026",
+          "answer": 1000,
+          "tolerance": 0,
+          "explanation": "Net capital loss 4,000 − 3,000 deducted = **1,000** (short-term)."
+        }
+      ]
+    }
+  ],
+  "needsReview": true,
+  "reviewNote": "Relies on 2025 amounts set by the One Big Beautiful Bill Act (standard deduction, child tax credit, or SALT cap). Verify against current IRS guidance and exam materials."
+}

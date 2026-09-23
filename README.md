@@ -14,7 +14,8 @@ Home Screen") to use it offline.
 |---|---|
 | **FAR** | Full: 37 modules (lesson, ≥10 practice MCQs, lesson checks, and flashcards in each), 24 practice TBS (2 per unit), a 50-MCQ + 7-TBS simulated exam, final-review sheets, and a glossary |
 | **AUD** | Full: 32 modules, 20 practice TBS (2 per unit), a 78-MCQ + 7-TBS simulated exam, final-review sheets, and a glossary |
-| **REG, TCP** | Preview: the full blueprint outline plus one complete sample module each (property basis; partnership formation) |
+| **REG** | Full: 25 modules (tax year 2025, including One Big Beautiful Bill Act changes), 14 practice TBS, a 72-MCQ + 8-TBS simulated exam, final-review sheets, and a glossary |
+| **TCP** | Preview: the full blueprint outline plus one complete sample module (partnership formation) |
 
 Progress is stored **only on your device** (IndexedDB). Use **Settings → Export** to back up or move it to another device.
 

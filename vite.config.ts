@@ -33,7 +33,9 @@ export default defineConfig({
         globIgnores: [
           '**/{elk,cytoscape,katex,architectureDiagram,sequenceDiagram,usecaseDiagram,swimlanes,mindmap,ganttDiagram,gitGraphDiagram,c4Diagram,sankeyDiagram,xychartDiagram,quadrantDiagram,requirementDiagram,journeyDiagram,timeline-definition,kanban,radar,treemap,blockDiagram,packet,pieDiagram,erDiagram,classDiagram,stateDiagram,wardley,venn,ishikawa,eventmodeling}*.js',
         ],
-        maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
+        // All study content is bundled into the main chunk (~0.9 MB gzipped with three full sections);
+        // allow it to be precached so the app works fully offline.
+        maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
         navigateFallback: 'index.html',
         runtimeCaching: [
           {

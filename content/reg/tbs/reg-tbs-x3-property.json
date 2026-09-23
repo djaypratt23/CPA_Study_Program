@@ -1,0 +1,89 @@
+{
+  "id": "reg-tbs-x3-property",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-capital-gains",
+    "reg-nontaxable-exchanges"
+  ],
+  "pool": "exam",
+  "title": "Property transactions — Nolan Farms",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Kurt Nolan, a sole proprietor, had the 2025 transactions below. All business assets were held more than one year. He has $10,000 of nonrecaptured net §1231 losses from 2022. Enter losses as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Sales of business property",
+      "content": "| Asset | Cost | Accumulated depreciation | Sale price |\n|---|---:|---:|---:|\n| Barn (straight-line) | 400,000 | 100,000 | 450,000 |\n| Tractor | 60,000 | 45,000 | 20,000 |\n| Land used in the business | 50,000 | — | 35,000 |"
+    },
+    {
+      "title": "Exchange",
+      "content": "Kurt exchanged investment land (basis $100,000; FMV $250,000) for a rental building worth $230,000 plus $20,000 cash."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "barn",
+          "label": "Gain on the barn",
+          "answer": 150000,
+          "tolerance": 0,
+          "explanation": "450,000 − 300,000 = **150,000** (§1231)."
+        },
+        {
+          "id": "u1250",
+          "label": "Unrecaptured §1250 gain on the barn",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "Lesser of gain or depreciation = **100,000**."
+        },
+        {
+          "id": "tr",
+          "label": "Ordinary income on the tractor (§1245)",
+          "answer": 5000,
+          "tolerance": 0,
+          "explanation": "20,000 − 15,000 = 5,000 gain, all recapture."
+        },
+        {
+          "id": "land",
+          "label": "Gain (loss) on the land",
+          "answer": -15000,
+          "tolerance": 0,
+          "explanation": "35,000 − 50,000 = **(15,000)** §1231 loss."
+        },
+        {
+          "id": "n1231",
+          "label": "Net §1231 gain",
+          "answer": 135000,
+          "tolerance": 0,
+          "explanation": "150,000 − 15,000 = **135,000**."
+        },
+        {
+          "id": "look",
+          "label": "Portion of net §1231 gain treated as ordinary (lookback)",
+          "answer": 10000,
+          "tolerance": 0,
+          "explanation": "Prior nonrecaptured §1231 losses: **10,000**."
+        },
+        {
+          "id": "rec",
+          "label": "Gain recognized on the exchange",
+          "answer": 20000,
+          "tolerance": 0,
+          "explanation": "Lesser of realized 150,000 or 20,000 cash boot."
+        },
+        {
+          "id": "bas",
+          "label": "Basis of the rental building",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "230,000 − 130,000 deferred = **100,000**."
+        }
+      ]
+    }
+  ]
+}

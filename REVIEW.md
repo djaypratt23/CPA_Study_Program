@@ -9,6 +9,27 @@ prints the current count. Please confirm or correct each one, then remove the fl
 |---|---|---|
 | `far-ppe-10` (government donation of a building to a business entity) | `content/far/modules/far-ppe-acquisition/questions.json` | U.S. GAAP has little explicit guidance on how business entities account for government grants (ASU 2021-10 adds disclosures only). The keyed answer follows common review-course treatment (record the building at fair value, with contribution revenue or a gain); confirm it against current exam materials. |
 
+## REG — 2025 amounts from the One Big Beautiful Bill Act
+
+REG reflects tax year 2025 law, including provisions of the One Big Beautiful Bill Act (P.L. 119-21) effective for
+2025, which are testable from July 1, 2026. These items use amounts set by that law and are flagged `needsReview`
+so you can confirm them against current IRS guidance and your review course:
+
+| Item | What to confirm |
+|---|---|
+| `reg-fs-chk2`, `reg-fs-08`, `reg-x4-03` | 2025 standard deduction ($15,750 single; $31,500 MFJ; $23,625 HOH) |
+| `reg-cr-chk1`, `reg-x4-16` | 2025 child tax credit of $2,200 per child (refundable up to $1,700) |
+| `reg-id-chk1` | 2025 SALT cap of $40,000 (phase-down above $500,000 MAGI) |
+| `reg-id-10` | Qualified tips deduction (up to $25,000; 2025–2028) |
+| `reg-cr-09` | Residential clean energy credit ending for expenditures after 2025 |
+| `reg-cc-08` | 100% bonus depreciation after January 19, 2025; §179 limit of $2,500,000 |
+| TBS `reg-tbs-u4-gross-income`, `reg-tbs-u5-taxable-income`, `reg-tbs-x4-individual`, `reg-tbs-x4-family` | Standard deduction, child tax credit, and SALT amounts |
+
+The REG lessons and the `reg-numbers` review sheet also cite the senior deduction ($6,000), the overtime and car
+loan interest deductions, and the 2026 estate and gift exemption ($15,000,000). Inflation-indexed 2025 amounts not
+changed by the law (IRA, HSA, AMT exemption, Social Security wage base, gift annual exclusion) come from IRS
+revenue procedures and are worth a spot-check too.
+
 ## Blueprint facts still marked "verify"
 
 The official AICPA Blueprint PDFs could not be reached from the build environment, so these figures come
@@ -30,15 +51,15 @@ AUD is now fully built. Nothing in it is flagged `needsReview`, but these points
 
 ## Tax-law currency (REG, TCP)
 
-The sample modules reflect **tax year 2025** law. Their topics (property basis, partnership formation) were
-chosen because the One Big Beautiful Bill Act did not change their core rules. Before building the remaining
-tax modules, re-check the testing-window policy (the OBBBA special policy and the six-month rule) and any
-inflation-indexed amounts.
+REG reflects **tax year 2025** law (see the REG section above). The TCP sample module (partnership formation)
+was chosen because the One Big Beautiful Bill Act didn't change its core rules. Before building the rest of TCP,
+re-check the testing-window policy (the OBBBA special policy and the six-month rule), and consider whether 2026
+amounts become testable during the learner's exam window.
 
 ## Suggested second-pass review
 
 Every numeric answer key was recomputed independently, and the test suite proves every TBS answer key scores
 100% against its own schema. A subject-matter reviewer's second pass is still worthwhile on:
 
-- The FAR and AUD simulated exams (`content/{far,aud}/exam-questions/`, `content/{far,aud}/tbs/*-tbs-x*.json`).
+- The FAR, AUD, and REG simulated exams (`content/{far,aud,reg}/exam-questions/`, `content/{far,aud,reg}/tbs/*-tbs-x*.json`).
 - Judgment-heavy classification items: NFP contributions, subsequent-event type, and contingency disclosure (gain contingencies are keyed "disclose only").

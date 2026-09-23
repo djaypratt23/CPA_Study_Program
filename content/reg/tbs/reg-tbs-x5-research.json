@@ -1,0 +1,107 @@
+{
+  "id": "reg-tbs-x5-research",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-nontaxable-exchanges",
+    "reg-trusts-exempt"
+  ],
+  "pool": "exam",
+  "title": "Research and filing deadlines",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Select the governing authority and the filing deadlines for the clients described.",
+  "exhibits": [
+    {
+      "title": "Clients",
+      "content": "1. **Rae** (single) sold her principal residence after owning and living in it 14 months because her employer transferred her to another state. Her gain is $180,000.\n2. A calendar-year partnership, S corporation, C corporation, and a trust each need to know their 2025 return due dates (no extensions)."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) lets Rae exclude part of her gain?",
+      "excerpts": [
+        {
+          "id": "a",
+          "citation": "IRC §121(a) (paraphrase)",
+          "text": "Gross income doesn't include gain from the sale of property owned and used as the taxpayer's principal residence for periods aggregating 2 years or more during the 5-year period ending on the date of sale."
+        },
+        {
+          "id": "b",
+          "citation": "IRC §121(c) (paraphrase)",
+          "text": "If a sale doesn't meet the 2-year requirements but is due to a change in place of employment, health, or unforeseen circumstances, a reduced maximum exclusion applies, prorated by the portion of the 2-year period met."
+        },
+        {
+          "id": "c",
+          "citation": "IRC §1031(a) (paraphrase)",
+          "text": "No gain or loss is recognized on the exchange of real property held for productive use in a trade or business or for investment for real property of like kind."
+        },
+        {
+          "id": "d",
+          "citation": "IRC §1033(a) (paraphrase)",
+          "text": "If property is involuntarily converted and the proceeds are reinvested in similar property within the replacement period, gain is recognized only to the extent the amount realized exceeds the cost of the replacement property."
+        }
+      ],
+      "answer": "b",
+      "explanation": "Rae doesn't meet the 2-year tests but moved for employment — §121(c) provides a prorated exclusion (14/24 × $250,000 = $145,833)."
+    },
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "ex",
+          "label": "Rae's maximum exclusion (round to the nearest dollar)",
+          "answer": 145833,
+          "tolerance": 1,
+          "explanation": "14 ÷ 24 × 250,000 = **145,833**; recognized gain ≈ 34,167."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "due",
+      "prompt": "Select each 2025 return's unextended due date (calendar-year filers).",
+      "rows": [
+        {
+          "id": "p",
+          "label": "Partnership (Form 1065)",
+          "answer": "March 15, 2026",
+          "explanation": "15th day of the 3rd month."
+        },
+        {
+          "id": "s",
+          "label": "S corporation (Form 1120-S)",
+          "answer": "March 15, 2026",
+          "explanation": "15th day of the 3rd month."
+        },
+        {
+          "id": "c",
+          "label": "C corporation (Form 1120)",
+          "answer": "April 15, 2026",
+          "explanation": "15th day of the 4th month."
+        },
+        {
+          "id": "t",
+          "label": "Trust (Form 1041)",
+          "answer": "April 15, 2026",
+          "explanation": "15th day of the 4th month."
+        },
+        {
+          "id": "e",
+          "label": "Tax-exempt organization (Form 990)",
+          "answer": "May 15, 2026",
+          "explanation": "15th day of the 5th month."
+        }
+      ],
+      "options": [
+        "March 15, 2026",
+        "April 15, 2026",
+        "May 15, 2026"
+      ]
+    }
+  ]
+}

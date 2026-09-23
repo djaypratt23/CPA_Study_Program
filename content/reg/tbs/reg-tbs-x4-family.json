@@ -1,0 +1,118 @@
+{
+  "id": "reg-tbs-x4-family",
+  "section": "REG",
+  "unitId": "reg-u4",
+  "moduleIds": [
+    "reg-filing-status",
+    "reg-individual-credits",
+    "reg-gross-income"
+  ],
+  "pool": "exam",
+  "title": "Filing status, income, and credits — Maria Ortiz",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Maria Ortiz is unmarried. Her daughter (age 8) and son (age 18, a full-time college freshman) lived with her all year; she paid all household costs and more than half of each child's support. Her 2025 AGI is **$72,000** (all wages).",
+  "exhibits": [
+    {
+      "title": "Additional facts",
+      "content": "- Maria paid $4,500 of after-school care for her daughter so she could work.\n- She paid $5,000 of qualified tuition for her son's first year of college.\n- She received: $30,000 of life insurance on her late mother's death; $1,200 of jury duty pay (included in AGI); a $2,000 gift from her brother."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "fs",
+      "prompt": "Status and dependents",
+      "rows": [
+        {
+          "id": "f1",
+          "label": "Maria's filing status",
+          "options": [
+            "Single",
+            "Head of household",
+            "Qualifying surviving spouse"
+          ],
+          "answer": "Head of household",
+          "explanation": "Unmarried; maintained a home for qualifying children."
+        },
+        {
+          "id": "f2",
+          "label": "Her son, age 18, is a",
+          "options": [
+            "Qualifying child",
+            "Qualifying relative",
+            "Not a dependent"
+          ],
+          "answer": "Qualifying child",
+          "explanation": "Under 24 and a full-time student."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "inc",
+      "prompt": "Included in gross income?",
+      "rows": [
+        {
+          "id": "i1",
+          "label": "Life insurance proceeds",
+          "answer": "Excluded",
+          "explanation": "§101."
+        },
+        {
+          "id": "i2",
+          "label": "Jury duty pay",
+          "answer": "Included",
+          "explanation": "Compensation."
+        },
+        {
+          "id": "i3",
+          "label": "Gift from her brother",
+          "answer": "Excluded",
+          "explanation": "§102."
+        }
+      ],
+      "options": [
+        "Included",
+        "Excluded"
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "cr",
+      "prompt": "Compute her 2025 credits.",
+      "rows": [
+        {
+          "id": "ctc",
+          "label": "Child tax credit (daughter)",
+          "answer": 2200,
+          "tolerance": 0,
+          "explanation": "One child under 17: **2,200**."
+        },
+        {
+          "id": "odc",
+          "label": "Credit for other dependents (son)",
+          "answer": 500,
+          "tolerance": 0,
+          "explanation": "The son is too old for the CTC: **500**."
+        },
+        {
+          "id": "dcc",
+          "label": "Child and dependent care credit",
+          "answer": 600,
+          "tolerance": 0,
+          "explanation": "Expenses limited to 3,000 × 20% (AGI over $43,000) = **600**."
+        },
+        {
+          "id": "aotc",
+          "label": "American opportunity credit",
+          "answer": 2500,
+          "tolerance": 0,
+          "explanation": "2,000 + 25% × 2,000 = **2,500** (MAGI below $80,000)."
+        }
+      ]
+    }
+  ],
+  "needsReview": true,
+  "reviewNote": "Relies on 2025 amounts set by the One Big Beautiful Bill Act (standard deduction, child tax credit, or SALT cap). Verify against current IRS guidance and exam materials."
+}

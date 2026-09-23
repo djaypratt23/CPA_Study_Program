@@ -82,7 +82,7 @@ Lesson Markdown supports structured fenced blocks: ` ```check ` (embedded questi
 
 ## Later sessions (one section at a time)
 
-Progress: **FAR — full. AUD — full.** Next: REG, then TCP.
+Progress: **FAR — full. AUD — full. REG — full.** Next: TCP.
 
 For each remaining section, in the learner's planned order (FAR → AUD → REG → TCP, adjustable in Settings):
 
