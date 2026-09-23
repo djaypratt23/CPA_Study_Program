@@ -1,0 +1,148 @@
+{
+  "id": "aud-tbs-u2-engagement-letter",
+  "section": "AUD",
+  "unitId": "aud-u2",
+  "moduleIds": [
+    "aud-engagement-acceptance",
+    "aud-professional-standards"
+  ],
+  "pool": "practice",
+  "title": "New client acceptance — Lindqvist Marine",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Your firm has been asked to audit **Lindqvist Marine, Inc.**, a privately held boat manufacturer, for the year ending December 31, Year 1. Lindqvist's prior auditor audited Year 0. Review the draft engagement letter and decide which inquiries of the predecessor are required before acceptance.",
+  "exhibits": [
+    {
+      "title": "Background",
+      "content": "- Lindqvist changed auditors after a disagreement with the predecessor about warranty reserves.\n- Management has authorized the predecessor to respond to your inquiries.\n- Lindqvist prepares its statements under U.S. GAAP."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "docreview",
+      "id": "letter",
+      "prompt": "Review the draft engagement letter. For each highlighted phrase, keep it or select the correct replacement.",
+      "segments": [
+        {
+          "text": "We will audit the financial statements of Lindqvist Marine, Inc. in accordance with "
+        },
+        {
+          "id": "e1",
+          "original": "PCAOB auditing standards",
+          "options": [
+            "PCAOB auditing standards",
+            "auditing standards generally accepted in the United States of America",
+            "Statements on Standards for Accounting and Review Services"
+          ],
+          "answer": "auditing standards generally accepted in the United States of America",
+          "explanation": "A private company is audited under AICPA GAAS; PCAOB standards apply to issuers."
+        },
+        {
+          "text": ". The objective of our audit is to obtain "
+        },
+        {
+          "id": "e2",
+          "original": "absolute assurance",
+          "options": [
+            "absolute assurance",
+            "reasonable assurance",
+            "limited assurance"
+          ],
+          "answer": "reasonable assurance",
+          "explanation": "Audits provide reasonable (high, but not absolute) assurance. Limited assurance is a review."
+        },
+        {
+          "text": " about whether the financial statements as a whole are free from material misstatement, whether due to fraud or error. "
+        },
+        {
+          "id": "e3",
+          "original": "Because of the inherent limitations of an audit, an unavoidable risk exists that some material misstatements may not be detected",
+          "options": [
+            "Because of the inherent limitations of an audit, an unavoidable risk exists that some material misstatements may not be detected",
+            "Our audit is designed to detect all misstatements, including immaterial ones",
+            "We guarantee the detection of all fraud"
+          ],
+          "answer": "Because of the inherent limitations of an audit, an unavoidable risk exists that some material misstatements may not be detected",
+          "explanation": "Inherent limitations are a required term in the engagement letter."
+        },
+        {
+          "text": ". Management is responsible for "
+        },
+        {
+          "id": "e4",
+          "original": "the design, implementation, and maintenance of internal control relevant to the preparation of the financial statements",
+          "options": [
+            "the design, implementation, and maintenance of internal control relevant to the preparation of the financial statements",
+            "reviewing the auditor's internal control documentation only",
+            "nothing beyond signing the representation letter"
+          ],
+          "answer": "the design, implementation, and maintenance of internal control relevant to the preparation of the financial statements",
+          "explanation": "Internal control responsibility is part of the premise of the audit."
+        },
+        {
+          "text": ", for the preparation and fair presentation of the financial statements, and for providing us with "
+        },
+        {
+          "id": "e5",
+          "original": "access only to the accounting records we specifically request in advance",
+          "options": [
+            "access only to the accounting records we specifically request in advance",
+            "access to all relevant information, additional information we request, and unrestricted access to persons within the entity"
+          ],
+          "answer": "access to all relevant information, additional information we request, and unrestricted access to persons within the entity",
+          "explanation": "Management must provide unrestricted access; limited access would be a scope limitation."
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "inq",
+      "prompt": "Is each inquiry of the predecessor required before accepting the engagement?",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Information bearing on the integrity of management",
+          "answer": "Required before acceptance",
+          "explanation": "A required inquiry."
+        },
+        {
+          "id": "q2",
+          "label": "Disagreements with management about accounting policies (e.g., warranty reserves)",
+          "answer": "Required before acceptance",
+          "explanation": "A required inquiry — especially relevant here."
+        },
+        {
+          "id": "q3",
+          "label": "The predecessor's understanding of the reason for the change in auditors",
+          "answer": "Required before acceptance",
+          "explanation": "A required inquiry."
+        },
+        {
+          "id": "q4",
+          "label": "Access to the predecessor's working papers for inventory",
+          "answer": "Not required before acceptance",
+          "explanation": "Reviewing working papers is requested after acceptance."
+        },
+        {
+          "id": "q5",
+          "label": "Communications to those charged with governance about fraud and noncompliance",
+          "answer": "Required before acceptance",
+          "explanation": "A required inquiry."
+        },
+        {
+          "id": "q6",
+          "label": "The fee the predecessor charged for the Year 0 audit",
+          "answer": "Not required before acceptance",
+          "explanation": "Fees are not a required inquiry."
+        }
+      ],
+      "options": [
+        "Required before acceptance",
+        "Not required before acceptance"
+      ]
+    }
+  ]
+}

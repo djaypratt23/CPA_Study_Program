@@ -1,0 +1,147 @@
+{
+  "id": "aud-tbs-u2-quality",
+  "section": "AUD",
+  "unitId": "aud-u2",
+  "moduleIds": [
+    "aud-quality-management"
+  ],
+  "pool": "practice",
+  "title": "System of quality management — Reed & Alvarez CPAs",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Reed & Alvarez CPAs is designing its system of quality management under SQMS No. 1 and SQMS No. 2. Classify each policy by component, then evaluate the proposed engagement quality reviewers.",
+  "exhibits": [
+    {
+      "title": "Proposed firm policies",
+      "content": "1. Partner compensation is tied to quality ratings as well as revenue.\n2. Before accepting a client, the firm evaluates the integrity of its principal owners.\n3. The firm buys audit software and trains staff to use it.\n4. All staff confirm their independence annually in writing.\n5. Selected completed engagements are inspected each year, and the root causes of findings are analyzed.\n6. The firm requires consultation with the national office on complex revenue issues.\n7. Quality objectives and quality risks are updated annually as the firm's practice changes."
+    },
+    {
+      "title": "Proposed EQ reviewers for the Year 3 audit of Pinecrest Clinics",
+      "content": "- **Hale** — engagement partner for Years 1 and 2 of the Pinecrest audit\n- **Irwin** — senior manager on the Year 3 Pinecrest team\n- **Jiang** — partner in another office with health-care expertise, no involvement with Pinecrest\n- **Kerr** — engagement partner on Pinecrest four years ago (Year −1)"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "comp",
+      "prompt": "Select the component each policy primarily addresses.",
+      "rows": [
+        {
+          "id": "p1",
+          "label": "1. Compensation tied to quality",
+          "answer": "Governance and leadership",
+          "explanation": "Leadership's accountability and incentives support a culture of quality."
+        },
+        {
+          "id": "p2",
+          "label": "2. Evaluating owners' integrity",
+          "answer": "Acceptance and continuance",
+          "explanation": "Client integrity is evaluated before acceptance."
+        },
+        {
+          "id": "p3",
+          "label": "3. Audit software and training",
+          "answer": "Resources",
+          "explanation": "Technological and human resources."
+        },
+        {
+          "id": "p4",
+          "label": "4. Annual independence confirmations",
+          "answer": "Relevant ethical requirements",
+          "explanation": "Independence is a relevant ethical requirement."
+        },
+        {
+          "id": "p5",
+          "label": "5. Inspections and root-cause analysis",
+          "answer": "Monitoring and remediation",
+          "explanation": "Evaluating the system and remediating deficiencies."
+        },
+        {
+          "id": "p6",
+          "label": "6. Required consultation",
+          "answer": "Engagement performance",
+          "explanation": "Consultation on difficult matters is part of engagement performance."
+        },
+        {
+          "id": "p7",
+          "label": "7. Updating objectives and risks",
+          "answer": "The firm's risk assessment process",
+          "explanation": "Establishing objectives and identifying and assessing risks."
+        }
+      ],
+      "options": [
+        "Governance and leadership",
+        "The firm's risk assessment process",
+        "Relevant ethical requirements",
+        "Acceptance and continuance",
+        "Engagement performance",
+        "Resources",
+        "Monitoring and remediation"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "eqr",
+      "prompt": "May each person serve as the Year 3 EQ reviewer?",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Hale",
+          "answer": "Not eligible",
+          "explanation": "Engagement partner within the past two years; the cooling-off period has not passed."
+        },
+        {
+          "id": "r2",
+          "label": "Irwin",
+          "answer": "Not eligible",
+          "explanation": "A member of the engagement team cannot be the EQ reviewer."
+        },
+        {
+          "id": "r3",
+          "label": "Jiang",
+          "answer": "Eligible",
+          "explanation": "Competent, objective, and not involved in the engagement."
+        },
+        {
+          "id": "r4",
+          "label": "Kerr",
+          "answer": "Eligible",
+          "explanation": "More than two years have passed since Kerr was engagement partner."
+        }
+      ],
+      "options": [
+        "Eligible",
+        "Not eligible"
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) supports your conclusion about Hale?",
+      "excerpts": [
+        {
+          "id": "a",
+          "citation": "QM 20 (SQMS No. 2) (paraphrase)",
+          "text": "The firm's policies should require a cooling-off period of two years, or longer if required by ethical requirements, before an individual who served as engagement partner is appointed as the engagement quality reviewer."
+        },
+        {
+          "id": "b",
+          "citation": "QM 10 (SQMS No. 1) (paraphrase)",
+          "text": "The firm should establish quality objectives that address the acceptance and continuance of client relationships and specific engagements."
+        },
+        {
+          "id": "c",
+          "citation": "AU-C 220 (paraphrase)",
+          "text": "The engagement partner should take overall responsibility for managing and achieving quality on the audit engagement."
+        },
+        {
+          "id": "d",
+          "citation": "ET 1.200.001 (paraphrase)",
+          "text": "A member in public practice should be independent in the performance of professional services as required by standards promulgated by bodies designated by Council."
+        }
+      ],
+      "answer": "a",
+      "explanation": "SQMS No. 2 imposes the two-year cooling-off period for former engagement partners."
+    }
+  ]
+}
