@@ -1,0 +1,107 @@
+{
+  "id": "reg-tbs-u2-contracts-agency",
+  "section": "REG",
+  "unitId": "reg-u2",
+  "moduleIds": [
+    "reg-contracts",
+    "reg-agency",
+    "reg-business-structures"
+  ],
+  "pool": "practice",
+  "title": "Contracts and agency — Linden Supply",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Linden Supply, a general partnership that distributes restaurant equipment, faces several legal questions. Select the best answer for each.",
+  "exhibits": [
+    {
+      "title": "Situations",
+      "content": "1. Linden's former sales agent, fired on May 1, ordered $15,000 of goods on May 10 from a vendor he had dealt with for years. Linden never notified the vendor.\n2. A Linden salesperson orally agreed to sell a used oven to a restaurant for $1,800. The restaurant later refused to pay; nothing was signed.\n3. Linden mailed an acceptance of a supplier's offer on June 3; the supplier's revocation, mailed June 2, arrived June 5.\n4. Linden, a merchant, sent a signed written offer to sell mixers at $400 each, \"firm for 60 days.\" On day 20 it tried to revoke.\n5. A Linden delivery driver, on his route, negligently injured a pedestrian.\n6. A creditor of the partnership sues partner Rosa personally for an unpaid partnership debt.\n7. Linden shipped goods FOB shipping point by common carrier; they were destroyed in transit."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Select the correct conclusion.",
+      "rows": [
+        {
+          "id": "s1",
+          "label": "1. Former agent's order",
+          "options": [
+            "Linden is bound through apparent authority",
+            "Linden isn't bound because actual authority ended",
+            "Only the former agent is bound, because he was fired"
+          ],
+          "answer": "Linden is bound through apparent authority",
+          "explanation": "Third parties who dealt with the agent are entitled to actual notice of termination."
+        },
+        {
+          "id": "s2",
+          "label": "2. Oral oven sale",
+          "options": [
+            "Enforceable — it's under $5,000",
+            "Unenforceable under the statute of frauds (goods of $500 or more) unless an exception applies",
+            "Enforceable because Linden is a merchant"
+          ],
+          "answer": "Unenforceable under the statute of frauds (goods of $500 or more) unless an exception applies",
+          "explanation": "UCC 2-201 requires a signed writing for goods of $500 or more."
+        },
+        {
+          "id": "s3",
+          "label": "3. Acceptance vs. revocation",
+          "options": [
+            "A contract formed on June 3",
+            "No contract — the revocation was mailed first",
+            "No contract — acceptance is effective on receipt"
+          ],
+          "answer": "A contract formed on June 3",
+          "explanation": "Acceptance is effective on dispatch; revocation only on receipt (June 5)."
+        },
+        {
+          "id": "s4",
+          "label": "4. Merchant's firm offer",
+          "options": [
+            "The revocation is ineffective — the offer is irrevocable for the stated 60 days",
+            "The revocation is effective because there's no consideration",
+            "The offer was never valid"
+          ],
+          "answer": "The revocation is ineffective — the offer is irrevocable for the stated 60 days",
+          "explanation": "UCC 2-205 firm offer (up to 3 months)."
+        },
+        {
+          "id": "s5",
+          "label": "5. Driver's accident",
+          "options": [
+            "Only the driver is liable",
+            "Linden and the driver are both liable",
+            "Only Linden is liable"
+          ],
+          "answer": "Linden and the driver are both liable",
+          "explanation": "Respondeat superior — within the scope of employment."
+        },
+        {
+          "id": "s6",
+          "label": "6. Rosa's personal liability",
+          "options": [
+            "Rosa isn't personally liable",
+            "Rosa is personally liable (joint and several liability of general partners)",
+            "Rosa is liable only for her ownership share"
+          ],
+          "answer": "Rosa is personally liable (joint and several liability of general partners)",
+          "explanation": "General partners have unlimited personal liability (creditors generally must first exhaust partnership assets)."
+        },
+        {
+          "id": "s7",
+          "label": "7. Goods destroyed in transit",
+          "options": [
+            "Linden bears the loss",
+            "The buyer bears the loss",
+            "The loss is split"
+          ],
+          "answer": "The buyer bears the loss",
+          "explanation": "FOB shipping point: risk passed on delivery to the carrier."
+        }
+      ]
+    }
+  ]
+}

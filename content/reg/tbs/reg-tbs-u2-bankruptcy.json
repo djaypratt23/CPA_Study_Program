@@ -1,0 +1,100 @@
+{
+  "id": "reg-tbs-u2-bankruptcy",
+  "section": "REG",
+  "unitId": "reg-u2",
+  "moduleIds": [
+    "reg-debtor-creditor"
+  ],
+  "pool": "practice",
+  "title": "Chapter 7 distribution — Garrison Tools",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "**Garrison Tools, Inc.** filed a voluntary Chapter 7 petition. The trustee has sold all assets. Compute each creditor group's recovery, then answer the questions that follow.",
+  "exhibits": [
+    {
+      "title": "Estate and claims",
+      "content": "- Cash from sale of equipment that secured First Bank's loan: **$110,000**\n- Cash from all other assets: **$300,000**\n\n| Claim | Amount |\n|---|---:|\n| First Bank (secured by the equipment) | 150,000 |\n| Trustee's fees and administrative expenses | 20,000 |\n| Employee wages earned within 180 days before filing (within the statutory cap) | 15,000 |\n| Federal income taxes (priority) | 25,000 |\n| General unsecured trade creditors | 440,000 |"
+    },
+    {
+      "title": "Other facts",
+      "content": "- 45 days before filing, while insolvent, Garrison paid a trade creditor, Kline Co., $12,000 on an overdue invoice (not in the ordinary course).\n- Garrison's CEO personally guaranteed First Bank's loan."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "dist",
+      "prompt": "Compute the distributions.",
+      "rows": [
+        {
+          "id": "fb1",
+          "label": "First Bank's recovery from its collateral",
+          "answer": 110000,
+          "tolerance": 0,
+          "explanation": "The secured creditor receives the proceeds of its collateral: **110,000**."
+        },
+        {
+          "id": "pri",
+          "label": "Total paid to priority claims (administrative, wages, taxes)",
+          "answer": 60000,
+          "tolerance": 0,
+          "explanation": "20,000 + 15,000 + 25,000 = **60,000**, paid in full from the 300,000."
+        },
+        {
+          "id": "pct",
+          "label": "Percentage paid on general unsecured claims",
+          "answer": 50,
+          "tolerance": 0.1,
+          "explanation": "Remaining 240,000 ÷ (440,000 trade + 40,000 First Bank deficiency) = **50%**."
+        },
+        {
+          "id": "fb2",
+          "label": "First Bank's total recovery",
+          "answer": 130000,
+          "tolerance": 0,
+          "explanation": "110,000 + 50% × 40,000 = **130,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "rows": [
+        {
+          "id": "k",
+          "label": "The $12,000 payment to Kline Co.",
+          "options": [
+            "Recoverable by the trustee as a preferential transfer",
+            "Protected because Kline isn't an insider",
+            "Protected because it was less than $25,000"
+          ],
+          "answer": "Recoverable by the trustee as a preferential transfer",
+          "explanation": "Antecedent debt, while insolvent, within 90 days, not ordinary course."
+        },
+        {
+          "id": "g",
+          "label": "First Bank's right against the CEO for the unpaid $20,000",
+          "options": [
+            "Discharged by Garrison's bankruptcy",
+            "First Bank may collect from the CEO as surety",
+            "Only if the CEO was an officer when the loan was made"
+          ],
+          "answer": "First Bank may collect from the CEO as surety",
+          "explanation": "The debtor's bankruptcy isn't a defense for the surety."
+        },
+        {
+          "id": "st",
+          "label": "Effect of the petition on a pending supplier lawsuit against Garrison",
+          "options": [
+            "It proceeds normally",
+            "It is automatically stayed",
+            "It is dismissed with prejudice"
+          ],
+          "answer": "It is automatically stayed",
+          "explanation": "The automatic stay halts collection actions."
+        }
+      ]
+    }
+  ]
+}
