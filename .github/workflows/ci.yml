@@ -32,7 +32,11 @@ jobs:
       - name: Test
         run: npm test
       - name: Build
-        run: npm run build
+        # Tests and validation already ran above; build the app only. GitHub Pages serves the
+        # site under /<repo>/, so set the base path (Cloudflare Pages serves from the root).
+        run: npm run build:app
+        env:
+          BASE_PATH: /CPA_Study_Program/
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
