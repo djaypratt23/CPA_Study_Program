@@ -1,0 +1,119 @@
+{
+  "id": "aud-tbs-u3-risk-materiality",
+  "section": "AUD",
+  "unitId": "aud-u3",
+  "moduleIds": [
+    "aud-risk-materiality"
+  ],
+  "pool": "practice",
+  "title": "Materiality and the risk response — Tallis Foods",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "You are setting materiality and planning responses for the audit of **Tallis Foods**, a stable, profitable private company. Firm policy: overall materiality = 5% of pretax income from continuing operations; performance materiality = 75% of overall; clearly trivial = 5% of overall.",
+  "exhibits": [
+    {
+      "title": "Data",
+      "content": "- Pretax income from continuing operations: **$3,200,000**\n- Planned audit risk for inventory existence: 5%\n- Assessed inherent risk: 100%; assessed control risk: 20% (controls tested and effective)"
+    },
+    {
+      "title": "Risk assessments",
+      "content": "| Assertion | Inherent risk | Control risk |\n|---|---|---|\n| Revenue cut-off | High | High (no reliance) |\n| Prepaid insurance existence | Low | Maximum (not tested) |\n| Inventory existence | High | Low (tested) |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "m",
+      "prompt": "Compute the thresholds and detection risk.",
+      "rows": [
+        {
+          "id": "om",
+          "label": "Overall materiality",
+          "answer": 160000,
+          "tolerance": 0,
+          "explanation": "3,200,000 × 5% = **160,000**."
+        },
+        {
+          "id": "pm",
+          "label": "Performance materiality",
+          "answer": 120000,
+          "tolerance": 0,
+          "explanation": "160,000 × 75% = **120,000**."
+        },
+        {
+          "id": "ct",
+          "label": "Clearly trivial threshold",
+          "answer": 8000,
+          "tolerance": 0,
+          "explanation": "160,000 × 5% = **8,000**."
+        },
+        {
+          "id": "dr",
+          "label": "Acceptable detection risk for inventory existence (%)",
+          "answer": 25,
+          "tolerance": 0.1,
+          "explanation": "DR = 5% ÷ (100% × 20%) = **25%**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "resp",
+      "prompt": "Select the most appropriate substantive approach for each assertion.",
+      "rows": [
+        {
+          "id": "a1",
+          "label": "Revenue cut-off",
+          "answer": "Extensive tests of details at year-end with larger samples",
+          "explanation": "High RMM → low acceptable detection risk → the most persuasive evidence at year-end."
+        },
+        {
+          "id": "a2",
+          "label": "Prepaid insurance existence",
+          "answer": "Limited substantive procedures (e.g., analytics)",
+          "explanation": "Low inherent risk and a small balance allow less extensive procedures — but some substantive work is still required for material items."
+        },
+        {
+          "id": "a3",
+          "label": "Inventory existence",
+          "answer": "Moderate testing, possibly at an interim date",
+          "explanation": "Effective controls reduce RMM, permitting some reduction in the extent of testing."
+        }
+      ],
+      "options": [
+        "Extensive tests of details at year-end with larger samples",
+        "Moderate testing, possibly at an interim date",
+        "Limited substantive procedures (e.g., analytics)"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "qual",
+      "prompt": "Evaluate each uncorrected misstatement.",
+      "rows": [
+        {
+          "id": "u1",
+          "label": "A $6,500 overstatement of accrued expenses",
+          "answer": "Need not be accumulated",
+          "explanation": "Below the $8,000 clearly trivial threshold."
+        },
+        {
+          "id": "u2",
+          "label": "A $40,000 understatement of revenue",
+          "answer": "Accumulate and evaluate",
+          "explanation": "Above clearly trivial; accumulate even though it is below materiality."
+        },
+        {
+          "id": "u3",
+          "label": "A $7,000 misstatement that causes Tallis to meet a debt covenant",
+          "answer": "Accumulate and evaluate",
+          "explanation": "Qualitative factors can make a small misstatement material; it is not clearly inconsequential."
+        }
+      ],
+      "options": [
+        "Accumulate and evaluate",
+        "Need not be accumulated"
+      ]
+    }
+  ]
+}

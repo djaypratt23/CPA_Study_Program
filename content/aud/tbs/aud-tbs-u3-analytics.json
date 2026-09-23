@@ -1,0 +1,88 @@
+{
+  "id": "aud-tbs-u3-analytics",
+  "section": "AUD",
+  "unitId": "aud-u3",
+  "moduleIds": [
+    "aud-planning"
+  ],
+  "pool": "practice",
+  "title": "Planning analytics — Norhaven Distributors",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "You are planning the Year 2 audit of **Norhaven Distributors**. Compute the ratios and identify the account and assertion each result most directly puts at risk. Use a 365-day year and round ratios to one decimal place (percentages to one decimal).",
+  "exhibits": [
+    {
+      "title": "Selected data",
+      "content": "| | Year 2 | Year 1 |\n|---|---:|---:|\n| Net sales (all on credit) | 9,125,000 | 8,030,000 |\n| Cost of sales | 5,840,000 | 5,621,000 |\n| Accounts receivable, year-end | 1,500,000 | 880,000 |\n| Inventory, year-end | 1,460,000 | 1,124,000 |\n| Allowance for credit losses | 30,000 | 44,000 |\n\nIndustry gross margins were flat at about 30% in both years."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "r",
+      "prompt": "Compute the Year 2 amounts.",
+      "rows": [
+        {
+          "id": "gm",
+          "label": "Gross margin % (Year 2)",
+          "answer": 36.0,
+          "tolerance": 0.1,
+          "explanation": "(9,125,000 − 5,840,000) ÷ 9,125,000 = **36.0%** (Year 1: 30.0%)."
+        },
+        {
+          "id": "dso",
+          "label": "Days sales outstanding (Year 2)",
+          "answer": 60.0,
+          "tolerance": 0.1,
+          "explanation": "1,500,000 ÷ (9,125,000 ÷ 365 = 25,000) = **60.0 days** (Year 1: 880,000 ÷ 22,000 = 40.0)."
+        },
+        {
+          "id": "dsi",
+          "label": "Days sales in inventory (Year 2, using year-end inventory)",
+          "answer": 91.3,
+          "tolerance": 0.1,
+          "explanation": "1,460,000 ÷ (5,840,000 ÷ 365 = 16,000) = **91.3 days** (Year 1: 1,124,000 ÷ 15,400 = 73.0)."
+        },
+        {
+          "id": "alw",
+          "label": "Allowance as a % of receivables (Year 2)",
+          "answer": 2.0,
+          "tolerance": 0.1,
+          "explanation": "30,000 ÷ 1,500,000 = **2.0%** (Year 1: 44,000 ÷ 880,000 = 5.0%)."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "risk",
+      "prompt": "For each finding, select the account and assertion most at risk.",
+      "rows": [
+        {
+          "id": "k1",
+          "label": "Gross margin rose to 36% while the industry stayed at 30%",
+          "answer": "Revenue — occurrence",
+          "explanation": "An inflated margin suggests fictitious or early revenue (or, alternatively, understated cost of sales)."
+        },
+        {
+          "id": "k2",
+          "label": "The allowance fell from 5% to 2% of receivables while collections slowed",
+          "answer": "Receivables — valuation (allowance)",
+          "explanation": "A shrinking allowance on slower collections points to an understated allowance."
+        },
+        {
+          "id": "k3",
+          "label": "Days in inventory rose from 73 to 91 days",
+          "answer": "Inventory — valuation",
+          "explanation": "Slower-moving inventory raises obsolescence and write-down risk."
+        }
+      ],
+      "options": [
+        "Revenue — occurrence",
+        "Receivables — valuation (allowance)",
+        "Inventory — valuation",
+        "Cost of sales — completeness",
+        "Accounts payable — existence"
+      ]
+    }
+  ]
+}
