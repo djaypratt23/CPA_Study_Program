@@ -5,8 +5,8 @@ concept-first lessons, retrieval practice, worked → faded → independent exam
 with named traps, FSRS spaced repetition, interleaving, confidence ratings, mastery gating, an error log,
 simulated exams, and an honest readiness signal.
 
-**Live app:** https://djaypratt23.github.io/CPA_Study_Program/ — install it from the browser menu ("Add to
-Home Screen") to use it offline.
+**Live app:** hosted on Cloudflare Pages at `https://<project-name>.pages.dev` (see [DEPLOY.md](DEPLOY.md)).
+Install it from the browser menu ("Add to Home Screen") to use it offline.
 
 ## What's inside
 
@@ -21,12 +21,12 @@ Progress is stored **only on your device** (IndexedDB). Use **Settings → Expor
 
 ## Run locally
 
-Requires Node 20+.
+Requires Node 22+ (pinned in `.nvmrc`).
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173/CPA_Study_Program/
-npm run check      # lint → typecheck → validate content → tests → production build
+npm run dev        # http://localhost:5173/
+npm run check      # lint → typecheck → build (the build runs tests → validate content → vite build)
 ```
 
 Other scripts: `npm run validate` (content only), `npm test`, `npm run build`, `npm run preview`.
