@@ -1,0 +1,130 @@
+{
+  "id": "aud-tbs-u9-report",
+  "section": "AUD",
+  "unitId": "aud-u9",
+  "moduleIds": [
+    "aud-unmodified-opinion",
+    "aud-communications"
+  ],
+  "pool": "practice",
+  "title": "Reviewing a draft report — Lakeside Dental Group",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Review the draft unmodified auditor's report on **Lakeside Dental Group, LLC**, a private company, for the year ended December 31, Year 1, and the draft communication to the members' audit committee. Keep correct phrases; replace incorrect ones.",
+  "exhibits": [
+    {
+      "title": "Engagement facts",
+      "content": "- Audit performed under GAAS; the firm is independent.\n- Sufficient appropriate evidence was obtained on March 14, Year 2; the report will be released March 21, Year 2.\n- No going concern issues. The auditor is not engaged to report key audit matters.\n- During the audit, management and the auditor disagreed about the revenue recognition policy; management eventually adopted the auditor's view."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "docreview",
+      "id": "rpt",
+      "prompt": "Draft auditor's report (excerpts)",
+      "segments": [
+        {
+          "id": "t",
+          "original": "Accountant's Compilation Report",
+          "options": [
+            "Accountant's Compilation Report",
+            "Independent Auditor's Report"
+          ],
+          "answer": "Independent Auditor's Report",
+          "explanation": "The title must indicate an independent auditor's report."
+        },
+        {
+          "text": " — **Opinion.** In our opinion, the accompanying financial statements present fairly, in all material respects, the financial position of Lakeside Dental Group, LLC as of December 31, Year 1 ... in accordance with accounting principles generally accepted in the United States of America. **Basis for Opinion.** We conducted our audit in accordance with "
+        },
+        {
+          "id": "s",
+          "original": "the standards of the Public Company Accounting Oversight Board",
+          "options": [
+            "the standards of the Public Company Accounting Oversight Board",
+            "auditing standards generally accepted in the United States of America"
+          ],
+          "answer": "auditing standards generally accepted in the United States of America",
+          "explanation": "Private companies are audited under GAAS."
+        },
+        {
+          "text": ". We are required to be independent of Lakeside Dental Group, LLC and to meet our other ethical responsibilities. **Auditor's Responsibilities.** Our objectives are to obtain "
+        },
+        {
+          "id": "a",
+          "original": "absolute assurance",
+          "options": [
+            "absolute assurance",
+            "reasonable assurance"
+          ],
+          "answer": "reasonable assurance",
+          "explanation": "Reasonable assurance is high but not absolute."
+        },
+        {
+          "text": " about whether the financial statements as a whole are free from material misstatement. In performing an audit, we obtain an understanding of internal control relevant to the audit "
+        },
+        {
+          "id": "i",
+          "original": "in order to express an opinion on the effectiveness of internal control",
+          "options": [
+            "in order to express an opinion on the effectiveness of internal control",
+            "in order to design audit procedures that are appropriate in the circumstances, but not for the purpose of expressing an opinion on the effectiveness of internal control"
+          ],
+          "answer": "in order to design audit procedures that are appropriate in the circumstances, but not for the purpose of expressing an opinion on the effectiveness of internal control",
+          "explanation": "No opinion on internal control is expressed in a financial statement audit."
+        },
+        {
+          "text": ". Report date: "
+        },
+        {
+          "id": "d",
+          "original": "March 21, Year 2",
+          "options": [
+            "March 21, Year 2",
+            "March 14, Year 2",
+            "December 31, Year 1"
+          ],
+          "answer": "March 14, Year 2",
+          "explanation": "Dated when sufficient appropriate evidence was obtained, not the release date."
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "com",
+      "prompt": "Draft communication to the audit committee — is each item required?",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "The disagreement over the revenue recognition policy, even though resolved",
+          "answer": "Required",
+          "explanation": "Disagreements are significant findings whether or not resolved."
+        },
+        {
+          "id": "c2",
+          "label": "The specific sample sizes used for testing receivables",
+          "answer": "Not required",
+          "explanation": "Detailed procedures aren't required (and could make the audit predictable)."
+        },
+        {
+          "id": "c3",
+          "label": "The auditor's views on the qualitative aspects of Lakeside's significant accounting practices",
+          "answer": "Required",
+          "explanation": "A required significant finding."
+        },
+        {
+          "id": "c4",
+          "label": "The written representations the auditor requested from management",
+          "answer": "Required",
+          "explanation": "AU-C 260 requires communicating them."
+        }
+      ],
+      "options": [
+        "Required",
+        "Not required"
+      ]
+    }
+  ]
+}

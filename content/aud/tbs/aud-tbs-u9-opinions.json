@@ -1,0 +1,120 @@
+{
+  "id": "aud-tbs-u9-opinions",
+  "section": "AUD",
+  "unitId": "aud-u9",
+  "moduleIds": [
+    "aud-modified-opinions",
+    "aud-report-paragraphs"
+  ],
+  "pool": "practice",
+  "title": "Selecting the report — six clients",
+  "minutes": 25,
+  "skill": "evaluation",
+  "instructions": "Each situation is independent and involves a nonissuer. Unless stated otherwise, all other matters are resolved, and the auditor isn't engaged to report key audit matters. Select the most appropriate report.",
+  "exhibits": [
+    {
+      "title": "Situations",
+      "content": "1. The client changed from the weighted-average method to FIFO; the change is justified, applied retrospectively, and disclosed. The effect is material.\n2. Management won't record a material impairment of one plant (8% of total assets). Other accounts are unaffected.\n3. The client's records for most of the year were lost in a system failure, and the auditor can't audit revenue, receivables, or inventory.\n4. Substantial doubt about going concern exists; management's plans don't alleviate it; disclosures are adequate.\n5. Management refuses to consolidate a subsidiary that holds 70% of group assets and revenue.\n6. The prior-year statements, presented comparatively, were audited by a predecessor whose report isn't reissued.\n7. The auditor couldn't obtain audited statements of a foreign equity-method investee (6% of total assets; income is material but the effect is confined to the investment account and equity income)."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "op",
+      "prompt": "Select the appropriate report.",
+      "rows": [
+        {
+          "id": "s1",
+          "label": "1. Justified change in principle",
+          "answer": "Unmodified with emphasis-of-matter paragraph",
+          "explanation": "AU-C 708 requires an emphasis-of-matter paragraph for a material change in principle."
+        },
+        {
+          "id": "s2",
+          "label": "2. Unrecorded impairment, not pervasive",
+          "answer": "Qualified",
+          "explanation": "A material misstatement confined to specific accounts → \"except for\"."
+        },
+        {
+          "id": "s3",
+          "label": "3. Records lost for major accounts",
+          "answer": "Disclaimer",
+          "explanation": "A pervasive inability to obtain evidence."
+        },
+        {
+          "id": "s4",
+          "label": "4. Going concern, adequate disclosure",
+          "answer": "Unmodified with going concern section",
+          "explanation": "AU-C 570 requires a separate section; the opinion is unmodified."
+        },
+        {
+          "id": "s5",
+          "label": "5. Unconsolidated major subsidiary",
+          "answer": "Adverse",
+          "explanation": "A material and pervasive departure from GAAP."
+        },
+        {
+          "id": "s6",
+          "label": "6. Predecessor audited the prior year",
+          "answer": "Unmodified with other-matter paragraph",
+          "explanation": "The other-matter paragraph describes the predecessor's report on the prior-year statements."
+        },
+        {
+          "id": "s7",
+          "label": "7. Equity-method investee evidence unavailable",
+          "answer": "Qualified",
+          "explanation": "A material but not pervasive scope limitation → \"except for the possible effects\"."
+        }
+      ],
+      "options": [
+        "Unmodified",
+        "Unmodified with emphasis-of-matter paragraph",
+        "Unmodified with other-matter paragraph",
+        "Unmodified with going concern section",
+        "Qualified",
+        "Adverse",
+        "Disclaimer"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "hd",
+      "prompt": "Select the heading used to explain the modification.",
+      "rows": [
+        {
+          "id": "h2",
+          "label": "Situation 2",
+          "options": [
+            "Basis for Qualified Opinion",
+            "Basis for Adverse Opinion",
+            "Emphasis of Matter"
+          ],
+          "answer": "Basis for Qualified Opinion",
+          "explanation": "A qualified opinion is explained in a Basis for Qualified Opinion section."
+        },
+        {
+          "id": "h3",
+          "label": "Situation 3",
+          "options": [
+            "Basis for Qualified Opinion",
+            "Basis for Disclaimer of Opinion",
+            "Other Matter"
+          ],
+          "answer": "Basis for Disclaimer of Opinion",
+          "explanation": "A disclaimer uses Basis for Disclaimer of Opinion."
+        },
+        {
+          "id": "h5",
+          "label": "Situation 5",
+          "options": [
+            "Basis for Adverse Opinion",
+            "Basis for Qualified Opinion",
+            "Emphasis of Matter"
+          ],
+          "answer": "Basis for Adverse Opinion",
+          "explanation": "Adverse opinions use Basis for Adverse Opinion."
+        }
+      ]
+    }
+  ]
+}
