@@ -1,0 +1,449 @@
+[
+  {
+    "id": "reg-bri-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: what percentage of a business meal with a client is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "100%",
+        "explanation": "Business meals are generally limited.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "0%",
+        "explanation": "Entertainment is 0%, but meals are 50%.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "50%",
+        "explanation": "Correct. §274: business meals are 50% deductible; entertainment isn't deductible."
+      },
+      {
+        "id": "d",
+        "text": "80%",
+        "explanation": "Not the current rule for business meals.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§274: business meals are 50% deductible; entertainment isn't deductible.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-bri-chk1",
+    "pool": "lesson",
+    "stem": "A new business incurs $53,000 of start-up costs. What is the maximum immediate deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "The $5,000 is reduced by costs above $50,000.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Some immediate deduction remains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$53,000",
+        "explanation": "Start-up costs are limited.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$2,000 (plus amortization of the rest over 180 months)",
+        "explanation": "Correct. $5,000 − $3,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§195: $5,000 reduced dollar for dollar by costs over $50,000 → 5,000 − 3,000 = 2,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-bri-chk2",
+    "pool": "lesson",
+    "stem": "A taxpayer with MAGI of $160,000 actively participates in a rental with a $10,000 loss and has no passive income. How much is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "The allowance is fully phased out.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "No partial allowance above $150,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Correct. The allowance is gone at $150,000."
+      },
+      {
+        "id": "d",
+        "text": "$3,000",
+        "explanation": "That's the capital loss limit.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The $25,000 allowance phases out completely at MAGI of $150,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-bri-01",
+    "pool": "practice",
+    "stem": "A sole proprietor pays a $500 fine for an overweight truck and a $1,200 business meal with a client. What is the total deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,700",
+        "explanation": "Fines aren't deductible and meals are limited.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$1,200",
+        "explanation": "The meal is limited to 50%.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$1,100",
+        "explanation": "Deducts the fine.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$600",
+        "explanation": "Correct. 50% of the $1,200 meal; the fine is nondeductible."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Government fines aren't deductible; business meals are 50% deductible.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-bri-02",
+    "pool": "practice",
+    "stem": "A home office of 250 square feet is used regularly and exclusively as the principal place of business. Under the simplified method, what is the deduction (assuming enough business income)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,250",
+        "explanation": "Correct. 250 × $5."
+      },
+      {
+        "id": "b",
+        "text": "$1,500",
+        "explanation": "That's the 300-square-foot maximum.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$2,500",
+        "explanation": "Uses $10 per square foot.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The office qualifies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Simplified method: $5 × square footage, up to 300 square feet.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-bri-03",
+    "pool": "practice",
+    "stem": "A family rents its lake cabin for 12 days during the year for $6,000 and uses it personally the rest of the season. How is the rent treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Excluded from gross income, and no rental expenses are deductible",
+        "explanation": "Correct. §280A(g): a dwelling rented fewer than 15 days — the rent is excluded."
+      },
+      {
+        "id": "b",
+        "text": "Included in gross income, with expenses allocated",
+        "explanation": "Rentals under 15 days are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Included, with no expenses deductible",
+        "explanation": "The rent is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Half included",
+        "explanation": "There's no partial rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§280A(g): a dwelling rented fewer than 15 days — the rent is excluded.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-bri-04",
+    "pool": "practice",
+    "stem": "Which is the correct order of loss limitations for a rental activity?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Passive rules, then at-risk rules",
+        "explanation": "At-risk rules come first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Only the passive rules apply to rentals",
+        "explanation": "At-risk rules also apply.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Basis and at-risk limits first, then the passive activity rules, then the excess business loss limit",
+        "explanation": "Correct. Losses must clear basis, then at-risk (§465), then passive (§469), then §461(l)."
+      },
+      {
+        "id": "d",
+        "text": "Excess business loss first",
+        "explanation": "The excess business loss limit is applied last.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Losses must clear basis, then at-risk (§465), then passive (§469), then §461(l).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-bri-05",
+    "pool": "practice",
+    "stem": "A taxpayer sells her entire interest in a rental property that has $18,000 of suspended passive losses to an unrelated buyer. What happens to the suspended losses?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They're lost",
+        "explanation": "A full taxable disposition releases them.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "They offset only capital gains",
+        "explanation": "They're deductible against any income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "They carry forward indefinitely",
+        "explanation": "They're released on disposition.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "They become deductible in full",
+        "explanation": "Correct. A fully taxable disposition to an unrelated party frees all suspended losses."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A fully taxable disposition to an unrelated party frees all suspended losses.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-bri-06",
+    "pool": "practice",
+    "stem": "An activity is presumed not to be a hobby if it shows a profit in at least:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "1 of 5 years",
+        "explanation": "One year isn't enough.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "3 of 5 consecutive years (2 of 7 for horse activities)",
+        "explanation": "Correct. §183(d) presumption."
+      },
+      {
+        "id": "c",
+        "text": "5 of 5 years",
+        "explanation": "Profit every year isn't required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Any single year",
+        "explanation": "A single year isn't sufficient.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§183(d) presumption.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-bri-07",
+    "pool": "practice",
+    "stem": "Which taxpayer can treat rental real estate as nonpassive?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An engineer who manages two rentals on weekends",
+        "explanation": "Doesn't meet the real estate professional hours test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A real estate agent who works 1,500 hours a year in real estate and nothing else, and materially participates in her rentals",
+        "explanation": "Correct. Real estate professional: more than 750 hours and more than half of personal services in real property businesses, plus material participation."
+      },
+      {
+        "id": "c",
+        "text": "Any active participant",
+        "explanation": "Active participation gives only the $25,000 allowance.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Any taxpayer with AGI under $100,000",
+        "explanation": "Income doesn't make rentals nonpassive.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Real estate professional: more than 750 hours and more than half of personal services in real property businesses, plus material participation.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-bri-08",
+    "pool": "practice",
+    "stem": "Hobby income of $4,000 and hobby expenses of $5,000. How are they reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Net loss of $1,000 deductible",
+        "explanation": "Hobby losses aren't deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$4,000 included; expenses not deductible",
+        "explanation": "Correct. Hobby income is gross income; hobby expenses aren't deductible (miscellaneous itemized deductions are eliminated)."
+      },
+      {
+        "id": "c",
+        "text": "Nothing reported",
+        "explanation": "Hobby income is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$4,000 included; $4,000 of expenses deductible",
+        "explanation": "Hobby expenses are no longer deductible.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Hobby income is gross income; hobby expenses aren't deductible (miscellaneous itemized deductions are eliminated).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-bri-09",
+    "pool": "practice",
+    "stem": "A taxpayer's MAGI is $110,000. She actively participates in a rental with a $22,000 loss and has no passive income. How much can she deduct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$22,000",
+        "explanation": "The allowance after phase-out is $20,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Correct. $25,000 − 50% × $10,000."
+      },
+      {
+        "id": "c",
+        "text": "$25,000",
+        "explanation": "Can't exceed the loss or the reduced allowance.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Some allowance remains.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "25,000 − 5,000 = 20,000 allowance; deduct 20,000; suspend 2,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-bri-10",
+    "pool": "practice",
+    "stem": "Business gifts to a client are deductible up to:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25 per recipient per year",
+        "explanation": "Correct. §274(b): $25 per recipient per year."
+      },
+      {
+        "id": "b",
+        "text": "$75 per recipient",
+        "explanation": "That isn't the gift limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$100 per recipient",
+        "explanation": "That isn't the gift limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Unlimited",
+        "explanation": "Gifts are capped.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§274(b): $25 per recipient per year.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

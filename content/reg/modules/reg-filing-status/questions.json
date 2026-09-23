@@ -1,0 +1,447 @@
+[
+  {
+    "id": "reg-fs-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a taxpayer's spouse died in October 2025. What filing status can she use for 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Single",
+        "explanation": "She's considered married for the year of death.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Qualifying surviving spouse",
+        "explanation": "That status applies to the two following years.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Married filing jointly",
+        "explanation": "Correct. A surviving spouse may file jointly for the year of death."
+      },
+      {
+        "id": "d",
+        "text": "Head of household",
+        "explanation": "Not in the year of death, if she's treated as married.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A surviving spouse may file jointly for the year of death.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-chk1",
+    "pool": "lesson",
+    "stem": "Nate is unmarried and pays more than half the cost of his dependent mother's apartment; she lives alone. What filing status may Nate use?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Single only",
+        "explanation": "A dependent parent needn't live with the taxpayer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Married filing separately",
+        "explanation": "Nate isn't married.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Qualifying surviving spouse",
+        "explanation": "Nate isn't a surviving spouse.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Head of household",
+        "explanation": "Correct. HOH exception: a dependent parent may live in a separate home the taxpayer maintains."
+      }
+    ],
+    "answer": "d",
+    "explanation": "HOH exception: a dependent parent may live in a separate home the taxpayer maintains.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-chk2",
+    "pool": "lesson",
+    "stem": "A single taxpayer who is 67 and not blind claims the standard deduction for 2025. What is the amount (excluding the separate senior deduction)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$17,750",
+        "explanation": "Correct. $15,750 + $2,000."
+      },
+      {
+        "id": "b",
+        "text": "$15,750",
+        "explanation": "Omits the additional amount for age.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$17,350",
+        "explanation": "Uses the married additional amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$31,500",
+        "explanation": "That's the joint amount.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "2025 single standard deduction 15,750 + 2,000 additional for age 65+ = 17,750.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fs-01",
+    "pool": "practice",
+    "stem": "Which person can be a qualifying child of the taxpayer?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The taxpayer's 25-year-old son, a full-time student, not disabled",
+        "explanation": "Over the age limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The taxpayer's 30-year-old unemployed brother",
+        "explanation": "Over the age limit and not disabled.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The taxpayer's 17-year-old niece who lived with the taxpayer all year and didn't support herself",
+        "explanation": "Correct. Niece is a descendant of a sibling."
+      },
+      {
+        "id": "d",
+        "text": "A 10-year-old neighbor who lived with the taxpayer for 3 months",
+        "explanation": "Fails relationship and residency.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Qualifying child tests: relationship (including descendants of siblings), age, residency, support, and joint return.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-02",
+    "pool": "practice",
+    "stem": "Four siblings support their father: A 40%, B 30%, C 20%, D 10%. Under a multiple support agreement, who may claim the father?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only A",
+        "explanation": "Any sibling providing more than 10% may claim him if the others agree.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "No one — no one provided over half",
+        "explanation": "A multiple support agreement solves this.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Any of the four",
+        "explanation": "D doesn't exceed 10%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A, B, or C (by agreement), but not D",
+        "explanation": "Correct. D provided only 10%, not more than 10%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The group must provide more than half; the claimant must provide more than 10%.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-03",
+    "pool": "practice",
+    "stem": "A married couple lived apart for the entire second half of 2025. The wife paid all costs of the home where her dependent daughter lived all year. What is the wife's best filing status?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Head of household",
+        "explanation": "Correct. Abandoned-spouse rule: considered unmarried if living apart the last 6 months and maintaining a home for a dependent child."
+      },
+      {
+        "id": "b",
+        "text": "Married filing separately",
+        "explanation": "She qualifies as considered unmarried.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Single",
+        "explanation": "She's still married, but considered unmarried for HOH purposes only.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Qualifying surviving spouse",
+        "explanation": "Her spouse is alive.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Abandoned-spouse rule: considered unmarried if living apart the last 6 months and maintaining a home for a dependent child.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-04",
+    "pool": "practice",
+    "stem": "A widower's wife died in 2023. He hasn't remarried and maintains a home for his dependent son. What status may he use for 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Married filing jointly",
+        "explanation": "Only for the year of death.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "Head of household only",
+        "explanation": "QSS is available and better.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Qualifying surviving spouse",
+        "explanation": "Correct. 2025 is the second year after the year of death."
+      },
+      {
+        "id": "d",
+        "text": "Single",
+        "explanation": "Better statuses are available.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "QSS applies for the 2 years following the year of death (2024 and 2025 here).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-05",
+    "pool": "practice",
+    "stem": "For 2025, what is the maximum gross income a qualifying relative may have?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Less than $5,200",
+        "explanation": "Correct. The qualifying relative gross income limit for 2025 is $5,200."
+      },
+      {
+        "id": "b",
+        "text": "Less than $15,750",
+        "explanation": "That's the single standard deduction.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "There is no limit",
+        "explanation": "There's a limit for qualifying relatives.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Less than $1,350",
+        "explanation": "That's a dependent's minimum standard deduction.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The qualifying relative gross income limit for 2025 is $5,200.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-06",
+    "pool": "practice",
+    "stem": "A 16-year-old dependent has $3,000 of wages and no other income in 2025. What is her standard deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,350",
+        "explanation": "Earned income + $450 is greater.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$3,000",
+        "explanation": "Omits the $450 add-on.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$15,750",
+        "explanation": "Limited as a dependent.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$3,450",
+        "explanation": "Correct. Greater of $1,350 or $3,000 + $450."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Dependent's standard deduction = greater of $1,350 or earned income + $450 (not above the regular amount).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fs-07",
+    "pool": "practice",
+    "stem": "As of what date is marital status generally determined for filing purposes?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "January 1",
+        "explanation": "Status isn't set at the start of the year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "December 31 (the last day of the tax year)",
+        "explanation": "Correct. Marital status is determined at the end of the tax year (or at death)."
+      },
+      {
+        "id": "c",
+        "text": "The date the return is filed",
+        "explanation": "The filing date doesn't matter.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "June 30",
+        "explanation": "Mid-year isn't the test.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Marital status is determined at the end of the tax year (or at death).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-08",
+    "pool": "practice",
+    "stem": "A married couple, both 66, files jointly for 2025. Neither is blind. What is their standard deduction (excluding the separate senior deduction)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$31,500",
+        "explanation": "Omits the additional amounts.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$34,700",
+        "explanation": "Correct. $31,500 + 2 × $1,600."
+      },
+      {
+        "id": "c",
+        "text": "$35,500",
+        "explanation": "Uses the unmarried additional amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$33,100",
+        "explanation": "Adds only one additional amount.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "31,500 + 1,600 + 1,600 = 34,700.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fs-09",
+    "pool": "practice",
+    "stem": "Which test does **not** apply to a qualifying child?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Residency",
+        "explanation": "This test applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Gross income limit",
+        "explanation": "Correct. The gross income limit applies to qualifying relatives."
+      },
+      {
+        "id": "c",
+        "text": "Age",
+        "explanation": "This test applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Relationship",
+        "explanation": "This test applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Qualifying children have no gross income limit.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-10",
+    "pool": "practice",
+    "stem": "Personal exemptions for 2025 are:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,200 per person",
+        "explanation": "That's the qualifying relative gross income limit.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. Personal exemptions have been permanently eliminated."
+      },
+      {
+        "id": "c",
+        "text": "$4,050 per person",
+        "explanation": "The pre-2018 amount.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "Available only for dependents",
+        "explanation": "No exemptions remain.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The TCJA reduced exemptions to $0, and the One Big Beautiful Bill Act made that permanent.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

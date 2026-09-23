@@ -1,0 +1,447 @@
+[
+  {
+    "id": "reg-gi-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which is included in gross income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4,000 of unemployment compensation",
+        "explanation": "Correct. Unemployment compensation is fully taxable."
+      },
+      {
+        "id": "b",
+        "text": "A $20,000 inheritance",
+        "explanation": "Inheritances are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Life insurance proceeds received on a parent's death",
+        "explanation": "Death benefits are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Interest on City of Denver bonds",
+        "explanation": "Municipal interest is excluded.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Unemployment compensation is fully taxable.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-chk1",
+    "pool": "lesson",
+    "stem": "A degree candidate receives a $25,000 scholarship: $18,000 for tuition and required books and $7,000 for room and board. How much is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Room and board are taxable.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$18,000",
+        "explanation": "Tuition and books are excluded.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$7,000",
+        "explanation": "Correct. §117 excludes tuition, fees, books, and required supplies for degree candidates; room and board are taxable."
+      },
+      {
+        "id": "d",
+        "text": "$25,000",
+        "explanation": "Qualified amounts are excluded.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§117 excludes tuition, fees, books, and required supplies for degree candidates; room and board are taxable.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-gi-chk2",
+    "pool": "lesson",
+    "stem": "A taxpayer has $50,000 of debt canceled when her liabilities exceed her assets by $30,000 (not in bankruptcy). How much is included in income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "The insolvency exclusion applies to the extent insolvent.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Only $30,000 is excluded.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "That's the excluded amount.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Correct. $50,000 − $30,000 insolvency."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§108 insolvency exclusion is limited to the amount of insolvency.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-gi-01",
+    "pool": "practice",
+    "stem": "Under a divorce decree executed in 2022, Mark pays his ex-wife $24,000 of alimony and $12,000 of child support. How much must she include in income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$36,000",
+        "explanation": "Neither is income for a post-2018 decree.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$24,000",
+        "explanation": "Post-2018 alimony isn't income.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$12,000",
+        "explanation": "Child support is never income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Correct. For divorce or separation instruments executed after 2018, alimony isn't income to the recipient or deductible by the payer; child support is never income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "For divorce or separation instruments executed after 2018, alimony isn't income to the recipient or deductible by the payer; child support is never income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-02",
+    "pool": "practice",
+    "stem": "An employee receives $80,000 of employer-provided group-term life insurance coverage. What is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The IRS table cost of $30,000 of coverage",
+        "explanation": "Correct. §79 excludes the cost of the first $50,000 of coverage."
+      },
+      {
+        "id": "b",
+        "text": "Nothing",
+        "explanation": "Coverage above $50,000 is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The cost of the entire $80,000 of coverage",
+        "explanation": "Only the excess over $50,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 of cash",
+        "explanation": "The taxable amount is the table cost, not the face amount.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§79 excludes the cost of the first $50,000 of coverage.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-03",
+    "pool": "practice",
+    "stem": "A taxpayer itemized in 2024 and deducted $6,000 of state income tax, which reduced her tax. In 2025 she received a $900 state refund. How much is income in 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "The prior deduction produced a tax benefit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$6,000",
+        "explanation": "Only the refund is recovered.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$900",
+        "explanation": "Correct. Tax benefit rule: a recovery is income to the extent the deduction reduced tax."
+      },
+      {
+        "id": "d",
+        "text": "$450",
+        "explanation": "There's no partial inclusion rule here.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Tax benefit rule: a recovery is income to the extent the deduction reduced tax.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-04",
+    "pool": "practice",
+    "stem": "Which award is excluded from gross income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Punitive damages in a personal injury suit",
+        "explanation": "Punitive damages are taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Damages for emotional distress not arising from physical injury",
+        "explanation": "Taxable (except amounts for medical care).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Back pay awarded in an employment discrimination suit",
+        "explanation": "Wage replacement is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Compensatory damages for a broken leg in a car accident",
+        "explanation": "Correct. §104 excludes damages received on account of personal physical injuries or physical sickness."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§104 excludes damages received on account of personal physical injuries or physical sickness.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-05",
+    "pool": "practice",
+    "stem": "A check for services is mailed to a cash-basis taxpayer and received on December 31, 2025, but she deposits it January 3, 2026. When is it income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "2026, when deposited",
+        "explanation": "Constructive receipt applies when available.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "2025",
+        "explanation": "Correct. Constructive receipt: income available without restriction is taxable when received."
+      },
+      {
+        "id": "c",
+        "text": "When the check clears",
+        "explanation": "Clearing doesn't determine timing.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Never",
+        "explanation": "It's taxable income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Constructive receipt: income available without restriction is taxable when received.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-06",
+    "pool": "practice",
+    "stem": "Which employee fringe benefit is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An airline employee flying standby on an empty seat",
+        "explanation": "A no-additional-cost service.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $100 cash holiday bonus",
+        "explanation": "Correct. Cash is never de minimis."
+      },
+      {
+        "id": "c",
+        "text": "Employer-paid health insurance",
+        "explanation": "Employer health coverage is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "An occasional employer-provided lunch",
+        "explanation": "A de minimis fringe.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Cash and cash equivalents are always taxable compensation.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-07",
+    "pool": "practice",
+    "stem": "A single retiree has AGI of $15,000 (before Social Security), no tax-exempt interest, and $12,000 of Social Security benefits. How much of the benefits is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Correct. Provisional income $21,000 is below $25,000."
+      },
+      {
+        "id": "b",
+        "text": "$6,000",
+        "explanation": "The 50% tier doesn't start until $25,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$10,200",
+        "explanation": "The 85% tier doesn't apply.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$12,000",
+        "explanation": "At most 85% is ever taxable.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Provisional income = 15,000 + 6,000 = 21,000 < 25,000 → no benefits taxable.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-gi-08",
+    "pool": "practice",
+    "stem": "An employer pays $7,000 of an employee's graduate tuition under a qualified educational assistance plan. How much is excludable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,000",
+        "explanation": "The exclusion is capped.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$5,250",
+        "explanation": "Correct. §127 excludes up to $5,250 per year."
+      },
+      {
+        "id": "c",
+        "text": "$2,500",
+        "explanation": "That's the student loan interest deduction limit.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Up to $5,250 is excluded.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§127 excludes up to $5,250 per year.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-09",
+    "pool": "practice",
+    "stem": "A taxpayer wins $10,000 in a state lottery. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Excluded as a gift",
+        "explanation": "Winnings aren't gifts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Included in gross income",
+        "explanation": "Correct. Gambling winnings are included; losses may be deducted as itemized deductions up to winnings."
+      },
+      {
+        "id": "c",
+        "text": "Excluded if under $10,000",
+        "explanation": "There's no dollar exclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Taxed only when spent",
+        "explanation": "Winnings are taxable when received.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gambling winnings are included; losses may be deducted as itemized deductions up to winnings.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-10",
+    "pool": "practice",
+    "stem": "Which is excluded from gross income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Interest on a corporate bond",
+        "explanation": "Corporate bond interest is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Interest on a U.S. Treasury bond",
+        "explanation": "Taxable federally (exempt from state tax).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Interest on a state of Ohio general obligation bond",
+        "explanation": "Correct. §103 excludes interest on state and local government bonds."
+      },
+      {
+        "id": "d",
+        "text": "Interest on a savings account",
+        "explanation": "Bank interest is taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§103 excludes interest on state and local government bonds.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

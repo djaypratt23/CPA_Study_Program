@@ -1,0 +1,117 @@
+{
+  "id": "reg-tbs-u4-schedule-c-rental",
+  "section": "REG",
+  "unitId": "reg-u4",
+  "moduleIds": [
+    "reg-business-rental-income"
+  ],
+  "pool": "practice",
+  "title": "Schedule C and rental loss — Marcus Bell",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Marcus Bell, single, runs a consulting business as a sole proprietor and owns one rental house in which he actively participates. Compute his 2025 amounts. His MAGI for the passive loss allowance is **$130,000**, and he has no other passive income.",
+  "exhibits": [
+    {
+      "title": "Consulting business",
+      "content": "| Item | Amount |\n|---|---:|\n| Gross receipts | 180,000 |\n| Cost of materials resold to clients | 60,000 |\n| Office rent | 24,000 |\n| Wages of an assistant | 30,000 |\n| Meals with clients (business discussed) | 4,000 |\n| Tickets to sporting events for clients | 3,000 |\n| Penalty for late filing of a state business registration | 800 |"
+    },
+    {
+      "title": "Rental house",
+      "content": "- Rent collected: 24,000\n- Mortgage interest, taxes, repairs, insurance, and depreciation: 38,000\n- Personal use: none"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "c",
+      "prompt": "Consulting business.",
+      "rows": [
+        {
+          "id": "m",
+          "label": "Deductible meals",
+          "answer": 2000,
+          "tolerance": 0,
+          "explanation": "50% × 4,000 = **2,000**."
+        },
+        {
+          "id": "e",
+          "label": "Deductible entertainment",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "Entertainment isn't deductible: **0**."
+        },
+        {
+          "id": "np",
+          "label": "Net profit (Schedule C)",
+          "answer": 64000,
+          "tolerance": 0,
+          "explanation": "180,000 − 60,000 − 24,000 − 30,000 − 2,000 = **64,000** (the penalty isn't deductible)."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "r",
+      "prompt": "Rental house.",
+      "rows": [
+        {
+          "id": "rl",
+          "label": "Rental loss before limitations (enter as positive)",
+          "answer": 14000,
+          "tolerance": 0,
+          "explanation": "38,000 − 24,000 = **14,000**."
+        },
+        {
+          "id": "al",
+          "label": "Special allowance available",
+          "answer": 10000,
+          "tolerance": 0,
+          "explanation": "25,000 − 50% × (130,000 − 100,000) = **10,000**."
+        },
+        {
+          "id": "dd",
+          "label": "Rental loss deductible in 2025",
+          "answer": 10000,
+          "tolerance": 0,
+          "explanation": "Lesser of 14,000 or 10,000 = **10,000**."
+        },
+        {
+          "id": "sus",
+          "label": "Suspended passive loss carried forward",
+          "answer": 4000,
+          "tolerance": 0,
+          "explanation": "14,000 − 10,000 = **4,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "How is Marcus's self-employment tax deduction taken?",
+          "options": [
+            "Half of SE tax as an adjustment for AGI",
+            "All of SE tax on Schedule C",
+            "As an itemized deduction"
+          ],
+          "answer": "Half of SE tax as an adjustment for AGI",
+          "explanation": "The employer-equivalent half is an above-the-line deduction."
+        },
+        {
+          "id": "q2",
+          "label": "If Marcus sells the rental to an unrelated buyer next year, the suspended loss is",
+          "options": [
+            "Lost",
+            "Deductible in full in the year of sale",
+            "Deductible only against capital gains"
+          ],
+          "answer": "Deductible in full in the year of sale",
+          "explanation": "A fully taxable disposition releases suspended losses."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "reg-tbs-u4-gross-income",
+  "section": "REG",
+  "unitId": "reg-u4",
+  "moduleIds": [
+    "reg-gross-income",
+    "reg-filing-status"
+  ],
+  "pool": "practice",
+  "title": "Gross income and filing status — Jordan Reyes",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Jordan Reyes, divorced in 2016, lives with her 12-year-old son, who lived with her all year; she paid all costs of their home. Classify each 2025 item and compute her gross income.",
+  "exhibits": [
+    {
+      "title": "2025 receipts",
+      "content": "| Item | Amount |\n|---|---:|\n| Wages | 68,000 |\n| Employer-paid health insurance premiums | 7,200 |\n| Employer-provided group-term life insurance ($40,000 of coverage) — cost | 180 |\n| Interest on City of Austin bonds | 1,500 |\n| Interest on corporate bonds | 900 |\n| State income tax refund (she itemized in 2024; the deduction reduced her tax in full) | 600 |\n| Inheritance from her aunt | 25,000 |\n| Gambling winnings | 2,000 |\n| Alimony received under the 2016 divorce decree | 12,000 |\n| Child support received | 6,000 |\n| Jury duty pay | 300 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "inc",
+      "prompt": "Included in or excluded from gross income?",
+      "rows": [
+        {
+          "id": "i1",
+          "label": "Employer-paid health insurance",
+          "answer": "Excluded",
+          "explanation": "§106."
+        },
+        {
+          "id": "i2",
+          "label": "Group-term life coverage of $40,000",
+          "answer": "Excluded",
+          "explanation": "Coverage up to $50,000 is excluded."
+        },
+        {
+          "id": "i3",
+          "label": "City of Austin bond interest",
+          "answer": "Excluded",
+          "explanation": "§103 municipal interest."
+        },
+        {
+          "id": "i4",
+          "label": "State income tax refund",
+          "answer": "Included",
+          "explanation": "Tax benefit rule — the prior deduction reduced tax."
+        },
+        {
+          "id": "i5",
+          "label": "Inheritance",
+          "answer": "Excluded",
+          "explanation": "§102."
+        },
+        {
+          "id": "i6",
+          "label": "Alimony under the 2016 decree",
+          "answer": "Included",
+          "explanation": "Pre-2019 instruments: alimony remains income (unless modified to adopt the new rules)."
+        },
+        {
+          "id": "i7",
+          "label": "Child support",
+          "answer": "Excluded",
+          "explanation": "Never income."
+        },
+        {
+          "id": "i8",
+          "label": "Jury duty pay",
+          "answer": "Included",
+          "explanation": "Compensation is income."
+        }
+      ],
+      "options": [
+        "Included",
+        "Excluded"
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "gi",
+          "label": "Jordan's 2025 gross income",
+          "answer": 83800,
+          "tolerance": 0,
+          "explanation": "68,000 + 900 + 600 + 2,000 + 12,000 + 300 = **83,800**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "fs",
+      "prompt": "Filing status and dependents",
+      "rows": [
+        {
+          "id": "f1",
+          "label": "Jordan's filing status",
+          "options": [
+            "Single",
+            "Head of household",
+            "Qualifying surviving spouse"
+          ],
+          "answer": "Head of household",
+          "explanation": "Unmarried, paid all costs of a home for a qualifying child who lived with her all year."
+        },
+        {
+          "id": "f2",
+          "label": "Her son is her",
+          "options": [
+            "Qualifying child",
+            "Qualifying relative",
+            "Not a dependent"
+          ],
+          "answer": "Qualifying child",
+          "explanation": "Relationship, age, residency, and support tests are met."
+        },
+        {
+          "id": "f3",
+          "label": "Her 2025 basic standard deduction (post-OBBBA)",
+          "options": [
+            "$15,750",
+            "$23,625",
+            "$31,500"
+          ],
+          "answer": "$23,625",
+          "explanation": "Head-of-household amount for 2025."
+        }
+      ]
+    }
+  ]
+}
