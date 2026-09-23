@@ -1,0 +1,145 @@
+{
+  "id": "aud-tbs-u8-going-concern",
+  "section": "AUD",
+  "unitId": "aud-u8",
+  "moduleIds": [
+    "aud-going-concern"
+  ],
+  "pool": "practice",
+  "title": "Going concern evaluation — Harbor Point Marine",
+  "minutes": 25,
+  "skill": "evaluation",
+  "instructions": "You are completing the audit of **Harbor Point Marine**, a private boat builder, for the year ended December 31, Year 1. The statements will be issued March 31, Year 2. Evaluate the conditions and management's plans, then review the draft going concern section of the auditor's report.",
+  "exhibits": [
+    {
+      "title": "Conditions",
+      "content": "- Net losses in each of the last three years; negative operating cash flows of $2.1 million in Year 1\n- A $4 million term loan matures June 30, Year 2; the company is in violation of a covenant, and the lender has not waived it\n- Cash on hand: $0.6 million"
+    },
+    {
+      "title": "Management's plans",
+      "content": "1. Refinance the term loan — the lender has provided a term sheet stating it is \"not a commitment to lend.\"\n2. Sell a vacant lot — a signed purchase agreement for $1.2 million closes February 15, Year 2 (closed on schedule).\n3. Cut costs by $0.8 million through layoffs announced January 10, Year 2 (already implemented).\n4. The majority owner will \"inject capital if necessary\" — no written commitment; the owner's finances are unknown."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "plans",
+      "prompt": "Evaluate each plan.",
+      "rows": [
+        {
+          "id": "p1",
+          "label": "1. Refinancing",
+          "answer": "Not probable of effective implementation",
+          "explanation": "A term sheet that isn't a commitment gives little assurance."
+        },
+        {
+          "id": "p2",
+          "label": "2. Lot sale",
+          "answer": "Probable of effective implementation",
+          "explanation": "A signed agreement that closed provides strong evidence."
+        },
+        {
+          "id": "p3",
+          "label": "3. Cost reductions",
+          "answer": "Probable of effective implementation",
+          "explanation": "Already implemented."
+        },
+        {
+          "id": "p4",
+          "label": "4. Owner capital",
+          "answer": "Not probable of effective implementation",
+          "explanation": "No commitment and no evidence of ability."
+        }
+      ],
+      "options": [
+        "Probable of effective implementation",
+        "Not probable of effective implementation"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "concl",
+      "prompt": "Conclusion",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Is substantial doubt alleviated?",
+          "options": [
+            "Yes — the probable plans cover the $4 million maturity",
+            "No — the probable plans (about $2.0 million) don't cover the $4 million maturity plus operating cash needs"
+          ],
+          "answer": "No — the probable plans (about $2.0 million) don't cover the $4 million maturity plus operating cash needs",
+          "explanation": "1.2M sale + 0.8M savings ≈ 2.0M, well short of the maturing debt and continuing losses."
+        },
+        {
+          "id": "c2",
+          "label": "If disclosure is adequate, the opinion is",
+          "options": [
+            "Unmodified, with a going concern section",
+            "Qualified",
+            "Adverse",
+            "Disclaimer"
+          ],
+          "answer": "Unmodified, with a going concern section",
+          "explanation": "Adequate disclosure → unmodified opinion with the required section."
+        }
+      ]
+    },
+    {
+      "kind": "docreview",
+      "id": "sec",
+      "prompt": "Review the draft going concern section. Correct any errors.",
+      "segments": [
+        {
+          "id": "h",
+          "original": "Emphasis of Matter",
+          "options": [
+            "Emphasis of Matter",
+            "Substantial Doubt About the Entity's Ability to Continue as a Going Concern"
+          ],
+          "answer": "Substantial Doubt About the Entity's Ability to Continue as a Going Concern",
+          "explanation": "AU-C 570 requires this specific heading."
+        },
+        {
+          "text": " — The accompanying financial statements have been prepared assuming that the Company will continue as a going concern. As discussed in Note 2, the Company has suffered recurring losses from operations and is in violation of a loan covenant, which "
+        },
+        {
+          "id": "w",
+          "original": "may raise substantial doubt if refinancing is not obtained",
+          "options": [
+            "may raise substantial doubt if refinancing is not obtained",
+            "raise substantial doubt"
+          ],
+          "answer": "raise substantial doubt",
+          "explanation": "Conditional language is prohibited."
+        },
+        {
+          "text": " about its ability to continue as a going concern "
+        },
+        {
+          "id": "p",
+          "original": "within one year after the balance sheet date",
+          "options": [
+            "within one year after the balance sheet date",
+            "within one year after the date that the financial statements are issued"
+          ],
+          "answer": "within one year after the date that the financial statements are issued",
+          "explanation": "U.S. GAAP uses one year after issuance (or availability for issuance)."
+        },
+        {
+          "text": ". Management's plans are described in Note 2. The financial statements do not include any adjustments that might result from the outcome of this uncertainty. "
+        },
+        {
+          "id": "o",
+          "original": "Accordingly, our opinion is qualified.",
+          "options": [
+            "Accordingly, our opinion is qualified.",
+            "Our opinion is not modified with respect to this matter."
+          ],
+          "answer": "Our opinion is not modified with respect to this matter.",
+          "explanation": "With adequate disclosure, the opinion is unmodified."
+        }
+      ]
+    }
+  ]
+}

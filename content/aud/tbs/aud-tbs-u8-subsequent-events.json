@@ -1,0 +1,123 @@
+{
+  "id": "aud-tbs-u8-subsequent-events",
+  "section": "AUD",
+  "unitId": "aud-u8",
+  "moduleIds": [
+    "aud-subsequent-events",
+    "aud-written-representations"
+  ],
+  "pool": "practice",
+  "title": "Subsequent events — Corbin Manufacturing",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Corbin Manufacturing, a private company, has a December 31, Year 1 year-end. The auditor obtained sufficient appropriate evidence on **March 3, Year 2**, and the report will be released on **March 20, Year 2**. For each event, select the effect on the Year 1 statements and on the auditor's responsibilities.",
+  "exhibits": [
+    {
+      "title": "Events",
+      "content": "1. **Jan 18:** A customer that owed $220,000 at year-end filed for bankruptcy; its financial problems began in Year 1.\n2. **Feb 10:** Corbin issued $5 million of bonds.\n3. **Feb 25:** A lawsuit from a Year 1 product failure settled for $300,000; $180,000 had been accrued.\n4. **Mar 9:** A flood destroyed a warehouse (material, uninsured). Management added Note 14 describing it.\n5. **Apr 15 (after release):** The auditor learns that Year 1 inventory was overstated by a material amount because of a counting error that existed at year-end."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "fx",
+      "prompt": "Select the treatment in the Year 1 statements.",
+      "rows": [
+        {
+          "id": "e1",
+          "label": "1. Customer bankruptcy",
+          "answer": "Adjust the Year 1 statements",
+          "explanation": "The condition (financial difficulty) existed at year-end — a recognized event."
+        },
+        {
+          "id": "e2",
+          "label": "2. Bond issuance",
+          "answer": "Disclose only",
+          "explanation": "A nonrecognized event, disclosed if material."
+        },
+        {
+          "id": "e3",
+          "label": "3. Lawsuit settlement",
+          "answer": "Adjust the Year 1 statements",
+          "explanation": "It provides evidence about a liability that existed at year-end: accrue $300,000."
+        },
+        {
+          "id": "e4",
+          "label": "4. Warehouse flood",
+          "answer": "Disclose only",
+          "explanation": "The condition arose after year-end."
+        }
+      ],
+      "options": [
+        "Adjust the Year 1 statements",
+        "Disclose only",
+        "No effect on Year 1 statements"
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the adjustment.",
+      "rows": [
+        {
+          "id": "adj",
+          "label": "Additional litigation expense to record for Year 1",
+          "answer": 120000,
+          "tolerance": 0,
+          "explanation": "300,000 − 180,000 = **120,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "resp",
+      "prompt": "Determine the auditor's response.",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Report date if the auditor dual-dates for the flood",
+          "options": [
+            "March 3, Year 2",
+            "March 3, Year 2, except for Note 14, as to which the date is March 9, Year 2",
+            "March 20, Year 2"
+          ],
+          "answer": "March 3, Year 2, except for Note 14, as to which the date is March 9, Year 2",
+          "explanation": "Dual dating limits the extension of responsibility to the flood."
+        },
+        {
+          "id": "r2",
+          "label": "If the auditor instead re-dates the report to March 9",
+          "options": [
+            "Extend subsequent-events procedures through March 9 for all events",
+            "Extend procedures only for the flood",
+            "No additional procedures are needed"
+          ],
+          "answer": "Extend subsequent-events procedures through March 9 for all events",
+          "explanation": "Re-dating extends responsibility for everything."
+        },
+        {
+          "id": "r3",
+          "label": "Event 5 — management refuses to revise the statements",
+          "options": [
+            "No action; the report was released",
+            "Notify those charged with governance and take steps to prevent reliance on the report",
+            "Reissue the report with a qualified opinion without management's involvement"
+          ],
+          "answer": "Notify those charged with governance and take steps to prevent reliance on the report",
+          "explanation": "AU-C 560 subsequently discovered facts."
+        },
+        {
+          "id": "r4",
+          "label": "Date of management's representation letter (no dual dating)",
+          "options": [
+            "December 31, Year 1",
+            "March 3, Year 2",
+            "March 20, Year 2"
+          ],
+          "answer": "March 3, Year 2",
+          "explanation": "Dated as of the auditor's report date."
+        }
+      ]
+    }
+  ]
+}

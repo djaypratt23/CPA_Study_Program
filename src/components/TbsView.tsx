@@ -87,6 +87,12 @@ export default function TbsView({ tbs, responses, onChange, submitted }: Props) 
   )
 }
 
+/** Renders a document-review text segment, honoring **bold** runs within the segment. */
+function InlineText({ text }: { text: string }) {
+  const parts = text.split(/\*\*(.+?)\*\*/g)
+  return <span>{parts.map((p, i) => (i % 2 === 1 ? <strong key={i}>{p}</strong> : p))}</span>
+}
+
 function TabButton({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
   return (
     <button
@@ -231,7 +237,7 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
                 ))}
               </select>
             ) : (
-              <span key={i}>{s.text}</span>
+              <InlineText key={i} text={s.text} />
             ),
           )}
           <p className="mt-2 text-xs leading-normal muted">Dashed boxes are editable. Keep the original text if it is already correct.</p>

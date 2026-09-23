@@ -1,0 +1,444 @@
+[
+  {
+    "id": "aud-gc-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: under U.S. GAAP, over what period is going concern evaluated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "One year from the balance sheet date",
+        "explanation": "That was the old auditing rule.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Five years",
+        "explanation": "Five years is far longer than the required horizon.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "One year after the date the statements are issued (or available to be issued)",
+        "explanation": "Correct. ASC 205-40 and AU-C 570 use one year after the statements are issued or available to be issued."
+      },
+      {
+        "id": "d",
+        "text": "Until the next audit",
+        "explanation": "The period is defined from the issuance date, not the next audit.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 205-40 and AU-C 570 use one year after the statements are issued or available to be issued.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-chk1",
+    "pool": "lesson",
+    "stem": "Which condition is most likely to raise substantial doubt about going concern?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A one-time loss from a lawsuit that was fully paid",
+        "explanation": "A single paid loss is less indicative.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A new product launch",
+        "explanation": "Not an indicator by itself.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "A change in auditors",
+        "explanation": "Not an indicator by itself.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Recurring operating losses, negative cash flows, and default on loan covenants",
+        "explanation": "Correct. Combinations of negative trends and financial difficulty are strong indicators."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Combinations of negative trends and financial difficulty are strong indicators.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-chk2",
+    "pool": "lesson",
+    "stem": "Substantial doubt exists, management's plans are not probable of implementation, and the notes adequately disclose the situation. What report is appropriate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Qualified opinion",
+        "explanation": "Adequate disclosure supports an unmodified opinion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Adverse opinion",
+        "explanation": "The statements aren't misstated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Unmodified opinion with a separate going concern section",
+        "explanation": "Correct. AU-C 570: if substantial doubt remains and disclosure is adequate, include a going concern section; the opinion is unmodified."
+      },
+      {
+        "id": "d",
+        "text": "Unmodified opinion with no going concern reference",
+        "explanation": "Substantial doubt remains, so the section is required.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "AU-C 570: if substantial doubt remains and disclosure is adequate, include a going concern section; the opinion is unmodified.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-01",
+    "pool": "practice",
+    "stem": "Management's plans alleviate substantial doubt. What does the auditor's report include?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A required going concern section",
+        "explanation": "Required only if substantial doubt remains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A disclaimer",
+        "explanation": "Alleviated doubt is no basis for a disclaimer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A qualified opinion",
+        "explanation": "Alleviated doubt is no basis for a qualification.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No required going concern reference; the notes disclose the conditions and plans",
+        "explanation": "Correct. When plans alleviate doubt, GAAP still requires disclosure, but the report needn't include a going concern section (an emphasis-of-matter paragraph is optional)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "When plans alleviate doubt, GAAP still requires disclosure, but the report needn't include a going concern section (an emphasis-of-matter paragraph is optional).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-02",
+    "pool": "practice",
+    "stem": "Which wording is **prohibited** in a going concern section?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "\"If the Company is unable to obtain financing, there may be substantial doubt...\"",
+        "explanation": "Correct. Conditional language isn't allowed."
+      },
+      {
+        "id": "b",
+        "text": "\"These conditions raise substantial doubt about the Company's ability to continue as a going concern.\"",
+        "explanation": "This is required wording.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "\"Management's plans are described in Note 2.\"",
+        "explanation": "Referring to the note is appropriate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "\"Our opinion is not modified with respect to this matter.\"",
+        "explanation": "This is appropriate wording.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The auditor shouldn't use conditional language in expressing a conclusion about substantial doubt.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-03",
+    "pool": "practice",
+    "stem": "Substantial doubt remains, and management refuses to disclose it in the notes. What opinion is appropriate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Unmodified with a going concern section",
+        "explanation": "The missing disclosure is a misstatement.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Disclaimer",
+        "explanation": "Not the usual response to a disclosure failure.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Qualified or adverse, because of the inadequate disclosure",
+        "explanation": "Correct. Inadequate going concern disclosure is a misstatement → qualified (material) or adverse (pervasive)."
+      },
+      {
+        "id": "d",
+        "text": "Unmodified with no mention",
+        "explanation": "Ignores the misstatement.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Inadequate going concern disclosure is a misstatement → qualified (material) or adverse (pervasive).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-04",
+    "pool": "practice",
+    "stem": "Which management plan is most likely to alleviate substantial doubt?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A hope to increase sales next year",
+        "explanation": "Not supported by evidence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A verbal promise from a shareholder",
+        "explanation": "An undocumented promise isn't sufficient evidence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A plan to sell assets that have no identified buyer",
+        "explanation": "Without a buyer, the sale is not probable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A signed, unconditional commitment from a lender to refinance the maturing debt",
+        "explanation": "Correct. Plans must be probable of effective implementation and mitigate the conditions; written commitments provide evidence."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Plans must be probable of effective implementation and mitigate the conditions; written commitments provide evidence.",
+    "skill": "evaluation",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-05",
+    "pool": "practice",
+    "stem": "Which is an **external** matter that may indicate going concern problems?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A work stoppage",
+        "explanation": "That's an internal matter.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Loss of a key license or patent",
+        "explanation": "Correct. External matters: legal proceedings, legislation, loss of a key franchise, license, patent, customer, or supplier, and uninsured catastrophes."
+      },
+      {
+        "id": "c",
+        "text": "Recurring losses",
+        "explanation": "That's a negative trend.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Dependence on a single project",
+        "explanation": "That's an internal matter.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "External matters: legal proceedings, legislation, loss of a key franchise, license, patent, customer, or supplier, and uninsured catastrophes.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-06",
+    "pool": "practice",
+    "stem": "When may the auditor disclaim an opinion because of going concern uncertainty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Whenever substantial doubt exists",
+        "explanation": "Usually a going concern section suffices.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "In rare situations involving multiple significant uncertainties",
+        "explanation": "Correct. AU-C 570 permits a disclaimer in rare cases of multiple uncertainties significant to the statements."
+      },
+      {
+        "id": "c",
+        "text": "Never",
+        "explanation": "A disclaimer is permitted in rare cases.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only when management refuses to sign the representation letter",
+        "explanation": "That's a different disclaimer situation.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AU-C 570 permits a disclaimer in rare cases of multiple uncertainties significant to the statements.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-07",
+    "pool": "practice",
+    "stem": "The auditor concludes substantial doubt exists. Which communication is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Communicate with those charged with governance about the conditions and the effect on the report",
+        "explanation": "Correct. AU-C 570 requires communicating with TCWG about identified conditions, the auditor's conclusions, and the effect on the report."
+      },
+      {
+        "id": "b",
+        "text": "Notify the entity's creditors",
+        "explanation": "The auditor doesn't notify creditors.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Notify the state board of accountancy",
+        "explanation": "Board notification isn't required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No communication is required",
+        "explanation": "Communication with TCWG is required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AU-C 570 requires communicating with TCWG about identified conditions, the auditor's conclusions, and the effect on the report.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-08",
+    "pool": "practice",
+    "stem": "A going concern section appeared in last year's report. This year the doubt has been resolved. What about the comparative report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Repeat the going concern section",
+        "explanation": "Not appropriate when the doubt no longer exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Do not repeat it",
+        "explanation": "Correct. If substantial doubt no longer exists, the going concern section in the prior report shouldn't be repeated."
+      },
+      {
+        "id": "c",
+        "text": "Disclaim on the prior year",
+        "explanation": "There is no basis for a prior-year disclaimer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Qualify the prior-year opinion",
+        "explanation": "There is no basis for a qualification.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "If substantial doubt no longer exists, the going concern section in the prior report shouldn't be repeated.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-09",
+    "pool": "practice",
+    "stem": "Which procedure is most relevant when evaluating management's plan to obtain financing?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reading the lender's commitment letter and evaluating the lender's conditions",
+        "explanation": "Correct. The auditor obtains evidence about the feasibility of plans — commitments, agreements, and the parties' ability to perform."
+      },
+      {
+        "id": "b",
+        "text": "Confirming receivables",
+        "explanation": "Not directly relevant.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Observing inventory",
+        "explanation": "Not directly relevant.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Recomputing depreciation",
+        "explanation": "Depreciation doesn't bear on financing plans.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The auditor obtains evidence about the feasibility of plans — commitments, agreements, and the parties' ability to perform.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-gc-10",
+    "pool": "practice",
+    "stem": "Does including a going concern section change the opinion itself?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes — it becomes qualified",
+        "explanation": "A going concern section doesn't modify the opinion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No — the opinion remains unmodified when disclosure is adequate",
+        "explanation": "Correct. The going concern section informs users without modifying the opinion, provided the disclosure is adequate."
+      },
+      {
+        "id": "c",
+        "text": "Yes — it becomes a disclaimer",
+        "explanation": "Not automatically.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Yes — it becomes adverse",
+        "explanation": "Not automatically.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The going concern section informs users without modifying the opinion, provided the disclosure is adequate.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]
