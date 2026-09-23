@@ -1,0 +1,444 @@
+[
+  {
+    "id": "aud-spi-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: can the auditor of a public company also perform its internal audit function?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, if the audit committee approves it",
+        "explanation": "Pre-approval cannot make a prohibited service permissible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, if different staff perform the two services",
+        "explanation": "Separate staffing does not cure the prohibition.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, if fees for it are below audit fees",
+        "explanation": "There is no fee-based exception.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "No — internal audit outsourcing is a prohibited service for issuer audit clients",
+        "explanation": "Correct. SOX and SEC rules prohibit it."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Internal audit outsourcing is on the SEC's list of prohibited nonaudit services for issuer audit clients.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-chk1",
+    "pool": "lesson",
+    "stem": "Which service may the auditor of a public company provide if the audit committee pre-approves it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Preparing the corporation's federal income tax return",
+        "explanation": "Correct. Tax compliance is permitted with pre-approval, subject to PCAOB limits."
+      },
+      {
+        "id": "b",
+        "text": "Valuing an acquired subsidiary's intangible assets",
+        "explanation": "Valuation services are prohibited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Designing the company's general ledger system",
+        "explanation": "Financial information systems design is prohibited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Recording the company's journal entries",
+        "explanation": "Bookkeeping is prohibited.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Tax compliance and planning are permitted if pre-approved and not aggressive, contingent, or provided to persons in financial reporting oversight roles.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-chk2",
+    "pool": "lesson",
+    "stem": "For an issuer audit, how long may the lead engagement partner serve before rotating off, and for how long?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "5 years on, 5 years off",
+        "explanation": "Correct. Lead and concurring (engagement quality review) partners: 5 on, 5 off."
+      },
+      {
+        "id": "b",
+        "text": "7 years on, 2 years off",
+        "explanation": "That applies to other audit partners, not the lead.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "5 years on, 2 years off",
+        "explanation": "The lead partner's time-out is 5 years.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "10 years on, 1 year off",
+        "explanation": "No such rule exists; 1 year is the cooling-off period for employment.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Lead and concurring (engagement quality review) partners: 5 on, 5 off. Other audit partners: 7 on, 2 off.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-01",
+    "pool": "practice",
+    "stem": "Which is **not** one of the SEC's four principles of auditor independence?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The auditor should not audit its own work",
+        "explanation": "This is one of the four principles.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The auditor should not act as an advocate for the client",
+        "explanation": "This is one of the four principles.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The auditor should not perform management functions",
+        "explanation": "This is one of the four principles.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The auditor should not accept fees exceeding 15% of firm revenue from one client",
+        "explanation": "Correct. This is not an SEC principle."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The four principles: no mutual or conflicting interest, no auditing own work, no management functions, no advocacy.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-02",
+    "pool": "practice",
+    "stem": "The auditor of an issuer is asked to prepare the personal income tax return of the company's CFO. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Permitted with audit committee pre-approval",
+        "explanation": "PCAOB Rule 3523 prohibits tax services to persons in a financial reporting oversight role.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Permitted if the CFO pays the fee personally",
+        "explanation": "Who pays does not change the prohibition.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Independence is impaired — the CFO has a financial reporting oversight role",
+        "explanation": "Correct. Rule 3523 prohibits tax services to persons in a financial reporting oversight role at the audit client (and their immediate family), with narrow exceptions."
+      },
+      {
+        "id": "d",
+        "text": "Permitted if the return has no aggressive positions",
+        "explanation": "The prohibition applies to any tax service for the CFO.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Rule 3523 prohibits tax services to persons in a financial reporting oversight role at the audit client (and their immediate family), with narrow exceptions.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-03",
+    "pool": "practice",
+    "stem": "A senior on the issuer's audit team is hired as the client's CFO. The audit of the following year begins four months after her last work on the engagement. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The firm is not independent for that audit because the one-year cooling-off period was not met",
+        "explanation": "Correct. The firm is not independent if a former engagement team member takes a financial reporting oversight role within the one-year cooling-off period."
+      },
+      {
+        "id": "b",
+        "text": "None — the one-year rule applies only to partners",
+        "explanation": "The cooling-off rule applies to all members of the audit engagement team.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "She must wait five years before joining the client",
+        "explanation": "Five years is the partner rotation time-out, not the cooling-off period.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "The client's audit committee may waive the rule",
+        "explanation": "The rule cannot be waived by the audit committee.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The firm is not independent if a former engagement team member takes a financial reporting oversight role within the one-year cooling-off period.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-04",
+    "pool": "practice",
+    "stem": "Under PCAOB Rule 3526, when must the auditor communicate relationships that may bear on independence to the audit committee?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only when a problem is identified",
+        "explanation": "Communication is required before acceptance and at least annually.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Before accepting the engagement and at least annually thereafter",
+        "explanation": "Correct. Rule 3526: describe in writing all relationships that may reasonably bear on independence, discuss them, document the discussion, and affirm independence."
+      },
+      {
+        "id": "c",
+        "text": "Only at the end of each quarterly review",
+        "explanation": "Timing is before acceptance and annually, not quarterly.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Only when the lead partner rotates",
+        "explanation": "Rotation is unrelated to this communication.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Rule 3526: describe in writing all relationships that may reasonably bear on independence, discuss them, document the discussion, and affirm independence.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-05",
+    "pool": "practice",
+    "stem": "Which service is prohibited for an issuer audit client even if the audit committee approves it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A review of the issuer's quarterly financial information",
+        "explanation": "That review is part of the audit relationship and is permitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Issuing a comfort letter for a securities offering",
+        "explanation": "Comfort letters are permitted audit-related services.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Actuarial services related to the pension obligation",
+        "explanation": "Correct. Actuarial services are prohibited."
+      },
+      {
+        "id": "d",
+        "text": "Tax compliance for the corporation",
+        "explanation": "Tax compliance is permitted with pre-approval.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Actuarial services affecting financial statement amounts are prohibited because the auditor would audit its own work.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-06",
+    "pool": "practice",
+    "stem": "Under Government Auditing Standards (the Yellow Book), how is the auditor's preparation of a government's financial statements treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Automatically prohibited",
+        "explanation": "The Yellow Book does not ban it outright but treats it as a significant threat.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "A significant threat that must be evaluated and documented, with safeguards applied as needed",
+        "explanation": "Correct. The Yellow Book uses a conceptual framework."
+      },
+      {
+        "id": "c",
+        "text": "Always permitted without any evaluation",
+        "explanation": "The auditor must assess and document the threat.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Permitted only if the government has no accounting staff",
+        "explanation": "The test is management's SKE, not having no staff.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The Yellow Book uses a conceptual framework. Preparing statements creates self-review and management participation threats that must be evaluated and documented.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-07",
+    "pool": "practice",
+    "stem": "A firm audits a 401(k) plan under ERISA. For Department of Labor purposes, independence is required with respect to:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The plan only",
+        "explanation": "DOL independence extends to the plan sponsor as well.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "The plan and the plan sponsor",
+        "explanation": "Correct. DOL rules: the accountant must be independent of both the employee benefit plan and the plan sponsor."
+      },
+      {
+        "id": "c",
+        "text": "The plan's participants individually",
+        "explanation": "Participants are not the attest client.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "The plan's investment funds only",
+        "explanation": "The funds are not the relevant entities.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "DOL rules: the accountant must be independent of both the employee benefit plan and the plan sponsor.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-08",
+    "pool": "practice",
+    "stem": "A partner (not lead or concurring) has provided significant services on an issuer audit for seven consecutive years. What is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No rotation is required for non-lead partners",
+        "explanation": "Other audit partners must rotate after 7 years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Rotate off for 5 years",
+        "explanation": "The 5-year time-out applies to lead and concurring partners.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Rotate off for 2 years",
+        "explanation": "Correct. 7 years on, 2 years off."
+      },
+      {
+        "id": "d",
+        "text": "Rotate off for 1 year",
+        "explanation": "One year is the cooling-off period for employment.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Audit partners other than the lead and concurring partners: a maximum of 7 years, then a 2-year time-out.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-spi-09",
+    "pool": "practice",
+    "stem": "The audit committee of an issuer wants the auditor to provide a tax shelter strategy that relies on a position unlikely to be sustained, for a contingent fee. What is the evaluation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Permitted with pre-approval",
+        "explanation": "Pre-approval cannot make an aggressive or contingent-fee tax service acceptable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Prohibited on two grounds: an aggressive tax position and a contingent fee",
+        "explanation": "Correct. PCAOB Rules 3521 and 3522 are both violated."
+      },
+      {
+        "id": "c",
+        "text": "Prohibited only because of the contingent fee",
+        "explanation": "The aggressive position independently violates Rule 3522.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Permitted if disclosed in the proxy statement",
+        "explanation": "Disclosure does not cure the prohibition.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Rule 3521 bans contingent fees; Rule 3522 bans marketing, planning, or opining on aggressive tax positions and confidential transactions.",
+    "skill": "evaluation",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-spi-10",
+    "pool": "practice",
+    "stem": "Which statement about audit committee pre-approval for issuers is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only nonaudit services require pre-approval",
+        "explanation": "All audit and permitted nonaudit services require pre-approval.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Pre-approval allows any nonaudit service",
+        "explanation": "Prohibited services cannot be approved.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "All audit and permitted nonaudit services must be pre-approved by the audit committee",
+        "explanation": "Correct. SOX Section 202: the audit committee pre-approves all audit and permitted nonaudit services."
+      },
+      {
+        "id": "d",
+        "text": "Management may approve services if the committee delegates to the CFO",
+        "explanation": "Delegation is only to committee members, not to management.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "SOX Section 202: the audit committee pre-approves all audit and permitted nonaudit services. It may delegate to one or more of its own members, not to management.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

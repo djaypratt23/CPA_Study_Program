@@ -1,0 +1,144 @@
+{
+  "id": "aud-tbs-u1-issuer",
+  "section": "AUD",
+  "unitId": "aud-u1",
+  "moduleIds": [
+    "aud-sec-pcaob-independence"
+  ],
+  "pool": "practice",
+  "title": "Services to a public company — Summit Industries",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Dale & Frost LLP audits **Summit Industries**, an SEC registrant. Summit's audit committee has asked about additional services and staffing changes. Evaluate each item under SEC and PCAOB rules, then review the draft memo to the audit committee.",
+  "exhibits": [
+    {
+      "title": "Requests from Summit",
+      "content": "1. Prepare Summit's federal and state income tax returns.\n2. Perform a valuation of intangible assets acquired in a business combination.\n3. Perform Summit's internal audit function for one year.\n4. Issue a comfort letter for a planned bond offering.\n5. Prepare the personal tax return of Summit's CFO.\n6. Provide expert testimony in Summit's patent litigation.\n7. Design and implement Summit's new financial reporting system."
+    },
+    {
+      "title": "Staffing facts",
+      "content": "- Partner Ames has led the audit for 5 consecutive years.\n- Partner Brooks, the engagement quality reviewer, has served 3 years.\n- Partner Cho (another audit partner) has served 7 consecutive years."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "svc",
+      "prompt": "Classify each requested service.",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "1. Corporate income tax returns",
+          "answer": "Permitted with audit committee pre-approval",
+          "explanation": "Tax compliance is permitted, subject to pre-approval and the PCAOB tax rules."
+        },
+        {
+          "id": "r2",
+          "label": "2. Valuation of intangibles",
+          "answer": "Prohibited",
+          "explanation": "Valuation services would have the auditor audit its own work."
+        },
+        {
+          "id": "r3",
+          "label": "3. Internal audit outsourcing",
+          "answer": "Prohibited",
+          "explanation": "Internal audit outsourcing is a prohibited service."
+        },
+        {
+          "id": "r4",
+          "label": "4. Comfort letter",
+          "answer": "Permitted with audit committee pre-approval",
+          "explanation": "An audit-related service that is permitted."
+        },
+        {
+          "id": "r5",
+          "label": "5. CFO's personal return",
+          "answer": "Prohibited",
+          "explanation": "PCAOB Rule 3523: no tax services to a person in a financial reporting oversight role."
+        },
+        {
+          "id": "r6",
+          "label": "6. Expert testimony in patent litigation",
+          "answer": "Prohibited",
+          "explanation": "Expert services unrelated to the audit are prohibited (advocacy)."
+        },
+        {
+          "id": "r7",
+          "label": "7. Financial reporting system design",
+          "answer": "Prohibited",
+          "explanation": "Financial information systems design and implementation is prohibited."
+        }
+      ],
+      "options": [
+        "Prohibited",
+        "Permitted with audit committee pre-approval"
+      ]
+    },
+    {
+      "kind": "docreview",
+      "id": "memo",
+      "prompt": "Review the draft memo to Summit's audit committee. Correct any errors.",
+      "segments": [
+        {
+          "text": "**To the Audit Committee — Partner rotation.** Partner Ames has served as lead engagement partner for five years and "
+        },
+        {
+          "id": "m1",
+          "original": "may continue for two more years",
+          "options": [
+            "may continue for two more years",
+            "must rotate off the engagement for five years",
+            "must rotate off the engagement for two years"
+          ],
+          "answer": "must rotate off the engagement for five years",
+          "explanation": "Lead partners serve a maximum of 5 consecutive years, followed by a 5-year time-out."
+        },
+        {
+          "text": ". Partner Brooks, the engagement quality reviewer, "
+        },
+        {
+          "id": "m2",
+          "original": "must also rotate this year",
+          "options": [
+            "must also rotate this year",
+            "may continue for two more years",
+            "must rotate after seven years"
+          ],
+          "answer": "may continue for two more years",
+          "explanation": "The EQR partner has served only 3 of the 5 permitted years."
+        },
+        {
+          "text": ". Partner Cho has served seven years and "
+        },
+        {
+          "id": "m3",
+          "original": "must rotate off for two years",
+          "options": [
+            "must rotate off for two years",
+            "must rotate off for five years",
+            "is not subject to rotation"
+          ],
+          "answer": "must rotate off for two years",
+          "explanation": "Other audit partners: 7 years on, 2 years off."
+        },
+        {
+          "text": ". All audit and permitted nonaudit services "
+        },
+        {
+          "id": "m4",
+          "original": "may be approved by the CFO",
+          "options": [
+            "may be approved by the CFO",
+            "must be pre-approved by the audit committee",
+            "need approval only if fees exceed audit fees"
+          ],
+          "answer": "must be pre-approved by the audit committee",
+          "explanation": "SOX Section 202 requires audit committee pre-approval; it cannot be delegated to management."
+        },
+        {
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

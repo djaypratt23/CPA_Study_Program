@@ -1,0 +1,147 @@
+{
+  "id": "aud-tbs-u1-independence",
+  "section": "AUD",
+  "unitId": "aud-u1",
+  "moduleIds": [
+    "aud-code-of-conduct"
+  ],
+  "pool": "practice",
+  "title": "Independence issues — Brightline CPAs",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Brightline CPAs audits **Coastal Savings Bank**, a private company, under AICPA standards. For each situation, determine whether Brightline's independence with respect to Coastal is impaired under the AICPA Code, and identify the primary threat.",
+  "exhibits": [
+    {
+      "title": "Situations reported by Brightline personnel",
+      "content": "1. Audit manager Ruiz has a Coastal credit card with a $4,200 balance, paid in full each month.\n2. Staff accountant Ono's spouse inherited 50 shares of Coastal common stock eight months ago and plans to keep them.\n3. Tax partner Kent (not on the audit, in another office) spent 6 hours on Coastal's tax return.\n4. Audit senior Patel's father is Coastal's chief lending officer.\n5. Coastal still owes Brightline for tax work completed 16 months before the upcoming report date.\n6. Brightline prepared Coastal's financial statements from its trial balance; Coastal's CFO, a former auditor, reviewed and approved them.\n7. Engagement partner Vail obtained a new home mortgage from Coastal on normal terms.\n8. Brightline's benefit plan holds an immaterial investment in a mutual fund that owns Coastal bonds."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "imp",
+      "prompt": "Is Brightline's independence impaired?",
+      "rows": [
+        {
+          "id": "s1",
+          "label": "1. Credit card, $4,200",
+          "answer": "Independence not impaired",
+          "explanation": "Credit card balances of $10,000 or less (reduced to that level by the payment due date) are permitted loans."
+        },
+        {
+          "id": "s2",
+          "label": "2. Spouse's 50 shares",
+          "answer": "Independence impaired",
+          "explanation": "A spouse is immediate family; any direct financial interest impairs independence. Inherited interests avoid impairment only if disposed of as soon as practicable (no later than 30 days after the right to dispose); these are being kept."
+        },
+        {
+          "id": "s3",
+          "label": "3. Tax partner, 6 hours",
+          "answer": "Independence not impaired",
+          "explanation": "Kent is not a covered member: fewer than 10 hours of nonattest services, not in the lead partner's office, and not on the team."
+        },
+        {
+          "id": "s4",
+          "label": "4. Father is chief lending officer",
+          "answer": "Independence impaired",
+          "explanation": "A close relative in a key position impairs the covered member's independence; Patel must be removed from the team."
+        },
+        {
+          "id": "s5",
+          "label": "5. Fees unpaid for 16 months",
+          "answer": "Independence impaired",
+          "explanation": "Unpaid fees for services rendered more than one year before the current report date impair independence."
+        },
+        {
+          "id": "s6",
+          "label": "6. Statement preparation with a qualified CFO",
+          "answer": "Independence not impaired",
+          "explanation": "Nonattest services are permitted when the client designates an individual with suitable SKE, who evaluates and takes responsibility for the results."
+        },
+        {
+          "id": "s7",
+          "label": "7. Home mortgage",
+          "answer": "Independence impaired",
+          "explanation": "A home mortgage from a client lender is not a permitted loan."
+        },
+        {
+          "id": "s8",
+          "label": "8. Immaterial indirect interest",
+          "answer": "Independence not impaired",
+          "explanation": "Indirect financial interests impair independence only if material."
+        }
+      ],
+      "options": [
+        "Independence impaired",
+        "Independence not impaired"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "thr",
+      "prompt": "Identify the primary threat created in each situation.",
+      "rows": [
+        {
+          "id": "t2",
+          "label": "2. Spouse's stock",
+          "answer": "Self-interest",
+          "explanation": "A financial stake in the client's results."
+        },
+        {
+          "id": "t4",
+          "label": "4. Father is chief lending officer",
+          "answer": "Familiarity",
+          "explanation": "A close personal relationship with someone in a key position."
+        },
+        {
+          "id": "t5",
+          "label": "5. Unpaid fees",
+          "answer": "Self-interest",
+          "explanation": "The firm has a financial interest in the client's ability to pay."
+        },
+        {
+          "id": "t6",
+          "label": "6. Statement preparation",
+          "answer": "Self-review",
+          "explanation": "The firm audits statements it prepared."
+        }
+      ],
+      "options": [
+        "Self-interest",
+        "Self-review",
+        "Familiarity",
+        "Management participation",
+        "Adverse interest"
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) resolves situation 7?",
+      "excerpts": [
+        {
+          "id": "a",
+          "citation": "ET 1.260.020 (paraphrase)",
+          "text": "Independence is impaired if a covered member has a loan to or from an attest client that is a lender, other than grandfathered loans or permitted loans such as automobile loans, cash-collateralized loans, and credit card balances of $10,000 or less."
+        },
+        {
+          "id": "b",
+          "citation": "ET 1.230.010 (paraphrase)",
+          "text": "Independence is impaired if fees for professional services rendered more than one year before the current-year report date are unpaid."
+        },
+        {
+          "id": "c",
+          "citation": "ET 1.270.100 (paraphrase)",
+          "text": "Independence is impaired if an individual on the attest engagement team has a close relative in a key position with the client."
+        },
+        {
+          "id": "d",
+          "citation": "ET 1.295.040 (paraphrase)",
+          "text": "Before performing nonattest services, the member should establish and document in writing the understanding with the client."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The mortgage is a loan from a client lender that is neither grandfathered nor on the permitted list."
+    }
+  ]
+}
