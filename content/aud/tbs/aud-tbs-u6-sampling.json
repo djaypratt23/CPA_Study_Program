@@ -1,0 +1,141 @@
+{
+  "id": "aud-tbs-u6-sampling",
+  "section": "AUD",
+  "unitId": "aud-u6",
+  "moduleIds": [
+    "aud-sampling"
+  ],
+  "pool": "practice",
+  "title": "Sampling applications — Ridgeway Components",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "You are evaluating sampling applications in the audit of **Ridgeway Components**. Use the data provided; round percentages to one decimal place.",
+  "exhibits": [
+    {
+      "title": "Test of controls — purchase approval",
+      "content": "- Population: 18,400 purchase orders\n- Tolerable deviation rate: 6%; acceptable risk of overreliance: 5%\n- Sample: 100 purchase orders; deviations found: 2\n- Statistical table: upper deviation rate for 2 deviations in 100 at 5% risk = **6.2%**"
+    },
+    {
+      "title": "Substantive test — receivables (MUS)",
+      "content": "- Book value: **$4,200,000**; sample size: **120**\n- Tolerable misstatement: $210,000\n- Misstatements found:\n  - Customer A: book $14,000, audited $10,500\n  - Customer B: book $52,000, audited $49,000\n  - Customer C: book $7,000, audited $6,650"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "att",
+      "prompt": "Evaluate the test of controls.",
+      "rows": [
+        {
+          "id": "sr",
+          "label": "Sample deviation rate (%)",
+          "answer": 2.0,
+          "tolerance": 0.05,
+          "explanation": "2 ÷ 100 = **2.0%**."
+        },
+        {
+          "id": "al",
+          "label": "Allowance for sampling risk (%)",
+          "answer": 4.2,
+          "tolerance": 0.05,
+          "explanation": "6.2% − 2.0% = **4.2%**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "attc",
+      "prompt": "Conclusion on the test of controls",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Can the auditor rely on the control as planned?",
+          "options": [
+            "Yes — the sample rate is below the tolerable rate",
+            "No — the upper deviation rate exceeds the tolerable rate"
+          ],
+          "answer": "No — the upper deviation rate exceeds the tolerable rate",
+          "explanation": "6.2% > 6%; the decision uses the upper deviation rate, not the 2% sample rate."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "mus",
+      "prompt": "Evaluate the MUS sample.",
+      "rows": [
+        {
+          "id": "int",
+          "label": "Sampling interval",
+          "answer": 35000,
+          "tolerance": 0,
+          "explanation": "4,200,000 ÷ 120 = **35,000**."
+        },
+        {
+          "id": "pa",
+          "label": "Projected misstatement — Customer A",
+          "answer": 8750,
+          "tolerance": 0,
+          "explanation": "Tainting 3,500 ÷ 14,000 = 25%; 25% × 35,000 = **8,750**."
+        },
+        {
+          "id": "pb",
+          "label": "Projected misstatement — Customer B",
+          "answer": 3000,
+          "tolerance": 0,
+          "explanation": "Book value ≥ interval → actual misstatement **3,000**."
+        },
+        {
+          "id": "pc",
+          "label": "Projected misstatement — Customer C",
+          "answer": 1750,
+          "tolerance": 0,
+          "explanation": "Tainting 350 ÷ 7,000 = 5%; 5% × 35,000 = **1,750**."
+        },
+        {
+          "id": "tot",
+          "label": "Total projected misstatement",
+          "answer": 13500,
+          "tolerance": 0,
+          "explanation": "8,750 + 3,000 + 1,750 = **13,500**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "fac",
+      "prompt": "How would each change affect the attribute sample size, other things equal?",
+      "rows": [
+        {
+          "id": "f1",
+          "label": "Tolerable deviation rate lowered from 6% to 4%",
+          "answer": "Increase",
+          "explanation": "A lower tolerable rate requires a larger sample."
+        },
+        {
+          "id": "f2",
+          "label": "Expected deviation rate raised from 1% to 2%",
+          "answer": "Increase",
+          "explanation": "More expected deviations require a larger sample."
+        },
+        {
+          "id": "f3",
+          "label": "Acceptable risk of overreliance raised from 5% to 10%",
+          "answer": "Decrease",
+          "explanation": "Accepting more risk permits a smaller sample."
+        },
+        {
+          "id": "f4",
+          "label": "Population grows from 18,400 to 25,000",
+          "answer": "Little or no effect",
+          "explanation": "Population size has little effect on large populations."
+        }
+      ],
+      "options": [
+        "Increase",
+        "Decrease",
+        "Little or no effect"
+      ]
+    }
+  ]
+}

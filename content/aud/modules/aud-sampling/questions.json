@@ -1,0 +1,448 @@
+[
+  {
+    "id": "aud-sa-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which sampling risk could lead the auditor to issue an inappropriate unmodified opinion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Risk of incorrect rejection",
+        "explanation": "That leads to extra work, not a wrong conclusion that a balance is fine.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Nonsampling risk only",
+        "explanation": "Sampling risk can also cause this.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Risk of incorrect acceptance",
+        "explanation": "Correct. It concludes a balance is fairly stated when it isn't."
+      },
+      {
+        "id": "d",
+        "text": "Risk of assessing control risk too high",
+        "explanation": "That affects efficiency.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Incorrect acceptance (and assessing control risk too low) relate to audit effectiveness.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-chk1",
+    "pool": "lesson",
+    "stem": "Which risk relates to audit **efficiency** in tests of controls?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Risk of assessing control risk too low",
+        "explanation": "That relates to effectiveness.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Nonsampling risk",
+        "explanation": "Not specifically efficiency-related.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Risk of incorrect acceptance",
+        "explanation": "That relates to substantive tests and effectiveness.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Risk of assessing control risk too high",
+        "explanation": "Correct. It leads to unnecessary substantive work."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Underreliance (assessing control risk too high) causes the auditor to do more substantive work than needed.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-chk2",
+    "pool": "lesson",
+    "stem": "In MUS, an item with a book value of $50,000 (greater than the $25,000 interval) is found to be overstated by $4,000. What misstatement is included in the projection?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4,000",
+        "explanation": "Correct. For items at or above the interval, use the actual misstatement."
+      },
+      {
+        "id": "b",
+        "text": "$2,000",
+        "explanation": "That applies a tainting percentage to the interval.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$8,000",
+        "explanation": "Doubles the misstatement without basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The misstatement must be included.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Items with book values at or above the sampling interval are always selected; their actual misstatement is used.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "aud-sa-01",
+    "pool": "practice",
+    "stem": "Which change would **increase** the sample size in an attribute sampling plan?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Increasing the tolerable deviation rate",
+        "explanation": "That decreases sample size.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Increasing the acceptable risk of overreliance",
+        "explanation": "That decreases sample size.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Increasing the expected deviation rate",
+        "explanation": "Correct. Sample size moves directly with the expected deviation rate and inversely with the tolerable rate and acceptable risk."
+      },
+      {
+        "id": "d",
+        "text": "Increasing a population from 50,000 to 60,000 items",
+        "explanation": "Little effect on large populations.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Sample size moves directly with the expected deviation rate and inversely with the tolerable rate and acceptable risk.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-02",
+    "pool": "practice",
+    "stem": "A sample of 80 found 3 deviations. The upper deviation rate is 9.5% and the tolerable rate is 8%. What should the auditor conclude?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Rely on the control, because the sample rate is 3.75%",
+        "explanation": "The decision uses the upper deviation rate.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Issue a qualified opinion",
+        "explanation": "A control conclusion doesn't dictate the opinion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Reduce the tolerable rate to 3.75%",
+        "explanation": "Changing the tolerable rate after the fact is inappropriate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Don't rely on the control as planned; increase the assessed control risk",
+        "explanation": "Correct. 9.5% exceeds 8%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "If the upper deviation rate exceeds the tolerable rate, the sample doesn't support the planned reliance.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-03",
+    "pool": "practice",
+    "stem": "Which is an example of **nonsampling** risk?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The sample happens to contain fewer errors than the population",
+        "explanation": "That is sampling risk.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "The sample size is too small for the desired confidence",
+        "explanation": "That affects sampling risk.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "The auditor fails to recognize a missing approval as a deviation",
+        "explanation": "Correct. A human error, not caused by sampling."
+      },
+      {
+        "id": "d",
+        "text": "The auditor uses statistical sampling",
+        "explanation": "A method choice, not a risk.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Nonsampling risk includes inappropriate procedures, misinterpreted evidence, and failure to recognize misstatements or deviations.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-04",
+    "pool": "practice",
+    "stem": "In MUS, the sampling interval is $20,000. An item with a book value of $5,000 has an audited value of $4,000. What is the projected misstatement?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000",
+        "explanation": "That is the actual misstatement, not projected for an item below the interval.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "That is the interval.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "That is the book value.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$4,000",
+        "explanation": "Correct. 20% tainting × $20,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Tainting = 1,000 ÷ 5,000 = 20%; projected = 20% × 20,000 = **$4,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "aud-sa-05",
+    "pool": "practice",
+    "stem": "Why is MUS generally **not** suitable for testing the completeness of accounts payable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Because payables are usually small",
+        "explanation": "Size isn't the issue.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "b",
+        "text": "Because understated or unrecorded items have little or no chance of selection",
+        "explanation": "Correct. MUS selects dollars."
+      },
+      {
+        "id": "c",
+        "text": "Because MUS can't be used on liabilities",
+        "explanation": "It can be used on liabilities for overstatement.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Because MUS requires a normal distribution",
+        "explanation": "MUS doesn't require one.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "MUS selects dollars. Unrecorded or zero-balance items have no dollars to select, so MUS is poor at detecting understatement.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-06",
+    "pool": "practice",
+    "stem": "Inventory book value is $1,500,000 and the MUS sample size is 75. What is the sampling interval?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Correct. $1,500,000 ÷ 75."
+      },
+      {
+        "id": "b",
+        "text": "$75,000",
+        "explanation": "Uses the sample size as if it were thousands of dollars.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "Divides incorrectly.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$112,500",
+        "explanation": "Multiplies incorrectly.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Interval = book value ÷ sample size = 1,500,000 ÷ 75 = **$20,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "aud-sa-07",
+    "pool": "practice",
+    "stem": "Which sampling risk means the auditor concludes a balance is materially misstated when it isn't?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Risk of incorrect rejection",
+        "explanation": "Correct. It affects efficiency."
+      },
+      {
+        "id": "b",
+        "text": "Risk of incorrect acceptance",
+        "explanation": "That's the opposite error.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Risk of overreliance",
+        "explanation": "That concerns tests of controls.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Detection risk",
+        "explanation": "A broader concept.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Incorrect rejection leads to additional procedures that eventually show the balance is fairly stated — an efficiency cost.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-08",
+    "pool": "practice",
+    "stem": "During a test of controls, the auditor finds one deviation that appears to be intentional (a forged approval). What should the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Treat it like any other deviation in the rate calculation only",
+        "explanation": "Qualitative aspects must also be evaluated.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Consider the qualitative implications, including possible fraud, beyond the deviation rate",
+        "explanation": "Correct. AU-C 530: investigate the nature and cause of deviations."
+      },
+      {
+        "id": "c",
+        "text": "Exclude it as an anomaly",
+        "explanation": "Anomalies require a high degree of certainty that they are not representative, and fraud indicators can't be dismissed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Conclude the control is effective because there is only one deviation",
+        "explanation": "The nature of the deviation matters.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AU-C 530: investigate the nature and cause of deviations. Intentional deviations may indicate fraud and affect other areas of the audit.",
+    "skill": "evaluation",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-09",
+    "pool": "practice",
+    "stem": "Which classical variables sampling method is most appropriate when differences between audited and book values are expected to be proportional to book values?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Mean-per-unit",
+        "explanation": "MPU doesn't use book values.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Ratio estimation",
+        "explanation": "Correct. Ratio estimation fits misstatements proportional to book value; difference estimation fits a roughly constant difference; mean-per-unit ignores book values."
+      },
+      {
+        "id": "c",
+        "text": "Difference estimation",
+        "explanation": "Better when differences are constant in amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Attribute sampling",
+        "explanation": "Attribute sampling estimates rates, not amounts.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Ratio estimation fits misstatements proportional to book value; difference estimation fits a roughly constant difference; mean-per-unit ignores book values.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-10",
+    "pool": "practice",
+    "stem": "MUS results: projected misstatement $12,000; basic precision $45,000; incremental allowance $6,000; tolerable misstatement $55,000. What is the upper misstatement limit and the conclusion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000 — accept the balance",
+        "explanation": "The projection alone ignores sampling risk.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$63,000 — exceeds tolerable misstatement; the balance may be materially misstated",
+        "explanation": "Correct. 12,000 + 45,000 + 6,000 = 63,000 > 55,000."
+      },
+      {
+        "id": "c",
+        "text": "$57,000 — accept the balance",
+        "explanation": "Omits the projected misstatement.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$51,000 — accept the balance",
+        "explanation": "Omits the incremental allowance.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Upper misstatement limit = projected + basic precision + incremental allowance = **63,000**. Because it exceeds tolerable misstatement, the auditor can't conclude the balance is fairly stated without further work or adjustment.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  }
+]

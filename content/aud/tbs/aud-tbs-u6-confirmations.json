@@ -1,0 +1,130 @@
+{
+  "id": "aud-tbs-u6-confirmations",
+  "section": "AUD",
+  "unitId": "aud-u6",
+  "moduleIds": [
+    "aud-evidence-assertions"
+  ],
+  "pool": "practice",
+  "title": "Receivable confirmations — Sable Office Products",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "The audit team at **Sable Office Products** (a private company) sent positive confirmations for receivables at December 31, Year 1. Determine the follow-up for each result, then review the documentation memo. The auditor's report was released on **March 5, Year 2**.",
+  "exhibits": [
+    {
+      "title": "Confirmation results",
+      "content": "1. Alder Co. confirmed its $28,400 balance without exception.\n2. Birch LLC replied that its $12,000 payment was mailed December 29.\n3. Cedar Inc. did not respond to two requests.\n4. Dune Corp. stated it returned $3,800 of defective goods in December; no credit memo was recorded.\n5. Management asked the team not to confirm Elm Stores, citing a pending pricing dispute."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "fu",
+      "prompt": "Select the most appropriate follow-up for each result.",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "1. Alder — agreed",
+          "answer": "No further work needed",
+          "explanation": "An agreed positive confirmation is evidence of existence."
+        },
+        {
+          "id": "r2",
+          "label": "2. Birch — payment in transit",
+          "answer": "Verify receipt in the January cash receipts records",
+          "explanation": "A timing difference, confirmed by the payment's receipt after year-end."
+        },
+        {
+          "id": "r3",
+          "label": "3. Cedar — no response",
+          "answer": "Examine subsequent cash receipts and, if needed, shipping documents and invoices",
+          "explanation": "Alternative procedures are required for positive nonresponses."
+        },
+        {
+          "id": "r4",
+          "label": "4. Dune — unrecorded return",
+          "answer": "Investigate as a likely misstatement (sales returns cut-off)",
+          "explanation": "A December return without a credit memo overstates receivables and revenue."
+        },
+        {
+          "id": "r5",
+          "label": "5. Elm — management request",
+          "answer": "Evaluate management's reasons and perform alternative procedures",
+          "explanation": "AU-C 505: inquire about and evaluate the reasons; if unreasonable, communicate with those charged with governance."
+        }
+      ],
+      "options": [
+        "No further work needed",
+        "Verify receipt in the January cash receipts records",
+        "Examine subsequent cash receipts and, if needed, shipping documents and invoices",
+        "Investigate as a likely misstatement (sales returns cut-off)",
+        "Evaluate management's reasons and perform alternative procedures"
+      ]
+    },
+    {
+      "kind": "docreview",
+      "id": "memo",
+      "prompt": "Review the documentation memo and correct any errors.",
+      "segments": [
+        {
+          "text": "**Documentation memo — Sable Office Products.** Confirmations primarily provide evidence about the "
+        },
+        {
+          "id": "m1",
+          "original": "valuation",
+          "options": [
+            "valuation",
+            "existence",
+            "completeness"
+          ],
+          "answer": "existence",
+          "explanation": "Confirmations mainly test existence; collectibility requires other evidence."
+        },
+        {
+          "text": " of receivables. The final audit file must be assembled no later than "
+        },
+        {
+          "id": "m2",
+          "original": "April 19, Year 2 (45 days after the report release date)",
+          "options": [
+            "April 19, Year 2 (45 days after the report release date)",
+            "May 4, Year 2 (60 days after the report release date)",
+            "March 5, Year 3 (one year after the report release date)"
+          ],
+          "answer": "May 4, Year 2 (60 days after the report release date)",
+          "explanation": "Nonissuer (AU-C 230): 60 days. 45 days is the PCAOB rule."
+        },
+        {
+          "text": " and retained for at least "
+        },
+        {
+          "id": "m3",
+          "original": "seven years",
+          "options": [
+            "seven years",
+            "five years",
+            "three years"
+          ],
+          "answer": "five years",
+          "explanation": "AU-C 230: at least 5 years from the report release date (PCAOB: 7)."
+        },
+        {
+          "text": ". After the documentation completion date, working papers "
+        },
+        {
+          "id": "m4",
+          "original": "may be deleted if superseded",
+          "options": [
+            "may be deleted if superseded",
+            "may be added to, with the date, preparer, and reason documented, but not deleted"
+          ],
+          "answer": "may be added to, with the date, preparer, and reason documented, but not deleted",
+          "explanation": "Deletion is prohibited after the completion date."
+        },
+        {
+          "text": "."
+        }
+      ]
+    }
+  ]
+}
