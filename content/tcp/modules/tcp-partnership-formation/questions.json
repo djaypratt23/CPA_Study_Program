@@ -1,0 +1,484 @@
+[
+  {
+    "id": "tcp-pf-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a partner contributes land with a basis of $30,000 and FMV of $90,000 for a partnership interest. No liabilities are involved. What gain does the partner recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60,000",
+        "explanation": "Treats the contribution as a sale; §721 provides nonrecognition.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$90,000",
+        "explanation": "Treats the whole FMV as income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "No rule taxes half of the built-in gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Correct. Contributions of property for a partnership interest are generally tax-free."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§721: no gain or loss. The $60,000 built-in gain is preserved through carryover basis and §704(c).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pf-chk1",
+    "pool": "lesson",
+    "stem": "A partner contributes $10,000 cash and property with an adjusted basis of $25,000 (FMV $40,000). There are no liabilities. What is the partner's outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Uses the property's FMV; outside basis uses its adjusted basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$35,000",
+        "explanation": "Correct. $10,000 + $25,000."
+      },
+      {
+        "id": "c",
+        "text": "$25,000",
+        "explanation": "Omits the cash contributed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$40,000",
+        "explanation": "Uses only the property's FMV and omits the cash.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§722: cash + adjusted basis of property = **$35,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pf-chk2",
+    "pool": "lesson",
+    "stem": "In the same contribution (property basis $25,000, FMV $40,000), what is the partnership's basis in the property?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Uses FMV; the partnership takes a carryover basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$35,000",
+        "explanation": "That is the partner's outside basis, which includes the cash.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$25,000",
+        "explanation": "Correct. §723 carryover basis."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Contributed property keeps its basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Inside basis = the contributing partner's adjusted basis (**$25,000**); the holding period tacks.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pf-01",
+    "pool": "practice",
+    "stem": "Dee receives a 20% capital interest worth $30,000 solely in exchange for services to the partnership. What are Dee's income and outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0 income; $0 basis",
+        "explanation": "A capital interest for services is taxable compensation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000 capital gain; $30,000 basis",
+        "explanation": "The income is ordinary compensation, not capital gain.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$30,000 ordinary income; $0 basis",
+        "explanation": "Income recognized creates basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 ordinary income; $30,000 basis",
+        "explanation": "Correct. The FMV of the capital interest is ordinary income, and it becomes basis."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Services are not 'property' under §721. The FMV of the capital interest is ordinary income, and that amount becomes basis.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pf-02",
+    "pool": "practice",
+    "stem": "Eve contributes a building (adjusted basis $150,000; FMV $250,000) subject to a $100,000 mortgage the partnership assumes, for a 40% interest. Liabilities are shared by ownership percentage. What is Eve's outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$90,000",
+        "explanation": "Correct. 150,000 − 100,000 + 40,000."
+      },
+      {
+        "id": "b",
+        "text": "$150,000",
+        "explanation": "Ignores the liability relief and her share of partnership debt.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Subtracts the relief but omits her 40% share of the assumed debt.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$190,000",
+        "explanation": "Adds her share without subtracting the relief of the full mortgage.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Outside basis = 150,000 − 100,000 relief + 40% × 100,000 = **$90,000**. Net relief of 60,000 < 150,000 basis, so no gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pf-03",
+    "pool": "practice",
+    "stem": "Fay contributes property (adjusted basis $30,000) subject to an $80,000 liability for a 50% interest. The partnership assumes the liability, and liabilities are shared equally. What gain does Fay recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Uses the gross liability instead of net relief (80,000 − 40,000 share).",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Net relief exceeds basis, which triggers gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "Correct. Net relief $40,000 − basis $30,000."
+      },
+      {
+        "id": "d",
+        "text": "$40,000",
+        "explanation": "That is the net relief, not the excess over basis.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Net relief = 80,000 − 50% × 80,000 = 40,000; excess over the 30,000 basis = **$10,000** gain. Outside basis = 0.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pf-04",
+    "pool": "practice",
+    "stem": "A partner contributes a capital asset held for 3 years. What is the holding period of the partner's interest and of the partnership's asset?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Both begin on the contribution date",
+        "explanation": "Holding periods tack for capital and §1231 property.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Both include the partner's 3 years",
+        "explanation": "Correct. Tacking applies to both (§1223)."
+      },
+      {
+        "id": "c",
+        "text": "Only the partnership's holding period tacks",
+        "explanation": "The partner's interest also tacks when capital or §1231 property is contributed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Both are automatically long-term",
+        "explanation": "Automatic long-term treatment applies to inherited property.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Contributed capital and §1231 assets: both the outside interest and the inside asset include the contributor's holding period.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pf-05",
+    "pool": "practice",
+    "stem": "A partner contributes inventory (a dealer's stock in trade). The partnership, an investor rather than a dealer, sells it 3 years later at a gain. What is the gain's character?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Capital gain, because the partnership is not a dealer",
+        "explanation": "§724 preserves the ordinary character of contributed inventory for 5 years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "§1231 gain",
+        "explanation": "Inventory is never §1231 property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Ordinary income",
+        "explanation": "Correct. The sale is within 5 years of contribution."
+      },
+      {
+        "id": "d",
+        "text": "No gain, because of §721",
+        "explanation": "§721 applies at contribution, not on a later sale.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§724(b): contributed inventory keeps its ordinary character if sold within 5 years.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pf-06",
+    "pool": "practice",
+    "stem": "Gus contributed land (basis $40,000; FMV $100,000) to a 50/50 partnership. Two years later the partnership sells the land for $110,000. Using the traditional method, how much gain is allocated to Gus?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$35,000",
+        "explanation": "Splits the entire $70,000 gain equally, ignoring §704(c).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "Allocates only the built-in gain and omits his share of post-contribution appreciation.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$70,000",
+        "explanation": "Allocates the entire gain to Gus.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$65,000",
+        "explanation": "Correct. $60,000 built-in gain + 50% × $10,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Total gain = 110,000 − 40,000 = 70,000. §704(c) built-in gain 60,000 → Gus; remaining 10,000 split 50/50. Gus = **$65,000**.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-pf-07",
+    "pool": "practice",
+    "stem": "A calendar-year partnership began business July 1. It incurred $8,000 of organization costs and $12,000 of syndication costs. What is its maximum first-year deduction for these costs?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,100",
+        "explanation": "Correct. $5,000 + ($3,000 ÷ 180 × 6 months)."
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Omits the amortization of the remaining $3,000.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$5,200",
+        "explanation": "Amortizes a full 12 months; amortization starts when business begins.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Syndication costs are never deductible, and organization costs above $5,000 are amortized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§709: immediate 5,000 (the costs are under 50,000, so there is no phase-out) + (8,000 − 5,000) ÷ 180 × 6 = 100 → **$5,100**. The 12,000 of syndication costs is capitalized with no deduction.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pf-08",
+    "pool": "practice",
+    "stem": "Which amount is **not** included in a contributing partner's initial outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cash contributed",
+        "explanation": "Cash is included dollar for dollar.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Adjusted basis of property contributed",
+        "explanation": "It is the core of §722 basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The property's appreciation above its adjusted basis",
+        "explanation": "Correct. Unrecognized appreciation is not basis."
+      },
+      {
+        "id": "d",
+        "text": "The partner's share of partnership liabilities",
+        "explanation": "It is treated as a cash contribution (§752).",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Outside basis reflects only after-tax investment: cash, adjusted basis, and liability shares — not untaxed appreciation.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pf-09",
+    "pool": "practice",
+    "stem": "Hal contributes $30,000 cash for a 25% interest in an existing partnership that has $80,000 of liabilities, shared by ownership percentage. What is Hal's outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "Omits Hal's share of partnership liabilities.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Correct. $30,000 + 25% × $80,000."
+      },
+      {
+        "id": "c",
+        "text": "$110,000",
+        "explanation": "Adds all partnership liabilities rather than Hal's share.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "Subtracts his liability share instead of adding it.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§752(a): an increase in a partner's share of liabilities is treated as a cash contribution: 30,000 + 20,000 = **$50,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pf-10",
+    "pool": "practice",
+    "stem": "A cash-basis partner contributes accounts receivable with a zero tax basis and a face value of $15,000. The partnership collects them the next month. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000 ordinary income, allocated to the contributing partner",
+        "explanation": "Correct. Receivables keep their ordinary character, and §704(c) allocates the built-in income to the contributor."
+      },
+      {
+        "id": "b",
+        "text": "$15,000 capital gain, allocated among all partners",
+        "explanation": "The receivables are ordinary-income property, and the built-in gain belongs to the contributor.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "No income, because §721 applies",
+        "explanation": "§721 defers recognition at contribution; collection triggers the income.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Income recognized by the partner at contribution",
+        "explanation": "Nonrecognition applies at contribution; the income arises on collection.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§724(a): unrealized receivables stay ordinary. The zero-basis built-in income is allocated to the contributing partner under §704(c).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pf-11",
+    "pool": "practice",
+    "stem": "What is the unextended due date of Form 1065 for a calendar-year partnership?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "April 15",
+        "explanation": "That is the due date for individual and calendar-year C corporation returns.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "March 15",
+        "explanation": "Correct. The 15th day of the 3rd month after year-end."
+      },
+      {
+        "id": "c",
+        "text": "May 15",
+        "explanation": "That is the due date for calendar-year exempt organization Form 990.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "September 15",
+        "explanation": "That is the extended due date (6-month extension).",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Partnerships and S corporations: 15th day of the 3rd month (March 15), with a 6-month extension to September 15.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

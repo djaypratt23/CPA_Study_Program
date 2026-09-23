@@ -1,0 +1,107 @@
+# Auditing and Attestation (AUD) — outline per the AICPA Uniform CPA Examination
+# Blueprints effective 2026-01-01. See docs/BLUEPRINT_NOTES.md.
+# Scaffold: full blueprint outline with one complete sample module (aud-risk-materiality).
+id: AUD
+name: Auditing and Attestation
+kind: core
+status: scaffold
+blueprintEffective: '2026-01-01'
+description: >-
+  Auditing under AICPA (GAAS) and PCAOB standards, attestation and review engagements, ethics and
+  independence. Much of it is judgment: assessing risk, choosing a response, and evaluating evidence.
+exam:
+  durationMinutes: 240
+  testlets:
+    - { kind: mcq, count: 39 }
+    - { kind: mcq, count: 39 }
+    - { kind: tbs, count: 2 }
+    - { kind: tbs, count: 3 }
+    - { kind: tbs, count: 2 }
+  breakAfterTestlet: 3
+  breakMinutes: 15
+  weighting: { mcq: 50, tbs: 50 }
+  passingScore: 75
+skillAllocation:
+  - { level: remembering, min: 30, max: 40 }
+  - { level: application, min: 30, max: 40 }
+  - { level: analysis, min: 15, max: 25 }
+  - { level: evaluation, min: 5, max: 15 }
+areas:
+  - id: AUD-I
+    title: 'Area I: Ethics, Professional Responsibilities & General Principles'
+    allocation: { min: 15, max: 25 }
+    units:
+      - id: aud-u1
+        title: Ethics & Independence
+        modules:
+          - { id: aud-code-of-conduct, title: 'AICPA Code of Professional Conduct & independence' }
+          - { id: aud-sec-pcaob-independence, title: 'SEC, PCAOB, GAO & DOL independence rules' }
+      - id: aud-u2
+        title: General Principles & Engagement Acceptance
+        modules:
+          - { id: aud-professional-standards, title: 'Auditor responsibilities & the standards framework' }
+          - { id: aud-quality-management, title: 'Quality management' }
+          - { id: aud-engagement-acceptance, title: 'Engagement acceptance, terms & predecessor communications' }
+  - id: AUD-II
+    title: 'Area II: Assessing Risk & Developing a Planned Response'
+    allocation: { min: 25, max: 35 }
+    units:
+      - id: aud-u3
+        title: Planning the Audit
+        modules:
+          - { id: aud-planning, title: 'Audit strategy, audit plan & planning analytics' }
+          - { id: aud-risk-materiality, title: 'Audit risk & materiality' }
+      - id: aud-u4
+        title: Understanding the Entity & Internal Control
+        modules:
+          - { id: aud-understanding-entity, title: 'Understanding the entity & its environment' }
+          - { id: aud-internal-control, title: 'Internal control (COSO) & control deficiencies' }
+          - { id: aud-it-controls, title: 'IT general and application controls' }
+          - { id: aud-fraud-risk, title: 'Fraud risk assessment' }
+      - id: aud-u5
+        title: Responding to Assessed Risks
+        modules:
+          - { id: aud-risk-response, title: 'Further audit procedures: nature, timing & extent' }
+          - { id: aud-tests-of-controls, title: 'Tests of controls' }
+          - { id: aud-specific-risks, title: 'Related parties, estimates & other specific risks' }
+  - id: AUD-III
+    title: 'Area III: Performing Further Procedures & Obtaining Evidence'
+    allocation: { min: 30, max: 40 }
+    units:
+      - id: aud-u6
+        title: Audit Evidence
+        modules:
+          - { id: aud-evidence-assertions, title: 'Sufficient appropriate evidence & assertions' }
+          - { id: aud-sampling, title: 'Audit sampling (attributes & variables)' }
+          - { id: aud-data-analytics, title: 'Data analytics & analytical procedures' }
+      - id: aud-u7
+        title: Substantive Procedures by Cycle
+        modules:
+          - { id: aud-revenue-receivables, title: 'Revenue & receivables, including confirmations' }
+          - { id: aud-inventory-ppe, title: 'Inventory & long-lived assets' }
+          - { id: aud-cash-investments, title: 'Cash & investments' }
+          - { id: aud-liabilities-equity, title: 'Liabilities & equity' }
+      - id: aud-u8
+        title: Specific Matters
+        modules:
+          - { id: aud-using-others, title: 'Using specialists, internal auditors & service organizations' }
+          - { id: aud-subsequent-events, title: 'Subsequent events & subsequently discovered facts' }
+          - { id: aud-going-concern, title: 'Going concern' }
+          - { id: aud-written-representations, title: 'Written representations & completing the audit' }
+  - id: AUD-IV
+    title: 'Area IV: Forming Conclusions & Reporting'
+    allocation: { min: 10, max: 20 }
+    units:
+      - id: aud-u9
+        title: Audit Reports
+        modules:
+          - { id: aud-unmodified-opinion, title: 'Unmodified opinion & report elements' }
+          - { id: aud-modified-opinions, title: 'Qualified, adverse & disclaimer opinions' }
+          - { id: aud-report-paragraphs, title: 'Emphasis-of-matter, other-matter, KAMs & CAMs' }
+          - { id: aud-communications, title: 'Communications with those charged with governance' }
+      - id: aud-u10
+        title: Other Reports & Engagements
+        modules:
+          - { id: aud-special-reports, title: 'Special purpose frameworks, comparative statements & other information' }
+          - { id: aud-attestation, title: 'Attestation engagements (examination, review, agreed-upon procedures)' }
+          - { id: aud-ssars, title: 'Preparation, compilation & review (SSARS)' }

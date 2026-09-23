@@ -1,0 +1,488 @@
+[
+  {
+    "id": "reg-pb-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: stock with a donor basis of $10,000 is gifted when its FMV is $6,000. The donee sells it for $8,000. What gain or loss results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000 loss",
+        "explanation": "Uses the donor's basis for a loss; when FMV is below basis, the loss basis is FMV.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$2,000 gain",
+        "explanation": "Uses FMV as the gain basis; the gain basis is the donor's $10,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No gain or loss",
+        "explanation": "Correct. The sale price falls between the loss basis ($6,000) and the gain basis ($10,000)."
+      },
+      {
+        "id": "d",
+        "text": "$4,000 loss",
+        "explanation": "That is the donor's unrealized loss, which cannot be transferred to the donee.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Dual basis: gain basis 10,000 (no gain at 8,000); loss basis 6,000 (no loss at 8,000). Result: no gain or loss.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pb-chk1",
+    "pool": "lesson",
+    "stem": "Maria inherited land her father bought for $50,000; its FMV at his death was $120,000. She sold it 6 months later for $125,000. What is her gain and its character?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$75,000 long-term",
+        "explanation": "Uses the decedent's cost; inherited property gets a FMV basis.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,000 short-term",
+        "explanation": "Inherited property is always treated as held long-term.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "$5,000 long-term",
+        "explanation": "Correct. $125,000 − $120,000 FMV basis; always long-term."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The sale price exceeds her FMV basis, so there is a gain.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§1014: basis = FMV at death (120,000). Gain = 5,000, automatically long-term.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-chk2",
+    "pool": "lesson",
+    "stem": "Kim sells a building for $300,000 cash; the buyer also assumes Kim's $100,000 mortgage. Kim pays $20,000 of commissions. What is Kim's amount realized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$280,000",
+        "explanation": "Omits the liability assumed by the buyer, which counts as amount realized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$400,000",
+        "explanation": "Does not subtract the selling commissions.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$420,000",
+        "explanation": "Adds the commissions instead of subtracting them.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$380,000",
+        "explanation": "Correct. $300,000 + $100,000 − $20,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Amount realized = 300,000 cash + 100,000 debt relief − 20,000 selling costs = **$380,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-01",
+    "pool": "practice",
+    "stem": "A donor's basis in stock is $20,000; its FMV at the gift date is $15,000. The donee later sells it for $25,000. What is the donee's recognized gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Correct. $25,000 − $20,000 donor's basis."
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "Uses FMV at the gift date; for a gain, the donor's basis is used.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The sale price exceeds the gain basis, so a gain is recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$25,000",
+        "explanation": "Ignores basis entirely.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gain basis = donor's basis 20,000 → gain = **$5,000**; the holding period includes the donor's.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-02",
+    "pool": "practice",
+    "stem": "Same gift as before (donor's basis $20,000, FMV at gift $15,000), but the donee sells for $12,000. What is the recognized loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000",
+        "explanation": "Uses the donor's basis; for a loss, the basis is FMV at the gift date when FMV is lower.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "That is the decline while the donor held the stock, which is not deductible by the donee.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$3,000",
+        "explanation": "Correct. $12,000 − $15,000 FMV loss basis."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The price is below the loss basis, so a loss exists.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Loss basis = min(donor's basis, FMV at gift) = 15,000. Loss = **$3,000**. The holding period starts on the gift date.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-03",
+    "pool": "practice",
+    "stem": "A donor with a $40,000 basis gives property worth $100,000. The taxable gift after the annual exclusion is $80,000, and the donor pays $12,000 of gift tax. What is the donee's basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$52,000",
+        "explanation": "Adds the full gift tax; only the portion attributable to net appreciation is added.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$49,000",
+        "explanation": "Correct. $40,000 + $12,000 × ($60,000 ÷ $80,000)."
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Omits the gift tax adjustment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Uses FMV; appreciated gifts take the donor's carryover basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Adjustment = 12,000 × 60,000 ÷ 80,000 = 9,000. Basis = **$49,000**.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-04",
+    "pool": "practice",
+    "stem": "Alan sells stock with a $45,000 basis to his brother for $30,000. Two years later the brother sells it to an unrelated party for $50,000. What gain does the brother recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Ignores the brother's right to reduce his gain by Alan's disallowed loss.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Correct. $20,000 gain − $15,000 disallowed loss."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The disallowed loss offsets only $15,000 of the $20,000 gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$35,000",
+        "explanation": "Adds the disallowed loss instead of subtracting it.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§267 disallows Alan's 15,000 loss (brothers are related). The brother's gain = 50,000 − 30,000 = 20,000, reduced by 15,000 = **$5,000**.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-05",
+    "pool": "practice",
+    "stem": "On December 15, an investor sells 100 shares (basis $10,000) for $7,000. On January 5, she buys 100 shares of the same stock for $7,500. What is her basis in the new shares?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,500",
+        "explanation": "Ignores the wash-sale basis adjustment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "Carries over the old basis instead of adding the disallowed loss to the new cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$4,500",
+        "explanation": "Subtracts the disallowed loss instead of adding it.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$10,500",
+        "explanation": "Correct. $7,500 cost + $3,000 disallowed loss."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Repurchase within 30 days → the 3,000 loss is disallowed and added to the new basis: 7,500 + 3,000 = **$10,500**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-06",
+    "pool": "practice",
+    "stem": "A building cost $500,000 plus $20,000 of closing costs. The owner added $50,000 of improvements and has taken $80,000 of depreciation. What is its adjusted basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$490,000",
+        "explanation": "Correct. 500,000 + 20,000 + 50,000 − 80,000."
+      },
+      {
+        "id": "b",
+        "text": "$470,000",
+        "explanation": "Omits the capitalized closing costs.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$570,000",
+        "explanation": "Ignores depreciation, which reduces basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$650,000",
+        "explanation": "Adds depreciation instead of subtracting it.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Adjusted basis = cost 520,000 + improvements 50,000 − depreciation 80,000 = **$490,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-07",
+    "pool": "practice",
+    "stem": "A taxpayer sells stock inherited 2 months earlier. The decedent held it for 20 years. What is the holding period?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Short-term, because the heir held it for only 2 months",
+        "explanation": "Inherited property is automatically long-term.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Long-term, but only because the decedent held it more than a year",
+        "explanation": "Long-term treatment applies regardless of how long the decedent held it.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Long-term automatically",
+        "explanation": "Correct. §1223 treats inherited property as held more than one year."
+      },
+      {
+        "id": "d",
+        "text": "It depends on whether the alternate valuation date was elected",
+        "explanation": "The election affects basis, not the holding period.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Inherited property is always long-term, whatever the actual holding period.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pb-08",
+    "pool": "practice",
+    "stem": "A donee sells gifted stock at a loss, using the FMV at the gift date as basis. When does the donee's holding period begin?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "On the donor's acquisition date",
+        "explanation": "Tacking applies when the donor's basis is used, not the FMV basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "On the date of the gift",
+        "explanation": "Correct. When FMV is the basis, the holding period starts at the gift date."
+      },
+      {
+        "id": "c",
+        "text": "On the date the donee sells",
+        "explanation": "The holding period starts at acquisition, not at sale.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "It is automatically long-term",
+        "explanation": "The automatic long-term rule applies to inherited property, not gifts.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Holding period tacks only when the donee's basis is determined by the donor's basis.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pb-09",
+    "pool": "practice",
+    "stem": "A personal residence cost $300,000. It was converted to a rental when its FMV was $250,000. The owner then took $20,000 of depreciation and sold it for $200,000. What is the deductible loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Uses the original cost; for a loss, the basis is the lower of cost or FMV at conversion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Ignores the depreciation taken after conversion.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "A loss on business property is deductible to the extent of the post-conversion decline.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "Correct. ($250,000 − $20,000) − $200,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Loss basis = lower of 300,000 or FMV 250,000, less 20,000 depreciation = 230,000. Loss = 230,000 − 200,000 = **$30,000**. The pre-conversion personal decline is not deductible.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-10",
+    "pool": "practice",
+    "stem": "A consultant receives land worth $40,000 as payment for services. What is her basis in the land?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Correct. The FMV included in gross income becomes basis."
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The income she recognized creates basis; it is not zero.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The client's basis in the land",
+        "explanation": "Carryover basis applies to gifts, not to compensation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "No rule halves the basis of compensation property.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Property received for services is income at FMV, and the basis equals the amount included in income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pb-11",
+    "pool": "practice",
+    "stem": "An employee buys land from her employer for $60,000 when its FMV is $90,000. The bargain element is compensation. What is her basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60,000",
+        "explanation": "Omits the $30,000 of compensation income, which is added to basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$90,000",
+        "explanation": "Correct. $60,000 paid + $30,000 included in income."
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "That is only the income recognized.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$120,000",
+        "explanation": "Double-counts the bargain element.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Basis = cost + amount taxed as income = 60,000 + 30,000 = **$90,000** (equal to FMV).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]
