@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import Calculator from '../components/Calculator'
 import Clock from '../components/Timer'
 import Icon from '../components/Icon'
+import KeyNav from '../components/KeyNav'
 import McqView from '../components/McqView'
 import { PageHeader, pct } from '../components/ui'
 import { content, getModule } from '../content'
@@ -156,7 +157,9 @@ export default function QuizPlayer() {
         confidenceSubmits={!isTest}
         onSelect={(c) => patchItem({ choice: c })}
         onConfidence={(c) => (isTest ? patchItem({ confidence: c, timeMs: st.timeMs + (Date.now() - qStart.current) }) : submitTutor(c))}
+        keyboard
       />
+      <KeyNav onPrev={session.index > 0 ? () => go(session.index - 1) : undefined} onNext={!last ? () => go(session.index + 1) : undefined} />
 
       <div className="mt-6 flex flex-wrap justify-between gap-2">
         <button className="btn-secondary" disabled={session.index === 0} onClick={() => go(session.index - 1)}>
@@ -188,6 +191,7 @@ export default function QuizPlayer() {
           </button>
         )}
       </div>
+      <p className="mt-3 hidden text-xs muted md:block">Keyboard: ← / → previous and next question.</p>
       {calc && <Calculator onClose={() => setCalc(false)} />}
     </div>
   )

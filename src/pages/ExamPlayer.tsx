@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import Calculator from '../components/Calculator'
 import Icon from '../components/Icon'
 import Markdown from '../components/Markdown'
+import KeyNav from '../components/KeyNav'
 import McqView from '../components/McqView'
 import TbsView from '../components/TbsView'
 import Clock from '../components/Timer'
@@ -122,7 +123,7 @@ function ExamRunner({ session }: { session: ExamSession }) {
         </div>
       </header>
 
-      <main className="mx-auto max-w-4xl px-4 py-6">
+      <main className={`mx-auto px-4 py-6 ${t?.kind === 'tbs' ? 'max-w-4xl lg:max-w-7xl' : 'max-w-4xl'}`}>
         {onBreak ? (
           <div className="card mx-auto max-w-md space-y-3 text-center">
             <h1 className="h1">Break</h1>
@@ -224,8 +225,13 @@ function McqTestlet({ t, session, onPatch }: { t: ExamTestletState; session: Exa
           hideConfidence
           onSelect={(c) => onPatch({ mcqAnswers: { ...t.mcqAnswers, [q.id]: c } })}
           onConfidence={() => {}}
+          keyboard
         />
       </div>
+      <KeyNav
+        onPrev={t.index > 0 ? () => onPatch({ index: t.index - 1 }) : undefined}
+        onNext={t.index < t.items.length - 1 ? () => onPatch({ index: t.index + 1 }) : undefined}
+      />
       <div className="flex justify-between">
         <button className="btn-secondary" disabled={t.index === 0} onClick={() => onPatch({ index: t.index - 1 })}>
           ← Previous
@@ -234,6 +240,7 @@ function McqTestlet({ t, session, onPatch }: { t: ExamTestletState; session: Exa
           Next →
         </button>
       </div>
+      <p className="hidden text-xs muted md:block">Keyboard: A–D to choose, ← / → previous and next question.</p>
     </div>
   )
 }
@@ -256,6 +263,7 @@ function TbsTestlet({ t, onPatch }: { t: ExamTestletState; onPatch: (p: Partial<
         tbs={tbs}
         responses={t.tbsResponses[tbs.id] ?? {}}
         submitted={false}
+        split
         onChange={(r: TbsResponses) => onPatch({ tbsResponses: { ...t.tbsResponses, [tbs.id]: r } })}
       />
     </div>

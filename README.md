@@ -18,6 +18,9 @@ Install it from the browser menu ("Add to Home Screen") to use it offline.
 | **REG** | Full: 25 modules (tax year 2025, including One Big Beautiful Bill Act changes), 14 practice TBS, a 72-MCQ + 8-TBS simulated exam, final-review sheets, and a glossary |
 | **TCP** | Preview: the full blueprint outline plus one complete sample module (partnership formation) |
 
+Works on phones and desktops. On a desktop, simulations show the exhibits beside the questions (like the real exam), and
+practice sets and simulated exams take keyboard shortcuts: **A–D** to choose, **1–3** for confidence, **← / →** to move.
+
 Progress is stored **only on your device** (IndexedDB). Use **Settings → Export** to back up or move it to another device.
 
 ## Run locally

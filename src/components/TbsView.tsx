@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useIsWide } from '../hooks/useDesktop'
 import type { Tbs, TbsPart } from '../content/schema'
 import { scoreTbs, type JournalLineResponse, type PartResponse, type TbsResponses } from '../lib/tbsScoring'
 import Markdown from './Markdown'
@@ -9,12 +10,62 @@ interface Props {
   responses: TbsResponses
   onChange: (r: TbsResponses) => void
   submitted: boolean
+  /** On wide screens, show exhibits beside the task (like the exam's split view). */
+  split?: boolean
 }
 
-export default function TbsView({ tbs, responses, onChange, submitted }: Props) {
+export default function TbsView({ tbs, responses, onChange, submitted, split = false }: Props) {
   const [tab, setTab] = useState<number>(-1) // -1 = task, otherwise exhibit index
+  const [exhibit, setExhibit] = useState(0) // split view: exhibit shown in the side panel
+  const wide = useIsWide()
   const set = (partId: string, r: PartResponse) => onChange({ ...responses, [partId]: r })
   const score = submitted ? scoreTbs(tbs, responses) : null
+  const splitView = split && wide && tbs.exhibits.length > 0
+
+  const task = (
+    <div role={splitView ? undefined : 'tabpanel'} className="space-y-6">
+      <div className="card">
+        <Markdown>{tbs.instructions}</Markdown>
+        {tbs.exhibits.length > 0 && (
+          <p className="mt-2 text-xs muted">
+            {splitView ? 'The exhibits are in the panel on the right.' : 'Open the exhibit tabs above for the information you need.'}
+          </p>
+        )}
+      </div>
+      {tbs.parts.map((p) => (
+        <section key={p.id} className="card space-y-3">
+          <Markdown className="prose-lesson font-medium">{p.prompt}</Markdown>
+          <PartInput part={p} response={responses[p.id]} onChange={(r) => set(p.id, r)} disabled={submitted} />
+        </section>
+      ))}
+    </div>
+  )
+
+  if (splitView) {
+    const ex = tbs.exhibits[Math.min(exhibit, tbs.exhibits.length - 1)]
+    return (
+      <div className="space-y-4">
+        {tbs.needsReview && <ReviewBadge note={tbs.reviewNote} />}
+        <div className="grid grid-cols-2 items-start gap-6">
+          {task}
+          <aside className="card sticky top-16 flex max-h-[calc(100dvh-5rem)] flex-col p-0" aria-label="Exhibits">
+            <div className="flex shrink-0 gap-1 overflow-x-auto border-b border-slate-200 px-2 dark:border-slate-800" role="tablist" aria-label="Exhibits">
+              {tbs.exhibits.map((e, i) => (
+                <TabButton key={i} active={exhibit === i} onClick={() => setExhibit(i)}>
+                  📎 {e.title}
+                </TabButton>
+              ))}
+            </div>
+            <div className="min-h-0 overflow-y-auto p-4" role="tabpanel">
+              <h3 className="mb-2 font-semibold">{ex.title}</h3>
+              <Markdown>{ex.content}</Markdown>
+            </div>
+          </aside>
+        </div>
+        {score && <TbsResults score={score} />}
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-4">
@@ -39,51 +90,44 @@ export default function TbsView({ tbs, responses, onChange, submitted }: Props) 
           </button>
         </div>
       ) : (
-        <div role="tabpanel" className="space-y-6">
-          <div className="card">
-            <Markdown>{tbs.instructions}</Markdown>
-            {tbs.exhibits.length > 0 && <p className="mt-2 text-xs muted">Open the exhibit tabs above for the information you need.</p>}
-          </div>
-          {tbs.parts.map((p) => (
-            <section key={p.id} className="card space-y-3">
-              <Markdown className="prose-lesson font-medium">{p.prompt}</Markdown>
-              <PartInput part={p} response={responses[p.id]} onChange={(r) => set(p.id, r)} disabled={submitted} />
-            </section>
-          ))}
-        </div>
+        task
       )}
 
-      {score && (
-        <section className="space-y-3" aria-labelledby="tbs-results">
-          <div className="card">
-            <h3 id="tbs-results" className="h2">
-              Score: {score.earned}/{score.possible} cells ({Math.round(score.percent * 100)}%)
-            </h3>
-            <p className="text-sm muted">Each cell is scored separately — partial credit, just like the exam.</p>
-          </div>
-          <ul className="space-y-2">
-            {score.cells.map((c) => (
-              <li key={c.cellId} className={`card border-l-4 ${c.correct ? 'border-l-emerald-500' : 'border-l-rose-500'}`}>
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <span className="font-semibold">
-                    {c.correct ? '✓' : '✗'} {c.label}
-                  </span>
-                  <span className="text-sm">
-                    {!c.correct && (
-                      <>
-                        You: <span className="font-mono">{c.given || '—'}</span> ·{' '}
-                      </>
-                    )}
-                    Answer: <span className="font-mono font-semibold">{c.expected}</span>
-                  </span>
-                </div>
-                <Markdown className="prose-lesson mt-1 text-sm">{c.explanation}</Markdown>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      {score && <TbsResults score={score} />}
     </div>
+  )
+}
+
+function TbsResults({ score }: { score: ReturnType<typeof scoreTbs> }) {
+  return (
+    <section className="space-y-3" aria-labelledby="tbs-results">
+      <div className="card">
+        <h3 id="tbs-results" className="h2">
+          Score: {score.earned}/{score.possible} cells ({Math.round(score.percent * 100)}%)
+        </h3>
+        <p className="text-sm muted">Each cell is scored separately — partial credit, just like the exam.</p>
+      </div>
+      <ul className="space-y-2">
+        {score.cells.map((c) => (
+          <li key={c.cellId} className={`card border-l-4 ${c.correct ? 'border-l-emerald-500' : 'border-l-rose-500'}`}>
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <span className="font-semibold">
+                {c.correct ? '✓' : '✗'} {c.label}
+              </span>
+              <span className="text-sm">
+                {!c.correct && (
+                  <>
+                    You: <span className="font-mono">{c.given || '—'}</span> ·{' '}
+                  </>
+                )}
+                Answer: <span className="font-mono font-semibold">{c.expected}</span>
+              </span>
+            </div>
+            <Markdown className="prose-lesson mt-1 text-sm">{c.explanation}</Markdown>
+          </li>
+        ))}
+      </ul>
+    </section>
   )
 }
 

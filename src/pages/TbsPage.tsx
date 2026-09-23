@@ -77,7 +77,7 @@ export default function TbsPage() {
           </div>
         }
       />
-      <TbsView tbs={tbs} responses={responses} onChange={save} submitted={submitted} />
+      <TbsView tbs={tbs} responses={responses} onChange={save} submitted={submitted} split />
       <div className="mt-6 flex flex-wrap gap-2">
         {!submitted ? (
           <button className="btn-primary" onClick={submit}>

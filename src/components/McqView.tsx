@@ -6,6 +6,7 @@ import { db } from '../db'
 import { logError, setItemNote, toggleFlag } from '../db/actions'
 import { ERROR_CAUSES, ERROR_CAUSE_LABELS, type ErrorCause } from '../db/types'
 import type { Confidence } from '../lib/srs'
+import { useHotkeys } from '../hooks/useDesktop'
 import Icon from './Icon'
 import Markdown from './Markdown'
 import { ReviewBadge } from './ui'
@@ -45,12 +46,29 @@ interface Props {
   /** Simulated exam: no confidence prompt, like the real exam. */
   hideConfidence?: boolean
   section: SectionId
+  /** Enable keyboard shortcuts (A–D choose, 1–3 confidence). Only for the single active question on a page. */
+  keyboard?: boolean
 }
 
-export default function McqView({ q, index, total, selected, confidence, revealed, confidenceSubmits, onSelect, onConfidence, showTools = true, hideConfidence = false, section }: Props) {
+export default function McqView({ q, index, total, selected, confidence, revealed, confidenceSubmits, onSelect, onConfidence, showTools = true, hideConfidence = false, section, keyboard = false }: Props) {
   const meta = useLiveQuery(() => db.itemMeta.get(q.id), [q.id])
   const [noteOpen, setNoteOpen] = useState(false)
   const correct = selected === q.answer
+
+  useHotkeys((e) => {
+    if (revealed) return
+    const choice = q.choices.find((c) => c.id === e.key.toLowerCase())
+    if (choice) {
+      e.preventDefault()
+      onSelect(choice.id)
+      return
+    }
+    const conf = CONFIDENCE_OPTIONS[Number(e.key) - 1]
+    if (conf && selected && !hideConfidence) {
+      e.preventDefault()
+      onConfidence(conf.value)
+    }
+  }, keyboard)
 
   return (
     <article className="space-y-4" aria-labelledby={`stem-${q.id}`}>
@@ -172,6 +190,7 @@ export default function McqView({ q, index, total, selected, confidence, reveale
             ))}
           </div>
           {!selected && <p className="mt-2 text-xs muted">Pick an answer first.</p>}
+          {keyboard && <p className="mt-2 hidden text-xs muted md:block">Keyboard: A–D to choose, 1–3 for confidence.</p>}
         </fieldset>
       )}
 

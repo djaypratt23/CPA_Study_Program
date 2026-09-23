@@ -65,6 +65,7 @@ export default function Calculator({ onClose }: { onClose: () => void }) {
       className="fixed right-3 bottom-24 z-50 w-64 rounded-xl border border-slate-300 bg-white p-3 shadow-2xl md:bottom-6 dark:border-slate-700 dark:bg-slate-900"
       role="dialog"
       aria-label="Calculator"
+      data-no-hotkeys
       onKeyDown={(e) => {
         if (/^[0-9.]$/.test(e.key)) digit(e.key)
         else if (e.key === '+') operator('+')
