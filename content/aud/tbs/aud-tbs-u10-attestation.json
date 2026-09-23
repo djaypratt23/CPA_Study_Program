@@ -1,0 +1,102 @@
+{
+  "id": "aud-tbs-u10-attestation",
+  "section": "AUD",
+  "unitId": "aud-u10",
+  "moduleIds": [
+    "aud-attestation",
+    "aud-special-reports"
+  ],
+  "pool": "practice",
+  "title": "Attestation and special reports — Whitfield & Co.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Whitfield & Co. (a CPA firm) receives the requests below. Select the most appropriate engagement or report feature, then identify the governing guidance for one request.",
+  "exhibits": [
+    {
+      "title": "Requests",
+      "content": "1. A cloud payroll provider wants a report for its customers' auditors on controls relevant to customers' financial reporting, including operating effectiveness over a year.\n2. A hospital system wants a publicly posted report on its data security controls.\n3. A lender wants specific procedures performed on a borrower's inventory records, with the findings reported — no opinion.\n4. A startup wants a CPA's report on its \"what-if\" statements assuming it wins a major contract, for use in negotiations with one investor.\n5. A private partnership wants its tax-basis statements audited for its members.\n6. A landlord wants an audit of a tenant's gross sales, which determine percentage rent."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "eng",
+      "prompt": "Select the best-fitting engagement or report.",
+      "rows": [
+        {
+          "id": "e1",
+          "label": "1. Payroll provider — controls relevant to financial reporting, operating effectiveness",
+          "answer": "SOC 1 Type 2 examination",
+          "explanation": "SOC 1 addresses controls relevant to user entities' ICFR; Type 2 covers operating effectiveness."
+        },
+        {
+          "id": "e2",
+          "label": "2. Publicly posted security report",
+          "answer": "SOC 3 examination",
+          "explanation": "SOC 3 is a general-use report on the Trust Services Criteria."
+        },
+        {
+          "id": "e3",
+          "label": "3. Specified procedures with findings only",
+          "answer": "Agreed-upon procedures engagement",
+          "explanation": "AUP engagements report findings without assurance."
+        },
+        {
+          "id": "e4",
+          "label": "4. \"What-if\" statements for one investor",
+          "answer": "Examination of a financial projection (restricted use)",
+          "explanation": "Hypothetical assumptions make it a projection, restricted to parties negotiating directly with the entity."
+        },
+        {
+          "id": "e5",
+          "label": "5. Tax-basis statements",
+          "answer": "Audit of special purpose (tax-basis) statements",
+          "explanation": "AU-C 800 applies."
+        },
+        {
+          "id": "e6",
+          "label": "6. Tenant's gross sales",
+          "answer": "Audit of a specific element (AU-C 805)",
+          "explanation": "A single element (gross sales) with materiality set relative to it."
+        }
+      ],
+      "options": [
+        "SOC 1 Type 2 examination",
+        "SOC 3 examination",
+        "Agreed-upon procedures engagement",
+        "Examination of a financial projection (restricted use)",
+        "Audit of special purpose (tax-basis) statements",
+        "Audit of a specific element (AU-C 805)"
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) explains why request 4 must be restricted in use?",
+      "excerpts": [
+        {
+          "id": "a",
+          "citation": "AT-C 305 (paraphrase)",
+          "text": "A financial projection is appropriate only for the responsible party and parties negotiating directly with it; the practitioner's report on a projection should include an alert restricting its use."
+        },
+        {
+          "id": "b",
+          "citation": "AU-C 800 (paraphrase)",
+          "text": "The auditor's report on special purpose financial statements should include an emphasis-of-matter paragraph that alerts users to the basis of accounting."
+        },
+        {
+          "id": "c",
+          "citation": "AT-C 215 (paraphrase)",
+          "text": "The engaging party should acknowledge that the agreed-upon procedures are appropriate for the intended purpose of the engagement."
+        },
+        {
+          "id": "d",
+          "citation": "AU-C 805 (paraphrase)",
+          "text": "The auditor should determine materiality for the single financial statement or specific element being reported on."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Projections rest on hypothetical assumptions and are restricted to parties negotiating directly with the responsible party."
+    }
+  ]
+}

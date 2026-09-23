@@ -1,0 +1,444 @@
+[
+  {
+    "id": "aud-at-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which attestation engagement provides **no** assurance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Examination",
+        "explanation": "Provides reasonable assurance.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Review",
+        "explanation": "Provides limited assurance.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Agreed-upon procedures",
+        "explanation": "Correct. Only findings are reported."
+      },
+      {
+        "id": "d",
+        "text": "Audit",
+        "explanation": "An audit is not an attestation engagement under the SSAEs, and it provides reasonable assurance.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "AUP reports present procedures and findings without assurance.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-chk1",
+    "pool": "lesson",
+    "stem": "What form of conclusion does a review report under the SSAEs provide?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An opinion that the subject matter is presented fairly",
+        "explanation": "That's an examination.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A disclaimer",
+        "explanation": "A disclaimer isn't the normal review conclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A list of procedures and findings",
+        "explanation": "That describes an agreed-upon procedures report.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A statement that the practitioner is not aware of any material modifications that should be made",
+        "explanation": "Correct. Reviews provide limited assurance, expressed as negative assurance."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Reviews provide limited assurance, expressed as negative assurance.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-chk2",
+    "pool": "lesson",
+    "stem": "Which engagement is **not** permitted for prospective financial information?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Examination",
+        "explanation": "Examinations of PFI are permitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Compilation",
+        "explanation": "Compilations of PFI are permitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Review",
+        "explanation": "Correct. Reviews of PFI aren't permitted."
+      },
+      {
+        "id": "d",
+        "text": "Agreed-upon procedures",
+        "explanation": "AUPs on PFI are permitted.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "AT-C 305 and AR-C: examinations, compilations, and AUPs are allowed; reviews aren't.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-01",
+    "pool": "practice",
+    "stem": "A SaaS company wants a report on its security controls for customers and prospects, including a general-use version for its website. Which reports fit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "SOC 1 Type 2",
+        "explanation": "SOC 1 addresses controls relevant to financial reporting.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "An audit of internal control over financial reporting",
+        "explanation": "ICFR isn't the subject here.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A review of financial statements",
+        "explanation": "A financial statement review doesn't cover security controls.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "SOC 2 for customers, and SOC 3 for the website",
+        "explanation": "Correct. SOC 2 (restricted) and SOC 3 (general use) address the Trust Services Criteria, including security."
+      }
+    ],
+    "answer": "d",
+    "explanation": "SOC 2 (restricted) and SOC 3 (general use) address the Trust Services Criteria, including security.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-02",
+    "pool": "practice",
+    "stem": "Which is a precondition for an attestation engagement?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The criteria are suitable and available to users",
+        "explanation": "Correct. AT-C 105 preconditions include suitable, available criteria and a responsible party."
+      },
+      {
+        "id": "b",
+        "text": "The subject matter must be financial",
+        "explanation": "Non-financial subject matter is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The practitioner must be the entity's auditor",
+        "explanation": "Being the entity's auditor isn't required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The engagement must be an examination",
+        "explanation": "Reviews and AUPs are also attestation engagements.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AT-C 105 preconditions include suitable, available criteria and a responsible party.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-03",
+    "pool": "practice",
+    "stem": "In an examination, the engaging party is also the responsible party and refuses to provide a written assertion. What should the practitioner do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Issue an unmodified opinion",
+        "explanation": "The refusal is significant.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Convert to an AUP without discussion",
+        "explanation": "Changing the engagement unilaterally is inappropriate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Withdraw from the engagement when withdrawal is possible under applicable law or regulation",
+        "explanation": "Correct. AT-C 205: refusal by an engaging party that is the responsible party → withdraw when possible."
+      },
+      {
+        "id": "d",
+        "text": "Issue an adverse opinion",
+        "explanation": "The refusal isn't a misstatement.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "AT-C 205: refusal by an engaging party that is the responsible party → withdraw when possible.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-04",
+    "pool": "practice",
+    "stem": "What is the key difference between a financial forecast and a financial projection?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Forecasts are historical",
+        "explanation": "Both are prospective.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Forecasts can't be examined",
+        "explanation": "They can be examined.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Projections are always general use",
+        "explanation": "Projections are restricted use.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "A forecast reflects expected conditions; a projection reflects one or more hypothetical assumptions",
+        "explanation": "Correct. Forecasts: expected conditions."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Forecasts: expected conditions. Projections: \"what if\" hypothetical assumptions.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-05",
+    "pool": "practice",
+    "stem": "In an agreed-upon procedures engagement under AT-C 215, who acknowledges that the procedures are appropriate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The practitioner",
+        "explanation": "The engaging party makes the acknowledgment.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "The engaging party",
+        "explanation": "Correct. AT-C 215 (SSAE 19): the engaging party acknowledges the appropriateness of the procedures; reports may be general use."
+      },
+      {
+        "id": "c",
+        "text": "The PCAOB",
+        "explanation": "The PCAOB has no role in AUP engagements.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "The general public",
+        "explanation": "The public doesn't acknowledge procedures.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AT-C 215 (SSAE 19): the engaging party acknowledges the appropriateness of the procedures; reports may be general use.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-06",
+    "pool": "practice",
+    "stem": "Which criteria characteristic means that the criteria allow reasonably consistent measurements?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Measurability",
+        "explanation": "Correct. Suitable criteria are relevant, objective, measurable, and complete."
+      },
+      {
+        "id": "b",
+        "text": "Relevance",
+        "explanation": "Relevance relates to usefulness to users.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Completeness",
+        "explanation": "Completeness means nothing relevant is omitted.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Objectivity",
+        "explanation": "Objectivity means freedom from bias.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Suitable criteria are relevant, objective, measurable, and complete.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-07",
+    "pool": "practice",
+    "stem": "A SOC 1 Type 2 report provides an opinion on what?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The user entity's financial statements",
+        "explanation": "The service organization's controls are the subject.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The fairness of the service organization's description, the suitability of design, and operating effectiveness of controls over a period",
+        "explanation": "Correct. AT-C 320: Type 2 covers description, design, and operating effectiveness over a period."
+      },
+      {
+        "id": "c",
+        "text": "Security controls under the Trust Services Criteria",
+        "explanation": "That describes a SOC 2 report.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "The service organization's financial statements",
+        "explanation": "Its financial statements aren't the subject.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AT-C 320: Type 2 covers description, design, and operating effectiveness over a period.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-08",
+    "pool": "practice",
+    "stem": "Which factor most distinguishes an examination from a review?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Examinations provide reasonable assurance through more extensive procedures; reviews give limited assurance mainly via inquiry and analytics",
+        "explanation": "Correct. Examinations resemble audits; reviews are narrower in scope."
+      },
+      {
+        "id": "b",
+        "text": "Reviews require independence; examinations don't",
+        "explanation": "Both require independence.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Examinations never require a written assertion",
+        "explanation": "A written assertion is requested in both.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Reviews produce opinions",
+        "explanation": "Reviews produce conclusions.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Examinations resemble audits; reviews are narrower in scope.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-09",
+    "pool": "practice",
+    "stem": "A practitioner is asked to report on whether a client's greenhouse gas emissions statement is presented in accordance with a published protocol, with reasonable assurance. Which engagement is this?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Review",
+        "explanation": "Reviews provide limited assurance.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Examination",
+        "explanation": "Correct. Reasonable assurance on subject matter against criteria is an examination under AT-C 205."
+      },
+      {
+        "id": "c",
+        "text": "Agreed-upon procedures",
+        "explanation": "AUPs give no assurance.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Compilation",
+        "explanation": "Compilations apply to financial statements and give no assurance.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Reasonable assurance on subject matter against criteria is an examination under AT-C 205.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-at-10",
+    "pool": "practice",
+    "stem": "Which practitioner may perform an examination under the SSAEs?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only the entity's financial statement auditor",
+        "explanation": "Any qualified, independent practitioner may perform it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A practitioner who is independent and has the competence and capabilities to perform the engagement",
+        "explanation": "Correct. AT-C 105: the practitioner must be independent and have appropriate competence."
+      },
+      {
+        "id": "c",
+        "text": "Any CPA, whether or not independent",
+        "explanation": "Independence is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only the entity's internal auditors",
+        "explanation": "Internal auditors aren't independent practitioners.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AT-C 105: the practitioner must be independent and have appropriate competence.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

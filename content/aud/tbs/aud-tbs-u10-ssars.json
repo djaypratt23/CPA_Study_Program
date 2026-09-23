@@ -1,0 +1,144 @@
+{
+  "id": "aud-tbs-u10-ssars",
+  "section": "AUD",
+  "unitId": "aud-u10",
+  "moduleIds": [
+    "aud-ssars"
+  ],
+  "pool": "practice",
+  "title": "Choosing the service — Martin & Oakes CPAs",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Martin & Oakes CPAs serves several private clients. For each statement, select the **one** engagement type it best describes. Then decide how the firm should handle each client situation.",
+  "exhibits": [
+    {
+      "title": "Client situations",
+      "content": "1. The firm's partner owns 10% of **Birchwood Bakery**, which wants compiled statements for its landlord.\n2. **Delta Printing** wants reviewed statements for its bank; the firm is independent. Analytics show gross margin rising from 22% to 34% with no clear explanation.\n3. **Easton Farms** wants statements prepared for internal use; the owner doesn't want a report.\n4. **Fulton Rentals** wants compiled statements that omit substantially all disclosures."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "typ",
+      "prompt": "Which engagement does each statement describe?",
+      "rows": [
+        {
+          "id": "t1",
+          "label": "Provides limited assurance based primarily on inquiry and analytical procedures",
+          "answer": "Review",
+          "explanation": "Reviews provide limited assurance."
+        },
+        {
+          "id": "t2",
+          "label": "No report is required; each page states that no assurance is provided",
+          "answer": "Preparation",
+          "explanation": "AR-C 70."
+        },
+        {
+          "id": "t3",
+          "label": "A report is issued, no assurance is provided, and a lack of independence can be disclosed",
+          "answer": "Compilation",
+          "explanation": "AR-C 80."
+        },
+        {
+          "id": "t4",
+          "label": "Requires obtaining an understanding of internal control and reasonable assurance",
+          "answer": "Audit",
+          "explanation": "Audits provide reasonable assurance under GAAS."
+        }
+      ],
+      "options": [
+        "Preparation",
+        "Compilation",
+        "Review",
+        "Audit"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "sit",
+      "prompt": "Select the appropriate response for each client.",
+      "rows": [
+        {
+          "id": "s1",
+          "label": "Birchwood Bakery",
+          "options": [
+            "Decline — independence is required",
+            "Compile and disclose the lack of independence in the report",
+            "Review instead"
+          ],
+          "answer": "Compile and disclose the lack of independence in the report",
+          "explanation": "Compilations permit a disclosed independence impairment."
+        },
+        {
+          "id": "s2",
+          "label": "Delta Printing's unexplained margin increase",
+          "options": [
+            "Issue the review report — reviews are limited",
+            "Perform additional procedures until the accountant has limited assurance",
+            "Convert to an audit automatically"
+          ],
+          "answer": "Perform additional procedures until the accountant has limited assurance",
+          "explanation": "AR-C 90 requires more procedures when information appears incorrect or unsatisfactory."
+        },
+        {
+          "id": "s3",
+          "label": "Easton Farms",
+          "options": [
+            "Perform a preparation engagement with a \"no assurance\" legend on each page",
+            "Issue a compilation report",
+            "Refuse — a report is always required"
+          ],
+          "answer": "Perform a preparation engagement with a \"no assurance\" legend on each page",
+          "explanation": "AR-C 70 requires no report."
+        },
+        {
+          "id": "s4",
+          "label": "Fulton Rentals",
+          "options": [
+            "Not permitted",
+            "Permitted — the report states that substantially all disclosures are omitted",
+            "Permitted with no mention in the report"
+          ],
+          "answer": "Permitted — the report states that substantially all disclosures are omitted",
+          "explanation": "AR-C 80 allows omission if disclosed and not intended to mislead."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "req",
+      "prompt": "Is each item required in a review engagement?",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "A management representation letter",
+          "answer": "Required",
+          "explanation": "AR-C 90 requires written representations."
+        },
+        {
+          "id": "r2",
+          "label": "Confirmation of receivables",
+          "answer": "Not required",
+          "explanation": "Confirmations are audit procedures."
+        },
+        {
+          "id": "r3",
+          "label": "A written engagement letter",
+          "answer": "Required",
+          "explanation": "All SSARS engagements require one."
+        },
+        {
+          "id": "r4",
+          "label": "Independence",
+          "answer": "Required",
+          "explanation": "Reviews provide assurance."
+        }
+      ],
+      "options": [
+        "Required",
+        "Not required"
+      ]
+    }
+  ]
+}
