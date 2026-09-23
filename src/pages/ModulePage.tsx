@@ -17,7 +17,7 @@ export default function ModulePage() {
   const lesson = content.lessons[moduleId]
   const meta = getModule(moduleId)
   const { state } = useStudyState()
-  const progress = useLiveQuery(() => db.moduleProgress.get(moduleId), [moduleId])
+  const progress = useLiveQuery(() => db.moduleProgress.get(moduleId).then((p) => p ?? null), [moduleId])
   const highlights = useLiveQuery(() => db.highlights.where('moduleId').equals(moduleId).toArray(), [moduleId]) ?? []
   const sessionId = useMemo(() => uid('lesson-'), [])
   const [selection, setSelection] = useState('')

@@ -14,7 +14,8 @@ import { scoreTbs, type TbsResponses } from '../lib/tbsScoring'
 export default function TbsPage() {
   const { tbsId = '' } = useParams()
   const tbs = content.tbs[tbsId]
-  const session = useLiveQuery(() => db.tbsSessions.get(tbsId), [tbsId])
+  // Map "no saved session" to null so it's distinguishable from "still loading" (undefined).
+  const session = useLiveQuery(() => db.tbsSessions.get(tbsId).then((s) => s ?? null), [tbsId])
   const [responses, setResponses] = useState<TbsResponses>({})
   const [elapsed, setElapsed] = useState(0)
   const [calc, setCalc] = useState(false)

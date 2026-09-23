@@ -14,7 +14,7 @@ import type { Confidence } from '../lib/srs'
 
 export default function QuizPlayer() {
   const { sessionId = '' } = useParams()
-  const session = useLiveQuery(() => db.quizSessions.get(sessionId), [sessionId])
+  const session = useLiveQuery(() => db.quizSessions.get(sessionId).then((s) => s ?? null), [sessionId])
   const [calc, setCalc] = useState(false)
   const [elapsed, setElapsed] = useState(0)
   const qStart = useRef(Date.now())

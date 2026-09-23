@@ -17,7 +17,7 @@ import { scoreTbs, type TbsResponses } from '../lib/tbsScoring'
 
 export default function ExamPlayer() {
   const { sessionId = '' } = useParams()
-  const session = useLiveQuery(() => db.examSessions.get(sessionId), [sessionId])
+  const session = useLiveQuery(() => db.examSessions.get(sessionId).then((s) => s ?? null), [sessionId])
   if (session === undefined) return <p className="p-6 muted">Loading…</p>
   if (!session)
     return (
