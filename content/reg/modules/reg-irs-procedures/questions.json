@@ -1,0 +1,445 @@
+[
+  {
+    "id": "reg-irs-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: in which court can a taxpayer contest a deficiency without first paying the tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "U.S. Tax Court",
+        "explanation": "Correct. The Tax Court hears deficiency cases before assessment and payment."
+      },
+      {
+        "id": "b",
+        "text": "U.S. District Court",
+        "explanation": "Payment first is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Court of Federal Claims",
+        "explanation": "Payment first is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "State supreme court",
+        "explanation": "State courts don't hear federal tax deficiencies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The Tax Court hears deficiency cases before assessment and payment.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-chk1",
+    "pool": "lesson",
+    "stem": "A taxpayer receives a statutory notice of deficiency. How long does she have to petition the Tax Court (U.S. address)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "30 days",
+        "explanation": "That's the period to respond to a 30-day letter.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "1 year",
+        "explanation": "The deadline is much shorter.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "150 days",
+        "explanation": "That applies to notices addressed outside the U.S.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "90 days",
+        "explanation": "Correct. §6213: 90 days (150 if addressed to a person outside the U.S.)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§6213: 90 days (150 if addressed to a person outside the U.S.).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-chk2",
+    "pool": "lesson",
+    "stem": "Which source of tax guidance is binding only on the taxpayer who requested it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Private letter ruling",
+        "explanation": "Correct. PLRs apply only to the requesting taxpayer and can't be cited as precedent."
+      },
+      {
+        "id": "b",
+        "text": "Revenue ruling",
+        "explanation": "Revenue rulings apply to all taxpayers with similar facts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Final regulation",
+        "explanation": "Regulations apply generally.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Internal Revenue Code",
+        "explanation": "The Code applies to everyone.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "PLRs apply only to the requesting taxpayer and can't be cited as precedent.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-01",
+    "pool": "practice",
+    "stem": "A taxpayer filed a Year 1 return on February 10, Year 2 (due April 15, Year 2). Absent fraud or a substantial omission, when does the assessment period expire?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "February 10, Year 5",
+        "explanation": "An early return is treated as filed on the due date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "December 31, Year 4",
+        "explanation": "The period runs from the due date, not year-end.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "April 15, Year 8",
+        "explanation": "That's the 6-year period.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "April 15, Year 5",
+        "explanation": "Correct. §6501: 3 years after the later of the filing date or the due date."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§6501: 3 years after the later of the filing date or the due date.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-02",
+    "pool": "practice",
+    "stem": "A taxpayer reported $200,000 of gross income but omitted $60,000. How long does the IRS have to assess?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "6 years",
+        "explanation": "Correct. $60,000 is 30% of the reported $200,000."
+      },
+      {
+        "id": "b",
+        "text": "3 years",
+        "explanation": "The omission exceeds 25%, extending the period.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Unlimited",
+        "explanation": "Only for fraud or no return.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "10 years",
+        "explanation": "That's the collection period.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Omission of more than 25% of reported gross income → 6-year period.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-irs-03",
+    "pool": "practice",
+    "stem": "A taxpayer filed on April 15, Year 2 and paid additional tax on June 1, Year 5 after an exam. By when must a refund claim be filed to recover that payment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "April 15, Year 5",
+        "explanation": "That's 3 years from filing, but 2 years from payment is later.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "No limit applies",
+        "explanation": "Refund claims have limits.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "June 1, Year 8",
+        "explanation": "Uses 3 years from payment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "June 1, Year 7",
+        "explanation": "Correct. The later of 3 years from filing or 2 years from payment."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§6511: later of 3 years from filing or 2 years from payment.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-04",
+    "pool": "practice",
+    "stem": "Which court allows a jury trial in a federal tax case?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "U.S. Tax Court",
+        "explanation": "The Tax Court has no juries.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "U.S. District Court",
+        "explanation": "Correct. Only the District Court offers a jury, and the taxpayer must pay first."
+      },
+      {
+        "id": "c",
+        "text": "Court of Federal Claims",
+        "explanation": "This court has no juries.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "IRS Office of Appeals",
+        "explanation": "Appeals isn't a court.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Only the District Court offers a jury, and the taxpayer must pay first.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-05",
+    "pool": "practice",
+    "stem": "What is the maximum amount in dispute per tax year for the Tax Court small case procedure?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "The limit is higher.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Correct. §7463: $50,000 or less per year; decisions aren't appealable."
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "The limit is lower.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "There is no limit",
+        "explanation": "There is a limit.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§7463: $50,000 or less per year; decisions aren't appealable.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-06",
+    "pool": "practice",
+    "stem": "What does a 30-day letter offer the taxpayer?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The right to petition the Tax Court",
+        "explanation": "That's the 90-day letter.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "The opportunity to request an Appeals conference",
+        "explanation": "Correct. The 30-day letter proposes adjustments and explains appeal rights within the IRS."
+      },
+      {
+        "id": "c",
+        "text": "An immediate refund",
+        "explanation": "It proposes adjustments, not a refund.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A private letter ruling",
+        "explanation": "Letter rulings are unrelated to exams.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The 30-day letter proposes adjustments and explains appeal rights within the IRS.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-07",
+    "pool": "practice",
+    "stem": "Which type of IRS examination takes place at the taxpayer's place of business?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Correspondence examination",
+        "explanation": "Conducted by mail.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Office examination",
+        "explanation": "Conducted at an IRS office.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Field examination",
+        "explanation": "Correct. Field exams are conducted by revenue agents at the taxpayer's business."
+      },
+      {
+        "id": "d",
+        "text": "Appeals conference",
+        "explanation": "Not an examination.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Field exams are conducted by revenue agents at the taxpayer's business.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-08",
+    "pool": "practice",
+    "stem": "After the tax is assessed, how long does the IRS generally have to collect it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "3 years",
+        "explanation": "That's the assessment period.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "6 years",
+        "explanation": "That's the extended assessment period.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "10 years",
+        "explanation": "Correct. §6502: 10 years after assessment."
+      },
+      {
+        "id": "d",
+        "text": "Unlimited",
+        "explanation": "Collection is limited.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§6502: 10 years after assessment.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-09",
+    "pool": "practice",
+    "stem": "Which statement about proposed Treasury regulations is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They have the force of law",
+        "explanation": "Proposed regulations aren't binding.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "They aren't authoritative but show the Treasury's position",
+        "explanation": "Correct. Proposed regulations are guidance only until finalized."
+      },
+      {
+        "id": "c",
+        "text": "They override the Code",
+        "explanation": "Nothing overrides the Code except Congress.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "They expire after one year",
+        "explanation": "Temporary regulations expire after 3 years; proposed ones don't expire this way.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Proposed regulations are guidance only until finalized.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-irs-10",
+    "pool": "practice",
+    "stem": "A taxpayer never filed a return for Year 1. How long does the IRS have to assess tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "3 years from the due date",
+        "explanation": "No return means no period starts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "6 years",
+        "explanation": "That applies to substantial omissions.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Indefinitely",
+        "explanation": "Correct. With no return filed, the assessment period never begins."
+      },
+      {
+        "id": "d",
+        "text": "10 years",
+        "explanation": "That's the collection period.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "With no return filed, the assessment period never begins.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

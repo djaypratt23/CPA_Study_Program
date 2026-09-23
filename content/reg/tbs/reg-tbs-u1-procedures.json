@@ -1,0 +1,123 @@
+{
+  "id": "reg-tbs-u1-procedures",
+  "section": "REG",
+  "unitId": "reg-u1",
+  "moduleIds": [
+    "reg-irs-procedures",
+    "reg-accountant-liability"
+  ],
+  "pool": "practice",
+  "title": "IRS disputes and accountant liability — three clients",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Answer each question about Kendall's IRS dispute and about lawsuits against Kendall's audit firm, Ashby & Lowe CPAs.",
+  "exhibits": [
+    {
+      "title": "Kendall's IRS matter",
+      "content": "- Kendall's Year 1 return was filed April 10, Year 2 (due April 15, Year 2).\n- The IRS examined the return and issued a statutory notice of deficiency on March 1, Year 5.\n- Kendall doesn't want to pay the tax before contesting it."
+    },
+    {
+      "title": "Lawsuits against Ashby & Lowe",
+      "content": "- **First National** loaned money to an audit client; Ashby & Lowe knew the statements were for First National's loan decision.\n- **Harbor Credit** also lent to the client; Ashby & Lowe knew the client would show the statements to \"a few banks\" but didn't know which ones.\n- **An investor** bought the client's newly registered shares and claims the registration statement's audited statements were materially misstated."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "irs",
+      "prompt": "Kendall's IRS dispute",
+      "rows": [
+        {
+          "id": "i1",
+          "label": "Last day the IRS could normally assess Year 1 tax (no fraud, no large omission)",
+          "options": [
+            "April 10, Year 5",
+            "April 15, Year 5",
+            "April 15, Year 8"
+          ],
+          "answer": "April 15, Year 5",
+          "explanation": "An early return is treated as filed on the due date; the period is 3 years."
+        },
+        {
+          "id": "i2",
+          "label": "The forum Kendall should use",
+          "options": [
+            "U.S. Tax Court",
+            "U.S. District Court",
+            "Court of Federal Claims"
+          ],
+          "answer": "U.S. Tax Court",
+          "explanation": "The only forum that doesn't require payment first."
+        },
+        {
+          "id": "i3",
+          "label": "Deadline to petition (U.S. address)",
+          "options": [
+            "30 days after the notice",
+            "90 days after the notice",
+            "2 years after the notice"
+          ],
+          "answer": "90 days after the notice",
+          "explanation": "§6213."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "liab",
+      "prompt": "Can each plaintiff sue Ashby & Lowe for ordinary negligence under the stated rule?",
+      "rows": [
+        {
+          "id": "a1",
+          "label": "First National — Ultramares state",
+          "answer": "Yes",
+          "explanation": "A known user and known purpose (near privity)."
+        },
+        {
+          "id": "a2",
+          "label": "Harbor Credit — Ultramares state",
+          "answer": "No",
+          "explanation": "Not specifically known to the auditor."
+        },
+        {
+          "id": "a3",
+          "label": "Harbor Credit — Restatement §552 state",
+          "answer": "Yes",
+          "explanation": "A member of a limited, known class of users."
+        }
+      ],
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "sec",
+      "prompt": "The investor's claim under §11 of the 1933 Act",
+      "rows": [
+        {
+          "id": "s1",
+          "label": "Must the investor prove Ashby & Lowe was negligent?",
+          "options": [
+            "Yes",
+            "No — the burden shifts to the auditor to show due diligence"
+          ],
+          "answer": "No — the burden shifts to the auditor to show due diligence",
+          "explanation": "§11 imposes liability unless the auditor proves a defense."
+        },
+        {
+          "id": "s2",
+          "label": "Ashby & Lowe's best defense",
+          "options": [
+            "Lack of privity",
+            "Due diligence",
+            "The investor didn't read the auditor's report"
+          ],
+          "answer": "Due diligence",
+          "explanation": "A reasonable investigation and reasonable belief the statements were true."
+        }
+      ]
+    }
+  ]
+}

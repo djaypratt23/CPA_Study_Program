@@ -1,0 +1,112 @@
+{
+  "id": "reg-tbs-u1-penalties",
+  "section": "REG",
+  "unitId": "reg-u1",
+  "moduleIds": [
+    "reg-preparer-penalties",
+    "reg-circular-230"
+  ],
+  "pool": "practice",
+  "title": "Penalties and practitioner duties — Rowan Tax Advisors",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Rowan Tax Advisors (a CPA firm) is handling several matters. Compute the penalties and evaluate each practitioner action. Assume no reasonable cause and no extensions unless stated.",
+  "exhibits": [
+    {
+      "title": "Client matters",
+      "content": "1. **Moore** filed his return 4 months and 10 days late, with $12,000 of tax due, and paid it all when he filed.\n2. **Lin** obtained a valid extension, filed on September 1, and paid $5,000 of balance due on September 1 (due April 15). Count 5 months of late payment.\n3. **Park Co.** was assessed an understatement of $40,000 caused by negligence.\n4. A Rowan preparer took an undisclosed position without substantial authority on a return for which the firm was paid $1,600.\n5. A Rowan preparer recklessly claimed fictitious deductions on a return for which the firm was paid $8,000."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "pen",
+      "prompt": "Compute the penalties.",
+      "rows": [
+        {
+          "id": "m1",
+          "label": "Moore — failure-to-pay penalty",
+          "answer": 300,
+          "tolerance": 0,
+          "explanation": "5 months counted (any part month counts) × 0.5% × 12,000 = **300**."
+        },
+        {
+          "id": "m2",
+          "label": "Moore — failure-to-file penalty (after reduction)",
+          "answer": 2700,
+          "tolerance": 0,
+          "explanation": "5 × 4.5% × 12,000 = **2,700**."
+        },
+        {
+          "id": "l1",
+          "label": "Lin — failure-to-pay penalty",
+          "answer": 125,
+          "tolerance": 0,
+          "explanation": "0.5% × 5 × 5,000 = **125**; no failure-to-file penalty because the return was filed under a valid extension."
+        },
+        {
+          "id": "p1",
+          "label": "Park Co. — accuracy-related penalty",
+          "answer": 8000,
+          "tolerance": 0,
+          "explanation": "20% × 40,000 = **8,000**."
+        },
+        {
+          "id": "r4",
+          "label": "Preparer penalty — situation 4",
+          "answer": 1000,
+          "tolerance": 0,
+          "explanation": "§6694(a): greater of $1,000 or 50% × 1,600 (800) = **1,000**."
+        },
+        {
+          "id": "r5",
+          "label": "Preparer penalty — situation 5",
+          "answer": 6000,
+          "tolerance": 0,
+          "explanation": "§6694(b): greater of $5,000 or 75% × 8,000 (6,000) = **6,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "duty",
+      "prompt": "Is each proposed action permitted under Circular 230?",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Charging a contingent fee to prepare an original return",
+          "answer": "Not permitted",
+          "explanation": "Original return preparation isn't a contingent-fee exception."
+        },
+        {
+          "id": "d2",
+          "label": "Charging a contingent fee to represent a client in an IRS exam of her original return",
+          "answer": "Permitted",
+          "explanation": "An exception under §10.27."
+        },
+        {
+          "id": "d3",
+          "label": "Withholding client records needed to file a return until fees are paid",
+          "answer": "Not permitted",
+          "explanation": "§10.28 requires returning records needed for compliance."
+        },
+        {
+          "id": "d4",
+          "label": "Telling the IRS about a client's prior-year error without the client's consent",
+          "answer": "Not permitted",
+          "explanation": "The duty is to advise the client."
+        },
+        {
+          "id": "d5",
+          "label": "Representing two clients with conflicting interests after each gives informed written consent",
+          "answer": "Permitted",
+          "explanation": "§10.29 permits it with consent."
+        }
+      ],
+      "options": [
+        "Permitted",
+        "Not permitted"
+      ]
+    }
+  ]
+}

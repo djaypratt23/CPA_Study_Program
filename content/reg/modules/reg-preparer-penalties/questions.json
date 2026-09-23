@@ -1,0 +1,447 @@
+[
+  {
+    "id": "reg-pen-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which penalty rate is higher per month — failure to file or failure to pay?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Failure to pay",
+        "explanation": "Failure to pay is 0.5% per month.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Neither — only interest applies",
+        "explanation": "Both penalties exist.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "They are equal",
+        "explanation": "The two rates are different.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Failure to file",
+        "explanation": "Correct. 5% per month versus 0.5%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Failure to file is 5% per month; failure to pay is 0.5% per month.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-chk1",
+    "pool": "lesson",
+    "stem": "A taxpayer files on time but pays $6,000 of tax 3 months late. What is the failure-to-pay penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$90",
+        "explanation": "Correct. 0.5% × 3 × $6,000."
+      },
+      {
+        "id": "b",
+        "text": "$900",
+        "explanation": "Uses the failure-to-file rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$810",
+        "explanation": "Applies the reduced failure-to-file rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The payment was late.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "0.5% × 3 months × 6,000 = **$90**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pen-chk2",
+    "pool": "lesson",
+    "stem": "A preparer takes an undisclosed position that lacks substantial authority, earning a $3,000 fee on the return. What is the §6694(a) penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,500",
+        "explanation": "Correct. Greater of $1,000 or 50% × $3,000."
+      },
+      {
+        "id": "b",
+        "text": "$1,000",
+        "explanation": "That is less than 50% of the fee.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "That's the §6694(b) minimum.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$2,250",
+        "explanation": "That's 75% — the §6694(b) rate.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§6694(a): greater of $1,000 or 50% of income derived = max(1,000, 1,500) = **$1,500**.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-01",
+    "pool": "practice",
+    "stem": "A return with $20,000 of tax due is filed 2 months late with no payment until filing and no reasonable cause. What are the total failure-to-file and failure-to-pay penalties?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000",
+        "explanation": "Correct. FTF 4.5% × 2 × 20,000 = 1,800 plus FTP 0.5% × 2 × 20,000 = 200."
+      },
+      {
+        "id": "b",
+        "text": "$2,200",
+        "explanation": "Doesn't reduce FTF by FTP.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$200",
+        "explanation": "Only the failure-to-pay penalty.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$1,800",
+        "explanation": "Only the reduced failure-to-file penalty.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Combined 5% per month when both apply: 5% × 2 × 20,000 = **$2,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pen-02",
+    "pool": "practice",
+    "stem": "For an individual, when is an understatement \"substantial\" for the accuracy-related penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "When it exceeds $1,000",
+        "explanation": "The threshold is higher.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "When it exceeds 25% of gross income",
+        "explanation": "That's the 6-year statute trigger.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "When it exceeds the greater of 10% of the correct tax or $5,000",
+        "explanation": "Correct. §6662(d): greater of 10% of the tax required to be shown or $5,000 (corporations have a different test)."
+      },
+      {
+        "id": "d",
+        "text": "Any understatement",
+        "explanation": "Only substantial ones.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§6662(d): greater of 10% of the tax required to be shown or $5,000 (corporations have a different test).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-03",
+    "pool": "practice",
+    "stem": "What is the civil fraud penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "20% of the underpayment",
+        "explanation": "That's the accuracy-related penalty.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "100% of the tax",
+        "explanation": "There is no 100% civil fraud penalty.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "40% of the underpayment",
+        "explanation": "That's for gross valuation misstatements.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "75% of the underpayment attributable to fraud",
+        "explanation": "Correct. §6663: 75% of the portion of the underpayment attributable to fraud."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§6663: 75% of the portion of the underpayment attributable to fraud.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-04",
+    "pool": "practice",
+    "stem": "A position has substantial authority but isn't disclosed. What is the effect on the substantial-understatement penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The penalty applies because the position wasn't disclosed",
+        "explanation": "Substantial authority avoids the penalty without disclosure.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The understatement attributable to the position is reduced, so the penalty doesn't apply to it",
+        "explanation": "Correct. Substantial authority (without disclosure) or reasonable basis (with disclosure) reduces the understatement."
+      },
+      {
+        "id": "c",
+        "text": "Only a 10% penalty applies",
+        "explanation": "There's no reduced rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The fraud penalty applies",
+        "explanation": "No fraud is indicated.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Substantial authority (without disclosure) or reasonable basis (with disclosure) reduces the understatement.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-05",
+    "pool": "practice",
+    "stem": "Which standard must be met for a position on a tax shelter item to avoid the substantial-understatement penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reasonable basis",
+        "explanation": "Too low for tax shelters.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Substantial authority",
+        "explanation": "Not enough for tax shelter items.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "More likely than not",
+        "explanation": "Correct. Tax shelter and reportable transaction positions require a reasonable belief the treatment is more likely than not proper."
+      },
+      {
+        "id": "d",
+        "text": "Realistic possibility",
+        "explanation": "Not the federal penalty standard for shelters.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Tax shelter and reportable transaction positions require a reasonable belief the treatment is more likely than not proper.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-06",
+    "pool": "practice",
+    "stem": "A preparer fails to sign a return and fails to provide the client a copy. Which section imposes the penalties?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "§6694",
+        "explanation": "§6694 concerns understatements.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "§6695",
+        "explanation": "Correct. §6695 imposes per-failure penalties for procedural failures."
+      },
+      {
+        "id": "c",
+        "text": "§6663",
+        "explanation": "§6663 is the taxpayer's fraud penalty.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "§7216",
+        "explanation": "§7216 concerns disclosure of return information.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§6695 imposes per-failure penalties for procedural failures.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-07",
+    "pool": "practice",
+    "stem": "A preparer recklessly disregards rules and regulations, earning a $4,000 fee. What is the §6694(b) penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000",
+        "explanation": "That's 50% — the §6694(a) rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$3,000",
+        "explanation": "That's 75% of the fee, but the minimum is $5,000.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "Correct. Greater of $5,000 or 75% × $4,000 = $3,000."
+      },
+      {
+        "id": "d",
+        "text": "$1,000",
+        "explanation": "That's the §6694(a) minimum.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§6694(b): greater of $5,000 or 75% of income derived = **$5,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pen-08",
+    "pool": "practice",
+    "stem": "How long must a preparer keep a copy of a return (or a list of taxpayers and returns prepared)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "1 year",
+        "explanation": "The period is longer.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "3 years after the close of the return period",
+        "explanation": "Correct. §6107: keep a copy or list for 3 years after the close of the return period."
+      },
+      {
+        "id": "c",
+        "text": "7 years",
+        "explanation": "Longer than required.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Indefinitely",
+        "explanation": "Indefinite retention isn't required.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§6107: keep a copy or list for 3 years after the close of the return period.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-09",
+    "pool": "practice",
+    "stem": "A taxpayer obtains an extension to file until October 15 but pays the balance due on June 15. Which penalty applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Failure to file",
+        "explanation": "The return is timely under the extension.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Failure to pay, from April 15",
+        "explanation": "Correct. An extension to file doesn't extend time to pay."
+      },
+      {
+        "id": "c",
+        "text": "No penalty",
+        "explanation": "Payment was late.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Both penalties",
+        "explanation": "The return is timely.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Payment is due by the original due date; the failure-to-pay penalty (plus interest) runs from April 15.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-10",
+    "pool": "practice",
+    "stem": "Which penalty can't be avoided by showing reasonable cause?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Failure to file",
+        "explanation": "Reasonable cause can excuse it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Failure to pay",
+        "explanation": "Reasonable cause can excuse it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Accuracy-related (negligence)",
+        "explanation": "Reasonable cause and good faith can excuse it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Civil fraud",
+        "explanation": "Correct. Fraud involves intent, which is inconsistent with reasonable cause."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Reasonable cause excuses many penalties but not fraud.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]
