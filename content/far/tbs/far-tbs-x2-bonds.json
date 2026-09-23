@@ -1,0 +1,125 @@
+{
+  "id": "far-tbs-x2-bonds",
+  "section": "FAR",
+  "unitId": "far-u8",
+  "moduleIds": [
+    "far-bonds"
+  ],
+  "pool": "exam",
+  "title": "Bonds payable — Lark Inc.",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "On January 1, Year 1, Lark Inc. issued **$500,000** face value, **5%**, 5-year bonds with interest paid annually on December 31. The market rate at issuance was **6%**. Lark uses the effective interest method. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Present value factors (6%, 5 periods)",
+      "content": "| Factor | Value |\n|---|---:|\n| PV of $1 | 0.7473 |\n| PV of ordinary annuity of $1 | 4.2124 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "con",
+      "prompt": "Select the correct description.",
+      "rows": [
+        {
+          "id": "k1",
+          "label": "The bonds were issued at a",
+          "options": [
+            "Premium",
+            "Discount",
+            "Par"
+          ],
+          "answer": "Discount",
+          "explanation": "The stated rate (5%) is below the market rate (6%), so investors pay less than face."
+        },
+        {
+          "id": "k2",
+          "label": "Interest expense each year compared with the prior year",
+          "options": [
+            "Increases",
+            "Decreases",
+            "Stays the same"
+          ],
+          "answer": "Increases",
+          "explanation": "The carrying amount rises as the discount is amortized, so 6% × carrying amount rises."
+        },
+        {
+          "id": "k3",
+          "label": "Interest expense compared with cash interest paid",
+          "options": [
+            "Greater",
+            "Less",
+            "Equal"
+          ],
+          "answer": "Greater",
+          "explanation": "With a discount, expense = cash + discount amortization."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "p",
+          "label": "Issue price",
+          "answer": 478960,
+          "tolerance": 2,
+          "explanation": "500,000 × 0.7473 = 373,650; 25,000 × 4.2124 = 105,310; total **478,960**."
+        },
+        {
+          "id": "i1",
+          "label": "Year 1 interest expense",
+          "answer": 28738,
+          "tolerance": 2,
+          "explanation": "478,960 × 6% = **28,738**."
+        },
+        {
+          "id": "cv1",
+          "label": "Carrying amount, December 31, Year 1",
+          "answer": 482698,
+          "tolerance": 2,
+          "explanation": "478,960 + (28,738 − 25,000) = **482,698**."
+        },
+        {
+          "id": "i2",
+          "label": "Year 2 interest expense",
+          "answer": 28962,
+          "tolerance": 2,
+          "explanation": "482,698 × 6% = **28,962**."
+        }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "je",
+      "prompt": "Record the December 31, Year 1 interest payment.",
+      "accounts": [
+        "Interest expense",
+        "Cash",
+        "Discount on bonds payable",
+        "Premium on bonds payable",
+        "Bonds payable",
+        "Interest payable"
+      ],
+      "maxLines": 4,
+      "lines": [
+        {
+          "account": "Interest expense",
+          "debit": 28738
+        },
+        {
+          "account": "Cash",
+          "credit": 25000
+        },
+        {
+          "account": "Discount on bonds payable",
+          "credit": 3738
+        }
+      ],
+      "explanation": "Dr Interest expense 28,738; Cr Cash 25,000; Cr Discount on bonds payable 3,738 (amortization)."
+    }
+  ]
+}

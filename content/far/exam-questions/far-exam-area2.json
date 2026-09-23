@@ -1,0 +1,614 @@
+[
+  {
+    "id": "far-x2-01",
+    "moduleId": "far-cash",
+    "pool": "exam",
+    "stem": "Balance per bank statement: $50,000. Deposits in transit: $8,000. Outstanding checks: $12,000. Bank service charge not yet recorded: $100. Customer NSF check not yet recorded: $900. What is the correct cash balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$46,000",
+        "explanation": "Correct. $50,000 + $8,000 − $12,000 = $46,000."
+      },
+      {
+        "id": "b",
+        "text": "$45,000",
+        "explanation": "Subtracts book-side items from the bank balance; they already appear in the bank figure.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$54,000",
+        "explanation": "Adds the outstanding checks instead of subtracting them.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$47,000",
+        "explanation": "That is the unadjusted book balance, before the $1,000 of book adjustments.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Bank side: 50,000 + 8,000 − 12,000 = **46,000**. The book balance must have been 47,000 (46,000 + 100 + 900); both sides reconcile to 46,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-02",
+    "moduleId": "far-receivables",
+    "pool": "exam",
+    "stem": "The accounts receivable aging shows current $400,000 (2% expected loss), 31–60 days $100,000 (10%), and over 60 days $50,000 (40%). The allowance began the year at $30,000; write-offs were $12,000 and recoveries were $2,000. What is credit loss expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$38,000",
+        "explanation": "That is the required ending allowance, not the expense.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$8,000",
+        "explanation": "Ignores the write-offs and recoveries during the year.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$18,000",
+        "explanation": "Correct. $38,000 required − $20,000 unadjusted balance = $18,000."
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Ignores the $2,000 of recoveries that restored the allowance.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Required allowance = 8,000 + 10,000 + 20,000 = 38,000. Unadjusted balance = 30,000 − 12,000 + 2,000 = 20,000. Expense = 38,000 − 20,000 = **$18,000**.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-03",
+    "moduleId": "far-inventory-cost",
+    "pool": "exam",
+    "stem": "Beginning inventory is 100 units at $10. Purchases are 200 units at $12, then 100 units at $15. 250 units were sold. What is ending inventory under **periodic FIFO**?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,600",
+        "explanation": "That is periodic LIFO (oldest costs remain).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$1,838",
+        "explanation": "That is weighted average ($12.25 × 150).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$2,100",
+        "explanation": "Correct. 100 × $15 + 50 × $12 = $2,100."
+      },
+      {
+        "id": "d",
+        "text": "$1,800",
+        "explanation": "Prices all 150 units at the $12 middle layer.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "FIFO leaves the most recent costs in ending inventory: 150 units = 100 @ 15 + 50 @ 12 = **$2,100**. LIFO: 100 @ 10 + 50 @ 12 = 1,600. Average: 4,900 ÷ 400 = 12.25 × 150 = 1,837.50.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-04",
+    "moduleId": "far-inventory-valuation",
+    "pool": "exam",
+    "stem": "A company using FIFO has inventory with cost of $50,000, net realizable value of $46,000, and replacement cost of $44,000. At what amount should the inventory be reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$44,000",
+        "explanation": "Replacement cost is part of the old LCM model, which now applies only to LIFO and retail.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Cost exceeds NRV, so the inventory must be written down.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$45,000",
+        "explanation": "Averages NRV and replacement cost; no such rule exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$46,000",
+        "explanation": "Correct. Lower of cost and NRV."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Entities using FIFO or average cost measure inventory at the lower of cost and net realizable value: min(50,000, 46,000) = **$46,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": false
+  },
+  {
+    "id": "far-x2-05",
+    "moduleId": "far-payables",
+    "pool": "exam",
+    "stem": "In Year 1, a retailer's total cash register receipts were $530,000, including 6% state sales tax. What sales tax payable should it report (assuming none was remitted)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$31,800",
+        "explanation": "Applies 6% to the tax-inclusive total.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Correct. $530,000 ÷ 1.06 = $500,000 of sales; × 6% = $30,000."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Sales tax collected is a liability to the state, not revenue.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$28,200",
+        "explanation": "Subtracts 6% of receipts from the wrong base; no such calculation applies.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Sales = 530,000 ÷ 1.06 = 500,000; sales tax payable = 500,000 × 6% = **$30,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-06",
+    "moduleId": "far-ppe-acquisition",
+    "pool": "exam",
+    "stem": "A company paid $1,000,000 for land with an old building that it immediately razed. Demolition cost $50,000, and salvaged materials sold for $5,000. Legal fees for title were $10,000. What is the cost of the land?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,055,000",
+        "explanation": "Correct. 1,000,000 + 50,000 − 5,000 + 10,000."
+      },
+      {
+        "id": "b",
+        "text": "$1,060,000",
+        "explanation": "Ignores the salvage proceeds, which reduce the cost of the land.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$1,010,000",
+        "explanation": "Omits the net demolition cost, which is a land cost when the building is razed.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$1,005,000",
+        "explanation": "Omits the legal fees, which are capitalized as part of the land.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "When a purchased building is razed, the full purchase price plus net demolition cost goes to land: 1,000,000 + (50,000 − 5,000) + 10,000 = **$1,055,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-07",
+    "moduleId": "far-ppe-acquisition",
+    "pool": "exam",
+    "stem": "Weighted-average accumulated expenditures on a qualifying asset were $2,000,000. A specific construction loan of $1,000,000 bears 8%; other debt averages 10%. Actual interest incurred for the year was $400,000. What interest is capitalized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "Applies the 10% rate to all expenditures, ignoring the specific borrowing rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$160,000",
+        "explanation": "Applies 8% to all expenditures; only $1,000,000 is covered by the specific loan.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$400,000",
+        "explanation": "Capitalized interest is limited to avoidable interest, not total interest incurred.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$180,000",
+        "explanation": "Correct. $1,000,000 × 8% + $1,000,000 × 10% = $180,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Avoidable interest = 1,000,000 × 8% + (2,000,000 − 1,000,000) × 10% = 80,000 + 100,000 = **$180,000**, which is less than the 400,000 incurred.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-08",
+    "moduleId": "far-depreciation",
+    "pool": "exam",
+    "stem": "Equipment costing $100,000 with a $20,000 salvage value and a 5-year life was acquired January 1, Year 1. What is Year 2 depreciation under the **double-declining-balance** method?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$19,200",
+        "explanation": "Deducts salvage before applying the rate; DDB ignores salvage until the floor is reached.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$21,333",
+        "explanation": "That is sum-of-the-years'-digits (4/15 × $80,000).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$24,000",
+        "explanation": "Correct. ($100,000 − $40,000) × 40% = $24,000."
+      },
+      {
+        "id": "d",
+        "text": "$16,000",
+        "explanation": "That is straight-line depreciation.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "DDB rate = 2 ÷ 5 = 40%. Year 1: 100,000 × 40% = 40,000. Year 2: (100,000 − 40,000) × 40% = **$24,000**; carrying amount 36,000 is still above the 20,000 salvage value.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-09",
+    "moduleId": "far-depreciation",
+    "pool": "exam",
+    "stem": "Old equipment (cost $80,000, accumulated depreciation $50,000, fair value $36,000) plus $10,000 cash is exchanged for new equipment. The exchange has commercial substance. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Gains are deferred only when the exchange lacks commercial substance.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$6,000",
+        "explanation": "Correct. $36,000 fair value − $30,000 carrying amount."
+      },
+      {
+        "id": "c",
+        "text": "$16,000",
+        "explanation": "Adds the cash paid to the gain; boot paid is part of the new asset's cost.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "That is the cash paid, not the gain.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "With commercial substance, gain = FV given up − carrying amount = 36,000 − 30,000 = **$6,000**. New asset = 36,000 + 10,000 = 46,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-10",
+    "moduleId": "far-impairment",
+    "pool": "exam",
+    "stem": "An asset group held and used has a carrying amount of $500,000, undiscounted future cash flows of $450,000, and a fair value of $380,000. What impairment loss is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Measures the loss against undiscounted cash flows; they are only the recoverability test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The recoverability test fails ($450,000 < $500,000), so a loss is recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$70,000",
+        "explanation": "That is the difference between undiscounted cash flows and fair value.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$120,000",
+        "explanation": "Correct. $500,000 − $380,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Step 1: recoverable? 450,000 < 500,000 → no. Step 2: loss = carrying amount − fair value = 500,000 − 380,000 = **$120,000**. No reversal is permitted later.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-11",
+    "moduleId": "far-intangibles",
+    "pool": "exam",
+    "stem": "A reporting unit's carrying amount is $1,200,000, including $300,000 of goodwill. Its fair value is $1,000,000. What goodwill impairment is recognized under current GAAP?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "Correct. The excess of carrying amount over fair value, limited to goodwill."
+      },
+      {
+        "id": "b",
+        "text": "$300,000",
+        "explanation": "Writes off all goodwill; the loss is limited to the $200,000 excess.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The reporting unit's carrying amount exceeds its fair value, so goodwill is impaired.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Subtracts the $200,000 excess from goodwill instead of recognizing it as the loss.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASU 2017-04 (one step): impairment = carrying amount − fair value = 1,200,000 − 1,000,000 = **$200,000**, not exceeding goodwill of 300,000. The old implied-goodwill step 2 no longer applies.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-12",
+    "moduleId": "far-debt-securities",
+    "pool": "exam",
+    "stem": "On January 1, Year 1, an investor bought $100,000 face, 8% five-year bonds (interest paid annually December 31) for $96,000, a 9% effective yield, classified as held-to-maturity. What is the carrying amount at December 31, Year 1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$96,800",
+        "explanation": "Uses straight-line amortization; the effective interest method is required when the result differs materially.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$96,640",
+        "explanation": "Correct. $96,000 + ($8,640 − $8,000)."
+      },
+      {
+        "id": "c",
+        "text": "$96,000",
+        "explanation": "Ignores the discount amortization.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$95,360",
+        "explanation": "Subtracts the amortization; discount amortization increases the carrying amount.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Interest revenue = 96,000 × 9% = 8,640; cash = 100,000 × 8% = 8,000; amortization = 640. Carrying amount = **$96,640**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-13",
+    "moduleId": "far-debt-securities",
+    "pool": "exam",
+    "stem": "An available-for-sale debt security has an amortized cost of $200,000 and a year-end fair value of $190,000. There is no credit loss and no intent to sell. How much of the decline is reported in **net income**?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "AFS non-credit declines go to OCI, not net income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. The $10,000 unrealized loss is reported in OCI."
+      },
+      {
+        "id": "c",
+        "text": "$190,000",
+        "explanation": "That is the fair value, not a loss.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "There is no split; the entire non-credit decline goes to OCI.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AFS debt: unrealized holding gains and losses (excluding credit losses) go to OCI. Only a credit loss (through an allowance) or an intent-to-sell impairment hits net income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": false
+  },
+  {
+    "id": "far-x2-14",
+    "moduleId": "far-equity-investments",
+    "pool": "exam",
+    "stem": "On January 1, an investor paid $600,000 for 30% of an investee, gaining significant influence. $50,000 of the excess of cost over book value relates to equipment with a 10-year remaining life. The investee reported net income of $400,000 and paid dividends of $100,000. What is the investment's year-end carrying amount?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$690,000",
+        "explanation": "Omits the $5,000 amortization of the excess attributed to equipment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$720,000",
+        "explanation": "Omits the dividends received and the amortization.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$685,000",
+        "explanation": "Correct. 600,000 + 120,000 − 30,000 − 5,000."
+      },
+      {
+        "id": "d",
+        "text": "$600,000",
+        "explanation": "The equity method adjusts the investment for income and dividends.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Equity method: 600,000 + 30% × 400,000 (120,000) − 30% × 100,000 (30,000) − 50,000 ÷ 10 (5,000) = **$685,000**.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-15",
+    "moduleId": "far-bonds",
+    "pool": "exam",
+    "stem": "Bonds payable with a $1,000,000 face value and a 6% stated rate (interest paid annually) had a carrying amount of $925,000 on January 1. The market rate at issuance was 8%. What is the carrying amount at December 31 after the interest payment (effective interest method)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$911,000",
+        "explanation": "Subtracts the discount amortization; amortizing a discount increases the carrying amount.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$939,000",
+        "explanation": "Correct. $925,000 + ($74,000 − $60,000)."
+      },
+      {
+        "id": "c",
+        "text": "$925,000",
+        "explanation": "Ignores the discount amortization.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$945,000",
+        "explanation": "Uses the stated rate on face value as the amortization; the amortization is expense minus cash.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Interest expense = 925,000 × 8% = 74,000; cash = 1,000,000 × 6% = 60,000; amortization = 14,000. Carrying amount = **$939,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-16",
+    "moduleId": "far-debt-other",
+    "pool": "exam",
+    "stem": "Bonds with a face value of $1,000,000 and a carrying amount of $980,000 are retired early at 102. How is the retirement reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Loss of $40,000 in income from continuing operations",
+        "explanation": "Correct. $1,020,000 paid − $980,000 carrying amount."
+      },
+      {
+        "id": "b",
+        "text": "Loss of $20,000",
+        "explanation": "Measures the loss against face value instead of carrying amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Gain of $40,000",
+        "explanation": "Reverses the sign; paying more than the carrying amount produces a loss.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Loss of $40,000, reported as an extraordinary item",
+        "explanation": "Extraordinary items were eliminated from GAAP in 2015.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Reacquisition price = 1,000,000 × 1.02 = 1,020,000. Loss = 1,020,000 − 980,000 = **$40,000**, reported in continuing operations.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-17",
+    "moduleId": "far-equity",
+    "pool": "exam",
+    "stem": "A company with no prior treasury stock transactions bought 10,000 of its shares for $30 each (cost method). It later reissued 4,000 shares at $35, then 3,000 shares at $26. What is the balance of additional paid-in capital from treasury stock afterward?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Omits the $12,000 charge from the second reissuance.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The loss is charged first against APIC from treasury stock, not retained earnings.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$12,000",
+        "explanation": "That is the loss on the second reissuance, not the remaining balance.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "Correct. $20,000 credit − $12,000 debit = $8,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "First reissue: 4,000 × (35 − 30) = 20,000 credit to APIC–TS. Second: 3,000 × (26 − 30) = 12,000 debit to APIC–TS (enough balance, so retained earnings is not touched). Balance = **$8,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]

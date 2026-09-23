@@ -1,0 +1,110 @@
+{
+  "id": "far-tbs-x1-cash-flows",
+  "section": "FAR",
+  "unitId": "far-u1",
+  "moduleIds": [
+    "far-cash-flows"
+  ],
+  "pool": "exam",
+  "title": "Statement of cash flows — Birch Corp.",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Prepare selected amounts for Birch Corp.'s Year 2 statement of cash flows using the **indirect method**, and classify the listed items.",
+  "exhibits": [
+    {
+      "title": "Year 2 data",
+      "content": "- Net income: **$250,000**\n- Depreciation expense: $40,000; patent amortization: $5,000\n- Equipment with cost $50,000 and accumulated depreciation $30,000 was sold for **$12,000** cash\n- New equipment purchased for **$90,000** cash\n- Land acquired by issuing a **$150,000** note payable to the seller\n- Bonds issued for $100,000 cash; a $40,000 bank note was repaid\n- Cash dividends paid: $60,000; treasury stock purchased: $25,000\n- Cash, January 1: **$80,000**"
+    },
+    {
+      "title": "Changes in working capital accounts",
+      "content": "| Account | Change |\n|---|---:|\n| Accounts receivable | +22,000 |\n| Inventory | −15,000 |\n| Prepaid expenses | +3,000 |\n| Accounts payable | +12,000 |\n| Accrued liabilities | −6,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "g",
+          "label": "Loss on sale of equipment",
+          "answer": 8000,
+          "tolerance": 0,
+          "explanation": "Carrying amount 50,000 − 30,000 = 20,000; proceeds 12,000 → loss **8,000**."
+        },
+        {
+          "id": "o",
+          "label": "Net cash provided by operating activities",
+          "answer": 299000,
+          "tolerance": 0,
+          "explanation": "250,000 + 40,000 + 5,000 + 8,000 − 22,000 + 15,000 − 3,000 + 12,000 − 6,000 = **299,000**."
+        },
+        {
+          "id": "i",
+          "label": "Net cash from investing activities (enter a use as negative)",
+          "answer": -78000,
+          "tolerance": 0,
+          "explanation": "12,000 proceeds − 90,000 purchase = **−78,000**. The land-for-note exchange is noncash."
+        },
+        {
+          "id": "f",
+          "label": "Net cash from financing activities (enter a use as negative)",
+          "answer": -25000,
+          "tolerance": 0,
+          "explanation": "100,000 − 40,000 − 60,000 − 25,000 = **−25,000**."
+        },
+        {
+          "id": "e",
+          "label": "Cash, December 31",
+          "answer": 276000,
+          "tolerance": 0,
+          "explanation": "80,000 + 299,000 − 78,000 − 25,000 = **276,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify each item.",
+      "options": [
+        "Operating",
+        "Investing",
+        "Financing",
+        "Noncash — disclose only"
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Interest paid on the bank note",
+          "answer": "Operating",
+          "explanation": "U.S. GAAP classifies interest paid as operating."
+        },
+        {
+          "id": "c2",
+          "label": "Land acquired with a note payable",
+          "answer": "Noncash — disclose only",
+          "explanation": "No cash changed hands; disclose it as a noncash investing and financing activity."
+        },
+        {
+          "id": "c3",
+          "label": "Dividends received from an investee",
+          "answer": "Operating",
+          "explanation": "Dividends received are operating under U.S. GAAP."
+        },
+        {
+          "id": "c4",
+          "label": "Proceeds from sale of equipment",
+          "answer": "Investing",
+          "explanation": "Proceeds from selling long-lived assets are investing inflows."
+        },
+        {
+          "id": "c5",
+          "label": "Purchase of treasury stock",
+          "answer": "Financing",
+          "explanation": "Transactions with owners are financing."
+        }
+      ]
+    }
+  ]
+}

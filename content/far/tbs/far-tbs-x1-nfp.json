@@ -1,0 +1,126 @@
+{
+  "id": "far-tbs-x1-nfp",
+  "section": "FAR",
+  "unitId": "far-u4",
+  "moduleIds": [
+    "far-nfp-revenue",
+    "far-nfp-statements"
+  ],
+  "pool": "exam",
+  "title": "Contributions — Harbor Literacy Foundation",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Harbor Literacy Foundation, a private not-for-profit, received the items below in Year 1. Determine how each is reported in the Year 1 statement of activities. Ignore discounting.",
+  "exhibits": [
+    {
+      "title": "Year 1 items",
+      "content": "1. Unrestricted cash gifts: **$300,000**.\n2. Unconditional pledge received in December, payable in Year 2: **$100,000**.\n3. A pledge of **$50,000**, payable only if Harbor raises matching gifts from new donors (not yet met).\n4. A CPA donated tax-return preparation for the Foundation (fair value **$12,000**).\n5. Volunteers stuffed envelopes for a mailing (fair value **$5,000**).\n6. A cash gift of **$200,000** that the donor stipulated must be invested in perpetuity.\n7. The board designated **$80,000** of unrestricted cash for a future building."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Select the reporting for each item.",
+      "options": [
+        "Contribution revenue — without donor restrictions",
+        "Contribution revenue — with donor restrictions",
+        "Not recognized as revenue"
+      ],
+      "rows": [
+        {
+          "id": "n1",
+          "label": "Unrestricted cash gifts",
+          "answer": "Contribution revenue — without donor restrictions",
+          "explanation": "No donor-imposed restriction."
+        },
+        {
+          "id": "n2",
+          "label": "Unconditional pledge payable next year",
+          "answer": "Contribution revenue — with donor restrictions",
+          "explanation": "Recognized when received; payment in a future period implies a time restriction."
+        },
+        {
+          "id": "n3",
+          "label": "Matching (conditional) pledge",
+          "answer": "Not recognized as revenue",
+          "explanation": "Conditional promises — a barrier plus a right of return/release — are recognized only when the condition is met."
+        },
+        {
+          "id": "n4",
+          "label": "Donated CPA services",
+          "answer": "Contribution revenue — without donor restrictions",
+          "explanation": "Specialized skills that would otherwise be purchased."
+        },
+        {
+          "id": "n5",
+          "label": "Volunteer envelope stuffing",
+          "answer": "Not recognized as revenue",
+          "explanation": "Requires no specialized skills and does not create a nonfinancial asset."
+        },
+        {
+          "id": "n6",
+          "label": "Gift to be invested in perpetuity",
+          "answer": "Contribution revenue — with donor restrictions",
+          "explanation": "A perpetual donor restriction (endowment)."
+        },
+        {
+          "id": "n7",
+          "label": "Board-designated building fund",
+          "answer": "Not recognized as revenue",
+          "explanation": "A board designation is internal; the net assets stay without donor restrictions."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute Year 1 contribution revenue.",
+      "rows": [
+        {
+          "id": "w",
+          "label": "Without donor restrictions",
+          "answer": 312000,
+          "tolerance": 0,
+          "explanation": "300,000 cash + 12,000 CPA services = **312,000**."
+        },
+        {
+          "id": "r",
+          "label": "With donor restrictions",
+          "answer": 300000,
+          "tolerance": 0,
+          "explanation": "100,000 pledge + 200,000 endowment = **300,000**."
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) supports recognizing the CPA's donated services?",
+      "excerpts": [
+        {
+          "id": "a",
+          "citation": "ASC 958-605-25-8 (paraphrase)",
+          "text": "Unconditional promises to give are recognized when received, as revenue or gains and as assets."
+        },
+        {
+          "id": "b",
+          "citation": "ASC 958-605-25-16 (paraphrase)",
+          "text": "Contributed services are recognized if they create or enhance nonfinancial assets, or require specialized skills, are provided by individuals possessing those skills, and would typically need to be purchased if not provided by donation."
+        },
+        {
+          "id": "c",
+          "citation": "ASC 958-605-25-13 (paraphrase)",
+          "text": "A conditional promise to give is recognized when the barriers to entitlement are overcome."
+        },
+        {
+          "id": "d",
+          "citation": "ASC 958-210-45-9 (paraphrase)",
+          "text": "Board-designated amounts are a subset of net assets without donor restrictions."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The contributed-services criteria determine whether services are recognized; the CPA's services require specialized skills that would otherwise be purchased."
+    }
+  ]
+}

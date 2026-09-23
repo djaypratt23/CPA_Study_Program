@@ -1,0 +1,116 @@
+{
+  "id": "far-tbs-x2-ppe",
+  "section": "FAR",
+  "unitId": "far-u6",
+  "moduleIds": [
+    "far-ppe-acquisition",
+    "far-depreciation",
+    "far-impairment"
+  ],
+  "pool": "exam",
+  "title": "Machine cost, depreciation, and impairment — Oriole Co.",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Oriole Co. acquired a machine on January 1, Year 1. It uses straight-line depreciation with a 5-year life and an **$11,000** salvage value. Determine the cost, then account for a Year 3 impairment.",
+  "exhibits": [
+    {
+      "title": "Costs related to the machine",
+      "content": "| Item | Amount |\n|---|---:|\n| Invoice price (terms 2/10, n/30; paid within discount period) | 200,000 |\n| Freight to Oriole's plant | 4,000 |\n| Installation and testing | 10,000 |\n| Insurance while in transit | 1,000 |\n| Repair of damage caused by Oriole's crew during installation | 3,000 |\n| One-year maintenance contract | 2,000 |"
+    },
+    {
+      "title": "December 31, Year 3 impairment review",
+      "content": "Because of a drop in demand, Oriole tested the machine for recoverability:\n- Undiscounted future net cash flows: **$85,000**\n- Fair value: **$70,000**\n- Remaining useful life: **2 years**; revised salvage value **$10,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cap",
+      "prompt": "Capitalize or expense each item.",
+      "options": [
+        "Capitalize",
+        "Expense"
+      ],
+      "rows": [
+        {
+          "id": "x1",
+          "label": "Invoice price, net of the cash discount",
+          "answer": "Capitalize",
+          "explanation": "Cost is the cash-equivalent price, net of the discount taken."
+        },
+        {
+          "id": "x2",
+          "label": "Freight",
+          "answer": "Capitalize",
+          "explanation": "Necessary to get the asset to its location."
+        },
+        {
+          "id": "x3",
+          "label": "Installation and testing",
+          "answer": "Capitalize",
+          "explanation": "Necessary to make the asset ready for use."
+        },
+        {
+          "id": "x4",
+          "label": "Insurance in transit",
+          "answer": "Capitalize",
+          "explanation": "Part of getting the asset to its location."
+        },
+        {
+          "id": "x5",
+          "label": "Repair of installation damage",
+          "answer": "Expense",
+          "explanation": "An avoidable cost that adds no service potential."
+        },
+        {
+          "id": "x6",
+          "label": "Maintenance contract",
+          "answer": "Expense",
+          "explanation": "It benefits future operating periods, not acquisition (prepaid, then expensed)."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "c",
+          "label": "Capitalized cost of the machine",
+          "answer": 211000,
+          "tolerance": 0,
+          "explanation": "200,000 × 98% = 196,000 + 4,000 + 10,000 + 1,000 = **211,000**."
+        },
+        {
+          "id": "d",
+          "label": "Annual depreciation, Years 1–3",
+          "answer": 40000,
+          "tolerance": 0,
+          "explanation": "(211,000 − 11,000) ÷ 5 = **40,000**."
+        },
+        {
+          "id": "cv",
+          "label": "Carrying amount, Dec 31 Year 3, before impairment",
+          "answer": 91000,
+          "tolerance": 0,
+          "explanation": "211,000 − 120,000 = **91,000**."
+        },
+        {
+          "id": "im",
+          "label": "Impairment loss",
+          "answer": 21000,
+          "tolerance": 0,
+          "explanation": "Not recoverable (85,000 < 91,000); loss = 91,000 − 70,000 fair value = **21,000**."
+        },
+        {
+          "id": "d4",
+          "label": "Year 4 depreciation",
+          "answer": 30000,
+          "tolerance": 0,
+          "explanation": "New basis 70,000 − 10,000 salvage = 60,000 ÷ 2 years = **30,000**."
+        }
+      ]
+    }
+  ]
+}

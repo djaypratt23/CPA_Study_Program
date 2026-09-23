@@ -1,0 +1,122 @@
+{
+  "id": "far-tbs-x3-lease",
+  "section": "FAR",
+  "unitId": "far-u11",
+  "moduleIds": [
+    "far-leases-finance"
+  ],
+  "pool": "exam",
+  "title": "Lessee accounting — Wren LLC",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "On January 1, Year 1, Wren LLC leased equipment for **4 years**, with annual payments of **$40,000** due each **December 31**. The equipment's economic life is 5 years, there is no transfer of ownership or purchase option, and Wren's incremental borrowing rate is **8%** (the lessor's rate is not known). Wren paid **$3,000** of initial direct costs. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Present value factors (8%, 4 periods)",
+      "content": "| Factor | Value |\n|---|---:|\n| PV of ordinary annuity of $1 | 3.3121 |\n| PV of annuity due of $1 | 3.5771 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify the lease and identify the reason.",
+      "rows": [
+        {
+          "id": "k1",
+          "label": "Lease classification",
+          "options": [
+            "Finance lease",
+            "Operating lease",
+            "Short-term lease"
+          ],
+          "answer": "Finance lease",
+          "explanation": "The 4-year term is 80% of the 5-year economic life — a major part."
+        },
+        {
+          "id": "k2",
+          "label": "Criterion met",
+          "options": [
+            "Transfer of ownership",
+            "Purchase option reasonably certain",
+            "Lease term is a major part of economic life",
+            "Specialized asset"
+          ],
+          "answer": "Lease term is a major part of economic life",
+          "explanation": "4 ÷ 5 = 80%, above the commonly used 75% threshold."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "l",
+          "label": "Lease liability at commencement",
+          "answer": 132484,
+          "tolerance": 2,
+          "explanation": "40,000 × 3.3121 = **132,484** (payments in arrears → ordinary annuity)."
+        },
+        {
+          "id": "r",
+          "label": "Right-of-use asset at commencement",
+          "answer": 135484,
+          "tolerance": 2,
+          "explanation": "132,484 + 3,000 initial direct costs = **135,484**."
+        },
+        {
+          "id": "i",
+          "label": "Year 1 interest expense",
+          "answer": 10599,
+          "tolerance": 2,
+          "explanation": "132,484 × 8% = **10,599**."
+        },
+        {
+          "id": "b",
+          "label": "Lease liability, December 31, Year 1",
+          "answer": 103083,
+          "tolerance": 2,
+          "explanation": "132,484 + 10,599 − 40,000 = **103,083**."
+        },
+        {
+          "id": "a",
+          "label": "Year 1 ROU asset amortization",
+          "answer": 33871,
+          "tolerance": 2,
+          "explanation": "135,484 ÷ 4 = **33,871** (straight-line over the lease term)."
+        }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "je",
+      "prompt": "Record the lease at commencement, including the initial direct costs.",
+      "accounts": [
+        "Right-of-use asset",
+        "Lease liability",
+        "Cash",
+        "Lease expense",
+        "Interest expense",
+        "Equipment"
+      ],
+      "maxLines": 4,
+      "lines": [
+        {
+          "account": "Right-of-use asset",
+          "debit": 135484
+        },
+        {
+          "account": "Lease liability",
+          "credit": 132484
+        },
+        {
+          "account": "Cash",
+          "credit": 3000
+        }
+      ],
+      "explanation": "Dr ROU asset 135,484; Cr Lease liability 132,484; Cr Cash 3,000."
+    }
+  ]
+}

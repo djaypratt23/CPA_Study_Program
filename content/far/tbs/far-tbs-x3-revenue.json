@@ -1,0 +1,99 @@
+{
+  "id": "far-tbs-x3-revenue",
+  "section": "FAR",
+  "unitId": "far-u9",
+  "moduleIds": [
+    "far-revenue-contracts",
+    "far-revenue-measurement"
+  ],
+  "pool": "exam",
+  "title": "Bundled contract — Heron Systems",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "On October 1, Year 1, Heron Systems signed a contract to deliver equipment, install it, and provide 12 months of monitoring service for a total price of **$144,000**, paid in full on October 1. Heron's year-end is December 31.",
+  "exhibits": [
+    {
+      "title": "Contract details",
+      "content": "- Equipment delivered and control transferred **October 1, Year 1**. Standalone selling price (SSP): **$120,000**.\n- Installation (routinely performed by other vendors) completed **October 15, Year 1**. SSP: **$20,000**.\n- Monitoring service runs **October 1, Year 1 – September 30, Year 2**, provided evenly. SSP: **$40,000**.\n- A standard 90-day warranty assures the equipment meets agreed specifications; it is not sold separately."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "po",
+      "prompt": "Is each promise a separate performance obligation?",
+      "options": [
+        "Separate performance obligation",
+        "Not a separate performance obligation"
+      ],
+      "rows": [
+        {
+          "id": "p1",
+          "label": "Equipment",
+          "answer": "Separate performance obligation",
+          "explanation": "The customer can benefit from it, and it is separately identifiable."
+        },
+        {
+          "id": "p2",
+          "label": "Installation",
+          "answer": "Separate performance obligation",
+          "explanation": "Other vendors can perform it; it does not significantly modify the equipment."
+        },
+        {
+          "id": "p3",
+          "label": "Monitoring service",
+          "answer": "Separate performance obligation",
+          "explanation": "A distinct service provided over time."
+        },
+        {
+          "id": "p4",
+          "label": "90-day warranty",
+          "answer": "Not a separate performance obligation",
+          "explanation": "An assurance-type warranty is accounted for under ASC 460 (cost accrual), not as a performance obligation."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the following (total SSP = $180,000).",
+      "rows": [
+        {
+          "id": "a1",
+          "label": "Transaction price allocated to the equipment",
+          "answer": 96000,
+          "tolerance": 0,
+          "explanation": "144,000 × 120/180 = **96,000**."
+        },
+        {
+          "id": "a2",
+          "label": "Transaction price allocated to installation",
+          "answer": 16000,
+          "tolerance": 0,
+          "explanation": "144,000 × 20/180 = **16,000**."
+        },
+        {
+          "id": "a3",
+          "label": "Transaction price allocated to monitoring",
+          "answer": 32000,
+          "tolerance": 0,
+          "explanation": "144,000 × 40/180 = **32,000**."
+        },
+        {
+          "id": "r",
+          "label": "Total Year 1 revenue",
+          "answer": 120000,
+          "tolerance": 0,
+          "explanation": "96,000 + 16,000 + 32,000 × 3/12 (8,000) = **120,000**."
+        },
+        {
+          "id": "cl",
+          "label": "Contract liability, December 31, Year 1",
+          "answer": 24000,
+          "tolerance": 0,
+          "explanation": "Cash received 144,000 − revenue 120,000 = **24,000** (9 months of monitoring)."
+        }
+      ]
+    }
+  ]
+}

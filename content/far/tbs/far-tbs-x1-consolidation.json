@@ -1,0 +1,105 @@
+{
+  "id": "far-tbs-x1-consolidation",
+  "section": "FAR",
+  "unitId": "far-u3",
+  "moduleIds": [
+    "far-consolidations"
+  ],
+  "pool": "exam",
+  "title": "Acquisition and consolidation — Pine Co. and Spruce Co.",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "On January 1, Year 1, Pine Co. acquired **100%** of Spruce Co.'s voting stock for **$1,100,000** cash. Prepare the acquisition-date elimination and selected Year 1 consolidated amounts.",
+  "exhibits": [
+    {
+      "title": "Spruce Co. at acquisition",
+      "content": "| Item | Book value | Fair value |\n|---|---:|---:|\n| Net assets other than equipment | 700,000 | 700,000 |\n| Equipment (5-year remaining life) | 200,000 | 300,000 |\n| Common stock | 300,000 | |\n| Retained earnings | 600,000 | |"
+    },
+    {
+      "title": "Year 1 operations",
+      "content": "- Sales: Pine $2,000,000; Spruce $800,000\n- Cost of goods sold: Pine $1,200,000; Spruce $500,000\n- During Year 1, **Spruce sold goods to Pine for $200,000** that had cost Spruce $150,000. At December 31, Pine still held **40%** of these goods."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "journal",
+      "id": "elim",
+      "prompt": "Record the acquisition-date elimination entry (worksheet).",
+      "accounts": [
+        "Common stock — Spruce",
+        "Retained earnings — Spruce",
+        "Equipment",
+        "Goodwill",
+        "Investment in Spruce",
+        "Noncontrolling interest",
+        "Gain on bargain purchase"
+      ],
+      "maxLines": 6,
+      "lines": [
+        {
+          "account": "Common stock — Spruce",
+          "debit": 300000
+        },
+        {
+          "account": "Retained earnings — Spruce",
+          "debit": 600000
+        },
+        {
+          "account": "Equipment",
+          "debit": 100000
+        },
+        {
+          "account": "Goodwill",
+          "debit": 100000
+        },
+        {
+          "account": "Investment in Spruce",
+          "credit": 1100000
+        }
+      ],
+      "explanation": "Eliminate Spruce's equity (900,000), write equipment up to fair value (+100,000), and record goodwill = 1,100,000 − (900,000 + 100,000) = 100,000."
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the Year 1 consolidated amounts.",
+      "rows": [
+        {
+          "id": "gw",
+          "label": "Goodwill",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "1,100,000 − 1,000,000 fair value of net assets = **100,000**."
+        },
+        {
+          "id": "s",
+          "label": "Consolidated sales",
+          "answer": 2600000,
+          "tolerance": 0,
+          "explanation": "2,000,000 + 800,000 − 200,000 intercompany = **2,600,000**."
+        },
+        {
+          "id": "up",
+          "label": "Unrealized intercompany profit in ending inventory",
+          "answer": 20000,
+          "tolerance": 0,
+          "explanation": "(200,000 − 150,000) × 40% = **20,000**."
+        },
+        {
+          "id": "cogs",
+          "label": "Consolidated cost of goods sold (before excess depreciation)",
+          "answer": 1520000,
+          "tolerance": 0,
+          "explanation": "1,200,000 + 500,000 − 200,000 + 20,000 unrealized profit = **1,520,000**."
+        },
+        {
+          "id": "dep",
+          "label": "Additional depreciation on the equipment write-up",
+          "answer": 20000,
+          "tolerance": 0,
+          "explanation": "100,000 ÷ 5 = **20,000**."
+        }
+      ]
+    }
+  ]
+}
