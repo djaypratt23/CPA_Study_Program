@@ -1,0 +1,449 @@
+[
+  {
+    "id": "reg-pt-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: who pays federal income tax on a partnership's income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The partnership, at 21%",
+        "explanation": "Partnerships are pass-through entities.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Only partners who receive distributions",
+        "explanation": "Partners are taxed whether or not cash is distributed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The partners, on their distributive shares",
+        "explanation": "Correct. Partnerships file Form 1065 but don't pay income tax; partners report their shares."
+      },
+      {
+        "id": "d",
+        "text": "No one until the partnership liquidates",
+        "explanation": "Income is taxed annually.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Partnerships file Form 1065 but don't pay income tax; partners report their shares.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pt-chk1",
+    "pool": "lesson",
+    "stem": "Which item is **separately stated** on a partner's Schedule K-1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Salaries paid to employees",
+        "explanation": "Nets into ordinary business income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Depreciation (other than §179)",
+        "explanation": "Generally nets into ordinary income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Cost of goods sold",
+        "explanation": "Nets into ordinary business income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Long-term capital gain",
+        "explanation": "Correct. Items with special treatment at the partner level (capital gains, charity, §179, dividends) are separately stated."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Items with special treatment at the partner level (capital gains, charity, §179, dividends) are separately stated.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pt-chk2",
+    "pool": "lesson",
+    "stem": "A partner with outside basis of $20,000 receives a current distribution of $26,000 cash. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No gain; basis becomes $(6,000)",
+        "explanation": "Basis can't go below zero.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$26,000 of ordinary income",
+        "explanation": "Only the excess over basis is gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$6,000 gain; basis becomes $0",
+        "explanation": "Correct. §731: gain to the extent cash exceeds outside basis."
+      },
+      {
+        "id": "d",
+        "text": "No gain; the excess is deferred",
+        "explanation": "Cash in excess of basis triggers gain.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§731: gain to the extent cash exceeds outside basis.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pt-01",
+    "pool": "practice",
+    "stem": "A partnership pays a partner a $50,000 guaranteed payment. Partnership ordinary income before the payment is $150,000; the partner has a 30% share. What does the partner report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$45,000",
+        "explanation": "Omits the guaranteed payment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Omits the distributive share.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$95,000",
+        "explanation": "Doesn't deduct the guaranteed payment at the partnership level.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$80,000",
+        "explanation": "Correct. $50,000 + 30% × $100,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Ordinary income after the guaranteed payment = 100,000; share = 30,000; plus the 50,000 guaranteed payment.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pt-02",
+    "pool": "practice",
+    "stem": "A partner's basis is $10,000 and her share of the partnership's ordinary loss is $16,000. How much can she deduct this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000, with $6,000 carried forward",
+        "explanation": "Correct. §704(d): losses are limited to outside basis; the excess carries forward."
+      },
+      {
+        "id": "b",
+        "text": "$16,000",
+        "explanation": "Limited to basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$3,000",
+        "explanation": "That's the capital loss limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Losses up to basis are deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§704(d): losses are limited to outside basis; the excess carries forward.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pt-03",
+    "pool": "practice",
+    "stem": "Which item **increases** a partner's outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The partner's share of tax-exempt income",
+        "explanation": "Correct. Tax-exempt income increases basis so it isn't taxed later."
+      },
+      {
+        "id": "b",
+        "text": "Cash distributions",
+        "explanation": "They decrease basis.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "A decrease in the partner's share of liabilities",
+        "explanation": "Treated as a distribution; decreases basis.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "The partner's share of nondeductible expenses",
+        "explanation": "They decrease basis.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Tax-exempt income increases basis so it isn't taxed later.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pt-04",
+    "pool": "practice",
+    "stem": "A partner (basis $30,000) receives a current distribution of land with a partnership basis of $40,000 and FMV of $55,000. What is his basis in the land?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Limited to his outside basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$55,000",
+        "explanation": "FMV isn't used.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Correct. Property basis = lesser of partnership basis (40,000) or remaining outside basis (30,000); no gain is recognized."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "He takes basis up to his outside basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Property basis = lesser of partnership basis (40,000) or remaining outside basis (30,000); no gain is recognized.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pt-05",
+    "pool": "practice",
+    "stem": "A general partner's self-employment income includes:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only guaranteed payments",
+        "explanation": "Distributive share of ordinary income also counts.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Nothing — partners aren't self-employed",
+        "explanation": "General partners are self-employed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Capital gains",
+        "explanation": "Capital gains aren't SE income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Guaranteed payments for services and the distributive share of ordinary business income",
+        "explanation": "Correct. Limited partners generally include only guaranteed payments for services."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Limited partners generally include only guaranteed payments for services.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pt-06",
+    "pool": "practice",
+    "stem": "A partner sells her interest for $120,000 cash. Her basis is $70,000, and she's relieved of $30,000 of partnership liabilities. No hot assets. What is her gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Omits the liability relief.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$80,000",
+        "explanation": "Correct. ($120,000 + $30,000) − $70,000."
+      },
+      {
+        "id": "c",
+        "text": "$120,000",
+        "explanation": "Gain must subtract her basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Subtracts the liability relief.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Amount realized includes liabilities relieved; the gain is capital.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pt-07",
+    "pool": "practice",
+    "stem": "On the sale of a partnership interest, what portion of the gain is ordinary income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "None — it's all capital",
+        "explanation": "§751 hot assets create ordinary income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The portion attributable to unrealized receivables and inventory",
+        "explanation": "Correct. §751 recharacterizes gain attributable to hot assets as ordinary."
+      },
+      {
+        "id": "c",
+        "text": "All of it",
+        "explanation": "Only the hot-asset portion.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "The portion attributable to land",
+        "explanation": "Land isn't a hot asset.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§751 recharacterizes gain attributable to hot assets as ordinary.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pt-08",
+    "pool": "practice",
+    "stem": "When is Form 1065 due for a calendar-year partnership (without extension)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 15",
+        "explanation": "Correct. 15th day of the 3rd month after year-end."
+      },
+      {
+        "id": "b",
+        "text": "April 15",
+        "explanation": "That's for C corporations and individuals.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "May 15",
+        "explanation": "That's for exempt organizations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "September 15",
+        "explanation": "That's the extended date.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "15th day of the 3rd month after year-end.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pt-09",
+    "pool": "practice",
+    "stem": "A partner's basis is $40,000. The partnership's liabilities increase and her share of the increase is $12,000. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect",
+        "explanation": "Liability increases affect basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Basis increases by $12,000",
+        "explanation": "Correct. Treated as a contribution of money."
+      },
+      {
+        "id": "c",
+        "text": "Basis decreases by $12,000",
+        "explanation": "Increases are contributions, not distributions.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "She recognizes $12,000 of income",
+        "explanation": "No income results.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§752(a): an increase in a partner's share of liabilities is a deemed cash contribution.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pt-10",
+    "pool": "practice",
+    "stem": "A partnership reports $6,000 of §179 expense allocated to a partner. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Included in ordinary business income",
+        "explanation": "It's separately stated.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Separately stated; the partner applies her own §179 limits",
+        "explanation": "Correct. §179 is applied at both the partnership and partner levels, so it's separately stated."
+      },
+      {
+        "id": "c",
+        "text": "Not deductible by partners",
+        "explanation": "It's deductible subject to limits.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Deducted only by the partnership",
+        "explanation": "It passes through.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§179 is applied at both the partnership and partner levels, so it's separately stated.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

@@ -1,0 +1,449 @@
+[
+  {
+    "id": "reg-sc-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which shareholder would make a corporation ineligible for S status?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A U.S. citizen individual",
+        "explanation": "Individuals who are citizens are eligible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "An estate",
+        "explanation": "Estates are eligible shareholders.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A partnership",
+        "explanation": "Correct. Partnerships, C corporations, and nonresident aliens are ineligible shareholders."
+      },
+      {
+        "id": "d",
+        "text": "A resident alien individual",
+        "explanation": "Resident aliens are eligible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Partnerships, C corporations, and nonresident aliens are ineligible shareholders.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-chk1",
+    "pool": "lesson",
+    "stem": "A calendar-year corporation eligible all year files Form 2553 on March 10, 2025 with all shareholders' consent. When is the S election effective?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "January 1, 2025",
+        "explanation": "Correct. Filed by March 15."
+      },
+      {
+        "id": "b",
+        "text": "January 1, 2026",
+        "explanation": "It was filed in time for 2025.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "March 10, 2025",
+        "explanation": "Elections are effective at the start of a tax year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "When the IRS approves it",
+        "explanation": "Timely elections are effective by rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "An election made by the 15th day of the 3rd month is effective for the current year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-chk2",
+    "pool": "lesson",
+    "stem": "An S corporation with no accumulated E&P distributes $40,000 to a shareholder whose stock basis (after the year's income) is $30,000. What does the shareholder recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000 dividend",
+        "explanation": "No E&P, so no dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000 ordinary income",
+        "explanation": "Distributions aren't ordinary income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The excess over basis is gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$10,000 capital gain",
+        "explanation": "Correct. Tax-free up to basis (30,000); excess 10,000 is capital gain."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Tax-free up to basis (30,000); excess 10,000 is capital gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-01",
+    "pool": "practice",
+    "stem": "Which feature would create a second class of stock and terminate S status?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Voting and nonvoting common stock with identical distribution rights",
+        "explanation": "Voting differences are permitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Having 90 shareholders",
+        "explanation": "Under 100 is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Shares with different liquidation preferences",
+        "explanation": "Correct. Differences in distribution or liquidation rights create a second class of stock."
+      },
+      {
+        "id": "d",
+        "text": "A shareholder that is an estate",
+        "explanation": "Estates are eligible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Differences in distribution or liquidation rights create a second class of stock.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-02",
+    "pool": "practice",
+    "stem": "A shareholder guarantees a $100,000 bank loan to her S corporation. What effect does the guarantee have on her basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Debt basis increases by $100,000",
+        "explanation": "Guarantees don't create debt basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Basis increases by her ownership percentage of the loan",
+        "explanation": "That's a partnership concept.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Stock basis increases by $100,000",
+        "explanation": "A guarantee doesn't increase stock basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No effect unless she actually pays on the guarantee",
+        "explanation": "Correct. S corporation debt basis requires a direct loan from the shareholder (unlike partnership liability sharing)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "S corporation debt basis requires a direct loan from the shareholder (unlike partnership liability sharing).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-03",
+    "pool": "practice",
+    "stem": "A former C corporation converted to S status in 2022 and sells an asset in 2025 that had a $50,000 built-in gain at conversion. What entity-level tax applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Built-in gains tax of $10,500 (21% × $50,000)",
+        "explanation": "Correct. Within the 5-year recognition period."
+      },
+      {
+        "id": "b",
+        "text": "None — S corporations aren't taxed",
+        "explanation": "The built-in gains tax applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Passive investment income tax",
+        "explanation": "Not the applicable tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Accumulated earnings tax",
+        "explanation": "Not applicable to S corporations.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§1374: 21% on net recognized built-in gain within 5 years after conversion (the gain also passes through, reduced by the tax).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-04",
+    "pool": "practice",
+    "stem": "An S corporation shareholder's stock basis is $20,000 at the start of 2025. Her share of ordinary income is $35,000 and of tax-exempt interest $2,000; she receives a $30,000 distribution. What is her ending stock basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Omits the tax-exempt interest.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$57,000",
+        "explanation": "Omits the distribution.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$27,000",
+        "explanation": "Correct. $20,000 + $35,000 + $2,000 − $30,000."
+      },
+      {
+        "id": "d",
+        "text": "$55,000",
+        "explanation": "Omits tax-exempt income and the distribution.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Income items (including tax-exempt) increase basis before distributions reduce it.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-05",
+    "pool": "practice",
+    "stem": "An S corporation with accumulated E&P of $15,000 and an AAA of $10,000 distributes $30,000 to its sole shareholder (stock basis $50,000). How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000 tax-free",
+        "explanation": "E&P distributions are dividends.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$15,000 dividend, $15,000 capital gain",
+        "explanation": "Basis covers the remainder.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000 dividend",
+        "explanation": "AAA comes first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$10,000 tax-free (AAA), $15,000 dividend, $5,000 tax-free return of basis",
+        "explanation": "Correct. Ordering: AAA → accumulated E&P → remaining basis → gain."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Ordering: AAA → accumulated E&P → remaining basis → gain.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-06",
+    "pool": "practice",
+    "stem": "How are an S corporation's items allocated when a shareholder sells stock mid-year (no election to close the books)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "According to who owned stock at year-end",
+        "explanation": "Allocation is per share per day.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Pro rata per share, per day",
+        "explanation": "Correct. §1377(a): per-share, per-day allocation."
+      },
+      {
+        "id": "c",
+        "text": "Equally to all shareholders",
+        "explanation": "Ownership percentage matters.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "According to capital contributed",
+        "explanation": "S corporations allocate by shares and days.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1377(a): per-share, per-day allocation.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-07",
+    "pool": "practice",
+    "stem": "A 100% shareholder-employee of an S corporation takes no salary, only distributions. What is the IRS's likely position?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Acceptable — distributions avoid payroll taxes",
+        "explanation": "Reasonable compensation is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Part of the distributions should be recharacterized as wages subject to payroll taxes",
+        "explanation": "Correct. Shareholder-employees must receive reasonable compensation for services."
+      },
+      {
+        "id": "c",
+        "text": "The S election terminates",
+        "explanation": "Low salary doesn't terminate the election.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Distributions become nondeductible dividends",
+        "explanation": "Dividend treatment isn't the issue here.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Shareholder-employees must receive reasonable compensation for services.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-08",
+    "pool": "practice",
+    "stem": "An S corporation's election terminated in 2025. Absent IRS consent, when can it re-elect S status?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Immediately",
+        "explanation": "A waiting period applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "After 5 tax years",
+        "explanation": "Correct. §1362(g): a 5-year wait after termination unless the IRS consents."
+      },
+      {
+        "id": "c",
+        "text": "After 3 years",
+        "explanation": "The waiting period is longer.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Never",
+        "explanation": "It can re-elect after the waiting period.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1362(g): a 5-year wait after termination unless the IRS consents.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-09",
+    "pool": "practice",
+    "stem": "A 50% shareholder has stock basis of $8,000 and a $5,000 direct loan to the S corporation. Her share of the ordinary loss is $20,000. How much can she deduct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Limited by basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$13,000",
+        "explanation": "Correct. Stock basis + debt basis."
+      },
+      {
+        "id": "c",
+        "text": "$8,000",
+        "explanation": "Debt basis also counts.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "Miscomputes the limit.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Losses are deductible up to stock basis plus debt basis; the remaining 7,000 is suspended.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-10",
+    "pool": "practice",
+    "stem": "When is Form 1120-S due for a calendar-year S corporation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 15",
+        "explanation": "Correct. S corporations file by the 15th day of the 3rd month."
+      },
+      {
+        "id": "b",
+        "text": "April 15",
+        "explanation": "That's the C corporation due date.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "May 15",
+        "explanation": "That's for exempt organizations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "October 15",
+        "explanation": "That's the extended C corporation date.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "S corporations file by the 15th day of the 3rd month.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

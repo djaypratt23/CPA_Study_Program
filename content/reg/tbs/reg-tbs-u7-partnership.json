@@ -1,0 +1,110 @@
+{
+  "id": "reg-tbs-u7-partnership",
+  "section": "REG",
+  "unitId": "reg-u7",
+  "moduleIds": [
+    "reg-partnerships"
+  ],
+  "pool": "practice",
+  "title": "Schedule K-1 and basis — Oakline Partners",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Maya is a 40% general partner in Oakline Partners, a calendar-year partnership. Compute the partnership's ordinary business income, Maya's K-1 amounts, and her ending basis.",
+  "exhibits": [
+    {
+      "title": "Oakline's 2025 results",
+      "content": "| Item | Amount |\n|---|---:|\n| Sales | 600,000 |\n| Cost of goods sold | 250,000 |\n| Operating expenses (salaries, rent, depreciation) | 110,000 |\n| Guaranteed payment to Maya for services | 30,000 |\n| §1231 gain | 20,000 |\n| Long-term capital gain | 15,000 |\n| Dividends | 5,000 |\n| Charitable contributions | 10,000 |\n| Tax-exempt interest | 4,000 |\n| §179 expense | 12,000 |"
+    },
+    {
+      "title": "Maya's basis information",
+      "content": "- Basis at January 1, 2025: **$60,000**\n- Her share of partnership liabilities increased by **$10,000** during 2025\n- Cash distributions to Maya (other than the guaranteed payment): **$70,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "k",
+      "prompt": "Compute the K-1 amounts.",
+      "rows": [
+        {
+          "id": "obi",
+          "label": "Partnership ordinary business income",
+          "answer": 210000,
+          "tolerance": 0,
+          "explanation": "600,000 − 250,000 − 110,000 − 30,000 = **210,000**."
+        },
+        {
+          "id": "mo",
+          "label": "Maya's share of ordinary business income",
+          "answer": 84000,
+          "tolerance": 0,
+          "explanation": "40% × 210,000 = **84,000**."
+        },
+        {
+          "id": "m1231",
+          "label": "Maya's share of §1231 gain",
+          "answer": 8000,
+          "tolerance": 0,
+          "explanation": "40% × 20,000."
+        },
+        {
+          "id": "m179",
+          "label": "Maya's share of §179 expense",
+          "answer": 4800,
+          "tolerance": 0,
+          "explanation": "40% × 12,000."
+        },
+        {
+          "id": "se",
+          "label": "Maya's self-employment income from Oakline",
+          "answer": 114000,
+          "tolerance": 0,
+          "explanation": "84,000 + 30,000 guaranteed payment = **114,000** (general partner)."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "b",
+      "prompt": "Maya's outside basis.",
+      "rows": [
+        {
+          "id": "end",
+          "label": "Ending basis at December 31, 2025",
+          "answer": 92800,
+          "tolerance": 0,
+          "explanation": "60,000 + 84,000 + 8,000 + 6,000 (LTCG) + 2,000 (dividends) + 1,600 (exempt interest) + 10,000 (liabilities) − 4,000 (charity) − 4,800 (§179) − 70,000 (distributions) = **92,800**. The guaranteed payment doesn't change basis."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Is Maya taxed on the $70,000 cash distribution?",
+          "options": [
+            "No — it's less than her basis",
+            "Yes — as ordinary income",
+            "Yes — as capital gain"
+          ],
+          "answer": "No — it's less than her basis",
+          "explanation": "Current distributions are tax-free to the extent of outside basis."
+        },
+        {
+          "id": "q2",
+          "label": "Where does Maya report her share of the charitable contributions?",
+          "options": [
+            "As an itemized deduction on her own return",
+            "As a reduction of ordinary business income",
+            "It's not deductible"
+          ],
+          "answer": "As an itemized deduction on her own return",
+          "explanation": "Charitable contributions are separately stated."
+        }
+      ]
+    }
+  ]
+}

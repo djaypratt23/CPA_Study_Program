@@ -1,0 +1,448 @@
+[
+  {
+    "id": "reg-te-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: what is the 2025 gift tax annual exclusion per donee?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$18,000",
+        "explanation": "That was the 2024 amount.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$13,990,000",
+        "explanation": "That's the lifetime exemption.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "An older amount.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "$19,000",
+        "explanation": "Correct. 2025 annual exclusion: $19,000 per donee."
+      }
+    ],
+    "answer": "d",
+    "explanation": "2025 annual exclusion: $19,000 per donee.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-chk1",
+    "pool": "lesson",
+    "stem": "Which trust is a simple trust?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A trust that must distribute all income annually and makes no charitable gifts or principal distributions",
+        "explanation": "Correct. Simple trusts distribute all income currently and have no charitable or principal distributions."
+      },
+      {
+        "id": "b",
+        "text": "A trust that can accumulate income",
+        "explanation": "That's a complex trust.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A revocable trust taxed to the grantor",
+        "explanation": "That's a grantor trust.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A trust that distributed principal this year",
+        "explanation": "That makes it complex for the year.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Simple trusts distribute all income currently and have no charitable or principal distributions.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-chk2",
+    "pool": "lesson",
+    "stem": "A 501(c)(3) hospital earns rent from leasing an unmortgaged office building. Is the rent UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes — it isn't related to health care",
+        "explanation": "Rents from real property are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes — all rental income is taxable",
+        "explanation": "Real property rents are excluded.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "No — rents from real property are excluded (absent debt financing)",
+        "explanation": "Correct. §512(b): passive income such as dividends, interest, royalties, and most real property rents is excluded."
+      },
+      {
+        "id": "d",
+        "text": "Only if over $1,000",
+        "explanation": "The exclusion applies regardless.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§512(b): passive income such as dividends, interest, royalties, and most real property rents is excluded.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-01",
+    "pool": "practice",
+    "stem": "A single donor gives $25,000 to each of three nephews in 2025 (no gift splitting). What are the total taxable gifts?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$75,000",
+        "explanation": "Annual exclusions apply.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$57,000",
+        "explanation": "That's the total excluded amount.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Each gift exceeds the exclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$18,000",
+        "explanation": "Correct. 3 × ($25,000 − $19,000)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Taxable gifts = 3 × 6,000 = **18,000** (sheltered by the lifetime exemption, but Form 709 is required).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-te-02",
+    "pool": "practice",
+    "stem": "Which transfer is **not** a taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Paying a friend's college tuition directly to the college",
+        "explanation": "Correct. §2503(e): tuition and medical expenses paid directly to the provider are excluded."
+      },
+      {
+        "id": "b",
+        "text": "Giving a friend $30,000 cash",
+        "explanation": "A gift; $11,000 is taxable after the exclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Giving a nephew a car worth $40,000",
+        "explanation": "Taxable to the extent above the exclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Forgiving a $50,000 loan to a sibling",
+        "explanation": "Forgiving a loan is a gift.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§2503(e): tuition and medical expenses paid directly to the provider are excluded.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-03",
+    "pool": "practice",
+    "stem": "A trust's DNI is $30,000, and it distributes $45,000 to its beneficiary. How much is taxable to the beneficiary?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$45,000",
+        "explanation": "Limited to DNI.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$15,000",
+        "explanation": "That's the excess (a tax-free principal distribution).",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Correct. Distributions are taxable to beneficiaries only up to DNI."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "DNI is taxable to the beneficiary.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Distributions are taxable to beneficiaries only up to DNI.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-te-04",
+    "pool": "practice",
+    "stem": "Who pays tax on the income of a revocable living trust?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The trust",
+        "explanation": "It's a grantor trust.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No one",
+        "explanation": "The income is taxed to the grantor.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The beneficiaries only",
+        "explanation": "The grantor is taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The grantor",
+        "explanation": "Correct. Grantor trust rules treat the grantor as owner."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Grantor trust rules treat the grantor as owner.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-05",
+    "pool": "practice",
+    "stem": "A married couple elects gift splitting. What is the maximum they can give one donee in 2025 without making a taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$19,000",
+        "explanation": "That's per donor.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$38,000",
+        "explanation": "Correct. Gift splitting: 2 × $19,000."
+      },
+      {
+        "id": "c",
+        "text": "$13,990,000",
+        "explanation": "That's the lifetime exemption.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Unlimited",
+        "explanation": "Only gifts between spouses are unlimited.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gift splitting: 2 × $19,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-te-06",
+    "pool": "practice",
+    "stem": "A 501(c)(3) organization's thrift shop sells donated clothing, staffed by paid employees. Is the income UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes — the shop is run by paid employees",
+        "explanation": "The donated-goods exception applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No — sales of donated merchandise are excluded",
+        "explanation": "Correct. §513(a)(3): selling merchandise substantially all of which was donated isn't an unrelated trade or business."
+      },
+      {
+        "id": "c",
+        "text": "Only if sales exceed $1,000",
+        "explanation": "The exception applies regardless.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Yes — all retail activity is UBTI",
+        "explanation": "Not all retail activity is UBTI.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§513(a)(3): selling merchandise substantially all of which was donated isn't an unrelated trade or business.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-07",
+    "pool": "practice",
+    "stem": "Which activity can cause a 501(c)(3) organization to lose its exempt status?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Earning interest on investments",
+        "explanation": "Passive income is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Endorsing a candidate for public office",
+        "explanation": "Correct. 501(c)(3) organizations may not participate in political campaigns for or against candidates."
+      },
+      {
+        "id": "c",
+        "text": "Selling donated goods",
+        "explanation": "Selling donated goods is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Paying reasonable salaries",
+        "explanation": "Reasonable compensation is allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "501(c)(3) organizations may not participate in political campaigns for or against candidates.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-08",
+    "pool": "practice",
+    "stem": "A complex trust's personal exemption is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$600",
+        "explanation": "That's for estates.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$300",
+        "explanation": "That's for simple trusts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$100",
+        "explanation": "Correct. Estates $600; simple trusts $300; complex trusts $100."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Complex trusts have an exemption.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Estates $600; simple trusts $300; complex trusts $100.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-09",
+    "pool": "practice",
+    "stem": "A museum's for-profit restaurant generates $30,000 of net income from the public. How much is taxable UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "The $1,000 specific deduction applies.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$29,000",
+        "explanation": "Correct. UBTI after the $1,000 specific deduction, taxed at corporate rates."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The restaurant isn't substantially related.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$15,000",
+        "explanation": "There's no 50% rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "UBTI after the $1,000 specific deduction, taxed at corporate rates.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-te-10",
+    "pool": "practice",
+    "stem": "When is Form 709 for 2025 gifts due (without extension)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "April 15, 2026",
+        "explanation": "Correct. The gift tax return is due April 15 of the following year (extended with the income tax extension)."
+      },
+      {
+        "id": "b",
+        "text": "December 31, 2025",
+        "explanation": "The return isn't due at year-end.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "March 15, 2026",
+        "explanation": "That's for partnerships and S corporations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Within 9 months of the gift",
+        "explanation": "That's the estate tax return deadline concept.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The gift tax return is due April 15 of the following year (extended with the income tax extension).",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

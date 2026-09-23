@@ -1,0 +1,118 @@
+{
+  "id": "reg-tbs-u7-s-corp-gifts",
+  "section": "REG",
+  "unitId": "reg-u7",
+  "moduleIds": [
+    "reg-s-corporations",
+    "reg-trusts-exempt"
+  ],
+  "pool": "practice",
+  "title": "S corporation distributions and gifts — Tom Ridge",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Tom Ridge owns 100% of Ridge Inc., a calendar-year S corporation that was a C corporation until 2021. Compute his 2025 amounts, then answer the gift tax questions.",
+  "exhibits": [
+    {
+      "title": "Ridge Inc. — 2025",
+      "content": "- Accumulated E&P from C corporation years: **$12,000**\n- AAA at January 1, 2025: **$20,000**\n- 2025 ordinary business income: **$50,000**\n- 2025 tax-exempt interest: **$3,000**\n- Tom's stock basis at January 1, 2025: **$40,000**\n- Distribution to Tom on December 31, 2025: **$90,000**"
+    },
+    {
+      "title": "Tom's 2025 gifts (Tom's wife consents to gift splitting)",
+      "content": "- $50,000 cash to his daughter\n- $20,000 paid directly to a hospital for his mother's surgery\n- $100,000 of stock to his wife (a U.S. citizen)"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "s",
+      "prompt": "S corporation distribution.",
+      "rows": [
+        {
+          "id": "aaa",
+          "label": "AAA available before the distribution",
+          "answer": 70000,
+          "tolerance": 0,
+          "explanation": "20,000 + 50,000 ordinary income = **70,000** (tax-exempt income doesn't increase AAA)."
+        },
+        {
+          "id": "bas",
+          "label": "Stock basis before the distribution",
+          "answer": 93000,
+          "tolerance": 0,
+          "explanation": "40,000 + 50,000 + 3,000 = **93,000**."
+        },
+        {
+          "id": "div",
+          "label": "Dividend portion of the distribution",
+          "answer": 12000,
+          "tolerance": 0,
+          "explanation": "After 70,000 from AAA, the next 12,000 comes from accumulated E&P."
+        },
+        {
+          "id": "end",
+          "label": "Tom's ending stock basis",
+          "answer": 15000,
+          "tolerance": 0,
+          "explanation": "93,000 − 70,000 (AAA) − 8,000 (remaining amount from basis) = **15,000**; the dividend portion doesn't reduce basis."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "g",
+      "prompt": "Gift tax.",
+      "rows": [
+        {
+          "id": "tg",
+          "label": "Tom's taxable gift to his daughter (after splitting)",
+          "answer": 6000,
+          "tolerance": 0,
+          "explanation": "50,000 ÷ 2 = 25,000 − 19,000 annual exclusion = **6,000**."
+        },
+        {
+          "id": "hm",
+          "label": "Taxable gift from paying the hospital",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "Medical expenses paid directly are excluded: **0**."
+        },
+        {
+          "id": "wf",
+          "label": "Taxable gift to his wife",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "Unlimited marital deduction: **0**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "e",
+      "prompt": "Eligibility — does each event terminate Ridge Inc.'s S election?",
+      "rows": [
+        {
+          "id": "e1",
+          "label": "Tom sells 10% of his shares to a partnership",
+          "answer": "Terminates the election",
+          "explanation": "A partnership is an ineligible shareholder."
+        },
+        {
+          "id": "e2",
+          "label": "Ridge issues nonvoting common stock with identical distribution rights",
+          "answer": "Doesn't terminate the election",
+          "explanation": "Voting differences don't create a second class of stock."
+        },
+        {
+          "id": "e3",
+          "label": "Tom gifts shares to 30 family members",
+          "answer": "Doesn't terminate the election",
+          "explanation": "Fewer than 100 shareholders, all eligible."
+        }
+      ],
+      "options": [
+        "Terminates the election",
+        "Doesn't terminate the election"
+      ]
+    }
+  ]
+}
