@@ -76,9 +76,9 @@ Lesson Markdown supports structured fenced blocks: ` ```check ` (embedded questi
 - [x] **M5** TBS engine: numeric, dropdown, journal entry, document review, research-excerpt; partial credit; exhibits in tabs
 - [x] **M6** Planner, dashboard ("Continue" + today's plan), readiness, analytics, recommendations
 - [x] **M7** Simulated exam: testlets, 4-hour clock, optional break, locked testlets, approximate score with caveat
-- [ ] **M8** FAR full content (every module: lesson, ≥10 practice MCQs, flashcards; ≥2 TBS per unit; mock exam)
-- [ ] **M9** AUD, REG, TCP scaffolds: full blueprint outline + one complete sample module each
-- [ ] **M10** Final review mode docs, polish, README, REVIEW.md
+- [x] **M8** FAR full content (every module: lesson, ≥10 practice MCQs, flashcards; ≥2 TBS per unit; mock exam)
+- [x] **M9** AUD, REG, TCP scaffolds: full blueprint outline + one complete sample module each
+- [x] **M10** Final review mode docs, polish, README, REVIEW.md
 
 ## Later sessions (one section at a time)
 
