@@ -1,0 +1,115 @@
+{
+  "id": "tcp-tbs-x1-gift-retirement",
+  "section": "TCP",
+  "unitId": "tcp-u2",
+  "moduleIds": [
+    "tcp-gift-tax",
+    "tcp-retirement-education"
+  ],
+  "pool": "exam",
+  "title": "Gifts and distributions — Rosa Diaz",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Rosa Diaz, a widow age 75, made the transfers below in 2025. She has made no prior taxable gifts.",
+  "exhibits": [
+    {
+      "title": "2025 transfers",
+      "content": "| Transfer | Amount |\n|---|---:|\n| Cash to each of her four grandchildren | 19,000 each |\n| Contribution to a §529 plan for a fifth grandchild (5-year election made) | 95,000 |\n| Tuition paid directly to a university for a grandchild | 30,000 |\n| Land to her son (Rosa's basis $100,000) | 250,000 FMV |"
+    },
+    {
+      "title": "IRA",
+      "content": "- Rosa's 2025 required minimum distribution: **$30,000**\n- She directs **$20,000** from her IRA to her church as a qualified charitable distribution and withdraws the remaining **$10,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "g1",
+          "label": "Taxable gifts to the four grandchildren (total)",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "Each gift equals the $19,000 exclusion: **0**."
+        },
+        {
+          "id": "g2",
+          "label": "Taxable gift from the §529 contribution in 2025",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "$95,000 spread over 5 years = $19,000 per year, covered by each year's exclusion: **0**."
+        },
+        {
+          "id": "g3",
+          "label": "Taxable gift to her son",
+          "answer": 231000,
+          "tolerance": 0,
+          "explanation": "250,000 − 19,000 = **231,000**."
+        },
+        {
+          "id": "bx",
+          "label": "Rosa's remaining basic exclusion amount after 2025",
+          "answer": 13759000,
+          "tolerance": 0,
+          "explanation": "13,990,000 − 231,000 = **13,759,000**."
+        },
+        {
+          "id": "sb",
+          "label": "Son's basis in the land",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "Carryover basis (no gift tax paid): **100,000**."
+        },
+        {
+          "id": "ira",
+          "label": "IRA distribution included in Rosa's gross income",
+          "answer": 10000,
+          "tolerance": 0,
+          "explanation": "30,000 − 20,000 QCD = **10,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Compliance.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Must Rosa file Form 709 for 2025?",
+          "options": [
+            "No — no gift tax is due",
+            "Yes"
+          ],
+          "answer": "Yes",
+          "explanation": "Taxable gift to her son and the §529 5-year election both require a 709."
+        },
+        {
+          "id": "d2",
+          "label": "Treatment of the tuition payment",
+          "options": [
+            "Taxable gift of $11,000",
+            "Excluded without limit",
+            "Uses the annual exclusion"
+          ],
+          "answer": "Excluded without limit",
+          "explanation": "§2503(e)."
+        },
+        {
+          "id": "d3",
+          "label": "Does the QCD count toward Rosa's RMD?",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "answer": "Yes",
+          "explanation": "QCDs satisfy the RMD."
+        }
+      ]
+    }
+  ],
+  "needsReview": true,
+  "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount for 2025. Verify against current IRS guidance and exam materials."
+}

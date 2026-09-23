@@ -1,0 +1,448 @@
+[
+  {
+    "id": "tcp-eo-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a charity earns dividends on its endowment. Is that income taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, as unrelated business income",
+        "explanation": "Passive investment income is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only if it exceeds $1,000",
+        "explanation": "The $1,000 threshold is for filing Form 990-T.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, at trust rates",
+        "explanation": "Endowment dividends are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No, dividends are excluded from UBTI unless debt-financed",
+        "explanation": "Correct. §512(b)(1) excludes dividends, interest, and similar passive income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§512(b)(1) excludes dividends, interest, and similar passive income.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-chk1",
+    "pool": "lesson",
+    "stem": "A public charity has gross receipts of $150,000 and total assets of $600,000. Which annual return is it eligible to file?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Form 990-N",
+        "explanation": "Receipts exceed $50,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Form 990-EZ",
+        "explanation": "Assets are $500,000 or more.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Form 990",
+        "explanation": "Correct. 990-EZ requires receipts under $200,000 AND assets under $500,000."
+      },
+      {
+        "id": "d",
+        "text": "No return",
+        "explanation": "Most exempt organizations must file.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "990-EZ requires receipts under $200,000 AND assets under $500,000.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-chk2",
+    "pool": "lesson",
+    "stem": "Which activity of a §501(c)(3) school generates UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Renting its stadium with services (catering, staff) to a professional team for the season",
+        "explanation": "Correct. Rent with significant services and a regularly carried-on, unrelated business is UBTI."
+      },
+      {
+        "id": "b",
+        "text": "A bookstore selling textbooks to students",
+        "explanation": "Convenience of students — excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Interest on bank deposits",
+        "explanation": "Passive income is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A volunteer-staffed bake sale",
+        "explanation": "The volunteer exception applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Rent with significant services and a regularly carried-on, unrelated business is UBTI.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-01",
+    "pool": "practice",
+    "stem": "When is Form 990 due for a calendar-year 2025 organization (no extension)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 16, 2026",
+        "explanation": "That's the partnership date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "April 15, 2026",
+        "explanation": "That's for individuals, C corporations, and trusts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "May 15, 2026",
+        "explanation": "Correct. 15th day of the 5th month after year-end."
+      },
+      {
+        "id": "d",
+        "text": "June 15, 2026",
+        "explanation": "The due date is the 15th day of the 5th month.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "15th day of the 5th month after year-end.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-02",
+    "pool": "practice",
+    "stem": "What happens to an organization that doesn't file its required annual return for 3 consecutive years?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $1,000 penalty",
+        "explanation": "Revocation is automatic.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Nothing, if it has no UBTI",
+        "explanation": "Filing is still required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It becomes a private foundation",
+        "explanation": "Status doesn't change that way.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Its exemption is automatically revoked",
+        "explanation": "Correct. §6033(j): automatic revocation after 3 consecutive years of not filing."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§6033(j): automatic revocation after 3 consecutive years of not filing.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-03",
+    "pool": "practice",
+    "stem": "An exempt organization has two unrelated businesses: A earns $50,000 and B loses $(20,000). Before the specific deduction, what is UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Correct. §512(a)(6): each unrelated trade or business is computed separately; B's loss carries forward for B."
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "The silo rule prevents netting between businesses.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$70,000",
+        "explanation": "B's loss isn't added.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A's income is taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§512(a)(6): each unrelated trade or business is computed separately; B's loss carries forward for B.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-eo-04",
+    "pool": "practice",
+    "stem": "Which organization pays a 1.39% excise tax on its net investment income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A public charity",
+        "explanation": "Public charities don't pay the §4940 tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A church",
+        "explanation": "Churches aren't subject to it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A private foundation",
+        "explanation": "Correct. §4940: 1.39% of net investment income for private foundations."
+      },
+      {
+        "id": "d",
+        "text": "A §501(c)(6) trade association",
+        "explanation": "Trade associations aren't private foundations.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§4940: 1.39% of net investment income for private foundations.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-05",
+    "pool": "practice",
+    "stem": "A charity's gross UBI is $1,500 with $300 of directly connected expenses. What is taxable UBTI and must it file Form 990-T?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200; yes",
+        "explanation": "Correct. 1,500 − 300 − 1,000; gross UBI ≥ $1,000."
+      },
+      {
+        "id": "b",
+        "text": "$1,200; yes",
+        "explanation": "Omits the specific deduction.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$0; no",
+        "explanation": "Gross UBI of $1,000 or more requires filing.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$500; no",
+        "explanation": "Subtracts the deduction from gross UBI and misses the filing test.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Form 990-T is required when gross UBI is $1,000 or more; UBTI = 1,500 − 300 − 1,000 = 200.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-eo-06",
+    "pool": "practice",
+    "stem": "A charity's executive (a disqualified person) receives $80,000 above reasonable compensation. What is the initial excise tax on the executive?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000",
+        "explanation": "That's the 10% manager tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Intermediate sanctions apply.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$160,000",
+        "explanation": "200% applies only if not corrected.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Correct. 25% × 80,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§4958: 25% first-tier tax on the excess benefit.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-eo-07",
+    "pool": "practice",
+    "stem": "Which revenue is a qualified sponsorship payment excluded from UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A company pays a charity to run its ads with pricing and endorsements in the charity's magazine",
+        "explanation": "Advertising is UBTI.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A company pays to have its name and logo displayed at a charity run, with no qualitative claims",
+        "explanation": "Correct. §513(i): acknowledgment of the sponsor's name/logo without advertising is excluded."
+      },
+      {
+        "id": "c",
+        "text": "A company pays for exclusive sales rights at a stadium",
+        "explanation": "That's a substantial return benefit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A company buys the charity's mailing list",
+        "explanation": "List rentals are generally UBTI except among exempt organizations.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§513(i): acknowledgment of the sponsor's name/logo without advertising is excluded.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-08",
+    "pool": "practice",
+    "stem": "An organization wants its §501(c)(3) exemption to be retroactive to its formation date. By when must it generally file Form 1023?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Within 12 months of formation",
+        "explanation": "The period is longer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Within 27 months of formation",
+        "explanation": "Correct. Filed within 27 months (15 months + automatic 12-month extension), exemption is retroactive to formation."
+      },
+      {
+        "id": "c",
+        "text": "Within 5 years",
+        "explanation": "Too late for retroactivity.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Any time",
+        "explanation": "Timing matters for retroactivity.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Filed within 27 months (15 months + automatic 12-month extension), exemption is retroactive to formation.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-09",
+    "pool": "practice",
+    "stem": "A charity rents part of its building (average acquisition debt $200,000; average adjusted basis $800,000) for net rent of $60,000. How much is UBTI before the specific deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60,000",
+        "explanation": "Only the debt-financed portion.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$15,000",
+        "explanation": "Correct. 25% × 60,000."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The debt-financed share is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$45,000",
+        "explanation": "That's the excluded share.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Debt/basis = 200,000 ÷ 800,000 = 25%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-eo-10",
+    "pool": "practice",
+    "stem": "A §501(c)(3) organization endorses a candidate for public office. What is the consequence?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A 10% excise tax only",
+        "explanation": "Political campaign activity is prohibited outright.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It risks losing its exemption",
+        "explanation": "Correct. §501(c)(3) organizations are absolutely prohibited from political campaign activity."
+      },
+      {
+        "id": "c",
+        "text": "Nothing, if the endorsement is unpaid",
+        "explanation": "Any campaign intervention is prohibited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It becomes a §501(c)(4)",
+        "explanation": "Status doesn't automatically convert.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§501(c)(3) organizations are absolutely prohibited from political campaign activity.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "tcp-sc-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: an employee exercises a nonqualified stock option (strike $10, FMV $25). What happens at exercise?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing until sale",
+        "explanation": "That describes an ISO for regular tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$25 per share of ordinary income",
+        "explanation": "The employee paid $10.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$15 per share of capital gain",
+        "explanation": "The spread is compensation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$15 per share of ordinary income",
+        "explanation": "Correct. The NQSO spread at exercise is wages."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The NQSO spread at exercise is wages.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-chk1",
+    "pool": "lesson",
+    "stem": "ISO stock is sold 18 months after exercise and 30 months after grant. The disposition is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Disqualifying — sold within 3 years of grant",
+        "explanation": "The grant test is 2 years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Disqualifying — sold within 2 years of exercise",
+        "explanation": "The exercise test is 1 year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Qualifying",
+        "explanation": "Correct. More than 2 years from grant and more than 1 year from exercise → qualifying."
+      },
+      {
+        "id": "d",
+        "text": "Treated as an NQSO",
+        "explanation": "ISO status is kept when holding periods are met.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "More than 2 years from grant and more than 1 year from exercise → qualifying.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-chk2",
+    "pool": "lesson",
+    "stem": "When is a §83(b) election most favorable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "When the stock's value is expected to fall",
+        "explanation": "The employee would prepay tax on value that disappears.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "For RSUs",
+        "explanation": "§83(b) isn't available for RSUs.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "When the stock is fully vested",
+        "explanation": "No election is needed for vested stock.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "When current value is low and large appreciation is expected",
+        "explanation": "Correct. The election taxes the low current value as ordinary income and makes future growth capital gain."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The election taxes the low current value as ordinary income and makes future growth capital gain.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-01",
+    "pool": "practice",
+    "stem": "Mia exercises NQSOs for 500 shares at a $12 strike when FMV is $40. Two years later she sells at $55. What are her ordinary income at exercise and her gain at sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$21,500 ordinary; $0 gain",
+        "explanation": "The post-exercise gain is capital.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$0 ordinary; $21,500 LTCG",
+        "explanation": "That's ISO treatment.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$14,000 ordinary; $7,500 LTCG",
+        "explanation": "Correct. Ordinary = (40 − 12) × 500 = 14,000; basis = 40 × 500 = 20,000; gain = 27,500 − 20,000 = **7,500 LTCG**."
+      },
+      {
+        "id": "d",
+        "text": "$14,000 ordinary; $21,500 LTCG",
+        "explanation": "Basis includes the income recognized.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Ordinary = (40 − 12) × 500 = 14,000; basis = 40 × 500 = 20,000; gain = 27,500 − 20,000 = **7,500 LTCG**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc-02",
+    "pool": "practice",
+    "stem": "ISO: strike $15, FMV at exercise $45, sold 6 months after exercise at $35 (100 shares). What is the ordinary income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000",
+        "explanation": "The sale price was lower than FMV at exercise.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Disqualifying dispositions produce ordinary income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$1,000",
+        "explanation": "Measures from FMV at exercise.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "Correct. Lesser of (45 − 15) or (35 − 15) = 20 × 100."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Disqualifying disposition: ordinary income limited to the actual gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc-03",
+    "pool": "practice",
+    "stem": "In the year an ISO is exercised and the stock is held past year-end, the spread is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Wages on Form W-2",
+        "explanation": "Not for a regular ISO exercise.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "An AMT adjustment",
+        "explanation": "Correct. §56(b)(3): the ISO spread is an AMT adjustment; AMT basis becomes FMV at exercise."
+      },
+      {
+        "id": "c",
+        "text": "A capital gain",
+        "explanation": "No sale has occurred.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Ignored for all purposes",
+        "explanation": "It matters for AMT.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§56(b)(3): the ISO spread is an AMT adjustment; AMT basis becomes FMV at exercise.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-04",
+    "pool": "practice",
+    "stem": "An employer grants ISOs. When does the employer get a deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At grant",
+        "explanation": "No deduction at grant.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "At exercise",
+        "explanation": "ISO exercise gives no deduction.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only if the employee makes a disqualifying disposition",
+        "explanation": "Correct. The employer's deduction matches the employee's ordinary income, which exists only on a disqualifying disposition."
+      },
+      {
+        "id": "d",
+        "text": "Always at the employee's sale",
+        "explanation": "A qualifying sale gives the employer nothing.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The employer's deduction matches the employee's ordinary income, which exists only on a disqualifying disposition.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-05",
+    "pool": "practice",
+    "stem": "Restricted stock (1,000 shares, FMV $8 at grant, employee pays $0) vests three years later at FMV $20. No §83(b) election. What is the ordinary income and when?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000 at grant",
+        "explanation": "That requires an §83(b) election.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$20,000 at vesting",
+        "explanation": "Correct. §83(a): income when the substantial risk of forfeiture lapses = FMV − amount paid."
+      },
+      {
+        "id": "c",
+        "text": "$12,000 at vesting",
+        "explanation": "Without the election, all value at vesting is ordinary.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0 until sale",
+        "explanation": "Income arises at vesting.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§83(a): income when the substantial risk of forfeiture lapses = FMV − amount paid.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc-06",
+    "pool": "practice",
+    "stem": "How long does an employee have to file a §83(b) election?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "30 days after the property is transferred",
+        "explanation": "Correct. The election must be filed within 30 days of the transfer."
+      },
+      {
+        "id": "b",
+        "text": "Until the return due date",
+        "explanation": "The 30-day deadline is much earlier.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "60 days after vesting",
+        "explanation": "The deadline runs from transfer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Any time before vesting",
+        "explanation": "It must be within 30 days of transfer.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The election must be filed within 30 days of the transfer.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-07",
+    "pool": "practice",
+    "stem": "An employee made a §83(b) election and reported $10,000 of income. The shares are later forfeited. What can she deduct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000 ordinary loss",
+        "explanation": "No deduction for the income previously reported.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only any amount she actually paid for the shares, as a capital loss",
+        "explanation": "Correct. §83(b)(1): no deduction for the forfeited election income; a loss is allowed only for amounts paid."
+      },
+      {
+        "id": "c",
+        "text": "$10,000 capital loss",
+        "explanation": "The election's income isn't recoverable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "She can amend to remove the income",
+        "explanation": "The election is irrevocable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§83(b)(1): no deduction for the forfeited election income; a loss is allowed only for amounts paid.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-08",
+    "pool": "practice",
+    "stem": "RSUs for 300 shares settle when FMV is $60. The employee sells immediately at $60. What is the income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$18,000 ordinary; $0 gain",
+        "explanation": "Correct. RSU income = FMV at delivery; basis = FMV, so an immediate sale has no gain."
+      },
+      {
+        "id": "b",
+        "text": "$18,000 capital gain",
+        "explanation": "Settlement is compensation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$0 until sale",
+        "explanation": "Income arises at delivery.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$18,000 ordinary and $18,000 gain",
+        "explanation": "Basis equals the income recognized.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "RSU income = FMV at delivery; basis = FMV, so an immediate sale has no gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc-09",
+    "pool": "practice",
+    "stem": "A §423 ESPP lets employees buy at 85% of FMV. Which is true at purchase?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The 15% discount is taxed as wages at purchase",
+        "explanation": "Not under a qualified §423 plan.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No income is recognized at purchase",
+        "explanation": "Correct. §421(a): no income at grant or purchase for a §423 plan; income is determined at sale."
+      },
+      {
+        "id": "c",
+        "text": "The employer deducts the discount at purchase",
+        "explanation": "No deduction for qualifying plans.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The discount is capital gain at purchase",
+        "explanation": "Nothing is recognized at purchase.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§421(a): no income at grant or purchase for a §423 plan; income is determined at sale.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-10",
+    "pool": "practice",
+    "stem": "An executive expects her startup's stock to rise sharply. She can receive restricted stock (FMV $1 now) or NQSOs. Which choice most likely minimizes total tax if the stock rises as expected?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Restricted stock with a §83(b) election",
+        "explanation": "Correct. The §83(b) election locks ordinary income at the low current value and turns growth into long-term capital gain."
+      },
+      {
+        "id": "b",
+        "text": "Restricted stock without an election",
+        "explanation": "All value at vesting becomes ordinary income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "NQSOs exercised at the end",
+        "explanation": "The whole spread is ordinary income at exercise.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It makes no difference",
+        "explanation": "Character and timing differ.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The §83(b) election locks ordinary income at the low current value and turns growth into long-term capital gain.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-11",
+    "pool": "practice",
+    "stem": "An employee exercises NQSOs and holds the shares 8 months, then sells below the exercise-date FMV. The loss is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A short-term capital loss",
+        "explanation": "Correct. Basis is FMV at exercise; the holding period starts at exercise."
+      },
+      {
+        "id": "b",
+        "text": "An ordinary loss reducing wages",
+        "explanation": "Wages already reported aren't reduced.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A long-term capital loss",
+        "explanation": "Held less than 1 year after exercise.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Disallowed",
+        "explanation": "Capital losses are allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Basis is FMV at exercise; the holding period starts at exercise.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "id": "tcp-tbs-u4-k1",
+  "section": "TCP",
+  "unitId": "tcp-u4",
+  "moduleIds": [
+    "tcp-partnership-operations"
+  ],
+  "pool": "practice",
+  "title": "Form 1065 and a partner's K-1 — Cedar Partners",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Cedar Partners is a calendar-year general partnership. Anika is a **40%** general partner. Compute the partnership's ordinary business income, her K-1 amounts, and her year-end basis.",
+  "exhibits": [
+    {
+      "title": "2025 partnership items",
+      "content": "| Item | Amount |\n|---|---:|\n| Sales | 1,200,000 |\n| Cost of goods sold | 500,000 |\n| Employee salaries | 200,000 |\n| Guaranteed payment to Anika | 80,000 |\n| Rent | 60,000 |\n| MACRS depreciation | 50,000 |\n| Business meals (50% deductible) | 6,000 |\n| §179 expense | 30,000 |\n| Charitable contributions | 10,000 |\n| Qualified dividends | 20,000 |\n| Municipal bond interest | 4,000 |\n| Long-term capital gain | 16,000 |\n| §1231 gain | 12,000 |"
+    },
+    {
+      "title": "Anika",
+      "content": "- Beginning outside basis: **$50,000**\n- Her share of partnership liabilities increased by **$10,000**\n- Cash distributions to Anika: **$40,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "obi",
+          "label": "Ordinary business income",
+          "answer": 307000,
+          "tolerance": 0,
+          "explanation": "1,200,000 − 500,000 − 200,000 − 80,000 − 60,000 − 50,000 − 3,000 (deductible meals) = **307,000**."
+        },
+        {
+          "id": "a_obi",
+          "label": "Anika's share of ordinary business income",
+          "answer": 122800,
+          "tolerance": 0,
+          "explanation": "40% × 307,000 = **122,800**."
+        },
+        {
+          "id": "a_ord",
+          "label": "Anika's total ordinary income from Cedar",
+          "answer": 202800,
+          "tolerance": 0,
+          "explanation": "80,000 guaranteed payment + 122,800 = **202,800**."
+        },
+        {
+          "id": "a_179",
+          "label": "Anika's share of §179 expense",
+          "answer": 12000,
+          "tolerance": 0,
+          "explanation": "40% × 30,000 = **12,000**."
+        },
+        {
+          "id": "a_end",
+          "label": "Anika's ending outside basis",
+          "answer": 146400,
+          "tolerance": 0,
+          "explanation": "50,000 + 10,000 liabilities + 122,800 + 8,000 dividends + 1,600 municipal + 6,400 LTCG + 4,800 §1231 − 40,000 distribution − 1,200 nondeductible meals − 12,000 §179 − 4,000 charity = **146,400**. The guaranteed payment doesn't affect basis."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Where is each item reported?",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Guaranteed payment",
+          "answer": "Separately stated on Schedule K",
+          "explanation": "Deducted in OBI and reported separately to the recipient."
+        },
+        {
+          "id": "d2",
+          "label": "§1231 gain",
+          "answer": "Separately stated on Schedule K",
+          "explanation": "Netted at the partner level."
+        },
+        {
+          "id": "d3",
+          "label": "MACRS depreciation",
+          "answer": "Ordinary business income",
+          "explanation": "A regular operating deduction."
+        },
+        {
+          "id": "d4",
+          "label": "Municipal bond interest",
+          "answer": "Separately stated on Schedule K",
+          "explanation": "Tax-exempt income increases basis."
+        }
+      ],
+      "options": [
+        "Ordinary business income",
+        "Separately stated on Schedule K"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "f",
+      "prompt": "Filing.",
+      "rows": [
+        {
+          "id": "f1",
+          "label": "Original due date of Cedar's 2025 Form 1065",
+          "options": [
+            "March 16, 2026",
+            "April 15, 2026",
+            "September 15, 2026"
+          ],
+          "answer": "March 16, 2026",
+          "explanation": "15th day of the 3rd month; March 15, 2026 is a Sunday."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "tcp-tbs-x2-partnership",
+  "section": "TCP",
+  "unitId": "tcp-u4",
+  "moduleIds": [
+    "tcp-partnership-formation",
+    "tcp-partnership-operations",
+    "tcp-partnership-distributions"
+  ],
+  "pool": "exam",
+  "title": "Forming and operating AB Partners",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Ana and Ben form AB Partners, a 50/50 general partnership, on January 1, 2025. Partnership liabilities are shared equally.",
+  "exhibits": [
+    {
+      "title": "Formation",
+      "content": "- Ana contributes a building (adjusted basis **$120,000**; FMV **$200,000**) subject to a **$60,000** mortgage that the partnership assumes.\n- Ben contributes **$140,000** cash."
+    },
+    {
+      "title": "2025 operations",
+      "content": "- Ordinary business income: **$80,000**\n- Tax-exempt interest: **$4,000**\n- The partnership paid the mortgage down to **$40,000** by December 31.\n- On December 31, AB distributed **$50,000** cash to Ana.\n- Ignore depreciation on the building."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "ag",
+          "label": "Ana's gain recognized at formation",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "Net liability relief = 60,000 − 30,000 = 30,000, less than her 120,000 basis: **0**."
+        },
+        {
+          "id": "ab",
+          "label": "Ana's initial outside basis",
+          "answer": 90000,
+          "tolerance": 0,
+          "explanation": "120,000 − 60,000 + 30,000 = **90,000**."
+        },
+        {
+          "id": "bb",
+          "label": "Ben's initial outside basis",
+          "answer": 170000,
+          "tolerance": 0,
+          "explanation": "140,000 + 30,000 = **170,000**."
+        },
+        {
+          "id": "pb",
+          "label": "Partnership's basis in the building",
+          "answer": 120000,
+          "tolerance": 0,
+          "explanation": "Carryover basis: **120,000**."
+        },
+        {
+          "id": "ae",
+          "label": "Ana's outside basis on December 31, 2025",
+          "answer": 72000,
+          "tolerance": 0,
+          "explanation": "90,000 + 40,000 OBI + 2,000 tax-exempt − 10,000 decrease in liability share − 50,000 cash = **72,000**."
+        },
+        {
+          "id": "sale",
+          "label": "If AB sold the building for $230,000 on December 31, Ana's share of the gain",
+          "answer": 95000,
+          "tolerance": 0,
+          "explanation": "Gain 110,000: 80,000 built-in gain to Ana under §704(c) + 50% of the 30,000 post-contribution gain = **95,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Questions.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Ana's holding period for her partnership interest",
+          "options": [
+            "Begins January 1, 2025",
+            "Includes her holding period for the building"
+          ],
+          "answer": "Includes her holding period for the building",
+          "explanation": "Tacks for a capital/§1231 asset."
+        },
+        {
+          "id": "d2",
+          "label": "Effect of the $50,000 distribution on Ana's taxable income",
+          "options": [
+            "$50,000 income",
+            "No income — it doesn't exceed basis"
+          ],
+          "answer": "No income — it doesn't exceed basis",
+          "explanation": "§731(a)."
+        },
+        {
+          "id": "d3",
+          "label": "AB's 2025 Form 1065 is due",
+          "options": [
+            "March 16, 2026",
+            "April 15, 2026"
+          ],
+          "answer": "March 16, 2026",
+          "explanation": "15th day of the 3rd month."
+        }
+      ]
+    }
+  ]
+}

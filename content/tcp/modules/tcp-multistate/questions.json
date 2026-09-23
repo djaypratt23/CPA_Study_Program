@@ -1,0 +1,447 @@
+[
+  {
+    "id": "tcp-ms-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company's only activity in a state is sending salespeople to take orders for machines that are approved and shipped from another state. Can the state impose its net income tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes — any activity creates nexus",
+        "explanation": "Federal law protects solicitation.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Yes, if sales exceed $100,000",
+        "explanation": "P.L. 86-272 overrides economic nexus for net income taxes.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No — P.L. 86-272 protects it",
+        "explanation": "Correct. Solicitation of orders for tangible personal property is protected from state net income taxes."
+      },
+      {
+        "id": "d",
+        "text": "Only if the salespeople live there",
+        "explanation": "Protected activity doesn't depend on residence.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Solicitation of orders for tangible personal property is protected from state net income taxes.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-chk1",
+    "pool": "lesson",
+    "stem": "Which activity **exceeds** P.L. 86-272 protection?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Salespeople taking orders that are approved out of state",
+        "explanation": "That's protected solicitation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Shipping goods to customers by common carrier",
+        "explanation": "Delivery by common carrier is protected.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Advertising in the state's media",
+        "explanation": "Advertising is protected.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Technicians installing and repairing products in the state",
+        "explanation": "Correct. Installation and repair services go beyond solicitation."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Installation and repair services go beyond solicitation.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-chk2",
+    "pool": "lesson",
+    "stem": "Nonbusiness income, such as rent from an investment building unrelated to operations, is generally:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Apportioned by formula",
+        "explanation": "Apportionment is for business income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Exempt from state tax",
+        "explanation": "It's taxed by the state it's allocated to.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Allocated to a single state",
+        "explanation": "Correct. Rents from real property are generally allocated to the state where the property is located."
+      },
+      {
+        "id": "d",
+        "text": "Split equally among all nexus states",
+        "explanation": "Not an allocation method.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Rents from real property are generally allocated to the state where the property is located.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-01",
+    "pool": "practice",
+    "stem": "A remote seller with no physical presence in State Y has $150,000 of sales to State Y customers. State Y's economic nexus threshold for sales tax is $100,000. What is the seller's obligation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "None — physical presence is required",
+        "explanation": "Wayfair eliminated that requirement.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Collect tax only on sales above $100,000",
+        "explanation": "Collection applies to taxable sales once nexus exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "File a State Y income tax return only",
+        "explanation": "The question is sales tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Register and collect State Y sales tax",
+        "explanation": "Correct. South Dakota v."
+      }
+    ],
+    "answer": "d",
+    "explanation": "South Dakota v. Wayfair allows economic nexus for sales tax.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-02",
+    "pool": "practice",
+    "stem": "Using equally weighted three factors: sales 20%, property 60%, payroll 40%. What is the apportionment percentage?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "40%",
+        "explanation": "Correct. (20 + 60 + 40) ÷ 3 = 40%."
+      },
+      {
+        "id": "b",
+        "text": "20%",
+        "explanation": "That's the single sales factor.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "35%",
+        "explanation": "That's double-weighted sales.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "60%",
+        "explanation": "That's the property factor alone.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "(20 + 60 + 40) ÷ 3 = 40%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ms-03",
+    "pool": "practice",
+    "stem": "Same factors (sales 20%, property 60%, payroll 40%) under a double-weighted sales formula. What is the apportionment percentage?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "35%",
+        "explanation": "Correct. (40 + 60 + 40) ÷ 4."
+      },
+      {
+        "id": "b",
+        "text": "40%",
+        "explanation": "That's equally weighted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "30%",
+        "explanation": "Weights sales three times.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "20%",
+        "explanation": "That's single sales.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "(2 × 20 + 60 + 40) ÷ 4 = 35%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ms-04",
+    "pool": "practice",
+    "stem": "Which is **not** protected by P.L. 86-272?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A manufacturer soliciting orders for furniture",
+        "explanation": "Soliciting orders for tangible goods is protected.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A retailer whose sales reps display samples",
+        "explanation": "Displaying samples is part of solicitation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A consulting firm whose employees visit clients in the state to perform services",
+        "explanation": "Correct. P.L. 86-272 covers only tangible personal property, not services."
+      },
+      {
+        "id": "d",
+        "text": "A distributor shipping goods from out of state",
+        "explanation": "Shipping from out of state is protected.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "P.L. 86-272 covers only tangible personal property, not services.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-05",
+    "pool": "practice",
+    "stem": "Under market-based sourcing, receipts from consulting services performed in State A for a client whose business is in State B are assigned to:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "State A",
+        "explanation": "That's cost-of-performance sourcing.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The company's headquarters state",
+        "explanation": "Headquarters doesn't control market-based sourcing.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Split equally",
+        "explanation": "There's no equal-split rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "State B",
+        "explanation": "Correct. Market-based sourcing assigns receipts to where the customer receives the benefit."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Market-based sourcing assigns receipts to where the customer receives the benefit.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-06",
+    "pool": "practice",
+    "stem": "A company's business income is $5,000,000 and its State M apportionment percentage is 12%. It also has $400,000 of nonbusiness rental income from property located in State M. What income does State M tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$600,000",
+        "explanation": "Omits the allocated rent.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$1,000,000",
+        "explanation": "Correct. 12% × 5,000,000 + 400,000."
+      },
+      {
+        "id": "c",
+        "text": "$648,000",
+        "explanation": "Apportions the rent.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$5,400,000",
+        "explanation": "Only State M's share of business income.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Business income is apportioned; nonbusiness rent is allocated to the property's state.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ms-07",
+    "pool": "practice",
+    "stem": "What does a throwback rule do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Moves sales into the destination state's numerator",
+        "explanation": "It moves them back to the origin state.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Adds sales to the origin state's numerator when the destination state can't tax the seller",
+        "explanation": "Correct. Throwback prevents 'nowhere income.'."
+      },
+      {
+        "id": "c",
+        "text": "Removes property located outside the state",
+        "explanation": "That concerns the property factor.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Eliminates intercompany sales",
+        "explanation": "That's combined reporting.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Throwback prevents 'nowhere income.'",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-08",
+    "pool": "practice",
+    "stem": "A state that moves from a three-factor formula to a single sales factor generally benefits which in-state company?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "One with most of its property and payroll in the state and sales nationwide",
+        "explanation": "Correct. Sales-only apportionment lowers the share for in-state manufacturers selling out of state."
+      },
+      {
+        "id": "b",
+        "text": "One with all its sales in the state and property elsewhere",
+        "explanation": "Its share would rise.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "One with no in-state activity",
+        "explanation": "It has no nexus.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "It has no effect on any company",
+        "explanation": "Weights change the result.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Sales-only apportionment lowers the share for in-state manufacturers selling out of state.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-09",
+    "pool": "practice",
+    "stem": "Which state tax is **not** limited by P.L. 86-272?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A corporate net income tax",
+        "explanation": "That's exactly what it limits.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A gross receipts tax",
+        "explanation": "Correct. P.L. 86-272 applies only to taxes on or measured by net income."
+      },
+      {
+        "id": "c",
+        "text": "A franchise tax measured by net income",
+        "explanation": "Treated like a net income tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A personal income tax on the business's net income",
+        "explanation": "Net income taxes are covered.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "P.L. 86-272 applies only to taxes on or measured by net income.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-10",
+    "pool": "practice",
+    "stem": "Parent and three subsidiaries operate a unitary business in several states. Under combined reporting, how is income apportioned?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Each entity apportions only its own income",
+        "explanation": "That's separate reporting.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The group's combined income is apportioned using the group's combined factors",
+        "explanation": "Correct. Combined reporting treats the unitary group as one business for apportionment."
+      },
+      {
+        "id": "c",
+        "text": "Only the parent files",
+        "explanation": "Combined reporting covers the unitary group.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Intercompany sales are included in the sales factor",
+        "explanation": "They're eliminated.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Combined reporting treats the unitary group as one business for apportionment.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

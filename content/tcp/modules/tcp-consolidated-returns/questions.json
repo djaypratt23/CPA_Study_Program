@@ -1,0 +1,446 @@
+[
+  {
+    "id": "tcp-cr-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: what is the main tax advantage of filing a consolidated return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A lower tax rate",
+        "explanation": "The 21% rate is the same.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Exemption from estimated tax",
+        "explanation": "The group still pays estimates.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Losses of one member can offset income of another",
+        "explanation": "Correct. Offsetting members' income and losses is the main benefit."
+      },
+      {
+        "id": "d",
+        "text": "No need to file Form 1120",
+        "explanation": "The group files a consolidated 1120.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Offsetting members' income and losses is the main benefit.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-chk1",
+    "pool": "lesson",
+    "stem": "P owns 70% of S1's voting stock and value. P also owns 50% of S2, and S1 owns 40% of S2. Which corporations are in P's affiliated group?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "P and S2 only",
+        "explanation": "P doesn't own 80% of S1.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "P and S1 only",
+        "explanation": "S1 falls short of 80%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "P, S1, and S2",
+        "explanation": "S1 is only 70% owned.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "P only — neither sub qualifies",
+        "explanation": "Correct. S1 fails the 80% test, so S1's 40% of S2 doesn't count toward members' ownership; P owns only 50% of S2."
+      }
+    ],
+    "answer": "d",
+    "explanation": "S1 fails the 80% test, so S1's 40% of S2 doesn't count toward members' ownership; P owns only 50% of S2.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-chk2",
+    "pool": "lesson",
+    "stem": "In a consolidated group, a 100%-owned subsidiary pays a $500,000 dividend to its parent. What is the effect on consolidated taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect — the dividend is eliminated",
+        "explanation": "Correct. Intercompany distributions are excluded from consolidated income."
+      },
+      {
+        "id": "b",
+        "text": "$500,000 of income with a 100% DRD",
+        "explanation": "Intercompany dividends are eliminated rather than deducted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$500,000 of income",
+        "explanation": "Intercompany dividends aren't taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$250,000 of income",
+        "explanation": "Not a 50% DRD situation.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Intercompany distributions are excluded from consolidated income.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-01",
+    "pool": "practice",
+    "stem": "Which corporation can be included in a consolidated group?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A foreign subsidiary 100% owned by a U.S. parent",
+        "explanation": "Foreign corporations aren't includible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "An S corporation 100% owned by the parent",
+        "explanation": "S corporations aren't includible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A domestic C corporation 85% owned by the parent (vote and value)",
+        "explanation": "Correct. Includible corporations meeting the 80% vote-and-value test join the group."
+      },
+      {
+        "id": "d",
+        "text": "A tax-exempt organization",
+        "explanation": "Exempt organizations aren't includible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Includible corporations meeting the 80% vote-and-value test join the group.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-02",
+    "pool": "practice",
+    "stem": "Which forms are filed with the first consolidated return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Form 851 and Form 1122",
+        "explanation": "Correct. Form 851 lists affiliations; Form 1122 is each subsidiary's consent."
+      },
+      {
+        "id": "b",
+        "text": "Form 2553 and Form 1120-S",
+        "explanation": "Those are for S corporations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Form 8832 and Form 1065",
+        "explanation": "Entity classification and partnership return.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Form 4562 only",
+        "explanation": "Form 4562 is for depreciation.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Form 851 lists affiliations; Form 1122 is each subsidiary's consent.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-03",
+    "pool": "practice",
+    "stem": "Parent has taxable income of $900,000. Sub A (100% owned) has a $300,000 loss; Sub B (90% owned) has taxable income of $100,000. What is consolidated taxable income (no intercompany items)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000,000",
+        "explanation": "Ignores Sub A's loss.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$600,000",
+        "explanation": "Omits Sub B's income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$690,000",
+        "explanation": "Takes only 90% of Sub B.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$700,000",
+        "explanation": "Correct. 900,000 − 300,000 + 100,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Members' separate taxable incomes are combined in full, regardless of minority interests.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr-04",
+    "pool": "practice",
+    "stem": "Sub sells inventory to Parent at a $40,000 profit in 2025. Parent still holds the inventory at year-end. How much of the profit is in 2025 consolidated taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Correct. Intercompany gain is taken into account when the item leaves the group."
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Intercompany profit is deferred.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "There's no partial recognition.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$40,000 loss",
+        "explanation": "It's a profit, deferred.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Intercompany gain is taken into account when the item leaves the group.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-05",
+    "pool": "practice",
+    "stem": "What is a disadvantage of filing consolidated returns?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Intercompany dividends become taxable",
+        "explanation": "They are eliminated.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Members' losses can't offset other members' income",
+        "explanation": "That's the main advantage.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Losses on intercompany sales are deferred",
+        "explanation": "Correct. Deferral works both ways: intercompany losses are deferred too, and the election is binding."
+      },
+      {
+        "id": "d",
+        "text": "Each member must pay separate estimated tax",
+        "explanation": "The group pays estimates on a consolidated basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Deferral works both ways: intercompany losses are deferred too, and the election is binding.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-06",
+    "pool": "practice",
+    "stem": "A subsidiary uses a June 30 year-end; the parent uses December 31. If they file a consolidated return, which year-end applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Each keeps its own year",
+        "explanation": "Members must use the parent's year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Whichever produces less tax",
+        "explanation": "The year isn't elective.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "June 30 for all members",
+        "explanation": "The parent's year controls.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "December 31 for all members",
+        "explanation": "Correct. Members use the parent's year."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Reg. §1.1502-76: each member adopts the common parent's tax year.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-07",
+    "pool": "practice",
+    "stem": "A corporation joins a consolidated group with a $500,000 NOL from before it joined. What limits the group's use of this NOL?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing — group NOLs are fully shareable",
+        "explanation": "Pre-affiliation losses are restricted.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "The separate return limitation year (SRLY) rules",
+        "explanation": "Correct. SRLY rules (and §382 after an ownership change) limit use of losses the member brought in."
+      },
+      {
+        "id": "c",
+        "text": "The at-risk rules",
+        "explanation": "Those apply to individuals and closely held corporations for activities.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "The NOL is forfeited",
+        "explanation": "It can be used, subject to limits.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "SRLY rules (and §382 after an ownership change) limit use of losses the member brought in.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-08",
+    "pool": "practice",
+    "stem": "Two brother-sister corporations are each 100% owned by the same individual. Can they file a consolidated return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, because they are commonly controlled",
+        "explanation": "A common corporate parent is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No, because there is no common parent corporation",
+        "explanation": "Correct. An affiliated group requires an includible corporation as the common parent."
+      },
+      {
+        "id": "c",
+        "text": "Yes, if they elect with Form 1122",
+        "explanation": "The group still needs a corporate parent.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only if both are S corporations",
+        "explanation": "S corporations can't consolidate.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "An affiliated group requires an includible corporation as the common parent.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-09",
+    "pool": "practice",
+    "stem": "Parent (100% owner) sells equipment with a basis of $70,000 to Sub for $50,000. Sub uses the equipment in its business. How is Parent's $20,000 loss treated in the consolidated return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deducted immediately",
+        "explanation": "Intercompany losses are deferred.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Deferred and taken into account as Sub depreciates or sells the equipment",
+        "explanation": "Correct. Under the matching rule, the deferred loss is taken into account as the buyer's corresponding items occur."
+      },
+      {
+        "id": "c",
+        "text": "Permanently disallowed",
+        "explanation": "It's deferred, not disallowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Treated as a capital loss",
+        "explanation": "Character isn't the issue.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Under the matching rule, the deferred loss is taken into account as the buyer's corresponding items occur.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-10",
+    "pool": "practice",
+    "stem": "A consolidated group's combined taxable income before charitable contributions is $2,000,000. The members gave $250,000 to charity in total. What is the consolidated charitable deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$250,000",
+        "explanation": "Limited to 10% of consolidated TI.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "Correct. The 10% limit applies to consolidated taxable income; $50,000 carries forward."
+      },
+      {
+        "id": "c",
+        "text": "$25,000",
+        "explanation": "Applies 10% to the contributions instead of taxable income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Contributions are deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The 10% limit applies to consolidated taxable income; $50,000 carries forward.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]

@@ -1,0 +1,125 @@
+{
+  "id": "tcp-tbs-u2-gift-709",
+  "section": "TCP",
+  "unitId": "tcp-u2",
+  "moduleIds": [
+    "tcp-gift-tax"
+  ],
+  "pool": "practice",
+  "title": "Form 709 — the Ortiz family",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Luis and Ana Ortiz, U.S. citizens, made the gifts below in 2025 and elect gift splitting. Compute taxable gifts and answer the compliance questions.",
+  "exhibits": [
+    {
+      "title": "Gifts by Luis",
+      "content": "| Gift | Amount |\n|---|---:|\n| Cash to son | 60,000 |\n| Stock to daughter (Luis's basis $40,000) | 30,000 |\n| Tuition paid directly to granddaughter's university | 25,000 |\n| Cash to Ana | 500,000 |\n| Cash to their church | 100,000 |"
+    },
+    {
+      "title": "Gifts by Ana",
+      "content": "| Gift | Amount |\n|---|---:|\n| Cash to niece | 10,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute (2025 annual exclusion $19,000).",
+      "rows": [
+        {
+          "id": "son",
+          "label": "Taxable gift to the son reported by EACH spouse",
+          "answer": 11000,
+          "tolerance": 0,
+          "explanation": "Split: 30,000 each − 19,000 = **11,000**."
+        },
+        {
+          "id": "dau",
+          "label": "Taxable gift to the daughter reported by each spouse",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "15,000 each is under the exclusion: **0**."
+        },
+        {
+          "id": "ch",
+          "label": "Taxable gift to the church reported by each spouse",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "50,000 each − 19,000 exclusion − 31,000 charitable deduction = **0**."
+        },
+        {
+          "id": "lt",
+          "label": "Luis's total taxable gifts",
+          "answer": 11000,
+          "tolerance": 0,
+          "explanation": "Son 11,000; tuition excluded; gift to Ana fully covered by the exclusion and marital deduction: **11,000**."
+        },
+        {
+          "id": "at",
+          "label": "Ana's total taxable gifts",
+          "answer": 11000,
+          "tolerance": 0,
+          "explanation": "Her half of the son's gift (11,000); niece 5,000 and daughter 15,000 are under the exclusion: **11,000**."
+        },
+        {
+          "id": "loss",
+          "label": "Daughter's loss if she sells the stock for $25,000",
+          "answer": 5000,
+          "tolerance": 0,
+          "explanation": "Loss basis = FMV at gift (30,000): 30,000 − 25,000 = **5,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Compliance.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Who must file Form 709?",
+          "options": [
+            "Luis only",
+            "Both Luis and Ana",
+            "Neither"
+          ],
+          "answer": "Both Luis and Ana",
+          "explanation": "Each has taxable gifts after splitting."
+        },
+        {
+          "id": "d2",
+          "label": "Due date without extension",
+          "options": [
+            "March 16, 2026",
+            "April 15, 2026",
+            "October 15, 2026"
+          ],
+          "answer": "April 15, 2026",
+          "explanation": "Form 709 is due April 15 of the following year."
+        },
+        {
+          "id": "d3",
+          "label": "Gift tax payable (assuming no prior gifts)",
+          "options": [
+            "$0",
+            "$4,400",
+            "$8,800"
+          ],
+          "answer": "$0",
+          "explanation": "The unified credit covers the taxable gifts."
+        },
+        {
+          "id": "d4",
+          "label": "Daughter's gain or loss if she sells the stock for $35,000",
+          "options": [
+            "$5,000 loss",
+            "No gain or loss",
+            "$5,000 gain"
+          ],
+          "answer": "No gain or loss",
+          "explanation": "Between FMV (30,000) and donor basis (40,000)."
+        }
+      ]
+    }
+  ]
+}

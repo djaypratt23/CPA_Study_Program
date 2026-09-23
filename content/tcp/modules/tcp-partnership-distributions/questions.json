@@ -1,0 +1,452 @@
+[
+  {
+    "id": "tcp-pd-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a partner with a $30,000 outside basis receives a current distribution of $12,000 cash. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000 gain",
+        "explanation": "Cash doesn't exceed basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$12,000 ordinary income",
+        "explanation": "Distributions aren't income here.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "No gain; outside basis becomes $18,000",
+        "explanation": "Correct. §731: gain only when cash exceeds basis; the distribution reduces basis."
+      },
+      {
+        "id": "d",
+        "text": "$18,000 loss",
+        "explanation": "No loss on a current distribution.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§731: gain only when cash exceeds basis; the distribution reduces basis.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pd-chk1",
+    "pool": "lesson",
+    "stem": "A partner's outside basis is $25,000. She receives a current distribution of $30,000 cash. What is her gain and ending basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No gain; basis $(5,000)",
+        "explanation": "Basis can't be negative.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,000 ordinary income; basis $0",
+        "explanation": "The gain is capital (absent §751 shifts).",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$30,000 gain; basis $25,000",
+        "explanation": "Only the excess is gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$5,000 capital gain; basis $0",
+        "explanation": "Correct. Cash in excess of basis is gain from the sale of the interest — generally capital."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Cash in excess of basis is gain from the sale of the interest — generally capital.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-chk2",
+    "pool": "lesson",
+    "stem": "In complete liquidation, a partner with $40,000 of outside basis receives only $25,000 cash. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No loss; basis disappears",
+        "explanation": "A loss is recognized when only cash is received.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$15,000 ordinary loss",
+        "explanation": "The loss is capital.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$15,000 capital loss",
+        "explanation": "Correct. §731(a)(2): a loss is allowed when only money, receivables, and inventory are received."
+      },
+      {
+        "id": "d",
+        "text": "$25,000 gain",
+        "explanation": "Cash is less than basis.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§731(a)(2): a loss is allowed when only money, receivables, and inventory are received.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-01",
+    "pool": "practice",
+    "stem": "A partner (outside basis $60,000) receives a current distribution of $15,000 cash and inventory with a partnership basis of $20,000 (FMV $30,000). What is his basis in the inventory and his ending outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000; $25,000",
+        "explanation": "Correct. 60,000 − 15,000 − 20,000 = 25,000 remaining outside basis."
+      },
+      {
+        "id": "b",
+        "text": "$30,000; $15,000",
+        "explanation": "Inventory takes carryover basis, not FMV.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$45,000; $0",
+        "explanation": "Current distributions don't step up property.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000; $40,000",
+        "explanation": "Omits the cash.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "60,000 − 15,000 − 20,000 = 25,000 remaining outside basis.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-02",
+    "pool": "practice",
+    "stem": "A partner with outside basis of $10,000 receives a current distribution of land (partnership basis $25,000; FMV $40,000). What is the land's basis to the partner?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Limited to outside basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The land takes the remaining basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "FMV isn't used.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "Correct. §732(a)(2): carryover basis limited to the partner's remaining outside basis; no gain recognized."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§732(a)(2): carryover basis limited to the partner's remaining outside basis; no gain recognized.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-03",
+    "pool": "practice",
+    "stem": "In complete liquidation, a partner with outside basis of $50,000 receives $10,000 cash and a building with a partnership basis of $20,000. What is the building's basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Correct. 50,000 − 10,000."
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "In a liquidation, other property absorbs remaining basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Subtracts the building's partnership basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Cash reduces basis first.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Remaining basis after cash (40,000) is assigned to the building; no loss is recognized.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-04",
+    "pool": "practice",
+    "stem": "Which asset is a §751 hot asset?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Land held for investment",
+        "explanation": "Investment land is a capital asset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Goodwill",
+        "explanation": "Goodwill isn't a hot asset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Accounts receivable of a cash-basis partnership",
+        "explanation": "Correct. Unrealized receivables (including zero-basis receivables and depreciation recapture) and inventory are hot assets."
+      },
+      {
+        "id": "d",
+        "text": "Cash",
+        "explanation": "Cash isn't a hot asset.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Unrealized receivables (including zero-basis receivables and depreciation recapture) and inventory are hot assets.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pd-05",
+    "pool": "practice",
+    "stem": "Fay sells her 25% interest for $80,000 cash; the buyer also assumes her $20,000 share of liabilities. Her outside basis (including the liabilities) is $60,000. Her share of the partnership's cash-basis receivables is FMV $12,000, basis $0. What is her ordinary income and capital gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000 ordinary; $28,000 capital",
+        "explanation": "Correct. Total gain 100,000 − 60,000 = 40,000."
+      },
+      {
+        "id": "b",
+        "text": "$0 ordinary; $40,000 capital",
+        "explanation": "Hot assets produce ordinary income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$12,000 ordinary; $8,000 capital",
+        "explanation": "Omits the liability relief from the amount realized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$40,000 ordinary",
+        "explanation": "Only the hot-asset portion is ordinary.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Amount realized includes liabilities; §751 carves out 12,000 ordinary; the remaining 28,000 is capital.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-06",
+    "pool": "practice",
+    "stem": "When is a §743(b) basis adjustment mandatory even without a §754 election?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Whenever an interest is sold at a gain",
+        "explanation": "It's optional for gains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Never",
+        "explanation": "It can be mandatory.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "When a partner dies",
+        "explanation": "Only with an election or substantial built-in loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "When the partnership has a substantial built-in loss (over $250,000) at the time of transfer",
+        "explanation": "Correct. §743(d): substantial built-in loss requires the adjustment."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§743(d): substantial built-in loss requires the adjustment.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pd-07",
+    "pool": "practice",
+    "stem": "A buyer pays $300,000 for a 1/3 interest. The partnership's assets have an inside basis of $600,000 and FMV of $900,000; it has a §754 election. What is the buyer's §743(b) adjustment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000",
+        "explanation": "That's the buyer's price.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Correct. 300,000 − 1/3 × 600,000."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The election allows an adjustment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$200,000",
+        "explanation": "Wrong share of the inside basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Adjustment = outside basis (price) − share of inside basis = 300,000 − 200,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-08",
+    "pool": "practice",
+    "stem": "A partner sells his interest on June 30. His share of partnership income from January 1 to June 30 is $15,000. How does this affect the sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's ignored; income is allocated to the buyer",
+        "explanation": "The seller's year closes on the sale date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It increases his outside basis before computing gain",
+        "explanation": "Correct. §706(c)(2): the partnership year closes for the seller; his share of income increases basis and is reported by him."
+      },
+      {
+        "id": "c",
+        "text": "It's added to the amount realized",
+        "explanation": "It increases basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It's capital gain",
+        "explanation": "His share of operating income is ordinary.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§706(c)(2): the partnership year closes for the seller; his share of income increases basis and is reported by him.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pd-09",
+    "pool": "practice",
+    "stem": "A partner receives a current distribution of marketable securities (FMV $30,000) and has an outside basis of $20,000. Absent an exception, what is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No gain; basis in securities $20,000",
+        "explanation": "Marketable securities are treated as money.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$10,000 gain",
+        "explanation": "Correct. §731(c): marketable securities are generally treated as money at FMV."
+      },
+      {
+        "id": "c",
+        "text": "$30,000 gain",
+        "explanation": "Only the excess over basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$10,000 loss",
+        "explanation": "A distribution in excess of basis is gain.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§731(c): marketable securities are generally treated as money at FMV.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-10",
+    "pool": "practice",
+    "stem": "A partner receives inventory (basis $8,000) in a current distribution and sells it 2 years later for $12,000. What is the character of the $4,000 gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Capital, because she held it more than 1 year",
+        "explanation": "Distributed inventory is ordinary for 5 years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Ordinary income",
+        "explanation": "Correct. §735(a)(2): distributed inventory keeps its ordinary character if sold within 5 years."
+      },
+      {
+        "id": "c",
+        "text": "§1231 gain",
+        "explanation": "Inventory isn't §1231 property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Not taxable",
+        "explanation": "The sale is taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§735(a)(2): distributed inventory keeps its ordinary character if sold within 5 years.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

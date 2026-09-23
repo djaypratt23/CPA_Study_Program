@@ -1,0 +1,448 @@
+[
+  {
+    "id": "tcp-sc2-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which shareholder would make a corporation ineligible for S status?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A U.S.-citizen individual",
+        "explanation": "Individuals who are citizens are eligible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "An estate",
+        "explanation": "Estates are eligible shareholders.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A partnership",
+        "explanation": "Correct. Partnerships and corporations can't be S corporation shareholders."
+      },
+      {
+        "id": "d",
+        "text": "A grantor trust",
+        "explanation": "Grantor trusts are eligible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Partnerships and corporations can't be S corporation shareholders.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-chk1",
+    "pool": "lesson",
+    "stem": "A shareholder has stock basis of $10,000 and has loaned the S corporation $8,000. His share of the loss is $(25,000). How much can he deduct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Debt basis also absorbs losses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$8,000",
+        "explanation": "Stock basis absorbs losses first.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$25,000",
+        "explanation": "Limited to stock plus debt basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$18,000",
+        "explanation": "Correct. Losses reduce stock basis, then debt basis; $7,000 is suspended."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Losses reduce stock basis, then debt basis; $7,000 is suspended.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc2-chk2",
+    "pool": "lesson",
+    "stem": "An S corporation with accumulated E&P distributes more than its AAA. The portion from accumulated E&P is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A tax-free return of basis",
+        "explanation": "E&P distributions are dividends.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Capital gain",
+        "explanation": "Capital gain arises only after basis is exhausted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A dividend",
+        "explanation": "Correct. §1368(c): AAA first, then accumulated E&P as a dividend."
+      },
+      {
+        "id": "d",
+        "text": "Ordinary income subject to SE tax",
+        "explanation": "Dividends aren't SE income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§1368(c): AAA first, then accumulated E&P as a dividend.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-01",
+    "pool": "practice",
+    "stem": "A calendar-year corporation wants S status for 2025. By what date must Form 2553 be filed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "January 1, 2025",
+        "explanation": "It can be filed later.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "December 31, 2025",
+        "explanation": "That would be effective for 2026.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "April 15, 2025",
+        "explanation": "Too late for 2025.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "March 15, 2025",
+        "explanation": "Correct. Within 2 months and 15 days after the start of the tax year."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Within 2 months and 15 days after the start of the tax year.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-02",
+    "pool": "practice",
+    "stem": "Which feature violates the one-class-of-stock requirement?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Shares with different rights to liquidation proceeds",
+        "explanation": "Correct. All shares must have identical rights to distribution and liquidation proceeds."
+      },
+      {
+        "id": "b",
+        "text": "Voting and nonvoting common shares",
+        "explanation": "Voting differences are allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A buy-sell agreement at book value",
+        "explanation": "Ordinary buy-sell agreements are disregarded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Straight debt owed to a shareholder",
+        "explanation": "Straight debt is a safe harbor.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "All shares must have identical rights to distribution and liquidation proceeds.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-03",
+    "pool": "practice",
+    "stem": "An S corporation shareholder's beginning stock basis is $40,000. Share of ordinary income $25,000; tax-exempt income $3,000; nondeductible expenses $1,000; distributions $30,000. What is ending stock basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$37,000",
+        "explanation": "Correct. 40,000 + 25,000 + 3,000 − 30,000 − 1,000."
+      },
+      {
+        "id": "b",
+        "text": "$34,000",
+        "explanation": "Omits tax-exempt income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$38,000",
+        "explanation": "Omits nondeductible expenses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$67,000",
+        "explanation": "Omits the distribution.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Increase for all income (including tax-exempt), then decrease for distributions and nondeductible expenses.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc2-04",
+    "pool": "practice",
+    "stem": "A shareholder personally guarantees a $100,000 bank loan to her S corporation. How does the guarantee affect her basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Increases debt basis by $100,000",
+        "explanation": "Guarantees don't create basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Increases stock basis by $100,000",
+        "explanation": "Only actual investment counts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No effect unless she pays on the guarantee",
+        "explanation": "Correct. Debt basis arises only from loans the shareholder makes directly to the corporation."
+      },
+      {
+        "id": "d",
+        "text": "Increases basis by her ownership share",
+        "explanation": "Unlike partnerships, S corporation debt isn't shared.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Debt basis arises only from loans the shareholder makes directly to the corporation.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-05",
+    "pool": "practice",
+    "stem": "A C corporation converted to S status on January 1, 2023, when an asset's FMV was $100,000 and basis $40,000. In 2025 it sells the asset for $120,000. What gain is subject to the built-in gains tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Limited to built-in gain at conversion.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The sale is within 5 years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "That's post-conversion appreciation.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "Correct. Recognized built-in gain = FMV at conversion − basis = 60,000; taxed at 21%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Recognized built-in gain = FMV at conversion − basis = 60,000; taxed at 21%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc2-06",
+    "pool": "practice",
+    "stem": "When does an S election terminate because of excess passive investment income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In the first year passive income exceeds 25% of gross receipts",
+        "explanation": "It takes 3 consecutive years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "After 3 consecutive years of excess passive income while having accumulated C-corporation E&P",
+        "explanation": "Correct. §1362(d)(3): 3 consecutive years with E&P and passive investment income over 25% of gross receipts."
+      },
+      {
+        "id": "c",
+        "text": "Whenever passive income exceeds 50%",
+        "explanation": "The threshold is 25% for 3 years with E&P.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Never — S corporations can earn any type of income",
+        "explanation": "Termination can occur.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1362(d)(3): 3 consecutive years with E&P and passive investment income over 25% of gross receipts.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-07",
+    "pool": "practice",
+    "stem": "Shareholders owning 60% of the shares consent to revoke the S election on February 1, 2025 without specifying a date. When is the revocation effective?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "February 1, 2025",
+        "explanation": "A revocation made by the 15th day of the 3rd month is retroactive to the year's start.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "January 1, 2025",
+        "explanation": "Correct. A revocation made on or before the 15th day of the 3rd month is effective for the entire current year."
+      },
+      {
+        "id": "c",
+        "text": "January 1, 2026",
+        "explanation": "Only if filed after March 15.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It isn't effective — unanimous consent is required",
+        "explanation": "More than 50% is enough.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A revocation made on or before the 15th day of the 3rd month is effective for the entire current year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-08",
+    "pool": "practice",
+    "stem": "Two owners split S corporation shares 50/50 until one sells half her shares to a new shareholder on July 1 (mid-year). How is the year's income allocated (no election)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Per share, per day",
+        "explanation": "Correct. §1377(a): per-share, per-day allocation unless the closing-of-the-books election is made."
+      },
+      {
+        "id": "b",
+        "text": "50/50 because that was the ownership on January 1",
+        "explanation": "Ownership changes are prorated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Based on ownership on December 31",
+        "explanation": "Year-end ownership isn't the default rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Any way the shareholders agree",
+        "explanation": "S corporations can't make special allocations.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§1377(a): per-share, per-day allocation unless the closing-of-the-books election is made.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-09",
+    "pool": "practice",
+    "stem": "An S corporation shareholder-employee takes no salary and $200,000 of distributions from a profitable business. What is the main risk?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The distributions are taxed as dividends",
+        "explanation": "Without E&P they aren't dividends; the real risk is recharacterization.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The IRS may recharacterize part as wages subject to payroll tax",
+        "explanation": "Correct. Shareholder-employees must be paid reasonable compensation."
+      },
+      {
+        "id": "c",
+        "text": "The S election terminates",
+        "explanation": "Salary levels don't affect eligibility.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The built-in gains tax applies",
+        "explanation": "BIG tax relates to converted C corporation assets.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Shareholder-employees must be paid reasonable compensation.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-10",
+    "pool": "practice",
+    "stem": "An S corporation that was never a C corporation distributes $70,000 to its sole shareholder, whose stock basis is $50,000. What is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$70,000 dividend",
+        "explanation": "No E&P means no dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$20,000 capital gain",
+        "explanation": "Correct. Without E&P: tax-free up to basis, excess is gain from sale of stock."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Distributions above basis are taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000 ordinary income",
+        "explanation": "The excess is capital gain.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Without E&P: tax-free up to basis, excess is gain from sale of stock.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]

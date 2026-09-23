@@ -1,0 +1,117 @@
+{
+  "id": "tcp-tbs-u7-form4797",
+  "section": "TCP",
+  "unitId": "tcp-u7",
+  "moduleIds": [
+    "tcp-asset-dispositions"
+  ],
+  "pool": "practice",
+  "title": "Form 4797 — Grant's business asset sales",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Grant, an individual, sold the assets below in 2025. He had a **$40,000** net §1231 loss in 2022 and no §1231 gains since. Enter losses as negative numbers.",
+  "exhibits": [
+    {
+      "title": "2025 sales",
+      "content": "| Asset | Held | Cost | Depreciation | Sale price |\n|---|---|---:|---:|---:|\n| Equipment | 4 years | 120,000 | 90,000 | 70,000 |\n| Rental building (straight-line) | 9 years | 600,000 | 150,000 | 700,000 |\n| Business land | 6 years | 200,000 | — | 170,000 |\n| Machine | 10 months | 50,000 | — | 45,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "r1245",
+          "label": "§1245 ordinary income on the equipment",
+          "answer": 40000,
+          "tolerance": 0,
+          "explanation": "Gain 70,000 − 30,000 = 40,000, less than 90,000 of depreciation: all **40,000** is ordinary."
+        },
+        {
+          "id": "bg",
+          "label": "Gain on the building",
+          "answer": 250000,
+          "tolerance": 0,
+          "explanation": "700,000 − 450,000 = **250,000** (§1231)."
+        },
+        {
+          "id": "u1250",
+          "label": "Unrecaptured §1250 gain before the lookback",
+          "answer": 150000,
+          "tolerance": 0,
+          "explanation": "Straight-line depreciation portion: **150,000**."
+        },
+        {
+          "id": "net",
+          "label": "Net §1231 gain",
+          "answer": 220000,
+          "tolerance": 0,
+          "explanation": "250,000 − 30,000 land loss = **220,000**."
+        },
+        {
+          "id": "lb",
+          "label": "Net §1231 gain treated as ordinary under the lookback",
+          "answer": 40000,
+          "tolerance": 0,
+          "explanation": "Prior nonrecaptured loss: **40,000**."
+        },
+        {
+          "id": "ltcg",
+          "label": "Net §1231 gain treated as long-term capital gain",
+          "answer": 180000,
+          "tolerance": 0,
+          "explanation": "220,000 − 40,000 = **180,000**."
+        },
+        {
+          "id": "st",
+          "label": "Gain or loss on the machine",
+          "answer": -5000,
+          "tolerance": 0,
+          "explanation": "45,000 − 50,000 = **(5,000)**, an ordinary loss (held 1 year or less)."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Characterize.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "The land loss",
+          "options": [
+            "Capital loss",
+            "§1231 loss",
+            "Ordinary loss outside §1231"
+          ],
+          "answer": "§1231 loss",
+          "explanation": "Business real property held more than 1 year."
+        },
+        {
+          "id": "d2",
+          "label": "Maximum rate on unrecaptured §1250 gain",
+          "options": [
+            "15%",
+            "20%",
+            "25%"
+          ],
+          "answer": "25%",
+          "explanation": "§1(h)(1)(E)."
+        },
+        {
+          "id": "d3",
+          "label": "If a corporation sold the building, §291 ordinary income would be",
+          "options": [
+            "$0",
+            "$30,000",
+            "$50,000"
+          ],
+          "answer": "$30,000",
+          "explanation": "20% × lesser of 250,000 or 150,000."
+        }
+      ]
+    }
+  ]
+}

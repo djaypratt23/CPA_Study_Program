@@ -1,0 +1,450 @@
+[
+  {
+    "id": "tcp-dt-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: in a like-kind exchange of real property with no boot, what is the basis of the property received?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Its fair market value",
+        "explanation": "That would ignore the deferred gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The average of the two FMVs",
+        "explanation": "No averaging rule exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Zero",
+        "explanation": "Basis carries over.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The basis of the property given up",
+        "explanation": "Correct. Substituted basis preserves the deferred gain."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Substituted basis preserves the deferred gain.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-dt-chk1",
+    "pool": "lesson",
+    "stem": "Land (basis $40,000) is sold for $200,000: $50,000 down and $150,000 next year. No liabilities or recapture. How much gain is recognized in the year of sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$160,000",
+        "explanation": "The installment method defers gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Only the gross profit share of the payment.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Correct. 80% × 50,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Payment was received.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Gross profit % = 160,000 ÷ 200,000 = 80%; 80% × 50,000 = 40,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-dt-chk2",
+    "pool": "lesson",
+    "stem": "Which exchange qualifies under §1031 in 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A delivery truck for another truck",
+        "explanation": "Personal property no longer qualifies.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Stock for stock",
+        "explanation": "Securities never qualified.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A developer's lots held for sale for a warehouse",
+        "explanation": "Dealer property doesn't qualify.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Farmland held for investment for an apartment building held for rental",
+        "explanation": "Correct. Real property held for business or investment is like-kind to other such real property."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Real property held for business or investment is like-kind to other such real property.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-dt-01",
+    "pool": "practice",
+    "stem": "A property (basis $120,000) is sold for $300,000: the buyer assumes a $60,000 mortgage and pays the rest over 5 years, starting next year. What is the contract price?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000",
+        "explanation": "Liabilities assumed are subtracted.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$180,000",
+        "explanation": "That's the gross profit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$240,000",
+        "explanation": "Correct. 300,000 − 60,000."
+      },
+      {
+        "id": "d",
+        "text": "$120,000",
+        "explanation": "That's the seller's basis.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Contract price = selling price − liabilities assumed (not exceeding basis).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-dt-02",
+    "pool": "practice",
+    "stem": "Using the facts above (gain $180,000; contract price $240,000), how much gain is recognized when a $48,000 payment is received?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$36,000",
+        "explanation": "Correct. 75% × 48,000."
+      },
+      {
+        "id": "b",
+        "text": "$48,000",
+        "explanation": "Only the gross profit share.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$28,800",
+        "explanation": "Uses 60% (gain ÷ selling price).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$180,000",
+        "explanation": "The installment method defers gain.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gross profit % = 180,000 ÷ 240,000 = 75%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-dt-03",
+    "pool": "practice",
+    "stem": "Which sale can use the installment method?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A retailer's sale of inventory on credit",
+        "explanation": "Inventory is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Sale of publicly traded stock",
+        "explanation": "Publicly traded stock is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "An individual's sale of investment land with payments over 4 years",
+        "explanation": "Correct. Casual sales of non-inventory property qualify."
+      },
+      {
+        "id": "d",
+        "text": "Depreciation recapture on sold equipment",
+        "explanation": "Recapture is recognized in the year of sale.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Casual sales of non-inventory property qualify.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-dt-04",
+    "pool": "practice",
+    "stem": "In a §1031 exchange, Jo gives land (basis $80,000, FMV $150,000) and receives land worth $130,000 plus $20,000 cash. What is the recognized gain and new basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000; $80,000",
+        "explanation": "Correct. Basis = 130,000 − 50,000 deferred."
+      },
+      {
+        "id": "b",
+        "text": "$70,000; $130,000",
+        "explanation": "Only the boot is recognized.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$0; $60,000",
+        "explanation": "Cash boot triggers gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000; $100,000",
+        "explanation": "Adds the boot instead of subtracting it.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Realized 70,000; recognized = boot 20,000; basis = 80,000 + 20,000 − 20,000 = 80,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-dt-05",
+    "pool": "practice",
+    "stem": "In a §1031 exchange, Max gives property subject to a $100,000 mortgage and takes property subject to a $70,000 mortgage; no cash. His realized gain is $200,000. What gain does he recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Liabilities are netted.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "Limited to boot.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Net relief is boot.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "Correct. Net liability relief."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Net liability relief (100,000 − 70,000) is boot received.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-dt-06",
+    "pool": "practice",
+    "stem": "What are the deadlines in a deferred (delayed) like-kind exchange?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Identify within 45 days; receive within 180 days (or the return due date if earlier)",
+        "explanation": "Correct. §1031(a)(3): 45-day identification and 180-day exchange periods."
+      },
+      {
+        "id": "b",
+        "text": "Identify within 30 days; receive within 90 days",
+        "explanation": "Both periods are too short.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Identify within 60 days; receive within 1 year",
+        "explanation": "Neither period is correct.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No deadlines if a qualified intermediary is used",
+        "explanation": "Deadlines apply regardless.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§1031(a)(3): 45-day identification and 180-day exchange periods.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-dt-07",
+    "pool": "practice",
+    "stem": "A mother sells stock (basis $50,000) to her son for $30,000. The son later sells it for $45,000. What are the results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Mother deducts $20,000; son has $15,000 gain",
+        "explanation": "§267 disallows the mother's loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Mother's loss disallowed; son has no gain",
+        "explanation": "Correct. His $15,000 gain is offset by the disallowed loss."
+      },
+      {
+        "id": "c",
+        "text": "Mother's loss disallowed; son has $15,000 gain",
+        "explanation": "The disallowed loss offsets his later gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Mother deducts $20,000; son has no gain",
+        "explanation": "The mother's loss is disallowed under §267.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§267(d): the buyer's gain is reduced by the previously disallowed loss (to the extent of the gain).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-dt-08",
+    "pool": "practice",
+    "stem": "An individual sells depreciable equipment at a $40,000 gain (no depreciation taken) to a corporation she owns 70% of. What is the character of the gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "§1231 gain",
+        "explanation": "§1239 makes it ordinary.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Ordinary income",
+        "explanation": "Correct. §1239: gain on depreciable property sold to a more-than-50%-owned entity is ordinary."
+      },
+      {
+        "id": "c",
+        "text": "Long-term capital gain",
+        "explanation": "§1239 makes the gain ordinary.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Disallowed",
+        "explanation": "Gains aren't disallowed; losses are.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1239: gain on depreciable property sold to a more-than-50%-owned entity is ordinary.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-dt-09",
+    "pool": "practice",
+    "stem": "Brothers exchange rental properties under §1031. Eighteen months later, one brother sells the property he received. What happens?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing — the exchange stands",
+        "explanation": "The 2-year related-party rule applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Both brothers recognize the gain deferred in the original exchange",
+        "explanation": "Correct. §1031(f): a disposition within 2 years by either related party triggers the deferred gain."
+      },
+      {
+        "id": "c",
+        "text": "Only the selling brother recognizes his current gain",
+        "explanation": "The deferred exchange gain is also triggered.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "The sale is disallowed",
+        "explanation": "Sales aren't disallowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1031(f): a disposition within 2 years by either related party triggers the deferred gain.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-dt-10",
+    "pool": "practice",
+    "stem": "A seller holds a $10 million installment note at year-end (sale price over $150,000). What additional rule applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The note must be reported at FMV",
+        "explanation": "There's no mark-to-market rule here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "An interest charge on the deferred tax for obligations above $5 million",
+        "explanation": "Correct. §453A imposes interest on the deferred tax when installment obligations exceed $5 million at year-end."
+      },
+      {
+        "id": "c",
+        "text": "The installment method is disallowed",
+        "explanation": "It's allowed with an interest charge.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Recapture is deferred",
+        "explanation": "Recapture is never deferred.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§453A imposes interest on the deferred tax when installment obligations exceed $5 million at year-end.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

@@ -30,6 +30,25 @@ loan interest deductions, and the 2026 estate and gift exemption ($15,000,000). 
 changed by the law (IRA, HSA, AMT exemption, Social Security wage base, gift annual exclusion) come from IRS
 revenue procedures and are worth a spot-check too.
 
+## TCP — 2025 amounts from the One Big Beautiful Bill Act
+
+TCP reflects tax year 2025 law, including provisions of the One Big Beautiful Bill Act (P.L. 119-21) effective for
+2025. These items use amounts or effective dates set by that law and are flagged `needsReview`:
+
+| Item | What to confirm |
+|---|---|
+| `tcp-ip-10`, `tcp-x1-22` | 2025 SALT cap of $40,000, reduced by 30% of MAGI over $500,000 (floor $10,000) |
+| `tcp-gt-04` | 2025 basic exclusion amount ($13,990,000) and the 2026 amount ($15,000,000) |
+| `tcp-cr2-chk1`, `tcp-x4-08` | §179 limit of $2,500,000 with a phase-out above $4,000,000 |
+| `tcp-cr2-02` | 100% bonus depreciation for property acquired after January 19, 2025 (40% if acquired earlier) |
+| `tcp-cr2-08` | Domestic research expensing under new §174A for tax years beginning after 2024 |
+| `tcp-ec-06` | §1202 exclusion rules for pre-July 5, 2025 stock (the lesson also summarizes the new tiered rules for later stock) |
+| TBS `tcp-tbs-u7-exchange-installment`, `tcp-tbs-x1-gift-retirement` | §179/bonus amounts; basic exclusion amount |
+
+Also worth a spot-check: the inflation-indexed 2025 figures used throughout TCP (retirement plan limits and
+phase-outs, the $313,000/$626,000 excess business loss thresholds, the $108,000 QCD limit, the $2,700 kiddie tax
+threshold, and the $15,650 fiduciary top-bracket threshold).
+
 ## Blueprint facts still marked "verify"
 
 The official AICPA Blueprint PDFs could not be reached from the build environment, so these figures come
@@ -51,15 +70,14 @@ AUD is now fully built. Nothing in it is flagged `needsReview`, but these points
 
 ## Tax-law currency (REG, TCP)
 
-REG reflects **tax year 2025** law (see the REG section above). The TCP sample module (partnership formation)
-was chosen because the One Big Beautiful Bill Act didn't change its core rules. Before building the rest of TCP,
-re-check the testing-window policy (the OBBBA special policy and the six-month rule), and consider whether 2026
-amounts become testable during the learner's exam window.
+REG and TCP reflect **tax year 2025** law (see the sections above). Re-check the testing-window policy (the OBBBA
+special policy and the six-month rule) before each exam window, and consider whether 2026 amounts (for example, the
+$15,000,000 basic exclusion amount and the §1202 changes for stock issued after July 4, 2025) become testable.
 
 ## Suggested second-pass review
 
 Every numeric answer key was recomputed independently, and the test suite proves every TBS answer key scores
 100% against its own schema. A subject-matter reviewer's second pass is still worthwhile on:
 
-- The FAR, AUD, and REG simulated exams (`content/{far,aud,reg}/exam-questions/`, `content/{far,aud,reg}/tbs/*-tbs-x*.json`).
+- The FAR, AUD, REG, and TCP simulated exams (`content/{far,aud,reg,tcp}/exam-questions/`, `content/{far,aud,reg,tcp}/tbs/*-tbs-x*.json`).
 - Judgment-heavy classification items: NFP contributions, subsequent-event type, and contingency disclosure (gain contingencies are keyed "disclose only").

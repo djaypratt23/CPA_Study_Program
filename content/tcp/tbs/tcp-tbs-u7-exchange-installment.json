@@ -1,0 +1,144 @@
+{
+  "id": "tcp-tbs-u7-exchange-installment",
+  "section": "TCP",
+  "unitId": "tcp-u7",
+  "moduleIds": [
+    "tcp-deferral-transactions",
+    "tcp-cost-recovery"
+  ],
+  "pool": "practice",
+  "title": "Exchange, installment sale, and expensing — Leah Brooks",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Leah Brooks (individual) had three transactions in 2025. Compute the results.",
+  "exhibits": [
+    {
+      "title": "1 — Like-kind exchange",
+      "content": "Leah exchanges her office building (basis **$350,000**; FMV **$900,000**; mortgage **$250,000**, assumed by the other party) for an apartment building (FMV **$800,000**) subject to a **$200,000** mortgage that Leah assumes, plus **$50,000** cash."
+    },
+    {
+      "title": "2 — Installment sale",
+      "content": "Leah sells investment land (basis **$200,000**) for **$500,000**. The buyer assumes a **$100,000** mortgage, pays **$80,000** at closing in 2025, and pays **$80,000** a year (plus interest) for 4 years starting in 2026."
+    },
+    {
+      "title": "3 — Equipment for Leah's sole proprietorship",
+      "content": "Leah buys and places in service **$4,200,000** of 7-year equipment in 2025, all acquired after January 19, 2025. Business taxable income is ample. She elects the maximum §179 deduction and takes bonus depreciation on the rest."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "a",
+      "prompt": "Exchange.",
+      "rows": [
+        {
+          "id": "rg",
+          "label": "Realized gain",
+          "answer": 550000,
+          "tolerance": 0,
+          "explanation": "Amount realized 800,000 + 50,000 + 250,000 − 200,000 = 900,000; − 350,000 = **550,000**."
+        },
+        {
+          "id": "boot",
+          "label": "Boot received",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "Net liability relief 50,000 + cash 50,000 = **100,000**."
+        },
+        {
+          "id": "rec",
+          "label": "Recognized gain",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "Lesser of 550,000 or 100,000 = **100,000**."
+        },
+        {
+          "id": "nb",
+          "label": "Basis of the apartment building",
+          "answer": 350000,
+          "tolerance": 0,
+          "explanation": "800,000 − 450,000 deferred gain = **350,000**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "b",
+      "prompt": "Installment sale.",
+      "rows": [
+        {
+          "id": "cp",
+          "label": "Contract price",
+          "answer": 400000,
+          "tolerance": 0,
+          "explanation": "500,000 − 100,000 = **400,000**."
+        },
+        {
+          "id": "gp",
+          "label": "Gross profit percentage",
+          "answer": 75,
+          "tolerance": 0,
+          "explanation": "300,000 ÷ 400,000 = **75%**."
+        },
+        {
+          "id": "g25",
+          "label": "Gain recognized in 2025",
+          "answer": 60000,
+          "tolerance": 0,
+          "explanation": "75% × 80,000 = **60,000**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "c",
+      "prompt": "Cost recovery.",
+      "rows": [
+        {
+          "id": "s179",
+          "label": "§179 deduction",
+          "answer": 2300000,
+          "tolerance": 0,
+          "explanation": "2,500,000 − (4,200,000 − 4,000,000) = **2,300,000**."
+        },
+        {
+          "id": "bonus",
+          "label": "Bonus depreciation",
+          "answer": 1900000,
+          "tolerance": 0,
+          "explanation": "100% × (4,200,000 − 2,300,000) = **1,900,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Questions.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "If Leah's exchange partner were her brother and he sold the office building 18 months later",
+          "options": [
+            "Nothing changes",
+            "Leah recognizes the deferred gain",
+            "Only the brother is taxed"
+          ],
+          "answer": "Leah recognizes the deferred gain",
+          "explanation": "§1031(f) 2-year rule."
+        },
+        {
+          "id": "d2",
+          "label": "Could Leah have exchanged the equipment under §1031?",
+          "options": [
+            "Yes",
+            "No — only real property qualifies"
+          ],
+          "answer": "No — only real property qualifies",
+          "explanation": "Since 2018."
+        }
+      ]
+    }
+  ],
+  "needsReview": true,
+  "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount for 2025. Verify against current IRS guidance and exam materials."
+}

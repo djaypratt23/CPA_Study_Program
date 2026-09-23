@@ -1,0 +1,449 @@
+[
+  {
+    "id": "tcp-fl-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: two founders transfer property to a new corporation for 100% of its stock. Generally, do they recognize gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, on all appreciation",
+        "explanation": "§351 defers gain when transferors control the corporation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only if the corporation is an S corporation",
+        "explanation": "§351 applies to C and S corporations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No, if they receive only stock and control the corporation",
+        "explanation": "Correct. §351: transferors in 80% control, receiving only stock, recognize no gain."
+      },
+      {
+        "id": "d",
+        "text": "Only the corporation recognizes gain",
+        "explanation": "Corporations don't recognize gain on issuing stock.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§351: transferors in 80% control, receiving only stock, recognize no gain.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-chk1",
+    "pool": "lesson",
+    "stem": "A transfers land (basis $30,000; FMV $100,000) subject to a $45,000 mortgage to a corporation in a §351 exchange for stock only. What gain does A recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Liabilities exceed basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$45,000",
+        "explanation": "Only the excess over basis is gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$70,000",
+        "explanation": "Only the excess liability is taxed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$15,000",
+        "explanation": "Correct. 45,000 − 30,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§357(c): gain equal to liabilities in excess of the total basis of property transferred.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-chk2",
+    "pool": "lesson",
+    "stem": "A father owns 50% and his son 50% of a corporation. The corporation redeems half of the father's shares. Is it substantially disproportionate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes — the father drops to 33%",
+        "explanation": "Attribution counts the son's shares.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes — any redemption is an exchange",
+        "explanation": "Redemptions must meet a test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No — with attribution the father owns 100% before and after",
+        "explanation": "Correct. §318 family attribution: the father is treated as owning his son's shares, so his ownership stays at 100%."
+      },
+      {
+        "id": "d",
+        "text": "No — redemptions are always dividends",
+        "explanation": "Some qualify as exchanges.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§318 family attribution: the father is treated as owning his son's shares, so his ownership stays at 100%.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-01",
+    "pool": "practice",
+    "stem": "A contributes property (FMV $80,000) and B contributes services (value $20,000) to a new corporation for 80% and 20% of its stock. Does A's transfer qualify under §351?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, and B also defers income",
+        "explanation": "B has ordinary income for services.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No — B's services break control",
+        "explanation": "B isn't a transferor, but A alone has 80%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No — services disqualify the whole transaction",
+        "explanation": "Only B is taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Yes — A owns 80% after the transfer",
+        "explanation": "Correct. A, the property transferor, owns 80% immediately after; B recognizes $20,000 of ordinary income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A, the property transferor, owns 80% immediately after; B recognizes $20,000 of ordinary income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-02",
+    "pool": "practice",
+    "stem": "In a §351 exchange, C transfers property (basis $50,000; FMV $90,000) for stock worth $70,000 and $20,000 cash. What is C's recognized gain and stock basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000 gain; $50,000 basis",
+        "explanation": "Correct. Basis = 50,000 + 20,000 − 20,000."
+      },
+      {
+        "id": "b",
+        "text": "$40,000 gain; $90,000 basis",
+        "explanation": "Only boot triggers gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$0 gain; $30,000 basis",
+        "explanation": "Boot triggers gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000 gain; $70,000 basis",
+        "explanation": "Stock basis isn't FMV.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gain = lesser of boot (20,000) or realized (40,000); basis = 50,000 + 20,000 − 20,000 = 50,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-03",
+    "pool": "practice",
+    "stem": "A married couple filing jointly sells §1244 stock at a $140,000 loss. How is the loss treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$140,000 ordinary loss",
+        "explanation": "Limited to $100,000 MFJ.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$50,000 ordinary; $90,000 capital",
+        "explanation": "Uses the single limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$100,000 ordinary; $40,000 capital",
+        "explanation": "Correct. §1244: up to $100,000 ordinary for joint filers; excess is capital."
+      },
+      {
+        "id": "d",
+        "text": "$3,000 capital loss deduction only",
+        "explanation": "§1244 allows ordinary treatment.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§1244: up to $100,000 ordinary for joint filers; excess is capital.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-04",
+    "pool": "practice",
+    "stem": "A redemption fails every exchange test. The corporation has ample E&P. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Capital gain after basis recovery",
+        "explanation": "It fails the exchange tests.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A dividend to the extent of E&P; the redeemed shares' basis shifts to remaining shares",
+        "explanation": "Correct. §302(d) and §301: a nonqualifying redemption is a §301 distribution."
+      },
+      {
+        "id": "c",
+        "text": "Tax-free",
+        "explanation": "Distributions from E&P are dividends.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Ordinary compensation",
+        "explanation": "It's a distribution, not compensation.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§302(d) and §301: a nonqualifying redemption is a §301 distribution.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-05",
+    "pool": "practice",
+    "stem": "A corporation completely liquidates, distributing land (basis $200,000; FMV $500,000) to its sole shareholder, whose stock basis is $100,000. What gains are recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Corporation $300,000; shareholder $400,000",
+        "explanation": "Correct. Corporation: 500,000 − 200,000; shareholder: 500,000 − 100,000 (before reduction for any corporate tax paid)."
+      },
+      {
+        "id": "b",
+        "text": "Corporation $0; shareholder $400,000",
+        "explanation": "§336 taxes the corporation.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Corporation $300,000; shareholder $0",
+        "explanation": "§331 taxes the shareholder.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Neither — liquidations are tax-free",
+        "explanation": "Only §332 parent liquidations are.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Corporation: 500,000 − 200,000; shareholder: 500,000 − 100,000 (before reduction for any corporate tax paid).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-06",
+    "pool": "practice",
+    "stem": "Parent owns 85% of Sub's stock (vote and value) and liquidates Sub. What is the parent's result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Capital gain equal to FMV received − stock basis",
+        "explanation": "§332 applies at 80% ownership.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No gain or loss; carryover basis in Sub's assets",
+        "explanation": "Correct. §332 and §334(b): no gain or loss; carryover basis and attributes."
+      },
+      {
+        "id": "c",
+        "text": "Dividend income",
+        "explanation": "Liquidation distributions aren't dividends.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Gain only on appreciated assets",
+        "explanation": "Nonrecognition applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§332 and §334(b): no gain or loss; carryover basis and attributes.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-07",
+    "pool": "practice",
+    "stem": "Which planning step helps a shareholder qualify a redemption as a complete termination despite family attribution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Waiving family attribution by filing an agreement and having no interest (other than as a creditor) for 10 years",
+        "explanation": "Correct. §302(c)(2): family attribution waiver for complete terminations."
+      },
+      {
+        "id": "b",
+        "text": "Having the corporation redeem a small portion of shares",
+        "explanation": "That doesn't terminate her interest.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Staying on as an officer",
+        "explanation": "Prohibited interest for the waiver.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Selling shares to her son first",
+        "explanation": "Attribution would still apply.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§302(c)(2): family attribution waiver for complete terminations.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-08",
+    "pool": "practice",
+    "stem": "A shareholder wants to transfer property with a built-in loss (basis $100,000; FMV $60,000) to her corporation under §351. Absent an election, what is the corporation's basis in the property?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "§362(e)(2) limits it to FMV.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "Correct. §362(e)(2): net built-in loss property takes an FMV basis unless the shareholder elects to reduce her stock basis instead."
+      },
+      {
+        "id": "c",
+        "text": "$80,000",
+        "explanation": "No averaging rule exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Basis carries over, limited to FMV.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§362(e)(2): net built-in loss property takes an FMV basis unless the shareholder elects to reduce her stock basis instead.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-09",
+    "pool": "practice",
+    "stem": "A corporation distributes loss property (basis $80,000; FMV $50,000) to a 10% unrelated shareholder in complete liquidation. The property wasn't recently contributed. Can the corporation recognize the loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes",
+        "explanation": "Correct. §336(d) limits losses on distributions to related persons (>50%) or of recently contributed built-in loss property; neither applies."
+      },
+      {
+        "id": "b",
+        "text": "No — losses are never allowed in liquidations",
+        "explanation": "Allowed for unrelated shareholders.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only 10% of it",
+        "explanation": "The loss isn't prorated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No — only gains are recognized",
+        "explanation": "§336 applies to gains and losses.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§336(d) limits losses on distributions to related persons (>50%) or of recently contributed built-in loss property; neither applies.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-10",
+    "pool": "practice",
+    "stem": "A shareholder needs $200,000 from her C corporation. Her stock basis is $300,000 and she will remain a 30% owner of an otherwise unrelated group after a redemption (was 45%). Which approach likely costs the least tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dividend of $200,000",
+        "explanation": "Fully taxable with no basis recovery.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A redemption of shares worth $200,000 that qualifies as substantially disproportionate",
+        "explanation": "Correct. 30% < 50% and < 36% (80% × 45%) → exchange treatment: capital gain only on the excess over the redeemed shares' basis."
+      },
+      {
+        "id": "c",
+        "text": "Bonus of $200,000",
+        "explanation": "Ordinary rates and payroll tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It makes no difference",
+        "explanation": "Basis recovery reduces the taxable amount.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "30% < 50% and < 36% (80% × 45%) → exchange treatment: capital gain only on the excess over the redeemed shares' basis.",
+    "skill": "analysis",
+    "difficulty": 2
+  }
+]

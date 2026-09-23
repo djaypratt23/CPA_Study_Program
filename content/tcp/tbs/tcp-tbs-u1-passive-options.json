@@ -1,0 +1,121 @@
+{
+  "id": "tcp-tbs-u1-passive-options",
+  "section": "TCP",
+  "unitId": "tcp-u1",
+  "moduleIds": [
+    "tcp-passive-rental",
+    "tcp-stock-compensation"
+  ],
+  "pool": "practice",
+  "title": "Rental losses and an ISO sale — Rae Lin",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Rae Lin is single. Compute the effect of her rental activities and her 2025 stock option transactions.",
+  "exhibits": [
+    {
+      "title": "Rental and passive activities",
+      "content": "- MAGI before any passive items: **$130,000**\n- Rental house (Rae actively participates; 100% owner): 2025 net loss **$(30,000)**\n- Limited partnership interest (no participation): 2025 net income **$6,000**\n- No prior-year suspended losses"
+    },
+    {
+      "title": "Incentive stock options",
+      "content": "- Granted **March 1, 2023**: 1,000 shares at a **$10** strike\n- Exercised **February 3, 2025** when FMV was **$30**\n- Sold all 1,000 shares **November 14, 2025** for **$45** per share"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "p",
+      "prompt": "Passive activities.",
+      "rows": [
+        {
+          "id": "net",
+          "label": "Net passive loss after combining the rental and the LP",
+          "answer": 24000,
+          "tolerance": 0,
+          "explanation": "30,000 loss − 6,000 passive income = **24,000**."
+        },
+        {
+          "id": "allow",
+          "label": "Special allowance for rental real estate",
+          "answer": 10000,
+          "tolerance": 0,
+          "explanation": "25,000 − 50% × (130,000 − 100,000) = **10,000**."
+        },
+        {
+          "id": "susp",
+          "label": "Suspended rental loss carried forward",
+          "answer": 14000,
+          "tolerance": 0,
+          "explanation": "24,000 − 10,000 = **14,000**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "s",
+      "prompt": "Stock options.",
+      "rows": [
+        {
+          "id": "oi",
+          "label": "Ordinary income from the ISO shares",
+          "answer": 20000,
+          "tolerance": 0,
+          "explanation": "Disqualifying disposition (sold within 1 year of exercise): lesser of (30 − 10) or (45 − 10), × 1,000 = **20,000**."
+        },
+        {
+          "id": "cg",
+          "label": "Capital gain",
+          "answer": 15000,
+          "tolerance": 0,
+          "explanation": "(45 − 30) × 1,000 = **15,000**."
+        },
+        {
+          "id": "adj",
+          "label": "2025 AMT adjustment for the exercise",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "The shares were sold in the same year as exercise, so no AMT adjustment remains: **0**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Characterize.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "The $15,000 capital gain",
+          "options": [
+            "Short-term",
+            "Long-term"
+          ],
+          "answer": "Short-term",
+          "explanation": "Held less than 1 year after exercise."
+        },
+        {
+          "id": "d2",
+          "label": "Employer's deduction for the ISO",
+          "options": [
+            "None",
+            "$20,000",
+            "$35,000"
+          ],
+          "answer": "$20,000",
+          "explanation": "The employer deducts the ordinary income from a disqualifying disposition."
+        },
+        {
+          "id": "d3",
+          "label": "If Rae's MAGI were $155,000, her special allowance would be",
+          "options": [
+            "$0",
+            "$2,500",
+            "$25,000"
+          ],
+          "answer": "$0",
+          "explanation": "Fully phased out at $150,000."
+        }
+      ]
+    }
+  ]
+}

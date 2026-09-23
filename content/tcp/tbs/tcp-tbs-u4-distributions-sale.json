@@ -1,0 +1,147 @@
+{
+  "id": "tcp-tbs-u4-distributions-sale",
+  "section": "TCP",
+  "unitId": "tcp-u4",
+  "moduleIds": [
+    "tcp-partnership-distributions"
+  ],
+  "pool": "practice",
+  "title": "Distributions and a sale — Willow LLC",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Willow LLC is taxed as a partnership. Answer the questions about three unrelated 2025 events.",
+  "exhibits": [
+    {
+      "title": "Event 1 — current distribution to Bea",
+      "content": "- Bea's outside basis before the distribution: **$70,000**\n- She receives **$20,000** cash, inventory (Willow's basis **$15,000**, FMV $18,000), and land (Willow's basis **$50,000**, FMV $60,000)"
+    },
+    {
+      "title": "Event 2 — liquidation of Cal's interest",
+      "content": "- Cal's outside basis: **$90,000**\n- In complete liquidation he receives **$30,000** cash and accounts receivable (Willow's basis **$0**, FMV $25,000)"
+    },
+    {
+      "title": "Event 3 — Dev sells his 30% interest",
+      "content": "- Price: **$150,000** cash; the buyer takes over Dev's **$45,000** share of liabilities\n- Dev's outside basis (including his share of liabilities): **$120,000**\n- Willow's hot assets: receivables FMV $100,000 (basis $0); inventory FMV $80,000 (basis $60,000)"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "a",
+      "prompt": "Event 1.",
+      "rows": [
+        {
+          "id": "g",
+          "label": "Bea's recognized gain",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "Cash (20,000) doesn't exceed basis: **0**."
+        },
+        {
+          "id": "inv",
+          "label": "Bea's basis in the inventory",
+          "answer": 15000,
+          "tolerance": 0,
+          "explanation": "Carryover: **15,000**."
+        },
+        {
+          "id": "land",
+          "label": "Bea's basis in the land",
+          "answer": 35000,
+          "tolerance": 0,
+          "explanation": "Remaining basis 70,000 − 20,000 − 15,000 = **35,000** (limited)."
+        },
+        {
+          "id": "ob",
+          "label": "Bea's outside basis after the distribution",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "All basis is used: **0**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "b",
+      "prompt": "Event 2.",
+      "rows": [
+        {
+          "id": "loss",
+          "label": "Cal's recognized loss",
+          "answer": 60000,
+          "tolerance": 0,
+          "explanation": "Only cash and receivables received: 90,000 − 30,000 − 0 = **60,000**."
+        },
+        {
+          "id": "ar",
+          "label": "Cal's basis in the receivables",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "Carryover basis: **0**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "c",
+      "prompt": "Event 3.",
+      "rows": [
+        {
+          "id": "ar",
+          "label": "Dev's amount realized",
+          "answer": 195000,
+          "tolerance": 0,
+          "explanation": "150,000 + 45,000 = **195,000**."
+        },
+        {
+          "id": "tg",
+          "label": "Dev's total gain",
+          "answer": 75000,
+          "tolerance": 0,
+          "explanation": "195,000 − 120,000 = **75,000**."
+        },
+        {
+          "id": "ord",
+          "label": "Ordinary income under §751",
+          "answer": 36000,
+          "tolerance": 0,
+          "explanation": "30% × [(100,000 − 0) + (80,000 − 60,000)] = **36,000**."
+        },
+        {
+          "id": "cap",
+          "label": "Capital gain",
+          "answer": 39000,
+          "tolerance": 0,
+          "explanation": "75,000 − 36,000 = **39,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Character.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Cal's loss",
+          "options": [
+            "Capital",
+            "Ordinary"
+          ],
+          "answer": "Capital",
+          "explanation": "Loss on liquidation is capital."
+        },
+        {
+          "id": "d2",
+          "label": "Cal collects the receivables for $25,000",
+          "options": [
+            "$25,000 ordinary income",
+            "$25,000 capital gain"
+          ],
+          "answer": "$25,000 ordinary income",
+          "explanation": "Distributed receivables keep ordinary character."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "tcp-tbs-u6-entity-choice",
+  "section": "TCP",
+  "unitId": "tcp-u6",
+  "moduleIds": [
+    "tcp-entity-choice"
+  ],
+  "pool": "practice",
+  "title": "Choice of entity — Nora's design firm",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Nora is forming a design business that will earn **$400,000** of taxable income a year. Compare the federal income tax under the alternatives. Assume: Nora's marginal rate on ordinary income is **35%**; qualified dividends are taxed at **23.8%** (20% + 3.8% NIIT); the QBI deduction (20%) is available for pass-through income; ignore payroll and SE taxes and state taxes.",
+  "exhibits": [
+    {
+      "title": "Alternatives",
+      "content": "1. C corporation that distributes all after-tax profit each year as a qualified dividend\n2. C corporation that retains all profit\n3. LLC taxed as a partnership (Nora and a minority partner; Nora's share is 100% of the $400,000 for this analysis)"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute annual federal income tax.",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Alternative 1 — corporate tax",
+          "answer": 84000,
+          "tolerance": 0,
+          "explanation": "21% × 400,000 = **84,000**."
+        },
+        {
+          "id": "c2",
+          "label": "Alternative 1 — Nora's dividend tax",
+          "answer": 75208,
+          "tolerance": 0,
+          "explanation": "23.8% × (400,000 − 84,000) = **75,208**."
+        },
+        {
+          "id": "c3",
+          "label": "Alternative 1 — total",
+          "answer": 159208,
+          "tolerance": 0,
+          "explanation": "84,000 + 75,208 = **159,208**."
+        },
+        {
+          "id": "c4",
+          "label": "Alternative 2 — total current-year tax",
+          "answer": 84000,
+          "tolerance": 0,
+          "explanation": "Only the 21% corporate tax: **84,000**."
+        },
+        {
+          "id": "c5",
+          "label": "Alternative 3 — total",
+          "answer": 112000,
+          "tolerance": 0,
+          "explanation": "35% × (400,000 × 80%) = **112,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Planning.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Lowest tax if Nora needs all profit each year",
+          "options": [
+            "Alternative 1",
+            "Alternative 2",
+            "Alternative 3"
+          ],
+          "answer": "Alternative 3",
+          "explanation": "One level of tax at 28% effective beats 39.8%."
+        },
+        {
+          "id": "d2",
+          "label": "Main risk of Alternative 2 over many years",
+          "options": [
+            "Personal holding company tax",
+            "Accumulated earnings tax",
+            "Built-in gains tax"
+          ],
+          "answer": "Accumulated earnings tax",
+          "explanation": "Retaining earnings beyond reasonable business needs."
+        },
+        {
+          "id": "d3",
+          "label": "Default classification of the LLC with two members",
+          "options": [
+            "Disregarded entity",
+            "Partnership",
+            "Corporation"
+          ],
+          "answer": "Partnership",
+          "explanation": "Two or more owners default to partnership."
+        },
+        {
+          "id": "d4",
+          "label": "Form used to elect corporate status for the LLC",
+          "options": [
+            "Form 2553",
+            "Form 8832",
+            "Form 1122"
+          ],
+          "answer": "Form 8832",
+          "explanation": "Entity classification election."
+        }
+      ]
+    }
+  ]
+}

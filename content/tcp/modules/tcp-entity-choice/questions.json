@@ -1,0 +1,449 @@
+[
+  {
+    "id": "tcp-ec-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which entity's income is taxed twice when distributed to owners?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "S corporation",
+        "explanation": "S corporations are pass-throughs.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "LLC taxed as a partnership",
+        "explanation": "Pass-through; one level of tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "C corporation",
+        "explanation": "Correct. C corporations pay entity tax, and shareholders pay tax on dividends."
+      },
+      {
+        "id": "d",
+        "text": "Sole proprietorship",
+        "explanation": "One level of tax.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "C corporations pay entity tax, and shareholders pay tax on dividends.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-chk1",
+    "pool": "lesson",
+    "stem": "A C corporation earns $100 of taxable income and distributes everything left as a qualified dividend to a shareholder who pays 20% plus 3.8% NIIT. What is the combined tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$21.00",
+        "explanation": "Ignores the dividend tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$37.00",
+        "explanation": "That's the top individual rate on pass-through income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$44.80",
+        "explanation": "Applies 23.8% to the full $100.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$39.80",
+        "explanation": "Correct. 21 + 23.8% × 79."
+      }
+    ],
+    "answer": "d",
+    "explanation": "21.00 + 18.80 = 39.80.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ec-chk2",
+    "pool": "lesson",
+    "stem": "An LLC with one individual member makes no election. How is it taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a C corporation",
+        "explanation": "Default for a single-member LLC is disregarded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a partnership",
+        "explanation": "A partnership needs two or more owners.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a disregarded entity",
+        "explanation": "Correct. Reg. §301.7701-3(b): single-owner eligible entities default to disregarded status."
+      },
+      {
+        "id": "d",
+        "text": "As an S corporation",
+        "explanation": "S status requires an election.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Reg. §301.7701-3(b): single-owner eligible entities default to disregarded status.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-01",
+    "pool": "practice",
+    "stem": "Founders plan to reinvest all profits for 8 years and then sell the company's stock. Which entity likely produces the lowest tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "C corporation, potentially qualifying for the §1202 exclusion",
+        "explanation": "Correct. Retained profits bear only 21%, and qualifying stock gain may be excluded under §1202."
+      },
+      {
+        "id": "b",
+        "text": "Partnership, because of one level of tax",
+        "explanation": "Owners are taxed on reinvested profits every year at up to 37%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "S corporation",
+        "explanation": "Same annual pass-through tax on reinvested profits and no §1202.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Sole proprietorship",
+        "explanation": "Unlimited liability and the full individual rate on reinvested profits.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Retained profits bear only 21%, and qualifying stock gain may be excluded under §1202.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-02",
+    "pool": "practice",
+    "stem": "Which fact would prevent a business from operating as an S corporation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It has 80 shareholders",
+        "explanation": "The limit is 100.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Its shareholders are all U.S. citizens",
+        "explanation": "That's permitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It has voting and nonvoting common stock",
+        "explanation": "Voting differences are allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A venture capital partnership will buy preferred stock",
+        "explanation": "Correct. Partnership shareholders and a second class of stock (preferred) both violate S requirements."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Partnership shareholders and a second class of stock (preferred) both violate S requirements.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-03",
+    "pool": "practice",
+    "stem": "A new business expects large losses for 3 years and its owners have high income from other active businesses where they will materially participate. Which entity best uses the losses?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "C corporation",
+        "explanation": "Losses are trapped as NOLs.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Personal holding company",
+        "explanation": "PHC status is a penalty-tax trap, not an entity choice.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Partnership or S corporation",
+        "explanation": "Correct. Pass-through losses flow to owners, subject to basis, at-risk, passive, and excess business loss limits."
+      },
+      {
+        "id": "d",
+        "text": "It makes no difference",
+        "explanation": "Pass-through losses offset other income.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Pass-through losses flow to owners, subject to basis, at-risk, passive, and excess business loss limits.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-04",
+    "pool": "practice",
+    "stem": "An LLC with two members wants to be taxed as an S corporation. What must it do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing — LLCs are S corporations by default",
+        "explanation": "Default is a partnership.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Reincorporate under state law",
+        "explanation": "A state-law conversion isn't required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "File Form 1065 marked 'S corporation'",
+        "explanation": "That isn't a valid election.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "File Form 2553 (which also treats it as electing association status)",
+        "explanation": "Correct. An eligible entity that timely files Form 2553 is deemed to have elected to be an association."
+      }
+    ],
+    "answer": "d",
+    "explanation": "An eligible entity that timely files Form 2553 is deemed to have elected to be an association.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-05",
+    "pool": "practice",
+    "stem": "An owner in the 32% bracket runs a profitable service business as a sole proprietorship with $150,000 of net earnings. Which change most likely reduces self-employment/payroll taxes?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Convert to an S corporation and pay a reasonable salary, taking the rest as distributions",
+        "explanation": "Correct. S corporation distributions above reasonable wages aren't subject to payroll or SE tax."
+      },
+      {
+        "id": "b",
+        "text": "Form a single-member LLC with no election",
+        "explanation": "Still a disregarded entity subject to SE tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Form a general partnership with a spouse",
+        "explanation": "General partners pay SE tax on their shares.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Increase owner draws",
+        "explanation": "Draws don't change SE tax.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "S corporation distributions above reasonable wages aren't subject to payroll or SE tax.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-06",
+    "pool": "practice",
+    "stem": "An investor acquired qualified small business stock at original issue in 2018 (basis $1 million) and sells it in 2025 for $9 million. How much gain can she exclude?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4,000,000",
+        "explanation": "The exclusion is 100% for stock acquired after September 27, 2010.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$8,000,000",
+        "explanation": "Correct. 100% of the gain, within the greater of $10 million or 10 × basis."
+      },
+      {
+        "id": "c",
+        "text": "$10,000,000",
+        "explanation": "The gain is only $8 million.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The stock was held more than 5 years.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1202: 100% exclusion for pre-July 5, 2025 stock held more than 5 years, capped at the greater of $10 million or 10 × basis.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "tcp-ec-07",
+    "pool": "practice",
+    "stem": "What is the maximum combined federal rate on C corporation income that is distributed as a qualified dividend to a top-bracket shareholder subject to NIIT?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "21%",
+        "explanation": "That's only the entity tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "39.8%",
+        "explanation": "Correct. 21% + (79% × 23.8%) = 39.8%."
+      },
+      {
+        "id": "c",
+        "text": "44.8%",
+        "explanation": "Adds the rates without reducing the base.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "37%",
+        "explanation": "That's the top individual ordinary rate.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "21% + (79% × 23.8%) = 39.8%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ec-08",
+    "pool": "practice",
+    "stem": "A two-member LLC taxed as a partnership changed to corporate classification by election in 2023. When can it generally elect to change classification again?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Immediately",
+        "explanation": "A 60-month waiting period applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "After 60 months",
+        "explanation": "Correct. Reg. §301.7701-3(c)(1)(iv): 60-month limitation after an elective change."
+      },
+      {
+        "id": "c",
+        "text": "After 12 months",
+        "explanation": "The waiting period is 60 months.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Never",
+        "explanation": "It can change after 60 months (or with IRS consent).",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Reg. §301.7701-3(c)(1)(iv): 60-month limitation after an elective change.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-09",
+    "pool": "practice",
+    "stem": "Owners of a pass-through expect to sell the business's assets in 5 years. Why might a buyer prefer to buy the assets of an S corporation instead of the stock of a C corporation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The buyer gets a stepped-up basis in the assets without double tax on the seller",
+        "explanation": "Correct. An asset purchase steps up basis; for a pass-through, the gain is taxed once at the owner level."
+      },
+      {
+        "id": "b",
+        "text": "Stock purchases give a stepped-up basis",
+        "explanation": "A stock purchase keeps the old inside basis.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "C corporations can't sell assets",
+        "explanation": "They can, but double tax applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "S corporation sales are tax-free",
+        "explanation": "Gain passes through and is taxed once.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "An asset purchase steps up basis; for a pass-through, the gain is taxed once at the owner level.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-10",
+    "pool": "practice",
+    "stem": "Which entity allows owners to specially allocate depreciation to one owner and increase basis for entity-level debt?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "S corporation",
+        "explanation": "No special allocations; entity debt doesn't create shareholder basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Partnership (or LLC taxed as one)",
+        "explanation": "Correct. §704(b) special allocations and §752 liability sharing are partnership features."
+      },
+      {
+        "id": "c",
+        "text": "C corporation",
+        "explanation": "No pass-through of items.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Sole proprietorship",
+        "explanation": "A sole proprietorship has only one owner.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§704(b) special allocations and §752 liability sharing are partnership features.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

@@ -1,0 +1,121 @@
+{
+  "id": "tcp-tbs-u3-estimates-consolidated",
+  "section": "TCP",
+  "unitId": "tcp-u3",
+  "moduleIds": [
+    "tcp-c-corp-compliance",
+    "tcp-consolidated-returns"
+  ],
+  "pool": "practice",
+  "title": "Estimated tax and a consolidated group — Pine Holdings",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Pine Holdings, Inc. is a calendar-year corporation. Answer the questions about its 2025 estimated tax and its consolidated return.",
+  "exhibits": [
+    {
+      "title": "Estimated tax",
+      "content": "- Pine had taxable income of $1,900,000 in 2024 and **$400,000** of 2024 tax.\n- Pine expects **$600,000** of 2025 tax (consolidated)."
+    },
+    {
+      "title": "Group structure and 2025 results",
+      "content": "| Corporation | Ownership | Separate taxable income |\n|---|---|---:|\n| Pine (parent) | — | 800,000 |\n| Sub One | 100% by Pine | (200,000) |\n| Sub Two | 85% by Pine | 150,000 |\n| Sub Three | 70% by Pine | 90,000 |\n\n- Pine's $800,000 includes a **$50,000** gain on land sold to Sub One in 2025. Sub One still holds the land.\n- Sub Two paid Pine a $40,000 dividend, which is excluded from Pine's $800,000."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "e",
+      "prompt": "Estimated tax installments (minimum to avoid a penalty).",
+      "rows": [
+        {
+          "id": "i1",
+          "label": "April 15 installment",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "Large corporation may use prior-year tax for the first installment only: 25% × 400,000 = **100,000**."
+        },
+        {
+          "id": "i2",
+          "label": "June 15 installment",
+          "answer": 200000,
+          "tolerance": 0,
+          "explanation": "50% × 600,000 − 100,000 = **200,000** (catch-up)."
+        },
+        {
+          "id": "i3",
+          "label": "September 15 installment",
+          "answer": 150000,
+          "tolerance": 0,
+          "explanation": "25% × 600,000 = **150,000**."
+        },
+        {
+          "id": "i4",
+          "label": "December 15 installment",
+          "answer": 150000,
+          "tolerance": 0,
+          "explanation": "25% × 600,000 = **150,000**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "c",
+      "prompt": "Consolidated return.",
+      "rows": [
+        {
+          "id": "cti",
+          "label": "Consolidated taxable income",
+          "answer": 700000,
+          "tolerance": 0,
+          "explanation": "800,000 − 50,000 deferred intercompany gain − 200,000 + 150,000 = **700,000** (Sub Three isn't a member; the dividend is eliminated)."
+        },
+        {
+          "id": "tax",
+          "label": "Consolidated tax",
+          "answer": 147000,
+          "tolerance": 0,
+          "explanation": "21% × 700,000 = **147,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Group questions.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Is Sub Three included in the consolidated return?",
+          "options": [
+            "Yes",
+            "No — less than 80% owned"
+          ],
+          "answer": "No — less than 80% owned",
+          "explanation": "Membership requires 80% of vote and value."
+        },
+        {
+          "id": "d2",
+          "label": "When does Pine take the $50,000 land gain into account?",
+          "options": [
+            "2025",
+            "When Sub One sells the land outside the group",
+            "Never"
+          ],
+          "answer": "When Sub One sells the land outside the group",
+          "explanation": "Intercompany gain is deferred."
+        },
+        {
+          "id": "d3",
+          "label": "Form each subsidiary files to consent to the first consolidated return",
+          "options": [
+            "Form 851",
+            "Form 1122",
+            "Form 8832"
+          ],
+          "answer": "Form 1122",
+          "explanation": "Form 851 is the affiliations schedule filed by the parent."
+        }
+      ]
+    }
+  ]
+}

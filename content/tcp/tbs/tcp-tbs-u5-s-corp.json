@@ -1,0 +1,113 @@
+{
+  "id": "tcp-tbs-u5-s-corp",
+  "section": "TCP",
+  "unitId": "tcp-u5",
+  "moduleIds": [
+    "tcp-s-corp-compliance"
+  ],
+  "pool": "practice",
+  "title": "S corporation AAA and shareholder basis — Delta Inc.",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Delta, Inc. converted from a C corporation to an S corporation years ago and still has accumulated E&P. Its sole shareholder, Ella, owns 100% of the stock. Compute the 2025 results.",
+  "exhibits": [
+    {
+      "title": "Beginning balances",
+      "content": "- AAA, January 1, 2025: **$40,000**\n- Accumulated E&P (from C years): **$25,000**\n- Ella's stock basis, January 1, 2025: **$60,000**"
+    },
+    {
+      "title": "2025 items",
+      "content": "| Item | Amount |\n|---|---:|\n| Ordinary business income | 90,000 |\n| Tax-exempt interest | 5,000 |\n| Long-term capital gain | 10,000 |\n| Charitable contributions | 6,000 |\n| Nondeductible fines | 2,000 |\n| Cash distributions to Ella | 150,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "aaa",
+          "label": "AAA before distributions",
+          "answer": 132000,
+          "tolerance": 0,
+          "explanation": "40,000 + 90,000 + 10,000 − 6,000 − 2,000 = **132,000** (tax-exempt interest doesn't affect AAA)."
+        },
+        {
+          "id": "tf",
+          "label": "Distribution from AAA (tax-free)",
+          "answer": 132000,
+          "tolerance": 0,
+          "explanation": "All of AAA: **132,000**."
+        },
+        {
+          "id": "div",
+          "label": "Dividend from accumulated E&P",
+          "answer": 18000,
+          "tolerance": 0,
+          "explanation": "150,000 − 132,000 = **18,000**."
+        },
+        {
+          "id": "eep",
+          "label": "Accumulated E&P at year-end",
+          "answer": 7000,
+          "tolerance": 0,
+          "explanation": "25,000 − 18,000 = **7,000**."
+        },
+        {
+          "id": "basis",
+          "label": "Ella's ending stock basis",
+          "answer": 25000,
+          "tolerance": 0,
+          "explanation": "60,000 + 90,000 + 5,000 + 10,000 − 132,000 (non-dividend distributions) − 2,000 − 6,000 = **25,000**."
+        },
+        {
+          "id": "eaaa",
+          "label": "AAA at year-end",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "132,000 − 132,000 = **0**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Other questions.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Is the $18,000 dividend subject to self-employment tax?",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "answer": "No",
+          "explanation": "Dividends aren't SE income."
+        },
+        {
+          "id": "d2",
+          "label": "Tax on Delta if passive investment income exceeds 25% of gross receipts",
+          "options": [
+            "Built-in gains tax",
+            "Excess net passive income tax",
+            "Accumulated earnings tax"
+          ],
+          "answer": "Excess net passive income tax",
+          "explanation": "§1375 applies to S corporations with accumulated E&P."
+        },
+        {
+          "id": "d3",
+          "label": "Ella receives no salary. The main risk is",
+          "options": [
+            "Loss of S status",
+            "Recharacterization of distributions as wages",
+            "Double taxation"
+          ],
+          "answer": "Recharacterization of distributions as wages",
+          "explanation": "Reasonable compensation is required."
+        }
+      ]
+    }
+  ]
+}

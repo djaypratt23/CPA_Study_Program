@@ -1,0 +1,110 @@
+{
+  "id": "tcp-tbs-x4-property",
+  "section": "TCP",
+  "unitId": "tcp-u7",
+  "moduleIds": [
+    "tcp-asset-dispositions",
+    "tcp-deferral-transactions",
+    "tcp-cost-recovery"
+  ],
+  "pool": "exam",
+  "title": "Property transactions — Falcon Corp.",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Falcon Corp., a calendar-year C corporation, had the 2025 property transactions below. It has no prior §1231 losses.",
+  "exhibits": [
+    {
+      "title": "Sales",
+      "content": "| Asset | Cost | Depreciation | Sale price |\n|---|---:|---:|---:|\n| Equipment (held 5 years) | 300,000 | 180,000 | 200,000 |\n| Warehouse (straight-line; held 12 years) | 1,000,000 | 200,000 | 1,150,000 |\n| Land used in the business (held 8 years) | 250,000 | — | 200,000 |"
+    },
+    {
+      "title": "Exchange and acquisition",
+      "content": "- Falcon exchanged investment land (basis **$400,000**; FMV **$700,000**) for land worth **$650,000** plus **$50,000** cash.\n- Falcon placed a new office building in service on **March 10, 2025** (cost **$3,900,000**, excluding land). It elects no §179 or bonus on the building."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "e",
+          "label": "§1245 ordinary income on the equipment",
+          "answer": 80000,
+          "tolerance": 0,
+          "explanation": "Gain 200,000 − 120,000 = 80,000, less than 180,000 depreciation: **80,000**."
+        },
+        {
+          "id": "w291",
+          "label": "§291 ordinary income on the warehouse",
+          "answer": 40000,
+          "tolerance": 0,
+          "explanation": "Gain 350,000; 20% × lesser of 350,000 or 200,000 = **40,000**."
+        },
+        {
+          "id": "w1231",
+          "label": "§1231 gain on the warehouse",
+          "answer": 310000,
+          "tolerance": 0,
+          "explanation": "350,000 − 40,000 = **310,000**."
+        },
+        {
+          "id": "net",
+          "label": "Net §1231 gain",
+          "answer": 260000,
+          "tolerance": 0,
+          "explanation": "310,000 − 50,000 land loss = **260,000**."
+        },
+        {
+          "id": "xg",
+          "label": "Recognized gain on the land exchange",
+          "answer": 50000,
+          "tolerance": 0,
+          "explanation": "Realized 300,000; boot 50,000 → **50,000**."
+        },
+        {
+          "id": "xb",
+          "label": "Basis of the land received",
+          "answer": 400000,
+          "tolerance": 0,
+          "explanation": "650,000 − 250,000 deferred gain = **400,000**."
+        },
+        {
+          "id": "dep",
+          "label": "2025 depreciation on the office building",
+          "answer": 79167,
+          "tolerance": 0,
+          "explanation": "3,900,000 ÷ 39 = 100,000 × 9.5 ÷ 12 = **79,167** (mid-month; March)."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Character.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "The net §1231 gain for Falcon is treated as",
+          "options": [
+            "Ordinary income",
+            "Long-term capital gain"
+          ],
+          "answer": "Long-term capital gain",
+          "explanation": "No lookback losses; corporations pay 21% on it."
+        },
+        {
+          "id": "d2",
+          "label": "Recovery period for the office building",
+          "options": [
+            "27.5 years",
+            "39 years"
+          ],
+          "answer": "39 years",
+          "explanation": "Nonresidential real property."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "tcp-tbs-x2-corporate",
+  "section": "TCP",
+  "unitId": "tcp-u3",
+  "moduleIds": [
+    "tcp-c-corp-compliance"
+  ],
+  "pool": "exam",
+  "title": "Corporate taxable income — Summit Tools",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Summit Tools, Inc. is a calendar-year C corporation with total assets of $6 million. Its 2025 book net income is **$500,000**.",
+  "exhibits": [
+    {
+      "title": "Items in book income",
+      "content": "| Item | Amount |\n|---|---:|\n| Federal income tax expense | 120,000 |\n| Interest on municipal bonds | 10,000 |\n| Dividends from a 30%-owned domestic corporation | 50,000 |\n| Charitable contributions | 70,000 |\n| Business meals (50% deductible) | 20,000 |"
+    },
+    {
+      "title": "Other information",
+      "content": "- Tax depreciation exceeds book depreciation by **$40,000**.\n- Summit has a **$200,000** NOL carryforward from 2020."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "pre",
+          "label": "Taxable income before the charitable deduction, DRD, and NOL",
+          "answer": 650000,
+          "tolerance": 0,
+          "explanation": "500,000 + 120,000 − 10,000 + 10,000 (meals) − 40,000 + 70,000 (charity added back) = **650,000**."
+        },
+        {
+          "id": "ch",
+          "label": "Charitable contribution deduction",
+          "answer": 65000,
+          "tolerance": 0,
+          "explanation": "10% × 650,000 = **65,000**; 5,000 carries forward."
+        },
+        {
+          "id": "m1",
+          "label": "Schedule M-1, line 10 (Form 1120, line 28)",
+          "answer": 585000,
+          "tolerance": 0,
+          "explanation": "650,000 − 65,000 = **585,000**."
+        },
+        {
+          "id": "drd",
+          "label": "Dividends-received deduction",
+          "answer": 32500,
+          "tolerance": 0,
+          "explanation": "65% × 50,000 = **32,500**."
+        },
+        {
+          "id": "nol",
+          "label": "NOL deduction",
+          "answer": 200000,
+          "tolerance": 0,
+          "explanation": "Limit 80% × 552,500 = 442,000; the full **200,000** is allowed."
+        },
+        {
+          "id": "ti",
+          "label": "Taxable income",
+          "answer": 352500,
+          "tolerance": 0,
+          "explanation": "585,000 − 32,500 − 200,000 = **352,500**."
+        },
+        {
+          "id": "tax",
+          "label": "Income tax",
+          "answer": 74025,
+          "tolerance": 0,
+          "explanation": "21% × 352,500 = **74,025**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Compliance.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Excess charitable contribution carryforward period",
+          "options": [
+            "3 years",
+            "5 years",
+            "Indefinitely"
+          ],
+          "answer": "5 years",
+          "explanation": "§170(d)(2)."
+        },
+        {
+          "id": "d2",
+          "label": "Schedule required",
+          "options": [
+            "Schedule M-1",
+            "Schedule M-3"
+          ],
+          "answer": "Schedule M-1",
+          "explanation": "Total assets under $10 million."
+        },
+        {
+          "id": "d3",
+          "label": "The depreciation difference on Schedule M-1 appears as",
+          "options": [
+            "An addition",
+            "A subtraction"
+          ],
+          "answer": "A subtraction",
+          "explanation": "Deduction on the return not charged against book income."
+        }
+      ]
+    }
+  ]
+}

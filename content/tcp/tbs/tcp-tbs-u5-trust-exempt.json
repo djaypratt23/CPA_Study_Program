@@ -1,0 +1,132 @@
+{
+  "id": "tcp-tbs-u5-trust-exempt",
+  "section": "TCP",
+  "unitId": "tcp-u5",
+  "moduleIds": [
+    "tcp-trusts-estates",
+    "tcp-exempt-organizations"
+  ],
+  "pool": "practice",
+  "title": "A complex trust and a museum's UBTI",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Answer the questions about two unrelated taxpayers for 2025.",
+  "exhibits": [
+    {
+      "title": "The Reyes Family Trust (complex trust)",
+      "content": "| Item | Amount |\n|---|---:|\n| Taxable interest | 40,000 |\n| Qualified dividends | 20,000 |\n| Tax-exempt interest | 10,000 |\n| Long-term capital gain (allocated to corpus) | 30,000 |\n| Trustee fee (charged to corpus) | 7,000 |\n| Discretionary distribution to beneficiary | 63,000 |\n\nOf the trustee fee, **$1,000** is allocable to tax-exempt income."
+    },
+    {
+      "title": "Harbor Museum (§501(c)(3))",
+      "content": "| Activity | Result |\n|---|---:|\n| Public parking garage, open daily, paid staff: revenue | 80,000 |\n| Parking garage expenses | 30,000 |\n| Magazine advertising (separate business): net loss | (15,000) |\n| Dividends on endowment | 40,000 |\n| Sales of donated artwork prints by volunteers | 25,000 |\n\nGross receipts total **$2.4 million**; total assets **$30 million**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "t",
+      "prompt": "Trust.",
+      "rows": [
+        {
+          "id": "ti0",
+          "label": "Taxable income before the distribution deduction and exemption",
+          "answer": 84000,
+          "tolerance": 0,
+          "explanation": "40,000 + 20,000 + 30,000 − 6,000 deductible fee = **84,000**."
+        },
+        {
+          "id": "dni",
+          "label": "Distributable net income",
+          "answer": 63000,
+          "tolerance": 0,
+          "explanation": "84,000 + (10,000 − 1,000) − 30,000 = **63,000**."
+        },
+        {
+          "id": "dd",
+          "label": "Distribution deduction",
+          "answer": 54000,
+          "tolerance": 0,
+          "explanation": "63,000 − 9,000 tax-exempt portion = **54,000**."
+        },
+        {
+          "id": "ti",
+          "label": "Trust taxable income",
+          "answer": 29900,
+          "tolerance": 0,
+          "explanation": "84,000 − 54,000 − 100 = **29,900**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "m",
+      "prompt": "Museum.",
+      "rows": [
+        {
+          "id": "ubti",
+          "label": "UBTI after the specific deduction",
+          "answer": 49000,
+          "tolerance": 0,
+          "explanation": "Parking 50,000 − 1,000 = **49,000**; the magazine loss can't offset another business (silo rule); dividends and volunteer sales of donated goods are excluded."
+        },
+        {
+          "id": "tax",
+          "label": "Tax on UBTI",
+          "answer": 10290,
+          "tolerance": 0,
+          "explanation": "21% × 49,000 = **10,290**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Compliance.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Museum's annual information return",
+          "options": [
+            "Form 990-N",
+            "Form 990-EZ",
+            "Form 990"
+          ],
+          "answer": "Form 990",
+          "explanation": "Receipts and assets exceed the 990-EZ limits."
+        },
+        {
+          "id": "d2",
+          "label": "Museum's return for UBTI",
+          "options": [
+            "Form 990-T",
+            "Form 1120",
+            "Form 1041"
+          ],
+          "answer": "Form 990-T",
+          "explanation": "Gross UBI of $1,000 or more."
+        },
+        {
+          "id": "d3",
+          "label": "Who is taxed on the trust's capital gain?",
+          "options": [
+            "The beneficiary",
+            "The trust"
+          ],
+          "answer": "The trust",
+          "explanation": "Gains allocated to corpus aren't in DNI."
+        },
+        {
+          "id": "d4",
+          "label": "Trust's Form 1041 due date",
+          "options": [
+            "March 16, 2026",
+            "April 15, 2026",
+            "May 15, 2026"
+          ],
+          "answer": "April 15, 2026",
+          "explanation": "15th day of the 4th month."
+        }
+      ]
+    }
+  ]
+}

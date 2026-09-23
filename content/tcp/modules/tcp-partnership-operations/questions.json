@@ -1,0 +1,482 @@
+[
+  {
+    "id": "tcp-po-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which partnership item is **not** included in ordinary business income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Salaries paid to employees",
+        "explanation": "It's a page-1 deduction.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Cost of goods sold",
+        "explanation": "It's a page-1 item.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Long-term capital gain",
+        "explanation": "Correct. Capital gains are separately stated because partners apply their own rates and netting."
+      },
+      {
+        "id": "d",
+        "text": "Guaranteed payments",
+        "explanation": "They're deducted on page 1.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Capital gains are separately stated because partners apply their own rates and netting.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-chk1",
+    "pool": "lesson",
+    "stem": "Which item is separately stated on Schedule K?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "MACRS depreciation",
+        "explanation": "Included in ordinary business income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Employee wages",
+        "explanation": "Employee wages are an ordinary deduction.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Rent expense for the office",
+        "explanation": "Office rent is an ordinary deduction.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "§179 expense",
+        "explanation": "Correct. §179 is separately stated because the dollar limits apply at the partner level too."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§179 is separately stated because the dollar limits apply at the partner level too.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-chk2",
+    "pool": "lesson",
+    "stem": "A partner's basis before losses is $15,000 and her share of the loss is $25,000. What happens to the $10,000 excess?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's deducted and basis goes negative",
+        "explanation": "Basis can't be negative.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It's forfeited",
+        "explanation": "It carries forward.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It's suspended until she has basis again",
+        "explanation": "Correct. §704(d): losses above basis carry forward indefinitely."
+      },
+      {
+        "id": "d",
+        "text": "It's reclassified as a capital loss",
+        "explanation": "Character doesn't change.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§704(d): losses above basis carry forward indefinitely.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-01",
+    "pool": "practice",
+    "stem": "A partnership has gross receipts of $500,000, operating expenses of $200,000, a guaranteed payment to partner Kay of $50,000, and dividends of $10,000. What is ordinary business income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000",
+        "explanation": "Omits the guaranteed payment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$310,000",
+        "explanation": "Includes dividends and omits the guaranteed payment.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$260,000",
+        "explanation": "Includes dividends.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$250,000",
+        "explanation": "Correct. 500,000 − 200,000 − 50,000 = 250,000; dividends are separately stated."
+      }
+    ],
+    "answer": "d",
+    "explanation": "500,000 − 200,000 − 50,000 = 250,000; dividends are separately stated.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-02",
+    "pool": "practice",
+    "stem": "Kay (25% partner) receives a $50,000 guaranteed payment. Ordinary business income after the payment is $250,000. What ordinary income does Kay report from the partnership?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$62,500",
+        "explanation": "Omits the guaranteed payment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$75,000",
+        "explanation": "Applies 25% to income before the payment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$112,500",
+        "explanation": "Correct. 50,000 + 25% × 250,000."
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Omits her distributive share.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Guaranteed payment + distributive share of ordinary business income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-03",
+    "pool": "practice",
+    "stem": "A partnership reports an ordinary loss of $(20,000) after deducting a $60,000 guaranteed payment to partner Lee (50% partner). What does Lee report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60,000 ordinary income and $10,000 ordinary loss",
+        "explanation": "Correct. The guaranteed payment is income regardless of partnership results; he also takes 50% of the loss (subject to limits)."
+      },
+      {
+        "id": "b",
+        "text": "$40,000 net income only",
+        "explanation": "Guaranteed payments and distributive shares are reported separately.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$60,000 income; no loss",
+        "explanation": "He also shares the loss.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "No income because the partnership had a loss",
+        "explanation": "Guaranteed payments are income regardless.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The guaranteed payment is income regardless of partnership results; he also takes 50% of the loss (subject to limits).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-04",
+    "pool": "practice",
+    "stem": "A partner's beginning basis is $40,000. Her share: ordinary income $30,000, tax-exempt income $2,000, and $4,000 of nondeductible expenses; she received $50,000 of cash distributions. What is her ending basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$18,000",
+        "explanation": "Correct. 40,000 + 30,000 + 2,000 − 50,000 − 4,000."
+      },
+      {
+        "id": "b",
+        "text": "$16,000",
+        "explanation": "Omits the tax-exempt income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$22,000",
+        "explanation": "Omits the nondeductible expenses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$68,000",
+        "explanation": "Omits the distribution.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Tax-exempt income increases basis; nondeductible expenses and distributions decrease it.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-05",
+    "pool": "practice",
+    "stem": "Partners A (60%, calendar year) and B (40%, June 30 year) form a partnership with no business purpose for another year. What tax year must the partnership use?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "June 30",
+        "explanation": "The majority-interest partner has a calendar year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "September 30",
+        "explanation": "A §444 election would be needed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Any year it chooses",
+        "explanation": "The year is required unless an exception applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "December 31",
+        "explanation": "Correct. Majority-interest partners (more than 50%) with the same year → that year."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Majority-interest partners (more than 50%) with the same year → that year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-06",
+    "pool": "practice",
+    "stem": "When is a calendar-year partnership's 2025 Form 1065 due without extension?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 16, 2026",
+        "explanation": "Correct. March 15 is a Sunday."
+      },
+      {
+        "id": "b",
+        "text": "April 15, 2026",
+        "explanation": "That's for individuals and C corporations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "May 15, 2026",
+        "explanation": "That's Form 990.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "September 15, 2026",
+        "explanation": "That's the extended date.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "15th day of the 3rd month; the next business day when it falls on a weekend.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-07",
+    "pool": "practice",
+    "stem": "A limited partner who performs no services receives her distributive share of ordinary business income of $40,000. What is her net earnings from self-employment from the partnership?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Correct. §1402(a)(13): a limited partner's distributive share is excluded from SE income; only guaranteed payments for services count."
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Limited partners exclude their distributive share.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$36,940",
+        "explanation": "Applies the 92.35% factor to income that's excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "There's no 50% rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§1402(a)(13): a limited partner's distributive share is excluded from SE income; only guaranteed payments for services count.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-08",
+    "pool": "practice",
+    "stem": "A partnership agreement allocates all depreciation to one partner. When will the IRS respect the allocation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Always — partners can allocate items as they agree",
+        "explanation": "Allocations must have substantial economic effect.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "When it has substantial economic effect",
+        "explanation": "Correct. §704(b): special allocations need substantial economic effect; otherwise they follow the partners' interests."
+      },
+      {
+        "id": "c",
+        "text": "Only if the partner is a general partner",
+        "explanation": "Partner status isn't the test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Never — items must follow ownership percentages",
+        "explanation": "Special allocations are allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§704(b): special allocations need substantial economic effect; otherwise they follow the partners' interests.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-09",
+    "pool": "practice",
+    "stem": "A partner's share of partnership liabilities decreases by $15,000 during the year. How does this affect her outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect",
+        "explanation": "A decrease in liabilities is a deemed distribution.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Decreases basis by $15,000",
+        "explanation": "Correct. §752(b): a decrease in share of liabilities is treated as a cash distribution."
+      },
+      {
+        "id": "c",
+        "text": "Increases basis by $15,000",
+        "explanation": "Increases in share raise basis; decreases lower it.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Creates $15,000 of ordinary income",
+        "explanation": "Gain arises only if the deemed distribution exceeds basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§752(b): a decrease in share of liabilities is treated as a cash distribution.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-10",
+    "pool": "practice",
+    "stem": "Which item does **not** affect a partner's outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Share of tax-exempt interest",
+        "explanation": "Tax-exempt income increases basis.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Guaranteed payment received for services",
+        "explanation": "Correct. A guaranteed payment is income and an offsetting payment to the partner — it doesn't change the partner's basis."
+      },
+      {
+        "id": "c",
+        "text": "Share of nondeductible expenses",
+        "explanation": "Nondeductible expenses decrease basis.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Cash distribution",
+        "explanation": "Distributions decrease basis.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A guaranteed payment is income and an offsetting payment to the partner — it doesn't change the partner's basis.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-11",
+    "pool": "practice",
+    "stem": "A partner's share of a partnership's §1231 gain is $8,000. Where does it go?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Included in ordinary business income",
+        "explanation": "§1231 items are separately stated.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Separately stated on the K-1 and netted with the partner's other §1231 items",
+        "explanation": "Correct. §1231 netting and lookback apply at the partner level."
+      },
+      {
+        "id": "c",
+        "text": "Ignored until the partner sells the interest",
+        "explanation": "It's reported currently.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Always treated as long-term capital gain by the partnership",
+        "explanation": "Netting happens at the partner level.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1231 netting and lookback apply at the partner level.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

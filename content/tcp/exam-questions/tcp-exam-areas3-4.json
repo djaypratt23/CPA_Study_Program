@@ -1,0 +1,716 @@
+[
+  {
+    "id": "tcp-x3-01",
+    "moduleId": "tcp-entity-choice",
+    "pool": "exam",
+    "stem": "A two-owner business expects losses for several years, wants to allocate most depreciation to one owner, and plans to bring in a corporate investor. Which entity best fits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "S corporation",
+        "explanation": "No corporate owners and no special allocations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "C corporation",
+        "explanation": "Losses would be trapped.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "LLC taxed as a partnership",
+        "explanation": "Correct. Partnerships allow corporate partners, special allocations, and pass-through losses."
+      },
+      {
+        "id": "d",
+        "text": "Sole proprietorship",
+        "explanation": "There are two owners.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Partnerships allow corporate partners, special allocations, and pass-through losses.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x3-02",
+    "moduleId": "tcp-entity-choice",
+    "pool": "exam",
+    "stem": "A single-member LLC owned by a C corporation makes no election. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As an S corporation",
+        "explanation": "A corporation can't own an S corporation's stock (except a QSub).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a partnership",
+        "explanation": "A partnership needs two or more owners.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a separate C corporation",
+        "explanation": "Corporate status requires an election.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a division (disregarded) of the corporation",
+        "explanation": "Correct. Single-owner eligible entities default to disregarded status."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Single-owner eligible entities default to disregarded status.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x3-03",
+    "moduleId": "tcp-entity-choice",
+    "pool": "exam",
+    "stem": "Which statement about the §199A QBI deduction in entity planning is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It is available to C corporations",
+        "explanation": "It's for noncorporate taxpayers.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It applies to wages an S corporation pays its owner",
+        "explanation": "Wages aren't QBI.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It can reduce the top effective rate on pass-through business income to 29.6%",
+        "explanation": "Correct. 37% × (1 − 20%) = 29.6%."
+      },
+      {
+        "id": "d",
+        "text": "It expired after 2025",
+        "explanation": "It was made permanent by P.L. 119-21.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "37% × (1 − 20%) = 29.6%.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x3-04",
+    "moduleId": "tcp-formation-liquidation",
+    "pool": "exam",
+    "stem": "In a §351 exchange, D transfers property (basis $30,000; FMV $80,000) subject to a $50,000 liability for stock. The corporation assumes the liability. What gain does D recognize and what is her stock basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000 gain; $30,000 basis",
+        "explanation": "Liability relief reduces basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0 gain; $(20,000) basis",
+        "explanation": "Basis can't be negative; §357(c) applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$50,000 gain; $30,000 basis",
+        "explanation": "Only the excess over basis is gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$20,000 gain; $0 basis",
+        "explanation": "Correct. Gain = 50,000 − 30,000; basis = 30,000 + 20,000 − 50,000 = 0."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Gain = 50,000 − 30,000; basis = 30,000 + 20,000 − 50,000 = 0.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x3-05",
+    "moduleId": "tcp-formation-liquidation",
+    "pool": "exam",
+    "stem": "A shareholder's $70,000 loss on the sale of §1244 stock is reported by a single taxpayer. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000 ordinary; the rest carried forward",
+        "explanation": "That's the capital loss rule.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$70,000 ordinary",
+        "explanation": "Limited to $50,000 for single filers.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$50,000 ordinary; $20,000 capital",
+        "explanation": "Correct. §1244(b): ordinary loss up to $50,000 for single filers; the excess is capital."
+      },
+      {
+        "id": "d",
+        "text": "$70,000 capital",
+        "explanation": "§1244 allows ordinary treatment.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§1244(b): ordinary loss up to $50,000 for single filers; the excess is capital.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x3-06",
+    "moduleId": "tcp-formation-liquidation",
+    "pool": "exam",
+    "stem": "After a redemption, a shareholder owns 45% of the voting stock, down from 55%. No attribution applies. How is the redemption treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Substantially disproportionate — exchange",
+        "explanation": "45% exceeds 80% × 55% = 44%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Always capital gain",
+        "explanation": "Redemptions must qualify.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Complete termination",
+        "explanation": "She still owns shares.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A §301 distribution unless another test is met",
+        "explanation": "Correct. Needs < 50% AND < 44%; 45% fails the 80% test."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Needs < 50% AND < 44%; 45% fails the 80% test.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-x3-07",
+    "moduleId": "tcp-formation-liquidation",
+    "pool": "exam",
+    "stem": "In a §332 liquidation of a 100% subsidiary, the subsidiary has a $1 million NOL. What happens to the NOL?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It is lost",
+        "explanation": "Attributes carry over.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It is refunded",
+        "explanation": "NOLs aren't refunded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It carries over to the parent (subject to limits)",
+        "explanation": "Correct. §381 carries over tax attributes in a §332 liquidation."
+      },
+      {
+        "id": "d",
+        "text": "It must be used by the shareholders",
+        "explanation": "Attributes go to the parent corporation.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§381 carries over tax attributes in a §332 liquidation.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x3-08",
+    "moduleId": "tcp-multistate",
+    "pool": "exam",
+    "stem": "Company Q's only presence in State R is an employee who performs repairs on products sold to State R customers. Can State R impose its net income tax on Q?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No — P.L. 86-272 protects Q",
+        "explanation": "Repairs exceed solicitation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only if sales exceed $500,000",
+        "explanation": "Economic thresholds aren't needed with physical presence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No — one employee isn't nexus",
+        "explanation": "Physical presence of an employee creates nexus.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Yes — repair services exceed protected solicitation",
+        "explanation": "Correct. Non-solicitation activities remove P.L."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Non-solicitation activities remove P.L. 86-272 protection.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x3-09",
+    "moduleId": "tcp-multistate",
+    "pool": "exam",
+    "stem": "A company's State T factors: sales 10%, property 40%, payroll 30%. State T switches from an equally weighted three-factor formula to a single sales factor. By how many percentage points does the company's State T apportionment change?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It falls by 30 points",
+        "explanation": "Uses the property factor as the baseline.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It rises by 16.67 points",
+        "explanation": "Apportionment falls, not rises.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "It falls by 16.67 points",
+        "explanation": "Correct. From 26.67% to 10%."
+      },
+      {
+        "id": "d",
+        "text": "No change",
+        "explanation": "Weights change the result.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "(10 + 40 + 30) ÷ 3 = 26.67% → 10%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x3-10",
+    "moduleId": "tcp-multistate",
+    "pool": "exam",
+    "stem": "Which income is most likely allocated rather than apportioned?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Sales of inventory",
+        "explanation": "Business income is apportioned.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Interest on working capital",
+        "explanation": "Working capital interest is usually business income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Service revenue",
+        "explanation": "Operating revenue is apportioned.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Rent from a vacant lot held as an investment unrelated to the business",
+        "explanation": "Correct. Nonbusiness income, like rent on unrelated investment property, is allocated."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Nonbusiness income, like rent on unrelated investment property, is allocated.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x4-01",
+    "moduleId": "tcp-asset-dispositions",
+    "pool": "exam",
+    "stem": "Equipment (cost $50,000; depreciation $50,000, all bonus) is sold for $60,000 after 3 years. What is the character of the gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000 ordinary; $10,000 §1231",
+        "explanation": "Correct. Basis 0; gain 60,000; recapture 50,000."
+      },
+      {
+        "id": "b",
+        "text": "$60,000 ordinary",
+        "explanation": "Only depreciation is recaptured.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$60,000 §1231",
+        "explanation": "Bonus is recaptured.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$10,000 ordinary; $50,000 §1231",
+        "explanation": "The two amounts are reversed.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Basis 0; gain 60,000; recapture 50,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x4-02",
+    "moduleId": "tcp-asset-dispositions",
+    "pool": "exam",
+    "stem": "An individual's net §1231 gain is $25,000 for 2025. Net §1231 losses were $(10,000) in 2019 and $(8,000) in 2022, with no gains since. How much is ordinary?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$18,000",
+        "explanation": "The 2019 loss is outside the 5-year lookback.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$8,000",
+        "explanation": "Correct. Only losses from the 5 preceding years (2020–2024) count, so the 2019 loss is excluded: 8,000."
+      },
+      {
+        "id": "c",
+        "text": "$25,000",
+        "explanation": "Only prior losses are recaptured.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The lookback applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Only losses from the 5 preceding years (2020–2024) count, so the 2019 loss is excluded: 8,000.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-x4-03",
+    "moduleId": "tcp-asset-dispositions",
+    "pool": "exam",
+    "stem": "A C corporation sells a warehouse (straight-line depreciation $300,000) at a $500,000 gain. How much is ordinary income under §291?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60,000",
+        "explanation": "Correct. 20% × 300,000."
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Applies 20% to the gain instead.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$300,000",
+        "explanation": "That's full recapture.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "§291 applies to corporations.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "20% × lesser of 500,000 or 300,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x4-04",
+    "moduleId": "tcp-deferral-transactions",
+    "pool": "exam",
+    "stem": "An individual sells land (basis $90,000) for $300,000: $60,000 down in 2025 and $240,000 in 2027. No liabilities. How much gain is recognized in 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$42,000",
+        "explanation": "Correct. 70% × 60,000."
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "Only the gross profit share.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$210,000",
+        "explanation": "The installment method applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$18,000",
+        "explanation": "Uses 30% (basis ÷ price).",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gross profit % = 210,000 ÷ 300,000 = 70%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x4-05",
+    "moduleId": "tcp-deferral-transactions",
+    "pool": "exam",
+    "stem": "In a §1031 exchange, E gives property (basis $200,000; FMV $500,000) and $40,000 cash for property worth $540,000. What is E's recognized gain and new basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0; $240,000",
+        "explanation": "Correct. No boot received; basis = 200,000 + 40,000."
+      },
+      {
+        "id": "b",
+        "text": "$40,000; $240,000",
+        "explanation": "Boot given doesn't trigger gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0; $200,000",
+        "explanation": "Boot paid increases basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$300,000; $540,000",
+        "explanation": "Gain is deferred.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "No boot received; basis = 200,000 + 40,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x4-06",
+    "moduleId": "tcp-deferral-transactions",
+    "pool": "exam",
+    "stem": "A father sells land (basis $100,000) to his daughter for $70,000. She later sells it for $90,000. What is her recognized gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "The disallowed loss offsets her gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. §267(d): her 20,000 gain is reduced by the father's 30,000 disallowed loss (not below zero)."
+      },
+      {
+        "id": "c",
+        "text": "$10,000 loss",
+        "explanation": "Her gain can't become a loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 loss",
+        "explanation": "The father's loss is disallowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§267(d): her 20,000 gain is reduced by the father's 30,000 disallowed loss (not below zero).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x4-07",
+    "moduleId": "tcp-deferral-transactions",
+    "pool": "exam",
+    "stem": "Which transaction can use the installment method?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An individual's sale of a rental building with payments over 10 years",
+        "explanation": "Correct. Non-dealer sales of real property qualify."
+      },
+      {
+        "id": "b",
+        "text": "A dealer's sale of lots",
+        "explanation": "Dealer sales are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Sale of listed stock",
+        "explanation": "Publicly traded property is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Sale of depreciable property to a 60%-owned corporation",
+        "explanation": "§453(g) bars it for related depreciable property.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Non-dealer sales of real property qualify.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x4-08",
+    "moduleId": "tcp-cost-recovery",
+    "pool": "exam",
+    "stem": "A business places $4,600,000 of qualifying property in service in 2025 and has ample income. What is its maximum §179 deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,500,000",
+        "explanation": "The phase-out applies.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$1,900,000",
+        "explanation": "Correct. 2,500,000 − 600,000."
+      },
+      {
+        "id": "c",
+        "text": "$1,250,000",
+        "explanation": "That's the pre-2025 base amount.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Not fully phased out.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Reduced dollar for dollar by purchases over $4,000,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "tcp-x4-09",
+    "moduleId": "tcp-cost-recovery",
+    "pool": "exam",
+    "stem": "A company places $500,000 of 7-year property in service in November and $300,000 in March, electing out of bonus and not using §179. Which convention applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Half-year",
+        "explanation": "More than 40% was placed in service in Q4.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Mid-quarter",
+        "explanation": "Correct. 500,000 ÷ 800,000 = 62.5% in Q4."
+      },
+      {
+        "id": "c",
+        "text": "Mid-month",
+        "explanation": "That's for real property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Full-month",
+        "explanation": "Not a MACRS convention for personal property.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§168(d)(3): mid-quarter convention when more than 40% is placed in service in the last quarter.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x4-10",
+    "moduleId": "tcp-cost-recovery",
+    "pool": "exam",
+    "stem": "A residential rental building (cost $550,000, excluding land) is placed in service in July. Using the mid-month convention, what is first-year depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Omits the mid-month convention.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$9,167",
+        "explanation": "Correct. 20,000 × 5.5 ÷ 12."
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "Uses a half-year convention.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$14,103",
+        "explanation": "Uses 39 years with the wrong months.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "550,000 ÷ 27.5 = 20,000 per year; July → 5.5 months.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]

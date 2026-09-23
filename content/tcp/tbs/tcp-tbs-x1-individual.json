@@ -1,0 +1,116 @@
+{
+  "id": "tcp-tbs-x1-individual",
+  "section": "TCP",
+  "unitId": "tcp-u1",
+  "moduleIds": [
+    "tcp-individual-planning",
+    "tcp-stock-compensation",
+    "tcp-passive-rental"
+  ],
+  "pool": "exam",
+  "title": "Individual planning — Tom Reed",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Tom Reed is single. Use the exhibits to compute his 2025 results.",
+  "exhibits": [
+    {
+      "title": "2025 income and activities",
+      "content": "| Item | Amount |\n|---|---:|\n| Salary (excluding stock options) | 150,000 |\n| Qualified dividends | 12,000 |\n| Rental house (Tom actively participates): net loss | (18,000) |\n\nOn June 1, 2025 Tom exercised **nonqualified** options on 1,000 shares at a **$20** strike when FMV was **$50**. He still holds the shares."
+    },
+    {
+      "title": "Prior year and projections",
+      "content": "- 2024 AGI: **$160,000**; 2024 tax: **$30,000**\n- Expected 2025 total tax: **$40,000**\n- No passive income; no suspended losses"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "opt",
+          "label": "Ordinary income from the option exercise",
+          "answer": 30000,
+          "tolerance": 0,
+          "explanation": "(50 − 20) × 1,000 = **30,000**, reported as wages."
+        },
+        {
+          "id": "basis",
+          "label": "Tom's basis in the option shares",
+          "answer": 50000,
+          "tolerance": 0,
+          "explanation": "Strike 20,000 + 30,000 income = **50,000**."
+        },
+        {
+          "id": "magi",
+          "label": "MAGI for the rental allowance",
+          "answer": 192000,
+          "tolerance": 0,
+          "explanation": "150,000 + 30,000 + 12,000 = **192,000**."
+        },
+        {
+          "id": "rent",
+          "label": "Rental loss deductible in 2025",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "MAGI exceeds $150,000, so the special allowance is **0**; the 18,000 is suspended."
+        },
+        {
+          "id": "niit",
+          "label": "Net investment income tax",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "MAGI (192,000) is under $200,000: **0**."
+        },
+        {
+          "id": "rap",
+          "label": "Required annual payment for estimated tax purposes",
+          "answer": 33000,
+          "tolerance": 0,
+          "explanation": "Lesser of 90% × 40,000 = 36,000 or 110% × 30,000 = **33,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Planning questions.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "If Tom sells the option shares in 2027 for $45 per share, the result is",
+          "options": [
+            "$5,000 long-term capital loss",
+            "$25,000 long-term capital gain",
+            "$5,000 ordinary loss"
+          ],
+          "answer": "$5,000 long-term capital loss",
+          "explanation": "Basis is $50 per share."
+        },
+        {
+          "id": "d2",
+          "label": "The suspended rental loss can be used",
+          "options": [
+            "Only against wages",
+            "Against future passive income or on a taxable disposition",
+            "Never"
+          ],
+          "answer": "Against future passive income or on a taxable disposition",
+          "explanation": "§469(b) and (g)."
+        },
+        {
+          "id": "d3",
+          "label": "Had the options been ISOs held past year-end, the $30,000 spread would be",
+          "options": [
+            "Wages",
+            "An AMT adjustment",
+            "Capital gain"
+          ],
+          "answer": "An AMT adjustment",
+          "explanation": "§56(b)(3)."
+        }
+      ]
+    }
+  ]
+}

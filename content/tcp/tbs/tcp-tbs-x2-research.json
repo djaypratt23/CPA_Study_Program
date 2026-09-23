@@ -1,0 +1,121 @@
+{
+  "id": "tcp-tbs-x2-research",
+  "section": "TCP",
+  "unitId": "tcp-u5",
+  "moduleIds": [
+    "tcp-s-corp-compliance",
+    "tcp-trusts-estates",
+    "tcp-exempt-organizations"
+  ],
+  "pool": "exam",
+  "title": "Research and entity deadlines",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "A client asks about revoking an S election and about filing deadlines for several related entities.",
+  "exhibits": [
+    {
+      "title": "Client question",
+      "content": "Maple, Inc., a calendar-year S corporation, wants to revoke its S election effective January 1, 2025. Shareholders owning 70% of the stock sign the revocation on **February 20, 2025** and don't specify an effective date."
+    },
+    {
+      "title": "Related entities (calendar year, 2025 returns, no extensions)",
+      "content": "- The Maple Family Trust (complex trust)\n- Maple Foundation (§501(c)(3) public charity; gross receipts $900,000)\n- Maple Ventures LLC (three members; no election)\n- Maple Holdings, Inc. (C corporation)"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) determines when Maple's revocation takes effect?",
+      "excerpts": [
+        {
+          "id": "a",
+          "citation": "IRC §1362(b)(1) (paraphrase)",
+          "text": "An election may be made for a tax year at any time during the preceding tax year or on or before the 15th day of the 3rd month of the tax year."
+        },
+        {
+          "id": "b",
+          "citation": "IRC §1362(d)(1)(C) (paraphrase)",
+          "text": "A revocation made on or before the 15th day of the 3rd month of the tax year is effective on the first day of that year; a later revocation is effective on the first day of the following year, unless the revocation specifies a prospective date."
+        },
+        {
+          "id": "c",
+          "citation": "IRC §1362(d)(3) (paraphrase)",
+          "text": "An election terminates if the corporation has accumulated earnings and profits at the close of each of 3 consecutive years and passive investment income exceeds 25% of gross receipts in each of those years."
+        },
+        {
+          "id": "d",
+          "citation": "IRC §1368(c) (paraphrase)",
+          "text": "Distributions by an S corporation with accumulated earnings and profits are applied first against the accumulated adjustments account, then against earnings and profits."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The revocation was made by the 15th day of the 3rd month and has majority consent, so it is effective January 1, 2025 under §1362(d)(1)(C)."
+    },
+    {
+      "kind": "dropdown",
+      "id": "dd",
+      "prompt": "Original due dates for the 2025 returns.",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Maple Family Trust — Form 1041",
+          "answer": "April 15, 2026",
+          "explanation": "15th day of the 4th month."
+        },
+        {
+          "id": "r2",
+          "label": "Maple Foundation — Form 990",
+          "answer": "May 15, 2026",
+          "explanation": "15th day of the 5th month."
+        },
+        {
+          "id": "r3",
+          "label": "Maple Ventures LLC — Form 1065",
+          "answer": "March 16, 2026",
+          "explanation": "15th day of the 3rd month (March 15 is a Sunday)."
+        },
+        {
+          "id": "r4",
+          "label": "Maple Holdings — Form 1120",
+          "answer": "April 15, 2026",
+          "explanation": "15th day of the 4th month."
+        }
+      ],
+      "options": [
+        "March 16, 2026",
+        "April 15, 2026",
+        "May 15, 2026"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d2",
+      "prompt": "Other questions.",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Consent needed to revoke an S election",
+          "options": [
+            "All shareholders",
+            "More than 50% of shares",
+            "The board of directors only"
+          ],
+          "answer": "More than 50% of shares",
+          "explanation": "§1362(d)(1)(B)."
+        },
+        {
+          "id": "q2",
+          "label": "Maple Foundation's annual return",
+          "options": [
+            "Form 990-N",
+            "Form 990-EZ",
+            "Form 990"
+          ],
+          "answer": "Form 990",
+          "explanation": "Receipts exceed $200,000."
+        }
+      ]
+    }
+  ]
+}

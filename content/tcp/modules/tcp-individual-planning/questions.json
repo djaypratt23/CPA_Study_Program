@@ -1,0 +1,485 @@
+[
+  {
+    "id": "tcp-ip-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a client's income will be much higher next year because of a large bonus. Generally, what should she do with deductible expenses she controls?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Pay them this year",
+        "explanation": "Deductions are worth more in the higher-rate year.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "It makes no difference",
+        "explanation": "The marginal rate differs between years.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Delay them to next year when her rate is higher",
+        "explanation": "Correct. A deduction saves tax at the marginal rate, so it is worth more in the higher-rate year."
+      },
+      {
+        "id": "d",
+        "text": "Never deduct them",
+        "explanation": "That forfeits the benefit.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A deduction saves tax at the marginal rate, so it is worth more in the higher-rate year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ip-chk1",
+    "pool": "lesson",
+    "stem": "Prior-year AGI was $120,000 and prior-year tax was $18,000. Current-year tax will be $30,000. What is the required annual payment to avoid a penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$27,000",
+        "explanation": "90% of current-year tax is larger than the prior-year safe harbor.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "The safe harbors allow less than 100% of current tax.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$19,800",
+        "explanation": "110% applies only when prior-year AGI exceeded $150,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$18,000",
+        "explanation": "Correct. Lesser of 90% × 30,000 = 27,000 or 100% × 18,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "AGI of $120,000 uses the 100% prior-year safe harbor: lesser of $27,000 or $18,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ip-chk2",
+    "pool": "lesson",
+    "stem": "Bunching itemized deductions produces the most benefit when a taxpayer's annual itemized deductions are:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Close to the standard deduction",
+        "explanation": "Correct. Bunching lets the taxpayer itemize in one year and take the standard deduction in the other."
+      },
+      {
+        "id": "b",
+        "text": "Far above the standard deduction every year",
+        "explanation": "They already itemize every year; bunching adds little.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Zero",
+        "explanation": "There's nothing to bunch.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Made up only of state income taxes",
+        "explanation": "SALT timing is limited by the cap and payment rules.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Bunching lets the taxpayer itemize in one year and take the standard deduction in the other.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ip-01",
+    "pool": "practice",
+    "stem": "Kim's 2024 AGI was $180,000 and her 2024 tax was $30,000. Her 2025 tax will be $50,000. What required annual payment avoids the underpayment penalty for 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "Prior-year AGI over $150,000 requires 110%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$45,000",
+        "explanation": "The prior-year safe harbor is lower.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$33,000",
+        "explanation": "Correct. Lesser of 90% × 50,000 = 45,000 or 110% × 30,000 = 33,000."
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "The safe harbors allow less.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "High-income taxpayers use 110% of prior-year tax.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ip-02",
+    "pool": "practice",
+    "stem": "A taxpayer owes $900 when filing after withholding. What underpayment penalty applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "None — the balance due is under $1,000",
+        "explanation": "Correct. §6654(e)(1): no penalty if tax due after withholding is less than $1,000."
+      },
+      {
+        "id": "b",
+        "text": "0.5% per month",
+        "explanation": "That's the failure-to-pay rate, which applies only if the balance isn't paid by the due date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "20% accuracy penalty",
+        "explanation": "Not related to estimated tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Interest only",
+        "explanation": "No estimated-tax penalty applies below $1,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§6654(e)(1): no penalty if tax due after withholding is less than $1,000.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ip-03",
+    "pool": "practice",
+    "stem": "A self-employed client earned most of his 2025 income in December. Which method most likely reduces his estimated-tax penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Regular installment method",
+        "explanation": "Assumes income is earned evenly.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Filing an extension",
+        "explanation": "An extension doesn't extend payment deadlines.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Paying the full amount on January 15",
+        "explanation": "Earlier installments would still be short under the regular method.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Annualized income installment method",
+        "explanation": "Correct. The annualized method matches required installments to when income was actually earned."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The annualized method matches required installments to when income was actually earned.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ip-04",
+    "pool": "practice",
+    "stem": "Single taxpayer: wages $180,000, dividends $30,000, and long-term capital gains $20,000. What is the NIIT?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,140",
+        "explanation": "Correct. 3.8% × lesser of 50,000 NII or (230,000 − 200,000) = 30,000."
+      },
+      {
+        "id": "b",
+        "text": "$1,900",
+        "explanation": "Uses total NII of $50,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$8,740",
+        "explanation": "Applies 3.8% to all income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "MAGI exceeds $200,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "MAGI = 230,000; excess over $200,000 = 30,000 < NII of 50,000 → 3.8% × 30,000 = **$1,140**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ip-05",
+    "pool": "practice",
+    "stem": "Which income is **not** net investment income for the 3.8% NIIT?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dividends from a mutual fund",
+        "explanation": "Dividends are NII.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Rent from a passive rental property",
+        "explanation": "Passive rents are NII.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Distributions from a traditional IRA",
+        "explanation": "Correct. Qualified retirement plan and IRA distributions are excluded from NII."
+      },
+      {
+        "id": "d",
+        "text": "Gain on sale of stock",
+        "explanation": "Capital gains are NII.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Qualified retirement plan and IRA distributions are excluded from NII.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ip-06",
+    "pool": "practice",
+    "stem": "A married couple filing jointly has wages of $150,000 (spouse A) and $160,000 (spouse B). How much additional Medicare tax do they owe?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Combined wages exceed the MFJ threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$2,790",
+        "explanation": "Applies 0.9% to all wages.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$990",
+        "explanation": "Uses the $200,000 threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$540",
+        "explanation": "Correct. 0.9% × (310,000 − 250,000)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "MFJ threshold is $250,000 of combined wages; neither employer withholds (each is under $200,000), so it's paid with the return.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ip-07",
+    "pool": "practice",
+    "stem": "A 15-year-old has $6,000 of interest income and no earned income in 2025. How much of it is taxed at the parents' rate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,300",
+        "explanation": "Correct. 6,000 − 2,700."
+      },
+      {
+        "id": "b",
+        "text": "$6,000",
+        "explanation": "The first $2,700 isn't taxed at the parents' rate.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$4,650",
+        "explanation": "Subtracts only $1,350.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The kiddie tax applies to children under 19.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "2025 kiddie tax threshold: $2,700 ($1,350 standard deduction + $1,350 at the child's rate).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ip-08",
+    "pool": "practice",
+    "stem": "A client age 72 must take a $40,000 RMD and plans to give $40,000 to charity. She takes the standard deduction. What is the best approach?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Take the RMD in cash and donate it",
+        "explanation": "Increases AGI; no deduction benefit because she doesn't itemize.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Make a qualified charitable distribution from the IRA directly to the charity",
+        "explanation": "Correct. A QCD satisfies the RMD and is excluded from income — better than a deduction she can't use."
+      },
+      {
+        "id": "c",
+        "text": "Skip the RMD and donate from savings",
+        "explanation": "Missing an RMD triggers an excise tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Convert the IRA to a Roth",
+        "explanation": "Conversion is taxable and doesn't satisfy the RMD.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A QCD satisfies the RMD and is excluded from income — better than a deduction she can't use.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ip-09",
+    "pool": "practice",
+    "stem": "A single taxpayer expects to move from the 24% bracket in 2025 to the 35% bracket in 2026. Which action most likely reduces total tax over the two years?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accelerate a deductible charitable gift into 2025",
+        "explanation": "Deductions are worth more in 2026.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Accelerate a bonus into 2025",
+        "explanation": "Correct. When rates will rise, pull income into the lower-rate year and push deductions into the higher-rate year."
+      },
+      {
+        "id": "c",
+        "text": "Defer a capital gain into 2026",
+        "explanation": "Gain rates may rise with income.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Delay a Roth conversion to 2026",
+        "explanation": "Converting at the lower rate is better.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "When rates will rise, pull income into the lower-rate year and push deductions into the higher-rate year.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ip-10",
+    "pool": "practice",
+    "stem": "In 2025, a married couple filing jointly with MAGI of $300,000 pays $45,000 of state income and property taxes. What is their SALT itemized deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "That's the pre-2025 cap.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Correct. MAGI is under $500,000, so the full $40,000 cap applies."
+      },
+      {
+        "id": "c",
+        "text": "$45,000",
+        "explanation": "Deduction is capped.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "That's the MFS cap.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "P.L. 119-21 raised the SALT cap to $40,000 for 2025, reduced only when MAGI exceeds $500,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date for 2025. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "tcp-ip-11",
+    "pool": "practice",
+    "stem": "Which strategy lets a taxpayer claim a large charitable deduction now while recommending grants to charities over several years?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Qualified charitable distribution",
+        "explanation": "A QCD isn't a deduction and goes straight to a charity.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Contribution to a donor-advised fund",
+        "explanation": "Correct. A donor-advised fund contribution is deductible when made; grants can be recommended later."
+      },
+      {
+        "id": "c",
+        "text": "Gift to a family member",
+        "explanation": "Not a charitable deduction.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Pledge to a charity",
+        "explanation": "Pledges aren't deductible until paid.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A donor-advised fund contribution is deductible when made; grants can be recommended later.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

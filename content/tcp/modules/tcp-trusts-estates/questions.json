@@ -1,0 +1,447 @@
+[
+  {
+    "id": "tcp-te-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a trust distributes all of its interest income to its beneficiary. Who pays the tax on that income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The trust",
+        "explanation": "It deducts the distribution.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Neither",
+        "explanation": "The income is taxed once, to the beneficiary.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Both",
+        "explanation": "DNI prevents double taxation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The beneficiary",
+        "explanation": "Correct. The distribution deduction shifts the tax to the beneficiary."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The distribution deduction shifts the tax to the beneficiary.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-chk1",
+    "pool": "lesson",
+    "stem": "In computing DNI for a trust that allocates capital gains to corpus and doesn't distribute them, capital gains are:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Included",
+        "explanation": "Gains allocated to corpus are excluded from DNI.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Included at 50%",
+        "explanation": "No partial inclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Included only if long-term",
+        "explanation": "Holding period doesn't matter.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Excluded",
+        "explanation": "Correct. §643(a)(3): gains allocated to corpus and not distributed are excluded from DNI and taxed to the trust."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§643(a)(3): gains allocated to corpus and not distributed are excluded from DNI and taxed to the trust.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-chk2",
+    "pool": "lesson",
+    "stem": "What does the 65-day election allow?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Distributions within 65 days after year-end to be treated as made in the prior year",
+        "explanation": "Correct. §663(b) lets the trustee manage DNI after year-end."
+      },
+      {
+        "id": "b",
+        "text": "A trust to choose a fiscal year",
+        "explanation": "Only estates may choose a fiscal year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "An extension to file Form 1041",
+        "explanation": "That's Form 7004.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Grantor trust status",
+        "explanation": "Grantor status depends on retained powers.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§663(b) lets the trustee manage DNI after year-end.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-01",
+    "pool": "practice",
+    "stem": "What is the personal exemption for a complex trust?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$600",
+        "explanation": "That's for estates.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$300",
+        "explanation": "That's for simple trusts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$100",
+        "explanation": "Correct. §642(b): estates $600; simple trusts $300; other trusts $100."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A small exemption applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§642(b): estates $600; simple trusts $300; other trusts $100.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-02",
+    "pool": "practice",
+    "stem": "A simple trust has taxable interest of $20,000 and trustee fees of $2,000 allocated to income. It distributes accounting income of $18,000. What is the trust's taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Correct. 18,000 − 18,000 deduction; the $300 exemption can't create a loss."
+      },
+      {
+        "id": "b",
+        "text": "$17,700",
+        "explanation": "Omits the distribution deduction.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$2,000",
+        "explanation": "The fees are deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$(300)",
+        "explanation": "Taxable income isn't negative here.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Income 20,000 − fees 2,000 = 18,000 = DNI = distribution deduction.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-03",
+    "pool": "practice",
+    "stem": "A trust has 2025 taxable income of $20,000 (all ordinary). Which rate applies to its last dollar of income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "24%",
+        "explanation": "The 37% bracket begins at $15,650 for trusts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "35%",
+        "explanation": "That bracket ends at $15,650.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "37%",
+        "explanation": "Correct. Trusts reach the top bracket at $15,650 (2025)."
+      },
+      {
+        "id": "d",
+        "text": "21%",
+        "explanation": "That's the corporate rate.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Trusts reach the top bracket at $15,650 (2025).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-04",
+    "pool": "practice",
+    "stem": "A complex trust has DNI of $40,000, including $8,000 of net tax-exempt interest. It distributes $40,000. What is the distribution deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "The tax-exempt portion isn't deductible.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$8,000",
+        "explanation": "That's the tax-exempt part.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$32,000",
+        "explanation": "Correct. §661(c): no deduction for the tax-exempt portion of the distribution."
+      },
+      {
+        "id": "d",
+        "text": "$39,900",
+        "explanation": "The exemption isn't part of the distribution deduction.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§661(c): no deduction for the tax-exempt portion of the distribution.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-05",
+    "pool": "practice",
+    "stem": "Which trust's income is taxed to the grantor?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An irrevocable trust in which the grantor retained no powers",
+        "explanation": "Taxed to the trust or beneficiaries.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A charitable remainder trust",
+        "explanation": "It is generally tax-exempt.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A testamentary trust created by a will",
+        "explanation": "The grantor is deceased.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A revocable living trust",
+        "explanation": "Correct. A revocable trust is a grantor trust (§676)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A revocable trust is a grantor trust (§676).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-06",
+    "pool": "practice",
+    "stem": "When is Form 1041 due for a calendar-year 2025 trust, without extension?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 16, 2026",
+        "explanation": "That's the partnership date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "April 15, 2026",
+        "explanation": "Correct. 15th day of the 4th month after year-end."
+      },
+      {
+        "id": "c",
+        "text": "May 15, 2026",
+        "explanation": "That's Form 990.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Nine months after death",
+        "explanation": "That's the estate tax return.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "15th day of the 4th month after year-end.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-07",
+    "pool": "practice",
+    "stem": "An estate's executor is choosing a tax year. What planning opportunity is available to estates but not most trusts?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A fiscal year that can defer beneficiaries' income",
+        "explanation": "Correct. §644 requires trusts to use a calendar year; estates may choose a fiscal year."
+      },
+      {
+        "id": "b",
+        "text": "A $1,000 exemption",
+        "explanation": "The estate exemption is $600.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Exemption from the NIIT",
+        "explanation": "Estates can owe NIIT.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No filing requirement",
+        "explanation": "Estates file Form 1041 at $600 of gross income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§644 requires trusts to use a calendar year; estates may choose a fiscal year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-08",
+    "pool": "practice",
+    "stem": "A trust's beneficiary is in the 12% bracket; the trust will have $30,000 of undistributed interest taxed at up to 37%. The trustee has discretion to distribute. What is the most tax-efficient action?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accumulate the income in the trust",
+        "explanation": "Trust brackets are compressed.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Distribute the income, possibly within 65 days after year-end",
+        "explanation": "Correct. Distribution shifts income to the beneficiary's lower bracket."
+      },
+      {
+        "id": "c",
+        "text": "Convert the income to corpus",
+        "explanation": "Accounting allocation doesn't avoid tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Invest in growth stocks next year",
+        "explanation": "Doesn't address this year's income.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Distribution shifts income to the beneficiary's lower bracket.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-09",
+    "pool": "practice",
+    "stem": "A trust's gross income is $500 and it has no taxable income. Must it file Form 1041?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes — all trusts file every year",
+        "explanation": "Filing depends on thresholds.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No, unless a beneficiary is a nonresident alien",
+        "explanation": "Correct. Form 1041 is required with gross income of $600 or more, any taxable income, or a nonresident alien beneficiary."
+      },
+      {
+        "id": "c",
+        "text": "Yes, because it has any income",
+        "explanation": "The threshold is $600 of gross income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only if it made distributions",
+        "explanation": "Distributions aren't the test.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Form 1041 is required with gross income of $600 or more, any taxable income, or a nonresident alien beneficiary.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-10",
+    "pool": "practice",
+    "stem": "Trust DNI is $30,000: $18,000 of interest and $12,000 of qualified dividends. It distributes $15,000 to a single beneficiary. What does the beneficiary report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000 of interest",
+        "explanation": "Distributions carry the character of DNI proportionately.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$9,000 of interest and $6,000 of qualified dividends",
+        "explanation": "Correct. Each class of income is distributed proportionately: 60% interest, 40% dividends."
+      },
+      {
+        "id": "c",
+        "text": "$15,000 of qualified dividends",
+        "explanation": "Proportionate character applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "Limited to what is distributed.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Each class of income is distributed proportionately: 60% interest, 40% dividends.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]

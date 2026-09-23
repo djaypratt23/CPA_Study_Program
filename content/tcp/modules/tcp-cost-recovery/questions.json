@@ -1,0 +1,456 @@
+[
+  {
+    "id": "tcp-cr2-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: in what order are §179, bonus depreciation, and regular MACRS applied?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "MACRS, bonus, §179",
+        "explanation": "§179 comes first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Taxpayer's choice",
+        "explanation": "The order is fixed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Bonus, §179, MACRS",
+        "explanation": "§179 is applied before bonus.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "§179, bonus, MACRS",
+        "explanation": "Correct. §179 reduces basis first; bonus applies to the remainder; MACRS to what's left."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§179 reduces basis first; bonus applies to the remainder; MACRS to what's left.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr2-chk1",
+    "pool": "lesson",
+    "stem": "A business places $4,300,000 of equipment in service in 2025. What is its maximum §179 deduction (ample income)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,200,000",
+        "explanation": "Correct. 2,500,000 − (4,300,000 − 4,000,000)."
+      },
+      {
+        "id": "b",
+        "text": "$2,500,000",
+        "explanation": "The phase-out applies.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$1,250,000",
+        "explanation": "That's the pre-2025 limit, before indexing.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The phase-out isn't complete.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "P.L. 119-21: $2,500,000 limit reduced by purchases over $4,000,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "tcp-cr2-chk2",
+    "pool": "lesson",
+    "stem": "Which statement about the §179 business income limit is true?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "§179 can create a net operating loss",
+        "explanation": "It's limited to business taxable income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The limit also applies to bonus depreciation",
+        "explanation": "Bonus isn't income-limited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Disallowed §179 carries forward",
+        "explanation": "Correct. §179(b)(3): the deduction can't exceed taxable income from active trades or businesses; excess carries forward."
+      },
+      {
+        "id": "d",
+        "text": "Excess §179 is lost",
+        "explanation": "It carries forward indefinitely.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§179(b)(3): the deduction can't exceed taxable income from active trades or businesses; excess carries forward.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr2-01",
+    "pool": "practice",
+    "stem": "A 5-year asset costing $50,000 is placed in service in May 2025. The owner elects out of bonus and doesn't use §179. Half-year convention applies. What is 2025 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Correct. 20% × 50,000."
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Omits the half-year convention.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "Uses straight-line with half-year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$6,667",
+        "explanation": "Uses a mid-quarter rate.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "200% DB, 5-year, half-year → 20% in year 1.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-02",
+    "pool": "practice",
+    "stem": "Equipment acquired and placed in service in March 2025 (after January 19). What bonus depreciation percentage applies absent an election out?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "40%",
+        "explanation": "That's for property acquired before January 20, 2025.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "60%",
+        "explanation": "That was the 2024 rate.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "100%",
+        "explanation": "Correct. P.L. 119-21 restored 100% bonus for property acquired after January 19, 2025."
+      },
+      {
+        "id": "d",
+        "text": "80%",
+        "explanation": "That was the 2023 rate.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "P.L. 119-21 restored 100% bonus for property acquired after January 19, 2025.",
+    "skill": "remembering",
+    "difficulty": 2,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "tcp-cr2-03",
+    "pool": "practice",
+    "stem": "A business with $80,000 of business taxable income (before §179) elects $120,000 of §179 expense. What is the 2025 deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "Limited by business income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Deduction allowed up to income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$80,000; $40,000 is lost",
+        "explanation": "Excess carries forward.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$80,000; $40,000 carries forward",
+        "explanation": "Correct. §179 is limited to business taxable income; the excess carries forward."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§179 is limited to business taxable income; the excess carries forward.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-04",
+    "pool": "practice",
+    "stem": "A nonresidential building (cost $3,900,000, excluding land) is placed in service on January 5. Using straight-line over 39 years with the mid-month convention, what is year-1 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$95,833",
+        "explanation": "Correct. 100,000 × 11.5 ÷ 12."
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Omits the mid-month convention.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Uses a half-year convention.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$141,818",
+        "explanation": "Uses 27.5 years.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Placed in service in January → 11.5 months: 3,900,000 ÷ 39 × 11.5 ÷ 12 = 95,833.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-05",
+    "pool": "practice",
+    "stem": "A car is used 40% for business. Which method is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "§179 expensing",
+        "explanation": "Business use must exceed 50%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "100% bonus depreciation",
+        "explanation": "Business use must exceed 50%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Alternative depreciation system (straight-line)",
+        "explanation": "Correct. §280F(b): listed property with 50% or less business use must use ADS."
+      },
+      {
+        "id": "d",
+        "text": "200% declining balance MACRS",
+        "explanation": "Requires more than 50% business use.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§280F(b): listed property with 50% or less business use must use ADS.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr2-06",
+    "pool": "practice",
+    "stem": "A company buys a business and allocates $600,000 to goodwill on July 1, 2025. What is the 2025 amortization?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Doesn't prorate for the partial year.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Acquired goodwill is amortizable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$600,000",
+        "explanation": "Goodwill isn't expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Correct. 600,000 ÷ 15 × 6 ÷ 12."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§197: 15-year straight-line from the month acquired (6 months in 2025).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-07",
+    "pool": "practice",
+    "stem": "A new business incurs $53,000 of start-up costs and begins operations on April 1, 2025. What is the 2025 deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Also amortize the remainder.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$4,550",
+        "explanation": "Correct. (5,000 − 3,000) + (53,000 − 2,000) ÷ 180 × 9."
+      },
+      {
+        "id": "c",
+        "text": "$53,000",
+        "explanation": "Start-up costs are limited.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$2,550",
+        "explanation": "Omits the $2,000 immediate deduction.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Immediate deduction 5,000 − 3,000 = 2,000; amortize 51,000 ÷ 180 × 9 months = 2,550; total 4,550.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-08",
+    "pool": "practice",
+    "stem": "A calendar-year corporation pays $500,000 of domestic research wages in 2025. How is the cost treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Amortized over 5 years",
+        "explanation": "That was the 2022–2024 rule for domestic R&E.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Deducted currently under §174A",
+        "explanation": "Correct. P.L. 119-21 added §174A: domestic research is deductible for tax years beginning after 2024."
+      },
+      {
+        "id": "c",
+        "text": "Amortized over 15 years",
+        "explanation": "That's for foreign research.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Capitalized with no recovery until disposal",
+        "explanation": "R&E is recoverable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "P.L. 119-21 added §174A: domestic research is deductible for tax years beginning after 2024.",
+    "skill": "remembering",
+    "difficulty": 2,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "tcp-cr2-09",
+    "pool": "practice",
+    "stem": "A profitable business in the 21% bracket expects to be subject to much higher effective rates in 3 years. It buys equipment eligible for 100% bonus. What should it consider?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Always take 100% bonus",
+        "explanation": "Timing of deductions has value, but the rate matters.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Electing out of bonus so more depreciation falls in higher-rate years",
+        "explanation": "Correct. Deferring deductions can increase their value when future rates are higher — compare the present value of the tax saved."
+      },
+      {
+        "id": "c",
+        "text": "Deducting nothing now or later",
+        "explanation": "Depreciation can't be forgone like that.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Treating the equipment as inventory",
+        "explanation": "Equipment used in the business isn't inventory.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Deferring deductions can increase their value when future rates are higher — compare the present value of the tax saved.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr2-10",
+    "pool": "practice",
+    "stem": "Which statement correctly contrasts §179 with bonus depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Both are limited to business taxable income",
+        "explanation": "Only §179 is income-limited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "§179 can be elected asset by asset; bonus applies to all property in a class unless the taxpayer elects out for that class",
+        "explanation": "Correct. §179 offers asset-by-asset flexibility within dollar and income limits; bonus is class-wide and unlimited."
+      },
+      {
+        "id": "c",
+        "text": "Bonus depreciation has a dollar cap",
+        "explanation": "Bonus has no dollar cap.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "§179 can create an NOL",
+        "explanation": "§179 can't create a loss.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§179 offers asset-by-asset flexibility within dollar and income limits; bonus is class-wide and unlimited.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

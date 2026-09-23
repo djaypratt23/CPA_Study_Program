@@ -1,0 +1,448 @@
+[
+  {
+    "id": "tcp-cc-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: on Schedule M-1, federal income tax expense recorded on the books is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Subtracted from book income",
+        "explanation": "It reduced book income, so it's added back.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Ignored",
+        "explanation": "It is a reconciling item.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Added back to book income",
+        "explanation": "Correct. Federal income tax isn't deductible, so it is added back."
+      },
+      {
+        "id": "d",
+        "text": "Deducted twice",
+        "explanation": "It isn't deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Federal income tax isn't deductible, so it is added back.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-chk1",
+    "pool": "lesson",
+    "stem": "Rent for next year received in advance and recorded as unearned revenue on the books is, on Schedule M-1:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Subtracted",
+        "explanation": "It's taxable now but not in book income.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Reported on Schedule M-2 only",
+        "explanation": "It's a book-tax difference for M-1.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Ignored until earned",
+        "explanation": "Prepaid rent is taxable when received.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Added",
+        "explanation": "Correct. Prepaid rent is income subject to tax not recorded on the books — an M-1 addition."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Prepaid rent is income subject to tax not recorded on the books — an M-1 addition.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-chk2",
+    "pool": "lesson",
+    "stem": "A calendar-year corporation with 2025 tax of $80,000 and 2024 tax (12-month year) of $60,000 has never had taxable income over $1 million. What is the minimum first installment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Uses current-year tax, which is higher.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "That's the annual amount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Correct. 25% × lesser of 60,000 or 80,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Estimates are required at $500 of tax.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A small corporation may base all installments on 100% of prior-year tax.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-01",
+    "pool": "practice",
+    "stem": "Which item is subtracted on Schedule M-1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Excess of capital losses over capital gains",
+        "explanation": "Nondeductible capital losses are added back.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Federal income tax expense",
+        "explanation": "Tax expense is added back.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Premiums on key-person life insurance (corporation beneficiary)",
+        "explanation": "Nondeductible premiums are added back.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Tax-exempt interest recorded on the books",
+        "explanation": "Correct. Income on books not subject to tax is subtracted."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Income on books not subject to tax is subtracted.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-02",
+    "pool": "practice",
+    "stem": "Book income is $400,000. Book depreciation is $50,000 and tax depreciation is $80,000; the books include $10,000 of municipal interest and $6,000 of fines. What is taxable income before special deductions (ignore income tax expense)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$366,000",
+        "explanation": "Correct. 400,000 − 30,000 − 10,000 + 6,000."
+      },
+      {
+        "id": "b",
+        "text": "$426,000",
+        "explanation": "Adds the depreciation difference.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$386,000",
+        "explanation": "Subtracts the fine.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$376,000",
+        "explanation": "Omits the municipal interest.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Subtract excess tax depreciation and municipal interest; add back the fine.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-03",
+    "pool": "practice",
+    "stem": "Which corporation must file Schedule M-3 instead of Schedule M-1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Total assets of $8 million",
+        "explanation": "The threshold is $10 million.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Gross receipts of $10 million and assets of $5 million",
+        "explanation": "The test uses total assets.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Total assets of $12 million",
+        "explanation": "Correct. Schedule M-3 is required when total assets at year-end are $10 million or more."
+      },
+      {
+        "id": "d",
+        "text": "Any corporation with foreign operations",
+        "explanation": "The test is total assets of $10 million or more.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Schedule M-3 is required when total assets at year-end are $10 million or more.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-04",
+    "pool": "practice",
+    "stem": "Beginning retained earnings $500,000; net income per books $180,000; cash dividends $60,000; a stock dividend capitalized $20,000. What is ending retained earnings on Schedule M-2?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$600,000",
+        "explanation": "Correct. 500,000 + 180,000 − 60,000 − 20,000."
+      },
+      {
+        "id": "b",
+        "text": "$620,000",
+        "explanation": "Omits the stock dividend.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$680,000",
+        "explanation": "Omits all distributions.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$560,000",
+        "explanation": "Subtracts dividends twice.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "M-2: beginning + net income − distributions (cash, property, stock) ± other.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-05",
+    "pool": "practice",
+    "stem": "When is Form 1120 due for a corporation with a December 31, 2025 year-end (no extension)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 16, 2026",
+        "explanation": "That's for S corporations and partnerships (March 15 falls on a Sunday).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "April 15, 2026",
+        "explanation": "Correct. 15th day of the 4th month after year-end."
+      },
+      {
+        "id": "c",
+        "text": "May 15, 2026",
+        "explanation": "That's Form 990.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "October 15, 2026",
+        "explanation": "That's the extended date.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "15th day of the 4th month after year-end.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-06",
+    "pool": "practice",
+    "stem": "A corporation had taxable income of $2 million in 2023. Its 2024 tax was $300,000 and 2025 tax is $500,000. What is the minimum 2025 first installment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$75,000",
+        "explanation": "Correct. A large corporation can use prior-year tax for the first installment only."
+      },
+      {
+        "id": "b",
+        "text": "$125,000",
+        "explanation": "The prior-year option is allowed for the first installment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$300,000",
+        "explanation": "That's the full prior-year tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Estimates are required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "25% × 300,000 = 75,000; the shortfall is recaptured in the second installment.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-07",
+    "pool": "practice",
+    "stem": "A closely held corporation earns mostly dividends and interest and is owned by three individuals. Which tax is most likely a concern?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accumulated earnings tax",
+        "explanation": "The PHC tax applies first to passive, closely held corporations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Personal holding company tax",
+        "explanation": "Correct. 60%+ passive income and more than 50% owned by 5 or fewer individuals → PHC."
+      },
+      {
+        "id": "c",
+        "text": "Corporate AMT",
+        "explanation": "Applies to corporations with average AFSI over $1 billion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Built-in gains tax",
+        "explanation": "That's an S corporation tax.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "60%+ passive income and more than 50% owned by 5 or fewer individuals → PHC.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-08",
+    "pool": "practice",
+    "stem": "What is the minimum accumulated earnings credit for a manufacturing corporation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "That's for personal service corporations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$250,000",
+        "explanation": "Correct. §535(c)(2): $250,000 minimum credit ($150,000 for personal service corporations)."
+      },
+      {
+        "id": "c",
+        "text": "$1,000,000",
+        "explanation": "Not the credit amount.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A minimum credit applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§535(c)(2): $250,000 minimum credit ($150,000 for personal service corporations).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-09",
+    "pool": "practice",
+    "stem": "Which action most directly reduces exposure to the accumulated earnings tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Documenting specific, definite plans for expansion that require the retained funds",
+        "explanation": "Correct. Retention for reasonable business needs — with specific, definite, feasible plans — is protected."
+      },
+      {
+        "id": "b",
+        "text": "Investing retained cash in marketable securities",
+        "explanation": "Passive investments suggest unreasonable accumulation.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Making loans to shareholders",
+        "explanation": "Suggests accumulation for shareholder benefit.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Electing a fiscal year",
+        "explanation": "Irrelevant to the AET.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Retention for reasonable business needs — with specific, definite, feasible plans — is protected.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-10",
+    "pool": "practice",
+    "stem": "Book income includes a $30,000 net capital loss (no capital gains). Carryback years had no capital gains. How is the loss handled on the 2025 return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deducted as ordinary loss",
+        "explanation": "Corporations can't deduct net capital losses.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Added back on M-1 and carried forward 5 years as short-term",
+        "explanation": "Correct. §1211(a) and §1212(a): capital losses offset only capital gains; carry back 3, forward 5."
+      },
+      {
+        "id": "c",
+        "text": "$3,000 deducted and the rest carried forward",
+        "explanation": "That's the individual rule.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Carried forward indefinitely",
+        "explanation": "Corporate capital losses carry forward 5 years.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1211(a) and §1212(a): capital losses offset only capital gains; carry back 3, forward 5.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

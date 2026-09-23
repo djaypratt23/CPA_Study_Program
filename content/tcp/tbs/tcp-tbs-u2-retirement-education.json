@@ -1,0 +1,111 @@
+{
+  "id": "tcp-tbs-u2-retirement-education",
+  "section": "TCP",
+  "unitId": "tcp-u2",
+  "moduleIds": [
+    "tcp-retirement-education"
+  ],
+  "pool": "practice",
+  "title": "Retirement and education planning — three clients",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Answer the questions about three unrelated clients in 2025.",
+  "exhibits": [
+    {
+      "title": "Client 1 — Kara (single, age 45)",
+      "content": "- Covered by her employer's 401(k)\n- MAGI: **$85,000**\n- Contributed **$7,000** to a traditional IRA"
+    },
+    {
+      "title": "Client 2 — Leo (age 50)",
+      "content": "- Withdrew **$20,000** from his traditional IRA (all pre-tax) in 2025\n- AGI, including the distribution: **$120,000**\n- Unreimbursed medical expenses paid in 2025: **$12,000**\n- No other exception applies"
+    },
+    {
+      "title": "Client 3 — the Nguyens",
+      "content": "- A §529 plan distributed **$15,000**, of which **$6,000** is earnings\n- Qualified higher education expenses paid: **$9,000**\n- No education credits claimed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "ded",
+          "label": "Kara's deductible IRA contribution",
+          "answer": 2800,
+          "tolerance": 0,
+          "explanation": "Phase-out 79,000–89,000: 7,000 × (89,000 − 85,000) ÷ 10,000 = **2,800**."
+        },
+        {
+          "id": "exc",
+          "label": "Leo's medical expense exception to the 10% additional tax",
+          "answer": 3000,
+          "tolerance": 0,
+          "explanation": "12,000 − 7.5% × 120,000 = **3,000**."
+        },
+        {
+          "id": "pen",
+          "label": "Leo's 10% additional tax",
+          "answer": 1700,
+          "tolerance": 0,
+          "explanation": "10% × (20,000 − 3,000) = **1,700**."
+        },
+        {
+          "id": "tx",
+          "label": "Taxable §529 earnings",
+          "answer": 2400,
+          "tolerance": 0,
+          "explanation": "Non-qualified share = 6,000 ÷ 15,000 = 40%; 40% × 6,000 = **2,400**."
+        },
+        {
+          "id": "add",
+          "label": "Additional 10% tax on the §529 distribution",
+          "answer": 240,
+          "tolerance": 0,
+          "explanation": "10% × 2,400 = **240**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Planning.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Kara's nondeductible contribution",
+          "options": [
+            "Is forfeited",
+            "Creates basis tracked on Form 8606",
+            "Must be withdrawn"
+          ],
+          "answer": "Creates basis tracked on Form 8606",
+          "explanation": "Basis comes out tax-free later."
+        },
+        {
+          "id": "d2",
+          "label": "Could Kara contribute to a Roth IRA instead?",
+          "options": [
+            "Yes — her MAGI is below the Roth phase-out",
+            "No — she's an active participant",
+            "No — her MAGI is too high"
+          ],
+          "answer": "Yes — her MAGI is below the Roth phase-out",
+          "explanation": "Roth limits don't depend on plan coverage."
+        },
+        {
+          "id": "d3",
+          "label": "Leo's RMDs begin at age",
+          "options": [
+            "70½",
+            "72",
+            "73"
+          ],
+          "answer": "73",
+          "explanation": "SECURE 2.0."
+        }
+      ]
+    }
+  ]
+}

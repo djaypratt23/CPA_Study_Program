@@ -1,0 +1,449 @@
+[
+  {
+    "id": "tcp-pa-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a physician invests in a restaurant partnership but never works there. Her share of the loss is $20,000, and she has no other passive income. How much can she deduct this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Passive losses don't offset wages.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$25,000",
+        "explanation": "That allowance applies to rental real estate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$3,000",
+        "explanation": "That's the capital loss limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0; the loss is suspended",
+        "explanation": "Correct. Without material participation the loss is passive and can offset only passive income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Without material participation the loss is passive and can offset only passive income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-chk1",
+    "pool": "lesson",
+    "stem": "Single taxpayer, MAGI $140,000, actively participates in a rental with a $15,000 loss, no passive income. How much is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Correct. 25,000 − 50% × 40,000 = 5,000."
+      },
+      {
+        "id": "b",
+        "text": "$15,000",
+        "explanation": "The allowance is phased down.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The allowance isn't fully phased out until $150,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "Uses the wrong phase-out rate.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Allowance = 25,000 − 50% × (140,000 − 100,000) = 5,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-chk2",
+    "pool": "lesson",
+    "stem": "A cabin is rented 10 days during the year and used personally the rest of the time. What is the tax treatment of the $4,000 rent?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Taxable, with expenses allocated",
+        "explanation": "Rentals under 15 days are ignored.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Passive income",
+        "explanation": "The rental is disregarded.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Excluded from income; no rental deductions",
+        "explanation": "Correct. §280A(g): rented fewer than 15 days → rent excluded."
+      },
+      {
+        "id": "d",
+        "text": "Taxable, with no deductions",
+        "explanation": "The rent is excluded.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§280A(g): rented fewer than 15 days → rent excluded.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-01",
+    "pool": "practice",
+    "stem": "In what order are the loss limitations applied?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Passive, at-risk, basis, excess business loss",
+        "explanation": "Basis comes first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Excess business loss, passive, at-risk, basis",
+        "explanation": "The order is reversed.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "At-risk, basis, passive, excess business loss",
+        "explanation": "Basis is first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Basis, at-risk, passive, excess business loss",
+        "explanation": "Correct. Basis → at-risk → passive → §461(l)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Basis → at-risk → passive → §461(l).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-02",
+    "pool": "practice",
+    "stem": "A partner's basis is $40,000, including $30,000 share of nonrecourse debt (not qualified real estate financing). Her share of the loss is $25,000, and she materially participates. How much is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Correct. At-risk = 40,000 − 30,000 nonrecourse."
+      },
+      {
+        "id": "b",
+        "text": "$25,000",
+        "explanation": "At-risk limits the deduction.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "The loss is only $25,000.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "She is at risk for $10,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Basis allows $25,000, but at-risk excludes nonrecourse debt: $10,000 allowed; $15,000 suspended under §465.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-03",
+    "pool": "practice",
+    "stem": "Which person qualifies as a real estate professional?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An accountant who works 2,000 hours at her firm and 800 hours managing rentals",
+        "explanation": "Real estate must be more than half of personal services.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "An investor who owns 20 rental properties managed by an agent",
+        "explanation": "Ownership alone isn't participation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A full-time property manager who works 1,800 hours in real property businesses",
+        "explanation": "Correct. More than 750 hours and more than 50% of personal services in real property trades or businesses."
+      },
+      {
+        "id": "d",
+        "text": "A retiree who works 500 hours on his rentals",
+        "explanation": "Doesn't meet 750 hours.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "More than 750 hours and more than 50% of personal services in real property trades or businesses.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-04",
+    "pool": "practice",
+    "stem": "A taxpayer sells his entire interest in a passive activity to an unrelated buyer for a $5,000 gain. Suspended losses are $18,000. He has no other passive activities. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only $5,000 of losses is allowed",
+        "explanation": "A full disposition frees all suspended losses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Losses are forfeited",
+        "explanation": "They're released, not lost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Losses stay suspended until other passive income",
+        "explanation": "A full taxable disposition releases them.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "All $18,000 of suspended losses is deductible",
+        "explanation": "Correct. §469(g): a fully taxable disposition to an unrelated party frees the suspended losses."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§469(g): a fully taxable disposition to an unrelated party frees the suspended losses.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-05",
+    "pool": "practice",
+    "stem": "Married filing jointly, 2025 business losses of $900,000 and nonbusiness income of $1,000,000. How much business loss is disallowed under §461(l)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$274,000",
+        "explanation": "Correct. 900,000 − 626,000."
+      },
+      {
+        "id": "b",
+        "text": "$587,000",
+        "explanation": "Uses the single threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The loss exceeds the threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$900,000",
+        "explanation": "Only the excess is disallowed.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Excess business loss = 900,000 − 626,000 = 274,000, carried forward as an NOL.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-06",
+    "pool": "practice",
+    "stem": "A vacation home is rented 100 days and used personally 12 days. How is it classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Personal residence",
+        "explanation": "Personal use doesn't exceed 14 days.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Rental property; a loss may be allowed subject to the passive rules",
+        "explanation": "Correct. 12 days is not more than the greater of 14 days or 10 days (10% of 100)."
+      },
+      {
+        "id": "c",
+        "text": "Rent is excluded",
+        "explanation": "Rented more than 14 days.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Business property with no limits",
+        "explanation": "Rentals are generally passive.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "12 days is not more than the greater of 14 days or 10 days (10% of 100).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-07",
+    "pool": "practice",
+    "stem": "Which amount is **not** included in a taxpayer's at-risk amount?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cash contributed",
+        "explanation": "Cash contributed is at risk.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Recourse debt for which the taxpayer is personally liable",
+        "explanation": "Personal liability makes it at risk.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Nonrecourse loan from the seller of equipment",
+        "explanation": "Correct. Nonrecourse debt is generally excluded, except qualified nonrecourse real estate financing."
+      },
+      {
+        "id": "d",
+        "text": "Qualified nonrecourse financing on real estate from a commercial lender",
+        "explanation": "At risk for real estate.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Nonrecourse debt is generally excluded, except qualified nonrecourse real estate financing.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-08",
+    "pool": "practice",
+    "stem": "A married couple with MAGI of $170,000 actively participates in a rental with a $10,000 loss and has $4,000 of passive income from a limited partnership. How much of the rental loss is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "The allowance is fully phased out.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$4,000",
+        "explanation": "Correct. Passive losses offset passive income."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Passive income absorbs some loss.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$6,000",
+        "explanation": "That's the suspended amount.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "No $25,000 allowance above $150,000 MAGI; the loss offsets only the $4,000 of passive income; $6,000 is suspended.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-09",
+    "pool": "practice",
+    "stem": "Which activity is treated as passive regardless of participation (for a taxpayer who isn't a real estate professional)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A consulting business the taxpayer runs full time",
+        "explanation": "Material participation → nonpassive.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A rental apartment building",
+        "explanation": "Correct. Rental activities are generally passive per se."
+      },
+      {
+        "id": "c",
+        "text": "A working interest in an oil well held directly",
+        "explanation": "Working interests are excluded from passive treatment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A portfolio of dividend-paying stocks",
+        "explanation": "Portfolio income isn't passive.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Rental activities are generally passive per se.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-10",
+    "pool": "practice",
+    "stem": "A home is rented 60 days for $9,000 and used personally 40 days. Allocated rental expenses: interest and taxes $4,000; operating $3,000; depreciation $5,000. What is the rental deduction for depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Deductions are limited to rental income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$2,000",
+        "explanation": "Correct. 9,000 − 4,000 − 3,000."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Some income remains for depreciation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$1,000",
+        "explanation": "Subtracts depreciation before operating costs.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Personal use of 40 days is more than 14 days → residence; the order is interest/taxes, operating, depreciation.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]

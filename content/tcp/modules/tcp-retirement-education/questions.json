@@ -1,0 +1,485 @@
+[
+  {
+    "id": "tcp-re-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a young worker in the 12% bracket expects to be in the 32% bracket at retirement. Which account type likely produces the most after-tax wealth?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Traditional IRA",
+        "explanation": "The deduction is worth little at 12%.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "It makes no difference",
+        "explanation": "Rates differ between the two periods.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Taxable brokerage account",
+        "explanation": "It lacks tax-free growth.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Roth IRA",
+        "explanation": "Correct. Paying tax now at 12% beats paying later at 32%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Paying tax now at 12% beats paying later at 32%.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-chk1",
+    "pool": "lesson",
+    "stem": "A single active participant has 2025 MAGI of $86,500 and contributes $7,000 to a traditional IRA. How much is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,000",
+        "explanation": "The deduction is partly phased out.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "MAGI is below $89,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$5,250",
+        "explanation": "That's the nondeductible part.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$1,750",
+        "explanation": "Correct. 7,000 × (89,000 − 86,500) ÷ 10,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Reduction = 7,000 × 7,500 ÷ 10,000 = 5,250; deductible = 1,750.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-chk2",
+    "pool": "lesson",
+    "stem": "Which early distribution exception applies to employer plans (401(k)) but **not** IRAs?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Separation from service in or after the year the employee turns 55",
+        "explanation": "Correct. The age-55 separation exception applies only to qualified employer plans."
+      },
+      {
+        "id": "b",
+        "text": "Qualified higher education expenses",
+        "explanation": "IRA-only exception.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "First-time homebuyer ($10,000)",
+        "explanation": "IRA-only exception.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Death of the owner",
+        "explanation": "Applies to both.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The age-55 separation exception applies only to qualified employer plans.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-01",
+    "pool": "practice",
+    "stem": "A 52-year-old contributes to her employer's 401(k) in 2025. What is her maximum elective deferral?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$23,500",
+        "explanation": "She qualifies for the catch-up.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$34,750",
+        "explanation": "The larger catch-up is for ages 60–63.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$31,000",
+        "explanation": "Correct. 23,500 + 7,500."
+      },
+      {
+        "id": "d",
+        "text": "$70,000",
+        "explanation": "That's the §415(c) total additions limit.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "2025: $23,500 + $7,500 catch-up for age 50+.",
+    "skill": "remembering",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-02",
+    "pool": "practice",
+    "stem": "A sole proprietor has net SE earnings of $200,000 after the deduction for half of SE tax. What is the maximum SEP contribution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "25% applies to compensation after the contribution itself.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$23,500",
+        "explanation": "That's the 401(k) deferral limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$70,000",
+        "explanation": "Limited by the percentage.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$40,000",
+        "explanation": "Correct. 20% × 200,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "For the self-employed, 25% of compensation equals 20% of net earnings after the SE tax deduction.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-03",
+    "pool": "practice",
+    "stem": "A married couple filing jointly has 2025 MAGI of $241,000. What is the maximum Roth IRA contribution for each spouse (both under 50)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,500",
+        "explanation": "Correct. 7,000 × (246,000 − 241,000) ÷ 10,000."
+      },
+      {
+        "id": "b",
+        "text": "$7,000",
+        "explanation": "They're in the phase-out range.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "They're below $246,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$1,750",
+        "explanation": "Uses a $20,000 range.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "MFJ Roth phase-out $236,000–$246,000: halfway through → $3,500 each.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-04",
+    "pool": "practice",
+    "stem": "A 45-year-old withdraws $12,000 from a Roth IRA opened 10 years ago. Contributions total $20,000. What is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000 plus 10%",
+        "explanation": "Contributions come out first, tax-free.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. Roth ordering rules: contributions first (tax- and penalty-free), then conversions, then earnings."
+      },
+      {
+        "id": "c",
+        "text": "$12,000 but no penalty",
+        "explanation": "Contributions come out tax-free.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$1,200 penalty only",
+        "explanation": "No penalty on contributions.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Roth ordering rules: contributions first (tax- and penalty-free), then conversions, then earnings.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-05",
+    "pool": "practice",
+    "stem": "At what age must an IRA owner born in 1952 begin required minimum distributions?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "70½",
+        "explanation": "That was the pre-2020 rule.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "72",
+        "explanation": "Changed by SECURE 2.0.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "73",
+        "explanation": "Correct. SECURE 2.0: RMD age 73 for those born 1951–1959."
+      },
+      {
+        "id": "d",
+        "text": "75",
+        "explanation": "Applies to those born in 1960 or later.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "SECURE 2.0: RMD age 73 for those born 1951–1959.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-06",
+    "pool": "practice",
+    "stem": "A taxpayer misses a $20,000 RMD and corrects it within the correction window. What is the excise tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "The 50% rate was repealed.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "25% applies only if not corrected timely.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$2,000",
+        "explanation": "Correct. 10% × 20,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "An excise tax still applies unless waived.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§4974: 25%, reduced to 10% if corrected within the correction window.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-07",
+    "pool": "practice",
+    "stem": "A §529 plan distributes $20,000 ($8,000 earnings). The beneficiary used $15,000 for qualified expenses. How much is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000",
+        "explanation": "Correct. Earnings × 5,000 ÷ 20,000."
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Only the earnings portion is taxable.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$8,000",
+        "explanation": "Most of the withdrawal was qualified.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "$5,000 wasn't used for qualified expenses.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Non-qualified share = 5,000 ÷ 20,000 = 25%; taxable earnings = 25% × 8,000 = 2,000 (+10% additional tax).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-08",
+    "pool": "practice",
+    "stem": "Parents with MAGI of $170,000 (MFJ) pay $4,000 of first-year college tuition from their own funds. What is the maximum American opportunity tax credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,500",
+        "explanation": "Partly phased out.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$1,250",
+        "explanation": "Correct. 2,500 × (180,000 − 170,000) ÷ 20,000."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Not fully phased out until $180,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "That's the lifetime learning credit maximum.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Full AOTC $2,500 (100% of first $2,000 + 25% of next $2,000), reduced by half in the MFJ range.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-09",
+    "pool": "practice",
+    "stem": "A client's child has a §529 plan open for 16 years with $20,000 left after graduation. Which use avoids tax and the 10% additional tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Withdraw the cash for a car",
+        "explanation": "Non-qualified; earnings are taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Roll up to $35,000 lifetime (subject to the annual IRA limit) to the beneficiary's Roth IRA",
+        "explanation": "Correct. SECURE 2.0 allows 529-to-Roth rollovers for accounts open 15+ years, subject to annual Roth limits."
+      },
+      {
+        "id": "c",
+        "text": "Transfer it to the parents' 401(k)",
+        "explanation": "529 funds can't go into a 401(k).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Hold it; the funds must be distributed within a year",
+        "explanation": "No such requirement.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "SECURE 2.0 allows 529-to-Roth rollovers for accounts open 15+ years, subject to annual Roth limits.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-10",
+    "pool": "practice",
+    "stem": "A 50-year-old in a 22% bracket who expects to be in the 12% bracket in retirement is choosing between Roth and traditional 401(k) deferrals. Which is likely better?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Roth deferrals",
+        "explanation": "He would pay 22% now to avoid 12% later.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Traditional deferrals",
+        "explanation": "Correct. Deduct at 22% now and pay 12% later."
+      },
+      {
+        "id": "c",
+        "text": "Neither — stop contributing",
+        "explanation": "Tax-deferred growth still has value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It makes no difference",
+        "explanation": "Rates differ between periods.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Deduct at 22% now and pay 12% later.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-11",
+    "pool": "practice",
+    "stem": "A 40-year-old takes $10,000 from a traditional IRA to buy her first home. What is the tax result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Taxable, but no 10% additional tax",
+        "explanation": "Correct. The $10,000 first-time homebuyer exception removes the 10% additional tax, not the income tax."
+      },
+      {
+        "id": "b",
+        "text": "Tax-free and penalty-free",
+        "explanation": "Traditional IRA distributions are taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Taxable plus the 10% additional tax",
+        "explanation": "The first-time homebuyer exception applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Not permitted",
+        "explanation": "Withdrawals are allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The $10,000 first-time homebuyer exception removes the 10% additional tax, not the income tax.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

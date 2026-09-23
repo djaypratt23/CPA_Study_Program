@@ -1,0 +1,486 @@
+[
+  {
+    "id": "tcp-gt-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: who is generally liable for paying federal gift tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The donee",
+        "explanation": "The gift tax is imposed on the donor.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Both equally",
+        "explanation": "The donor is primarily liable.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "The donor",
+        "explanation": "Correct. §2502(c): the donor pays the gift tax."
+      },
+      {
+        "id": "d",
+        "text": "Neither — gifts are never taxed",
+        "explanation": "Gifts above the exemption are taxed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§2502(c): the donor pays the gift tax.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-gt-chk1",
+    "pool": "lesson",
+    "stem": "A single donor pays $50,000 directly to a hospital for a friend's surgery and gives the friend $25,000 cash in 2025. What is the taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$56,000",
+        "explanation": "Direct medical payments are excluded.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The cash gift exceeds the exclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$75,000",
+        "explanation": "Exclusions apply.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$6,000",
+        "explanation": "Correct. 25,000 − 19,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§2503(e) excludes direct medical payments; the cash is reduced by the $19,000 annual exclusion.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-chk2",
+    "pool": "lesson",
+    "stem": "A donee receives property with donor's basis $8,000 and FMV $5,000 and sells it for $6,500. What is the gain or loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No gain or loss",
+        "explanation": "Correct. A sale price between FMV and the donor's basis produces neither gain nor loss."
+      },
+      {
+        "id": "b",
+        "text": "$1,500 loss",
+        "explanation": "The loss basis (FMV) gives a gain, not a loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$1,500 gain",
+        "explanation": "The gain basis (donor's basis) gives a loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$3,000 loss",
+        "explanation": "Uses the wrong basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A sale price between FMV and the donor's basis produces neither gain nor loss.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-01",
+    "pool": "practice",
+    "stem": "A married couple elects gift splitting and gives $80,000 to their son in 2025. What is each spouse's taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$21,000",
+        "explanation": "Correct. 40,000 − 19,000 each."
+      },
+      {
+        "id": "b",
+        "text": "$42,000",
+        "explanation": "That's the couple's total.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$61,000",
+        "explanation": "Only one exclusion applied.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The gift exceeds $38,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Each spouse is treated as giving $40,000 and gets a $19,000 exclusion.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-02",
+    "pool": "practice",
+    "stem": "Which gift requires filing Form 709 even though no taxable gift results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000 cash to a friend",
+        "explanation": "Under the exclusion; no 709 needed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$60,000 tuition paid directly to a college",
+        "explanation": "Direct tuition is excluded; no 709 needed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000 to a son, split with the donor's spouse",
+        "explanation": "Correct. Electing gift splitting requires Form 709 even if each half is under the exclusion."
+      },
+      {
+        "id": "d",
+        "text": "$500,000 to the donor's U.S.-citizen spouse",
+        "explanation": "Outright gifts to a citizen spouse don't require a 709.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Electing gift splitting requires Form 709 even if each half is under the exclusion.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-gt-03",
+    "pool": "practice",
+    "stem": "A donor gives $50,000 to an irrevocable trust. Beneficiaries have Crummey powers to withdraw up to $19,000 each for 30 days. There are two beneficiaries. What is the taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "The Crummey powers create present interests.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The gift exceeds two exclusions.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$31,000",
+        "explanation": "Only one exclusion applied.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$12,000",
+        "explanation": "Correct. 50,000 − 2 × 19,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Crummey withdrawal powers turn trust gifts into present interests that qualify for the annual exclusion.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-04",
+    "pool": "practice",
+    "stem": "What is the lifetime basic exclusion amount for gifts made in 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$13,990,000",
+        "explanation": "Correct. 2025 basic exclusion amount: $13,990,000."
+      },
+      {
+        "id": "b",
+        "text": "$13,610,000",
+        "explanation": "That was the 2024 amount.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$15,000,000",
+        "explanation": "That's the 2026 amount under P.L. 119-21.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$5,000,000",
+        "explanation": "Pre-2018 base amount.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "2025 basic exclusion amount: $13,990,000.",
+    "skill": "remembering",
+    "difficulty": 2,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "tcp-gt-05",
+    "pool": "practice",
+    "stem": "When is Form 709 for 2025 gifts due, assuming no extension?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 15, 2026",
+        "explanation": "That's the partnership and S corporation date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Nine months after the gift",
+        "explanation": "That's the estate tax deadline for a decedent.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "April 15, 2026",
+        "explanation": "Correct. Form 709 is due April 15 of the following year; an income tax extension also extends it."
+      },
+      {
+        "id": "d",
+        "text": "December 31, 2025",
+        "explanation": "Gift returns are filed after year-end.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Form 709 is due April 15 of the following year; an income tax extension also extends it.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-gt-06",
+    "pool": "practice",
+    "stem": "A parent gives stock (basis $10,000, FMV $40,000) to a child. No gift tax is paid. The child sells it for $45,000. What is the child's gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Uses FMV at the gift date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Gains on gifted property are taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$45,000",
+        "explanation": "Basis carries over.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$35,000",
+        "explanation": "Correct. 45,000 − 10,000 carryover basis."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§1015: the donee takes the donor's basis for appreciated property.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-07",
+    "pool": "practice",
+    "stem": "A client wants to help a grandchild with $70,000 of college tuition in 2025 without using any lifetime exemption. What is best?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Pay the $70,000 directly to the college",
+        "explanation": "Correct. Tuition paid directly to the institution is excluded without limit, on top of the annual exclusion."
+      },
+      {
+        "id": "b",
+        "text": "Give the grandchild $70,000 cash",
+        "explanation": "$51,000 would be a taxable gift.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Lend the grandchild $70,000 interest-free",
+        "explanation": "Creates gift and interest issues.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Give $70,000 to the grandchild's parents",
+        "explanation": "Still a taxable gift above the exclusion.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Tuition paid directly to the institution is excluded without limit, on top of the annual exclusion.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-gt-08",
+    "pool": "practice",
+    "stem": "A donor owns stock worth $30,000 with a basis of $50,000 and wants to benefit her nephew. What is the best tax approach?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Give the stock to the nephew",
+        "explanation": "The $20,000 loss is lost for gain purposes and limited for him.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Sell the stock, deduct the loss, and give the cash",
+        "explanation": "Correct. The donor can recognize the loss herself; a donee's loss basis is limited to FMV."
+      },
+      {
+        "id": "c",
+        "text": "Hold the stock until death",
+        "explanation": "A step-down to FMV eliminates the loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Give the stock to a charity",
+        "explanation": "Not the donor's goal.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The donor can recognize the loss herself; a donee's loss basis is limited to FMV.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-gt-09",
+    "pool": "practice",
+    "stem": "Which transfer is a gift of a future interest that does **not** qualify for the annual exclusion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cash placed in a custodial (UTMA) account for a minor",
+        "explanation": "UTMA gifts are present interests.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A remainder interest in a trust after the donor's spouse dies",
+        "explanation": "Correct. Remainder interests begin in the future, so no annual exclusion."
+      },
+      {
+        "id": "c",
+        "text": "A check to an adult daughter",
+        "explanation": "An outright gift is a present interest.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A contribution to a §529 plan",
+        "explanation": "§529 contributions qualify, with a 5-year election.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Remainder interests begin in the future, so no annual exclusion.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-gt-10",
+    "pool": "practice",
+    "stem": "A donor contributes $95,000 to a §529 plan for a grandchild in 2025 and elects to spread it over 5 years. What is the taxable gift for 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$76,000",
+        "explanation": "The 5-year election spreads the gift.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. $19,000 per year × 5 = $95,000."
+      },
+      {
+        "id": "c",
+        "text": "$19,000",
+        "explanation": "Each year's portion is covered by that year's exclusion.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$95,000",
+        "explanation": "The election applies.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§529(c)(2)(B): a contribution up to 5 × the annual exclusion can be treated as made ratably over 5 years.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-11",
+    "pool": "practice",
+    "stem": "A U.S.-citizen donor gives $1,000,000 outright to his U.S.-citizen wife. What is the taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$981,000",
+        "explanation": "The marital deduction applies to the rest.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. §2523: unlimited marital deduction for gifts to a U.S.-citizen spouse."
+      },
+      {
+        "id": "c",
+        "text": "$1,000,000",
+        "explanation": "The marital deduction is unlimited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$810,000",
+        "explanation": "That's the noncitizen-spouse limit.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§2523: unlimited marital deduction for gifts to a U.S.-citizen spouse.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

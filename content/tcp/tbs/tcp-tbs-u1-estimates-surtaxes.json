@@ -1,0 +1,109 @@
+{
+  "id": "tcp-tbs-u1-estimates-surtaxes",
+  "section": "TCP",
+  "unitId": "tcp-u1",
+  "moduleIds": [
+    "tcp-individual-planning"
+  ],
+  "pool": "practice",
+  "title": "Estimated tax and surtaxes — the Parks",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Sam and Jo Park file jointly. Use the exhibits to compute their 2025 safe-harbor payment and surtaxes.",
+  "exhibits": [
+    {
+      "title": "2024 return",
+      "content": "- AGI: **$260,000**\n- Total tax: **$48,000**"
+    },
+    {
+      "title": "2025 projections",
+      "content": "| Item | Amount |\n|---|---:|\n| Sam's wages | 210,000 |\n| Jo's wages | 90,000 |\n| Qualified dividends | 25,000 |\n| Long-term capital gain | 15,000 |\n| Taxable interest | 5,000 |\n| Distribution from Jo's traditional IRA | 10,000 |\n| Expected total 2025 tax (including surtaxes) | 74,000 |\n| Federal income tax withheld | 50,000 |\n\nThere are no adjustments to income; MAGI equals AGI."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "rap",
+          "label": "Required annual payment to avoid the underpayment penalty",
+          "answer": 52800,
+          "tolerance": 0,
+          "explanation": "Lesser of 90% × 74,000 = 66,600 or 110% × 48,000 = 52,800 (2024 AGI exceeded $150,000) = **52,800**."
+        },
+        {
+          "id": "est",
+          "label": "Minimum 2025 estimated payments beyond withholding",
+          "answer": 2800,
+          "tolerance": 0,
+          "explanation": "52,800 − 50,000 withheld = **2,800** (700 per quarter)."
+        },
+        {
+          "id": "magi",
+          "label": "2025 MAGI",
+          "answer": 355000,
+          "tolerance": 0,
+          "explanation": "210,000 + 90,000 + 25,000 + 15,000 + 5,000 + 10,000 = **355,000**."
+        },
+        {
+          "id": "niit",
+          "label": "Net investment income tax",
+          "answer": 1710,
+          "tolerance": 0,
+          "explanation": "NII = 25,000 + 15,000 + 5,000 = 45,000 (the IRA distribution isn't NII). MAGI excess = 105,000. 3.8% × lesser (45,000) = **1,710**."
+        },
+        {
+          "id": "amt",
+          "label": "Additional Medicare tax on the return (total)",
+          "answer": 450,
+          "tolerance": 0,
+          "explanation": "0.9% × (300,000 − 250,000) = **450**."
+        },
+        {
+          "id": "wh",
+          "label": "Additional Medicare tax already withheld by Sam's employer",
+          "answer": 90,
+          "tolerance": 0,
+          "explanation": "Employers withhold 0.9% on wages over $200,000: 0.9% × 10,000 = **90**; the other 360 is paid with the return."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Classify each item for the NIIT.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Jo's IRA distribution",
+          "answer": "Not net investment income",
+          "explanation": "Retirement plan distributions are excluded."
+        },
+        {
+          "id": "d2",
+          "label": "Rent from a rental in which the Parks don't materially participate",
+          "answer": "Net investment income",
+          "explanation": "Passive rents are NII."
+        },
+        {
+          "id": "d3",
+          "label": "Sam's wages",
+          "answer": "Not net investment income",
+          "explanation": "Wages are subject to the additional Medicare tax instead."
+        },
+        {
+          "id": "d4",
+          "label": "Interest on municipal bonds",
+          "answer": "Not net investment income",
+          "explanation": "Tax-exempt income isn't included."
+        }
+      ],
+      "options": [
+        "Net investment income",
+        "Not net investment income"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "tcp-tbs-u6-multistate-liquidation",
+  "section": "TCP",
+  "unitId": "tcp-u6",
+  "moduleIds": [
+    "tcp-multistate",
+    "tcp-formation-liquidation"
+  ],
+  "pool": "practice",
+  "title": "State apportionment and a liquidation — Vega Corp.",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Answer the questions about Vega Corp.'s state taxes and a liquidation of another company.",
+  "exhibits": [
+    {
+      "title": "Vega Corp. — State X",
+      "content": "- Business income (all states): **$3,000,000**\n- Nonbusiness dividends: **$200,000** (commercial domicile: State Z)\n\n| Factor | State X | Everywhere |\n|---|---:|---:|\n| Sales | 2,400,000 | 12,000,000 |\n| Property | 3,000,000 | 10,000,000 |\n| Payroll | 1,500,000 | 6,000,000 |\n\nVega also ships **$600,000** of goods from its State X warehouse to customers in State W, where Vega is protected by P.L. 86-272."
+    },
+    {
+      "title": "Lark Inc. — complete liquidation",
+      "content": "- Lark distributes land (basis **$100,000**; FMV **$400,000**) and **$100,000** cash to its sole shareholder, Mo.\n- Mo's stock basis: **$150,000**.\n- Ignore Lark's tax on the liquidation for Mo's computation."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "a",
+      "prompt": "State X apportionment (State X sales above exclude the State W shipments).",
+      "rows": [
+        {
+          "id": "eq",
+          "label": "Equally weighted three-factor percentage",
+          "answer": 25,
+          "tolerance": 0,
+          "explanation": "(20% + 30% + 25%) ÷ 3 = **25%**."
+        },
+        {
+          "id": "eqi",
+          "label": "State X business income — equally weighted",
+          "answer": 750000,
+          "tolerance": 0,
+          "explanation": "25% × 3,000,000 = **750,000**."
+        },
+        {
+          "id": "dw",
+          "label": "Double-weighted sales percentage",
+          "answer": 23.75,
+          "tolerance": 0,
+          "explanation": "(2 × 20 + 30 + 25) ÷ 4 = **23.75%**."
+        },
+        {
+          "id": "ss",
+          "label": "Single sales factor percentage with throwback",
+          "answer": 25,
+          "tolerance": 0,
+          "explanation": "(2,400,000 + 600,000 thrown back) ÷ 12,000,000 = **25%**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "b",
+      "prompt": "Liquidation.",
+      "rows": [
+        {
+          "id": "cg",
+          "label": "Lark's recognized gain",
+          "answer": 300000,
+          "tolerance": 0,
+          "explanation": "400,000 − 100,000 = **300,000** (§336)."
+        },
+        {
+          "id": "sg",
+          "label": "Mo's recognized gain",
+          "answer": 350000,
+          "tolerance": 0,
+          "explanation": "500,000 − 150,000 = **350,000** (§331)."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Questions.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "State X's treatment of the $200,000 of dividends",
+          "options": [
+            "Apportioned",
+            "Allocated to State Z",
+            "Allocated to State X"
+          ],
+          "answer": "Allocated to State Z",
+          "explanation": "Nonbusiness income goes to the commercial domicile."
+        },
+        {
+          "id": "d2",
+          "label": "If Lark were 90% owned by a corporation instead of Mo, the parent's gain would be",
+          "options": [
+            "$350,000",
+            "$0",
+            "$315,000"
+          ],
+          "answer": "$0",
+          "explanation": "§332 nonrecognition for an 80%+ parent."
+        },
+        {
+          "id": "d3",
+          "label": "Vega's State W activity is protected because",
+          "options": [
+            "It only solicits orders for tangible goods",
+            "It has no sales there",
+            "State W has no income tax"
+          ],
+          "answer": "It only solicits orders for tangible goods",
+          "explanation": "P.L. 86-272."
+        }
+      ]
+    }
+  ]
+}

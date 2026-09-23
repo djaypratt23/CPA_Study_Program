@@ -16,7 +16,7 @@ Install it from the browser menu ("Add to Home Screen") to use it offline.
 | **FAR** | Full: 37 modules (lesson, ≥10 practice MCQs, lesson checks, and flashcards in each), 24 practice TBS (2 per unit), a 50-MCQ + 7-TBS simulated exam, final-review sheets, and a glossary |
 | **AUD** | Full: 32 modules, 20 practice TBS (2 per unit), a 78-MCQ + 7-TBS simulated exam, final-review sheets, and a glossary |
 | **REG** | Full: 25 modules (tax year 2025, including One Big Beautiful Bill Act changes), 14 practice TBS, a 72-MCQ + 8-TBS simulated exam, final-review sheets, and a glossary |
-| **TCP** | Preview: the full blueprint outline plus one complete sample module (partnership formation) |
+| **TCP** | Full: 19 modules (tax year 2025, including One Big Beautiful Bill Act changes), 14 practice TBS, a 68-MCQ + 7-TBS simulated exam, final-review sheets, and a glossary |
 
 Works on phones and desktops. On a desktop, simulations show the exhibits beside the questions (like the real exam), and
 practice sets and simulated exams take keyboard shortcuts: **A–D** to choose, **1–3** for confidence, **← / →** to move.

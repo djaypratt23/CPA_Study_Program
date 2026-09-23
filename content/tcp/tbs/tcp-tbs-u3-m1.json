@@ -1,0 +1,138 @@
+{
+  "id": "tcp-tbs-u3-m1",
+  "section": "TCP",
+  "unitId": "tcp-u3",
+  "moduleIds": [
+    "tcp-c-corp-compliance"
+  ],
+  "pool": "practice",
+  "title": "Schedule M-1 and M-2 — Harbor Supply",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Harbor Supply, Inc., a calendar-year C corporation with total assets of $8 million, reports 2025 book net income of **$750,000**. Complete the reconciliation.",
+  "exhibits": [
+    {
+      "title": "Items in book income",
+      "content": "| Item | Amount |\n|---|---:|\n| Federal income tax expense | 180,000 |\n| Net capital loss | 12,000 |\n| Business meals (50% deductible) | 14,000 |\n| Fines paid to a state agency | 6,000 |\n| Premiums on key-person life insurance (Harbor is beneficiary) | 9,000 |\n| Interest on municipal bonds | 20,000 |\n| Charitable contributions (all within the 10% limit) | 30,000 |\n| Book depreciation | 90,000 |"
+    },
+    {
+      "title": "Other information",
+      "content": "- Tax depreciation is **$140,000**.\n- In December 2025, Harbor received **$18,000** of rent for January–June 2026; the books show it as unearned revenue.\n- Retained earnings, January 1, 2025: **$1,200,000**. Cash dividends paid in 2025: **$200,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Schedule M-1 and M-2.",
+      "rows": [
+        {
+          "id": "l5",
+          "label": "Line 5 — expenses recorded on books not deducted",
+          "answer": 22000,
+          "tolerance": 0,
+          "explanation": "7,000 (50% of meals) + 6,000 fines + 9,000 premiums = **22,000**."
+        },
+        {
+          "id": "l6",
+          "label": "Line 6 — total of lines 1 through 5",
+          "answer": 982000,
+          "tolerance": 0,
+          "explanation": "750,000 + 180,000 + 12,000 + 18,000 + 22,000 = **982,000**."
+        },
+        {
+          "id": "l9",
+          "label": "Line 9 — total of lines 7 and 8",
+          "answer": 70000,
+          "tolerance": 0,
+          "explanation": "20,000 municipal interest + 50,000 excess tax depreciation = **70,000**."
+        },
+        {
+          "id": "l10",
+          "label": "Line 10 — income (Form 1120, line 28)",
+          "answer": 912000,
+          "tolerance": 0,
+          "explanation": "982,000 − 70,000 = **912,000**."
+        },
+        {
+          "id": "tax",
+          "label": "Income tax (no special deductions or NOL)",
+          "answer": 191520,
+          "tolerance": 0,
+          "explanation": "21% × 912,000 = **191,520**."
+        },
+        {
+          "id": "re",
+          "label": "Retained earnings, December 31, 2025 (Schedule M-2)",
+          "answer": 1750000,
+          "tolerance": 0,
+          "explanation": "1,200,000 + 750,000 − 200,000 = **1,750,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Classify each difference.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Prepaid rent",
+          "answer": "Temporary",
+          "explanation": "It reverses when the rent is earned."
+        },
+        {
+          "id": "d2",
+          "label": "Fines",
+          "answer": "Permanent",
+          "explanation": "Never deductible."
+        },
+        {
+          "id": "d3",
+          "label": "Depreciation difference",
+          "answer": "Temporary",
+          "explanation": "It reverses over the asset's life."
+        },
+        {
+          "id": "d4",
+          "label": "Municipal bond interest",
+          "answer": "Permanent",
+          "explanation": "Never taxable."
+        }
+      ],
+      "options": [
+        "Permanent",
+        "Temporary"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "f",
+      "prompt": "Filing.",
+      "rows": [
+        {
+          "id": "f1",
+          "label": "Which schedule does Harbor file?",
+          "options": [
+            "Schedule M-1",
+            "Schedule M-3",
+            "Neither"
+          ],
+          "answer": "Schedule M-1",
+          "explanation": "Total assets are under $10 million."
+        },
+        {
+          "id": "f2",
+          "label": "Original due date of the 2025 Form 1120",
+          "options": [
+            "March 16, 2026",
+            "April 15, 2026",
+            "May 15, 2026"
+          ],
+          "answer": "April 15, 2026",
+          "explanation": "15th day of the 4th month."
+        }
+      ]
+    }
+  ]
+}
