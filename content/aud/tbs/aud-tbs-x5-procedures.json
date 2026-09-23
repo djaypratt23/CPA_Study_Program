@@ -1,0 +1,103 @@
+{
+  "id": "aud-tbs-x5-procedures",
+  "section": "AUD",
+  "unitId": "aud-u7",
+  "moduleIds": [
+    "aud-liabilities-equity",
+    "aud-inventory-ppe",
+    "aud-revenue-receivables"
+  ],
+  "pool": "exam",
+  "title": "Substantive procedures — Pioneer Components",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "For each risk at **Pioneer Components**, select the most effective substantive procedure, then identify the guidance governing a scope issue.",
+  "exhibits": [
+    {
+      "title": "Risks identified",
+      "content": "1. Unrecorded accounts payable at year-end.\n2. Fictitious sales recorded in the last week of the year.\n3. Obsolete inventory carried at full cost.\n4. Equipment retired during the year but still recorded.\n5. Receivables that don't exist.\n6. Undisclosed pending litigation."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "proc",
+      "prompt": "Select the most effective procedure for each risk.",
+      "rows": [
+        {
+          "id": "p1",
+          "label": "1. Unrecorded payables",
+          "answer": "Examine disbursements after year-end and trace to year-end payables",
+          "explanation": "Search for unrecorded liabilities."
+        },
+        {
+          "id": "p2",
+          "label": "2. Fictitious year-end sales",
+          "answer": "Vouch year-end sales to shipping documents and review subsequent credit memos",
+          "explanation": "Tests occurrence and cut-off."
+        },
+        {
+          "id": "p3",
+          "label": "3. Obsolete inventory",
+          "answer": "Compare inventory costs with subsequent selling prices and review slow-moving reports",
+          "explanation": "Tests valuation (NRV)."
+        },
+        {
+          "id": "p4",
+          "label": "4. Unrecorded retirements",
+          "answer": "Review insurance and property tax records and scrap sales",
+          "explanation": "Finds assets no longer owned."
+        },
+        {
+          "id": "p5",
+          "label": "5. Nonexistent receivables",
+          "answer": "Confirm balances with customers",
+          "explanation": "Confirmations test existence."
+        },
+        {
+          "id": "p6",
+          "label": "6. Undisclosed litigation",
+          "answer": "Send a letter of audit inquiry to outside legal counsel",
+          "explanation": "The primary corroboration for litigation."
+        }
+      ],
+      "options": [
+        "Examine disbursements after year-end and trace to year-end payables",
+        "Vouch year-end sales to shipping documents and review subsequent credit memos",
+        "Compare inventory costs with subsequent selling prices and review slow-moving reports",
+        "Review insurance and property tax records and scrap sales",
+        "Confirm balances with customers",
+        "Send a letter of audit inquiry to outside legal counsel"
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Pioneer's outside counsel refuses to respond to the inquiry letter. Which excerpt (paraphrased for study) governs the effect on the report?",
+      "excerpts": [
+        {
+          "id": "a",
+          "citation": "AU-C 501 (paraphrase)",
+          "text": "A lawyer's refusal to furnish the information requested in an inquiry letter, either in writing or orally, is a limitation on the scope of the audit sufficient to preclude an unmodified opinion."
+        },
+        {
+          "id": "b",
+          "citation": "AU-C 505 (paraphrase)",
+          "text": "If management refuses to allow the auditor to send a confirmation request, the auditor should inquire about management's reasons and seek evidence of their validity."
+        },
+        {
+          "id": "c",
+          "citation": "AU-C 580 (paraphrase)",
+          "text": "The auditor should request written representations from management with appropriate responsibilities for the financial statements."
+        },
+        {
+          "id": "d",
+          "citation": "AU-C 560 (paraphrase)",
+          "text": "The auditor should perform audit procedures designed to obtain evidence that all subsequent events requiring adjustment or disclosure have been identified."
+        }
+      ],
+      "answer": "a",
+      "explanation": "AU-C 501 treats a lawyer's refusal to respond as a scope limitation."
+    }
+  ]
+}

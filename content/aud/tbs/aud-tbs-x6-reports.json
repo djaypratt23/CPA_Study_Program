@@ -1,0 +1,68 @@
+{
+  "id": "aud-tbs-x6-reports",
+  "section": "AUD",
+  "unitId": "aud-u9",
+  "moduleIds": [
+    "aud-modified-opinions",
+    "aud-report-paragraphs",
+    "aud-going-concern"
+  ],
+  "pool": "exam",
+  "title": "Report decisions — five engagements",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "Each situation is independent and involves a private company. Select the most appropriate auditor's report.",
+  "exhibits": [
+    {
+      "title": "Situations",
+      "content": "1. Management refuses to record depreciation on its main plant; the omission is material to net income and PP&E but doesn't affect other accounts.\n2. The auditor was appointed after year-end and can't observe inventory or apply alternative procedures; inventory is 45% of total assets and drives cost of sales.\n3. A major customer's bankruptcy is disclosed; the auditor believes it is fundamental to users' understanding. Everything else is fine.\n4. Management won't disclose a going concern uncertainty that the auditor concluded exists; the omission is fundamental to understanding.\n5. Substantial doubt exists and is adequately disclosed; plans aren't probable of implementation."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "op",
+      "prompt": "Select the appropriate report.",
+      "rows": [
+        {
+          "id": "s1",
+          "label": "1. Unrecorded depreciation",
+          "answer": "Qualified",
+          "explanation": "A material, non-pervasive misstatement."
+        },
+        {
+          "id": "s2",
+          "label": "2. Inventory not observable",
+          "answer": "Disclaimer",
+          "explanation": "A pervasive scope limitation."
+        },
+        {
+          "id": "s3",
+          "label": "3. Customer bankruptcy disclosed",
+          "answer": "Unmodified with emphasis-of-matter paragraph",
+          "explanation": "An emphasis of an adequately disclosed matter."
+        },
+        {
+          "id": "s4",
+          "label": "4. Omitted going concern disclosure",
+          "answer": "Adverse",
+          "explanation": "A pervasive disclosure misstatement."
+        },
+        {
+          "id": "s5",
+          "label": "5. Adequately disclosed going concern",
+          "answer": "Unmodified with going concern section",
+          "explanation": "AU-C 570."
+        }
+      ],
+      "options": [
+        "Unmodified",
+        "Unmodified with emphasis-of-matter paragraph",
+        "Unmodified with going concern section",
+        "Qualified",
+        "Adverse",
+        "Disclaimer"
+      ]
+    }
+  ]
+}

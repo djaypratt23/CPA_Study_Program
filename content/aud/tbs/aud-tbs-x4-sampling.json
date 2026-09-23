@@ -1,0 +1,105 @@
+{
+  "id": "aud-tbs-x4-sampling",
+  "section": "AUD",
+  "unitId": "aud-u6",
+  "moduleIds": [
+    "aud-sampling"
+  ],
+  "pool": "exam",
+  "title": "Sampling evaluation — Granger Supply",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Evaluate the sampling applications in the audit of **Granger Supply**. Round percentages to one decimal place.",
+  "exhibits": [
+    {
+      "title": "Test of controls — shipping approval",
+      "content": "- Sample size: 75; deviations found: 3\n- Tolerable deviation rate: 8%\n- Upper deviation rate from the statistical table (3 deviations, n = 75, 5% risk): **10.1%**"
+    },
+    {
+      "title": "MUS — inventory",
+      "content": "- Book value: **$3,600,000**; sample size: **90**\n- Misstatements:\n  - Item 1: book $9,000, audited $6,300\n  - Item 2: book $60,000, audited $55,000\n  - Item 3: book $4,000, audited $3,800"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "att",
+      "prompt": "Evaluate the test of controls.",
+      "rows": [
+        {
+          "id": "sr",
+          "label": "Sample deviation rate (%)",
+          "answer": 4.0,
+          "tolerance": 0.05,
+          "explanation": "3 ÷ 75 = **4.0%**."
+        },
+        {
+          "id": "al",
+          "label": "Allowance for sampling risk (%)",
+          "answer": 6.1,
+          "tolerance": 0.05,
+          "explanation": "10.1% − 4.0% = **6.1%**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "rel",
+      "prompt": "Conclusion",
+      "rows": [
+        {
+          "id": "c",
+          "label": "Rely on the shipping approval control as planned?",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "answer": "No",
+          "explanation": "The 10.1% upper deviation rate exceeds the 8% tolerable rate."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "mus",
+      "prompt": "Evaluate the MUS sample.",
+      "rows": [
+        {
+          "id": "i",
+          "label": "Sampling interval",
+          "answer": 40000,
+          "tolerance": 0,
+          "explanation": "3,600,000 ÷ 90 = **40,000**."
+        },
+        {
+          "id": "p1",
+          "label": "Projected misstatement — Item 1",
+          "answer": 12000,
+          "tolerance": 0,
+          "explanation": "Tainting 2,700 ÷ 9,000 = 30%; × 40,000 = **12,000**."
+        },
+        {
+          "id": "p2",
+          "label": "Projected misstatement — Item 2",
+          "answer": 5000,
+          "tolerance": 0,
+          "explanation": "Book value ≥ interval → actual **5,000**."
+        },
+        {
+          "id": "p3",
+          "label": "Projected misstatement — Item 3",
+          "answer": 2000,
+          "tolerance": 0,
+          "explanation": "Tainting 200 ÷ 4,000 = 5%; × 40,000 = **2,000**."
+        },
+        {
+          "id": "t",
+          "label": "Total projected misstatement",
+          "answer": 19000,
+          "tolerance": 0,
+          "explanation": "12,000 + 5,000 + 2,000 = **19,000**."
+        }
+      ]
+    }
+  ]
+}

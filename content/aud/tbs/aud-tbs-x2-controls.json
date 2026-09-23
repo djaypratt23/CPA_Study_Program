@@ -1,0 +1,117 @@
+{
+  "id": "aud-tbs-x2-controls",
+  "section": "AUD",
+  "unitId": "aud-u4",
+  "moduleIds": [
+    "aud-internal-control",
+    "aud-it-controls"
+  ],
+  "pool": "exam",
+  "title": "Revenue cycle controls — Summit Outdoor Gear",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Evaluate the revenue and cash receipts process at **Summit Outdoor Gear**, a private retailer with online and wholesale sales.",
+  "exhibits": [
+    {
+      "title": "Process narrative",
+      "content": "1. Wholesale orders over a customer's credit limit are automatically blocked until the credit manager approves them in the system.\n2. The warehouse ships goods using a prenumbered packing slip; billing generates invoices only from packing slips, and a daily report of unbilled packing slips is reviewed by the billing supervisor.\n3. The receivables clerk opens mail, deposits checks, posts payments, and can issue credit memos up to $5,000 without approval.\n4. IT developers can move program changes to production without testing or approval.\n5. The controller reconciles the receivables subledger to the general ledger monthly and investigates differences.\n6. Online prices are pulled from a price master file that any sales employee can edit."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "eval",
+      "prompt": "Evaluate each item.",
+      "rows": [
+        {
+          "id": "e1",
+          "label": "1. Automated credit-limit block",
+          "answer": "Effective control",
+          "explanation": "An automated preventive control over credit risk."
+        },
+        {
+          "id": "e2",
+          "label": "2. Prenumbered packing slips and unbilled report",
+          "answer": "Effective control",
+          "explanation": "Addresses completeness of billing."
+        },
+        {
+          "id": "e3",
+          "label": "3. Receivables clerk duties",
+          "answer": "Deficiency",
+          "explanation": "Custody, recording, and credit authorization are combined — lapping and concealment risk."
+        },
+        {
+          "id": "e4",
+          "label": "4. Unapproved program changes",
+          "answer": "Deficiency",
+          "explanation": "An ITGC failure that undermines reliance on automated controls such as item 1."
+        },
+        {
+          "id": "e5",
+          "label": "5. Monthly subledger reconciliation",
+          "answer": "Effective control",
+          "explanation": "A detective control over accuracy of balances."
+        },
+        {
+          "id": "e6",
+          "label": "6. Price master editable by any sales employee",
+          "answer": "Deficiency",
+          "explanation": "Weak access control over master data affecting revenue accuracy."
+        }
+      ],
+      "options": [
+        "Effective control",
+        "Deficiency"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "asr",
+      "prompt": "Which assertion does each effective control primarily address?",
+      "rows": [
+        {
+          "id": "a1",
+          "label": "1. Credit-limit block",
+          "answer": "Valuation (collectibility)",
+          "explanation": "It limits sales to customers unlikely to pay."
+        },
+        {
+          "id": "a2",
+          "label": "2. Unbilled packing slip report",
+          "answer": "Completeness",
+          "explanation": "It ensures all shipments are billed."
+        },
+        {
+          "id": "a5",
+          "label": "5. Subledger reconciliation",
+          "answer": "Accuracy",
+          "explanation": "It detects posting and summarization errors."
+        }
+      ],
+      "options": [
+        "Completeness",
+        "Valuation (collectibility)",
+        "Accuracy"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "comp",
+      "prompt": "Which COSO component does item 5 primarily represent?",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Item 5",
+          "options": [
+            "Control activities",
+            "Control environment",
+            "Risk assessment"
+          ],
+          "answer": "Control activities",
+          "explanation": "Reconciliations are control activities (some firms also view recurring reviews as ongoing monitoring)."
+        }
+      ]
+    }
+  ]
+}

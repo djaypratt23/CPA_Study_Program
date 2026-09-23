@@ -1,0 +1,81 @@
+{
+  "id": "aud-tbs-x1-independence",
+  "section": "AUD",
+  "unitId": "aud-u1",
+  "moduleIds": [
+    "aud-code-of-conduct",
+    "aud-sec-pcaob-independence"
+  ],
+  "pool": "exam",
+  "title": "Independence review — Norris & Chen LLP",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Norris & Chen LLP audits **Keystone Logistics** (a private company) and **Vireo Pharmaceuticals** (an SEC registrant). Evaluate each situation under the applicable independence rules.",
+  "exhibits": [
+    {
+      "title": "Situations",
+      "content": "1. A Keystone audit senior's spouse holds Keystone stock through a self-directed brokerage account.\n2. A Norris & Chen tax manager (not on the Keystone audit, different office) spends 4 hours on a Keystone tax question.\n3. Keystone's CFO designated a qualified controller to oversee Norris & Chen's preparation of Keystone's statements.\n4. Vireo's audit committee asks Norris & Chen to perform Vireo's internal audit function.\n5. Norris & Chen prepares Vireo's corporate tax returns with audit committee pre-approval.\n6. The lead partner on Vireo has served six consecutive years.\n7. A Vireo audit senior joined Vireo as controller three months after the last audit ended; the next audit period is already under way.\n8. Keystone owes Norris & Chen fees for tax work completed 14 months before the current report date."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "ind",
+      "prompt": "Is independence impaired?",
+      "rows": [
+        {
+          "id": "s1",
+          "label": "1. Spouse's Keystone stock",
+          "answer": "Impaired",
+          "explanation": "Immediate family's direct financial interest impairs independence."
+        },
+        {
+          "id": "s2",
+          "label": "2. Tax manager, 4 hours",
+          "answer": "Not impaired",
+          "explanation": "Not a covered member (under 10 hours, not on the team or in the lead partner's office)."
+        },
+        {
+          "id": "s3",
+          "label": "3. Statement preparation with a qualified overseer",
+          "answer": "Not impaired",
+          "explanation": "Permitted nonattest service when the general requirements are met."
+        },
+        {
+          "id": "s4",
+          "label": "4. Internal audit for Vireo",
+          "answer": "Impaired",
+          "explanation": "Internal audit outsourcing is prohibited for issuer audit clients."
+        },
+        {
+          "id": "s5",
+          "label": "5. Vireo tax returns with pre-approval",
+          "answer": "Not impaired",
+          "explanation": "Tax compliance is permitted with pre-approval (absent PCAOB rule violations)."
+        },
+        {
+          "id": "s6",
+          "label": "6. Lead partner, six years",
+          "answer": "Impaired",
+          "explanation": "Lead partners may serve at most five consecutive years."
+        },
+        {
+          "id": "s7",
+          "label": "7. Controller within the cooling-off period",
+          "answer": "Impaired",
+          "explanation": "A financial reporting oversight role within the one-year cooling-off period."
+        },
+        {
+          "id": "s8",
+          "label": "8. Fees unpaid for 14 months",
+          "answer": "Impaired",
+          "explanation": "Fees unpaid for services rendered more than one year before the report date."
+        }
+      ],
+      "options": [
+        "Impaired",
+        "Not impaired"
+      ]
+    }
+  ]
+}

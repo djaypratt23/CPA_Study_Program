@@ -1,0 +1,128 @@
+{
+  "id": "aud-tbs-x3-risk",
+  "section": "AUD",
+  "unitId": "aud-u3",
+  "moduleIds": [
+    "aud-risk-materiality",
+    "aud-understanding-entity",
+    "aud-fraud-risk"
+  ],
+  "pool": "exam",
+  "title": "Risk assessment — Crescent Biotech",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "You are planning the audit of **Crescent Biotech**, a private company. Overall materiality: **5% of pretax income**; performance materiality: **70% of overall**. Pretax income: **$4,000,000**.",
+  "exhibits": [
+    {
+      "title": "Planning notes",
+      "content": "- A new multi-element licensing arrangement began this year; revenue allocation depends on estimated standalone selling prices.\n- The CEO's bonus depends on reaching $4 million of pretax income (exactly the reported amount).\n- A research grant from a federal agency requires compliance with specific cost rules.\n- Cash consists of two bank accounts with routine reconciliations.\n- Planned audit risk for license revenue: 4%; inherent risk: 100%; control risk: 40% (controls tested)."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "om",
+          "label": "Overall materiality",
+          "answer": 200000,
+          "tolerance": 0,
+          "explanation": "4,000,000 × 5% = **200,000**."
+        },
+        {
+          "id": "pm",
+          "label": "Performance materiality",
+          "answer": 140000,
+          "tolerance": 0,
+          "explanation": "200,000 × 70% = **140,000**."
+        },
+        {
+          "id": "dr",
+          "label": "Acceptable detection risk for license revenue (%)",
+          "answer": 10,
+          "tolerance": 0.1,
+          "explanation": "4% ÷ (100% × 40%) = **10%**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "rk",
+      "prompt": "Assess each area.",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Allocation of license revenue",
+          "answer": "Significant risk",
+          "explanation": "Complexity, subjectivity, and change — plus the presumed revenue fraud risk."
+        },
+        {
+          "id": "r2",
+          "label": "Cash existence",
+          "answer": "Not a significant risk",
+          "explanation": "Low inherent risk factors."
+        },
+        {
+          "id": "r3",
+          "label": "Management override of controls",
+          "answer": "Significant risk",
+          "explanation": "Always treated as a significant fraud risk."
+        }
+      ],
+      "options": [
+        "Significant risk",
+        "Not a significant risk"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "fac",
+      "prompt": "Classify each fact.",
+      "rows": [
+        {
+          "id": "f1",
+          "label": "The CEO's bonus threshold equals reported income",
+          "answer": "Incentive or pressure",
+          "explanation": "A personal incentive to meet the target."
+        },
+        {
+          "id": "f2",
+          "label": "Revenue allocation depends on management's estimates",
+          "answer": "Opportunity",
+          "explanation": "Judgmental estimates create room for manipulation."
+        },
+        {
+          "id": "f3",
+          "label": "Two routine bank accounts",
+          "answer": "Not a fraud risk factor",
+          "explanation": "Nothing indicates elevated risk."
+        }
+      ],
+      "options": [
+        "Incentive or pressure",
+        "Opportunity",
+        "Not a fraud risk factor"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "law",
+      "prompt": "How should the auditor treat the grant cost rules?",
+      "rows": [
+        {
+          "id": "l1",
+          "label": "Grant compliance",
+          "options": [
+            "As a law or regulation with a direct effect on material amounts — obtain evidence of compliance",
+            "As an indirect law — inquiry only",
+            "Ignore — grants aren't audited"
+          ],
+          "answer": "As a law or regulation with a direct effect on material amounts — obtain evidence of compliance",
+          "explanation": "Grant terms directly affect revenue and receivable amounts."
+        }
+      ]
+    }
+  ]
+}

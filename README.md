@@ -13,7 +13,8 @@ Home Screen") to use it offline.
 | Section | Status |
 |---|---|
 | **FAR** | Full: 37 modules (lesson, ≥10 practice MCQs, lesson checks, and flashcards in each), 24 practice TBS (2 per unit), a 50-MCQ + 7-TBS simulated exam, final-review sheets, and a glossary |
-| **AUD, REG, TCP** | Preview: the full blueprint outline plus one complete sample module each (audit risk & materiality; property basis; partnership formation) |
+| **AUD** | Full: 32 modules, 20 practice TBS (2 per unit), a 78-MCQ + 7-TBS simulated exam, final-review sheets, and a glossary |
+| **REG, TCP** | Preview: the full blueprint outline plus one complete sample module each (property basis; partnership formation) |
 
 Progress is stored **only on your device** (IndexedDB). Use **Settings → Export** to back up or move it to another device.
 

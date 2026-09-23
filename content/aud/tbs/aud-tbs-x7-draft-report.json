@@ -1,0 +1,85 @@
+{
+  "id": "aud-tbs-x7-draft-report",
+  "section": "AUD",
+  "unitId": "aud-u9",
+  "moduleIds": [
+    "aud-modified-opinions",
+    "aud-unmodified-opinion"
+  ],
+  "pool": "exam",
+  "title": "Draft qualified report — Halvorsen Marine",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Halvorsen Marine, a private company, didn't capitalize leases as required by U.S. GAAP. The effect is material but not pervasive. Review the draft report excerpts and correct any errors.",
+  "exhibits": [
+    {
+      "title": "Facts",
+      "content": "- Right-of-use assets and lease liabilities would each increase by about $2.4 million.\n- All other matters were resolved satisfactorily."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "docreview",
+      "id": "rpt",
+      "prompt": "Draft report excerpts",
+      "segments": [
+        {
+          "id": "h1",
+          "original": "Opinion",
+          "options": [
+            "Opinion",
+            "Qualified Opinion",
+            "Adverse Opinion"
+          ],
+          "answer": "Qualified Opinion",
+          "explanation": "The heading reflects the type of opinion."
+        },
+        {
+          "text": " — In our opinion, "
+        },
+        {
+          "id": "o",
+          "original": "except for the possible effects of the matter",
+          "options": [
+            "except for the possible effects of the matter",
+            "except for the effects of the matter",
+            "because of the significance of the matter"
+          ],
+          "answer": "except for the effects of the matter",
+          "explanation": "\"Possible effects\" is scope-limitation wording; this is a known misstatement."
+        },
+        {
+          "text": " described in the "
+        },
+        {
+          "id": "h2",
+          "original": "Basis for Opinion",
+          "options": [
+            "Basis for Opinion",
+            "Basis for Qualified Opinion",
+            "Emphasis of Matter"
+          ],
+          "answer": "Basis for Qualified Opinion",
+          "explanation": "The explanatory section heading matches the opinion."
+        },
+        {
+          "text": " section, the financial statements present fairly, in all material respects... We believe the audit evidence we have obtained is sufficient and appropriate to provide a basis for our "
+        },
+        {
+          "id": "b",
+          "original": "unmodified",
+          "options": [
+            "unmodified",
+            "qualified",
+            "adverse"
+          ],
+          "answer": "qualified",
+          "explanation": "The basis supports a qualified opinion."
+        },
+        {
+          "text": " audit opinion."
+        }
+      ]
+    }
+  ]
+}

@@ -20,6 +20,14 @@ before building out each section:
 - **AUD** — skill ranges (configured R&U 30–40, Application 30–40, Analysis 15–25, Evaluation 5–15).
 - **FAR** — where employee benefit plan statements, EPS, and ratios fall within Area I (the content is built; only the labels are affected).
 
+## AUD content notes
+
+AUD is now fully built. Nothing in it is flagged `needsReview`, but these points deserve a reviewer's eye:
+
+- **Standards currency.** Content reflects AICPA standards in effect for 2026 audits, including SAS 142–146 (e.g., SAS 145 risk assessment with separate inherent and control risk), SQMS No. 1 and No. 2 (effective December 15, 2025), and SAS 134 report formats. Group audits (AU-C 600, revised by SAS 149 for later periods) and PCAOB QC 1000 are covered only at a summary level — confirm which versions the exam window tests.
+- **Research excerpts** in AUD TBS are original paraphrases with section-level citations (e.g., "AU-C 505"), not quotations or paragraph numbers.
+- **Specific rules worth a second check:** the AU-C 265 timing (communicate by the report release date, no later than 60 days after); the AICPA inherited-interest disposal window cited in `aud-tbs-u1-independence`; the conditions for negative confirmations; the DOL and GAO independence summaries in `aud-sec-pcaob-independence`.
+
 ## Tax-law currency (REG, TCP)
 
 The sample modules reflect **tax year 2025** law. Their topics (property basis, partnership formation) were
@@ -32,5 +40,5 @@ inflation-indexed amounts.
 Every numeric answer key was recomputed independently, and the test suite proves every TBS answer key scores
 100% against its own schema. A subject-matter reviewer's second pass is still worthwhile on:
 
-- The FAR simulated exam (`content/far/exam-questions/`, `content/far/tbs/far-tbs-x*.json`).
+- The FAR and AUD simulated exams (`content/{far,aud}/exam-questions/`, `content/{far,aud}/tbs/*-tbs-x*.json`).
 - Judgment-heavy classification items: NFP contributions, subsequent-event type, and contingency disclosure (gain contingencies are keyed "disclose only").

@@ -82,7 +82,9 @@ Lesson Markdown supports structured fenced blocks: ` ```check ` (embedded questi
 
 ## Later sessions (one section at a time)
 
-For each remaining section, in the learner's planned order (after FAR: AUD → REG → TCP, adjust in Settings):
+Progress: **FAR — full. AUD — full.** Next: REG, then TCP.
+
+For each remaining section, in the learner's planned order (FAR → AUD → REG → TCP, adjustable in Settings):
 
 1. Re-verify the section's blueprint against the official PDF; update `content/sections/<id>.yaml`.
 2. Write every module (lesson + ≥10 practice MCQs + lesson checks + flashcards), unit by unit.
