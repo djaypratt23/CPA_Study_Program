@@ -1,0 +1,453 @@
+[
+  {
+    "id": "reg-cc-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: what is the federal income tax rate for a C corporation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A flat 21%",
+        "explanation": "Correct. §11: flat 21%."
+      },
+      {
+        "id": "b",
+        "text": "A graduated rate up to 35%",
+        "explanation": "The graduated structure ended after 2017.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "15%",
+        "explanation": "That's the corporate AMT rate on very large corporations' book income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "37%",
+        "explanation": "That's the top individual rate.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§11: flat 21%.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cc-chk1",
+    "pool": "lesson",
+    "stem": "Which item is **subtracted** from book income to reach taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Federal income tax expense",
+        "explanation": "It's added back.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Fines paid to a government",
+        "explanation": "They're added back.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Interest on municipal bonds",
+        "explanation": "Correct. Tax-exempt income is included in book income but excluded from taxable income."
+      },
+      {
+        "id": "d",
+        "text": "Premiums on life insurance where the corporation is beneficiary",
+        "explanation": "They're added back.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Tax-exempt income is included in book income but excluded from taxable income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cc-chk2",
+    "pool": "lesson",
+    "stem": "Taxable income before the charitable deduction and DRD is $200,000 (including $50,000 of dividends from a 10%-owned corporation). The corporation gave $25,000 to charity. What is the charitable deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Limited to 10%.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$17,500",
+        "explanation": "Subtracts a DRD before applying the limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Computes the limit after the DRD.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Correct. 10% × $200,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The 10% limit uses taxable income before the charitable deduction and DRD.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-01",
+    "pool": "practice",
+    "stem": "A corporation owns 45% of a domestic corporation and receives $100,000 of dividends. Taxable income before the DRD is $400,000. What is the DRD?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$65,000",
+        "explanation": "Correct. 65% × $100,000."
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "The 50% rate is for less than 20% ownership.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "100% requires 80% ownership.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$260,000",
+        "explanation": "That's the TI limit, which doesn't bind.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "20% to less than 80% ownership → 65% DRD.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-02",
+    "pool": "practice",
+    "stem": "A corporation receives $100,000 of dividends from a 15%-owned corporation. Taxable income before the DRD is $80,000, including the dividends. What is the DRD?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Limited because TI before DRD is less than the dividend.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$80,000",
+        "explanation": "The DRD can't exceed 50% of TI here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Correct. Lesser of 50% × $100,000 or 50% × $80,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A DRD is available.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The full $50,000 DRD wouldn't create an NOL (80,000 − 50,000 = 30,000 > 0), so the TI limit applies: 50% × 80,000 = 40,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-03",
+    "pool": "practice",
+    "stem": "A corporation has a $1,000,000 NOL carryforward from 2022 and 2025 taxable income of $600,000 before the NOL. What is the NOL deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$600,000",
+        "explanation": "Limited to 80% of taxable income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The NOL is deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$1,000,000",
+        "explanation": "Can't exceed the limit.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$480,000",
+        "explanation": "Correct. Post-2017 NOLs: 80% of taxable income; the remaining $520,000 carries forward indefinitely."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Post-2017 NOLs: 80% of taxable income; the remaining $520,000 carries forward indefinitely.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-04",
+    "pool": "practice",
+    "stem": "A corporation has a $30,000 net capital loss in 2025 and no capital gains. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Not deductible in 2025; carried back 3 years and forward 5 years as short-term",
+        "explanation": "Correct. Corporate capital losses offset only capital gains; carryback 3, carryforward 5."
+      },
+      {
+        "id": "b",
+        "text": "$3,000 deducted; $27,000 carried forward",
+        "explanation": "The $3,000 rule is for individuals.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Fully deductible against ordinary income",
+        "explanation": "Corporations can't deduct capital losses against ordinary income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Carried forward indefinitely",
+        "explanation": "Corporate carryforward is 5 years.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Corporate capital losses offset only capital gains; carryback 3, carryforward 5.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cc-05",
+    "pool": "practice",
+    "stem": "A corporation's book income is $250,000, which includes $52,500 of federal income tax expense and a $2,000 penalty. What is taxable income (no other differences)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$250,000",
+        "explanation": "Tax expense and the penalty must be added back.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$302,500",
+        "explanation": "Omits the penalty.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$304,500",
+        "explanation": "Correct. $250,000 + $52,500 + $2,000."
+      },
+      {
+        "id": "d",
+        "text": "$195,500",
+        "explanation": "Subtracts instead of adding.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Federal income tax and penalties aren't deductible.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-06",
+    "pool": "practice",
+    "stem": "When is Form 1120 due for a calendar-year corporation (without extension)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 15",
+        "explanation": "That's for partnerships and S corporations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "October 15",
+        "explanation": "That's the extended due date.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "May 15",
+        "explanation": "That's for exempt organizations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "April 15",
+        "explanation": "Correct. C corporations: 15th day of the 4th month after year-end."
+      }
+    ],
+    "answer": "d",
+    "explanation": "C corporations: 15th day of the 4th month after year-end.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cc-07",
+    "pool": "practice",
+    "stem": "An accrual-basis calendar-year corporation's board authorizes a $10,000 charitable gift in December 2025, paid March 10, 2026. When may it be deducted?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "2026 only",
+        "explanation": "Accrual corporations may elect to deduct in the year authorized if paid within 3½ months.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "2025, if paid by April 15, 2026 (within 3½ months after year-end)",
+        "explanation": "Correct. Accrual corporations may deduct contributions authorized during the year and paid by the 15th day of the 4th month after year-end."
+      },
+      {
+        "id": "c",
+        "text": "Never",
+        "explanation": "It's deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Over five years",
+        "explanation": "It isn't spread over five years.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Accrual corporations may deduct contributions authorized during the year and paid by the 15th day of the 4th month after year-end.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cc-08",
+    "pool": "practice",
+    "stem": "In 2025 a corporation buys and places in service $300,000 of new equipment, acquired in March 2025. What is the maximum first-year cost recovery (ignoring taxable income limits)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000 (40% bonus)",
+        "explanation": "The 40% rate applies only to property acquired before January 20, 2025.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$300,000",
+        "explanation": "Correct. 100% bonus depreciation (or §179 up to $2.5 million)."
+      },
+      {
+        "id": "c",
+        "text": "$60,000",
+        "explanation": "Uses regular MACRS only.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$1,250,000",
+        "explanation": "That's an old §179 cap, not the cost.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "OBBBA restored 100% bonus depreciation for property acquired after January 19, 2025, and raised the §179 limit to $2,500,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date for 2025. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "reg-cc-09",
+    "pool": "practice",
+    "stem": "A corporation has $400,000 of taxable income before a $30,000 charitable carryforward and $50,000 of current-year cash gifts. What is the total charitable deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Limited to 10% of TI.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$40,000 — the current-year gifts are used first; $10,000 of current gifts plus the $30,000 carryforward carry to later years",
+        "explanation": "Correct. Limit = 10% × 400,000 = 40,000; current contributions are deducted before carryforwards."
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "The limit is $40,000.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Limited to $40,000.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Limit = 10% × 400,000 = 40,000; current contributions are deducted before carryforwards.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-10",
+    "pool": "practice",
+    "stem": "Which item is **not** deductible for a corporation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Salaries paid to employees",
+        "explanation": "Reasonable salaries are deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Premiums on life insurance where the corporation is the beneficiary",
+        "explanation": "Correct. §264: premiums are nondeductible when the corporation is the beneficiary (and the proceeds are tax-exempt)."
+      },
+      {
+        "id": "c",
+        "text": "State income taxes",
+        "explanation": "Deductible for corporations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Interest on business loans (within the §163(j) limit)",
+        "explanation": "Business interest is deductible within limits.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§264: premiums are nondeductible when the corporation is the beneficiary (and the proceeds are tax-exempt).",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

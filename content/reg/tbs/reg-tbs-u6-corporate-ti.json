@@ -1,0 +1,114 @@
+{
+  "id": "reg-tbs-u6-corporate-ti",
+  "section": "REG",
+  "unitId": "reg-u6",
+  "moduleIds": [
+    "reg-c-corp-income"
+  ],
+  "pool": "practice",
+  "title": "Corporate taxable income — Maple Manufacturing",
+  "minutes": 30,
+  "skill": "analysis",
+  "instructions": "Maple Manufacturing, Inc., a calendar-year C corporation, reports 2025 book net income of **$420,000**. Use the data below to compute taxable income and tax.",
+  "exhibits": [
+    {
+      "title": "Items included in book net income",
+      "content": "| Item | Amount |\n|---|---:|\n| Federal income tax expense | 90,000 |\n| Interest on municipal bonds | 12,000 |\n| Dividends from a 25%-owned domestic corporation | 60,000 |\n| Net capital loss (sale of investments) | 15,000 |\n| Fines paid to a state agency | 5,000 |\n| Business meals | 8,000 |\n| Cash charitable contributions | 50,000 |\n| Book depreciation | 40,000 |"
+    },
+    {
+      "title": "Other information",
+      "content": "- Tax depreciation (MACRS) is **$70,000**.\n- Maple has a **$100,000** NOL carryforward from 2021.\n- Maple had no capital gains in any year."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute.",
+      "rows": [
+        {
+          "id": "pre",
+          "label": "Taxable income before the charitable deduction, DRD, and NOL",
+          "answer": 542000,
+          "tolerance": 0,
+          "explanation": "420,000 + 90,000 − 12,000 + 15,000 + 5,000 + 4,000 (50% of meals) + 50,000 (charity added back) − 30,000 (extra tax depreciation) = **542,000**."
+        },
+        {
+          "id": "ch",
+          "label": "Charitable contribution deduction",
+          "answer": 50000,
+          "tolerance": 0,
+          "explanation": "Limit 10% × 542,000 = 54,200; all 50,000 is deductible."
+        },
+        {
+          "id": "drd",
+          "label": "Dividends-received deduction",
+          "answer": 39000,
+          "tolerance": 0,
+          "explanation": "65% × 60,000 = **39,000** (65% × TI of 492,000 is larger)."
+        },
+        {
+          "id": "nol",
+          "label": "NOL deduction",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "Limit 80% × 453,000 = 362,400; the full 100,000 is deductible."
+        },
+        {
+          "id": "ti",
+          "label": "Taxable income",
+          "answer": 353000,
+          "tolerance": 0,
+          "explanation": "542,000 − 50,000 − 39,000 − 100,000 = **353,000**."
+        },
+        {
+          "id": "tax",
+          "label": "Income tax",
+          "answer": 74130,
+          "tolerance": 0,
+          "explanation": "353,000 × 21% = **74,130**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Treatment of other items",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "The $15,000 net capital loss",
+          "options": [
+            "Deducted in 2025",
+            "Carried back 3 years and forward 5 years",
+            "Deducted $3,000 per year"
+          ],
+          "answer": "Carried back 3 years and forward 5 years",
+          "explanation": "Corporations can't deduct net capital losses currently."
+        },
+        {
+          "id": "q2",
+          "label": "The $30,000 depreciation difference",
+          "options": [
+            "A permanent difference",
+            "A temporary difference",
+            "Not a reconciling item"
+          ],
+          "answer": "A temporary difference",
+          "explanation": "It reverses over the asset's life."
+        },
+        {
+          "id": "q3",
+          "label": "Municipal interest",
+          "options": [
+            "A permanent difference",
+            "A temporary difference",
+            "Taxable"
+          ],
+          "answer": "A permanent difference",
+          "explanation": "It is never taxable."
+        }
+      ]
+    }
+  ]
+}

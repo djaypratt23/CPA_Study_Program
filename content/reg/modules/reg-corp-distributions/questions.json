@@ -1,0 +1,449 @@
+[
+  {
+    "id": "reg-ep-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a corporation with no E&P (current or accumulated) distributes $10,000 to a shareholder with stock basis of $25,000. What is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0 — it's a return of capital that reduces basis to $15,000",
+        "explanation": "Correct. Without E&P, distributions reduce basis first."
+      },
+      {
+        "id": "b",
+        "text": "$10,000 dividend",
+        "explanation": "There's no E&P.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$10,000 capital gain",
+        "explanation": "Basis exceeds the distribution.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "There's no partial rule here.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Without E&P, distributions reduce basis first.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ep-chk1",
+    "pool": "lesson",
+    "stem": "Current E&P is $40,000; accumulated E&P is a $(100,000) deficit. The corporation distributes $30,000. How much is a dividend?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0 — accumulated E&P is negative",
+        "explanation": "Current E&P is positive, so the distribution is a dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Can't exceed the distribution.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Correct. Covered by current E&P."
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "Doesn't net current and accumulated E&P this way.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Distributions are dividends to the extent of current E&P, regardless of an accumulated deficit.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ep-chk2",
+    "pool": "lesson",
+    "stem": "A corporation distributes property with FMV $30,000 and adjusted basis $45,000 to a shareholder. What does the corporation recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000 loss",
+        "explanation": "Losses aren't recognized on distributions.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000 gain",
+        "explanation": "FMV isn't gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$15,000 gain",
+        "explanation": "The property has a loss, not a gain.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "No gain or loss",
+        "explanation": "Correct. §311: gain is recognized on appreciated property; losses aren't recognized."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§311: gain is recognized on appreciated property; losses aren't recognized.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ep-01",
+    "pool": "practice",
+    "stem": "A corporation with current E&P of $20,000 and no accumulated E&P distributes $50,000 to its sole shareholder, whose stock basis is $18,000. How is the distribution treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000 dividend; $18,000 return of capital; $12,000 capital gain",
+        "explanation": "Correct. Dividend to current E&P; then basis recovery; then capital gain."
+      },
+      {
+        "id": "b",
+        "text": "$50,000 dividend",
+        "explanation": "Limited to E&P.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$20,000 dividend; $30,000 capital gain",
+        "explanation": "Basis is recovered first.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$32,000 capital gain",
+        "explanation": "The dividend portion comes first.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Dividend to current E&P; then basis recovery; then capital gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ep-02",
+    "pool": "practice",
+    "stem": "Which item is **subtracted** from taxable income in computing current E&P?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Tax-exempt interest",
+        "explanation": "Tax-exempt interest is added to E&P.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "The dividends-received deduction",
+        "explanation": "It's added back.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Federal income taxes paid",
+        "explanation": "Correct. E&P is reduced by federal income taxes and other nondeductible expenses."
+      },
+      {
+        "id": "d",
+        "text": "Excess tax depreciation over E&P depreciation",
+        "explanation": "It's added back.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "E&P is reduced by federal income taxes and other nondeductible expenses.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ep-03",
+    "pool": "practice",
+    "stem": "A corporation distributes land (FMV $100,000; basis $60,000) to a shareholder. What is the shareholder's basis in the land?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60,000",
+        "explanation": "The shareholder takes FMV basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The shareholder takes a FMV basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "That's the gain.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Correct. §301(d): shareholder's basis = FMV."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§301(d): shareholder's basis = FMV.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ep-04",
+    "pool": "practice",
+    "stem": "A corporation's sole shareholder-employee is paid a $900,000 salary; reasonable compensation is $500,000. What is the likely IRS position on the excess?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $400,000 constructive dividend — not deductible by the corporation",
+        "explanation": "Correct. Excess compensation to shareholder-employees is recharacterized as a nondeductible dividend."
+      },
+      {
+        "id": "b",
+        "text": "Fully deductible salary",
+        "explanation": "Unreasonable compensation isn't deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A return of capital",
+        "explanation": "Not the characterization.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A gift",
+        "explanation": "Not the characterization.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Excess compensation to shareholder-employees is recharacterized as a nondeductible dividend.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ep-05",
+    "pool": "practice",
+    "stem": "A corporation has accumulated E&P of $50,000 and a current-year deficit of $(20,000) (spread evenly over the year). It distributes $40,000 on December 31. How much is a dividend?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "The deficit reduces available E&P.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Accumulated E&P remains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Correct. $50,000 − $20,000 net at the distribution date."
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Subtracts the deficit twice.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "When current E&P is negative, net it against accumulated E&P as of the distribution date.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ep-06",
+    "pool": "practice",
+    "stem": "Which is generally **not** taxable to shareholders?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A cash dividend from ample E&P",
+        "explanation": "Cash dividends are taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Personal use of a corporate yacht",
+        "explanation": "A constructive dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A bargain sale of corporate property to a shareholder",
+        "explanation": "A constructive dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A pro rata common stock dividend on common stock",
+        "explanation": "Correct. §305: pro rata stock dividends are generally nontaxable; basis is allocated."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§305: pro rata stock dividends are generally nontaxable; basis is allocated.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ep-07",
+    "pool": "practice",
+    "stem": "A corporation distributes property (FMV $80,000; basis $30,000) subject to a $10,000 liability the shareholder assumes. What is the shareholder's dividend (ample E&P)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Reduced by the liability assumed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$70,000",
+        "explanation": "Correct. Distribution amount = FMV − liabilities assumed."
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "That's the corporation's gain.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Miscomputes the dividend.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Distribution amount = FMV − liabilities assumed.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ep-08",
+    "pool": "practice",
+    "stem": "For an individual, dividends from a domestic corporation held more than 60 days in the required window are taxed:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At ordinary rates",
+        "explanation": "Qualified dividends get preferential rates.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "At long-term capital gain rates (0%, 15%, 20%)",
+        "explanation": "Correct. Qualified dividends use the capital gain rate structure."
+      },
+      {
+        "id": "c",
+        "text": "Tax-free",
+        "explanation": "They're taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "At 28%",
+        "explanation": "That's the collectibles rate.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Qualified dividends use the capital gain rate structure.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ep-09",
+    "pool": "practice",
+    "stem": "A corporation computes E&P using which depreciation method for property placed in service after 1986?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The same MACRS used for taxable income",
+        "explanation": "E&P uses the alternative depreciation system.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The alternative depreciation system (straight-line over longer lives)",
+        "explanation": "Correct. §312(k): E&P uses ADS, so accelerated tax depreciation is added back."
+      },
+      {
+        "id": "c",
+        "text": "No depreciation",
+        "explanation": "Depreciation reduces E&P.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Bonus depreciation",
+        "explanation": "Bonus depreciation isn't used for E&P.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§312(k): E&P uses ADS, so accelerated tax depreciation is added back.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ep-10",
+    "pool": "practice",
+    "stem": "A corporation distributes appreciated property. What happens to its E&P?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Decreases by the property's basis only",
+        "explanation": "For appreciated property, E&P is reduced by FMV (after adding the gain).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Increases by the gain recognized, then decreases by the property's FMV (net of liabilities)",
+        "explanation": "Correct. §312: gain increases E&P; the distribution reduces E&P by FMV (net of liabilities)."
+      },
+      {
+        "id": "c",
+        "text": "No effect",
+        "explanation": "E&P is affected.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Increases by FMV",
+        "explanation": "E&P decreases on a distribution.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§312: gain increases E&P; the distribution reduces E&P by FMV (net of liabilities).",
+    "skill": "analysis",
+    "difficulty": 2
+  }
+]

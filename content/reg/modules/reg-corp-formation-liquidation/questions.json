@@ -1,0 +1,453 @@
+[
+  {
+    "id": "reg-fl-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: to qualify under §351, the transferors of property must control what percentage of the corporation immediately after the transfer?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "50%",
+        "explanation": "The control threshold is higher.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "100%",
+        "explanation": "Control requires only 80%.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "80%",
+        "explanation": "Correct. Control = 80% of voting power and 80% of each other class of stock."
+      },
+      {
+        "id": "d",
+        "text": "20%",
+        "explanation": "The control threshold is much higher.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Control = 80% of voting power and 80% of each other class of stock.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fl-chk1",
+    "pool": "lesson",
+    "stem": "In a §351 transfer, Dee transfers property with a basis of $40,000 subject to a $55,000 liability that the corporation assumes. What gain does Dee recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Liabilities exceeding basis trigger gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "That's the basis, not the gain.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$55,000",
+        "explanation": "Only the excess over basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$15,000",
+        "explanation": "Correct. §357(c)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§357(c): gain = liabilities assumed − total basis of property transferred.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-chk2",
+    "pool": "lesson",
+    "stem": "A corporation liquidates, distributing assets worth $500,000 to its sole shareholder, whose stock basis is $120,000. What does the shareholder recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$500,000 dividend",
+        "explanation": "Liquidating distributions are exchange transactions.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Not a §332 parent-subsidiary liquidation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$380,000 capital gain",
+        "explanation": "Correct. §331: gain = FMV received − stock basis."
+      },
+      {
+        "id": "d",
+        "text": "$120,000 capital gain",
+        "explanation": "That's the basis, not the gain.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§331: gain = FMV received − stock basis.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-01",
+    "pool": "practice",
+    "stem": "In a §351 transfer, Eva transfers land (basis $50,000; FMV $120,000) for stock worth $100,000 and $20,000 cash. What is her basis in the stock?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Correct. $50,000 + $20,000 gain − $20,000 cash."
+      },
+      {
+        "id": "b",
+        "text": "$70,000",
+        "explanation": "Doesn't subtract the boot.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "That's FMV; §351 uses substituted basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "Subtracts the boot without adding the gain.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gain = lesser of 70,000 realized or 20,000 boot = 20,000; stock basis = 50,000 + 20,000 − 20,000 = 50,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-02",
+    "pool": "practice",
+    "stem": "In the previous transfer, what is the corporation's basis in the land?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Add the gain Eva recognized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "That's the stock value.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$120,000",
+        "explanation": "FMV isn't used; basis carries over.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$70,000",
+        "explanation": "Correct. $50,000 + $20,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§362: transferor's basis + gain recognized by the transferor.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-03",
+    "pool": "practice",
+    "stem": "Fran receives 25% of a new corporation's stock solely for services, worth $50,000. The other founders receive 75% for property. What are the results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fran has $50,000 of ordinary income; the property transferors own only 75%, so §351 doesn't apply to them",
+        "explanation": "Correct. Stock for services is compensation, and service-only transferors don't count toward control."
+      },
+      {
+        "id": "b",
+        "text": "Everyone's transfer is tax-free under §351",
+        "explanation": "The property transferors lack 80% control, and Fran has income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Fran has no income; §351 applies",
+        "explanation": "Services aren't property.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only Fran's transfer is tax-free",
+        "explanation": "Services produce income.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Stock for services is compensation, and service-only transferors don't count toward control.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-04",
+    "pool": "practice",
+    "stem": "Gus owns 50 of 100 shares; his son owns 30. The corporation redeems 20 of Gus's shares. Is the redemption substantially disproportionate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes — Gus owns 30 of 80 shares (37.5%) afterward",
+        "explanation": "Attribution from his son must be included.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Yes — any redemption of 20% qualifies",
+        "explanation": "The percentage redeemed isn't the test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No — with attribution, Gus owns 60 of 80 shares (75%) afterward",
+        "explanation": "Correct. §318 attributes the son's 30 shares to Gus: before 80/100 = 80%; after 60/80 = 75% (not below 50%)."
+      },
+      {
+        "id": "d",
+        "text": "No — redemptions are always dividends",
+        "explanation": "Some qualify for sale treatment.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§318 attributes the son's 30 shares to Gus: before 80/100 = 80%; after 60/80 = 75% (not below 50%).",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-05",
+    "pool": "practice",
+    "stem": "A shareholder with no family members owning stock has all her shares redeemed. How is the redemption treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a dividend",
+        "explanation": "A complete termination is a sale.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Tax-free",
+        "explanation": "Gain or loss is recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a gift",
+        "explanation": "A redemption isn't a gift.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a sale — complete termination of interest",
+        "explanation": "Correct. §302(b)(3): complete termination → exchange treatment."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§302(b)(3): complete termination → exchange treatment.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fl-06",
+    "pool": "practice",
+    "stem": "A parent corporation owns 90% of a subsidiary, which liquidates. What does the parent recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Capital gain on the difference between FMV and stock basis",
+        "explanation": "§332 provides nonrecognition for an 80%+ parent.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No gain or loss",
+        "explanation": "Correct. §332: no gain or loss to a parent owning at least 80%; carryover basis."
+      },
+      {
+        "id": "c",
+        "text": "Dividend income",
+        "explanation": "A liquidation isn't treated as a dividend here.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Ordinary income",
+        "explanation": "Nonrecognition applies.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§332: no gain or loss to a parent owning at least 80%; carryover basis.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fl-07",
+    "pool": "practice",
+    "stem": "In a complete liquidation (not parent-subsidiary), a corporation distributes land with FMV $200,000 and basis $80,000. What does the corporation recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing",
+        "explanation": "§336 treats the distribution as a sale.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$120,000 gain",
+        "explanation": "Correct. §336: the liquidating corporation recognizes gain or loss as if it sold the property at FMV."
+      },
+      {
+        "id": "c",
+        "text": "$200,000 gain",
+        "explanation": "Only the excess over basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "A $120,000 dividend",
+        "explanation": "The corporation recognizes gain, not a dividend.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§336: the liquidating corporation recognizes gain or loss as if it sold the property at FMV.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-08",
+    "pool": "practice",
+    "stem": "Which relationship is **not** included in family attribution under §318?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Spouse",
+        "explanation": "Spousal attribution applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Brother",
+        "explanation": "Correct. Siblings aren't included."
+      },
+      {
+        "id": "c",
+        "text": "Child",
+        "explanation": "Attribution from children applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Parent",
+        "explanation": "Attribution from parents applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§318 family: spouse, children, grandchildren, and parents.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fl-09",
+    "pool": "practice",
+    "stem": "A shareholder receives stock worth $60,000 plus $15,000 cash for property with a basis of $70,000 in a §351 exchange. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000",
+        "explanation": "Boot exceeds realized gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Correct. The lesser of $5,000 realized or $15,000 boot."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Some gain is recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$75,000",
+        "explanation": "That's the amount realized.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Realized gain = 75,000 − 70,000 = 5,000; recognized = min(5,000, 15,000).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-10",
+    "pool": "practice",
+    "stem": "A shareholder receives assets worth $50,000 in a complete liquidation; her stock basis is $80,000. What does she recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000 capital loss",
+        "explanation": "Correct. §331: loss = 50,000 − 80,000 = (30,000), capital."
+      },
+      {
+        "id": "b",
+        "text": "No loss",
+        "explanation": "Liquidation losses are recognized by shareholders.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000 ordinary loss",
+        "explanation": "The loss is capital (absent §1244).",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$50,000 dividend",
+        "explanation": "Liquidations aren't dividends.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§331: loss = 50,000 − 80,000 = (30,000), capital.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]

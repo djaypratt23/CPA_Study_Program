@@ -1,0 +1,121 @@
+{
+  "id": "reg-tbs-u6-distributions-formation",
+  "section": "REG",
+  "unitId": "reg-u6",
+  "moduleIds": [
+    "reg-corp-distributions",
+    "reg-corp-formation-liquidation"
+  ],
+  "pool": "practice",
+  "title": "Formation, distributions, and a redemption",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Answer the questions about three unrelated corporate events in 2025.",
+  "exhibits": [
+    {
+      "title": "Event 1 — Formation of Summit Corp.",
+      "content": "Cara transfers a building (adjusted basis $200,000; FMV $350,000) subject to an $80,000 mortgage that Summit assumes, and receives Summit stock worth $250,000 plus $20,000 cash. Dan transfers equipment worth $270,000 for the remaining stock. Together they own 100% of Summit."
+    },
+    {
+      "title": "Event 2 — Distribution by Birch Corp.",
+      "content": "Birch has current E&P of $60,000 and accumulated E&P of $20,000. On December 31 it distributes $100,000 cash to its sole shareholder, whose stock basis is $50,000."
+    },
+    {
+      "title": "Event 3 — Redemption by Cedar Corp.",
+      "content": "Cedar has 1,000 shares outstanding, owned by unrelated individuals: Gail 400, Hank 350, Ivy 250. Cedar redeems 200 of Gail's shares."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "f",
+      "prompt": "Event 1 — Cara.",
+      "rows": [
+        {
+          "id": "rg",
+          "label": "Cara's realized gain",
+          "answer": 150000,
+          "tolerance": 0,
+          "explanation": "350,000 − 200,000 = **150,000**."
+        },
+        {
+          "id": "rec",
+          "label": "Cara's recognized gain",
+          "answer": 20000,
+          "tolerance": 0,
+          "explanation": "Boot is the 20,000 cash; the 80,000 mortgage is not boot and doesn't exceed basis: **20,000**."
+        },
+        {
+          "id": "sb",
+          "label": "Cara's basis in her Summit stock",
+          "answer": 120000,
+          "tolerance": 0,
+          "explanation": "200,000 + 20,000 gain − 20,000 cash − 80,000 liability = **120,000**."
+        },
+        {
+          "id": "cb",
+          "label": "Summit's basis in the building",
+          "answer": 220000,
+          "tolerance": 0,
+          "explanation": "200,000 + 20,000 gain recognized by Cara = **220,000**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "d",
+      "prompt": "Event 2 — Birch's distribution.",
+      "rows": [
+        {
+          "id": "dv",
+          "label": "Dividend income",
+          "answer": 80000,
+          "tolerance": 0,
+          "explanation": "Current 60,000 + accumulated 20,000 = **80,000**."
+        },
+        {
+          "id": "roc",
+          "label": "Return of capital",
+          "answer": 20000,
+          "tolerance": 0,
+          "explanation": "The remaining 20,000 reduces basis."
+        },
+        {
+          "id": "nb",
+          "label": "Shareholder's remaining stock basis",
+          "answer": 30000,
+          "tolerance": 0,
+          "explanation": "50,000 − 20,000 = **30,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "r",
+      "prompt": "Event 3 — Gail's redemption.",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Gail's ownership after the redemption",
+          "options": [
+            "40%",
+            "25%",
+            "20%"
+          ],
+          "answer": "25%",
+          "explanation": "200 ÷ 800 = 25%."
+        },
+        {
+          "id": "r2",
+          "label": "Treatment",
+          "options": [
+            "Sale or exchange — substantially disproportionate",
+            "Dividend"
+          ],
+          "answer": "Sale or exchange — substantially disproportionate",
+          "explanation": "25% is below 50% and below 80% × 40% = 32%."
+        }
+      ]
+    }
+  ]
+}
