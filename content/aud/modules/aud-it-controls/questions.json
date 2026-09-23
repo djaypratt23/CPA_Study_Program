@@ -1,0 +1,445 @@
+[
+  {
+    "id": "aud-itc-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which is an IT **general** control rather than an application control?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A limit test on payroll hours",
+        "explanation": "That works inside a specific application.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A three-way match of PO, receiving report, and invoice",
+        "explanation": "That is a processing application control.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A check digit on customer numbers",
+        "explanation": "That is an input application control.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Requiring approval and testing before program changes move into production",
+        "explanation": "Correct. Change management applies across systems."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ITGCs cover access, program changes, program development, and computer operations.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-chk1",
+    "pool": "lesson",
+    "stem": "Which control most directly prevents a terminated employee from continuing to access the accounting system?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A backup and recovery plan",
+        "explanation": "That addresses availability, not access.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A hash total on vendor numbers",
+        "explanation": "That detects changes in batch data.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Prompt removal of user access upon termination",
+        "explanation": "Correct. An access ITGC."
+      },
+      {
+        "id": "d",
+        "text": "A limit test on disbursement amounts",
+        "explanation": "That is an input edit, not an access control.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Logical access controls — provisioning, deprovisioning, and periodic access reviews — are core ITGCs.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-chk2",
+    "pool": "lesson",
+    "stem": "A data-entry clerk transposes two digits in a customer account number. Which control is most likely to detect it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Record count",
+        "explanation": "A record count confirms the number of items, not their content.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Backup procedures",
+        "explanation": "Backups don't validate input.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Limit test",
+        "explanation": "Limit tests compare amounts to a maximum.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Check digit",
+        "explanation": "Correct. Designed to catch transposition errors."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A check digit is calculated from the other digits; a transposition produces a mismatch.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-01",
+    "pool": "practice",
+    "stem": "Which batch total has no meaning in itself but detects a changed or substituted account number?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Record count",
+        "explanation": "That counts documents.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Financial total",
+        "explanation": "That totals dollar amounts, which are meaningful.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Hash total",
+        "explanation": "Correct. A hash total sums a non-financial field, such as employee or vendor numbers."
+      },
+      {
+        "id": "d",
+        "text": "Run-to-run total",
+        "explanation": "That compares totals between processing steps.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A hash total sums a non-financial field, such as employee or vendor numbers.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-02",
+    "pool": "practice",
+    "stem": "Programmers can move their own changes into production without approval. What is the most significant audit implication?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "None, as long as programs have edit checks",
+        "explanation": "Unauthorized changes could disable edit checks.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The auditor must issue an adverse opinion",
+        "explanation": "A control weakness doesn't automatically change the opinion.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "The auditor cannot rely on automated controls operating consistently without additional testing",
+        "explanation": "Correct. Ineffective change-management ITGCs undermine reliance on automated application controls for the period."
+      },
+      {
+        "id": "d",
+        "text": "Backup procedures become ineffective",
+        "explanation": "Backups are a different ITGC.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Ineffective change-management ITGCs undermine reliance on automated application controls for the period.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-03",
+    "pool": "practice",
+    "stem": "A payroll system rejects any time card with more than 70 hours per week. What type of control is this?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Validity check",
+        "explanation": "Validity checks compare against a list of valid values.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Limit (reasonableness) test",
+        "explanation": "Correct. A limit test flags values above a predetermined maximum."
+      },
+      {
+        "id": "c",
+        "text": "Check digit",
+        "explanation": "Check digits validate identification numbers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Sequence check",
+        "explanation": "Sequence checks detect gaps or duplicates in numbering.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A limit test flags values above a predetermined maximum.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-04",
+    "pool": "practice",
+    "stem": "An invoice is entered with a vendor number that is not in the vendor master file, and the system rejects it. What control operated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Validity check",
+        "explanation": "Correct. A validity check compares input with approved values in a master file or table."
+      },
+      {
+        "id": "b",
+        "text": "Hash total",
+        "explanation": "A hash total checks batch integrity, not individual validity.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Output reconciliation",
+        "explanation": "That compares output to input after processing.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Limit test",
+        "explanation": "A limit test concerns amounts.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A validity check compares input with approved values in a master file or table.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-05",
+    "pool": "practice",
+    "stem": "Which duty should be separated from computer programming?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Operating the live production system and handling production data",
+        "explanation": "Correct. Separate systems development (programming) from operations and from user departments; programmers should not access production programs or live data."
+      },
+      {
+        "id": "b",
+        "text": "Writing program documentation",
+        "explanation": "Documentation is part of programming.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Testing programs in a test environment",
+        "explanation": "Programmers test in test environments.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Attending design meetings",
+        "explanation": "Part of development.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Separate systems development (programming) from operations and from user departments; programmers should not access production programs or live data.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-06",
+    "pool": "practice",
+    "stem": "In the prior year the auditor tested an automated three-way-match control and found it effective. This year, ITGCs over program changes are effective and the program hasn't changed. What may the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Rely on the control without any testing this year",
+        "explanation": "The auditor must still test the ITGCs and confirm no changes.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Use benchmarking: confirm the program is unchanged and the ITGCs are effective, then rely on the control",
+        "explanation": "Correct. Benchmarking: with effective ITGCs and no program changes, an automated control can be relied on in later periods without a full retest."
+      },
+      {
+        "id": "c",
+        "text": "Not rely on the control at all",
+        "explanation": "Benchmarking can support reliance.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Retest the control using a large sample of transactions",
+        "explanation": "Automated controls don't require large samples.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Benchmarking: with effective ITGCs and no program changes, an automated control can be relied on in later periods without a full retest.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-itc-07",
+    "pool": "practice",
+    "stem": "Which is an **output** control?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reviewing an exception report of rejected transactions and following up",
+        "explanation": "Correct. Output controls include reconciling output to input, reviewing exception reports, and controlling report distribution."
+      },
+      {
+        "id": "b",
+        "text": "A check digit on account numbers",
+        "explanation": "A check digit is an input control.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Role-based access to the general ledger",
+        "explanation": "Role-based access is an access ITGC.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A required field for invoice date",
+        "explanation": "A required field is an input control.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Output controls include reconciling output to input, reviewing exception reports, and controlling report distribution.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-08",
+    "pool": "practice",
+    "stem": "Under SAS 145, when must the auditor identify the ITGCs relevant to the audit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only in an integrated audit of an issuer",
+        "explanation": "SAS 145 applies to nonissuer audits.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "For the IT applications that are subject to risks arising from IT — including those supporting controls the auditor plans to rely on",
+        "explanation": "Correct. AU-C 315 (SAS 145): understand the IT environment, identify the applications and other aspects subject to risks arising from IT, and identify the related ITGCs."
+      },
+      {
+        "id": "c",
+        "text": "Never — ITGCs are the IT auditor's concern only",
+        "explanation": "ITGCs are part of understanding internal control.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only when the entity uses cloud computing",
+        "explanation": "The requirement applies to any IT environment.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AU-C 315 (SAS 145): understand the IT environment, identify the applications and other aspects subject to risks arising from IT, and identify the related ITGCs.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-09",
+    "pool": "practice",
+    "stem": "A batch of 40 invoices totaling $58,420 was input. After processing, the system shows 40 records totaling $58,240. What does this indicate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An invoice was lost",
+        "explanation": "The record count agrees at 40.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "An amount was keyed incorrectly (likely a transposition)",
+        "explanation": "Correct. The count agrees but the financial total differs by $180."
+      },
+      {
+        "id": "c",
+        "text": "A duplicate invoice was entered",
+        "explanation": "A duplicate would change the record count.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Processing was correct",
+        "explanation": "The totals don't agree.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Matching counts with different amounts point to a keying error. A difference of 180 (divisible by 9) is typical of a transposition (e.g., 1,420 keyed as 1,240).",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "aud-itc-10",
+    "pool": "practice",
+    "stem": "Which control best ensures that all shipments are billed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Sequentially prenumbered shipping documents accounted for and matched to invoices",
+        "explanation": "Correct. Completeness of billing."
+      },
+      {
+        "id": "b",
+        "text": "A limit test on invoice amounts",
+        "explanation": "Limits address accuracy, not completeness.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Password protection on the billing system",
+        "explanation": "Access control, not completeness.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A hash total of customer numbers",
+        "explanation": "Batch integrity, not whether all shipments were billed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Accounting for the numerical sequence of shipping documents and matching them to invoices addresses completeness of revenue.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

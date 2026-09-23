@@ -1,0 +1,175 @@
+{
+  "id": "aud-tbs-u4-fraud",
+  "section": "AUD",
+  "unitId": "aud-u4",
+  "moduleIds": [
+    "aud-fraud-risk",
+    "aud-understanding-entity"
+  ],
+  "pool": "practice",
+  "title": "Fraud risk assessment — Vantage Apparel",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "During planning for the audit of **Vantage Apparel**, the engagement team gathered the facts below. Classify the fraud risk factors, select the required responses, and identify the governing guidance.",
+  "exhibits": [
+    {
+      "title": "Engagement team notes",
+      "content": "1. Vantage must maintain a current ratio of 1.5 under its loan agreement; it was 1.52 last year.\n2. The CEO dominates management and the board has no independent members.\n3. The CFO told the team, \"Every company in our industry books revenue when orders are received.\"\n4. The company's warehouse has no inventory cage and no cameras; high-value jackets are stored with other goods.\n5. Management's stock options vest only if annual revenue grows 15%.\n6. Bank reconciliations are prepared by the cashier, who also records receipts."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "tri",
+      "prompt": "Classify each fact by fraud triangle element.",
+      "rows": [
+        {
+          "id": "f1",
+          "label": "1. Debt covenant",
+          "answer": "Incentive or pressure",
+          "explanation": "Pressure to meet a financial ratio."
+        },
+        {
+          "id": "f2",
+          "label": "2. CEO dominance, no independent board",
+          "answer": "Opportunity",
+          "explanation": "Ineffective oversight creates the opportunity for override."
+        },
+        {
+          "id": "f3",
+          "label": "3. \"Everyone books revenue early\"",
+          "answer": "Attitude or rationalization",
+          "explanation": "A rationalization for aggressive accounting."
+        },
+        {
+          "id": "f4",
+          "label": "4. No physical safeguards over inventory",
+          "answer": "Opportunity",
+          "explanation": "Weak physical controls allow theft."
+        },
+        {
+          "id": "f5",
+          "label": "5. Options vest on 15% growth",
+          "answer": "Incentive or pressure",
+          "explanation": "A personal financial incentive tied to reported results."
+        },
+        {
+          "id": "f6",
+          "label": "6. Cashier reconciles and records",
+          "answer": "Opportunity",
+          "explanation": "Incompatible duties allow concealment."
+        }
+      ],
+      "options": [
+        "Incentive or pressure",
+        "Opportunity",
+        "Attitude or rationalization"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "type",
+      "prompt": "Which type of fraud does each fact most directly relate to?",
+      "rows": [
+        {
+          "id": "t1",
+          "label": "1. Debt covenant",
+          "answer": "Fraudulent financial reporting",
+          "explanation": "The pressure is to misstate the ratio."
+        },
+        {
+          "id": "t4",
+          "label": "4. Unsecured high-value inventory",
+          "answer": "Misappropriation of assets",
+          "explanation": "Theft of inventory."
+        },
+        {
+          "id": "t5",
+          "label": "5. Options vest on revenue growth",
+          "answer": "Fraudulent financial reporting",
+          "explanation": "The incentive is to inflate revenue."
+        },
+        {
+          "id": "t6",
+          "label": "6. Cashier reconciles and records",
+          "answer": "Misappropriation of assets",
+          "explanation": "Theft of cash concealed in the records."
+        }
+      ],
+      "options": [
+        "Fraudulent financial reporting",
+        "Misappropriation of assets"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "resp",
+      "prompt": "Is each procedure required by AU-C 240 in every audit?",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Test the appropriateness of journal entries and other adjustments",
+          "answer": "Required in every audit",
+          "explanation": "A required response to management override."
+        },
+        {
+          "id": "r2",
+          "label": "Perform a retrospective review of prior-year accounting estimates",
+          "answer": "Required in every audit",
+          "explanation": "A required response to management override."
+        },
+        {
+          "id": "r3",
+          "label": "Engage a forensic specialist",
+          "answer": "Not specifically required",
+          "explanation": "A possible response to heightened risk, but not required in every audit."
+        },
+        {
+          "id": "r4",
+          "label": "Evaluate the business rationale for significant unusual transactions",
+          "answer": "Required in every audit",
+          "explanation": "A required response to management override."
+        },
+        {
+          "id": "r5",
+          "label": "Perform surprise cash counts",
+          "answer": "Not specifically required",
+          "explanation": "A possible response, not required in every audit."
+        }
+      ],
+      "options": [
+        "Required in every audit",
+        "Not specifically required"
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) requires the auditor to treat revenue as a fraud risk at Vantage?",
+      "excerpts": [
+        {
+          "id": "a",
+          "citation": "AU-C 240.26 (paraphrase)",
+          "text": "When identifying and assessing the risks of material misstatement due to fraud, the auditor should, based on a presumption that there are risks of fraud in revenue recognition, evaluate which types of revenue, revenue transactions, or assertions give rise to such risks."
+        },
+        {
+          "id": "b",
+          "citation": "AU-C 240.31 (paraphrase)",
+          "text": "Irrespective of the assessment of the risks of management override, the auditor should design and perform audit procedures to test journal entries, review estimates for bias, and evaluate significant unusual transactions."
+        },
+        {
+          "id": "c",
+          "citation": "AU-C 265.11 (paraphrase)",
+          "text": "The auditor should communicate in writing to those charged with governance significant deficiencies and material weaknesses identified during the audit."
+        },
+        {
+          "id": "d",
+          "citation": "AU-C 315.26 (paraphrase)",
+          "text": "The auditor should identify and assess the risks of material misstatement at the financial statement level and at the assertion level."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The revenue-recognition fraud presumption is in paragraph .26 of AU-C 240; paragraph .31 addresses override procedures."
+    }
+  ]
+}

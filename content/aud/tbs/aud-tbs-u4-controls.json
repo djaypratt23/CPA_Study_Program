@@ -1,0 +1,131 @@
+{
+  "id": "aud-tbs-u4-controls",
+  "section": "AUD",
+  "unitId": "aud-u4",
+  "moduleIds": [
+    "aud-internal-control",
+    "aud-it-controls"
+  ],
+  "pool": "practice",
+  "title": "Purchasing and disbursements controls — Granite Tool Co.",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "You are documenting internal control over purchasing and cash disbursements at **Granite Tool Co.**, a private manufacturer. Identify the control objective each control addresses, match errors to the application controls that would catch them, and classify deficiencies.",
+  "exhibits": [
+    {
+      "title": "Process narrative",
+      "content": "1. Department heads submit purchase requisitions; the purchasing agent issues prenumbered purchase orders (POs) only for approved requisitions.\n2. The receiving clerk counts goods and prepares a prenumbered receiving report; the clerk sees a copy of the PO with **quantities blanked out**.\n3. Accounts payable matches the PO, receiving report, and vendor invoice (three-way match) before recording the liability.\n4. The **accounts payable clerk** can add new vendors to the vendor master file **and** prepares checks for signature.\n5. The treasurer signs checks after reviewing supporting documents, then **cancels** the documents.\n6. Programmers at Granite can move program changes directly into production without approval."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "obj",
+      "prompt": "Select the primary control objective of each control.",
+      "rows": [
+        {
+          "id": "o1",
+          "label": "1. POs issued only for approved requisitions",
+          "answer": "Ensure purchases are authorized",
+          "explanation": "Authorization of purchases before commitment."
+        },
+        {
+          "id": "o2",
+          "label": "2. Blind copy of the PO for receiving",
+          "answer": "Ensure an independent count of goods received",
+          "explanation": "A blind copy forces the clerk to count rather than copy the ordered quantities."
+        },
+        {
+          "id": "o3",
+          "label": "3. Three-way match before recording",
+          "answer": "Prevent payment for goods not received",
+          "explanation": "The liability is recorded only when goods were ordered, received, and invoiced."
+        },
+        {
+          "id": "o4",
+          "label": "5. Canceling documents after signing",
+          "answer": "Prevent duplicate payment",
+          "explanation": "Canceled documents can't be resubmitted for payment."
+        }
+      ],
+      "options": [
+        "Prevent payment for goods not received",
+        "Prevent duplicate payment",
+        "Ensure purchases are authorized",
+        "Ensure an independent count of goods received"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "app",
+      "prompt": "Which application control would detect each error?",
+      "rows": [
+        {
+          "id": "a1",
+          "label": "An invoice keyed with a nonexistent vendor number",
+          "answer": "Validity check against the vendor master file",
+          "explanation": "A validity check rejects values not in the master file."
+        },
+        {
+          "id": "a2",
+          "label": "Vendor number 40718 keyed as 47018",
+          "answer": "Check digit",
+          "explanation": "Check digits detect transposed digits."
+        },
+        {
+          "id": "a3",
+          "label": "An invoice from a batch of 25 was never keyed",
+          "answer": "Record count",
+          "explanation": "The count of 24 won't match the batch control of 25."
+        },
+        {
+          "id": "a4",
+          "label": "A $98,000 invoice for office supplies (normally under $5,000)",
+          "answer": "Limit test",
+          "explanation": "A limit test flags amounts above a set maximum."
+        }
+      ],
+      "options": [
+        "Validity check against the vendor master file",
+        "Check digit",
+        "Limit test",
+        "Record count"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "def",
+      "prompt": "Evaluate the design of each item.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "4. AP clerk maintains the vendor master file and prepares checks",
+          "answer": "Deficiency — likely significant deficiency or material weakness",
+          "explanation": "The clerk could create a fictitious vendor and prepare checks to it — incompatible duties."
+        },
+        {
+          "id": "d2",
+          "label": "6. Unapproved program changes",
+          "answer": "Deficiency — likely significant deficiency or material weakness",
+          "explanation": "An ITGC failure; automated controls such as the three-way match can't be relied on without more testing."
+        },
+        {
+          "id": "d3",
+          "label": "2. Blind receiving copy",
+          "answer": "Effective control",
+          "explanation": "It forces an independent count."
+        },
+        {
+          "id": "d4",
+          "label": "5. Treasurer reviews support and cancels documents",
+          "answer": "Effective control",
+          "explanation": "Authorization of payment with protection against reuse."
+        }
+      ],
+      "options": [
+        "Deficiency — likely significant deficiency or material weakness",
+        "Effective control"
+      ]
+    }
+  ]
+}
