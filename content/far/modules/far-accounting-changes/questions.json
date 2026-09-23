@@ -1,0 +1,434 @@
+[
+  {
+    "id": "far-chg-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company revises the estimated useful life of its equipment from 10 to 7 years based on new wear data. How is this reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Retrospectively, restating prior years",
+        "explanation": "Estimate changes aren't retrospective.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a prior-period adjustment",
+        "explanation": "It's not an error.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Prospectively, in the current and future periods",
+        "explanation": "Correct. A change in estimate is accounted for prospectively."
+      },
+      {
+        "id": "d",
+        "text": "As a cumulative-effect line on the income statement",
+        "explanation": "That presentation was eliminated.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A change in estimate is accounted for prospectively.",
+    "skill": "application"
+  },
+  {
+    "id": "far-chg-chk1",
+    "pool": "lesson",
+    "stem": "A small company that had been recognizing warranty costs only when paid (not GAAP for its material warranties) switches to accruing them. How is the switch treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Change in accounting principle — retrospective",
+        "explanation": "Moving from a non-GAAP method to GAAP is an error correction.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Change in estimate — prospective",
+        "explanation": "It isn't a new estimate; the old method was unacceptable.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Correction of an error — restatement",
+        "explanation": "Correct. A change from an accounting principle that isn't GAAP to one that is GAAP is an error correction (restatement)."
+      },
+      {
+        "id": "d",
+        "text": "Change in reporting entity",
+        "explanation": "The entity is unchanged.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A change from an accounting principle that isn't GAAP to one that is GAAP is an error correction (restatement).",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-chg-chk2",
+    "pool": "lesson",
+    "stem": "How is a change in accounting principle reported when it's practicable to determine the effects?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Retrospective application to all prior periods presented, with an adjustment to the earliest period's opening retained earnings",
+        "explanation": "Correct. ASC 250-10-45-5: retrospective application unless impracticable."
+      },
+      {
+        "id": "b",
+        "text": "Cumulative effect in current-year net income",
+        "explanation": "Eliminated by SFAS 154/ASC 250.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "Prospectively only",
+        "explanation": "Prospective treatment is for estimates.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Disclosure only",
+        "explanation": "Recognition is required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 250-10-45-5: retrospective application unless impracticable.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-chg-01",
+    "pool": "practice",
+    "stem": "Which is accounted for as a change in estimate effected by a change in accounting principle?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Change from FIFO to LIFO",
+        "explanation": "A change in principle.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Change from straight-line to sum-of-the-years'-digits depreciation",
+        "explanation": "Correct. Changes in depreciation, amortization, or depletion methods are treated as changes in estimate effected by a change in principle — prospective."
+      },
+      {
+        "id": "c",
+        "text": "Change in the bad debt percentage",
+        "explanation": "A pure change in estimate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Correction of a math error in last year's depreciation",
+        "explanation": "That's an error correction, not a method change.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Changes in depreciation, amortization, or depletion methods are treated as changes in estimate effected by a change in principle — prospective.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-chg-02",
+    "pool": "practice",
+    "stem": "A company changes from weighted average to FIFO at the start of Year 3 and presents Years 2 and 3. Inventory would have been $80,000 higher at January 1, Year 2 under FIFO. Tax rate 25%. What adjustment is made to January 1, Year 2 retained earnings?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Increase of $80,000",
+        "explanation": "The adjustment is net of tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Increase of $60,000",
+        "explanation": "Correct. 80,000 × 75%."
+      },
+      {
+        "id": "c",
+        "text": "Decrease of $60,000",
+        "explanation": "Higher inventory means higher cumulative income.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "No adjustment; the change is prospective",
+        "explanation": "Principle changes are retrospective when practicable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Cumulative effect before the earliest period presented = 80,000 × (1 − 0.25) = **60,000** increase to opening retained earnings of Year 2.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-chg-03",
+    "pool": "practice",
+    "stem": "In Year 2, a company discovered that Year 1 revenue was overstated by $100,000 due to a cut-off error. Year 1's books are closed; tax rate 21%. What is the prior-period adjustment to January 1, Year 2 retained earnings?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Decrease of $79,000",
+        "explanation": "Correct. 100,000 × 79%."
+      },
+      {
+        "id": "b",
+        "text": "Decrease of $100,000",
+        "explanation": "The adjustment is net of tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Increase of $79,000",
+        "explanation": "Overstated revenue means retained earnings was too high.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$100,000 loss in Year 2 net income",
+        "explanation": "Errors are corrected through retained earnings, not current income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Overstated revenue overstated retained earnings: decrease opening RE by 100,000 × (1 − 0.21) = **79,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-chg-04",
+    "pool": "practice",
+    "stem": "Which situation is a change in reporting entity?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A company changes its inventory method",
+        "explanation": "Change in principle.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A company acquires a new subsidiary in a business combination",
+        "explanation": "A business combination isn't a change in reporting entity.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A company presents consolidated statements in place of the individual statements previously issued",
+        "explanation": "Correct. Changes in reporting entity include presenting consolidated statements instead of individual statements and changing the specific subsidiaries in the consolidated group (not business combinations)."
+      },
+      {
+        "id": "d",
+        "text": "A company changes its fiscal year-end",
+        "explanation": "Not a change in reporting entity.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Changes in reporting entity include presenting consolidated statements instead of individual statements and changing the specific subsidiaries in the consolidated group (not business combinations).",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-chg-05",
+    "pool": "practice",
+    "stem": "A company changes its estimate of warranty costs from 2% to 3% of sales in the current year. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Restate prior years' warranty expense",
+        "explanation": "Estimate changes aren't retrospective.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Apply 3% to current and future sales; no prior-period changes",
+        "explanation": "Correct. Changes in estimate affect the period of change and future periods only."
+      },
+      {
+        "id": "c",
+        "text": "Record a cumulative catch-up for prior years in current income",
+        "explanation": "No catch-up for estimate changes.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Disclose only",
+        "explanation": "The new estimate is applied.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Changes in estimate affect the period of change and future periods only.",
+    "skill": "application"
+  },
+  {
+    "id": "far-chg-06",
+    "pool": "practice",
+    "stem": "Year 1 ending inventory was understated by $15,000. The error is discovered in Year 3 after Year 2's books were closed. Ignoring taxes, what correcting entry is needed in Year 3?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Increase retained earnings by $15,000",
+        "explanation": "The counterbalancing error has already self-corrected by the end of Year 2.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "Decrease retained earnings by $15,000",
+        "explanation": "Nothing remains to correct.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "Increase inventory by $15,000",
+        "explanation": "Year 3 inventory isn't affected.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "No entry is required",
+        "explanation": "Correct. Inventory errors counterbalance over two years; by the end of Year 2 retained earnings is correct."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Inventory errors counterbalance over two years; by the end of Year 2 retained earnings is correct. (Comparative statements presented would still be restated.)",
+    "skill": "analysis"
+  },
+  {
+    "id": "far-chg-07",
+    "pool": "practice",
+    "stem": "Which disclosure is required for a change in accounting principle?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Why the new principle is preferable",
+        "explanation": "Correct. ASC 250-10-50-1: disclose the nature of and reason for the change, including why the newly adopted principle is preferable, the method of applying it, and its effects."
+      },
+      {
+        "id": "b",
+        "text": "The name of the audit partner",
+        "explanation": "Engagement personnel are not an accounting-change disclosure.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Pro forma effects on the next five years",
+        "explanation": "Forward-looking pro forma projections aren't required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Nothing, if the effect is favorable",
+        "explanation": "Disclosure is required regardless.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 250-10-50-1: disclose the nature of and reason for the change, including why the newly adopted principle is preferable, the method of applying it, and its effects.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-chg-08",
+    "pool": "practice",
+    "stem": "A company changes to LIFO. Prior-period data by layer is unavailable. How is the change reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Retrospectively, estimating prior layers",
+        "explanation": "If impracticable, retrospective application isn't required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Prospectively from the beginning of the year of change, with disclosure",
+        "explanation": "Correct. When retrospective application is impracticable (common for a change to LIFO), apply the new principle prospectively, with the beginning inventory becoming the base LIFO layer, and disclose why."
+      },
+      {
+        "id": "c",
+        "text": "As an error correction",
+        "explanation": "Changing between GAAP methods isn't an error.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "It is prohibited",
+        "explanation": "Changes to LIFO are allowed if preferable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "When retrospective application is impracticable (common for a change to LIFO), apply the new principle prospectively, with the beginning inventory becoming the base LIFO layer, and disclose why.",
+    "skill": "application"
+  },
+  {
+    "id": "far-chg-09",
+    "pool": "practice",
+    "stem": "A company discovers that it expensed a $60,000 machine two years ago instead of capitalizing it (5-year life, straight-line, no salvage). Books for both prior years are closed; ignore taxes. What is the prior-period adjustment to opening retained earnings this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Increase of $60,000",
+        "explanation": "Two years of depreciation must be deducted.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Increase of $36,000",
+        "explanation": "Correct. 60,000 − (2 × 12,000)."
+      },
+      {
+        "id": "c",
+        "text": "Increase of $48,000",
+        "explanation": "This deducts only one year of depreciation.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Decrease of $36,000",
+        "explanation": "Expensing overstated past expenses, understating retained earnings.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Retained earnings was understated by the 60,000 expense, offset by 24,000 of depreciation that should have been recorded: net increase **36,000**. Machine 60,000, accumulated depreciation 24,000.",
+    "skill": "analysis",
+    "calc": true
+  },
+  {
+    "id": "far-chg-10",
+    "pool": "practice",
+    "stem": "A company changes from FIFO to average cost. The change also affects a profit-sharing bonus paid to employees based on reported income in prior years. How is the bonus effect handled?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Included in the retrospective adjustment to prior periods",
+        "explanation": "Only direct effects are applied retrospectively.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Recognized in the period of the change (an indirect effect), not retrospectively",
+        "explanation": "Correct. Indirect effects are recognized when the change is made."
+      },
+      {
+        "id": "c",
+        "text": "Ignored entirely",
+        "explanation": "Indirect effects that are actually incurred are recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Treated as an error correction",
+        "explanation": "The bonus was properly computed under the prior method.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 250-10-45-8: retrospective application includes only the direct effects of the change (and related tax effects). Indirect effects, such as changes in profit-sharing payments, are recognized in the period of change.",
+    "skill": "analysis"
+  }
+]

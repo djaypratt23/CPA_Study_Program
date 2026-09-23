@@ -1,0 +1,437 @@
+[
+  {
+    "id": "far-cont-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a company is being sued. Its lawyers say losing is reasonably possible but not probable, with a possible loss of $1 million. What is reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accrue $1,000,000",
+        "explanation": "Accrual requires probable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Disclose the lawsuit and possible loss; no accrual",
+        "explanation": "Correct. Reasonably possible → disclose the nature and an estimate of the possible loss (or range), no accrual."
+      },
+      {
+        "id": "c",
+        "text": "Nothing",
+        "explanation": "Reasonably possible losses must be disclosed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Accrue $500,000 as a midpoint",
+        "explanation": "Neither accrual nor midpoint applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Reasonably possible → disclose the nature and an estimate of the possible loss (or range), no accrual.",
+    "skill": "application"
+  },
+  {
+    "id": "far-cont-chk1",
+    "pool": "lesson",
+    "stem": "A loss from a lawsuit is probable, but the company can't reasonably estimate the amount. What is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accrue a nominal amount",
+        "explanation": "Accrual requires a reasonable estimate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Accrue the maximum possible loss",
+        "explanation": "No accrual without an estimate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Disclose the contingency and that an estimate can't be made",
+        "explanation": "Correct. Probable but not reasonably estimable → disclose; no accrual."
+      },
+      {
+        "id": "d",
+        "text": "No disclosure until estimable",
+        "explanation": "Disclosure is required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Probable but not reasonably estimable → disclose; no accrual.",
+    "skill": "application"
+  },
+  {
+    "id": "far-cont-chk2",
+    "pool": "lesson",
+    "stem": "A company has a non-cancelable contract to buy 10,000 tons of copper at $9,000 per ton next March. At year-end, the market price is $8,400 per ton. What is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Loss of $6,000,000 and a liability",
+        "explanation": "Correct. 10,000 × (9,000 − 8,400)."
+      },
+      {
+        "id": "b",
+        "text": "Disclosure only",
+        "explanation": "A loss on a firm commitment is recognized when the price declines.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Inventory of $84,000,000",
+        "explanation": "No inventory has been received.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Gain of $6,000,000",
+        "explanation": "The company is committed to paying above market — a loss.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Losses on firm, non-cancelable purchase commitments are recognized when the market price falls below the contract price: 10,000 × 600 = **6,000,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cont-01",
+    "pool": "practice",
+    "stem": "Legal counsel says an unfavorable outcome in a lawsuit is probable, with losses between $200,000 and $500,000 and no amount within the range more likely than another. What amount is accrued?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$350,000",
+        "explanation": "The midpoint is an IFRS approach.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "U.S. GAAP accrues the minimum when no best estimate exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Probable and reasonably estimable (as a range) requires accrual.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$200,000",
+        "explanation": "Correct. Accrue the minimum and disclose the additional exposure."
+      }
+    ],
+    "answer": "d",
+    "explanation": "When no amount in the range is a better estimate, accrue the minimum (200,000) and disclose the reasonably possible additional loss (up to 300,000).",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cont-02",
+    "pool": "practice",
+    "stem": "A company expects to win a lawsuit and receive $1,500,000 in damages next year. What should it record?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A receivable and gain of $1,500,000",
+        "explanation": "Gain contingencies aren't recognized before realization.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Nothing in the accounts; disclosure is allowed if not misleading",
+        "explanation": "Correct. Gain contingencies are not recognized until realized or realizable (ASC 450-30)."
+      },
+      {
+        "id": "c",
+        "text": "A receivable at the probability-weighted amount",
+        "explanation": "Gain contingencies aren't accrued.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A deferred gain",
+        "explanation": "No recognition.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gain contingencies are not recognized until realized or realizable (ASC 450-30).",
+    "skill": "application"
+  },
+  {
+    "id": "far-cont-03",
+    "pool": "practice",
+    "stem": "A company sold products with an assurance warranty; estimated warranty costs are 2% of sales. Sales: Year 1 $500,000, Year 2 $700,000. Warranty costs paid: Year 1 $4,000, Year 2 $15,000. What is the warranty liability at the end of Year 2?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Correct. Expense 24,000 total − 19,000 paid."
+      },
+      {
+        "id": "b",
+        "text": "$9,000",
+        "explanation": "This omits Year 1's payments.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$14,000",
+        "explanation": "That's Year 2 expense only.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$24,000",
+        "explanation": "That's cumulative expense, ignoring payments.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Cumulative expense = 2% × 1,200,000 = 24,000. Cumulative payments = 19,000. Liability = **5,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cont-04",
+    "pool": "practice",
+    "stem": "Which contingency should be disclosed even though the likelihood of loss is remote?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A threatened lawsuit with a trivial chance of success",
+        "explanation": "Remote contingencies generally aren't disclosed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "A guarantee of another entity's debt",
+        "explanation": "Correct. Guarantees (e.g., of the indebtedness of others) are disclosed even when the likelihood of loss is remote."
+      },
+      {
+        "id": "c",
+        "text": "Risk of uninsured earthquake damage",
+        "explanation": "General business risks aren't disclosed as contingencies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A pending gain contingency",
+        "explanation": "Gains follow different guidance.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Guarantees (e.g., of the indebtedness of others) are disclosed even when the likelihood of loss is remote.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-cont-05",
+    "pool": "practice",
+    "stem": "No lawsuit has been filed, but a customer injured by a product has hired an attorney; management believes a claim is probable to be asserted and an unfavorable outcome is reasonably possible. What is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accrue the estimated loss",
+        "explanation": "Accrual requires a probable unfavorable outcome.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Nothing, because no claim has been filed",
+        "explanation": "Unasserted claims can require disclosure.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Disclose the unasserted claim",
+        "explanation": "Correct. Unasserted claims: disclose if assertion is probable AND an unfavorable outcome is at least reasonably possible."
+      },
+      {
+        "id": "d",
+        "text": "Record a gain contingency",
+        "explanation": "This is a potential loss, not a gain contingency.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Unasserted claims: disclose if assertion is probable AND an unfavorable outcome is at least reasonably possible.",
+    "skill": "application"
+  },
+  {
+    "id": "far-cont-06",
+    "pool": "practice",
+    "stem": "A company guarantees a $2,000,000 bank loan of an unrelated supplier for a fee. Default is not probable. The fair value of the guarantee at inception is $30,000. What is recognized at inception?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A liability of $2,000,000",
+        "explanation": "The maximum exposure isn't recognized unless payment is probable.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "No liability because default isn't probable",
+        "explanation": "ASC 460 requires recognizing the stand-ready obligation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A liability of $30,000",
+        "explanation": "Correct. ASC 460: recognize a liability at inception for the fair value of the obligation undertaken (30,000), even if payment is not probable, and disclose the maximum potential payments."
+      },
+      {
+        "id": "d",
+        "text": "Disclosure only",
+        "explanation": "Recognition is required for the stand-ready obligation.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 460: recognize a liability at inception for the fair value of the obligation undertaken (30,000), even if payment is not probable, and disclose the maximum potential payments.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cont-07",
+    "pool": "practice",
+    "stem": "At year-end, a company is under an EPA order to clean up contamination at its site. The cost is probable and estimated at $3 million to $4 million, with $3.4 million the best estimate. What is accrued?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000,000",
+        "explanation": "Use the best estimate when one exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$3,500,000",
+        "explanation": "Midpoint isn't the U.S. GAAP rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$4,000,000",
+        "explanation": "Maximum isn't required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$3,400,000",
+        "explanation": "Correct. Accrue the best estimate within the range: 3,400,000; disclose the reasonably possible additional exposure."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Accrue the best estimate within the range: **3,400,000**; disclose the reasonably possible additional exposure.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cont-08",
+    "pool": "practice",
+    "stem": "Which statement about loss contingencies is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An accrual can be made for general or unspecified business risks",
+        "explanation": "General reserves aren't allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The condition giving rise to the loss must exist at the balance sheet date for accrual",
+        "explanation": "Correct. Accrual requires information indicating that an asset was impaired or a liability incurred at the balance sheet date."
+      },
+      {
+        "id": "c",
+        "text": "Remote losses must be disclosed",
+        "explanation": "Generally not, except certain guarantees.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Probable means more than 50%",
+        "explanation": "'Probable' means likely to occur — a higher threshold than more-likely-than-not.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Accrual requires information indicating that an asset was impaired or a liability incurred at the balance sheet date. Reserves for general contingencies are not permitted.",
+    "skill": "remembering"
+  },
+  {
+    "id": "far-cont-09",
+    "pool": "practice",
+    "stem": "A company offers a 1-year assurance warranty. Sales this year were $900,000 with estimated warranty costs of 4%. How much warranty expense is recognized this year if $10,000 of repairs were performed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "That's the cash-basis approach; warranty costs are accrued at sale.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$36,000",
+        "explanation": "Correct. 4% × 900,000."
+      },
+      {
+        "id": "c",
+        "text": "$26,000",
+        "explanation": "That's the ending liability.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$46,000",
+        "explanation": "Repairs reduce the liability; they aren't added to expense.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Expense = 900,000 × 4% = **36,000** in the year of sale; liability at year-end = 36,000 − 10,000 = 26,000.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-cont-10",
+    "pool": "practice",
+    "stem": "At December 31, a company is party to a lawsuit. Counsel believes an unfavorable outcome is remote. How is it reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accrue the claimed amount",
+        "explanation": "Accrual requires a probable loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Disclose the lawsuit and claimed amount",
+        "explanation": "Remote losses are generally not disclosed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "No accrual or disclosure is required",
+        "explanation": "Correct. Remote loss contingencies (other than certain guarantees) need neither."
+      },
+      {
+        "id": "d",
+        "text": "Record a reserve for general litigation risk",
+        "explanation": "General reserves are prohibited.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 450-20: remote loss contingencies generally require neither accrual nor disclosure (guarantees excepted).",
+    "skill": "remembering"
+  }
+]
