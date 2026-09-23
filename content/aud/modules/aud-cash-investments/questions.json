@@ -1,0 +1,444 @@
+[
+  {
+    "id": "aud-cash-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: why should the auditor obtain the cutoff bank statement directly from the bank?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "To save the client postage",
+        "explanation": "Cost savings aren't the reason for direct receipt.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "b",
+        "text": "Because the client doesn't receive statements",
+        "explanation": "Clients do receive statements.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "To prevent the client from altering it, so reconciling items can be verified",
+        "explanation": "Correct. Direct receipt protects the reliability of evidence used to test deposits in transit and outstanding checks."
+      },
+      {
+        "id": "d",
+        "text": "To test payroll",
+        "explanation": "The cutoff statement tests reconciling items, not payroll.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Direct receipt protects the reliability of evidence used to test deposits in transit and outstanding checks.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-chk1",
+    "pool": "lesson",
+    "stem": "A deposit in transit on the December 31 reconciliation doesn't appear on the cutoff bank statement until January 12. What might this indicate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Normal timing",
+        "explanation": "Deposits normally clear in a day or two.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "An unrecorded bank service charge",
+        "explanation": "A service charge doesn't explain a delayed deposit.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "An outstanding check error",
+        "explanation": "This concerns a deposit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A fictitious deposit in transit, possibly concealing a cash shortage or kiting",
+        "explanation": "Correct. Deposits in transit should clear within a few days; long delays suggest the deposit wasn't real at year-end."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Deposits in transit should clear within a few days; long delays suggest the deposit wasn't real at year-end.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-chk2",
+    "pool": "lesson",
+    "stem": "Which procedure best supports the classification of debt securities as held-to-maturity?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Confirming the securities with the custodian",
+        "explanation": "That supports existence.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Comparing values to quoted market prices",
+        "explanation": "That supports fair value disclosures.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Inquiring about intent, reading minutes, and reviewing whether HTM securities were sold in the past",
+        "explanation": "Correct. HTM classification depends on positive intent and ability to hold to maturity; past sales can taint that intent."
+      },
+      {
+        "id": "d",
+        "text": "Recalculating interest income",
+        "explanation": "That supports accuracy.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "HTM classification depends on positive intent and ability to hold to maturity; past sales can taint that intent.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-01",
+    "pool": "practice",
+    "stem": "A check for $30,000 transferring cash from Bank X to Bank Y was recorded as a receipt in Bank Y on December 31 but recorded as a disbursement from Bank X on January 2. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cash is understated by $30,000",
+        "explanation": "The receipt is recorded, so cash is overstated.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "Cash is overstated by $30,000",
+        "explanation": "Correct. The amount is counted in both accounts."
+      },
+      {
+        "id": "c",
+        "text": "No effect",
+        "explanation": "The timing difference matters at year-end.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Receivables are overstated",
+        "explanation": "Receivables aren't involved.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Kiting: the receipt is recorded before year-end and the disbursement after, double-counting the cash.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-02",
+    "pool": "practice",
+    "stem": "Which procedure is most effective in detecting kiting?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reviewing the payroll register",
+        "explanation": "Payroll doesn't reveal interbank transfers.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "b",
+        "text": "Counting petty cash",
+        "explanation": "Petty cash isn't involved.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Confirming receivables",
+        "explanation": "Receivable confirmations don't reveal interbank transfers.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Preparing a bank transfer schedule",
+        "explanation": "Correct. The schedule compares book and bank dates for both sides of each transfer."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The schedule compares book and bank dates for both sides of each transfer.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-03",
+    "pool": "practice",
+    "stem": "Why are cash and negotiable securities at multiple locations counted simultaneously?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Because standards prohibit counting on different days",
+        "explanation": "The purpose is control, not a prohibition.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "To reduce audit fees",
+        "explanation": "Cost isn't the reason for simultaneous counts.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "To prevent the client from shifting assets between locations to cover a shortage",
+        "explanation": "Correct. Simultaneous (or controlled) counts prevent the same assets from being counted twice."
+      },
+      {
+        "id": "d",
+        "text": "To test cut-off of sales",
+        "explanation": "Simultaneous counts don't test sales cut-off.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Simultaneous (or controlled) counts prevent the same assets from being counted twice.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-04",
+    "pool": "practice",
+    "stem": "Which procedure detects unrecorded cash disbursements during the year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A proof of cash comparing bank disbursements with book disbursements for the period",
+        "explanation": "Correct. A four-column proof of cash reconciles receipts and disbursements, revealing unrecorded activity."
+      },
+      {
+        "id": "b",
+        "text": "A standard bank confirmation",
+        "explanation": "It confirms balances only.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Counting cash on hand",
+        "explanation": "Unrelated to disbursements during the year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Vouching recorded disbursements",
+        "explanation": "Vouching recorded items can't find unrecorded ones.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A four-column proof of cash reconciles receipts and disbursements, revealing unrecorded activity.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-05",
+    "pool": "practice",
+    "stem": "The standard bank confirmation is primarily designed to confirm:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deposit balances and loan balances with the financial institution",
+        "explanation": "Correct. The confirmation asks the bank to confirm balances and direct liabilities (loans)."
+      },
+      {
+        "id": "b",
+        "text": "Every check written during the year",
+        "explanation": "It doesn't list checks.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "The client's creditworthiness",
+        "explanation": "Creditworthiness isn't confirmed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Investment fair values",
+        "explanation": "Custodian confirmations are used for investments.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The confirmation asks the bank to confirm balances and direct liabilities (loans). Other arrangements (lines of credit, compensating balances) need separate confirmation.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-06",
+    "pool": "practice",
+    "stem": "A client holds a Level 3 investment valued with an internal model. Which procedure is most appropriate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Compare with a quoted price in an active market",
+        "explanation": "Level 3 investments have no such price.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Test the model, significant assumptions, and data, possibly using a specialist",
+        "explanation": "Correct. AU-C 540: test management's method, assumptions, and data, or develop an independent estimate."
+      },
+      {
+        "id": "c",
+        "text": "Accept management's value because it's a Level 3 input",
+        "explanation": "Level 3 values need careful testing.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only confirm existence with the custodian",
+        "explanation": "Valuation also needs testing.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AU-C 540: test management's method, assumptions, and data, or develop an independent estimate.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-07",
+    "pool": "practice",
+    "stem": "A $10,000 outstanding check on the year-end reconciliation never appears on the cutoff statement. Which follow-up is most appropriate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ignore it",
+        "explanation": "Unusual reconciling items require investigation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Examine the check's details and supporting documents; consider whether it was recorded to understate the book balance or conceal a shortage",
+        "explanation": "Correct. Outstanding checks that don't clear may be fictitious or may indicate other problems; investigate the payee and support."
+      },
+      {
+        "id": "c",
+        "text": "Record it as income",
+        "explanation": "There is no basis for recording income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Confirm the bank balance again",
+        "explanation": "The balance is already confirmed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Outstanding checks that don't clear may be fictitious or may indicate other problems; investigate the payee and support.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-08",
+    "pool": "practice",
+    "stem": "The client has an investment accounted for by the equity method. Which evidence is most relevant to the investor's share of income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The investee's audited financial statements",
+        "explanation": "Correct. AU-C 501: audited investee statements generally provide sufficient evidence of the investee's results."
+      },
+      {
+        "id": "b",
+        "text": "The investor's stock price",
+        "explanation": "The investor's stock price doesn't measure investee income.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "A bank confirmation",
+        "explanation": "Not relevant to investee income.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "The investee's press releases",
+        "explanation": "Less reliable than audited statements.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AU-C 501: audited investee statements generally provide sufficient evidence of the investee's results.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-09",
+    "pool": "practice",
+    "stem": "A loan agreement requires a $500,000 compensating balance that can't be withdrawn. How should it be presented?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As unrestricted cash",
+        "explanation": "Legally restricted balances are shown separately.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Separately as restricted cash (current or noncurrent depending on the loan), with disclosure",
+        "explanation": "Correct. Legally restricted compensating balances are segregated and disclosed."
+      },
+      {
+        "id": "c",
+        "text": "Netted against the loan",
+        "explanation": "Offsetting is not appropriate here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Not disclosed",
+        "explanation": "Disclosure is required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Legally restricted compensating balances are segregated and disclosed.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-10",
+    "pool": "practice",
+    "stem": "Which procedure provides evidence of the **existence** of securities held by a broker?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Confirming holdings directly with the broker",
+        "explanation": "Correct. Securities held by third parties are confirmed with the custodian."
+      },
+      {
+        "id": "b",
+        "text": "Recalculating dividend income",
+        "explanation": "That tests accuracy of income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Reading the investment policy",
+        "explanation": "Policy isn't evidence of existence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Reviewing management's intent",
+        "explanation": "That concerns classification.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Securities held by third parties are confirmed with the custodian.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

@@ -1,0 +1,444 @@
+[
+  {
+    "id": "aud-rev-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which procedure best detects sales recorded before goods were shipped?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Tracing shipping documents to sales invoices",
+        "explanation": "That tests completeness.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Recomputing the allowance for credit losses",
+        "explanation": "That tests valuation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Comparing the dates on sales invoices near year-end with shipping document dates",
+        "explanation": "Correct. A cut-off test."
+      },
+      {
+        "id": "d",
+        "text": "Confirming cash balances",
+        "explanation": "Unrelated to sales cut-off.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Cut-off tests compare recording dates with the date control transferred (usually shipment).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-chk1",
+    "pool": "lesson",
+    "stem": "Which procedure best tests the **completeness** of sales?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Vouch recorded sales to shipping documents",
+        "explanation": "That tests occurrence.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Review the allowance",
+        "explanation": "That tests valuation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Confirm receivable balances",
+        "explanation": "That tests existence.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Trace a sample of shipping documents to recorded sales invoices",
+        "explanation": "Correct. Completeness: trace from source documents (shipping records) into the accounting records."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Completeness: trace from source documents (shipping records) into the accounting records.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-chk2",
+    "pool": "lesson",
+    "stem": "The auditor decides not to confirm receivables because customers are government agencies known not to respond. What is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Document how the presumption was overcome and perform other substantive procedures",
+        "explanation": "Correct. AU-C 330: if the auditor doesn't confirm receivables, it documents the basis (immaterial, ineffective, or low RMM with other procedures)."
+      },
+      {
+        "id": "b",
+        "text": "Nothing — confirmation is optional",
+        "explanation": "Confirmation is presumed; the decision must be documented.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Qualify the opinion",
+        "explanation": "Not if sufficient evidence is obtained another way.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Send negative confirmations instead",
+        "explanation": "Negative confirmations would also be ineffective here.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AU-C 330: if the auditor doesn't confirm receivables, it documents the basis (immaterial, ineffective, or low RMM with other procedures).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-01",
+    "pool": "practice",
+    "stem": "A company recorded a $500,000 sale on December 30 for goods shipped January 3 under FOB shipping point terms. What is the misstatement at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "None — the invoice was dated in December",
+        "explanation": "Revenue is recognized when control transfers, not when invoiced.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Revenue is understated by $500,000",
+        "explanation": "It was recorded too early, not omitted.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "Revenue and receivables are overstated by $500,000 (and inventory is understated by its cost)",
+        "explanation": "Correct. Under FOB shipping point, control transfers at shipment (January 3)."
+      },
+      {
+        "id": "d",
+        "text": "Only a disclosure is needed",
+        "explanation": "This is a cut-off error requiring adjustment if material.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under FOB shipping point, control transfers at shipment (January 3). Recording in December overstates revenue and receivables.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-02",
+    "pool": "practice",
+    "stem": "Which procedure is most effective at detecting side agreements that give customers a right of return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Recomputing sales invoice totals",
+        "explanation": "Arithmetic checks don't reveal terms.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Reviewing the aging report",
+        "explanation": "Aging doesn't reveal contract terms.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Tracing shipping documents to invoices",
+        "explanation": "That tests completeness.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Confirming the terms of significant sales directly with customers",
+        "explanation": "Correct. Confirming terms (not just balances) and reading contracts helps identify side agreements that affect revenue recognition."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Confirming terms (not just balances) and reading contracts helps identify side agreements that affect revenue recognition.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-03",
+    "pool": "practice",
+    "stem": "Which situation best supports overcoming the presumption to confirm receivables?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Receivables are immaterial to the financial statements",
+        "explanation": "Correct. Exceptions: immaterial balance, confirmation ineffective, or low RMM with other substantive procedures that address it."
+      },
+      {
+        "id": "b",
+        "text": "Receivables are material and RMM is high",
+        "explanation": "Confirmation is especially important then.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "The client prefers that customers not be contacted",
+        "explanation": "Client preference alone doesn't overcome the presumption.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The auditor is short of time",
+        "explanation": "Time pressure doesn't overcome the presumption.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Exceptions: immaterial balance, confirmation ineffective, or low RMM with other substantive procedures that address it.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-04",
+    "pool": "practice",
+    "stem": "A cashier steals Customer A's payment and later applies Customer B's payment to A's account. What is this scheme, and what detects it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Kiting; a bank transfer schedule",
+        "explanation": "Kiting involves transfers between banks.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Channel stuffing; distributor analytics",
+        "explanation": "Channel stuffing inflates sales.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Lapping; comparing deposit slip details with the customer postings, and confirming balances",
+        "explanation": "Correct. Lapping delays postings."
+      },
+      {
+        "id": "d",
+        "text": "Bill-and-hold; inventory observation",
+        "explanation": "Bill-and-hold concerns unshipped goods.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Lapping delays postings. Comparing remittance details on deposit slips to postings and confirming balances can reveal it.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-05",
+    "pool": "practice",
+    "stem": "Unusually large credit memos were issued in January for December sales to one distributor. What does this most likely indicate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Good customer service",
+        "explanation": "Large post-year-end credits for year-end sales signal a problem.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "An inventory valuation issue only",
+        "explanation": "The main issue is revenue.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Understatement of December revenue",
+        "explanation": "The credits reverse revenue.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Possible overstatement of December revenue through improper cut-off or channel stuffing",
+        "explanation": "Correct. Post-year-end returns and credits for year-end sales are a classic sign of improper revenue recognition."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Post-year-end returns and credits for year-end sales are a classic sign of improper revenue recognition.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-06",
+    "pool": "practice",
+    "stem": "Which procedure best tests the valuation of receivables?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Examining cash receipts after year-end for year-end balances and evaluating the aging",
+        "explanation": "Correct. Subsequent collections and aging analysis bear directly on collectibility (net realizable value)."
+      },
+      {
+        "id": "b",
+        "text": "Vouching sales to shipping documents",
+        "explanation": "That tests occurrence.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Tracing shipping documents to invoices",
+        "explanation": "That tests completeness.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Reading the board minutes for pledges",
+        "explanation": "That tests rights and disclosure.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Subsequent collections and aging analysis bear directly on collectibility (net realizable value).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-07",
+    "pool": "practice",
+    "stem": "Which revenue red flag is most consistent with fictitious sales?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Days sales outstanding falling from 50 to 40",
+        "explanation": "Faster collection doesn't suggest fictitious sales.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Receivables growing much faster than sales, with many new customers lacking credit history",
+        "explanation": "Correct. Fictitious sales leave uncollected receivables and often involve unfamiliar customers."
+      },
+      {
+        "id": "c",
+        "text": "Stable gross margins in line with the industry",
+        "explanation": "Consistent with normal operations.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "A decrease in sales returns",
+        "explanation": "Fewer returns isn't a typical fictitious-sales indicator.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Fictitious sales leave uncollected receivables and often involve unfamiliar customers.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-08",
+    "pool": "practice",
+    "stem": "Goods under a bill-and-hold arrangement are still in the seller's warehouse at year-end. What should the auditor evaluate before accepting the revenue?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only whether the invoice was sent",
+        "explanation": "Invoicing alone doesn't transfer control.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Whether the bill-and-hold criteria are met, such as a substantive reason, separate identification, readiness for transfer, and no ability to redirect the goods",
+        "explanation": "Correct. ASC 606 bill-and-hold criteria must all be met for revenue before physical delivery; the auditor tests them."
+      },
+      {
+        "id": "c",
+        "text": "Whether the customer paid a deposit",
+        "explanation": "A deposit alone isn't sufficient.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Nothing, if the customer confirms the balance",
+        "explanation": "Balance confirmation doesn't establish the criteria.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 606 bill-and-hold criteria must all be met for revenue before physical delivery; the auditor tests them.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-09",
+    "pool": "practice",
+    "stem": "Shipped December 30 under FOB destination and delivered January 4; the sale was recorded December 30. What is the effect on December 31 statements?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect",
+        "explanation": "Control passes on delivery under FOB destination.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Revenue is overstated — the sale belongs to January",
+        "explanation": "Correct. FOB destination: control passes at delivery (January 4), so December revenue is overstated and inventory understated."
+      },
+      {
+        "id": "c",
+        "text": "Revenue is understated",
+        "explanation": "Recorded early, not omitted.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Inventory is overstated",
+        "explanation": "Inventory was removed early, so it is understated.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "FOB destination: control passes at delivery (January 4), so December revenue is overstated and inventory understated.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rev-10",
+    "pool": "practice",
+    "stem": "Which procedure addresses the **presentation** assertion for receivables?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Confirming balances",
+        "explanation": "That tests existence.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Reading loan agreements for pledged receivables and evaluating the related disclosure",
+        "explanation": "Correct. Pledges, factoring, related-party receivables, and concentrations require appropriate disclosure."
+      },
+      {
+        "id": "c",
+        "text": "Recomputing invoice totals",
+        "explanation": "That tests accuracy.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Tracing shipping documents",
+        "explanation": "That tests completeness.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Pledges, factoring, related-party receivables, and concentrations require appropriate disclosure.",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

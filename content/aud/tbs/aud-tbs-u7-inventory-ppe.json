@@ -1,0 +1,127 @@
+{
+  "id": "aud-tbs-u7-inventory-ppe",
+  "section": "AUD",
+  "unitId": "aud-u7",
+  "moduleIds": [
+    "aud-inventory-ppe",
+    "aud-revenue-receivables"
+  ],
+  "pool": "practice",
+  "title": "Inventory observation and PP&E — Westfield Plastics",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "You observed **Westfield Plastics'** December 31 physical inventory count and are auditing PP&E and sales cut-off. For each item, select the assertion tested or the correct treatment.",
+  "exhibits": [
+    {
+      "title": "Count observation notes",
+      "content": "1. Selected 25 items on the warehouse floor and traced them to the count sheets.\n2. Selected 25 lines from the count sheets and located the items on the floor.\n3. Recorded the last receiving report (#8812) and last shipping document (#5530) used before the count.\n4. Noted 40 pallets of resin held for Omni Corp. under a consignment agreement; they were counted.\n5. Noted a section of molds for a product discontinued in Year 0."
+    },
+    {
+      "title": "PP&E and cut-off facts",
+      "content": "- Repairs expense includes $95,000 for a new production line conveyor with a 10-year life.\n- A delivery truck sold in October for scrap is still recorded (cost $48,000, accumulated depreciation $44,000).\n- Shipping document #5531 (FOB shipping point, shipped January 2) was recorded as a December sale."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "as",
+      "prompt": "Select the primary assertion each count procedure tests.",
+      "rows": [
+        {
+          "id": "a1",
+          "label": "1. Floor → count sheets",
+          "answer": "Completeness",
+          "explanation": "Tracing from the physical goods to the records finds omitted items."
+        },
+        {
+          "id": "a2",
+          "label": "2. Count sheets → floor",
+          "answer": "Existence",
+          "explanation": "Locating recorded items shows they exist."
+        },
+        {
+          "id": "a3",
+          "label": "3. Last receiving and shipping numbers",
+          "answer": "Cut-off",
+          "explanation": "Used later to verify that transactions are recorded in the right period."
+        },
+        {
+          "id": "a4",
+          "label": "4. Consigned resin",
+          "answer": "Rights and obligations",
+          "explanation": "Consigned-in goods belong to the consignor and must be excluded."
+        },
+        {
+          "id": "a5",
+          "label": "5. Discontinued molds",
+          "answer": "Valuation",
+          "explanation": "Obsolete items may need a write-down to NRV."
+        }
+      ],
+      "options": [
+        "Existence",
+        "Completeness",
+        "Cut-off",
+        "Rights and obligations",
+        "Valuation"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "adj",
+      "prompt": "Select the effect on the December 31 statements before correction.",
+      "rows": [
+        {
+          "id": "e1",
+          "label": "Conveyor recorded as repairs expense",
+          "answer": "Assets understated",
+          "explanation": "A $95,000 capital asset was expensed."
+        },
+        {
+          "id": "e2",
+          "label": "Scrapped truck still recorded",
+          "answer": "Assets overstated",
+          "explanation": "Net book value of $4,000 remains for an asset no longer owned (a loss should be recorded)."
+        },
+        {
+          "id": "e3",
+          "label": "Shipment #5531 recorded as a December sale",
+          "answer": "Assets overstated",
+          "explanation": "Receivables are overstated (and inventory understated) because control passed January 2."
+        },
+        {
+          "id": "e4",
+          "label": "Consigned resin included in the count",
+          "answer": "Assets overstated",
+          "explanation": "Inventory includes goods owned by Omni Corp."
+        }
+      ],
+      "options": [
+        "Assets overstated",
+        "Assets understated",
+        "No misstatement"
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "nbv",
+          "label": "Net book value of the scrapped truck to remove",
+          "answer": 4000,
+          "tolerance": 0,
+          "explanation": "48,000 − 44,000 = **4,000** (recognize a loss, net of any scrap proceeds received)."
+        },
+        {
+          "id": "dep",
+          "label": "Depreciation on the conveyor for a full year (straight-line, no salvage)",
+          "answer": 9500,
+          "tolerance": 0,
+          "explanation": "95,000 ÷ 10 = **9,500** (adjust for the months in service if placed in service mid-year)."
+        }
+      ]
+    }
+  ]
+}

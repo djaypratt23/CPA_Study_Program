@@ -1,0 +1,105 @@
+{
+  "id": "aud-tbs-u7-cash-liabilities",
+  "section": "AUD",
+  "unitId": "aud-u7",
+  "moduleIds": [
+    "aud-cash-investments",
+    "aud-liabilities-equity"
+  ],
+  "pool": "practice",
+  "title": "Cash transfers and unrecorded liabilities — Quarry Foods",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Year-end is **December 31, Year 1**. Evaluate Quarry Foods' interbank transfers and post-year-end disbursements. Enter misstatements as positive amounts (0 if none).",
+  "exhibits": [
+    {
+      "title": "Bank transfer schedule",
+      "content": "| Check | Amount | From → To | Disbursed per books | Disbursed per bank | Received per books | Received per bank |\n|---|---:|---|---|---|---|---|\n| 1401 | 60,000 | Bank A → Bank B | Dec 30 | Jan 3 | Dec 30 | Dec 31 |\n| 1402 | 45,000 | Bank A → Bank C | Jan 2 | Jan 4 | Dec 31 | Dec 31 |\n| 1403 | 20,000 | Bank C → Bank B | Jan 4 | Jan 6 | Jan 4 | Jan 5 |"
+    },
+    {
+      "title": "January disbursements (over $5,000)",
+      "content": "| Date | Payee | Amount | Description | In year-end payables? |\n|---|---|---:|---|---|\n| Jan 6 | Harlow Packaging | 18,500 | Packaging received Dec 22 | Yes |\n| Jan 12 | Vance Electric | 32,000 | Wiring work completed Dec 18 | No |\n| Jan 15 | City Water | 7,200 | Water for December | No |\n| Jan 20 | Lowe Leasing | 12,000 | January equipment rent | No |\n| Jan 28 | Pike Logistics | 9,400 | Freight on inventory received Dec 30 | No |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "tr",
+      "prompt": "Evaluate each transfer.",
+      "rows": [
+        {
+          "id": "t1",
+          "label": "Check 1401",
+          "answer": "Properly recorded",
+          "explanation": "Both the disbursement and the receipt were recorded in December; the check is an outstanding check at Bank A."
+        },
+        {
+          "id": "t2",
+          "label": "Check 1402",
+          "answer": "Cash overstated at year-end (kiting)",
+          "explanation": "The receipt was recorded in December but the disbursement not until January — double-counted."
+        },
+        {
+          "id": "t3",
+          "label": "Check 1403",
+          "answer": "Properly recorded",
+          "explanation": "Both sides were recorded in January; no year-end effect."
+        }
+      ],
+      "options": [
+        "Properly recorded",
+        "Cash overstated at year-end (kiting)"
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the misstatements.",
+      "rows": [
+        {
+          "id": "k",
+          "label": "Cash overstatement from transfers",
+          "answer": 45000,
+          "tolerance": 0,
+          "explanation": "Only check 1402 is double-counted: **45,000**."
+        },
+        {
+          "id": "ul",
+          "label": "Total unrecorded liabilities at December 31",
+          "answer": 48600,
+          "tolerance": 0,
+          "explanation": "Vance 32,000 + City Water 7,200 + Pike 9,400 = **48,600**. Harlow is recorded; the January rent is a Year 2 obligation."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "proc",
+      "prompt": "Select the most appropriate procedure for each objective.",
+      "rows": [
+        {
+          "id": "p1",
+          "label": "Verify that the December 31 deposits in transit were real",
+          "options": [
+            "Examine the cutoff bank statement received directly from the bank",
+            "Inspect the client's copy of deposit slips only",
+            "Recompute the book balance"
+          ],
+          "answer": "Examine the cutoff bank statement received directly from the bank",
+          "explanation": "Deposits in transit should appear on the bank statement within a few days."
+        },
+        {
+          "id": "p2",
+          "label": "Detect unrecorded debt",
+          "options": [
+            "Read the standard bank confirmation and board minutes, and review interest expense",
+            "Vouch recorded loan payments",
+            "Recompute the current ratio"
+          ],
+          "answer": "Read the standard bank confirmation and board minutes, and review interest expense",
+          "explanation": "These sources reveal borrowings that may be missing from the ledger."
+        }
+      ]
+    }
+  ]
+}

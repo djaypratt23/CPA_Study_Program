@@ -1,0 +1,444 @@
+[
+  {
+    "id": "aud-inv-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: to test whether all inventory on hand is included in the count, which direction should the auditor test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "From the count sheets to the floor",
+        "explanation": "That tests existence.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "From the general ledger to purchase invoices",
+        "explanation": "That tests cost.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "From the floor to the count sheets",
+        "explanation": "Correct. Completeness."
+      },
+      {
+        "id": "d",
+        "text": "From sales invoices to shipping documents",
+        "explanation": "That tests sales occurrence.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Floor → sheets tests completeness; sheets → floor tests existence.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-chk1",
+    "pool": "lesson",
+    "stem": "Why does the auditor record the last receiving report and shipping document numbers at the physical count?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "To test inventory pricing",
+        "explanation": "Pricing uses invoices.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "To confirm consigned goods",
+        "explanation": "Consigned goods are confirmed separately.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "To test the allowance for credit losses",
+        "explanation": "Document numbers don't bear on the allowance.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "To test cut-off of purchases and sales around the count date",
+        "explanation": "Correct. The document numbers let the auditor later check that transactions before the count were recorded in the period and those after were not."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The document numbers let the auditor later check that transactions before the count were recorded in the period and those after were not.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-chk2",
+    "pool": "lesson",
+    "stem": "Which procedure best detects PP&E that has been retired but is still recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Vouching additions to invoices",
+        "explanation": "That tests additions.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Recomputing depreciation on recorded assets",
+        "explanation": "Recomputation doesn't reveal retirements.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Reviewing insurance policies, property tax records, and scrap sales, and touring the plant",
+        "explanation": "Correct. Unrecorded retirements are found in records that reflect assets no longer owned or used."
+      },
+      {
+        "id": "d",
+        "text": "Confirming PP&E with vendors",
+        "explanation": "Vendors don't confirm asset existence.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Unrecorded retirements are found in records that reflect assets no longer owned or used.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-01",
+    "pool": "practice",
+    "stem": "Inventory is material, but the auditor was engaged after the year-end count. What should the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Disclaim an opinion automatically",
+        "explanation": "Alternative procedures may provide sufficient evidence.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Omit inventory procedures",
+        "explanation": "Material inventory must be audited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Rely on management's count sheets without testing",
+        "explanation": "Insufficient evidence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Observe a count at a later date and perform rollback procedures for intervening transactions",
+        "explanation": "Correct. AU-C 501: if attendance at the count isn't practicable on the count date, count at another date and test intervening transactions (rollforward or rollback)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "AU-C 501: if attendance at the count isn't practicable on the count date, count at another date and test intervening transactions (rollforward or rollback).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-02",
+    "pool": "practice",
+    "stem": "Goods held by the client on consignment for another company were included in the count. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Inventory is understated",
+        "explanation": "Including them overstates inventory.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "Inventory is overstated",
+        "explanation": "Correct. Consigned-in goods aren't the client's."
+      },
+      {
+        "id": "c",
+        "text": "No effect",
+        "explanation": "Ownership matters.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Revenue is overstated",
+        "explanation": "Revenue isn't directly affected.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The consignor owns consigned goods; the consignee excludes them.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-03",
+    "pool": "practice",
+    "stem": "Which procedure best tests the **existence** of inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Compare unit costs to vendor invoices",
+        "explanation": "That tests valuation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Select items on the floor and trace them to the count sheets",
+        "explanation": "That tests completeness.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Select items from the count sheets and locate them in the warehouse",
+        "explanation": "Correct. Existence: from recorded inventory to physical goods."
+      },
+      {
+        "id": "d",
+        "text": "Review sales after year-end",
+        "explanation": "That tests NRV.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Existence: from recorded inventory to physical goods.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-04",
+    "pool": "practice",
+    "stem": "A client's inventory is held in a public warehouse. What procedure is generally appropriate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Confirm with the warehouse the quantities held for the client",
+        "explanation": "Correct. AU-C 501: obtain confirmation from the custodian; if material, consider additional procedures such as observing counts or evaluating the warehouse's controls."
+      },
+      {
+        "id": "b",
+        "text": "Ignore the goods",
+        "explanation": "Material goods must be audited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Rely on the client's records",
+        "explanation": "Records alone are insufficient.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Observe inventory at the client's own plant",
+        "explanation": "The goods aren't there.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AU-C 501: obtain confirmation from the custodian; if material, consider additional procedures such as observing counts or evaluating the warehouse's controls.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-05",
+    "pool": "practice",
+    "stem": "Repairs and maintenance expense doubled with no change in operations. Which misstatement is most likely?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Capital expenditures recorded as repairs (understated PP&E)",
+        "explanation": "Correct. Analyzing repairs expense for items that extend life or add capacity tests the completeness of capitalized PP&E."
+      },
+      {
+        "id": "b",
+        "text": "Overstated depreciation",
+        "explanation": "A repair-expense spike doesn't point to depreciation errors.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Overstated revenue",
+        "explanation": "Repair expense doesn't affect revenue.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Understated accounts receivable",
+        "explanation": "Repair expense doesn't affect receivables.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Analyzing repairs expense for items that extend life or add capacity tests the completeness of capitalized PP&E.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-06",
+    "pool": "practice",
+    "stem": "Which procedure tests the valuation of inventory at lower of cost and NRV?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Comparing inventory costs with selling prices after year-end less costs to sell",
+        "explanation": "Correct. NRV evidence comes from subsequent selling prices, less completion and selling costs."
+      },
+      {
+        "id": "b",
+        "text": "Test counting inventory",
+        "explanation": "That tests existence and completeness.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Recording shipping document numbers",
+        "explanation": "That tests cut-off.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Confirming with the public warehouse",
+        "explanation": "That tests existence.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "NRV evidence comes from subsequent selling prices, less completion and selling costs.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-07",
+    "pool": "practice",
+    "stem": "Which procedure best tests the existence and rights of a $2 million equipment addition?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Vouching the addition to the vendor invoice and purchase contract, and inspecting the equipment",
+        "explanation": "Correct. Vouching to invoices and contracts supports rights; physical inspection supports existence."
+      },
+      {
+        "id": "b",
+        "text": "Recomputing depreciation expense",
+        "explanation": "That tests accuracy.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Analyzing repairs expense",
+        "explanation": "That tests completeness of capitalization.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Reviewing insurance records",
+        "explanation": "More relevant to retirements.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Vouching to invoices and contracts supports rights; physical inspection supports existence.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-08",
+    "pool": "practice",
+    "stem": "In an initial audit, what must the auditor consider about opening inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing — opening balances are the predecessor's responsibility",
+        "explanation": "The successor must obtain evidence on opening balances.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Obtain sufficient appropriate evidence that opening balances don't contain misstatements that materially affect current-period statements",
+        "explanation": "Correct. AU-C 510: opening inventory affects current-year cost of sales; evidence may come from the predecessor's working papers, rollback procedures, and testing cost records."
+      },
+      {
+        "id": "c",
+        "text": "Always re-perform a count of opening inventory",
+        "explanation": "Other procedures may suffice (e.g., review predecessor's working papers).",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Assume opening inventory equals closing inventory",
+        "explanation": "There is no basis for that assumption.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AU-C 510: opening inventory affects current-year cost of sales; evidence may come from the predecessor's working papers, rollback procedures, and testing cost records.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-09",
+    "pool": "practice",
+    "stem": "During the count, the auditor sees a large area of dusty, discontinued parts. What should the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ignore it — the count is about quantities",
+        "explanation": "The observation is relevant to valuation.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Note the items and later evaluate whether they are written down to NRV",
+        "explanation": "Correct. Observations at the count provide evidence about obsolescence (valuation)."
+      },
+      {
+        "id": "c",
+        "text": "Exclude them from the count",
+        "explanation": "They still exist and are owned.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Qualify the opinion",
+        "explanation": "That is premature before evaluating the write-down.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Observations at the count provide evidence about obsolescence (valuation).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-inv-10",
+    "pool": "practice",
+    "stem": "The client depreciates a building over 60 years; similar buildings in the industry use 30–40 years. What should the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accept the client's estimate without question",
+        "explanation": "The estimate appears unusual and should be evaluated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Evaluate the reasonableness of the useful life as an accounting estimate and consider possible bias",
+        "explanation": "Correct. Useful lives are accounting estimates subject to AU-C 540; long lives lower expense and may indicate bias."
+      },
+      {
+        "id": "c",
+        "text": "Recompute depreciation using 40 years and book the difference",
+        "explanation": "First evaluate the support for 60 years.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Ignore it because depreciation is non-cash",
+        "explanation": "Non-cash items can be material.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Useful lives are accounting estimates subject to AU-C 540; long lives lower expense and may indicate bias.",
+    "skill": "analysis",
+    "difficulty": 2
+  }
+]
