@@ -1,0 +1,129 @@
+{
+  "id": "aud-tbs-u5-estimates",
+  "section": "AUD",
+  "unitId": "aud-u5",
+  "moduleIds": [
+    "aud-specific-risks"
+  ],
+  "pool": "practice",
+  "title": "Estimates and related parties — Beacon Medical Supply",
+  "minutes": 25,
+  "skill": "evaluation",
+  "instructions": "You are evaluating estimates and related-party matters in the audit of **Beacon Medical Supply**. Overall materiality is **$150,000**. Enter misstatements as positive numbers.",
+  "exhibits": [
+    {
+      "title": "Estimates",
+      "content": "| Estimate | Management | Auditor's evidence |\n|---|---:|---|\n| Warranty reserve | 520,000 | Reasonable range 560,000–700,000 |\n| Inventory obsolescence reserve | 310,000 | Supported point estimate 290,000 |\n| Allowance for credit losses | 185,000 | Reasonable range 170,000–210,000 |\n\nRetrospective review: last year's warranty reserve was 380,000; actual claims were 505,000."
+    },
+    {
+      "title": "Related-party information",
+      "content": "- Beacon leases its warehouse from an LLC owned by the CEO's spouse, at a rent 40% above market.\n- On December 29, Beacon sold surplus equipment to a company controlled by a director for $900,000; the equipment's appraised value is $450,000.\n- The CFO's salary and expense reimbursements follow an approved employment contract."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "mis",
+      "prompt": "Compute the minimum likely misstatement for each estimate.",
+      "rows": [
+        {
+          "id": "w",
+          "label": "Warranty reserve (understatement)",
+          "answer": 40000,
+          "tolerance": 0,
+          "explanation": "520,000 is below the 560,000 low end: misstatement of at least **40,000**."
+        },
+        {
+          "id": "o",
+          "label": "Obsolescence reserve (overstatement)",
+          "answer": 20000,
+          "tolerance": 0,
+          "explanation": "310,000 − 290,000 supported point estimate = **20,000**."
+        },
+        {
+          "id": "a",
+          "label": "Allowance for credit losses",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "185,000 is within the 170,000–210,000 range, so no misstatement is identified: **0**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "eval",
+      "prompt": "Evaluate each matter.",
+      "rows": [
+        {
+          "id": "e1",
+          "label": "The warranty history (380,000 estimated vs. 505,000 actual) together with this year's estimate below the range",
+          "options": [
+            "Indicator of possible management bias",
+            "No concern"
+          ],
+          "answer": "Indicator of possible management bias",
+          "explanation": "A repeated tilt toward lower reserves (higher income) indicates possible bias, which is considered in evaluating the statements as a whole."
+        },
+        {
+          "id": "e2",
+          "label": "The equipment sale to a director's company",
+          "options": [
+            "Significant risk — outside the normal course of business",
+            "Routine related-party transaction"
+          ],
+          "answer": "Significant risk — outside the normal course of business",
+          "explanation": "A year-end sale at twice appraised value is unusual, with questionable business rationale."
+        },
+        {
+          "id": "e3",
+          "label": "The warehouse lease from the CEO's spouse's LLC",
+          "options": [
+            "Requires related-party disclosure",
+            "No disclosure required"
+          ],
+          "answer": "Requires related-party disclosure",
+          "explanation": "A related-party transaction on non-market terms must be disclosed."
+        },
+        {
+          "id": "e4",
+          "label": "The CFO's approved salary and reimbursements",
+          "options": [
+            "Requires related-party disclosure",
+            "Ordinary-course compensation — not required under ASC 850"
+          ],
+          "answer": "Ordinary-course compensation — not required under ASC 850",
+          "explanation": "Compensation arrangements and expense allowances in the ordinary course of business need not be disclosed."
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "res",
+      "prompt": "Which excerpt (paraphrased for study) directs the auditor's response to the equipment sale?",
+      "excerpts": [
+        {
+          "id": "a",
+          "citation": "AU-C 550 (paraphrase)",
+          "text": "For significant related-party transactions outside the entity's normal course of business, the auditor should inspect the underlying contracts or agreements and evaluate whether the business rationale suggests they may have been entered into to engage in fraudulent financial reporting or to conceal misappropriation of assets."
+        },
+        {
+          "id": "b",
+          "citation": "AU-C 540 (paraphrase)",
+          "text": "The auditor should evaluate whether judgments and decisions made by management in making accounting estimates indicate possible management bias."
+        },
+        {
+          "id": "c",
+          "citation": "AU-C 250 (paraphrase)",
+          "text": "The auditor should obtain sufficient appropriate audit evidence regarding compliance with laws and regulations generally recognized to have a direct effect on the financial statements."
+        },
+        {
+          "id": "d",
+          "citation": "AU-C 330 (paraphrase)",
+          "text": "The auditor should design and perform substantive procedures for each relevant assertion of each material class of transactions, account balance, and disclosure."
+        }
+      ],
+      "answer": "a",
+      "explanation": "AU-C 550 addresses significant related-party transactions outside the normal course of business."
+    }
+  ]
+}

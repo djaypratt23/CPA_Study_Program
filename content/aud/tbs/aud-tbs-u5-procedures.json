@@ -1,0 +1,119 @@
+{
+  "id": "aud-tbs-u5-procedures",
+  "section": "AUD",
+  "unitId": "aud-u5",
+  "moduleIds": [
+    "aud-risk-response",
+    "aud-tests-of-controls"
+  ],
+  "pool": "practice",
+  "title": "Matching procedures to assertions — Fairmont Electric",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "You are finalizing the audit program for **Fairmont Electric**, a wholesale distributor. For each procedure, identify the assertion it primarily addresses and whether it is a test of controls or a substantive procedure.",
+  "exhibits": [
+    {
+      "title": "Draft audit program steps",
+      "content": "1. Select entries from the sales journal and vouch them to shipping documents and customer orders.\n2. Select shipping documents from the shipping log and trace them to recorded sales invoices.\n3. Examine sales invoices for the last five days of the year and the first five days of the next year and compare invoice dates with shipping dates.\n4. Inspect a sample of 40 credit memos for the credit manager's approval signature.\n5. Recompute the allowance for credit losses using the client's aging and historical loss rates.\n6. Read the loan agreement and bank confirmation for liens on inventory.\n7. Observe the warehouse clerk and shipping clerk performing their duties, and make inquiries."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "asr",
+      "prompt": "Select the primary assertion each procedure addresses.",
+      "rows": [
+        {
+          "id": "p1",
+          "label": "1. Vouch sales journal to shipping documents",
+          "answer": "Existence or occurrence",
+          "explanation": "Vouching recorded sales tests that they occurred."
+        },
+        {
+          "id": "p2",
+          "label": "2. Trace shipping documents to sales invoices",
+          "answer": "Completeness",
+          "explanation": "Tracing from source documents tests that all shipments were recorded."
+        },
+        {
+          "id": "p3",
+          "label": "3. Compare invoice and shipping dates around year-end",
+          "answer": "Cut-off",
+          "explanation": "Tests that sales are recorded in the correct period."
+        },
+        {
+          "id": "p5",
+          "label": "5. Recompute the allowance",
+          "answer": "Valuation or accuracy",
+          "explanation": "Tests the net realizable value of receivables."
+        },
+        {
+          "id": "p6",
+          "label": "6. Look for liens on inventory",
+          "answer": "Rights and obligations",
+          "explanation": "Liens affect rights and require disclosure."
+        }
+      ],
+      "options": [
+        "Existence or occurrence",
+        "Completeness",
+        "Valuation or accuracy",
+        "Rights and obligations",
+        "Cut-off"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "typ",
+      "prompt": "Classify each procedure.",
+      "rows": [
+        {
+          "id": "t1",
+          "label": "1. Vouch sales journal to shipping documents",
+          "answer": "Substantive procedure",
+          "explanation": "Tests the recorded amounts."
+        },
+        {
+          "id": "t4",
+          "label": "4. Inspect credit memos for approval",
+          "answer": "Test of controls",
+          "explanation": "Looks for evidence that the approval control operated."
+        },
+        {
+          "id": "t5",
+          "label": "5. Recompute the allowance",
+          "answer": "Substantive procedure",
+          "explanation": "Tests the balance directly."
+        },
+        {
+          "id": "t7",
+          "label": "7. Observe segregation of duties and inquire",
+          "answer": "Test of controls",
+          "explanation": "Observation plus inquiry tests a control that leaves no documentation."
+        }
+      ],
+      "options": [
+        "Test of controls",
+        "Substantive procedure"
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "tim",
+      "prompt": "The receivables confirmations were sent at October 31 (interim). Which statement is correct?",
+      "rows": [
+        {
+          "id": "i1",
+          "label": "Required for November–December",
+          "options": [
+            "No further procedures are needed",
+            "Perform substantive procedures covering the remaining period (e.g., compare interim and year-end balances and test unusual activity)",
+            "Resend every confirmation at year-end"
+          ],
+          "answer": "Perform substantive procedures covering the remaining period (e.g., compare interim and year-end balances and test unusual activity)",
+          "explanation": "AU-C 330 requires the remaining period to be covered; resending every confirmation isn't necessarily required."
+        }
+      ]
+    }
+  ]
+}

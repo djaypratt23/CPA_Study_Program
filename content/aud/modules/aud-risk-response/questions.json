@@ -1,0 +1,445 @@
+[
+  {
+    "id": "aud-rr-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: to find sales that were shipped but never recorded, where should the auditor start?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Recorded sales in the sales journal",
+        "explanation": "Unrecorded sales aren't in the journal.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Customer credit files",
+        "explanation": "Credit files don't evidence shipments.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "The general ledger revenue balance",
+        "explanation": "The recorded balance can't reveal omissions.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Shipping documents",
+        "explanation": "Correct. Trace shipments forward to the sales journal."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Completeness: start from source documents and trace into the records.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-chk1",
+    "pool": "lesson",
+    "stem": "The auditor selects entries from the purchases journal and examines the related vendor invoices and receiving reports. Which assertion is primarily tested?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Occurrence",
+        "explanation": "Correct. Vouching recorded entries tests that they actually happened."
+      },
+      {
+        "id": "b",
+        "text": "Completeness",
+        "explanation": "Completeness requires tracing from source documents into the records.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Classification",
+        "explanation": "Classification tests look at the account used.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Cut-off",
+        "explanation": "Cut-off focuses on transactions near period-end.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Vouching (records → source) tests existence/occurrence.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-chk2",
+    "pool": "lesson",
+    "stem": "For which account is a substantive analytical procedure most likely to be effective?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Litigation accruals",
+        "explanation": "Litigation is unpredictable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Fraud-related adjustments",
+        "explanation": "Analytics are weak evidence against concealed fraud.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Nonrecurring gains on asset sales",
+        "explanation": "Nonrecurring items are unpredictable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Interest expense on fixed-rate debt",
+        "explanation": "Correct. It is a predictable relationship between balance and rate."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Substantive analytics suit large volumes of transactions with stable, predictable relationships.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-01",
+    "pool": "practice",
+    "stem": "Which procedure provides the **most** reliable evidence about the existence of accounts receivable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "External confirmation sent and received directly by the auditor",
+        "explanation": "Correct. Evidence obtained directly by the auditor from independent external sources is the most reliable."
+      },
+      {
+        "id": "b",
+        "text": "Inquiry of the credit manager",
+        "explanation": "Inquiry alone is weak.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Review of the aged trial balance prepared by the client",
+        "explanation": "Internal evidence prepared by the client.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Recalculating the allowance",
+        "explanation": "That addresses valuation, not existence.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Evidence obtained directly by the auditor from independent external sources is the most reliable.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-02",
+    "pool": "practice",
+    "stem": "The auditor confirmed receivables at October 31 (interim). What must be done for the period November 1 to December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing — interim testing covers the year",
+        "explanation": "The remaining period must be covered.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Confirm the same accounts again at year-end",
+        "explanation": "Not necessarily required; rollforward procedures may suffice.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Perform substantive procedures covering the remaining period (e.g., compare activity and investigate unusual items)",
+        "explanation": "Correct. AU-C 330: when substantive procedures are performed at an interim date, cover the remaining period with further substantive procedures, alone or combined with tests of controls."
+      },
+      {
+        "id": "d",
+        "text": "Rely on management's representation for the gap",
+        "explanation": "A representation is not sufficient evidence.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "AU-C 330: when substantive procedures are performed at an interim date, cover the remaining period with further substantive procedures, alone or combined with tests of controls.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-03",
+    "pool": "practice",
+    "stem": "Which statement about substantive procedures is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They may be omitted if control risk is assessed as low",
+        "explanation": "Substantive procedures are required for all material items.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "They consist only of tests of details",
+        "explanation": "Substantive analytics are also substantive procedures.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "They are required only for significant risks",
+        "explanation": "They are required for all material items.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "They are required for each material class of transactions, account balance, and disclosure",
+        "explanation": "Correct. Because risk assessment is judgmental and controls have inherent limitations, substantive procedures are always required for material items."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Because risk assessment is judgmental and controls have inherent limitations, substantive procedures are always required for material items.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-04",
+    "pool": "practice",
+    "stem": "Which pair links the procedure correctly to the assertion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Tracing shipping documents to sales invoices — occurrence",
+        "explanation": "Tracing forward tests completeness.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Observing the inventory count — existence",
+        "explanation": "Correct. Observation of assets supports existence."
+      },
+      {
+        "id": "c",
+        "text": "Vouching recorded payables to invoices — completeness",
+        "explanation": "Vouching tests existence.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Recalculating depreciation — rights and obligations",
+        "explanation": "Recalculation addresses accuracy and valuation.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Observation of assets supports existence.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-05",
+    "pool": "practice",
+    "stem": "An auditor's expectation for rental income is $1,200,000 (units × occupancy × rent). Recorded income is $1,320,000, and the threshold is $50,000. What should the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accept the recorded amount",
+        "explanation": "The $120,000 difference exceeds the threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Investigate the difference, obtain explanations, and corroborate them with evidence",
+        "explanation": "Correct. Differences above the threshold are investigated; management's explanations must be corroborated."
+      },
+      {
+        "id": "c",
+        "text": "Adjust revenue by $120,000 immediately",
+        "explanation": "First investigate; there may be a valid explanation.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Reduce the threshold until the difference is acceptable",
+        "explanation": "That defeats the purpose.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Differences above the threshold are investigated; management's explanations must be corroborated.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "aud-rr-06",
+    "pool": "practice",
+    "stem": "Which evidence is **least** reliable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A bank statement received directly from the bank",
+        "explanation": "External, direct evidence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The auditor's recalculation of interest",
+        "explanation": "Directly obtained by the auditor.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "An oral explanation from the controller",
+        "explanation": "Correct. Oral, internal evidence is least reliable."
+      },
+      {
+        "id": "d",
+        "text": "A vendor statement mailed to the auditor",
+        "explanation": "External evidence.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Reliability ranking: auditor-generated and external > internal (effective controls) > internal (weak controls) and oral.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-07",
+    "pool": "practice",
+    "stem": "The auditor recomputes the client's aging of receivables using the client's data to confirm the aging program works. What type of procedure is this?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reperformance",
+        "explanation": "Correct. Independently executing a procedure or control originally performed by the entity."
+      },
+      {
+        "id": "b",
+        "text": "Confirmation",
+        "explanation": "Confirmation involves external parties.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Observation",
+        "explanation": "Observation is watching a process.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Inquiry",
+        "explanation": "Inquiry is asking questions.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Reperformance independently executes procedures or controls originally performed by the entity; recalculation checks mathematical accuracy.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-08",
+    "pool": "practice",
+    "stem": "The RMM for inventory valuation is assessed as high. Which change best responds?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Test at an interim date using smaller samples",
+        "explanation": "That weakens evidence.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Test at year-end, increase the extent of testing, and obtain more reliable evidence",
+        "explanation": "Correct. Higher RMM → more persuasive evidence through nature, timing, and extent."
+      },
+      {
+        "id": "c",
+        "text": "Rely on inquiry of the warehouse manager",
+        "explanation": "Inquiry is insufficient.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Omit tests of details and use analytics only",
+        "explanation": "High risk calls for more persuasive evidence.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Higher RMM → more persuasive evidence through nature, timing, and extent.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-09",
+    "pool": "practice",
+    "stem": "To test for unrecorded liabilities, which procedure is most effective?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Vouch recorded payables to vendor invoices",
+        "explanation": "That tests existence, not completeness.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Examine cash disbursements after year-end and trace them to the year-end payables",
+        "explanation": "Correct. The search for unrecorded liabilities starts with evidence outside the recorded payables — subsequent disbursements, unpaid invoices, and receiving reports."
+      },
+      {
+        "id": "c",
+        "text": "Confirm recorded payables with large balances",
+        "explanation": "Confirming recorded balances misses unrecorded ones.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Recalculate the payables trial balance footing",
+        "explanation": "Footing tests accuracy.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The search for unrecorded liabilities starts with evidence outside the recorded payables — subsequent disbursements, unpaid invoices, and receiving reports.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-10",
+    "pool": "practice",
+    "stem": "Which condition makes substantive analytical procedures **less** appropriate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Data prepared by a reliable, independent source",
+        "explanation": "Reliable data supports analytics.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "A stable, predictable relationship",
+        "explanation": "Predictability supports analytics.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "A significant risk for which the auditor wants to rely solely on analytics",
+        "explanation": "Correct. Significant risks addressed only substantively require tests of details."
+      },
+      {
+        "id": "d",
+        "text": "A large volume of homogeneous transactions",
+        "explanation": "Supports analytics.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For significant risks, relying only on substantive analytics is insufficient; tests of details are required.",
+    "skill": "analysis",
+    "difficulty": 2
+  }
+]
