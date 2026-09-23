@@ -5,7 +5,7 @@ concept-first lessons, retrieval practice, worked → faded → independent exam
 with named traps, FSRS spaced repetition, interleaving, confidence ratings, mastery gating, an error log,
 simulated exams, and an honest readiness signal.
 
-**Live app:** hosted on Cloudflare Pages at `https://<project-name>.pages.dev`, with a mirror on GitHub Pages at
+**Live app:** https://cpa-study-program.pages.dev/ (Cloudflare Pages), with a mirror on GitHub Pages at
 https://djaypratt23.github.io/CPA_Study_Program/ (see [DEPLOY.md](DEPLOY.md)).
 Install it from the browser menu ("Add to Home Screen") to use it offline.
 

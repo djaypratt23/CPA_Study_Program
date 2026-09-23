@@ -2,8 +2,11 @@
 
 ## Where it's hosted
 
-The site is hosted on **Cloudflare Pages** at `https://<project-name>.pages.dev`. It uses a Git-connected Pages
-project that watches this GitHub repository (`djaypratt23/CPA_Study_Program`).
+The site is live on **Cloudflare Pages** at **https://cpa-study-program.pages.dev/**. It uses a Git-connected
+Pages project (`cpa-study-program`) that watches this GitHub repository (`djaypratt23/CPA_Study_Program`).
+
+**Setup is complete.** Nothing else needs to be configured. To publish a change, push it to `main`: Cloudflare
+rebuilds and redeploys the site automatically (and the GitHub Pages mirror updates from the same push).
 
 Cloudflare builds the site by running `npm run build`, which runs these steps in order, and a failure at any
 step stops the deploy:
@@ -25,8 +28,8 @@ The app uses hash routing (`/#/module/...`), so deep links work without a `_redi
 
 ## What triggers a deploy
 
-- **Push to `main`** → production deploy to `https://<project-name>.pages.dev`.
-- **Push to any other branch** → a preview deploy at `https://<branch>.<project-name>.pages.dev`. Production is
+- **Push to `main`** → production deploy to `https://cpa-study-program.pages.dev`.
+- **Push to any other branch** → a preview deploy at `https://<branch>.cpa-study-program.pages.dev`. Production is
   not affected. You can turn preview deploys off under *Settings → Builds & deployments → Preview branches*.
 
 GitHub Actions (`.github/workflows/ci.yml`) runs the same checks on every push, independently of Cloudflare.
@@ -44,21 +47,21 @@ successful *CI & Deploy* run from the Actions tab.
 
 ## Checking which commit is live
 
-Open `https://<project-name>.pages.dev/version.json`:
+Open `https://cpa-study-program.pages.dev/version.json`:
 
 ```json
 { "commit": "<full git SHA>", "branch": "main", "builtAt": "2026-09-23T14:35:05.368Z" }
 ```
 
 Compare `commit` with `git log -1 --format=%H origin/main`, or with the latest commit on GitHub. The dashboard
-also shows the commit for each deployment under *Workers & Pages → <project> → Deployments*.
+also shows the commit for each deployment under *Workers & Pages → cpa-study-program → Deployments*.
 
 The app is a PWA. An open tab picks up a new deploy when the page next loads, and the service worker then
 updates itself automatically. If the page looks stale, reload it once more.
 
 ## Rolling back
 
-1. In the Cloudflare dashboard, go to **Workers & Pages → <project-name> → Deployments**.
+1. In the Cloudflare dashboard, go to **Workers & Pages → cpa-study-program → Deployments**.
 2. Find the last good production deployment in the list.
 3. Open its **⋯** menu and choose **Rollback to this deployment**, then confirm.
 
