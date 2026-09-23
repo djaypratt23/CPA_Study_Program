@@ -1,0 +1,56 @@
+{
+  "id": "far-tbs-u12-contingencies",
+  "section": "FAR",
+  "unitId": "far-u12",
+  "moduleIds": ["far-contingencies", "far-subsequent-events"],
+  "pool": "practice",
+  "title": "Contingencies and subsequent events — Reyes Corp.",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Reyes Corp. is a private company with a December 31, Year 1 year-end. Its financial statements were **available to be issued on March 15, Year 2**. Evaluate each matter and review the draft note.",
+  "exhibits": [
+    { "title": "Legal and other matters", "content": "1. **Product-liability suit** filed November Year 1 over a defect in units sold in Year 1. At December 31, counsel judged a loss probable, range $200,000–$500,000, no amount in the range better than another. On **February 20, Year 2**, the suit settled for **$350,000**.\n2. **Warranties.** Year 1 sales were **$2,000,000**; warranty costs are estimated at 3% of sales. Year 1 warranty expenditures were **$25,000**. There was no beginning warranty liability.\n3. **Suit against a competitor.** Counsel believes Reyes will probably be awarded **$150,000** in Year 2.\n4. **Fire.** On **January 15, Year 2**, a fire destroyed an uninsured warehouse — estimated loss **$400,000**.\n5. **Guarantee.** Reyes guaranteed a $1,000,000 bank loan of an affiliate in Year 1; the likelihood of payment is remote.\n6. **Environmental claim.** A loss of about **$100,000** is reasonably possible.\n7. **Nuisance claim.** An unasserted, unlikely-to-be-asserted claim with a remote chance of loss." }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "tr",
+      "prompt": "Select the required treatment in the Year 1 financial statements.",
+      "options": ["Recognize in Year 1 statements", "Disclose only", "No recognition or disclosure required"],
+      "rows": [
+        { "id": "t1", "label": "Product-liability suit", "answer": "Recognize in Year 1 statements", "explanation": "Probable and estimable at year-end; the February settlement is a recognized (Type I) subsequent event." },
+        { "id": "t2", "label": "Warranties", "answer": "Recognize in Year 1 statements", "explanation": "A probable, estimable obligation arising from Year 1 sales." },
+        { "id": "t3", "label": "Suit against a competitor", "answer": "Disclose only", "explanation": "Gain contingencies are not recognized until realized; disclose without misleading implications." },
+        { "id": "t4", "label": "Warehouse fire", "answer": "Disclose only", "explanation": "The condition arose after year-end — a nonrecognized (Type II) event, disclosed because it is material." },
+        { "id": "t5", "label": "Guarantee of affiliate loan", "answer": "Disclose only", "explanation": "Guarantees are disclosed even when the chance of loss is remote." },
+        { "id": "t6", "label": "Environmental claim", "answer": "Disclose only", "explanation": "Reasonably possible losses are disclosed, not accrued." },
+        { "id": "t7", "label": "Nuisance claim", "answer": "No recognition or disclosure required", "explanation": "An unasserted claim that is unlikely to be asserted with a remote loss needs neither." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the December 31, Year 1 amounts.",
+      "rows": [
+        { "id": "a1", "label": "Litigation liability", "answer": 350000, "tolerance": 0, "explanation": "The settlement before the statements were available to be issued gives evidence of the year-end amount: **350,000** (not the 200,000 range minimum)." },
+        { "id": "a2", "label": "Year 1 warranty expense", "answer": 60000, "tolerance": 0, "explanation": "2,000,000 × 3% = **60,000**." },
+        { "id": "a3", "label": "Warranty liability", "answer": 35000, "tolerance": 0, "explanation": "0 + 60,000 − 25,000 spent = **35,000**." },
+        { "id": "a4", "label": "Gain recognized on the suit against the competitor", "answer": 0, "tolerance": 0, "explanation": "Gain contingencies are not recognized: **0**." }
+      ]
+    },
+    {
+      "kind": "docreview",
+      "id": "note",
+      "prompt": "Review the draft note. For each highlighted phrase, keep it or select the correct replacement.",
+      "segments": [
+        { "text": "**Note 14 — Subsequent events.** The Company has evaluated subsequent events through " },
+        { "id": "s1", "original": "December 31, Year 1", "options": ["December 31, Year 1", "February 20, Year 2", "March 15, Year 2"], "answer": "March 15, Year 2", "explanation": "A private company evaluates through the date the statements were available to be issued and discloses that date." },
+        { "text": ", the date the financial statements were available to be issued. On January 15, Year 2, a fire destroyed an uninsured warehouse. The Company " },
+        { "id": "s2", "original": "has recorded a loss of $400,000 in the accompanying financial statements", "options": ["has recorded a loss of $400,000 in the accompanying financial statements", "estimates the uninsured loss at approximately $400,000, which will be recognized in Year 2", "does not expect the fire to affect its operations"], "answer": "estimates the uninsured loss at approximately $400,000, which will be recognized in Year 2", "explanation": "A Type II event is disclosed with an estimate of its effect, not recorded in Year 1." },
+        { "text": ". The product-liability suit described in Note 12 was settled on February 20, Year 2 for $350,000, and " },
+        { "id": "s3", "original": "no amount has been accrued at December 31, Year 1", "options": ["no amount has been accrued at December 31, Year 1", "that amount is accrued at December 31, Year 1", "$200,000 is accrued at December 31, Year 1"], "answer": "that amount is accrued at December 31, Year 1", "explanation": "The settlement is a Type I event, so the full $350,000 is accrued." },
+        { "text": "." }
+      ]
+    }
+  ]
+}

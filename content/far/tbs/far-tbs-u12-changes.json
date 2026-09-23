@@ -1,0 +1,56 @@
+{
+  "id": "far-tbs-u12-changes",
+  "section": "FAR",
+  "unitId": "far-u12",
+  "moduleIds": ["far-accounting-changes"],
+  "pool": "practice",
+  "title": "Accounting changes and an error — Harlan Co.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Harlan Co. is preparing its Year 3 financial statements. The books for Year 2 are closed. **Ignore income taxes** throughout. Retained earnings at January 1, Year 3, as originally reported, was **$1,200,000**.",
+  "exhibits": [
+    { "title": "Controller's memo", "content": "1. **Inventory method.** Effective January 1, Year 3, we changed from weighted-average cost to FIFO because FIFO better matches our physical flow. Inventory at January 1, Year 3 was **$400,000** under weighted average and **$460,000** under FIFO. Prior-period FIFO information is available.\n2. **Equipment life.** Equipment costing **$600,000** was purchased January 1, Year 1 and depreciated straight-line over 10 years with no salvage value. At January 1, Year 3, engineering concluded the equipment's **total** useful life is 6 years (no salvage).\n3. **Machine expensed in error.** On January 1, Year 2, a **$80,000** machine was charged to repairs expense. It should have been capitalized and depreciated straight-line over 5 years with no salvage value." },
+    { "title": "Other changes under discussion", "content": "- Switching future depreciation of new buildings from straight-line to double-declining balance.\n- Moving from the cash basis to GAAP for a subsidiary's records that were used in prior consolidated statements.\n- Presenting consolidated statements in place of the individual statements of the parent company." }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify each item and select how it is reported.",
+      "options": ["Change in principle — retrospective", "Change in estimate — prospective", "Change in estimate effected by a change in principle — prospective", "Error correction — restatement (prior-period adjustment)", "Change in reporting entity — retrospective"],
+      "rows": [
+        { "id": "r1", "label": "Weighted average → FIFO", "answer": "Change in principle — retrospective", "explanation": "A change between acceptable methods is a change in principle, applied retrospectively when practicable." },
+        { "id": "r2", "label": "Revised useful life of equipment", "answer": "Change in estimate — prospective", "explanation": "New information about useful life is an estimate change; affect current and future periods only." },
+        { "id": "r3", "label": "Machine charged to repairs expense", "answer": "Error correction — restatement (prior-period adjustment)", "explanation": "Misapplying GAAP is an error; correct beginning retained earnings of the earliest period presented." },
+        { "id": "r4", "label": "Straight-line → double-declining balance", "answer": "Change in estimate effected by a change in principle — prospective", "explanation": "A depreciation-method change reflects a new pattern of consumption; it is treated like an estimate change." },
+        { "id": "r5", "label": "Cash basis → GAAP", "answer": "Error correction — restatement (prior-period adjustment)", "explanation": "The cash basis was never GAAP, so moving to GAAP corrects an error, not a principle change." },
+        { "id": "r6", "label": "Consolidated in place of parent-only statements", "answer": "Change in reporting entity — retrospective", "explanation": "Changing the set of entities presented is a change in reporting entity; prior periods are recast." }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the following amounts.",
+      "rows": [
+        { "id": "n1", "label": "Adjustment to January 1, Year 3 retained earnings for the inventory change (increase)", "answer": 60000, "tolerance": 0, "explanation": "460,000 FIFO − 400,000 weighted average = **60,000** cumulative effect (no taxes)." },
+        { "id": "n2", "label": "Year 3 depreciation on the equipment", "answer": 120000, "tolerance": 0, "explanation": "Carrying amount 1/1/Y3 = 600,000 − (60,000 × 2) = 480,000. Remaining life 6 − 2 = 4 years. 480,000 ÷ 4 = **120,000**." },
+        { "id": "n3", "label": "Prior-period adjustment for the machine error (increase to retained earnings)", "answer": 64000, "tolerance": 0, "explanation": "Year 2 expense was overstated by 80,000 and depreciation understated by 16,000 (80,000 ÷ 5): net income understated by **64,000**." },
+        { "id": "n4", "label": "Year 3 depreciation on the machine", "answer": 16000, "tolerance": 0, "explanation": "80,000 ÷ 5 = **16,000** per year." },
+        { "id": "n5", "label": "January 1, Year 3 retained earnings, as adjusted", "answer": 1324000, "tolerance": 0, "explanation": "1,200,000 + 60,000 + 64,000 = **1,324,000**. The useful-life change does not touch beginning retained earnings." }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "je",
+      "prompt": "Record the Year 3 entry to correct the machine error (books for Year 2 are closed).",
+      "accounts": ["Machinery", "Accumulated depreciation", "Retained earnings", "Repairs expense", "Depreciation expense", "Cumulative effect of change in principle"],
+      "maxLines": 4,
+      "lines": [
+        { "account": "Machinery", "debit": 80000 },
+        { "account": "Accumulated depreciation", "credit": 16000 },
+        { "account": "Retained earnings", "credit": 64000 }
+      ],
+      "explanation": "Year 2 is closed, so the income-statement effect goes to retained earnings: Dr Machinery 80,000; Cr Accumulated depreciation 16,000 (Year 2); Cr Retained earnings 64,000. Year 3 depreciation of 16,000 is recorded separately."
+    }
+  ]
+}
