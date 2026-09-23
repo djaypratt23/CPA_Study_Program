@@ -1,0 +1,453 @@
+[
+  {
+    "id": "reg-nt-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: which exchange can qualify as a like-kind exchange under current law?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Business equipment for other business equipment",
+        "explanation": "After 2017, §1031 applies only to real property.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Inventory for inventory",
+        "explanation": "Inventory is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A personal residence for a rental property",
+        "explanation": "A residence isn't held for business or investment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "An apartment building held for investment for farmland held for investment",
+        "explanation": "Correct. Real property for real property."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§1031 now covers only real property held for productive use in a business or for investment.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-nt-chk1",
+    "pool": "lesson",
+    "stem": "In a like-kind exchange, a taxpayer realizes a $90,000 gain and receives $25,000 of cash boot. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Correct. The lesser of realized gain or boot."
+      },
+      {
+        "id": "b",
+        "text": "$90,000",
+        "explanation": "Only the boot is taxed, up to the realized gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$65,000",
+        "explanation": "That's the deferred gain.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Boot triggers recognition.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Recognized gain = lesser of realized gain or boot received.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-chk2",
+    "pool": "lesson",
+    "stem": "A single taxpayer who meets the ownership and use tests sells her home at a $310,000 gain. How much gain is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$310,000",
+        "explanation": "The exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The exclusion is capped at $250,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$60,000",
+        "explanation": "Correct. $310,000 − $250,000."
+      },
+      {
+        "id": "d",
+        "text": "$210,000",
+        "explanation": "Uses a $100,000 exclusion.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§121 excludes up to $250,000 for a single filer.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-01",
+    "pool": "practice",
+    "stem": "In a like-kind exchange, Kim gives property with a basis of $150,000 (FMV $260,000) and receives property worth $240,000 plus $20,000 cash. What is Kim's basis in the new property?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "Correct. $240,000 FMV − $90,000 deferred gain."
+      },
+      {
+        "id": "b",
+        "text": "$130,000",
+        "explanation": "Subtracts the boot without adding the recognized gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$240,000",
+        "explanation": "That's FMV; deferred gain reduces basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$170,000",
+        "explanation": "Adds the boot instead of subtracting it.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Realized gain 110,000; recognized 20,000; deferred 90,000. Basis = 240,000 − 90,000 = **150,000** (= 150,000 + 20,000 − 20,000).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-02",
+    "pool": "practice",
+    "stem": "A taxpayer's property with a $200,000 mortgage is exchanged for like-kind property subject to a $150,000 mortgage, which the taxpayer assumes. No cash changes hands. What is the boot received?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "Liabilities assumed offset liabilities relieved.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Net relief of $50,000 is boot.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$150,000",
+        "explanation": "That's the liability assumed.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Correct. Net liability relief."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Liabilities relieved (200,000) − liabilities assumed (150,000) = 50,000 net boot received.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-03",
+    "pool": "practice",
+    "stem": "In a deferred like-kind exchange, within how many days must replacement property be identified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "45",
+        "explanation": "Correct. Identify within 45 days; receive within 180 days (or the return due date, if earlier)."
+      },
+      {
+        "id": "b",
+        "text": "30",
+        "explanation": "The period is 45 days.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "90",
+        "explanation": "The identification period is shorter.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "180",
+        "explanation": "That's the period to receive the property.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Identify within 45 days; receive within 180 days (or the return due date, if earlier).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-nt-04",
+    "pool": "practice",
+    "stem": "A building (basis $250,000) is destroyed by fire; insurance pays $500,000. The owner buys a replacement for $450,000 within the period. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$250,000",
+        "explanation": "Reinvestment defers most of the gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "That's the deferred gain.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Correct. The unreinvested proceeds."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Not all proceeds were reinvested.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Realized 250,000; recognized = lesser of 250,000 or 50,000 unreinvested = **50,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-05",
+    "pool": "practice",
+    "stem": "In the previous question, what is the basis of the replacement building?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$450,000",
+        "explanation": "Deferred gain reduces basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "That's the insurance proceeds.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$300,000",
+        "explanation": "Miscomputes the deferred gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$250,000",
+        "explanation": "Correct. $450,000 − $200,000 deferred."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Basis = cost 450,000 − deferred gain 200,000 = **250,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-06",
+    "pool": "practice",
+    "stem": "A married couple filing jointly sells their home of 10 years at a $700,000 gain. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$450,000",
+        "explanation": "Uses the single-filer exclusion.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "Correct. $700,000 − $500,000."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The exclusion is capped.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$700,000",
+        "explanation": "The exclusion applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "MFJ exclusion up to $500,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-07",
+    "pool": "practice",
+    "stem": "Land (basis $80,000) is sold for $200,000: $40,000 down and the rest over 4 years. Using the installment method, what gain is recognized in the year of sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "That's the total gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$24,000",
+        "explanation": "Correct. $40,000 × 60% gross profit percentage."
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "That's the payment, not the gain.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$16,000",
+        "explanation": "Uses the basis ratio instead.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gross profit % = 120,000 ÷ 200,000 = 60%; 40,000 × 60% = **24,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-08",
+    "pool": "practice",
+    "stem": "Brothers exchange like-kind investment real property. Eighteen months later, one brother sells the property he received. What happens?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing — the exchange was already completed",
+        "explanation": "The 2-year related-party rule applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The gain deferred in the original exchange is recognized",
+        "explanation": "Correct. §1031(f): a disposition within 2 years by either related party triggers the deferred gain."
+      },
+      {
+        "id": "c",
+        "text": "Only the selling brother's future gain is affected",
+        "explanation": "Both parties' deferral is triggered.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "The exchange is treated as a gift",
+        "explanation": "The exchange isn't recharacterized as a gift.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1031(f): a disposition within 2 years by either related party triggers the deferred gain.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-nt-09",
+    "pool": "practice",
+    "stem": "A single taxpayer owned and used a home for 18 months and then sold it because of a job transfer (a qualifying unforeseen circumstance). Gain is $240,000. What is the maximum exclusion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$250,000",
+        "explanation": "A full exclusion needs 24 months.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$187,500",
+        "explanation": "Correct. 18/24 × $250,000."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "A partial exclusion is available.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$180,000",
+        "explanation": "Prorates the gain instead of the cap.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Partial exclusion = (months qualified ÷ 24) × $250,000 = 187,500; recognized gain = 52,500.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-10",
+    "pool": "practice",
+    "stem": "In a like-kind exchange, a taxpayer realizes a $40,000 loss and receives $10,000 cash. What loss is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Losses aren't recognized in like-kind exchanges.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "Boot doesn't trigger loss recognition.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Correct. §1031 applies mandatorily; realized losses are deferred (built into basis)."
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "No partial loss recognition.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§1031 applies mandatorily; realized losses are deferred (built into basis).",
+    "skill": "application",
+    "difficulty": 2
+  }
+]

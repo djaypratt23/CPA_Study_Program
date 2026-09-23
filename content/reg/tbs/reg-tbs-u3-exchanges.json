@@ -1,0 +1,98 @@
+{
+  "id": "reg-tbs-u3-exchanges",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-nontaxable-exchanges"
+  ],
+  "pool": "practice",
+  "title": "Deferral transactions — the Brennan family",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "The Brennans (married filing jointly) completed the 2025 transactions below. Compute realized and recognized gain and basis.",
+  "exhibits": [
+    {
+      "title": "Transactions",
+      "content": "1. **Like-kind exchange:** They exchanged an office building held for investment (adjusted basis $400,000; FMV $900,000; subject to a $200,000 mortgage assumed by the other party) for a warehouse (FMV $800,000; subject to a $150,000 mortgage they assumed) plus $50,000 cash.\n2. **Condemnation:** The city condemned a retail store they rented out (basis $350,000) and paid $600,000. Within the replacement period they bought a similar rental building for $520,000.\n3. **Home sale:** They sold their principal residence of 9 years at a gain of $540,000.\n4. **Installment sale:** They sold investment land (basis $90,000) for $300,000, receiving $60,000 in 2025 and a note for the rest (with adequate interest)."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "x",
+      "prompt": "Like-kind exchange.",
+      "rows": [
+        {
+          "id": "ar",
+          "label": "Amount realized",
+          "answer": 900000,
+          "tolerance": 0,
+          "explanation": "800,000 warehouse + 50,000 cash + 200,000 mortgage relieved − 150,000 mortgage assumed = **900,000**."
+        },
+        {
+          "id": "rg",
+          "label": "Realized gain",
+          "answer": 500000,
+          "tolerance": 0,
+          "explanation": "900,000 − 400,000 = **500,000**."
+        },
+        {
+          "id": "boot",
+          "label": "Boot received",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "50,000 cash + 50,000 net liability relief = **100,000**."
+        },
+        {
+          "id": "rec",
+          "label": "Recognized gain",
+          "answer": 100000,
+          "tolerance": 0,
+          "explanation": "Lesser of 500,000 or 100,000 = **100,000**."
+        },
+        {
+          "id": "bas",
+          "label": "Basis of the warehouse",
+          "answer": 400000,
+          "tolerance": 0,
+          "explanation": "800,000 − 400,000 deferred = **400,000**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "o",
+      "prompt": "Other transactions.",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Condemnation — recognized gain",
+          "answer": 80000,
+          "tolerance": 0,
+          "explanation": "Realized 250,000; recognized = unreinvested proceeds 600,000 − 520,000 = **80,000**."
+        },
+        {
+          "id": "c2",
+          "label": "Condemnation — basis of the replacement",
+          "answer": 350000,
+          "tolerance": 0,
+          "explanation": "520,000 − 170,000 deferred = **350,000**."
+        },
+        {
+          "id": "h",
+          "label": "Home sale — recognized gain",
+          "answer": 40000,
+          "tolerance": 0,
+          "explanation": "540,000 − 500,000 exclusion = **40,000**."
+        },
+        {
+          "id": "i",
+          "label": "Installment sale — 2025 recognized gain",
+          "answer": 42000,
+          "tolerance": 0,
+          "explanation": "Gross profit % = 210,000 ÷ 300,000 = 70%; 60,000 × 70% = **42,000**."
+        }
+      ]
+    }
+  ]
+}

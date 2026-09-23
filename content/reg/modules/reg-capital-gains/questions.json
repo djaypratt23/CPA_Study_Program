@@ -1,0 +1,451 @@
+[
+  {
+    "id": "reg-cg-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: an individual has a $10,000 net capital loss and no other capital transactions. How much can be deducted against ordinary income this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000",
+        "explanation": "Correct. Individuals deduct up to $3,000 of net capital loss per year; the rest carries forward."
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "The deduction is limited.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Up to $3,000 is deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "The annual limit is $3,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Individuals deduct up to $3,000 of net capital loss per year; the rest carries forward.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-chk1",
+    "pool": "lesson",
+    "stem": "A C corporation has a $20,000 net capital loss and $500,000 of ordinary income. How much capital loss may it deduct this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000",
+        "explanation": "The $3,000 allowance is for individuals.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Corporations can't deduct capital losses against ordinary income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0 — it carries back 3 years and forward 5 years",
+        "explanation": "Correct. Corporate capital losses offset only capital gains; excess is carried back 3 and forward 5 years as short-term losses."
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "There's no partial deduction.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Corporate capital losses offset only capital gains; excess is carried back 3 and forward 5 years as short-term losses.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-chk2",
+    "pool": "lesson",
+    "stem": "Equipment used in a business (cost $50,000; accumulated depreciation $30,000) is sold for $35,000. What is the character of the gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000 ordinary income (§1245)",
+        "explanation": "Correct. Gain of $15,000 is less than the $30,000 of depreciation."
+      },
+      {
+        "id": "b",
+        "text": "$15,000 §1231 gain",
+        "explanation": "Recapture comes first.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$15,000 long-term capital gain",
+        "explanation": "Equipment isn't a capital asset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 ordinary income",
+        "explanation": "Recapture is limited to the gain.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gain = 35,000 − 20,000 = 15,000, all recaptured as ordinary because depreciation (30,000) exceeds it.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-01",
+    "pool": "practice",
+    "stem": "Which asset is a capital asset in the hands of the taxpayer?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Inventory held by a retailer",
+        "explanation": "Inventory is excluded.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Equipment used in a business",
+        "explanation": "§1231 property, not a capital asset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Stock held as an investment by an individual",
+        "explanation": "Correct. §1221 excludes inventory, receivables, depreciable business property, and business real property."
+      },
+      {
+        "id": "d",
+        "text": "Accounts receivable from sales",
+        "explanation": "Receivables from business sales are excluded.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§1221 excludes inventory, receivables, depreciable business property, and business real property.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-02",
+    "pool": "practice",
+    "stem": "An individual has a short-term gain of $6,000 and a long-term loss of $10,000. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4,000 net long-term capital loss, fully deductible this year",
+        "explanation": "Only $3,000 of the $4,000 net loss is deductible this year.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$4,000 short-term loss",
+        "explanation": "The net loss is long-term.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$6,000 short-term gain taxed and $10,000 loss carried forward",
+        "explanation": "Gains and losses are netted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$4,000 net long-term loss; $3,000 deductible; $1,000 carried forward",
+        "explanation": "Correct. Net: 6,000 − 10,000 = (4,000) long-term."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Net: 6,000 − 10,000 = (4,000) long-term. Deduct 3,000; carry forward 1,000 long-term.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-03",
+    "pool": "practice",
+    "stem": "What is the maximum rate on long-term gain from selling collectibles such as art or coins?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "15%",
+        "explanation": "Collectibles have a higher cap.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "20%",
+        "explanation": "Collectibles have a higher cap.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "25%",
+        "explanation": "That's the unrecaptured §1250 rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "28%",
+        "explanation": "Correct. Collectibles gain is taxed at a maximum of 28%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Collectibles gain is taxed at a maximum of 28%.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-04",
+    "pool": "practice",
+    "stem": "An individual sells a rental building for a $200,000 gain; straight-line depreciation taken was $80,000. How much is unrecaptured §1250 gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Correct. Unrecaptured §1250 gain = lesser of the gain or straight-line depreciation = 80,000, taxed at a maximum of 25%."
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "Only gain up to depreciation taken.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$16,000",
+        "explanation": "That's the corporate §291 computation (20%).",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Unrecaptured §1250 gain exists.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Unrecaptured §1250 gain = lesser of the gain or straight-line depreciation = 80,000, taxed at a maximum of 25%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-05",
+    "pool": "practice",
+    "stem": "A C corporation sells a building for a $300,000 gain; straight-line depreciation was $100,000. How much is ordinary income under §291?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "§291 recaptures 20%.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "20% of the gain, not of the lesser amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "Correct. 20% × lesser of $300,000 or $100,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "§291 applies to corporations.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§291: 20% × min(gain, SL depreciation) = 20% × 100,000 = **$20,000**.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-06",
+    "pool": "practice",
+    "stem": "This year, a taxpayer has a net §1231 gain of $50,000. Two years ago she had a net §1231 loss of $15,000 (none recaptured yet). How is this year's gain characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000 long-term capital gain",
+        "explanation": "The lookback recaptures prior losses as ordinary.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$35,000 long-term capital gain only",
+        "explanation": "The full gain is taxable.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$50,000 ordinary income",
+        "explanation": "Only the lookback amount is ordinary.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$15,000 ordinary income and $35,000 long-term capital gain",
+        "explanation": "Correct. 5-year lookback: net §1231 gain is ordinary to the extent of nonrecaptured §1231 losses of the prior 5 years."
+      }
+    ],
+    "answer": "d",
+    "explanation": "5-year lookback: net §1231 gain is ordinary to the extent of nonrecaptured §1231 losses of the prior 5 years.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-07",
+    "pool": "practice",
+    "stem": "A net §1231 loss for the year is treated as:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A capital loss subject to the $3,000 limit",
+        "explanation": "§1231 losses are ordinary.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "An ordinary loss",
+        "explanation": "Correct. Net §1231 losses are ordinary — fully deductible."
+      },
+      {
+        "id": "c",
+        "text": "Nondeductible",
+        "explanation": "It's deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A long-term capital loss carried forward",
+        "explanation": "Net §1231 losses are ordinary, not capital.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Net §1231 losses are ordinary — fully deductible.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-08",
+    "pool": "practice",
+    "stem": "A married couple filing jointly sells §1244 stock at a $130,000 loss. How much is an ordinary loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$130,000",
+        "explanation": "The ordinary loss is capped.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$100,000; the remaining $30,000 is a capital loss",
+        "explanation": "Correct. §1244 allows ordinary loss up to $50,000 ($100,000 MFJ); the excess is capital loss."
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "That's the cap for single filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$3,000",
+        "explanation": "That's the net capital loss limit.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1244 allows ordinary loss up to $50,000 ($100,000 MFJ); the excess is capital loss.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-09",
+    "pool": "practice",
+    "stem": "Stock purchased on March 10, Year 1 is sold on March 10, Year 2. What is the holding period?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Long-term",
+        "explanation": "Must be held more than one year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Short-term — the holding period must exceed one year",
+        "explanation": "Correct. Long-term requires holding more than one year; the day of acquisition is excluded, and the sale day is included — March 10 to March 10 is exactly one year."
+      },
+      {
+        "id": "c",
+        "text": "It depends on the gain amount",
+        "explanation": "Holding period is time-based.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Long-term if it's a gain",
+        "explanation": "Gain or loss doesn't change the holding period.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Long-term requires holding more than one year; the day of acquisition is excluded, and the sale day is included — March 10 to March 10 is exactly one year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-10",
+    "pool": "practice",
+    "stem": "Equipment (cost $80,000; accumulated depreciation $50,000) is sold for $95,000. What is the character of the $65,000 gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$65,000 ordinary",
+        "explanation": "Recapture is limited to depreciation.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$50,000 ordinary (§1245) and $15,000 §1231",
+        "explanation": "Correct. Gain = 95,000 − 30,000 = 65,000."
+      },
+      {
+        "id": "c",
+        "text": "$65,000 §1231",
+        "explanation": "Recapture comes first.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 ordinary and $35,000 §1231",
+        "explanation": "Uses the wrong recapture amount.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gain = 95,000 − 30,000 = 65,000. §1245 ordinary = 50,000 (depreciation); remaining 15,000 (above original cost) is §1231.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  }
+]

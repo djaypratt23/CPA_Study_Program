@@ -1,0 +1,108 @@
+{
+  "id": "reg-tbs-u3-property-sales",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-capital-gains",
+    "reg-property-basis"
+  ],
+  "pool": "practice",
+  "title": "Character of gains — Alvarez Machine Shop",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Luis Alvarez operates a machine shop as a sole proprietorship. In 2025 he sold the assets below (all business assets held more than one year unless stated). He had no §1231 losses in prior years. Enter losses as negative numbers.",
+  "exhibits": [
+    {
+      "title": "2025 sales",
+      "content": "| Asset | Cost | Accumulated depreciation | Sale price |\n|---|---:|---:|---:|\n| Lathe | 90,000 | 50,000 | 70,000 |\n| Drill press | 40,000 | 25,000 | 10,000 |\n| Shop building (straight-line) | 300,000 | 60,000 | 330,000 |\n| Land under a former parking lot | 100,000 | — | 120,000 |\n\nPersonal investments: stock held 3 years sold at a $12,000 gain; stock held 6 months sold at a $7,000 loss."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "lathe",
+          "label": "Ordinary income (§1245) on the lathe",
+          "answer": 30000,
+          "tolerance": 0,
+          "explanation": "Gain = 70,000 − 40,000 = 30,000, all recaptured (depreciation 50,000 exceeds the gain)."
+        },
+        {
+          "id": "drill",
+          "label": "Gain (loss) on the drill press",
+          "answer": -5000,
+          "tolerance": 0,
+          "explanation": "10,000 − 15,000 = **(5,000)**, a §1231 loss."
+        },
+        {
+          "id": "bldg",
+          "label": "Total gain on the building",
+          "answer": 90000,
+          "tolerance": 0,
+          "explanation": "330,000 − 240,000 = **90,000** (all §1231; no ordinary recapture for an individual using straight-line)."
+        },
+        {
+          "id": "u1250",
+          "label": "Unrecaptured §1250 gain on the building",
+          "answer": 60000,
+          "tolerance": 0,
+          "explanation": "Lesser of the 90,000 gain or 60,000 depreciation = **60,000** (taxed at up to 25%)."
+        },
+        {
+          "id": "n1231",
+          "label": "Net §1231 gain",
+          "answer": 105000,
+          "tolerance": 0,
+          "explanation": "90,000 + 20,000 (land) − 5,000 (drill press) = **105,000**, treated as long-term capital gain."
+        },
+        {
+          "id": "ncg",
+          "label": "Net capital gain for the year",
+          "answer": 110000,
+          "tolerance": 0,
+          "explanation": "105,000 + 12,000 − 7,000 = **110,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "c",
+      "prompt": "Classify each item.",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Loss on the drill press",
+          "answer": "§1231",
+          "explanation": "A loss on business property held more than one year; it nets with other §1231 items."
+        },
+        {
+          "id": "c2",
+          "label": "Recapture on the lathe",
+          "answer": "Ordinary",
+          "explanation": "§1245 recapture."
+        },
+        {
+          "id": "c3",
+          "label": "Loss on stock held 6 months",
+          "answer": "Short-term capital",
+          "explanation": "Held one year or less."
+        },
+        {
+          "id": "c4",
+          "label": "Gain on stock held 3 years",
+          "answer": "Long-term capital",
+          "explanation": "Held more than one year."
+        }
+      ],
+      "options": [
+        "Ordinary",
+        "§1231",
+        "Short-term capital",
+        "Long-term capital"
+      ]
+    }
+  ]
+}
