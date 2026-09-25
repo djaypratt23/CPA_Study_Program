@@ -68,6 +68,34 @@ describe('parseAmount', () => {
     expect(parseAmount('')).toBeNull()
     expect(parseAmount('abc')).toBeNull()
   })
+  it('accepts a trailing %, the Unicode minus, and $(…) negatives', () => {
+    expect(parseAmount('25%')).toBe(25)
+    expect(parseAmount('23.75 %')).toBe(23.75)
+    expect(parseAmount('\u2212250')).toBe(-250)
+    expect(parseAmount('$(1,000)')).toBe(-1000)
+    expect(parseAmount('($1,000)')).toBe(-1000)
+    expect(parseAmount('-$1,000')).toBe(-1000)
+    expect(parseAmount('%')).toBeNull()
+    expect(parseAmount('25%%')).toBeNull()
+  })
+})
+
+describe('percent rows', () => {
+  const pctTbs = Tbs.parse({
+    ...tbs,
+    parts: [{ kind: 'numeric', id: 'p', prompt: 'Rates', rows: [{ id: 'gm', label: 'Gross margin', answer: 25, tolerance: 0.1, unit: '%', explanation: 'because' }] }],
+  })
+  const score = (v: string) => scoreTbs(pctTbs, { p: { kind: 'numeric', values: { gm: v } } }).percent
+  it('scores "25%" and "25" as correct', () => {
+    expect(score('25%')).toBe(1)
+    expect(score('25')).toBe(1)
+  })
+  it('does not accept a decimal fraction for a percent key', () => {
+    expect(score('0.25')).toBe(0)
+  })
+  it('shows the unit in the expected answer', () => {
+    expect(scoreTbs(pctTbs, {}).cells[0].expected).toBe('25%')
+  })
 })
 
 describe('scoreTbs', () => {
@@ -121,6 +149,44 @@ describe('journal entry scoring', () => {
       { account: 'Revenue', debit: 500 },
     ])
     expect(cells.filter((c) => c.correct)).toHaveLength(0)
+  })
+  it('penalizes hedging by listing every account on both sides', () => {
+    const cells = scoreJournal(part, [
+      { account: 'Cash', debit: 500 },
+      { account: 'Cash', credit: 500 },
+      { account: 'Revenue', debit: 500 },
+      { account: 'Revenue', credit: 500 },
+    ])
+    const earned = cells.filter((c) => c.correct).length
+    expect(earned).toBe(2)
+    expect(earned / cells.length).toBeLessThan(1)
+    expect(cells).toHaveLength(4)
+  })
+  it('penalizes a duplicated correct line', () => {
+    const cells = scoreJournal(part, [
+      { account: 'Cash', debit: 500 },
+      { account: 'Cash', debit: 500 },
+      { account: 'Revenue', credit: 500 },
+    ])
+    expect(cells.filter((c) => c.correct)).toHaveLength(2)
+    expect(cells).toHaveLength(3)
+  })
+  it('charges a wrong-amount line only once (through its expected cell)', () => {
+    const cells = scoreJournal(part, [
+      { account: 'Cash', debit: 450 },
+      { account: 'Revenue', credit: 500 },
+    ])
+    expect(cells).toHaveLength(2)
+    expect(cells.find((c) => c.label === 'Dr Cash')).toMatchObject({ correct: false, given: 'Dr 450' })
+  })
+  it('penalizes a second attempt at a line that is already wrong', () => {
+    const cells = scoreJournal(part, [
+      { account: 'Cash', debit: 450 },
+      { account: 'Cash', debit: 400 },
+      { account: 'Revenue', credit: 500 },
+    ])
+    expect(cells).toHaveLength(3)
+    expect(cells.filter((c) => c.correct)).toHaveLength(1)
   })
   it('ignores blank lines', () => {
     const cells = scoreJournal(part, [{ account: '' }, { account: 'Cash', debit: 500 }, { account: 'Revenue', credit: 500 }, { account: '' }])
