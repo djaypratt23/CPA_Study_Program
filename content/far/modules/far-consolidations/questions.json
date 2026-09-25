@@ -112,8 +112,9 @@
       },
       {
         "id": "b",
-        "text": "Consolidate Sub",
-        "explanation": "Correct. Ownership over 50% generally gives a controlling financial interest."
+        "text": "Consolidate only 60% of Sub's assets and liabilities",
+        "explanation": "Consolidation includes 100% of Sub's assets and liabilities, with NCI for the outside 40%.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
@@ -123,12 +124,11 @@
       },
       {
         "id": "d",
-        "text": "Consolidate only 60% of Sub's assets and liabilities",
-        "explanation": "Consolidation includes 100% of Sub's assets and liabilities, with NCI for the outside 40%.",
-        "trap": "partial-computation"
+        "text": "Consolidate Sub",
+        "explanation": "Correct. Ownership over 50% generally gives a controlling financial interest."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "More than 50% of voting shares → control → consolidate 100% of the subsidiary, presenting the 40% outside interest as noncontrolling interest.",
     "skill": "remembering"
   },
@@ -213,8 +213,9 @@
       },
       {
         "id": "b",
-        "text": "Both balances are eliminated",
-        "explanation": "Correct. Intercompany receivables and payables are removed entirely."
+        "text": "Only the NCI's share is eliminated",
+        "explanation": "Intercompany balances are eliminated 100%.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -224,12 +225,11 @@
       },
       {
         "id": "d",
-        "text": "Only the NCI's share is eliminated",
-        "explanation": "Intercompany balances are eliminated 100%.",
-        "trap": "wrong-rule"
+        "text": "Both balances are eliminated",
+        "explanation": "Correct. Intercompany receivables and payables are removed entirely."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Intercompany balances are eliminated in full on the consolidation worksheet (Dr Payable to Parent / Cr Receivable from Sub).",
     "skill": "application"
   },
@@ -274,29 +274,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "$50,000",
+        "text": "$50,000, all dividends declared by Parent and Sub",
         "explanation": "Sub's dividends are not dividends of the consolidated parent shareholders.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Only the parent's own dividends to its shareholders; Sub's dividends to Parent are eliminated and the $5,000 paid to outsiders reduces NCI",
-        "explanation": "Correct. Intercompany dividends are eliminated; outside dividends reduce NCI."
+        "text": "$5,000, the dividends Sub paid to outsiders",
+        "explanation": "The $5,000 to outside owners reduces NCI, not parent equity.",
+        "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "$45,000",
+        "text": "$45,000, Parent's plus Sub's dividends to Parent",
         "explanation": "The $45,000 paid to Parent is intercompany and eliminated.",
         "trap": "partial-computation"
       },
       {
         "id": "d",
-        "text": "$5,000",
-        "explanation": "The $5,000 to outside owners reduces NCI, not parent equity.",
-        "trap": "wrong-classification"
+        "text": "Only Parent's own dividends; Sub's are eliminated or cut NCI",
+        "explanation": "Correct. Intercompany dividends are eliminated; outside dividends reduce NCI."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Of Sub's 50,000: 45,000 to Parent is eliminated against Parent's dividend income; 5,000 to outside shareholders reduces the NCI balance. Consolidated retained earnings reflects only Parent's own dividends.",
     "skill": "analysis",
     "calc": true
@@ -415,8 +415,9 @@
       },
       {
         "id": "b",
-        "text": "$10,000",
-        "explanation": "Correct. Cost = 50,000 ÷ 1.25 = 40,000; profit = 10,000."
+        "text": "$50,000",
+        "explanation": "The entire inventory is not profit.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -426,12 +427,11 @@
       },
       {
         "id": "d",
-        "text": "$50,000",
-        "explanation": "The entire inventory is not profit.",
-        "trap": "wrong-rule"
+        "text": "$10,000",
+        "explanation": "Correct. Cost = 50,000 ÷ 1.25 = 40,000; profit = 10,000."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "A 25% markup on cost means transfer price = 125% of cost. Cost = 50,000 ÷ 1.25 = 40,000. Unrealized profit = 50,000 − 40,000 = **10,000** (20% of the transfer price).",
     "skill": "application",
     "calc": true

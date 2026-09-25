@@ -14,7 +14,7 @@ export default function Analytics() {
   const attemptsAll = useLiveQuery(() => db.attempts.toArray(), [])
   const errorsAll = useLiveQuery(() => db.errors.toArray(), [])
   if (!state || !settings || !attemptsAll || !errorsAll) return <p className="muted">Loading…</p>
-  const section = getSection(settings.activeSection)!
+  const section = getSection(settings.activeSection) ?? content.sections[0]
   const attempts = attemptsAll.filter((a) => a.section === section.id)
   const scoring = scoringAttempts(attempts)
   const mcq = scoring.filter((a) => a.itemType === 'mcq')
@@ -41,7 +41,11 @@ export default function Analytics() {
         <Stat label="MCQ accuracy" value={pct(overall.pct)} hint={`${overall.n} answered`} />
         <Stat label="TBS average" value={pct(tbsAvg)} hint={`${tbs.length} submitted`} />
         <Stat label="Avg time / MCQ" value={avgMcq ? `${Math.round(avgMcq)}s` : '—'} hint={`Exam pace ≈ ${mcqCount ? Math.round(((section.exam.durationMinutes * 60) / 2 / mcqCount) * 1) : 90}s`} />
-        <Stat label="Readiness" value={state.readiness.overall !== null ? `${state.readiness.overall}%` : '—'} hint={state.readiness.label} />
+        <Stat
+          label="Readiness (approx. scaled)"
+          value={state.readiness.overall !== null ? `≈ ${state.readiness.overall}` : '—'}
+          hint={state.readiness.band ? `${state.readiness.label} · range ${state.readiness.band[0]}–${state.readiness.band[1]}` : state.readiness.label}
+        />
       </div>
 
       <section className="card" aria-labelledby="recs">

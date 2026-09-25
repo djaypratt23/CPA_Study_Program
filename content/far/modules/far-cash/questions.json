@@ -39,9 +39,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "$81,450",
-        "explanation": "This includes the postdated check and stamps.",
-        "trap": "overgeneralization"
+        "text": "$77,300",
+        "explanation": "Correct. 52,000 + 300 + 25,000."
       },
       {
         "id": "b",
@@ -51,8 +50,9 @@
       },
       {
         "id": "c",
-        "text": "$77,300",
-        "explanation": "Correct. 52,000 + 300 + 25,000."
+        "text": "$81,450",
+        "explanation": "This includes the postdated check and stamps.",
+        "trap": "overgeneralization"
       },
       {
         "id": "d",
@@ -61,7 +61,7 @@
         "trap": "wrong-classification"
       }
     ],
-    "answer": "c",
+    "answer": "a",
     "explanation": "Checking 52,000 + petty cash 300 + 60-day commercial paper 25,000 = **77,300**. Postdated checks are receivables; stamps are prepaid.",
     "skill": "application",
     "calc": true
@@ -112,8 +112,9 @@
       },
       {
         "id": "b",
-        "text": "$160,000",
-        "explanation": "Correct. 120,000 − 10,000 + 50,000."
+        "text": "$110,000",
+        "explanation": "The 90-day CD qualifies as a cash equivalent.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
@@ -123,12 +124,11 @@
       },
       {
         "id": "d",
-        "text": "$110,000",
-        "explanation": "The 90-day CD qualifies as a cash equivalent.",
-        "trap": "partial-computation"
+        "text": "$160,000",
+        "explanation": "Correct. 120,000 − 10,000 + 50,000."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Unrestricted cash = 120,000 − 10,000 restricted = 110,000. Add the 90-day CD (original maturity ≤ 3 months) 50,000 → **160,000**. The 1-year CD is an investment; travel advances are receivables.",
     "skill": "application",
     "calc": true
@@ -214,8 +214,9 @@
       },
       {
         "id": "b",
-        "text": "Cash of $40,000 and a current liability of $15,000",
-        "explanation": "Correct. Overdrafts are current liabilities."
+        "text": "Cash of $55,000",
+        "explanation": "An overdraft reduces, not increases, available cash.",
+        "trap": "wrong-sign"
       },
       {
         "id": "c",
@@ -225,12 +226,11 @@
       },
       {
         "id": "d",
-        "text": "Cash of $55,000",
-        "explanation": "An overdraft reduces, not increases, available cash.",
-        "trap": "wrong-sign"
+        "text": "Cash of $40,000 and a $15,000 liability",
+        "explanation": "Correct. Overdrafts are current liabilities."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Overdrafts are current liabilities. Netting against positive balances is permitted only for accounts at the same bank where a right of offset exists.",
     "skill": "application"
   },
@@ -374,13 +374,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "Current asset — cash",
+        "text": "Current asset, as cash",
         "explanation": "It is restricted for a noncurrent purpose.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Cash equivalent",
+        "text": "Cash equivalent in current assets",
         "explanation": "Restricted for long-term debt retirement.",
         "trap": "wrong-classification"
       },
@@ -392,7 +392,7 @@
       },
       {
         "id": "d",
-        "text": "Noncurrent asset (e.g., long-term investments or restricted cash)",
+        "text": "Noncurrent asset (e.g., restricted cash)",
         "explanation": "Correct. A bond sinking fund is restricted for a noncurrent purpose and reported as a noncurrent asset (though included in restricted cash totals in the statement of cash flows)."
       }
     ],
@@ -413,8 +413,9 @@
       },
       {
         "id": "b",
-        "text": "Deducted from the book balance ($90)",
-        "explanation": "Correct. The books under-recorded the disbursement by $90."
+        "text": "Deducted from the bank balance ($1,760)",
+        "explanation": "The check has cleared; it isn't outstanding.",
+        "trap": "wrong-classification"
       },
       {
         "id": "c",
@@ -424,12 +425,11 @@
       },
       {
         "id": "d",
-        "text": "Deducted from the bank balance ($1,760)",
-        "explanation": "The check has cleared; it isn't outstanding.",
-        "trap": "wrong-classification"
+        "text": "Deducted from the book balance ($90)",
+        "explanation": "Correct. The books under-recorded the disbursement by $90."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Book error: the payment was 1,760 but recorded as 1,670 → books overstate cash by 90. Deduct 90 on the book side and record Dr Accounts payable 90 / Cr Cash 90.",
     "skill": "application",
     "calc": true

@@ -10,7 +10,14 @@ export default function Mermaid({ code, title }: { code: string; title?: string 
     import('mermaid')
       .then(async ({ default: mermaid }) => {
         const dark = document.documentElement.classList.contains('dark')
-        mermaid.initialize({ startOnLoad: false, theme: dark ? 'dark' : 'default', securityLevel: 'strict', fontFamily: 'inherit' })
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: dark ? 'dark' : 'default',
+          securityLevel: 'strict',
+          fontFamily: 'inherit',
+          // The dark theme's default edge labels fail contrast; use an opaque slate background with light text.
+          themeVariables: dark ? { edgeLabelBackground: '#0f172a', textColor: '#e2e8f0', lineColor: '#94a3b8' } : undefined,
+        })
         const out = await mermaid.render(`m${id}`, code)
         if (!cancelled) setSvg(out.svg)
       })

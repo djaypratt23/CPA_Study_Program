@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import ErrorBoundary from './components/ErrorBoundary'
 import Layout from './components/Layout'
+import UpdatePrompt from './components/UpdatePrompt'
 import { useSettings } from './hooks/useStore'
 import Analytics from './pages/Analytics'
 import Course from './pages/Course'
@@ -29,8 +31,7 @@ function ThemeSync() {
     if (!settings) return
     const root = document.documentElement
     const apply = () => {
-      const dark =
-        settings.theme === 'dark' || (settings.theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      const dark = settings.theme === 'dark' || (settings.theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
       root.classList.toggle('dark', dark)
     }
     apply()
@@ -65,35 +66,38 @@ export default function App() {
     <HashRouter>
       <ThemeSync />
       <ScrollToTop />
-      <Gate>
-        <Routes>
-          <Route path="/welcome" element={<Onboarding />} />
-          <Route element={<Layout />}>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/plan" element={<Planner />} />
-            <Route path="/course" element={<Course />} />
-            <Route path="/course/:sectionId" element={<Course />} />
-            <Route path="/module/:moduleId" element={<ModulePage />} />
-            <Route path="/practice" element={<PracticeBuilder />} />
-            <Route path="/practice/start" element={<PracticeStart />} />
-            <Route path="/quiz/:sessionId" element={<QuizPlayer />} />
-            <Route path="/tbs" element={<TbsList />} />
-            <Route path="/tbs/:tbsId" element={<TbsPage />} />
-            <Route path="/review" element={<ReviewQueue />} />
-            <Route path="/flashcards" element={<Flashcards />} />
-            <Route path="/exam" element={<ExamHome />} />
-            <Route path="/exam/:sessionId" element={<ExamPlayer />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/final-review" element={<FinalReview />} />
-            <Route path="/final-review/:docId" element={<FinalReview />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/glossary" element={<Glossary />} />
-            <Route path="/notes" element={<Notes />} />
-            <Route path="/settings" element={<SettingsPage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Route>
-        </Routes>
-      </Gate>
+      <UpdatePrompt />
+      <ErrorBoundary>
+        <Gate>
+          <Routes>
+            <Route path="/welcome" element={<Onboarding />} />
+            <Route element={<Layout />}>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/plan" element={<Planner />} />
+              <Route path="/course" element={<Course />} />
+              <Route path="/course/:sectionId" element={<Course />} />
+              <Route path="/module/:moduleId" element={<ModulePage />} />
+              <Route path="/practice" element={<PracticeBuilder />} />
+              <Route path="/practice/start" element={<PracticeStart />} />
+              <Route path="/quiz/:sessionId" element={<QuizPlayer />} />
+              <Route path="/tbs" element={<TbsList />} />
+              <Route path="/tbs/:tbsId" element={<TbsPage />} />
+              <Route path="/review" element={<ReviewQueue />} />
+              <Route path="/flashcards" element={<Flashcards />} />
+              <Route path="/exam" element={<ExamHome />} />
+              <Route path="/exam/:sessionId" element={<ExamPlayer />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/final-review" element={<FinalReview />} />
+              <Route path="/final-review/:docId" element={<FinalReview />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/glossary" element={<Glossary />} />
+              <Route path="/notes" element={<Notes />} />
+              <Route path="/settings" element={<SettingsPage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Route>
+          </Routes>
+        </Gate>
+      </ErrorBoundary>
     </HashRouter>
   )
 }

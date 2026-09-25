@@ -6,24 +6,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0 — it's a return of capital that reduces basis to $15,000",
+        "text": "$0; it reduces basis to $15,000",
         "explanation": "Correct. Without E&P, distributions reduce basis first."
       },
       {
         "id": "b",
-        "text": "$10,000 dividend",
+        "text": "$10,000 taxed as a dividend",
         "explanation": "There's no E&P.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$10,000 capital gain",
+        "text": "$10,000 taxed as a capital gain",
         "explanation": "Basis exceeds the distribution.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "$5,000",
+        "text": "$5,000 dividend, $5,000 return of capital",
         "explanation": "There's no partial rule here.",
         "trap": "wrong-rule"
       }
@@ -75,19 +75,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "$15,000 loss",
+        "text": "A $15,000 recognized loss",
         "explanation": "Losses aren't recognized on distributions.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "$30,000 gain",
+        "text": "A $30,000 recognized gain",
         "explanation": "FMV isn't gain.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$15,000 gain",
+        "text": "A $15,000 recognized gain",
         "explanation": "The property has a loss, not a gain.",
         "trap": "wrong-sign"
       },
@@ -109,12 +109,12 @@
     "choices": [
       {
         "id": "a",
-        "text": "$20,000 dividend; $18,000 return of capital; $12,000 capital gain",
+        "text": "$20,000 dividend; $18,000 basis; $12,000 gain",
         "explanation": "Correct. Dividend to current E&P; then basis recovery; then capital gain."
       },
       {
         "id": "b",
-        "text": "$50,000 dividend",
+        "text": "$50,000 dividend, all taxable as ordinary income",
         "explanation": "Limited to E&P.",
         "trap": "overgeneralization"
       },
@@ -126,7 +126,7 @@
       },
       {
         "id": "d",
-        "text": "$32,000 capital gain",
+        "text": "$32,000 capital gain; $18,000 return of capital",
         "explanation": "The dividend portion comes first.",
         "trap": "wrong-rule"
       }
@@ -184,7 +184,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The shareholder takes a FMV basis.",
         "trap": "wrong-rule"
       },
@@ -212,24 +212,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "A $400,000 constructive dividend — not deductible by the corporation",
+        "text": "A $400,000 nondeductible constructive dividend",
         "explanation": "Correct. Excess compensation to shareholder-employees is recharacterized as a nondeductible dividend."
       },
       {
         "id": "b",
-        "text": "Fully deductible salary",
+        "text": "Fully deductible salary for the corporation",
         "explanation": "Unreasonable compensation isn't deductible.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "A return of capital",
+        "text": "A return of capital to the shareholder",
         "explanation": "Not the characterization.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "A gift",
+        "text": "A nontaxable gift to the shareholder",
         "explanation": "Not the characterization.",
         "trap": "wrong-classification"
       }
@@ -253,7 +253,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Accumulated E&P remains.",
         "trap": "wrong-rule"
       },
@@ -351,24 +351,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "At ordinary rates",
+        "text": "At ordinary income tax rates",
         "explanation": "Qualified dividends get preferential rates.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "At long-term capital gain rates (0%, 15%, 20%)",
+        "text": "At long-term capital gain rates",
         "explanation": "Correct. Qualified dividends use the capital gain rate structure."
       },
       {
         "id": "c",
-        "text": "Tax-free",
+        "text": "Tax-free, as a return of capital",
         "explanation": "They're taxable.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "At 28%",
+        "text": "At the 28% collectibles rate",
         "explanation": "That's the collectibles rate.",
         "trap": "wrong-classification"
       }
@@ -391,18 +391,18 @@
       },
       {
         "id": "b",
-        "text": "The alternative depreciation system (straight-line over longer lives)",
+        "text": "The alternative depreciation system",
         "explanation": "Correct. §312(k): E&P uses ADS, so accelerated tax depreciation is added back."
       },
       {
         "id": "c",
-        "text": "No depreciation",
+        "text": "No depreciation is allowed for E&P",
         "explanation": "Depreciation reduces E&P.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Bonus depreciation",
+        "text": "Bonus depreciation, then straight-line",
         "explanation": "Bonus depreciation isn't used for E&P.",
         "trap": "wrong-rule"
       }
@@ -419,24 +419,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Decreases by the property's basis only",
+        "text": "It decreases by the property's basis only",
         "explanation": "For appreciated property, E&P is reduced by FMV (after adding the gain).",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Increases by the gain recognized, then decreases by the property's FMV (net of liabilities)",
+        "text": "Up by the gain, then down by FMV net of liabilities",
         "explanation": "Correct. §312: gain increases E&P; the distribution reduces E&P by FMV (net of liabilities)."
       },
       {
         "id": "c",
-        "text": "No effect",
+        "text": "No effect, because the gain is recognized",
         "explanation": "E&P is affected.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Increases by FMV",
+        "text": "It increases by the property's fair market value",
         "explanation": "E&P decreases on a distribution.",
         "trap": "wrong-sign"
       }

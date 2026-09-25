@@ -40,25 +40,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Vouching recorded payables to vendor invoices",
+        "text": "Vouching recorded payables to vendor invoices and receiving reports",
         "explanation": "That tests existence.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "Confirming only large recorded balances",
+        "text": "Confirming only the large recorded vendor balances",
         "explanation": "Recorded balances don't reveal omissions.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Recomputing the payables trial balance",
+        "text": "Recomputing the payables trial balance and its total",
         "explanation": "That tests accuracy of recorded items.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Examining disbursements made after year-end and tracing them to year-end payables when related to prior-year obligations",
+        "text": "Tracing later payments back to year-end payables",
         "explanation": "Correct. The search for unrecorded liabilities starts with post-year-end evidence and traces back."
       }
     ],
@@ -74,7 +74,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "None — management's representation is enough",
+        "text": "None, because management's written representation is enough",
         "explanation": "A lawyer's refusal is a significant limitation.",
         "trap": "wrong-rule"
       },
@@ -86,12 +86,12 @@
       },
       {
         "id": "c",
-        "text": "It is a scope limitation that ordinarily leads to a qualified opinion or disclaimer",
+        "text": "A scope limitation, ordinarily a qualification or disclaimer",
         "explanation": "Correct. AU-C 501: the refusal of a lawyer to respond appropriately is a limitation on scope sufficient to preclude an unmodified opinion."
       },
       {
         "id": "d",
-        "text": "The auditor must contact the court directly",
+        "text": "The auditor must contact the court directly for records",
         "explanation": "Contacting courts isn't the required response.",
         "trap": "wrong-rule"
       }
@@ -148,18 +148,18 @@
       },
       {
         "id": "b",
-        "text": "The court",
+        "text": "The court handling the litigation",
         "explanation": "Courts have no role in the letter.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Management, requesting the lawyer to respond directly to the auditor",
+        "text": "Management, asking the lawyer to reply to the auditor",
         "explanation": "Correct. The client (management) requests its lawyer to communicate directly with the auditor."
       },
       {
         "id": "d",
-        "text": "The audit committee",
+        "text": "The audit committee, through its chair",
         "explanation": "The letter comes from management.",
         "trap": "wrong-rule"
       }
@@ -176,25 +176,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Nothing — covenants are a legal matter",
+        "text": "Nothing, because covenants are a legal matter for the lender",
         "explanation": "Covenant violations affect classification and disclosure.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Whether to confirm the balance again",
+        "text": "Whether to confirm the loan balance again with the lender",
         "explanation": "Confirmation doesn't resolve classification.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Only the interest rate",
+        "text": "Only whether the interest rate has changed",
         "explanation": "Not the main issue.",
         "trap": "partial-computation"
       },
       {
         "id": "d",
-        "text": "Whether the debt must be classified as current and the effect on going concern and disclosures",
+        "text": "Current classification, going concern, and disclosure",
         "explanation": "Correct. Without a waiver, a covenant violation that makes debt callable generally requires current classification, and may raise going concern questions."
       }
     ],
@@ -210,7 +210,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "None — it was invoiced in February",
+        "text": "None, because the invoice was dated and received in February",
         "explanation": "The obligation arose in December.",
         "trap": "wrong-period"
       },
@@ -221,13 +221,13 @@
       },
       {
         "id": "c",
-        "text": "Liabilities are overstated",
+        "text": "Liabilities are overstated at year-end",
         "explanation": "Omission understates liabilities.",
         "trap": "wrong-sign"
       },
       {
         "id": "d",
-        "text": "Only disclosure is required",
+        "text": "Only a disclosure of the obligation is required",
         "explanation": "A recognized liability existed.",
         "trap": "wrong-rule"
       }
@@ -249,19 +249,19 @@
       },
       {
         "id": "b",
-        "text": "Inspecting treasury stock only",
+        "text": "Inspecting the treasury stock certificates",
         "explanation": "That covers only reacquired shares.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "Recomputing EPS",
+        "text": "Recomputing earnings per share for the year",
         "explanation": "That relies on share data rather than confirming it.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Reviewing cash disbursements",
+        "text": "Reviewing cash disbursements for share buybacks during the year",
         "explanation": "Not relevant to shares outstanding.",
         "trap": "irrelevant-fact"
       }
@@ -278,24 +278,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "No — lawyers must comment on all matters",
+        "text": "No; lawyers must comment on every matter regardless of size",
         "explanation": "Materiality limits are acceptable if agreed.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "Yes — a limitation to matters above an agreed materiality threshold is acceptable",
+        "text": "Yes; a limit to matters above an agreed threshold is fine",
         "explanation": "Correct. Limitations for materiality, agreed between the lawyer and auditor, are not scope limitations."
       },
       {
         "id": "c",
-        "text": "Only for issuers",
+        "text": "Only for issuers, under PCAOB standards",
         "explanation": "Applies to all audits.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Only if the lawyer is in-house",
+        "text": "Only if the lawyer is employed in-house",
         "explanation": "In-house status doesn't determine acceptability.",
         "trap": "irrelevant-fact"
       }
@@ -312,24 +312,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Recomputing interest using the principal, rates, and dates from the loan agreements and confirmations",
+        "text": "Recomputing interest from the loan terms and confirmations",
         "explanation": "Correct. An independent recomputation (or analytics) from contractual terms tests whether all interest was accrued."
       },
       {
         "id": "b",
-        "text": "Vouching recorded interest payments",
+        "text": "Vouching recorded interest payments to bank statements",
         "explanation": "That tests recorded items only.",
         "trap": "reversed"
       },
       {
         "id": "c",
-        "text": "Reading the equity section of the minutes",
+        "text": "Reading the equity section of the board minutes",
         "explanation": "Equity minutes don't bear on accrued interest.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "d",
-        "text": "Confirming receivables",
+        "text": "Confirming receivables with major customers",
         "explanation": "Receivables don't bear on accrued interest.",
         "trap": "irrelevant-fact"
       }
@@ -346,24 +346,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "The lawyer must disclose it anyway",
+        "text": "The lawyer must disclose the unlisted claim to the auditor anyway",
         "explanation": "Lawyers comment on unasserted claims only if management lists them.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Nothing specific; however, the lawyer confirms having advised management of its disclosure obligations",
+        "text": "Nothing specific, but it confirms disclosure advice given",
         "explanation": "Correct. The lawyer's letter typically confirms the client understands that the lawyer has advised it about disclosure of unasserted claims when required."
       },
       {
         "id": "c",
-        "text": "The lawyer resigns",
+        "text": "The lawyer resigns from representing the client",
         "explanation": "Resignation is not required or expected.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "The auditor must obtain it from the court",
+        "text": "The auditor must obtain details from the court",
         "explanation": "Unasserted claims aren't in court records.",
         "trap": "wrong-rule"
       }
@@ -385,19 +385,19 @@
       },
       {
         "id": "b",
-        "text": "Confirming receivables",
+        "text": "Confirming receivables with customers",
         "explanation": "Receivables don't evidence dividend authorization.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Recomputing depreciation",
+        "text": "Recomputing depreciation for the year",
         "explanation": "Depreciation doesn't evidence dividend authorization.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "d",
-        "text": "Counting cash",
+        "text": "Counting cash on hand at year-end",
         "explanation": "Unrelated to authorization.",
         "trap": "irrelevant-fact"
       }
@@ -414,24 +414,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "The liability was properly recorded in January",
+        "text": "The liability was properly recorded in January when invoiced",
         "explanation": "The obligation arose when the goods were received.",
         "trap": "wrong-period"
       },
       {
         "id": "b",
-        "text": "Payables and inventory (or expense) are understated at December 31",
+        "text": "Payables and inventory or expense are understated",
         "explanation": "Correct. Purchases cut-off: goods received before year-end create a year-end liability."
       },
       {
         "id": "c",
-        "text": "Revenue is overstated",
+        "text": "Revenue is overstated at December 31",
         "explanation": "Revenue isn't affected by purchases.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "d",
-        "text": "No effect because the amount will be paid in January",
+        "text": "No effect, because the amount will be paid in January",
         "explanation": "Payment timing doesn't determine recognition.",
         "trap": "wrong-rule"
       }

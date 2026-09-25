@@ -78,18 +78,18 @@
       },
       {
         "id": "b",
-        "text": "$60,000 in OCI",
+        "text": "$60,000 loss in OCI",
         "explanation": "The credit portion goes through an allowance to net income.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "$25,000 credit loss in net income (allowance); $35,000 in OCI",
+        "text": "$25,000 credit loss in NI; $35,000 in OCI",
         "explanation": "Correct. Credit loss (25,000) → allowance and net income, limited to 60,000 (amortized cost − fair value)."
       },
       {
         "id": "d",
-        "text": "$25,000 in OCI; $35,000 in net income",
+        "text": "$25,000 in OCI; $35,000 in NI",
         "explanation": "Reversed — the credit portion goes to net income and the rest to OCI.",
         "trap": "reversed"
       }
@@ -281,8 +281,9 @@
       },
       {
         "id": "b",
-        "text": "Held-to-maturity",
-        "explanation": "Correct. HTM is reserved for debt securities the entity has the positive intent and ability to hold to maturity."
+        "text": "Fair value option",
+        "explanation": "The FVO is an election, not an intent test.",
+        "trap": "irrelevant-fact"
       },
       {
         "id": "c",
@@ -292,12 +293,11 @@
       },
       {
         "id": "d",
-        "text": "Fair value option",
-        "explanation": "The FVO is an election, not an intent test.",
-        "trap": "irrelevant-fact"
+        "text": "Held-to-maturity",
+        "explanation": "Correct. HTM is reserved for debt securities the entity has the positive intent and ability to hold to maturity."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "HTM is reserved for debt securities the entity has the positive intent and ability to hold to maturity.",
     "skill": "remembering"
   },
@@ -404,22 +404,22 @@
   {
     "id": "far-dsec-10",
     "pool": "practice",
-    "stem": "A company bought a 3-year $100,000 bond for $105,242 to yield 8% (coupon 10%, annual). Using the effective interest method, what is the Year 1 premium amortization?",
+    "stem": "A company bought a 3-year $100,000 bond for $105,154 to yield 8% (coupon 10%, paid annually). Using the effective interest method, what is the Year 1 premium amortization?",
     "choices": [
       {
         "id": "a",
-        "text": "$1,581",
-        "explanation": "Correct. 10,000 − 105,242 × 8% (8,419)."
+        "text": "$1,588",
+        "explanation": "Correct. 10,000 − 105,154 × 8% (8,412)."
       },
       {
         "id": "b",
-        "text": "$1,747",
-        "explanation": "This uses straight-line amortization (5,242 ÷ 3).",
+        "text": "$1,718",
+        "explanation": "This uses straight-line amortization (5,154 ÷ 3).",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$8,419",
+        "text": "$8,412",
         "explanation": "That is interest income.",
         "trap": "partial-computation"
       },
@@ -431,7 +431,7 @@
       }
     ],
     "answer": "a",
-    "explanation": "Interest income = 105,242 × 8% = 8,419. Cash = 10,000. Premium amortization = 10,000 − 8,419 = **1,581**.",
+    "explanation": "Interest income = 105,154 × 8% = 8,412. Cash = 10,000. Premium amortization = 10,000 − 8,412 = **1,588**. (The price is the present value of the annual cash flows at 8%: 10,000 × 2.5771 + 100,000 × 0.7938 ≈ 105,154.)",
     "skill": "application",
     "calc": true
   }

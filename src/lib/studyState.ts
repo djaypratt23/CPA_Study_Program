@@ -8,7 +8,7 @@ import type { ContentBundle } from '../content/build'
 import type { SectionConfig } from '../content/schema'
 import type { Attempt, ErrorLogEntry, ExamSession, ModuleProgress, QuizSession, Settings, SrsItem, TbsSession } from '../db/types'
 import type { ErrorCause } from '../db/types'
-import { areaReadiness, overallReadiness, rate, scoringAttempts, weakestModules, type ModuleStat, type Readiness, type Recommendation } from './analytics'
+import { areaReadiness, firstAttempts, overallReadiness, rate, scoringAttempts, weakestModules, type ModuleStat, type Readiness, type Recommendation } from './analytics'
 import { dayKey } from './dates'
 import { computeMastery, type MasteryInfo } from './mastery'
 import { generatePlan, type Plan, type PlanTask } from './planner'
@@ -133,7 +133,9 @@ export function computeStudyState(inp: StudyInputs): StudyState {
   })
 
   // Readiness by blueprint area.
-  const scoring = scoringAttempts(inp.attempts.filter((a) => a.section === sectionId && a.itemType === 'mcq'))
+  const first = firstAttempts(inp.attempts.filter((a) => a.section === sectionId))
+  const scoring = first.filter((a) => a.itemType === 'mcq')
+  const tbsFirst = first.filter((a) => a.itemType === 'tbs')
   const modArea = new Map(mods.map((m) => [m.id, m.areaId]))
   const areas = inp.section.areas.map((a) =>
     areaReadiness({
@@ -142,6 +144,8 @@ export function computeStudyState(inp: StudyInputs): StudyState {
       weight: (a.allocation.min + a.allocation.max) / 2,
       modules: modules.filter((m) => m.areaId === a.id).map((m) => ({ id: m.id, lessonDone: m.lessonDone, status: m.mastery.status })),
       attempts: scoring.filter((x) => modArea.get(x.moduleId) === a.id),
+      tbsAttempts: tbsFirst.filter((x) => modArea.get(x.moduleId) === a.id),
+      weighting: inp.section.exam.weighting,
     }),
   )
   const lastMock = inp.examSessions.filter((e) => e.section === sectionId && e.result).sort((a, b) => (b.finishedAt ?? '').localeCompare(a.finishedAt ?? ''))[0]

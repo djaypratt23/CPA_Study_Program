@@ -21,6 +21,7 @@ export default function TbsPage() {
   const [calc, setCalc] = useState(false)
   const loaded = useRef(false)
   const [ready, setReady] = useState(false)
+  const [busy, setBusy] = useState(false)
 
   useEffect(() => {
     if (session === undefined || loaded.current) return
@@ -48,10 +49,19 @@ export default function TbsPage() {
     db.tbsSessions.put({ id: tbs.id, responses: r, startedAt: session?.startedAt ?? new Date().toISOString(), elapsedMs: elapsed })
   }
   const submit = async () => {
-    const s = scoreTbs(tbs, responses)
-    await db.tbsSessions.put({ id: tbs.id, responses, startedAt: session?.startedAt ?? new Date().toISOString(), elapsedMs: elapsed, submittedAt: new Date().toISOString(), score: s.percent })
-    await recordTbsAttempt(tbs, s.percent, elapsed, 'tutor', `tbs-${tbs.id}`)
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+    if (busy) return
+    setBusy(true)
+    try {
+      const s = scoreTbs(tbs, responses)
+      const startedAt = session?.startedAt ?? new Date().toISOString()
+      await db.tbsSessions.put({ id: tbs.id, responses, startedAt, elapsedMs: elapsed, submittedAt: new Date().toISOString(), score: s.percent })
+      // One attempt per run of the simulation; a retry starts a new run (new startedAt).
+      await recordTbsAttempt(tbs, s.percent, elapsed, 'tutor', `tbs-${tbs.id}-${startedAt}`)
+    } finally {
+      setBusy(false)
+    }
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top: document.body.scrollHeight, behavior: reduce ? 'auto' : 'smooth' })
   }
   const retry = async () => {
     await db.tbsSessions.delete(tbs.id)
@@ -80,7 +90,7 @@ export default function TbsPage() {
       <TbsView tbs={tbs} responses={responses} onChange={save} submitted={submitted} split />
       <div className="mt-6 flex flex-wrap gap-2">
         {!submitted ? (
-          <button className="btn-primary" onClick={submit}>
+          <button className="btn-primary" onClick={submit} disabled={busy}>
             Submit & see explanations
           </button>
         ) : (

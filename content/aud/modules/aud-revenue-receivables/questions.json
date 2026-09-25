@@ -6,24 +6,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Tracing shipping documents to sales invoices",
+        "text": "Tracing shipping documents to recorded sales invoices",
         "explanation": "That tests completeness.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "Recomputing the allowance for credit losses",
+        "text": "Recomputing the allowance for credit losses at year-end",
         "explanation": "That tests valuation.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Comparing the dates on sales invoices near year-end with shipping document dates",
+        "text": "Comparing year-end invoice dates with shipping dates",
         "explanation": "Correct. A cut-off test."
       },
       {
         "id": "d",
-        "text": "Confirming cash balances",
+        "text": "Confirming year-end cash balances with the bank",
         "explanation": "Unrelated to sales cut-off.",
         "trap": "irrelevant-fact"
       }
@@ -46,19 +46,19 @@
       },
       {
         "id": "b",
-        "text": "Review the allowance",
+        "text": "Review the adequacy of the allowance account",
         "explanation": "That tests valuation.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Confirm receivable balances",
+        "text": "Confirm receivable balances with customers",
         "explanation": "That tests existence.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Trace a sample of shipping documents to recorded sales invoices",
+        "text": "Trace shipping documents to recorded sales",
         "explanation": "Correct. Completeness: trace from source documents (shipping records) into the accounting records."
       }
     ],
@@ -74,24 +74,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Document how the presumption was overcome and perform other substantive procedures",
+        "text": "Document why confirmation was skipped; do other procedures",
         "explanation": "Correct. AU-C 330: if the auditor doesn't confirm receivables, it documents the basis (immaterial, ineffective, or low RMM with other procedures)."
       },
       {
         "id": "b",
-        "text": "Nothing — confirmation is optional",
+        "text": "Nothing, because confirmation of receivables is optional",
         "explanation": "Confirmation is presumed; the decision must be documented.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Qualify the opinion",
+        "text": "Qualify the opinion for a scope limitation on receivables",
         "explanation": "Not if sufficient evidence is obtained another way.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Send negative confirmations instead",
+        "text": "Send negative confirmation requests to the agencies instead",
         "explanation": "Negative confirmations would also be ineffective here.",
         "trap": "wrong-rule"
       }
@@ -108,24 +108,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "None — the invoice was dated in December",
+        "text": "None, because the invoice was dated and sent in December",
         "explanation": "Revenue is recognized when control transfers, not when invoiced.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Revenue is understated by $500,000",
+        "text": "Revenue and receivables are understated by $500,000",
         "explanation": "It was recorded too early, not omitted.",
         "trap": "wrong-sign"
       },
       {
         "id": "c",
-        "text": "Revenue and receivables are overstated by $500,000 (and inventory is understated by its cost)",
+        "text": "Revenue and receivables are overstated by $500,000",
         "explanation": "Correct. Under FOB shipping point, control transfers at shipment (January 3)."
       },
       {
         "id": "d",
-        "text": "Only a disclosure is needed",
+        "text": "Only a disclosure of the January shipment is needed",
         "explanation": "This is a cut-off error requiring adjustment if material.",
         "trap": "wrong-rule"
       }
@@ -142,25 +142,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Recomputing sales invoice totals",
+        "text": "Recomputing the totals on sales invoices",
         "explanation": "Arithmetic checks don't reveal terms.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Reviewing the aging report",
+        "text": "Reviewing the receivables aging report",
         "explanation": "Aging doesn't reveal contract terms.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Tracing shipping documents to invoices",
+        "text": "Tracing shipping documents to sales invoices",
         "explanation": "That tests completeness.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Confirming the terms of significant sales directly with customers",
+        "text": "Confirming key sales terms with customers",
         "explanation": "Correct. Confirming terms (not just balances) and reading contracts helps identify side agreements that affect revenue recognition."
       }
     ],
@@ -210,24 +210,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Kiting; a bank transfer schedule",
+        "text": "Kiting; detected by a schedule of bank transfers",
         "explanation": "Kiting involves transfers between banks.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Channel stuffing; distributor analytics",
+        "text": "Channel stuffing; detected by distributor sales analytics",
         "explanation": "Channel stuffing inflates sales.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Lapping; comparing deposit slip details with the customer postings, and confirming balances",
+        "text": "Lapping; compare deposit slips to postings, confirm balances",
         "explanation": "Correct. Lapping delays postings."
       },
       {
         "id": "d",
-        "text": "Bill-and-hold; inventory observation",
+        "text": "Bill-and-hold; detected by observing warehouse inventory",
         "explanation": "Bill-and-hold concerns unshipped goods.",
         "trap": "wrong-classification"
       }
@@ -244,25 +244,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Good customer service",
+        "text": "Strong customer service during the holiday season",
         "explanation": "Large post-year-end credits for year-end sales signal a problem.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "An inventory valuation issue only",
+        "text": "An inventory valuation problem at the distributor only",
         "explanation": "The main issue is revenue.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "Understatement of December revenue",
+        "text": "Understatement of December revenue from that distributor",
         "explanation": "The credits reverse revenue.",
         "trap": "wrong-sign"
       },
       {
         "id": "d",
-        "text": "Possible overstatement of December revenue through improper cut-off or channel stuffing",
+        "text": "Possible December revenue overstatement or channel stuffing",
         "explanation": "Correct. Post-year-end returns and credits for year-end sales are a classic sign of improper revenue recognition."
       }
     ],
@@ -278,24 +278,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Examining cash receipts after year-end for year-end balances and evaluating the aging",
+        "text": "Test later cash receipts on year-end balances; evaluate aging",
         "explanation": "Correct. Subsequent collections and aging analysis bear directly on collectibility (net realizable value)."
       },
       {
         "id": "b",
-        "text": "Vouching sales to shipping documents",
+        "text": "Vouching recorded sales to shipping documents",
         "explanation": "That tests occurrence.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Tracing shipping documents to invoices",
+        "text": "Tracing shipping documents to sales invoices",
         "explanation": "That tests completeness.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Reading the board minutes for pledges",
+        "text": "Reading the board minutes for pledged receivables",
         "explanation": "That tests rights and disclosure.",
         "trap": "wrong-classification"
       }
@@ -312,24 +312,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Days sales outstanding falling from 50 to 40",
+        "text": "Days sales outstanding falling from 50 to 40 days",
         "explanation": "Faster collection doesn't suggest fictitious sales.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "Receivables growing much faster than sales, with many new customers lacking credit history",
+        "text": "Receivables outgrowing sales, from new customers with no history",
         "explanation": "Correct. Fictitious sales leave uncollected receivables and often involve unfamiliar customers."
       },
       {
         "id": "c",
-        "text": "Stable gross margins in line with the industry",
+        "text": "Stable gross margins that are in line with the industry",
         "explanation": "Consistent with normal operations.",
         "trap": "reversed"
       },
       {
         "id": "d",
-        "text": "A decrease in sales returns",
+        "text": "A decrease in sales returns and allowances",
         "explanation": "Fewer returns isn't a typical fictitious-sales indicator.",
         "trap": "wrong-rule"
       }
@@ -346,24 +346,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Only whether the invoice was sent",
+        "text": "Only whether the invoice was sent to the customer",
         "explanation": "Invoicing alone doesn't transfer control.",
         "trap": "partial-computation"
       },
       {
         "id": "b",
-        "text": "Whether the bill-and-hold criteria are met, such as a substantive reason, separate identification, readiness for transfer, and no ability to redirect the goods",
+        "text": "Whether all bill-and-hold criteria for revenue are met",
         "explanation": "Correct. ASC 606 bill-and-hold criteria must all be met for revenue before physical delivery; the auditor tests them."
       },
       {
         "id": "c",
-        "text": "Whether the customer paid a deposit",
+        "text": "Whether the customer paid a deposit on the goods",
         "explanation": "A deposit alone isn't sufficient.",
         "trap": "partial-computation"
       },
       {
         "id": "d",
-        "text": "Nothing, if the customer confirms the balance",
+        "text": "Nothing more, if the customer confirms the receivable balance",
         "explanation": "Balance confirmation doesn't establish the criteria.",
         "trap": "wrong-rule"
       }
@@ -380,24 +380,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "No effect",
+        "text": "No effect, because the goods had shipped",
         "explanation": "Control passes on delivery under FOB destination.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Revenue is overstated — the sale belongs to January",
+        "text": "Revenue is overstated; the sale belongs to January",
         "explanation": "Correct. FOB destination: control passes at delivery (January 4), so December revenue is overstated and inventory understated."
       },
       {
         "id": "c",
-        "text": "Revenue is understated",
+        "text": "Revenue is understated for December",
         "explanation": "Recorded early, not omitted.",
         "trap": "wrong-sign"
       },
       {
         "id": "d",
-        "text": "Inventory is overstated",
+        "text": "Inventory is overstated at year-end",
         "explanation": "Inventory was removed early, so it is understated.",
         "trap": "wrong-sign"
       }
@@ -414,24 +414,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Confirming balances",
+        "text": "Confirming receivable balances with customers",
         "explanation": "That tests existence.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Reading loan agreements for pledged receivables and evaluating the related disclosure",
+        "text": "Reading loan agreements for pledged receivables",
         "explanation": "Correct. Pledges, factoring, related-party receivables, and concentrations require appropriate disclosure."
       },
       {
         "id": "c",
-        "text": "Recomputing invoice totals",
+        "text": "Recomputing invoice totals and extensions",
         "explanation": "That tests accuracy.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Tracing shipping documents",
+        "text": "Tracing shipping documents to recorded sales",
         "explanation": "That tests completeness.",
         "trap": "wrong-classification"
       }

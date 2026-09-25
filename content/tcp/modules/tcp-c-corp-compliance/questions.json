@@ -12,14 +12,14 @@
       },
       {
         "id": "b",
-        "text": "Ignored",
-        "explanation": "It is a reconciling item.",
-        "trap": "wrong-rule"
+        "text": "Added back to book income",
+        "explanation": "Correct. Federal income tax isn't deductible, so it is added back."
       },
       {
         "id": "c",
-        "text": "Added back to book income",
-        "explanation": "Correct. Federal income tax isn't deductible, so it is added back."
+        "text": "Ignored",
+        "explanation": "It is a reconciling item.",
+        "trap": "wrong-rule"
       },
       {
         "id": "d",
@@ -28,7 +28,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "Federal income tax isn't deductible, so it is added back.",
     "skill": "remembering",
     "difficulty": 2
@@ -46,9 +46,8 @@
       },
       {
         "id": "b",
-        "text": "Reported on Schedule M-2 only",
-        "explanation": "It's a book-tax difference for M-1.",
-        "trap": "wrong-classification"
+        "text": "Added",
+        "explanation": "Correct. Prepaid rent is income subject to tax not recorded on the books — an M-1 addition."
       },
       {
         "id": "c",
@@ -58,11 +57,12 @@
       },
       {
         "id": "d",
-        "text": "Added",
-        "explanation": "Correct. Prepaid rent is income subject to tax not recorded on the books — an M-1 addition."
+        "text": "Reported on Schedule M-2 only",
+        "explanation": "It's a book-tax difference for M-1.",
+        "trap": "wrong-classification"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "Prepaid rent is income subject to tax not recorded on the books — an M-1 addition.",
     "skill": "application",
     "difficulty": 2
@@ -80,23 +80,23 @@
       },
       {
         "id": "b",
+        "text": "$15,000",
+        "explanation": "Correct. 25% × lesser of 60,000 or 80,000."
+      },
+      {
+        "id": "c",
         "text": "$60,000",
         "explanation": "That's the annual amount.",
         "trap": "partial-computation"
       },
       {
-        "id": "c",
-        "text": "$15,000",
-        "explanation": "Correct. 25% × lesser of 60,000 or 80,000."
-      },
-      {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Estimates are required at $500 of tax.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "A small corporation may base all installments on 100% of prior-year tax.",
     "skill": "application",
     "difficulty": 2,
@@ -143,8 +143,9 @@
     "choices": [
       {
         "id": "a",
-        "text": "$366,000",
-        "explanation": "Correct. 400,000 − 30,000 − 10,000 + 6,000."
+        "text": "$376,000",
+        "explanation": "Omits the municipal interest.",
+        "trap": "partial-computation"
       },
       {
         "id": "b",
@@ -160,12 +161,11 @@
       },
       {
         "id": "d",
-        "text": "$376,000",
-        "explanation": "Omits the municipal interest.",
-        "trap": "partial-computation"
+        "text": "$366,000",
+        "explanation": "Correct. 400,000 − 30,000 − 10,000 + 6,000."
       }
     ],
-    "answer": "a",
+    "answer": "d",
     "explanation": "Subtract excess tax depreciation and municipal interest; add back the fine.",
     "skill": "application",
     "difficulty": 2,
@@ -212,8 +212,9 @@
     "choices": [
       {
         "id": "a",
-        "text": "$600,000",
-        "explanation": "Correct. 500,000 + 180,000 − 60,000 − 20,000."
+        "text": "$680,000",
+        "explanation": "Omits all distributions.",
+        "trap": "partial-computation"
       },
       {
         "id": "b",
@@ -223,9 +224,8 @@
       },
       {
         "id": "c",
-        "text": "$680,000",
-        "explanation": "Omits all distributions.",
-        "trap": "partial-computation"
+        "text": "$600,000",
+        "explanation": "Correct. 500,000 + 180,000 − 60,000 − 20,000."
       },
       {
         "id": "d",
@@ -234,7 +234,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "a",
+    "answer": "c",
     "explanation": "M-2: beginning + net income − distributions (cash, property, stock) ± other.",
     "skill": "application",
     "difficulty": 2,
@@ -253,8 +253,9 @@
       },
       {
         "id": "b",
-        "text": "April 15, 2026",
-        "explanation": "Correct. 15th day of the 4th month after year-end."
+        "text": "October 15, 2026",
+        "explanation": "That's the extended date.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -264,12 +265,11 @@
       },
       {
         "id": "d",
-        "text": "October 15, 2026",
-        "explanation": "That's the extended date.",
-        "trap": "wrong-rule"
+        "text": "April 15, 2026",
+        "explanation": "Correct. 15th day of the 4th month after year-end."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "15th day of the 4th month after year-end.",
     "skill": "remembering",
     "difficulty": 2
@@ -281,8 +281,9 @@
     "choices": [
       {
         "id": "a",
-        "text": "$75,000",
-        "explanation": "Correct. A large corporation can use prior-year tax for the first installment only."
+        "text": "$300,000",
+        "explanation": "That's the full prior-year tax.",
+        "trap": "partial-computation"
       },
       {
         "id": "b",
@@ -292,18 +293,17 @@
       },
       {
         "id": "c",
-        "text": "$300,000",
-        "explanation": "That's the full prior-year tax.",
-        "trap": "partial-computation"
+        "text": "$75,000",
+        "explanation": "Correct. A large corporation can use prior-year tax for the first installment only."
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Estimates are required.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "a",
+    "answer": "c",
     "explanation": "25% × 300,000 = 75,000; the shortfall is recaptured in the second installment.",
     "skill": "application",
     "difficulty": 2,
@@ -322,14 +322,14 @@
       },
       {
         "id": "b",
-        "text": "Personal holding company tax",
-        "explanation": "Correct. 60%+ passive income and more than 50% owned by 5 or fewer individuals → PHC."
-      },
-      {
-        "id": "c",
         "text": "Corporate AMT",
         "explanation": "Applies to corporations with average AFSI over $1 billion.",
         "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Personal holding company tax",
+        "explanation": "Correct. 60%+ passive income and more than 50% owned by 5 or fewer individuals → PHC."
       },
       {
         "id": "d",
@@ -338,7 +338,7 @@
         "trap": "wrong-classification"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "60%+ passive income and more than 50% owned by 5 or fewer individuals → PHC.",
     "skill": "application",
     "difficulty": 2
@@ -356,8 +356,9 @@
       },
       {
         "id": "b",
-        "text": "$250,000",
-        "explanation": "Correct. §535(c)(2): $250,000 minimum credit ($150,000 for personal service corporations)."
+        "text": "None ($0)",
+        "explanation": "A minimum credit applies.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -367,12 +368,11 @@
       },
       {
         "id": "d",
-        "text": "$0",
-        "explanation": "A minimum credit applies.",
-        "trap": "wrong-rule"
+        "text": "$250,000",
+        "explanation": "Correct. §535(c)(2): $250,000 minimum credit ($150,000 for personal service corporations)."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "§535(c)(2): $250,000 minimum credit ($150,000 for personal service corporations).",
     "skill": "remembering",
     "difficulty": 2
@@ -384,8 +384,9 @@
     "choices": [
       {
         "id": "a",
-        "text": "Documenting specific, definite plans for expansion that require the retained funds",
-        "explanation": "Correct. Retention for reasonable business needs — with specific, definite, feasible plans — is protected."
+        "text": "Electing a fiscal year",
+        "explanation": "Irrelevant to the AET.",
+        "trap": "irrelevant-fact"
       },
       {
         "id": "b",
@@ -401,12 +402,11 @@
       },
       {
         "id": "d",
-        "text": "Electing a fiscal year",
-        "explanation": "Irrelevant to the AET.",
-        "trap": "irrelevant-fact"
+        "text": "Documenting specific, definite plans for expansion that require the retained funds",
+        "explanation": "Correct. Retention for reasonable business needs — with specific, definite, feasible plans — is protected."
       }
     ],
-    "answer": "a",
+    "answer": "d",
     "explanation": "Retention for reasonable business needs — with specific, definite, feasible plans — is protected.",
     "skill": "analysis",
     "difficulty": 2
@@ -424,14 +424,14 @@
       },
       {
         "id": "b",
-        "text": "Added back on M-1 and carried forward 5 years as short-term",
-        "explanation": "Correct. §1211(a) and §1212(a): capital losses offset only capital gains; carry back 3, forward 5."
-      },
-      {
-        "id": "c",
         "text": "$3,000 deducted and the rest carried forward",
         "explanation": "That's the individual rule.",
         "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Added back on M-1 and carried forward 5 years as short-term",
+        "explanation": "Correct. §1211(a) and §1212(a): capital losses offset only capital gains; carry back 3, forward 5."
       },
       {
         "id": "d",
@@ -440,7 +440,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "§1211(a) and §1212(a): capital losses offset only capital gains; carry back 3, forward 5.",
     "skill": "application",
     "difficulty": 2

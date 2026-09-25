@@ -66,9 +66,14 @@ export default function Layout() {
 
   return (
     <div className="min-h-dvh md:flex">
-      <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-2">
+      {/* A button, not href="#main": the HashRouter would treat "#main" as a route and navigate Home. */}
+      <button
+        type="button"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-2 focus:text-slate-900"
+        onClick={() => document.getElementById('main')?.focus()}
+      >
         Skip to content
-      </a>
+      </button>
       {/* Desktop sidebar */}
       <aside className="hidden w-60 shrink-0 border-r border-slate-200 bg-white p-4 md:sticky md:top-0 md:block md:h-dvh md:self-start md:overflow-y-auto dark:border-slate-800 dark:bg-slate-900">
         <Link to="/" className="mb-4 flex items-center gap-2 text-lg font-bold">
@@ -102,7 +107,7 @@ export default function Layout() {
             </Link>
           </div>
         </header>
-        <main id="main" className={`mx-auto w-full ${wide ? 'max-w-4xl lg:max-w-7xl' : 'max-w-4xl'} px-4 pt-4 pb-28 md:px-8 md:pt-8 md:pb-12`}>
+        <main id="main" tabIndex={-1} className={`focus:outline-none mx-auto w-full ${wide ? 'max-w-4xl lg:max-w-7xl' : 'max-w-4xl'} px-4 pt-4 pb-28 md:px-8 md:pt-8 md:pb-12`}>
           <Outlet />
         </main>
       </div>

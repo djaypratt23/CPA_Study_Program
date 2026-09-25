@@ -3,6 +3,7 @@ import type { z } from 'zod'
 import type { FadedBlock, JournalBlock, TAccountBlock, TimelineBlock, WorkedBlock } from '../content/schema'
 import { parseAmount, withinTolerance } from '../lib/tbsScoring'
 import Markdown from './Markdown'
+import { amountInputProps } from './ui'
 
 const money = (n: number) => n.toLocaleString('en-US')
 
@@ -72,7 +73,7 @@ export function FadedExample({ data }: { data: z.infer<typeof FadedBlock> }) {
                     <input
                       id={`faded-${data.title}-${i}`}
                       className="input max-w-44"
-                      inputMode="decimal"
+                      {...amountInputProps}
                       placeholder="Your answer"
                       value={values[i] ?? ''}
                       onChange={(e) => {

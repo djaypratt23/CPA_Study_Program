@@ -7,25 +7,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "File the return for the client immediately",
+        "text": "File the missing information return for the client immediately",
         "explanation": "Filing requires the client's authorization.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Nothing, because the CPA didn't prepare it",
+        "text": "Nothing, because the CPA didn't prepare that return",
         "explanation": "The duty applies to known noncompliance regardless.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Report the client to the IRS",
+        "text": "Report the client's noncompliance to the IRS",
         "explanation": "Not required and generally not permitted without consent.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Advise the client promptly of the noncompliance and its consequences",
+        "text": "Advise the client promptly of the noncompliance",
         "explanation": "Correct. §10.21 requires advising the client of noncompliance, errors, or omissions and their consequences."
       }
     ],
@@ -60,7 +60,7 @@
       },
       {
         "id": "d",
-        "text": "A contingent fee for a claim solely for a refund of interest and penalties",
+        "text": "A contingent fee for a refund claim solely for interest and penalties",
         "explanation": "Correct. §10.27 exceptions include claims solely for statutory interest or penalties."
       }
     ],
@@ -77,29 +77,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Consider withdrawing and ensure the error isn't repeated if continuing",
-        "explanation": "Correct. SSTS: inform the client and consider whether to continue; take reasonable steps not to repeat the error."
+        "text": "Amend the prior-year return without the client's consent",
+        "explanation": "The client must authorize it.",
+        "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Repeat the error for consistency",
+        "text": "Repeat the error on the current return for consistency",
         "explanation": "Don't knowingly repeat an error.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Report the error to the IRS without consent",
+        "text": "Report the error to the IRS without the client's consent",
         "explanation": "Not permitted absent a legal requirement.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Amend the prior return without consent",
-        "explanation": "The client must authorize it.",
-        "trap": "wrong-rule"
+        "text": "Consider withdrawing; don't repeat the error if continuing",
+        "explanation": "Correct. SSTS: inform the client and consider whether to continue; take reasonable steps not to repeat the error."
       }
     ],
-    "answer": "a",
+    "answer": "d",
     "explanation": "SSTS: inform the client and consider whether to continue; take reasonable steps not to repeat the error.",
     "skill": "application",
     "difficulty": 2
@@ -254,19 +254,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "The taxpayer must pay the deficiency before filing",
+        "text": "The taxpayer must pay the deficiency before filing a petition",
         "explanation": "The Tax Court doesn't require prepayment.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Jury trials are available",
+        "text": "Jury trials are available on request",
         "explanation": "No juries in the Tax Court.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "The taxpayer may petition within 90 days of the notice of deficiency without paying",
+        "text": "It can be petitioned within 90 days without paying first",
         "explanation": "Correct. The Tax Court is the prepayment forum."
       },
       {
@@ -289,13 +289,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "A private letter ruling",
+        "text": "A private letter ruling to a taxpayer",
         "explanation": "Binding only on the requester.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "A revenue ruling",
+        "text": "A revenue ruling published by the IRS",
         "explanation": "Lower than regulations.",
         "trap": "wrong-rule"
       },
@@ -306,7 +306,7 @@
       },
       {
         "id": "d",
-        "text": "A proposed regulation",
+        "text": "A proposed Treasury regulation",
         "explanation": "Not authoritative.",
         "trap": "wrong-rule"
       }
@@ -324,25 +324,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "The lender recovers because it was foreseeable",
+        "text": "The lender recovers, because it was a foreseeable user",
         "explanation": "That's the foreseeability approach.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "The auditor is strictly liable",
+        "text": "The auditor is strictly liable to the lender",
         "explanation": "No strict liability.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "The lender recovers under §11",
+        "text": "The lender recovers under §11 of the 1933 Act",
         "explanation": "§11 applies to registration statements.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "The lender can't recover for ordinary negligence because it lacked privity or near privity",
+        "text": "No recovery for ordinary negligence without near privity",
         "explanation": "Correct. Ultramares limits negligence liability to parties in privity or near privity."
       }
     ],
@@ -359,24 +359,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Scienter, reliance, and damages, in addition to a material misstatement",
+        "text": "Scienter, reliance, and damages, plus a misstatement",
         "explanation": "Correct. 10b-5 elements: material misstatement or omission, scienter, reliance, causation, and damages."
       },
       {
         "id": "b",
-        "text": "Only a material misstatement",
+        "text": "Only a material misstatement in the statements",
         "explanation": "Scienter, reliance, and damages are also required.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "Privity with the auditor",
+        "text": "Privity of contract with the auditor",
         "explanation": "Privity isn't an element.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Ordinary negligence",
+        "text": "Ordinary negligence by the auditor",
         "explanation": "More than negligence is needed.",
         "trap": "wrong-rule"
       }
@@ -435,13 +435,13 @@
       },
       {
         "id": "b",
-        "text": "Neither",
+        "text": "Neither party",
         "explanation": "The principal is bound.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Both",
+        "text": "Both, jointly",
         "explanation": "Only for partially disclosed principals.",
         "trap": "wrong-classification"
       },
@@ -499,19 +499,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "No contract forms",
+        "text": "No contract forms at all",
         "explanation": "Under the UCC, a contract forms.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "A contract forms including the new term",
+        "text": "A contract forms, including the freight term",
         "explanation": "Material terms don't automatically become part.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "A contract forms, but the material additional term doesn't become part of it without the seller's agreement",
+        "text": "A contract forms without the material new term",
         "explanation": "Correct. UCC 2-207: between merchants, additional terms become part unless material, objected to, or the offer limits acceptance."
       },
       {
@@ -540,7 +540,7 @@
       },
       {
         "id": "b",
-        "text": "A promise to make a gift",
+        "text": "A promise to make a gift to a relative",
         "explanation": "Gratuitous promises lack consideration.",
         "trap": "wrong-rule"
       },
@@ -552,7 +552,7 @@
       },
       {
         "id": "d",
-        "text": "A promise to refrain from filing a lawsuit on a good-faith claim",
+        "text": "A promise not to sue on a good-faith claim",
         "explanation": "Correct. Forbearance from a good-faith legal claim is a bargained-for legal detriment."
       }
     ],
@@ -640,8 +640,7 @@
       {
         "id": "a",
         "text": "The March 1 filer",
-        "explanation": "The first to file or perfect wins; possession on February 15 came first.",
-        "trap": "wrong-rule"
+        "explanation": "Correct. The possessory party's interest couldn't attach, and so couldn't be perfected, until it gave value on March 5. The March 1 filing came first, so the filer wins under the first-to-file-or-perfect rule."
       },
       {
         "id": "b",
@@ -658,11 +657,12 @@
       {
         "id": "d",
         "text": "The party that perfected by possession on February 15",
-        "explanation": "Correct. Priority: first to file or perfect."
+        "explanation": "Possession on Feb 15 can't perfect before attachment; value was given Mar 5.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
-    "explanation": "Priority: first to file or perfect.",
+    "answer": "a",
+    "explanation": "Between perfected interests, priority goes to the first to file or perfect (UCC 9-322(a)(1)). A security interest is perfected only once it has attached (UCC 9-308(a)), and attachment requires that value be given (UCC 9-203(b)). The possessory party gave value on March 5, so its interest attached and was perfected only then, after the March 1 filing.",
     "skill": "application",
     "difficulty": 2
   },
@@ -679,19 +679,19 @@
       },
       {
         "id": "b",
-        "text": "An unsecured personal loan",
+        "text": "An unsecured personal loan from a bank",
         "explanation": "Ordinary unsecured loans are discharged.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Utility bills",
+        "text": "Unpaid utility bills",
         "explanation": "Utility bills are dischargeable.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Unpaid rent",
+        "text": "Unpaid rent on an apartment",
         "explanation": "Rent is dischargeable.",
         "trap": "wrong-rule"
       }
@@ -709,19 +709,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "The surety remains fully liable",
+        "text": "The surety remains fully liable on the loan",
         "explanation": "A prejudicial material modification discharges a compensated surety.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "The debtor is discharged",
+        "text": "The debtor is discharged from the loan",
         "explanation": "The debtor remains liable.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "The surety is discharged (to the extent of prejudice)",
+        "text": "The surety is discharged, to the extent prejudiced",
         "explanation": "Correct. Material modifications without consent discharge sureties (compensated sureties to the extent of prejudice)."
       },
       {
@@ -779,24 +779,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "A defined benefit pension plan",
+        "text": "A defined benefit pension plan for all employees",
         "explanation": "ERISA doesn't require a plan.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Up to 12 weeks of unpaid FMLA leave for eligible employees",
+        "text": "Up to 12 weeks of unpaid FMLA leave",
         "explanation": "Correct. FMLA applies to employers with 50 or more employees."
       },
       {
         "id": "c",
-        "text": "Paid vacation",
+        "text": "Two weeks of paid vacation each year",
         "explanation": "Federal law doesn't require paid vacation.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "A 401(k) match",
+        "text": "A 401(k) matching contribution",
         "explanation": "Matching isn't required.",
         "trap": "wrong-rule"
       }
@@ -814,7 +814,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Shareholders who commingle funds and disregard corporate formalities",
+        "text": "Shareholders who commingle funds and ignore formalities",
         "explanation": "Correct. Veil piercing targets abuse of the corporate form."
       },
       {
@@ -825,7 +825,7 @@
       },
       {
         "id": "c",
-        "text": "Creditors",
+        "text": "Creditors of the corporation",
         "explanation": "Creditors aren't owners.",
         "trap": "wrong-classification"
       },
@@ -920,13 +920,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "$1,000 loss",
+        "text": "$1,000 recognized loss",
         "explanation": "Use FMV for loss; $11,000 exceeds $10,000.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "$1,000 gain",
+        "text": "$1,000 recognized gain",
         "explanation": "Use donor's basis for gain; $11,000 is below $12,000.",
         "trap": "wrong-rule"
       },
@@ -937,7 +937,7 @@
       },
       {
         "id": "d",
-        "text": "$2,000 loss",
+        "text": "$2,000 recognized loss",
         "explanation": "The donor's decline isn't the donee's loss.",
         "trap": "distractor-number"
       }
@@ -955,7 +955,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$9,000",
+        "text": "$9,000, all long-term",
         "explanation": "$3,000 is deductible now.",
         "trap": "partial-computation"
       },
@@ -972,7 +972,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The excess carries forward.",
         "trap": "wrong-rule"
       }
@@ -997,7 +997,7 @@
       },
       {
         "id": "b",
-        "text": "$5,000 ordinary income (§1245)",
+        "text": "$5,000 ordinary (§1245)",
         "explanation": "Correct. Gain = 30,000 − 25,000 = 5,000; all §1245 recapture."
       },
       {
@@ -1008,7 +1008,7 @@
       },
       {
         "id": "d",
-        "text": "$45,000 ordinary income",
+        "text": "$45,000 ordinary (§1245)",
         "explanation": "Recapture is limited to the gain.",
         "trap": "overgeneralization"
       }
@@ -1073,7 +1073,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Boot triggers gain.",
         "trap": "wrong-rule"
       },

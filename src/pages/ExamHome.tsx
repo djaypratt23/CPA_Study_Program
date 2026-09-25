@@ -24,6 +24,7 @@ export default function ExamHome() {
       section: section.id,
       startedAt: new Date().toISOString(),
       remainingMs: section.exam.durationMinutes * 60_000,
+      endsAt: new Date(Date.now() + section.exam.durationMinutes * 60_000).toISOString(),
       testletIndex: 0,
       onBreak: false,
       breakUsed: false,
@@ -42,7 +43,7 @@ export default function ExamHome() {
           <li>
             {section.exam.testlets.length} testlets: {section.exam.testlets.map((t, i) => `#${i + 1} ${t.count} ${t.kind === 'mcq' ? 'MCQs' : 'TBS'}`).join(', ')}.
           </li>
-          <li>{section.exam.durationMinutes / 60}-hour clock. It pauses if you leave and resumes when you come back — but try to sit it in one go.</li>
+          <li>{section.exam.durationMinutes / 60}-hour clock. Like the real exam, it keeps running if you leave; only the scheduled break stops it. Your answers are saved as you go.</li>
           {section.exam.breakAfterTestlet && (
             <li>
               Optional {section.exam.breakMinutes ?? 15}-minute break after testlet {section.exam.breakAfterTestlet} that does not use exam time.

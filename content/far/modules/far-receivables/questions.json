@@ -79,19 +79,19 @@
       },
       {
         "id": "b",
-        "text": "Sale with a recourse liability",
+        "text": "Sale, with a recourse liability",
         "explanation": "Recourse doesn't cure retained control.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "No entry until collection",
+        "text": "No entry until the receivables are collected",
         "explanation": "Cash was received and must be accounted for.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Secured borrowing; keep the receivables and record a liability",
+        "text": "Secured borrowing; keep them and record a liability",
         "explanation": "Correct. Effective control was retained."
       }
     ],
@@ -145,7 +145,7 @@
       },
       {
         "id": "b",
-        "text": "When a loss becomes probable",
+        "text": "When a credit loss becomes probable",
         "explanation": "That was the incurred-loss model CECL replaced.",
         "trap": "outdated-rule"
       },
@@ -207,24 +207,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Dr Cash 2,400 / Cr Credit loss expense 2,400",
+        "text": "Dr Cash / Cr Credit loss expense, $2,400",
         "explanation": "Under the allowance method the recovery restores the allowance; it does not reduce expense directly.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Dr Accounts receivable 2,400 / Cr Allowance 2,400; then Dr Cash 2,400 / Cr Accounts receivable 2,400",
+        "text": "Reinstate the receivable and allowance, then record collection",
         "explanation": "Correct. Reinstate, then collect."
       },
       {
         "id": "c",
-        "text": "Dr Cash 2,400 / Cr Accounts receivable 2,400 only",
+        "text": "Dr Cash / Cr Accounts receivable, $2,400 only",
         "explanation": "The receivable was already removed; it must be reinstated first.",
         "trap": "partial-computation"
       },
       {
         "id": "d",
-        "text": "Dr Cash 2,400 / Cr Retained earnings 2,400",
+        "text": "Dr Cash / Cr Retained earnings, $2,400",
         "explanation": "A recovery is not a prior-period adjustment.",
         "trap": "wrong-classification"
       }
@@ -280,13 +280,13 @@
       },
       {
         "id": "b",
-        "text": "Always, for trade receivables under one year",
+        "text": "Always, for trade receivables due within one year",
         "explanation": "CECL applies to short-term trade receivables too.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "Only when the results do not differ materially from the allowance method",
+        "text": "Only when results don't differ materially from the allowance method",
         "explanation": "Correct. It's a materiality exception only."
       },
       {
@@ -324,7 +324,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The factor's fee is a loss on the sale.",
         "trap": "wrong-rule"
       }
@@ -347,7 +347,7 @@
       },
       {
         "id": "b",
-        "text": "Offset against the loan",
+        "text": "Offset against the related bank loan",
         "explanation": "Collateral is not netted against the debt.",
         "trap": "wrong-rule"
       },
@@ -359,7 +359,7 @@
       },
       {
         "id": "d",
-        "text": "Kept on the balance sheet, with the pledge disclosed",
+        "text": "Kept on the balance sheet; pledge disclosed",
         "explanation": "Correct. Pledged receivables remain the company's assets; the loan is recorded as a liability and the collateral arrangement is disclosed."
       }
     ],
@@ -408,24 +408,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "The transferee may sell the receivables, and the transferor has no repurchase rights",
+        "text": "The transferee may sell them, and the transferor has no repurchase rights",
         "explanation": "These facts support sale accounting.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "The transfer is with recourse for credit losses",
+        "text": "The transfer is made with recourse for credit losses",
         "explanation": "Recourse alone does not prevent sale accounting.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "The transferor has an agreement that both entitles and obligates it to repurchase the receivables before maturity",
+        "text": "The transferor is entitled and obligated to repurchase before maturity",
         "explanation": "Correct. That is effective control retained."
       },
       {
         "id": "d",
-        "text": "The factor charges a fee",
+        "text": "The factor charges a fee for the service",
         "explanation": "Fees are normal in sales of receivables.",
         "trap": "irrelevant-fact"
       }
@@ -441,13 +441,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "Only historical loss experience",
+        "text": "Only the entity's historical loss experience",
         "explanation": "CECL also requires current conditions and forecasts.",
         "trap": "partial-computation"
       },
       {
         "id": "b",
-        "text": "Historical loss experience, current conditions, and reasonable and supportable forecasts",
+        "text": "History, current conditions, and supportable forecasts",
         "explanation": "Correct. ASC 326-20-30: estimate expected credit losses using relevant information about past events, current conditions, and reasonable and supportable forecasts, reverting to history beyond the forecast period."
       },
       {
