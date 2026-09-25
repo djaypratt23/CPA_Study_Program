@@ -1,11 +1,12 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import type { Mcq, SectionId } from '../content/schema'
 import { SKILL_LABELS } from '../content/schema'
 import { db } from '../db'
 import { logError, setItemNote, toggleFlag } from '../db/actions'
 import { ERROR_CAUSES, ERROR_CAUSE_LABELS, type ErrorCause } from '../db/types'
 import type { Confidence } from '../lib/srs'
+import { useDebouncedSave } from '../hooks/useDebouncedSave'
 import { useHotkeys } from '../hooks/useDesktop'
 import Icon from './Icon'
 import Markdown from './Markdown'
@@ -53,6 +54,8 @@ interface Props {
 export default function McqView({ q, index, total, selected, confidence, revealed, confidenceSubmits, onSelect, onConfidence, showTools = true, hideConfidence = false, section, keyboard = false }: Props) {
   const meta = useLiveQuery(() => db.itemMeta.get(q.id), [q.id])
   const [noteOpen, setNoteOpen] = useState(false)
+  const saveNote = useCallback((v: string) => setItemNote(q.id, v), [q.id])
+  const noteSave = useDebouncedSave(saveNote)
   const correct = selected === q.answer
 
   useHotkeys((e) => {
@@ -105,7 +108,8 @@ export default function McqView({ q, index, total, selected, confidence, reveale
           className="input min-h-20 text-sm"
           placeholder="Your note on this question (saved automatically)"
           defaultValue={meta?.note ?? ''}
-          onBlur={(e) => setItemNote(q.id, e.target.value)}
+          onChange={(e) => noteSave.schedule(e.target.value)}
+          onBlur={noteSave.flush}
           aria-label="Question note"
         />
       )}

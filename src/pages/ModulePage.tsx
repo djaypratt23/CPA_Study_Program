@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import InlineQuestion from '../components/InlineQuestion'
 import LessonMarkdown from '../components/LessonMarkdown'
@@ -8,6 +8,7 @@ import { areaTitle, content, getModule, questionsForModule, unitTitle } from '..
 import { SKILL_LABELS } from '../content/schema'
 import { db } from '../db'
 import { addHighlight, completeLesson, setLastLocation, setModuleNotes, touchModule } from '../db/actions'
+import { useDebouncedSave } from '../hooks/useDebouncedSave'
 import { useStudyState } from '../hooks/useStore'
 import { uid } from '../lib/random'
 
@@ -18,6 +19,9 @@ export default function ModulePage() {
   const meta = getModule(moduleId)
   const { state } = useStudyState()
   const progress = useLiveQuery(() => db.moduleProgress.get(moduleId).then((p) => p ?? null), [moduleId])
+  const noteSection = meta?.section
+  const saveNotes = useCallback((v: string) => noteSection && setModuleNotes(moduleId, noteSection, v), [moduleId, noteSection])
+  const notesSave = useDebouncedSave(saveNotes)
   const highlights = useLiveQuery(() => db.highlights.where('moduleId').equals(moduleId).toArray(), [moduleId]) ?? []
   const sessionId = useMemo(() => uid('lesson-'), [])
   const [selection, setSelection] = useState('')
@@ -226,7 +230,8 @@ export default function ModulePage() {
           className="input min-h-28"
           placeholder="Summarize the big idea in your own words — the best note you can write."
           defaultValue={progress?.notes ?? ''}
-          onBlur={(e) => setModuleNotes(moduleId, meta.section, e.target.value)}
+          onChange={(e) => notesSave.schedule(e.target.value)}
+          onBlur={notesSave.flush}
           aria-label="Module notes"
         />
         {highlights.length > 0 && (

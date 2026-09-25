@@ -1,7 +1,7 @@
 import 'fake-indexeddb/auto'
 import { beforeEach, describe, expect, it } from 'vitest'
 import { Mcq } from '../src/content/schema'
-import { CpaDb, exportBackup, importBackup, resetAll } from '../src/db'
+import { CpaDb, exportBackup, importBackup, parseBackup, resetAll, saveSettings } from '../src/db'
 import { recordMcqAttempt } from '../src/db/actions'
 
 const q = Mcq.parse({
@@ -58,5 +58,64 @@ describe('backup', () => {
   })
   it('rejects files that are not backups', async () => {
     await expect(importBackup({ foo: 1 }, d)).rejects.toThrow(/not a CPA Study Program backup/)
+  })
+})
+
+describe('backup import safety', () => {
+  const seed = async () => {
+    await recordMcqAttempt(q, { ...base, choice: 'b', confidence: 'unsure' }, d)
+    await saveSettings({ onboarded: true, activeSection: 'AUD' }, d)
+  }
+  const snapshot = async () => ({ attempts: await d.attempts.count(), srs: await d.srs.count(), settings: await d.settings.get('settings') })
+  const wrap = (tables: Record<string, unknown[]>, version: unknown = 1) => ({ app: 'cpa-study-program', version, exportedAt: '', tables })
+
+  it('an empty backup changes nothing', async () => {
+    await seed()
+    const before = await snapshot()
+    await importBackup(wrap({}), d)
+    expect(await snapshot()).toEqual(before)
+  })
+
+  it('a partial backup keeps the tables it does not mention', async () => {
+    await seed()
+    await importBackup(wrap({ itemMeta: [{ itemId: 'far-test-q1', flagged: true }] }), d)
+    expect(await d.attempts.count()).toBe(1)
+    expect(await d.srs.count()).toBe(1)
+    expect((await d.settings.get('settings'))?.activeSection).toBe('AUD')
+    expect((await d.itemMeta.get('far-test-q1'))?.flagged).toBe(true)
+  })
+
+  it('"replace everything" clears tables missing from the file', async () => {
+    await seed()
+    await importBackup(wrap({ itemMeta: [{ itemId: 'x' }] }), d, 'replace')
+    expect(await d.attempts.count()).toBe(0)
+    expect(await d.settings.count()).toBe(0)
+    expect(await d.itemMeta.count()).toBe(1)
+  })
+
+  const malformed: Record<string, Record<string, unknown[]>> = {
+    'bad activeSection': { settings: [{ id: 'settings', activeSection: 'XYZ' }] },
+    'examDates null': { settings: [{ id: 'settings', examDates: null }] },
+    'huge fontScale': { settings: [{ id: 'settings', fontScale: 40 }] },
+    'srs row without a card': { srs: [{ key: 'card:zzz', kind: 'card', itemId: 'zzz', moduleId: 'm', section: 'FAR', due: '2000-01-01T00:00:00.000Z' }] },
+    'garbage attempts': { attempts: [{ id: 1, itemId: 42, section: 'FAR', day: null, at: 5 }] },
+    'table that is not a list': { attempts: { a: 1 } as unknown as unknown[] },
+    'javascript: lastLocation': { settings: [{ id: 'settings', lastLocation: { path: 'javascript:alert(1)', label: 'x', at: '' } }] },
+  }
+  for (const [name, tables] of Object.entries(malformed)) {
+    it(`rejects a backup with ${name} and leaves data untouched`, async () => {
+      await seed()
+      const before = await snapshot()
+      await expect(importBackup(wrap(tables), d)).rejects.toThrow(/nothing was imported/)
+      expect(await snapshot()).toEqual(before)
+    })
+  }
+
+  it('rejects an unknown backup version', async () => {
+    await expect(importBackup(wrap({}, 2), d)).rejects.toThrow(/version/)
+  })
+
+  it('parseBackup reports row counts for the confirmation prompt', () => {
+    expect(parseBackup(wrap({ itemMeta: [{ itemId: 'a' }, { itemId: 'b' }], attempts: [] })).counts).toEqual({ itemMeta: 2, attempts: 0 })
   })
 })
