@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { PageHeader } from '../components/ui'
 import { content, contentErrors } from '../content'
 import type { SectionId } from '../content/schema'
-import { exportBackup, importBackup, resetAll, saveSettings } from '../db'
+import { exportBackup, importBackup, parseBackup, resetAll, saveSettings, TABLES } from '../db'
+import { TABLE_LABELS } from '../db/backupSchema'
+import { usePersistence } from '../lib/storage'
 import { useSettingsOrDefault } from '../hooks/useStore'
 import { WEEKDAY_NAMES, dayKey, formatMinutes } from '../lib/dates'
 
@@ -13,23 +15,51 @@ export default function SettingsPage() {
   const fileRef = useRef<HTMLInputElement>(null)
   const [msg, setMsg] = useState('')
 
-  const doExport = async () => {
+  const [replaceAll, setReplaceAll] = useState(false)
+  const persisted = usePersistence()
+
+  const downloadBackup = async (name: string) => {
     const data = await exportBackup()
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
     const a = document.createElement('a')
     a.href = URL.createObjectURL(blob)
-    a.download = `cpa-study-backup-${dayKey()}.json`
+    a.download = name
     a.click()
     URL.revokeObjectURL(a.href)
+  }
+
+  const doExport = async () => {
+    await downloadBackup(`cpa-study-backup-${dayKey()}.json`)
     setMsg('Backup downloaded. Keep it somewhere safe (e.g., cloud drive).')
   }
 
   const doImport = async (file: File) => {
     try {
-      await importBackup(JSON.parse(await file.text()))
-      setMsg('Backup restored.')
+      let data: unknown
+      try {
+        data = JSON.parse(await file.text())
+      } catch {
+        throw new Error('This file is not valid JSON.')
+      }
+      const { counts } = parseBackup(data)
+      const summary = TABLES.filter((t) => counts[t] !== undefined)
+        .map((t) => `  ${TABLE_LABELS[t]}: ${counts[t]}`)
+        .join('\n')
+      const kept = TABLES.filter((t) => counts[t] === undefined).map((t) => TABLE_LABELS[t])
+      const effect = replaceAll
+        ? 'ALL data on this device will be replaced; anything not in the file is erased.'
+        : `These tables will be replaced with the file's rows.${kept.length ? ` Kept as they are: ${kept.join(', ')}.` : ''}`
+      if (!window.confirm(`Restore this backup?\n\n${summary || '  (no rows)'}\n\n${effect}\n\nA backup of your current data downloads first.`)) {
+        setMsg('Import cancelled.')
+        return
+      }
+      await downloadBackup(`cpa-study-before-import-${dayKey()}.json`)
+      await importBackup(data, undefined, replaceAll ? 'replace' : 'merge')
+      setMsg('Backup restored. A copy of your previous data was downloaded first.')
     } catch (e) {
       setMsg(`Import failed: ${(e as Error).message}`)
+    } finally {
+      if (fileRef.current) fileRef.current.value = ''
     }
   }
 
@@ -133,6 +163,13 @@ export default function SettingsPage() {
           Your data
         </h2>
         <p className="text-sm muted">Everything is stored only on this device. Export a backup regularly, and to move to another device, export here and import there.</p>
+        <p className="text-sm" data-testid="storage-persistence">
+          {persisted === undefined
+            ? 'Checking storage protection…'
+            : persisted
+              ? 'Storage is persistent: the browser will not clear your progress to free space.'
+              : 'Storage is not marked persistent, so the browser may clear it under storage pressure. Export backups regularly.'}
+        </p>
         <div className="flex flex-wrap gap-2">
           <button className="btn-primary" onClick={doExport}>
             Export backup (JSON)
@@ -141,6 +178,10 @@ export default function SettingsPage() {
             Import backup
           </button>
           <input ref={fileRef} type="file" accept="application/json,.json" className="hidden" onChange={(e) => e.target.files?.[0] && doImport(e.target.files[0])} />
+          <label className="flex items-center gap-2 text-sm">
+            <input type="checkbox" checked={replaceAll} onChange={(e) => setReplaceAll(e.target.checked)} />
+            Import replaces everything (erase data not in the file)
+          </label>
           <button className="btn-secondary" onClick={() => saveSettings({ walkthroughSeen: false, onboarded: false }).then(() => nav('/welcome'))}>
             Replay walkthrough
           </button>

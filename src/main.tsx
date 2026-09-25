@@ -1,13 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { registerSW } from 'virtual:pwa-register'
 import App from './App'
+import { StorageUnavailable } from './components/ErrorBoundary'
+import { db } from './db'
+import { probeIndexedDb } from './lib/storage'
 import './index.css'
 
-registerSW({ immediate: true })
+const root = createRoot(document.getElementById('root')!)
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+// Private browsing or blocked site data can make IndexedDB unusable; explain that instead of loading forever.
+probeIndexedDb(() => db.open()).then((problem) =>
+  root.render(<StrictMode>{problem ? <StorageUnavailable reason={problem} /> : <App />}</StrictMode>),
 )

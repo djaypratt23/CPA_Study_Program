@@ -14,7 +14,7 @@ export default function Analytics() {
   const attemptsAll = useLiveQuery(() => db.attempts.toArray(), [])
   const errorsAll = useLiveQuery(() => db.errors.toArray(), [])
   if (!state || !settings || !attemptsAll || !errorsAll) return <p className="muted">Loading…</p>
-  const section = getSection(settings.activeSection)!
+  const section = getSection(settings.activeSection) ?? content.sections[0]
   const attempts = attemptsAll.filter((a) => a.section === section.id)
   const scoring = scoringAttempts(attempts)
   const mcq = scoring.filter((a) => a.itemType === 'mcq')

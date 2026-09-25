@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { getSection } from '../content'
+import { content, getSection } from '../content'
 import { useStudyState } from '../hooks/useStore'
 import { daysUntil } from '../lib/analytics'
 import { formatDay, formatMinutes } from '../lib/dates'
@@ -22,7 +22,7 @@ const TASK_ICONS: Record<string, string> = {
 export default function Dashboard() {
   const { state, settings } = useStudyState()
   if (!state || !settings) return <p className="muted">Loading…</p>
-  const section = getSection(settings.activeSection)!
+  const section = getSection(settings.activeSection) ?? content.sections[0]
   const examDate = settings.examDates[section.id]
   const countdown = daysUntil(examDate)
   const today = state.plan.days[0]
