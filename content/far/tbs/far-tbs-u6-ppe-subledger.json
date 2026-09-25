@@ -1,0 +1,100 @@
+{
+  "id": "far-tbs-u6-ppe-subledger",
+  "section": "FAR",
+  "unitId": "far-u6",
+  "moduleIds": [
+    "far-ppe-acquisition",
+    "far-depreciation"
+  ],
+  "pool": "practice",
+  "title": "Reconcile the fixed-asset register to the general ledger — Oakridge Foods",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Oakridge Foods' fixed-asset register does not agree to PP&E in the general ledger at December 31. A staff accountant investigated and prepared the reconciliation below. Review it against the investigation notes. Tick every amount that is wrong and enter the correct amount. Enter decreases as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Investigation notes",
+      "content": "- Fixed-asset register, total cost: **$2,915,400**. General ledger PP&E, cost: **$2,985,000**.\n- A **$26,000** parking-lot resurfacing (a land improvement with a 15-year life), completed December 30, was capitalized in the general ledger but not yet entered in the register.\n- A forklift (cost **$18,500**; accumulated depreciation **$14,200**) was sold in November for **$5,000**. Fixed-assets staff removed it from the register. The cash was credited to a suspense account and no disposal entry was recorded in the general ledger.\n- A **$25,100** payment to patch leaks in the warehouse roof, completed December 31, was capitalized in the general ledger. The patching did not extend the roof's life or add capacity. It is not in the register.\n- No depreciation for the year relates to the resurfacing or the roof patching."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "recon",
+      "prompt": "Review the reconciliation of the fixed-asset register to the general ledger.",
+      "preparedLabel": "Per staff reconciliation",
+      "rows": [
+        {
+          "id": "reg",
+          "label": "Cost per fixed-asset register",
+          "prepared": 2915400,
+          "answer": 2915400,
+          "explanation": "Agrees to the register total. **No error.**"
+        },
+        {
+          "id": "li",
+          "label": "Parking-lot resurfacing (land improvement) not yet added to the register",
+          "prepared": 26000,
+          "answer": 26000,
+          "explanation": "A land improvement is a depreciable capital asset. The general ledger is right; the register must add it. **No error.**"
+        },
+        {
+          "id": "radj",
+          "label": "Adjusted register cost",
+          "prepared": 2941400,
+          "answer": 2941400,
+          "explanation": "2,915,400 + 26,000 = **2,941,400**. **No error.**"
+        },
+        {
+          "id": "gl",
+          "label": "PP&E cost per general ledger",
+          "prepared": 2985000,
+          "answer": 2985000,
+          "explanation": "Agrees to the trial balance. **No error.**"
+        },
+        {
+          "id": "fork",
+          "label": "Forklift sold in November, disposal not recorded in the general ledger",
+          "prepared": 18500,
+          "answer": -18500,
+          "explanation": "The forklift is gone from the register but still in the general ledger, so the ledger is **overstated**. The adjustment is **−18,500**."
+        },
+        {
+          "id": "roof",
+          "label": "Roof patching capitalized in the general ledger",
+          "prepared": 0,
+          "answer": -25100,
+          "explanation": "Patching leaks restores the roof to its normal condition without extending its life — ordinary repairs and maintenance are **expensed**. The ledger must remove it: **−25,100**."
+        },
+        {
+          "id": "gadj",
+          "label": "Adjusted general ledger cost",
+          "prepared": 3003500,
+          "answer": 2941400,
+          "explanation": "2,985,000 − 18,500 − 25,100 = **2,941,400**, which agrees to the adjusted register."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "pl",
+      "prompt": "Determine the effect of the general ledger corrections on pretax income.",
+      "rows": [
+        {
+          "id": "gain",
+          "label": "Gain (loss) on the forklift sale",
+          "answer": 700,
+          "tolerance": 0,
+          "explanation": "Proceeds 5,000 − carrying amount (18,500 − 14,200 = 4,300) = **700 gain**."
+        },
+        {
+          "id": "tot",
+          "label": "Net increase (decrease) in pretax income from all corrections",
+          "answer": -24400,
+          "tolerance": 0,
+          "explanation": "Repairs expense −25,100 + gain 700 = **−24,400**."
+        }
+      ]
+    }
+  ]
+}

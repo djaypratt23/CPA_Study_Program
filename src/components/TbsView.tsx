@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useIsWide } from '../hooks/useDesktop'
 import type { Tbs, TbsPart } from '../content/schema'
-import { scoreTbs, type JournalLineResponse, type PartResponse, type TbsResponses } from '../lib/tbsScoring'
+import { fmt, scoreTbs, type JournalLineResponse, type PartResponse, type ReviewRowResponse, type TbsResponses } from '../lib/tbsScoring'
 import Markdown from './Markdown'
 import { amountInputProps, ReviewBadge } from './ui'
 
@@ -327,6 +327,70 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
             </label>
           ))}
         </fieldset>
+      )
+    }
+    case 'review': {
+      const values: Record<string, ReviewRowResponse> = response?.kind === 'review' ? response.values : {}
+      const update = (id: string, patch: Partial<ReviewRowResponse>) =>
+        onChange({ kind: 'review', values: { ...values, [id]: { ...(values[id] ?? { flagged: false }), ...patch } } })
+      return (
+        <div className="overflow-x-auto">
+          {/* Below the sm breakpoint each row stacks: label, prepared amount, then the flag and correction. */}
+          <table className="w-full text-sm sm:min-w-[36rem]">
+            <thead className="hidden sm:table-header-group">
+              <tr className="text-left text-xs uppercase muted">
+                <th className="py-1 pr-2">Item</th>
+                <th className="w-32 py-1 pr-2 text-right">{part.preparedLabel}</th>
+                <th className="w-20 py-1 pr-2 text-center">Error?</th>
+                <th className="w-36 py-1 text-right">Corrected amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              {part.rows.map((r) => {
+                const v = values[r.id]
+                const flagged = !!v?.flagged
+                return (
+                  <tr key={r.id} className="grid grid-cols-2 gap-x-2 gap-y-1 border-b border-slate-100 py-2 sm:table-row sm:py-0 dark:border-slate-800">
+                    <td id={`${part.id}-${r.id}-label`} className="col-span-2 sm:table-cell sm:py-1.5 sm:pr-2">
+                      {r.label}
+                    </td>
+                    <td className="font-mono sm:table-cell sm:py-1.5 sm:pr-2 sm:text-right">
+                      <span className="font-sans text-xs muted sm:hidden">{part.preparedLabel}: </span>
+                      {fmt(r.prepared)}
+                    </td>
+                    <td className="sm:table-cell sm:py-1.5 sm:pr-2 sm:text-center">
+                      <label className="inline-flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          className="h-4 w-4 accent-blue-700"
+                          aria-describedby={`${part.id}-${r.id}-label`}
+                          disabled={disabled}
+                          checked={flagged}
+                          onChange={(e) => update(r.id, { flagged: e.target.checked })}
+                        />
+                        <span className="text-xs sm:sr-only">Error</span>
+                      </label>
+                    </td>
+                    <td className="col-span-2 sm:table-cell sm:py-1.5">
+                      <input
+                        className="input text-right font-mono"
+                        {...amountInputProps}
+                        aria-label={`Corrected amount: ${r.label}`}
+                        placeholder={flagged ? 'Corrected amount' : ''}
+                        disabled={disabled || !flagged}
+                        value={v?.corrected ?? ''}
+                        onChange={(e) => update(r.id, { corrected: e.target.value })}
+                      />
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+          <p className="pt-2 text-xs muted">
+            Tick each amount that is wrong and enter what it should be. Leave correct amounts unticked; flagging a correct amount costs credit.
+          </p>
+        </div>
       )
     }
   }

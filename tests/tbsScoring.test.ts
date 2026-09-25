@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { Tbs } from '../src/content/schema'
-import { parseAmount, scoreJournal, scoreTbs } from '../src/lib/tbsScoring'
+import { parseAmount, scoreJournal, scoreReview, scoreTbs } from '../src/lib/tbsScoring'
 
 const tbs = Tbs.parse({
   id: 'far-tbs-test',
@@ -203,5 +203,54 @@ describe('TBS schema checks', () => {
       { account: 'Revenue', credit: 400 },
     ]
     expect(Tbs.safeParse(bad).success).toBe(false)
+  })
+})
+
+describe('review parts (P1-4)', () => {
+  const reviewTbs = Tbs.parse({
+    ...tbs,
+    id: 'far-tbs-review-test',
+    skill: 'analysis',
+    parts: [
+      {
+        kind: 'review',
+        id: 'rv',
+        prompt: 'Review the schedule',
+        rows: [
+          { id: 'ok', label: 'Correct row', prepared: 1200, answer: 1200, explanation: 'agrees to the invoice' },
+          { id: 'bad', label: 'Wrong row', prepared: 5000, answer: 4500, explanation: 'excludes the returned goods' },
+        ],
+      },
+    ],
+  })
+  const part = reviewTbs.parts[0] as Extract<Tbs['parts'][number], { kind: 'review' }>
+
+  it('credits a correct row left unflagged and an error row flagged with the right amount', () => {
+    const cells = scoreReview(part, { ok: { flagged: false }, bad: { flagged: true, corrected: '$4,500' } })
+    expect(cells.map((c) => c.correct)).toEqual([true, true])
+    expect(cells[1].expected).toBe('Error → 4,500')
+  })
+
+  it('does not reward flagging everything', () => {
+    const cells = scoreReview(part, { ok: { flagged: true, corrected: '1200' }, bad: { flagged: true, corrected: '4500' } })
+    expect(cells.map((c) => c.correct)).toEqual([false, true])
+  })
+
+  it('requires the corrected amount, not just the flag', () => {
+    expect(scoreReview(part, { bad: { flagged: true } })[1].correct).toBe(false)
+    expect(scoreReview(part, { bad: { flagged: true, corrected: '5000' } })[1].correct).toBe(false)
+    expect(scoreReview(part, { bad: { flagged: false, corrected: '4500' } })[1].correct).toBe(false)
+  })
+
+  it('an empty response scores the unflagged correct rows only', () => {
+    expect(scoreTbs(reviewTbs, {}).percent).toBe(0.5)
+  })
+
+  it('rejects a review part with no error rows or no correct rows', () => {
+    const rows = (prepared: number[]) => prepared.map((p, i) => ({ id: `r${i}`, label: 'x', prepared: p, answer: 100, explanation: 'because' }))
+    const mk = (prepared: number[]) => ({ ...reviewTbs, parts: [{ kind: 'review', id: 'rv', prompt: 'p', rows: rows(prepared) }] })
+    expect(Tbs.safeParse(mk([100, 100])).success).toBe(false)
+    expect(Tbs.safeParse(mk([90, 80])).success).toBe(false)
+    expect(Tbs.safeParse(mk([100, 80])).success).toBe(true)
   })
 })

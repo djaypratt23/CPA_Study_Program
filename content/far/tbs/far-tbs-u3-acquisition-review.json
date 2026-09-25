@@ -1,0 +1,110 @@
+{
+  "id": "far-tbs-u3-acquisition-review",
+  "section": "FAR",
+  "unitId": "far-u3",
+  "moduleIds": [
+    "far-consolidations",
+    "far-intangibles"
+  ],
+  "pool": "practice",
+  "title": "Review an acquisition-date consolidated balance sheet — Pratt and Selby",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "On December 31, Pratt Corp. acquired 90% of Selby Co. for $1,800,000 cash. A staff accountant prepared the acquisition-date consolidated balance sheet amounts. Review them against the acquisition data. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Acquisition data",
+      "content": "| | Pratt (before acquisition) | Selby book value | Selby fair value |\n|---|---:|---:|---:|\n| Inventory | 350,000 | 210,000 | 260,000 |\n| Land | 600,000 | 300,000 | 500,000 |\n| Customer relationships (not recorded by Selby) | — | — | 100,000 |\n| Selby's identifiable net assets | | 1,500,000 | 1,850,000 |\n| Common stock | 500,000 | 400,000 | |\n| Retained earnings | 2,400,000 | 1,100,000 | |\n\nFair value of the 10% noncontrolling interest at December 31: **$190,000**. Pratt's retained earnings already reflect the **$45,000** of legal fees for the deal, which Pratt expensed."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "bs",
+      "prompt": "Review the acquisition-date consolidated amounts.",
+      "preparedLabel": "Per staff worksheet",
+      "rows": [
+        {
+          "id": "gw",
+          "label": "Goodwill",
+          "prepared": 135000,
+          "answer": 140000,
+          "explanation": "Goodwill = consideration 1,800,000 + fair value of NCI 190,000 − fair value of identifiable net assets 1,850,000 = **140,000** (full goodwill, ASC 805-30-30-1). The draft computed only the parent's share."
+        },
+        {
+          "id": "nci",
+          "label": "Noncontrolling interest",
+          "prepared": 150000,
+          "answer": 190000,
+          "explanation": "NCI is measured at acquisition-date **fair value**, **190,000** — not 10% of Selby's book value."
+        },
+        {
+          "id": "land",
+          "label": "Land",
+          "prepared": 1100000,
+          "answer": 1100000,
+          "explanation": "600,000 + 300,000 + 200,000 fair value step-up = **1,100,000**. **No error.**"
+        },
+        {
+          "id": "cust",
+          "label": "Customer relationships intangible",
+          "prepared": 0,
+          "answer": 100000,
+          "explanation": "An identifiable intangible meeting the contractual-legal or separability criterion is recognized apart from goodwill at fair value, even though Selby never recorded it: **100,000**."
+        },
+        {
+          "id": "inv",
+          "label": "Inventory",
+          "prepared": 560000,
+          "answer": 610000,
+          "explanation": "350,000 + 210,000 + 50,000 step-up = **610,000**."
+        },
+        {
+          "id": "cs",
+          "label": "Common stock",
+          "prepared": 500000,
+          "answer": 500000,
+          "explanation": "Only the parent's equity survives; Selby's equity is eliminated. **No error.**"
+        },
+        {
+          "id": "re",
+          "label": "Retained earnings",
+          "prepared": 2400000,
+          "answer": 2400000,
+          "explanation": "Parent only (acquisition-related costs were already expensed by Pratt). **No error.**"
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "acq",
+      "prompt": "Identify the correct treatment of each item.",
+      "options": [
+        "Expense when incurred",
+        "Include in consideration transferred",
+        "Recognize as an identifiable asset",
+        "Reduce additional paid-in capital"
+      ],
+      "rows": [
+        {
+          "id": "a1",
+          "label": "$45,000 of legal and due diligence fees for the acquisition",
+          "answer": "Expense when incurred",
+          "explanation": "Acquisition-related costs are expensed (ASC 805-10-25-23)."
+        },
+        {
+          "id": "a2",
+          "label": "$30,000 of registration costs for shares issued as part of a later financing",
+          "answer": "Reduce additional paid-in capital",
+          "explanation": "Costs of issuing equity securities reduce the proceeds (APIC)."
+        },
+        {
+          "id": "a3",
+          "label": "Selby's customer relationships",
+          "answer": "Recognize as an identifiable asset",
+          "explanation": "Separately identifiable intangible — recognized apart from goodwill."
+        }
+      ]
+    }
+  ]
+}

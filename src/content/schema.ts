@@ -344,7 +344,46 @@ const ResearchPart = z.object({
   explanation: z.string().min(5),
 })
 
-export const TbsPart = z.discriminatedUnion('kind', [NumericPart, DropdownPart, JournalPart, DocReviewPart, ResearchPart])
+/**
+ * Review a prepared schedule against the source documents in the exhibits
+ * (the Blueprint's analysis-level task: "review, identify discrepancies,
+ * correct"). Each row shows a prepared amount; the candidate flags the rows
+ * in error and enters the corrected amount. Rows whose prepared amount is
+ * right (answer === prepared) must be left unflagged.
+ */
+const ReviewPart = z
+  .object({
+    kind: z.literal('review'),
+    id: z.string(),
+    prompt: z.string(),
+    /** Header for the prepared-amount column, e.g. "Per client schedule". */
+    preparedLabel: z.string().default('Prepared amount'),
+    rows: z
+      .array(
+        z
+          .object({
+            id: z.string(),
+            label: z.string(),
+            prepared: z.number(),
+            answer: z.number(),
+            tolerance: z.number().min(0).optional(),
+            explanation: z.string().min(5),
+          })
+          .superRefine((r, ctx) => {
+            if (!Number.isInteger(r.answer) && r.tolerance === undefined)
+              ctx.addIssue({ code: 'custom', message: `row ${r.id}: non-integer answer ${r.answer} needs an explicit tolerance` })
+          })
+          .transform((r) => ({ ...r, tolerance: r.tolerance ?? 1 })),
+      )
+      .min(2),
+  })
+  .superRefine((p, ctx) => {
+    const errors = p.rows.filter((r) => Math.abs(r.prepared - r.answer) > r.tolerance).length
+    if (errors === 0) ctx.addIssue({ code: 'custom', message: `${p.id}: a review part needs at least one row in error` })
+    if (errors === p.rows.length) ctx.addIssue({ code: 'custom', message: `${p.id}: a review part needs at least one correct row` })
+  })
+
+export const TbsPart = z.discriminatedUnion('kind', [NumericPart, DropdownPart, JournalPart, DocReviewPart, ResearchPart, ReviewPart])
 export type TbsPart = z.infer<typeof TbsPart>
 
 export const Tbs = z
@@ -368,7 +407,7 @@ export const Tbs = z
     for (const id of dup(t.parts.map((p) => p.id))) ctx.addIssue({ code: 'custom', message: `${t.id}: duplicate part id "${id}"` })
     for (const p of t.parts) {
       const cells =
-        p.kind === 'numeric' || p.kind === 'dropdown' ? p.rows.map((r) => r.id) : p.kind === 'docreview' ? p.segments.flatMap((s) => ('id' in s ? [s.id] : [])) : []
+        p.kind === 'numeric' || p.kind === 'dropdown' || p.kind === 'review' ? p.rows.map((r) => r.id) : p.kind === 'docreview' ? p.segments.flatMap((s) => ('id' in s ? [s.id] : [])) : []
       for (const id of dup(cells)) ctx.addIssue({ code: 'custom', message: `${t.id}/${p.id}: duplicate row id "${id}"` })
       if (p.kind === 'dropdown') {
         for (const r of p.rows) {

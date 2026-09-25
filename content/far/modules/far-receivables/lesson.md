@@ -12,6 +12,8 @@ objectives:
   - text: Determine whether a transfer of receivables (factoring) is a sale or a secured borrowing and measure any gain or loss.
     skill: analysis
     task: Account for transfers of receivables
+  - text: Prepare a receivables roll-forward from source data and reconcile the customer subledger to the general ledger, investigating each difference.
+    skill: analysis
 bigIdea:
   what: >-
     A receivable is only worth what the company expects to collect. The allowance for credit losses reduces gross
@@ -127,3 +129,27 @@ steps:
 ```check
 far-rec-chk2
 ```
+
+## Roll-forwards and subledger reconciliations
+
+On the exam, analysis tasks rarely ask you to *compute* a balance from scratch. More often you get a schedule someone else prepared plus the source documents, and you must find what is wrong.
+
+**The receivables roll-forward.** Each line comes from a different source, so check each one against its own document:
+
+| Line | Source document | Common error |
+|---|---|---|
+| Beginning balance | Prior-year audited GL | Using an unadjusted balance |
+| + Credit sales | Sales journal | Including cash sales |
+| + Recoveries reinstated | Credit department approvals | Omitted, or netted against write-offs |
+| − Collections | Cash receipts journal | Excluding the recovery collection |
+| − Returns and allowances | Credit memo register | Missing late-December memos |
+| − Write-offs | Approved write-off list | Netted with recoveries |
+| = Ending balance | Must agree to the GL | — |
+
+**Subledger to general ledger.** The GL control account should equal the total of the customer accounts. When it does not, list every item that is in one record but not the other, and adjust the record that is wrong:
+
+- **In the GL, not the subledger** (for example, a credit memo or write-off posted only in the GL): adjust the **subledger**.
+- **Posted twice in the subledger**: reverse the duplicate. A duplicated *payment* **understates** the subledger, so the fix is an **addition**.
+- **Misposted between customers**: no effect on the total. It matters for collections and the aging, not the reconciliation.
+
+A reconciliation that ends with an unexplained difference is not finished. Never plug the difference to expense.

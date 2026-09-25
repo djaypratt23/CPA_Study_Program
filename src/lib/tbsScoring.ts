@@ -13,6 +13,12 @@ export interface JournalLineResponse {
   credit?: string | number | null
 }
 
+/** One row of a review part: whether the candidate flagged it, and the corrected amount entered. */
+export interface ReviewRowResponse {
+  flagged: boolean
+  corrected?: string
+}
+
 /** Responses keyed by part id. Shape depends on the part kind. */
 export type TbsResponses = Record<string, PartResponse>
 export type PartResponse =
@@ -21,6 +27,7 @@ export type PartResponse =
   | { kind: 'journal'; lines: JournalLineResponse[] }
   | { kind: 'docreview'; values: Record<string, string> }
   | { kind: 'research'; value: string }
+  | { kind: 'review'; values: Record<string, ReviewRowResponse> }
 
 export interface CellResult {
   partId: string
@@ -69,7 +76,7 @@ export function withinTolerance(given: number | null, expected: number, toleranc
   return given !== null && Math.abs(given - expected) <= tolerance + 1e-9
 }
 
-const fmt = (n: number | undefined | null) => (n === undefined || n === null ? '' : n.toLocaleString('en-US'))
+export const fmt = (n: number | undefined | null) => (n === undefined || n === null ? '' : n.toLocaleString('en-US'))
 
 /** Display a formatted number with its row unit: "$1,000", "25%", "1.5x", "60 days". */
 export function withUnit(text: string, unit: NumericUnit | undefined): string {
@@ -142,7 +149,32 @@ function scorePart(part: TbsPart, resp: PartResponse | undefined): CellResult[] 
     }
     case 'journal':
       return scoreJournal(part, resp?.kind === 'journal' ? resp.lines : [])
+    case 'review':
+      return scoreReview(part, resp?.kind === 'review' ? resp.values : {})
   }
+}
+
+/**
+ * Review parts: one cell per row. A row in error scores only if it is flagged
+ * and the corrected amount is within tolerance; a correct row scores only if it
+ * is left unflagged, so flagging everything is never rewarded.
+ */
+export function scoreReview(part: Extract<TbsPart, { kind: 'review' }>, values: Record<string, ReviewRowResponse>): CellResult[] {
+  return part.rows.map((r) => {
+    const v = values[r.id]
+    const inError = Math.abs(r.prepared - r.answer) > r.tolerance
+    const flagged = !!v?.flagged
+    const correct = inError ? flagged && withinTolerance(parseAmount(v?.corrected ?? null), r.answer, r.tolerance) : !flagged
+    return {
+      partId: part.id,
+      cellId: r.id,
+      label: r.label,
+      correct,
+      given: flagged ? `Error → ${v?.corrected?.trim() || '(no amount)'}` : 'No error',
+      expected: inError ? `Error → ${fmt(r.answer)}` : 'No error',
+      explanation: r.explanation,
+    }
+  })
 }
 
 /**

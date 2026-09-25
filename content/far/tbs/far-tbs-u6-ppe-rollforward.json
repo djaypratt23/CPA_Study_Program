@@ -1,0 +1,114 @@
+{
+  "id": "far-tbs-u6-ppe-rollforward",
+  "section": "FAR",
+  "unitId": "far-u6",
+  "moduleIds": [
+    "far-ppe-acquisition",
+    "far-depreciation"
+  ],
+  "pool": "practice",
+  "title": "Review the PP&E roll-forward — Crestview Manufacturing",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Crestview Manufacturing's staff accountant prepared the year-end PP&E roll-forward from the general ledger. Review it against the source documents in the exhibits. Tick every amount that is wrong and enter the correct amount. Enter decreases as negative numbers and balances as positive numbers.",
+  "exhibits": [
+    {
+      "title": "Source documents",
+      "content": "- **January 1 balances (audited):** PP&E at cost $4,250,000; accumulated depreciation $1,380,000.\n- **Capital expenditure log:** new stamping machine, invoice $620,000, placed in service April 1. The installer's bill of **$18,000** was paid by accounts payable and charged to repairs and maintenance expense.\n- **Sale:** a delivery truck (cost $95,000; accumulated depreciation to the sale date $71,000) was sold for **$30,000** cash.\n- **Retirement:** a fully depreciated press (cost $40,000) was scrapped with no proceeds.\n- **Fixed-asset register:** depreciation expense for the year **$402,000**, computed after the installation cost was added to the machine's cost."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "rf",
+      "prompt": "Review the PP&E roll-forward.",
+      "preparedLabel": "Per staff schedule",
+      "rows": [
+        {
+          "id": "gbeg",
+          "label": "PP&E at cost, January 1",
+          "prepared": 4250000,
+          "answer": 4250000,
+          "explanation": "Agrees to the prior-year audited balance. **No error.**"
+        },
+        {
+          "id": "gadd",
+          "label": "Additions",
+          "prepared": 620000,
+          "answer": 638000,
+          "explanation": "Installation is a cost of getting the machine ready for use and is capitalized (ASC 360-10-30). 620,000 + 18,000 = **638,000**."
+        },
+        {
+          "id": "gdis",
+          "label": "Disposals and retirements (cost)",
+          "prepared": -95000,
+          "answer": -135000,
+          "explanation": "Both the truck sold (95,000) and the fully depreciated asset retired (40,000) leave the ledger: **−135,000**."
+        },
+        {
+          "id": "gend",
+          "label": "PP&E at cost, December 31",
+          "prepared": 4775000,
+          "answer": 4753000,
+          "explanation": "4,250,000 + 638,000 − 135,000 = **4,753,000**."
+        },
+        {
+          "id": "abeg",
+          "label": "Accumulated depreciation, January 1",
+          "prepared": 1380000,
+          "answer": 1380000,
+          "explanation": "Agrees to the prior-year audited balance. **No error.**"
+        },
+        {
+          "id": "adep",
+          "label": "Depreciation expense for the year",
+          "prepared": 402000,
+          "answer": 402000,
+          "explanation": "Agrees to the fixed-asset register, which already reflects the capitalized installation. **No error.**"
+        },
+        {
+          "id": "adis",
+          "label": "Accumulated depreciation removed on disposals and retirements",
+          "prepared": -71000,
+          "answer": -111000,
+          "explanation": "71,000 on the truck plus 40,000 on the retired asset = **−111,000**. A retired, fully depreciated asset is removed from both cost and accumulated depreciation."
+        },
+        {
+          "id": "aend",
+          "label": "Accumulated depreciation, December 31",
+          "prepared": 1711000,
+          "answer": 1671000,
+          "explanation": "1,380,000 + 402,000 − 111,000 = **1,671,000**."
+        },
+        {
+          "id": "gain",
+          "label": "Gain (loss) on sale of truck",
+          "prepared": 30000,
+          "answer": 6000,
+          "explanation": "Proceeds 30,000 − carrying amount (95,000 − 71,000 = 24,000) = **6,000 gain**. The staff reported the proceeds as the gain."
+        },
+        {
+          "id": "net",
+          "label": "Net PP&E, December 31",
+          "prepared": 3064000,
+          "answer": 3082000,
+          "explanation": "4,753,000 − 1,671,000 = **3,082,000**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "fx",
+      "prompt": "Determine the correcting effect on the year's pretax income.",
+      "rows": [
+        {
+          "id": "inst",
+          "label": "Increase (decrease) in pretax income from capitalizing the installation cost",
+          "answer": 18000,
+          "tolerance": 0,
+          "explanation": "The 18,000 was charged to repairs expense; moving it to PP&E **increases** pretax income by **18,000** (the register's depreciation already includes it, per the exhibit)."
+        }
+      ]
+    }
+  ]
+}
