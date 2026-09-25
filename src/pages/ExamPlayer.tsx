@@ -16,10 +16,12 @@ import type { ExamSession, ExamTestletState } from '../db/types'
 import { breakRemainingMs, examRemainingMs, isExamClockPaused, pauseExamClock, resumeExamClock } from '../lib/examClock'
 import { areaPercent, scoreExam } from '../lib/examScoring'
 import { scoreTbs, type TbsResponses } from '../lib/tbsScoring'
+import { useTabLock } from '../hooks/useTabLock'
 
 export default function ExamPlayer() {
   const { sessionId = '' } = useParams()
   const session = useLiveQuery(() => db.examSessions.get(sessionId).then((s) => s ?? null), [sessionId])
+  const lock = useTabLock(`exam:${sessionId}`, !!session && !session.finishedAt)
   if (session === undefined) return <p className="p-6 muted">Loading…</p>
   if (!session)
     return (
@@ -28,6 +30,16 @@ export default function ExamPlayer() {
       </p>
     )
   if (session.finishedAt && session.result) return <ExamResults session={session} />
+  if (lock.blocked)
+    return (
+      <div className="mx-auto max-w-md space-y-3 px-4 py-12 text-center" role="alert">
+        <h1 className="h2">This exam is open in another tab</h1>
+        <p className="text-sm muted">To keep your answers consistent, only one tab can run a mock exam. The exam clock keeps running.</p>
+        <button className="btn-primary" onClick={lock.takeOver}>
+          Continue in this tab
+        </button>
+      </div>
+    )
   return <ExamRunner session={session} />
 }
 
@@ -37,6 +49,7 @@ function ExamRunner({ session }: { session: ExamSession }) {
   const [now, setNow] = useState(() => Date.now())
   const [calc, setCalc] = useState(false)
   const [confirm, setConfirm] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
   const t = session.testlets[session.testletIndex]
   const onBreak = session.onBreak
   const paused = isExamClockPaused(session)
@@ -63,25 +76,34 @@ function ExamRunner({ session }: { session: ExamSession }) {
     return { itemTimeMs: { ...tl.itemTimeMs, [id]: (tl.itemTimeMs?.[id] ?? 0) + spent } }
   }
 
-  const finish = async (s: ExamSession) => {
+  /**
+   * Submit the whole exam in one transaction: it reads the stored session (never a stale
+   * render), banks the time on the current item, records every attempt, scores, and sets
+   * finishedAt together, so a crash or double click can't leave a half-recorded exam.
+   */
+  const finish = async () => {
     if (finishing.current) return
     finishing.current = true
-    // Lock everything, record attempts, and score.
-    const testlets = s.testlets.map((x) => ({ ...x, submitted: true }))
-    for (const tl of testlets) {
-      for (const id of tl.items) {
-        const timeMs = Math.round(tl.itemTimeMs?.[id] ?? 0)
-        if (tl.kind === 'mcq') {
-          const q = content.questions[id]
-          if (q && tl.mcqAnswers[id]) await recordMcqAttempt(q, { choice: tl.mcqAnswers[id], timeMs, mode: 'exam', mixed: true, sessionId: s.id, section: s.section })
-        } else {
-          const tbs = content.tbs[id]
-          if (tbs) await recordTbsAttempt(tbs, scoreTbs(tbs, tl.tbsResponses[id] ?? {}).percent, timeMs, 'exam', s.id)
+    await db.transaction('rw', db.examSessions, db.attempts, db.srs, async () => {
+      const s = await db.examSessions.get(session.id)
+      if (!s || s.finishedAt) return
+      const banked = bankTime(s)
+      const testlets = s.testlets.map((x, i) => ({ ...x, ...(i === s.testletIndex ? banked : {}), submitted: true }))
+      for (const tl of testlets) {
+        for (const id of tl.items) {
+          const timeMs = Math.round(tl.itemTimeMs?.[id] ?? 0)
+          if (tl.kind === 'mcq') {
+            const q = content.questions[id]
+            if (q && tl.mcqAnswers[id]) await recordMcqAttempt(q, { choice: tl.mcqAnswers[id], timeMs, mode: 'exam', mixed: true, sessionId: s.id, section: s.section })
+          } else {
+            const tbs = content.tbs[id]
+            if (tbs) await recordTbsAttempt(tbs, scoreTbs(tbs, tl.tbsResponses[id] ?? {}).percent, timeMs, 'exam', s.id)
+          }
         }
       }
-    }
-    const result = scoreExam(testlets, section, content)
-    await db.examSessions.update(s.id, { testlets, finishedAt: new Date().toISOString(), result, remainingMs: examRemainingMs(s, Date.now()), endsAt: undefined })
+      const result = scoreExam(testlets, section, content)
+      await db.examSessions.update(s.id, { testlets, finishedAt: new Date().toISOString(), result, remainingMs: examRemainingMs(s, Date.now()), endsAt: undefined })
+    })
   }
 
   // Sessions saved before the wall clock existed get a deadline on first load.
@@ -98,9 +120,7 @@ function ExamRunner({ session }: { session: ExamSession }) {
   // Time is up: submit everything (also on return after the deadline passed while away).
   useEffect(() => {
     if (remaining > 0 || paused || !session.endsAt) return
-    db.examSessions.get(session.id).then((s) => {
-      if (s && !s.finishedAt) finish({ ...s, testlets: s.testlets.map((x, i) => (i === s.testletIndex ? { ...x, ...bankTime(s) } : x)) })
-    })
+    finish()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [remaining, paused, session.endsAt, session.id])
 
@@ -133,26 +153,51 @@ function ExamRunner({ session }: { session: ExamSession }) {
     }
   }, [])
 
-  const patchTestlet = (patch: Partial<ExamTestletState>) => {
-    const timed = patch.index !== undefined || patch.mcqAnswers !== undefined ? bankTime(session) : {}
-    const testlets = session.testlets.map((x, i) => (i === session.testletIndex ? { ...x, ...timed, ...patch } : x))
-    return db.examSessions.update(session.id, { testlets })
-  }
+  /**
+   * Update the current testlet from the stored session inside a transaction. Map fields
+   * (answers, flags, TBS responses) merge with what is stored, so a fast click can't drop
+   * an answer written a moment earlier by a render that hadn't caught up yet.
+   */
+  /** Map fields in `patch` carry only the keys that changed. */
+  const patchTestlet = (patch: Partial<ExamTestletState>) =>
+    db.transaction('rw', db.examSessions, async () => {
+      const s = await db.examSessions.get(session.id)
+      if (!s || s.finishedAt) return
+      const tl = s.testlets[s.testletIndex]
+      if (!tl || tl.submitted) return
+      const timed = patch.index !== undefined || patch.mcqAnswers !== undefined ? bankTime(s) : {}
+      const next: ExamTestletState = { ...tl, ...timed, ...patch }
+      if (patch.mcqAnswers) next.mcqAnswers = { ...tl.mcqAnswers, ...patch.mcqAnswers }
+      if (patch.flags) next.flags = { ...tl.flags, ...patch.flags }
+      if (patch.tbsResponses) next.tbsResponses = { ...tl.tbsResponses, ...patch.tbsResponses }
+      await db.examSessions.update(s.id, { testlets: s.testlets.map((x, i) => (i === s.testletIndex ? next : x)) })
+    })
 
   const submitTestlet = async () => {
+    if (submitting) return
+    setSubmitting(true)
     setConfirm(false)
-    const testlets = session.testlets.map((x, i) => (i === session.testletIndex ? { ...x, ...bankTime(session), submitted: true } : x))
-    const next = session.testletIndex + 1
-    if (next >= testlets.length) {
-      await finish({ ...session, testlets })
-      return
+    try {
+      const last = session.testletIndex === session.testlets.length - 1
+      if (last) {
+        await finish()
+        return
+      }
+      await db.transaction('rw', db.examSessions, async () => {
+        const s = await db.examSessions.get(session.id)
+        if (!s || s.finishedAt || s.testletIndex !== session.testletIndex) return
+        const testlets = s.testlets.map((x, i) => (i === s.testletIndex ? { ...x, ...bankTime(s), submitted: true } : x))
+        const next = s.testletIndex + 1
+        const offerBreak = section.exam.breakAfterTestlet === next && !s.breakUsed
+        const at = Date.now()
+        // Offering the break stops the clock; declining it restarts the clock.
+        const clock = offerBreak ? pauseExamClock(s, at) : { remainingMs: examRemainingMs(s, at) }
+        await db.examSessions.update(s.id, { testlets, testletIndex: next, onBreak: false, breakOffered: offerBreak, ...clock })
+      })
+      window.scrollTo(0, 0)
+    } finally {
+      setSubmitting(false)
     }
-    const offerBreak = section.exam.breakAfterTestlet === next && !session.breakUsed
-    const at = Date.now()
-    // Offering the break stops the clock; declining it restarts the clock.
-    const clock = offerBreak ? pauseExamClock(session, at) : { remainingMs: examRemainingMs(session, at) }
-    await db.examSessions.update(session.id, { testlets, testletIndex: next, onBreak: false, breakOffered: offerBreak, ...clock })
-    window.scrollTo(0, 0)
   }
 
   const takeBreak = () =>
@@ -224,7 +269,7 @@ function ExamRunner({ session }: { session: ExamSession }) {
                   <button className="btn-secondary" onClick={() => setConfirm(false)}>
                     Keep working
                   </button>
-                  <button className="btn-primary" onClick={submitTestlet}>
+                  <button className="btn-primary" onClick={submitTestlet} disabled={submitting}>
                     Submit testlet
                   </button>
                 </div>
@@ -266,7 +311,7 @@ function McqTestlet({ t, session, onPatch }: { t: ExamTestletState; session: Exa
         <span>
           {answered}/{t.items.length} answered
         </span>
-        <button className="btn-ghost min-h-9 text-xs" onClick={() => onPatch({ flags: { ...t.flags, [q.id]: !t.flags[q.id] } })} aria-pressed={!!t.flags[q.id]}>
+        <button className="btn-ghost min-h-9 text-xs" onClick={() => onPatch({ flags: { [q.id]: !t.flags[q.id] } })} aria-pressed={!!t.flags[q.id]}>
           🚩 {t.flags[q.id] ? 'Unflag' : 'Flag for review'}
         </button>
       </div>
@@ -283,7 +328,7 @@ function McqTestlet({ t, session, onPatch }: { t: ExamTestletState; session: Exa
           showTools={false}
           hideConfidence
           hideSkill
-          onSelect={(c) => onPatch({ mcqAnswers: { ...t.mcqAnswers, [q.id]: c } })}
+          onSelect={(c) => onPatch({ mcqAnswers: { [q.id]: c } })}
           onConfidence={() => {}}
           keyboard
         />
@@ -324,7 +369,7 @@ function TbsTestlet({ t, onPatch }: { t: ExamTestletState; onPatch: (p: Partial<
         responses={t.tbsResponses[tbs.id] ?? {}}
         submitted={false}
         split
-        onChange={(r: TbsResponses) => onPatch({ tbsResponses: { ...t.tbsResponses, [tbs.id]: r } })}
+        onChange={(r: TbsResponses) => onPatch({ tbsResponses: { [tbs.id]: r } })}
       />
     </div>
   )
