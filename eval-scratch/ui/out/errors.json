@@ -1,0 +1,191 @@
+[
+  [
+    "IndexedDB throws: visible text",
+    "Loading…"
+  ],
+  [
+    "IndexedDB throws: root children",
+    1
+  ],
+  [
+    "IndexedDB throws: page errors",
+    []
+  ],
+  [
+    "indexedDB undefined: visible text",
+    "Loading…"
+  ],
+  [
+    "route #/module/does-not-exist",
+    {
+      "url": "#/module/does-not-exist",
+      "text": "Skip to content CPA Study Active exam section FAR AUD REG TCP Home Course Practice Review Study plan Simulatio"
+    }
+  ],
+  [
+    "route #/exam/bogus",
+    {
+      "url": "#/exam/bogus",
+      "text": "Exam not found. Back"
+    }
+  ],
+  [
+    "route #/tbs/bogus",
+    {
+      "url": "#/tbs/bogus",
+      "text": "Skip to content CPA Study Active exam section FAR AUD REG TCP Home Course Practice Review Study plan Simulatio"
+    }
+  ],
+  [
+    "route #/quiz/bogus",
+    {
+      "url": "#/quiz/bogus",
+      "text": "Skip to content CPA Study Active exam section FAR AUD REG TCP Home Course Practice Review Study plan Simulatio"
+    }
+  ],
+  [
+    "route #/final-review/bogus",
+    {
+      "url": "#/final-review/bogus",
+      "text": "Skip to content CPA Study Active exam section FAR AUD REG TCP Home Course Practice Review Study plan Simulatio"
+    }
+  ],
+  [
+    "route #/course/XYZ",
+    {
+      "url": "#/course/XYZ",
+      "text": "Skip to content CPA Study Active exam section FAR AUD REG TCP Home Course Practice Review Study plan Simulatio"
+    }
+  ],
+  [
+    "route #/nonsense/path",
+    {
+      "url": "#/",
+      "text": "Skip to content CPA Study Active exam section FAR AUD REG TCP Home Course Practice Review Study plan Simulatio"
+    }
+  ],
+  [
+    "route #/practice/start?module=nope",
+    {
+      "url": "#/practice/start?module=nope",
+      "text": "Skip to content CPA Study Active exam section FAR AUD REG TCP Home Course Practice Review Study plan Simulatio"
+    }
+  ],
+  [
+    "route #/practice/start",
+    {
+      "url": "#/practice/start",
+      "text": "Skip to content CPA Study Active exam section FAR AUD REG TCP Home Course Practice Review Study plan Simulatio"
+    }
+  ],
+  [
+    "import XSS backup",
+    {
+      "dialogShown": null,
+      "status": "Backup restored."
+    }
+  ],
+  [
+    "XSS: alerts fired / injected <img onerror> or <script> in DOM",
+    {
+      "alerts": 0,
+      "injectedImg": 0,
+      "notesShowPayloadAsText": 3
+    }
+  ],
+  [
+    "malformed backup bad-activeSection",
+    {
+      "import": {
+        "dialogShown": null,
+        "status": "Backup restored."
+      },
+      "results": {
+        "#/": "BLANK SCREEN",
+        "#/review": "BLANK SCREEN",
+        "#/analytics": "BLANK SCREEN",
+        "#/settings": "BLANK SCREEN"
+      },
+      "pageErrors": [
+        "Cannot read properties of undefined (reading 'id')"
+      ]
+    }
+  ],
+  [
+    "malformed backup examDates-null",
+    {
+      "import": {
+        "dialogShown": null,
+        "status": null
+      },
+      "results": {
+        "#/": "BLANK SCREEN",
+        "#/review": "BLANK SCREEN",
+        "#/analytics": "BLANK SCREEN",
+        "#/settings": "BLANK SCREEN"
+      },
+      "pageErrors": [
+        "Cannot read properties of null (reading 'FAR')"
+      ]
+    }
+  ],
+  [
+    "malformed backup srs-missing-card",
+    {
+      "import": {
+        "dialogShown": null,
+        "status": "Backup restored."
+      },
+      "results": {
+        "#/": "Skip to content CPA Study Active exam section FAR ",
+        "#/review": "Skip to content CPA Study Active exam section FAR ",
+        "#/analytics": "Skip to content CPA Study Active exam section FAR ",
+        "#/settings": "Skip to content CPA Study Active exam section FAR "
+      },
+      "pageErrors": []
+    }
+  ],
+  [
+    "malformed backup fontScale-huge",
+    {
+      "import": {
+        "dialogShown": null,
+        "status": "Backup restored."
+      },
+      "results": {
+        "#/": "Skip to content CPA Study Active exam section FAR ",
+        "#/review": "Skip to content CPA Study Active exam section FAR ",
+        "#/analytics": "Skip to content CPA Study Active exam section FAR ",
+        "#/settings": "Skip to content CPA Study Active exam section FAR "
+      },
+      "pageErrors": []
+    }
+  ],
+  [
+    "malformed backup attempts-garbage",
+    {
+      "import": {
+        "dialogShown": null,
+        "status": "Backup restored."
+      },
+      "results": {
+        "#/": "Skip to content CPA Study Active exam section FAR ",
+        "#/review": "Skip to content CPA Study Active exam section FAR ",
+        "#/analytics": "Skip to content CPA Study Active exam section FAR ",
+        "#/settings": "Skip to content CPA Study Active exam section FAR "
+      },
+      "pageErrors": []
+    }
+  ],
+  [
+    "import non-backup JSON",
+    {
+      "dialogShown": null,
+      "status": "Import failed: This file is not a CPA Study Program backup."
+    }
+  ],
+  [
+    "import non-JSON file",
+    "Import failed: Unexpected token 'o', \"not json{\" is not valid JSON"
+  ]
+]

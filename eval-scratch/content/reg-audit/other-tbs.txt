@@ -1,0 +1,373 @@
+
+######## reg-tbs-u1-penalties | practice | application
+INSTR: Rowan Tax Advisors (a CPA firm) is handling several matters. Compute the penalties and evaluate each practitioner action. Assume no reasonable cause and no extensions unless stated.
+EXH[Client matters]: 1. **Moore** filed his return 4 months and 10 days late, with $12,000 of tax due, and paid it all when he filed.
+2. **Lin** obtained a valid extension, filed on September 1, and paid $5,000 of balance due on September 1 (due April 15). Count 5 months of late payment.
+3. **Park Co.** was assessed an understatement of $40,000 caused by negligence.
+4. A Rowan preparer took an undisclosed position without substantial authority on a return for which the firm was paid $1,600.
+5. A Rowan preparer recklessly claimed fictitious deductions on a return for which the firm was paid $8,000.
+-- PART pen (numeric): Compute the penalties.
+   [m1] Moore — failure-to-pay penalty => 300 (tol 0) :: 5 months counted (any part month counts) × 0.5% × 12,000 = **300**.
+   [m2] Moore — failure-to-file penalty (after reduction) => 2700 (tol 0) :: 5 × 4.5% × 12,000 = **2,700**.
+   [l1] Lin — failure-to-pay penalty => 125 (tol 0) :: 0.5% × 5 × 5,000 = **125**; no failure-to-file penalty because the return was filed under a valid extension.
+   [p1] Park Co. — accuracy-related penalty => 8000 (tol 0) :: 20% × 40,000 = **8,000**.
+   [r4] Preparer penalty — situation 4 => 1000 (tol 0) :: §6694(a): greater of $1,000 or 50% × 1,600 (800) = **1,000**.
+   [r5] Preparer penalty — situation 5 => 6000 (tol 0) :: §6694(b): greater of $5,000 or 75% × 8,000 (6,000) = **6,000**.
+-- PART duty (dropdown): Is each proposed action permitted under Circular 230?
+   [d1] Charging a contingent fee to prepare an original return => Not permitted :: Original return preparation isn't a contingent-fee exception.
+   [d2] Charging a contingent fee to represent a client in an IRS exam of her original return => Permitted :: An exception under §10.27.
+   [d3] Withholding client records needed to file a return until fees are paid => Not permitted :: §10.28 requires returning records needed for compliance.
+   [d4] Telling the IRS about a client's prior-year error without the client's consent => Not permitted :: The duty is to advise the client.
+   [d5] Representing two clients with conflicting interests after each gives informed written consent => Permitted :: §10.29 permits it with consent.
+   options: Permitted | Not permitted
+
+######## reg-tbs-u2-contracts-agency | practice | application
+INSTR: Linden Supply, a general partnership that distributes restaurant equipment, faces several legal questions. Select the best answer for each.
+EXH[Situations]: 1. Linden's former sales agent, fired on May 1, ordered $15,000 of goods on May 10 from a vendor he had dealt with for years. Linden never notified the vendor.
+2. A Linden salesperson orally agreed to sell a used oven to a restaurant for $1,800. The restaurant later refused to pay; nothing was signed.
+3. Linden mailed an acceptance of a supplier's offer on June 3; the supplier's revocation, mailed June 2, arrived June 5.
+4. Linden, a merchant, sent a signed written offer to sell mixers at $400 each, "firm for 60 days." On day 20 it tried to revoke.
+5. A Linden delivery driver, on his route, negligently injured a pedestrian.
+6. A creditor of the partnership sues partner Rosa personally for an unpaid partnership debt.
+7. Linden shipped goods FOB shipping point by common carrier; they were destroyed in transit.
+-- PART q (dropdown): Select the correct conclusion.
+   [s1] 1. Former agent's order => Linden is bound through apparent authority {Linden is bound through apparent authority | Linden isn't bound because actual authority ended | Only the former agent is bound, because he was fired} :: Third parties who dealt with the agent are entitled to actual notice of termination.
+   [s2] 2. Oral oven sale => Unenforceable under the statute of frauds (goods of $500 or more) unless an exception applies {Enforceable — it's under $5,000 | Unenforceable under the statute of frauds (goods of $500 or more) unless an exception applies | Enforceable because Linden is a merchant} :: UCC 2-201 requires a signed writing for goods of $500 or more.
+   [s3] 3. Acceptance vs. revocation => A contract formed on June 3 {A contract formed on June 3 | No contract — the revocation was mailed first | No contract — acceptance is effective on receipt} :: Acceptance is effective on dispatch; revocation only on receipt (June 5).
+   [s4] 4. Merchant's firm offer => The revocation is ineffective — the offer is irrevocable for the stated 60 days {The revocation is ineffective — the offer is irrevocable for the stated 60 days | The revocation is effective because there's no consideration | The offer was never valid} :: UCC 2-205 firm offer (up to 3 months).
+   [s5] 5. Driver's accident => Linden and the driver are both liable {Only the driver is liable | Linden and the driver are both liable | Only Linden is liable} :: Respondeat superior — within the scope of employment.
+   [s6] 6. Rosa's personal liability => Rosa is personally liable (joint and several liability of general partners) {Rosa isn't personally liable | Rosa is personally liable (joint and several liability of general partners) | Rosa is liable only for her ownership share} :: General partners have unlimited personal liability (creditors generally must first exhaust partnership assets).
+   [s7] 7. Goods destroyed in transit => The buyer bears the loss {Linden bears the loss | The buyer bears the loss | The loss is split} :: FOB shipping point: risk passed on delivery to the carrier.
+
+######## reg-tbs-u3-property-sales | practice | analysis
+INSTR: Luis Alvarez operates a machine shop as a sole proprietorship. In 2025 he sold the assets below (all business assets held more than one year unless stated). He had no §1231 losses in prior years. Enter losses as negative numbers.
+EXH[2025 sales]: | Asset | Cost | Accumulated depreciation | Sale price |
+|---|---:|---:|---:|
+| Lathe | 90,000 | 50,000 | 70,000 |
+| Drill press | 40,000 | 25,000 | 10,000 |
+| Shop building (straight-line) | 300,000 | 60,000 | 330,000 |
+| Land under a former parking lot | 100,000 | — | 120,000 |
+
+Personal investments: stock held 3 years sold at a $12,000 gain; stock held 6 months sold at a $7,000 loss.
+-- PART n (numeric): Compute the following.
+   [lathe] Ordinary income (§1245) on the lathe => 30000 (tol 0) :: Gain = 70,000 − 40,000 = 30,000, all recaptured (depreciation 50,000 exceeds the gain).
+   [drill] Gain (loss) on the drill press => -5000 (tol 0) :: 10,000 − 15,000 = **(5,000)**, a §1231 loss.
+   [bldg] Total gain on the building => 90000 (tol 0) :: 330,000 − 240,000 = **90,000** (all §1231; no ordinary recapture for an individual using straight-line).
+   [u1250] Unrecaptured §1250 gain on the building => 60000 (tol 0) :: Lesser of the 90,000 gain or 60,000 depreciation = **60,000** (taxed at up to 25%).
+   [n1231] Net §1231 gain => 105000 (tol 0) :: 90,000 + 20,000 (land) − 5,000 (drill press) = **105,000**, treated as long-term capital gain.
+   [ncg] Net capital gain for the year => 110000 (tol 0) :: 105,000 + 12,000 − 7,000 = **110,000**.
+-- PART c (dropdown): Classify each item.
+   [c1] Loss on the drill press => §1231 :: A loss on business property held more than one year; it nets with other §1231 items.
+   [c2] Recapture on the lathe => Ordinary :: §1245 recapture.
+   [c3] Loss on stock held 6 months => Short-term capital :: Held one year or less.
+   [c4] Gain on stock held 3 years => Long-term capital :: Held more than one year.
+   options: Ordinary | §1231 | Short-term capital | Long-term capital
+
+######## reg-tbs-u4-gross-income | practice | application | NEEDSREVIEW
+INSTR: Jordan Reyes, divorced in 2016, lives with her 12-year-old son, who lived with her all year; she paid all costs of their home. Classify each 2025 item and compute her gross income.
+EXH[2025 receipts]: | Item | Amount |
+|---|---:|
+| Wages | 68,000 |
+| Employer-paid health insurance premiums | 7,200 |
+| Employer-provided group-term life insurance ($40,000 of coverage) — cost | 180 |
+| Interest on City of Austin bonds | 1,500 |
+| Interest on corporate bonds | 900 |
+| State income tax refund (she itemized in 2024; the deduction reduced her tax in full) | 600 |
+| Inheritance from her aunt | 25,000 |
+| Gambling winnings | 2,000 |
+| Alimony received under the 2016 divorce decree | 12,000 |
+| Child support received | 6,000 |
+| Jury duty pay | 300 |
+-- PART inc (dropdown): Included in or excluded from gross income?
+   [i1] Employer-paid health insurance => Excluded :: §106.
+   [i2] Group-term life coverage of $40,000 => Excluded :: Coverage up to $50,000 is excluded.
+   [i3] City of Austin bond interest => Excluded :: §103 municipal interest.
+   [i4] State income tax refund => Included :: Tax benefit rule — the prior deduction reduced tax.
+   [i5] Inheritance => Excluded :: §102.
+   [i6] Alimony under the 2016 decree => Included :: Pre-2019 instruments: alimony remains income (unless modified to adopt the new rules).
+   [i7] Child support => Excluded :: Never income.
+   [i8] Jury duty pay => Included :: Compensation is income.
+   options: Included | Excluded
+-- PART n (numeric): Compute.
+   [gi] Jordan's 2025 gross income => 83800 (tol 0) :: 68,000 + 900 + 600 + 2,000 + 12,000 + 300 = **83,800**.
+-- PART fs (dropdown): Filing status and dependents
+   [f1] Jordan's filing status => Head of household {Single | Head of household | Qualifying surviving spouse} :: Unmarried, paid all costs of a home for a qualifying child who lived with her all year.
+   [f2] Her son is her => Qualifying child {Qualifying child | Qualifying relative | Not a dependent} :: Relationship, age, residency, and support tests are met.
+   [f3] Her 2025 basic standard deduction (post-OBBBA) => $23,625 {$15,750 | $23,625 | $31,500} :: Head-of-household amount for 2025.
+
+######## reg-tbs-u4-schedule-c-rental | practice | analysis
+INSTR: Marcus Bell, single, runs a consulting business as a sole proprietor and owns one rental house in which he actively participates. Compute his 2025 amounts. His MAGI for the passive loss allowance is **$130,000**, and he has no other passive income.
+EXH[Consulting business]: | Item | Amount |
+|---|---:|
+| Gross receipts | 180,000 |
+| Cost of materials resold to clients | 60,000 |
+| Office rent | 24,000 |
+| Wages of an assistant | 30,000 |
+| Meals with clients (business discussed) | 4,000 |
+| Tickets to sporting events for clients | 3,000 |
+| Penalty for late filing of a state business registration | 800 |
+EXH[Rental house]: - Rent collected: 24,000
+- Mortgage interest, taxes, repairs, insurance, and depreciation: 38,000
+- Personal use: none
+-- PART c (numeric): Consulting business.
+   [m] Deductible meals => 2000 (tol 0) :: 50% × 4,000 = **2,000**.
+   [e] Deductible entertainment => 0 (tol 0) :: Entertainment isn't deductible: **0**.
+   [np] Net profit (Schedule C) => 64000 (tol 0) :: 180,000 − 60,000 − 24,000 − 30,000 − 2,000 = **64,000** (the penalty isn't deductible).
+-- PART r (numeric): Rental house.
+   [rl] Rental loss before limitations (enter as positive) => 14000 (tol 0) :: 38,000 − 24,000 = **14,000**.
+   [al] Special allowance available => 10000 (tol 0) :: 25,000 − 50% × (130,000 − 100,000) = **10,000**.
+   [dd] Rental loss deductible in 2025 => 10000 (tol 0) :: Lesser of 14,000 or 10,000 = **10,000**.
+   [sus] Suspended passive loss carried forward => 4000 (tol 0) :: 14,000 − 10,000 = **4,000**.
+-- PART q (dropdown): Answer each question.
+   [q1] How is Marcus's self-employment tax deduction taken? => Half of SE tax as an adjustment for AGI {Half of SE tax as an adjustment for AGI | All of SE tax on Schedule C | As an itemized deduction} :: The employer-equivalent half is an above-the-line deduction.
+   [q2] If Marcus sells the rental to an unrelated buyer next year, the suspended loss is => Deductible in full in the year of sale {Lost | Deductible in full in the year of sale | Deductible only against capital gains} :: A fully taxable disposition releases suspended losses.
+
+######## reg-tbs-u5-credits-amt | practice | application
+INSTR: Compute the 2025 amounts for three unrelated clients, then classify the credits.
+EXH[Clients]: 1. **Dana** (MFJ, AGI $95,000; both spouses work) paid $7,200 of after-school care for two children, ages 9 and 11.
+2. **Eli** (single, MAGI $60,000) paid $5,000 of tuition for his first year of college (half-time) and $900 of required books.
+3. **Fay** (single) has 2025 taxable income of $180,000, which reflects $25,000 of state and local taxes deducted. She also exercised ISOs with a $90,000 bargain element and received $5,000 of private activity bond interest. Her regular tax is $36,000. Her AMT exemption isn't phased out; use 26% for AMTI up to $239,100 over the exemption.
+-- PART n (numeric): Compute.
+   [dc] Dana — child and dependent care credit => 1200 (tol 0) :: Expenses capped at 6,000 × 20% (AGI over $43,000) = **1,200**.
+   [ao] Eli — American opportunity credit => 2500 (tol 0) :: Qualified expenses 5,900 (tuition + required books): 2,000 + 25% × 2,000 = **2,500**.
+   [aor] Eli — refundable portion of the AOTC => 1000 (tol 0) :: 40% × 2,500 = **1,000**.
+   [amti] Fay — AMTI => 300000 (tol 0) :: 180,000 + 25,000 SALT + 90,000 ISO + 5,000 PAB interest = **300,000**.
+   [tmt] Fay — tentative minimum tax => 55094 (tol 1) :: (300,000 − 88,100) × 26% = **55,094**.
+   [amt] Fay — AMT => 19094 (tol 1) :: 55,094 − 36,000 = **19,094**.
+-- PART rf (dropdown): Classify each credit.
+   [r1] Child and dependent care credit (2025) => Nonrefundable :: It can't reduce tax below zero.
+   [r2] American opportunity credit => Partially refundable :: 40% is refundable.
+   [r3] Earned income credit => Refundable :: Fully refundable.
+   [r4] Lifetime learning credit => Nonrefundable :: It can't reduce tax below zero.
+   [r5] Child tax credit => Partially refundable :: The additional child tax credit is refundable up to $1,700 per child.
+   options: Refundable | Partially refundable | Nonrefundable
+
+######## reg-tbs-u5-taxable-income | practice | analysis | NEEDSREVIEW
+INSTR: Lin and Wei Chen file jointly for 2025. They have two children, ages 6 and 10. Compute the amounts below (round to the nearest dollar). Assume the QBI deduction is below the threshold and that QBI is net profit reduced by the deductible half of SE tax.
+EXH[Income]: - Combined wages: **$150,000**
+- Interest on a bank account: **$2,000**
+- Wei's Schedule C (graphic design) net profit: **$30,000**
+EXH[Payments]: | Item | Amount |
+|---|---:|
+| HSA contribution (family HDHP coverage), made by the Chens | 4,000 |
+| Unreimbursed medical expenses | 15,000 |
+| State income tax | 9,000 |
+| Real estate tax on their home | 8,000 |
+| Mortgage interest (acquisition debt $420,000) | 12,000 |
+| Cash contributions to their church | 3,000 |
+-- PART a (numeric): Compute AGI.
+   [se] Wei's self-employment tax => 4239 (tol 1) :: 30,000 × 92.35% × 15.3% = **4,239**.
+   [hse] Deduction for half of SE tax => 2119 (tol 1) :: 4,239 ÷ 2 ≈ **2,119**.
+   [agi] Adjusted gross income => 175881 (tol 2) :: 150,000 + 2,000 + 30,000 − 2,119 − 4,000 (HSA) = **175,881**.
+-- PART b (numeric): Compute deductions and taxable income.
+   [med] Deductible medical expenses => 1809 (tol 2) :: 15,000 − 7.5% × 175,881 (13,191) = **1,809**.
+   [it] Total itemized deductions => 33809 (tol 3) :: 1,809 + 17,000 (SALT under the $40,000 cap) + 12,000 + 3,000 = **33,809** — more than the $31,500 standard deduction, so they itemize.
+   [qbi] QBI deduction => 5576 (tol 2) :: 20% × (30,000 − 2,119) = **5,576** (less than 20% of taxable income before QBI).
+   [ti] Taxable income => 136496 (tol 5) :: 175,881 − 33,809 − 5,576 = **136,496**.
+-- PART c (numeric): Credits.
+   [ctc] Child tax credit => 4400 (tol 0) :: 2 × $2,200; MAGI is below $400,000: **4,400**.
+
+######## reg-tbs-u6-distributions-formation | practice | application
+INSTR: Answer the questions about three unrelated corporate events in 2025.
+EXH[Event 1 — Formation of Summit Corp.]: Cara transfers a building (adjusted basis $200,000; FMV $350,000) subject to an $80,000 mortgage that Summit assumes, and receives Summit stock worth $250,000 plus $20,000 cash. Dan transfers equipment worth $270,000 for the remaining stock. Together they own 100% of Summit.
+EXH[Event 2 — Distribution by Birch Corp.]: Birch has current E&P of $60,000 and accumulated E&P of $20,000. On December 31 it distributes $100,000 cash to its sole shareholder, whose stock basis is $50,000.
+EXH[Event 3 — Redemption by Cedar Corp.]: Cedar has 1,000 shares outstanding, owned by unrelated individuals: Gail 400, Hank 350, Ivy 250. Cedar redeems 200 of Gail's shares.
+-- PART f (numeric): Event 1 — Cara.
+   [rg] Cara's realized gain => 150000 (tol 0) :: 350,000 − 200,000 = **150,000**.
+   [rec] Cara's recognized gain => 20000 (tol 0) :: Boot is the 20,000 cash; the 80,000 mortgage is not boot and doesn't exceed basis: **20,000**.
+   [sb] Cara's basis in her Summit stock => 120000 (tol 0) :: 200,000 + 20,000 gain − 20,000 cash − 80,000 liability = **120,000**.
+   [cb] Summit's basis in the building => 220000 (tol 0) :: 200,000 + 20,000 gain recognized by Cara = **220,000**.
+-- PART d (numeric): Event 2 — Birch's distribution.
+   [dv] Dividend income => 80000 (tol 0) :: Current 60,000 + accumulated 20,000 = **80,000**.
+   [roc] Return of capital => 20000 (tol 0) :: The remaining 20,000 reduces basis.
+   [nb] Shareholder's remaining stock basis => 30000 (tol 0) :: 50,000 − 20,000 = **30,000**.
+-- PART r (dropdown): Event 3 — Gail's redemption.
+   [r1] Gail's ownership after the redemption => 25% {40% | 25% | 20%} :: 200 ÷ 800 = 25%.
+   [r2] Treatment => Sale or exchange — substantially disproportionate {Sale or exchange — substantially disproportionate | Dividend} :: 25% is below 50% and below 80% × 40% = 32%.
+
+######## reg-tbs-u7-partnership | practice | analysis
+INSTR: Maya is a 40% general partner in Oakline Partners, a calendar-year partnership. Compute the partnership's ordinary business income, Maya's K-1 amounts, and her ending basis.
+EXH[Oakline's 2025 results]: | Item | Amount |
+|---|---:|
+| Sales | 600,000 |
+| Cost of goods sold | 250,000 |
+| Operating expenses (salaries, rent, depreciation) | 110,000 |
+| Guaranteed payment to Maya for services | 30,000 |
+| §1231 gain | 20,000 |
+| Long-term capital gain | 15,000 |
+| Dividends | 5,000 |
+| Charitable contributions | 10,000 |
+| Tax-exempt interest | 4,000 |
+| §179 expense | 12,000 |
+EXH[Maya's basis information]: - Basis at January 1, 2025: **$60,000**
+- Her share of partnership liabilities increased by **$10,000** during 2025
+- Cash distributions to Maya (other than the guaranteed payment): **$70,000**
+-- PART k (numeric): Compute the K-1 amounts.
+   [obi] Partnership ordinary business income => 210000 (tol 0) :: 600,000 − 250,000 − 110,000 − 30,000 = **210,000**.
+   [mo] Maya's share of ordinary business income => 84000 (tol 0) :: 40% × 210,000 = **84,000**.
+   [m1231] Maya's share of §1231 gain => 8000 (tol 0) :: 40% × 20,000.
+   [m179] Maya's share of §179 expense => 4800 (tol 0) :: 40% × 12,000.
+   [se] Maya's self-employment income from Oakline => 114000 (tol 0) :: 84,000 + 30,000 guaranteed payment = **114,000** (general partner).
+-- PART b (numeric): Maya's outside basis.
+   [end] Ending basis at December 31, 2025 => 92800 (tol 0) :: 60,000 + 84,000 + 8,000 + 6,000 (LTCG) + 2,000 (dividends) + 1,600 (exempt interest) + 10,000 (liabilities) − 4,000 (charity) − 4,800 (§179) − 70,000 (distributions) = **92,800**. The guaranteed payment doesn't change basis.
+-- PART q (dropdown): Answer each question.
+   [q1] Is Maya taxed on the $70,000 cash distribution? => No — it's less than her basis {No — it's less than her basis | Yes — as ordinary income | Yes — as capital gain} :: Current distributions are tax-free to the extent of outside basis.
+   [q2] Where does Maya report her share of the charitable contributions? => As an itemized deduction on her own return {As an itemized deduction on her own return | As a reduction of ordinary business income | It's not deductible} :: Charitable contributions are separately stated.
+
+######## reg-tbs-u7-s-corp-gifts | practice | application
+INSTR: Tom Ridge owns 100% of Ridge Inc., a calendar-year S corporation that was a C corporation until 2021. Compute his 2025 amounts, then answer the gift tax questions.
+EXH[Ridge Inc. — 2025]: - Accumulated E&P from C corporation years: **$12,000**
+- AAA at January 1, 2025: **$20,000**
+- 2025 ordinary business income: **$50,000**
+- 2025 tax-exempt interest: **$3,000**
+- Tom's stock basis at January 1, 2025: **$40,000**
+- Distribution to Tom on December 31, 2025: **$90,000**
+EXH[Tom's 2025 gifts (Tom's wife consents to gift splitting)]: - $50,000 cash to his daughter
+- $20,000 paid directly to a hospital for his mother's surgery
+- $100,000 of stock to his wife (a U.S. citizen)
+-- PART s (numeric): S corporation distribution.
+   [aaa] AAA available before the distribution => 70000 (tol 0) :: 20,000 + 50,000 ordinary income = **70,000** (tax-exempt income doesn't increase AAA).
+   [bas] Stock basis before the distribution => 93000 (tol 0) :: 40,000 + 50,000 + 3,000 = **93,000**.
+   [div] Dividend portion of the distribution => 12000 (tol 0) :: After 70,000 from AAA, the next 12,000 comes from accumulated E&P.
+   [end] Tom's ending stock basis => 15000 (tol 0) :: 93,000 − 70,000 (AAA) − 8,000 (remaining amount from basis) = **15,000**; the dividend portion doesn't reduce basis.
+-- PART g (numeric): Gift tax.
+   [tg] Tom's taxable gift to his daughter (after splitting) => 6000 (tol 0) :: 50,000 ÷ 2 = 25,000 − 19,000 annual exclusion = **6,000**.
+   [hm] Taxable gift from paying the hospital => 0 (tol 0) :: Medical expenses paid directly are excluded: **0**.
+   [wf] Taxable gift to his wife => 0 (tol 0) :: Unlimited marital deduction: **0**.
+-- PART e (dropdown): Eligibility — does each event terminate Ridge Inc.'s S election?
+   [e1] Tom sells 10% of his shares to a partnership => Terminates the election :: A partnership is an ineligible shareholder.
+   [e2] Ridge issues nonvoting common stock with identical distribution rights => Doesn't terminate the election :: Voting differences don't create a second class of stock.
+   [e3] Tom gifts shares to 30 family members => Doesn't terminate the election :: Fewer than 100 shareholders, all eligible.
+   options: Terminates the election | Doesn't terminate the election
+
+######## reg-tbs-x1-procedures | exam | application
+INSTR: Answer the questions for clients of Quinn & Dale CPAs. Assume no reasonable cause, no fraud, and no extensions unless stated.
+EXH[Client facts]: 1. **Garza** filed her 2024 return on August 20, 2025 (due April 15, 2025), showing $10,000 of tax due, which she paid with the return.
+2. An IRS exam of **Hall**'s return found a $30,000 underpayment due to negligence.
+3. A Quinn & Dale preparer took an undisclosed position without substantial authority on a return for which the firm was paid $3,000.
+4. **Ives** filed his 2022 return on March 1, 2023 (due April 15, 2023). He omitted 10% of gross income.
+5. **Jin** received a statutory notice of deficiency and wants to contest it without paying first.
+-- PART p (numeric): Compute the penalties.
+   [ftp] Garza — failure-to-pay penalty => 250 (tol 0) :: 5 months (any part counts) × 0.5% × 10,000 = **250**.
+   [ftf] Garza — failure-to-file penalty after reduction => 2250 (tol 0) :: 5 × 4.5% × 10,000 = **2,250**.
+   [acc] Hall — accuracy-related penalty => 6000 (tol 0) :: 20% × 30,000 = **6,000**.
+   [prep] Preparer penalty (§6694(a)) => 1500 (tol 0) :: Greater of $1,000 or 50% × $3,000 = **1,500**.
+-- PART d (dropdown): Deadlines and forums
+   [d1] Last day for the IRS to assess Ives's 2022 tax => April 15, 2026 {March 1, 2026 | April 15, 2026 | April 15, 2029} :: 3 years from the due date (the 10% omission doesn't trigger the 6-year rule).
+   [d2] Jin's forum => U.S. Tax Court {U.S. Tax Court | U.S. District Court | Court of Federal Claims} :: No prepayment is required.
+   [d3] Jin's deadline to petition (U.S. address) => 90 days {30 days | 90 days | 3 years} :: §6213.
+-- PART c (dropdown): Is each practice permitted under Circular 230?
+   [c1] Charging Hall a contingent fee to represent him in the exam of his original return => Permitted :: An exception under §10.27.
+   [c2] Signing a return with a disclosed position that has a reasonable basis => Permitted :: Disclosed positions need only a reasonable basis.
+   [c3] Keeping Garza's W-2s until her unpaid fee is settled => Not permitted :: Client records needed for compliance must be returned.
+   options: Permitted | Not permitted
+
+######## reg-tbs-x2-business-law | exam | application
+INSTR: Select the best answer for each situation involving Westgate Supply, Inc.
+EXH[Situations]: 1. Westgate orally agreed to buy $3,000 of shelving; the seller later denied the deal. Nothing was signed.
+2. Westgate's purchasing manager (actual authority up to $10,000, which suppliers don't know about) signed a $15,000 order with a regular supplier.
+3. A lender perfected a security interest in Westgate's equipment by filing on May 1. A second lender, who lent first on April 20, filed on May 10.
+4. A seller delivered new equipment to Westgate on June 1 with a purchase-money security interest and filed on June 12.
+5. Thirty days before filing a Chapter 7 petition while insolvent, Westgate repaid a $20,000 overdue loan to its president.
+6. Westgate plans to sell $6 million of stock to 50 investors in a 12-month period, without advertising.
+-- PART q (dropdown): Select the correct conclusion.
+   [s1] 1. Oral shelving contract => Unenforceable under the statute of frauds unless an exception applies {Enforceable | Unenforceable under the statute of frauds unless an exception applies} :: Goods of $500 or more require a signed writing.
+   [s2] 2. The $15,000 order => Binding on Westgate through apparent authority {Binding on Westgate through apparent authority | Void because it exceeds actual authority | Binding only up to $10,000} :: Secret limits don't bind third parties who reasonably rely.
+   [s3] 3. Priority between lenders => The first lender to file (May 1) {The first lender to file (May 1) | The lender that lent first (April 20)} :: First to file or perfect.
+   [s4] 4. The equipment seller's PMSI => Has priority over both lenders in the new equipment {Has priority over both lenders in the new equipment | Is subordinate to both lenders} :: A PMSI in equipment perfected within 20 days of delivery.
+   [s5] 5. The repayment to the president => Recoverable by the trustee as a preferential transfer {Recoverable by the trustee as a preferential transfer | Protected because it was within 90 days} :: An insider payment within 1 year while insolvent for an antecedent debt.
+   [s6] 6. The stock offering => May rely on Rule 504 {Must be registered with the SEC | May rely on Rule 504 | Is exempt as commercial paper} :: Rule 504 covers up to $10 million in 12 months.
+
+######## reg-tbs-x3-property | exam | analysis
+INSTR: Kurt Nolan, a sole proprietor, had the 2025 transactions below. All business assets were held more than one year. He has $10,000 of nonrecaptured net §1231 losses from 2022. Enter losses as negative numbers.
+EXH[Sales of business property]: | Asset | Cost | Accumulated depreciation | Sale price |
+|---|---:|---:|---:|
+| Barn (straight-line) | 400,000 | 100,000 | 450,000 |
+| Tractor | 60,000 | 45,000 | 20,000 |
+| Land used in the business | 50,000 | — | 35,000 |
+EXH[Exchange]: Kurt exchanged investment land (basis $100,000; FMV $250,000) for a rental building worth $230,000 plus $20,000 cash.
+-- PART n (numeric): Compute.
+   [barn] Gain on the barn => 150000 (tol 0) :: 450,000 − 300,000 = **150,000** (§1231).
+   [u1250] Unrecaptured §1250 gain on the barn => 100000 (tol 0) :: Lesser of gain or depreciation = **100,000**.
+   [tr] Ordinary income on the tractor (§1245) => 5000 (tol 0) :: 20,000 − 15,000 = 5,000 gain, all recapture.
+   [land] Gain (loss) on the land => -15000 (tol 0) :: 35,000 − 50,000 = **(15,000)** §1231 loss.
+   [n1231] Net §1231 gain => 135000 (tol 0) :: 150,000 − 15,000 = **135,000**.
+   [look] Portion of net §1231 gain treated as ordinary (lookback) => 10000 (tol 0) :: Prior nonrecaptured §1231 losses: **10,000**.
+   [rec] Gain recognized on the exchange => 20000 (tol 0) :: Lesser of realized 150,000 or 20,000 cash boot.
+   [bas] Basis of the rental building => 100000 (tol 0) :: 230,000 − 130,000 deferred = **100,000**.
+
+######## reg-tbs-x4-individual | exam | analysis | NEEDSREVIEW
+INSTR: Sam and Pat Lee are married, file jointly, have no dependents, and are under 65. Compute their 2025 amounts. Use a standard deduction of $31,500.
+EXH[Income]: - Wages: **$140,000**
+- Qualified dividends: **$3,000**
+- Taxable interest: **$1,000**
+- Interest on municipal bonds: **$2,000**
+- Long-term capital gain: **$5,000**; short-term capital loss: **$9,000**
+EXH[Payments]: - Student loan interest: **$2,500**
+- Classroom supplies bought by Pat, a public school teacher: **$450**
+- Unreimbursed medical expenses: **$12,000**
+- State income and real estate taxes: **$9,500**
+- Home mortgage interest (acquisition debt): **$11,000**
+- Cash charitable contributions: **$4,000**
+-- PART n (numeric): Compute.
+   [gi] Gross income => 141000 (tol 0) :: 140,000 + 3,000 + 1,000 − 3,000 (net capital loss limit) = **141,000**; municipal interest is excluded.
+   [agi] Adjusted gross income => 138200 (tol 0) :: 141,000 − 2,500 student loan interest − 300 educator expenses = **138,200**.
+   [med] Deductible medical expenses => 1635 (tol 1) :: 12,000 − 7.5% × 138,200 (10,365) = **1,635**.
+   [it] Total itemized deductions => 26135 (tol 1) :: 1,635 + 9,500 + 11,000 + 4,000 = **26,135**.
+   [ded] Deduction used (standard or itemized) => 31500 (tol 0) :: The standard deduction (31,500) is larger.
+   [ti] Taxable income => 106700 (tol 0) :: 138,200 − 31,500 = **106,700**.
+   [cl] Capital loss carryforward to 2026 => 1000 (tol 0) :: Net capital loss 4,000 − 3,000 deducted = **1,000** (short-term).
+
+######## reg-tbs-x5-corporate | exam | analysis
+INSTR: Keystone Corp. reports 2025 book net income of **$800,000**. Compute taxable income and tax.
+EXH[Items included in book net income]: | Item | Amount |
+|---|---:|
+| Federal income tax expense | 200,000 |
+| Municipal bond interest | 20,000 |
+| Dividends from a 10%-owned domestic corporation | 40,000 |
+| Premiums on key-person life insurance (Keystone is beneficiary) | 6,000 |
+| Fines | 4,000 |
+| Business meals | 14,000 |
+| Charitable contributions (cash) | 60,000 |
+| Book depreciation | 100,000 |
+EXH[Other]: Tax depreciation is **$150,000**. There are no carryovers.
+-- PART n (numeric): Compute.
+   [pre] Taxable income before charitable contributions and DRD => 1007000 (tol 0) :: 800,000 + 200,000 − 20,000 + 6,000 + 4,000 + 7,000 + 60,000 − 50,000 = **1,007,000**.
+   [ch] Charitable deduction => 60000 (tol 0) :: Limit 100,700; all 60,000 is deductible.
+   [drd] Dividends-received deduction => 20000 (tol 0) :: 50% × 40,000 = **20,000**.
+   [ti] Taxable income => 927000 (tol 0) :: 1,007,000 − 60,000 − 20,000 = **927,000**.
+   [tax] Income tax => 194670 (tol 0) :: 927,000 × 21% = **194,670**.
+
+######## reg-tbs-x5-flowthrough | exam | analysis
+INSTR: Answer the questions for two unrelated owners of flow-through entities in 2025.
+EXH[Ann — Jade Inc. (S corporation, never a C corporation)]: Ann owns 60%. Her stock basis at January 1 was **$20,000**, and she has a **$15,000** direct loan to Jade. Jade's 2025 results: ordinary loss $(70,000); long-term capital gain $5,000; tax-exempt interest $2,000; nondeductible expenses $1,000. No distributions.
+EXH[Leo — Harbor Partners]: Leo sells his 25% interest for **$90,000** cash. His outside basis, including his **$20,000** share of partnership liabilities, is **$50,000**. His share of the partnership's unrealized receivables and inventory appreciation (§751) is **$8,000**.
+-- PART a (numeric): Ann.
+   [sb] Stock basis before the loss => 23600 (tol 0) :: 20,000 + 3,000 LTCG + 1,200 exempt interest − 600 nondeductible = **23,600**.
+   [al] Deductible share of the ordinary loss => 38600 (tol 0) :: Stock basis 23,600 + debt basis 15,000 = **38,600** of her 42,000 share.
+   [sus] Suspended loss => 3400 (tol 0) :: 42,000 − 38,600 = **3,400**.
+-- PART l (numeric): Leo.
+   [ar] Amount realized => 110000 (tol 0) :: 90,000 cash + 20,000 liabilities relieved = **110,000**.
+   [g] Total gain => 60000 (tol 0) :: 110,000 − 50,000 = **60,000**.
+   [ord] Ordinary income (§751) => 8000 (tol 0) :: Hot assets: **8,000**.
+   [cap] Capital gain => 52000 (tol 0) :: 60,000 − 8,000 = **52,000**.
+
+######## reg-tbs-x5-research | exam | application
+INSTR: Select the governing authority and the filing deadlines for the clients described.
+EXH[Clients]: 1. **Rae** (single) sold her principal residence after owning and living in it 14 months because her employer transferred her to another state. Her gain is $180,000.
+2. A calendar-year partnership, S corporation, C corporation, and a trust each need to know their 2025 return due dates (no extensions).
+-- PART res (research): Which excerpt (paraphrased for study) lets Rae exclude part of her gain?
+   EXC a [IRC §121(a) (paraphrase)]: Gross income doesn't include gain from the sale of property owned and used as the taxpayer's principal residence for periods aggregating 2 years or more during the 5-year period ending on the date of sale.
+   EXC b [IRC §121(c) (paraphrase)]: If a sale doesn't meet the 2-year requirements but is due to a change in place of employment, health, or unforeseen circumstances, a reduced maximum exclusion applies, prorated by the portion of the 2-year period met.
+   EXC c [IRC §1031(a) (paraphrase)]: No gain or loss is recognized on the exchange of real property held for productive use in a trade or business or for investment for real property of like kind.
+   EXC d [IRC §1033(a) (paraphrase)]: If property is involuntarily converted and the proceeds are reinvested in similar property within the replacement period, gain is recognized only to the extent the amount realized exceeds the cost of the replacement property.
+   ANSWER b :: Rae doesn't meet the 2-year tests but moved for employment — §121(c) provides a prorated exclusion (14/24 × $250,000 = $145,833).
+-- PART n (numeric): Compute.
+   [ex] Rae's maximum exclusion (round to the nearest dollar) => 145833 (tol 1) :: 14 ÷ 24 × 250,000 = **145,833**; recognized gain ≈ 34,167.
+-- PART due (dropdown): Select each 2025 return's unextended due date (calendar-year filers).
+   [p] Partnership (Form 1065) => March 15, 2026 :: 15th day of the 3rd month.
+   [s] S corporation (Form 1120-S) => March 15, 2026 :: 15th day of the 3rd month.
+   [c] C corporation (Form 1120) => April 15, 2026 :: 15th day of the 4th month.
+   [t] Trust (Form 1041) => April 15, 2026 :: 15th day of the 4th month.
+   [e] Tax-exempt organization (Form 990) => May 15, 2026 :: 15th day of the 5th month.
+   options: March 15, 2026 | April 15, 2026 | May 15, 2026

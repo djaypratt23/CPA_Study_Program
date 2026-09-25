@@ -1,0 +1,389 @@
+{
+  "dashboard/light": [],
+  "course/light": [],
+  "module/light": [
+    {
+      "id": "landmark-complementary-is-top-level",
+      "impact": "moderate",
+      "help": "Aside should not be contained in another landmark",
+      "nodes": [
+        {
+          "target": [
+            "aside[aria-label=\"Pre-question — best guess\"]"
+          ],
+          "summary": "Fix any of the following:\n  The complementary landmark is contained in another landmark.",
+          "html": "<aside class=\"my-6 rounded-xl border-2 border-dashed border-blue-300 bg-white p-4 dark:border-blue-800 dark:bg-slate-900\" aria-label=\"Pre-question — best guess\">"
+        }
+      ]
+    },
+    {
+      "id": "landmark-unique",
+      "impact": "moderate",
+      "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+      "nodes": [
+        {
+          "target": [
+            ".rounded-xl.border-2[aria-label=\"Check your understanding\"]:nth-child(9)"
+          ],
+          "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+          "html": "<aside class=\"my-6 rounded-xl border-2 border-dashed border-blue-300 bg-white p-4 dark:border-blue-800 dark:bg-slate-900\" aria-label=\"Check your understanding\">"
+        }
+      ]
+    }
+  ],
+  "quiz/light": [
+    {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "help": "Page should contain a level-one heading",
+      "nodes": [
+        {
+          "target": [
+            "html"
+          ],
+          "summary": "Fix all of the following:\n  Page must have a level-one heading",
+          "html": "<html lang=\"en\" style=\"font-size: 16px;\">"
+        }
+      ]
+    }
+  ],
+  "quiz-revealed/light": [
+    {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "help": "Page should contain a level-one heading",
+      "nodes": [
+        {
+          "target": [
+            "html"
+          ],
+          "summary": "Fix all of the following:\n  Page must have a level-one heading",
+          "html": "<html lang=\"en\" style=\"font-size: 16px;\">"
+        }
+      ]
+    }
+  ],
+  "practice-builder/light": [],
+  "review/light": [],
+  "flashcards/light": [],
+  "flashcard-player/light": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".bg-rose-600 > .text-\\[11px\\].font-normal.opacity-90"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #fde6ec, background color: #ec003f, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<span class=\"text-[11px] font-normal opacity-90\">1m</span>"
+        },
+        {
+          "target": [
+            ".bg-amber-600"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.2 (foreground color: #ffffff, background color: #e17100, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<button class=\"btn flex-col gap-0 text-white bg-amber-600 hover:bg-amber-700\">Hard<span class=\"text-[11px] font-normal opacity-90\">6m</span></button>"
+        },
+        {
+          "target": [
+            ".bg-amber-600 > .text-\\[11px\\].font-normal.opacity-90"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.87 (foreground color: #fcf1e6, background color: #e17100, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<span class=\"text-[11px] font-normal opacity-90\">6m</span>"
+        },
+        {
+          "target": [
+            ".bg-emerald-600"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.69 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<button class=\"btn flex-col gap-0 text-white bg-emerald-600 hover:bg-emerald-700\">Good<span class=\"text-[11px] font-normal opacity-90\">10m</span></button>"
+        }
+      ]
+    },
+    {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "help": "Page should contain a level-one heading",
+      "nodes": [
+        {
+          "target": [
+            "html"
+          ],
+          "summary": "Fix all of the following:\n  Page must have a level-one heading",
+          "html": "<html lang=\"en\" style=\"font-size: 16px;\">"
+        }
+      ]
+    }
+  ],
+  "tbs/light": [
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": [
+            "h3"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid",
+          "html": "<h3 class=\"mb-2 font-semibold\">Comparative balance sheet data</h3>"
+        }
+      ]
+    }
+  ],
+  "tbs-submitted/light": [
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": [
+            ".mb-2"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid",
+          "html": "<h3 class=\"mb-2 font-semibold\">Comparative balance sheet data</h3>"
+        }
+      ]
+    }
+  ],
+  "exam-home/light": [],
+  "exam-mcq/light": [],
+  "analytics/light": [],
+  "settings/light": [],
+  "plan/light": [],
+  "search/light": [],
+  "glossary/light": [
+    {
+      "id": "definition-list",
+      "impact": "serious",
+      "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+      "nodes": [
+        {
+          "target": [
+            "dl"
+          ],
+          "summary": "Fix all of the following:\n  dl element has direct children that are not allowed: div > a",
+          "html": "<dl class=\"space-y-3\">"
+        }
+      ]
+    }
+  ],
+  "dashboard/dark": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".text-blue-100"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.29 (foreground color: #dbeafe, background color: #155dfc, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<div class=\"mt-1 truncate text-blue-100\">Lesson: Conceptual framework &amp; standard setting</div>"
+        }
+      ]
+    }
+  ],
+  "course/dark": [],
+  "module/dark": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            "foreignobject[width=\"200\"][height=\"21\"] > .labelBkg > .edgeLabel > p"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #cccccc, background color: #585858, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<p>recognizes as GAAP setter</p>"
+        },
+        {
+          "target": [
+            "foreignobject[width=\"200\"][height=\"42\"] > .labelBkg > .edgeLabel > p"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #cccccc, background color: #585858, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<p>proposes private-company alternatives, FASB endorses</p>"
+        },
+        {
+          "target": [
+            "foreignobject[width=\"48.59375\"] > .labelBkg > .edgeLabel > p"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #cccccc, background color: #585858, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<p>amend</p>"
+        }
+      ]
+    },
+    {
+      "id": "landmark-complementary-is-top-level",
+      "impact": "moderate",
+      "help": "Aside should not be contained in another landmark",
+      "nodes": [
+        {
+          "target": [
+            "aside[aria-label=\"Pre-question — best guess\"]"
+          ],
+          "summary": "Fix any of the following:\n  The complementary landmark is contained in another landmark.",
+          "html": "<aside class=\"my-6 rounded-xl border-2 border-dashed border-blue-300 bg-white p-4 dark:border-blue-800 dark:bg-slate-900\" aria-label=\"Pre-question — best guess\">"
+        }
+      ]
+    },
+    {
+      "id": "landmark-unique",
+      "impact": "moderate",
+      "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+      "nodes": [
+        {
+          "target": [
+            ".rounded-xl.border-2[aria-label=\"Check your understanding\"]:nth-child(9)"
+          ],
+          "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+          "html": "<aside class=\"my-6 rounded-xl border-2 border-dashed border-blue-300 bg-white p-4 dark:border-blue-800 dark:bg-slate-900\" aria-label=\"Check your understanding\">"
+        }
+      ]
+    }
+  ],
+  "quiz/dark": [
+    {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "help": "Page should contain a level-one heading",
+      "nodes": [
+        {
+          "target": [
+            "html"
+          ],
+          "summary": "Fix all of the following:\n  Page must have a level-one heading",
+          "html": "<html lang=\"en\" class=\"dark\" style=\"font-size: 16px;\">"
+        }
+      ]
+    }
+  ],
+  "quiz-revealed/dark": [
+    {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "help": "Page should contain a level-one heading",
+      "nodes": [
+        {
+          "target": [
+            "html"
+          ],
+          "summary": "Fix all of the following:\n  Page must have a level-one heading",
+          "html": "<html lang=\"en\" class=\"dark\" style=\"font-size: 16px;\">"
+        }
+      ]
+    }
+  ],
+  "practice-builder/dark": [],
+  "review/dark": [],
+  "flashcards/dark": [],
+  "flashcard-player/dark": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".bg-rose-600 > .text-\\[11px\\].font-normal.opacity-90"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #fde6ec, background color: #ec003f, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<span class=\"text-[11px] font-normal opacity-90\">1m</span>"
+        },
+        {
+          "target": [
+            ".bg-amber-600"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.2 (foreground color: #ffffff, background color: #e17100, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<button class=\"btn flex-col gap-0 text-white bg-amber-600 hover:bg-amber-700\">Hard<span class=\"text-[11px] font-normal opacity-90\">6m</span></button>"
+        },
+        {
+          "target": [
+            ".bg-amber-600 > .text-\\[11px\\].font-normal.opacity-90"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.87 (foreground color: #fcf1e6, background color: #e17100, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<span class=\"text-[11px] font-normal opacity-90\">6m</span>"
+        },
+        {
+          "target": [
+            ".bg-emerald-600"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.69 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "html": "<button class=\"btn flex-col gap-0 text-white bg-emerald-600 hover:bg-emerald-700\">Good<span class=\"text-[11px] font-normal opacity-90\">10m</span></button>"
+        }
+      ]
+    },
+    {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "help": "Page should contain a level-one heading",
+      "nodes": [
+        {
+          "target": [
+            "html"
+          ],
+          "summary": "Fix all of the following:\n  Page must have a level-one heading",
+          "html": "<html lang=\"en\" class=\"dark\" style=\"font-size: 16px;\">"
+        }
+      ]
+    }
+  ],
+  "tbs/dark": [
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": [
+            "h3"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid",
+          "html": "<h3 class=\"mb-2 font-semibold\">Comparative balance sheet data</h3>"
+        }
+      ]
+    }
+  ],
+  "tbs-submitted/dark": [
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": [
+            ".mb-2"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid",
+          "html": "<h3 class=\"mb-2 font-semibold\">Comparative balance sheet data</h3>"
+        }
+      ]
+    }
+  ],
+  "exam-home/dark": [],
+  "exam-mcq/dark": [],
+  "analytics/dark": [],
+  "settings/dark": [],
+  "plan/dark": [],
+  "search/dark": [],
+  "glossary/dark": [
+    {
+      "id": "definition-list",
+      "impact": "serious",
+      "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+      "nodes": [
+        {
+          "target": [
+            "dl"
+          ],
+          "summary": "Fix all of the following:\n  dl element has direct children that are not allowed: div > a",
+          "html": "<dl class=\"space-y-3\">"
+        }
+      ]
+    }
+  ]
+}

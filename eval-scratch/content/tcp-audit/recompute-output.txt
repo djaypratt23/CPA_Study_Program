@@ -1,0 +1,73 @@
+OK       tcp-x1-21                AOTC                                                    computed=2,250.00 key=2,250.00 
+OK       tcp-ip-04                NIIT                                                    computed=1,140.00 key=1,140.00 
+OK       tcp-sc-01                ordinary                                                computed=14,000.00 key=14,000.00 
+OK       tcp-sc-01                LTCG                                                    computed=7,500.00 key=7,500.00 
+OK       tcp-x2-06                A basis                                                 computed=25,000.00 key=25,000.00 
+OK       tcp-eo-03                UBTI                                                    computed=50,000.00 key=50,000.00 
+OK       tcp-cc-04                M-2 ending RE                                           computed=600,000.00 key=600,000.00 
+OK       tcp-po-01                OBI                                                     computed=250,000.00 key=250,000.00 
+OK       tcp-x3-04                gain                                                    computed=20,000.00 key=20,000.00 
+OK       tcp-x3-04                stock basis                                             computed=0.00 key=0.00 
+OK       tcp-x4-05                recognized                                              computed=0.00 key=0.00 
+OK       tcp-x4-05                new basis                                               computed=240,000.00 key=240,000.00 
+OK       tcp-cr2-01               yr1 dep                                                 computed=10,000.00 key=10,000.00 
+MISMATCH tcp-cr2-01               distractor d 'mid-quarter' check                        computed=12,500.00 key=6,667.00 Q2 mid-quarter = 12,500, not 6,667 -> choice-d rationale wrong
+OK       tcp-fl-10                after % < 80% of 45%                                    computed=30.00 key=30.00 80% x 45% = 36.0%; shares redeemed/100 = 21.43
+OK       u2-gift-709              son                                                     computed=11,000.00 key=11,000.00 
+OK       u2-gift-709              dau                                                     computed=0.00 key=0.00 
+OK       u2-gift-709              ch                                                      computed=0.00 key=0.00 
+OK       u2-gift-709              lt (Luis)                                               computed=11,000.00 key=11,000.00 
+OK       u2-gift-709              at (Ana)                                                computed=11,000.00 key=11,000.00 
+OK       u2-gift-709              loss (sell 25k; FMV 30k < basis 40k)                    computed=5,000.00 key=5,000.00 
+OK       u2-gift-709              d3 tentative tax on 11,000 (covered by credit)          computed=2,000.00 key=2,000.00 unified credit covers -> $0 payable
+OK       u3-est-consol            i1                                                      computed=100,000.00 key=100,000.00 
+OK       u3-est-consol            i2                                                      computed=200,000.00 key=200,000.00 
+OK       u3-est-consol            i3                                                      computed=150,000.00 key=150,000.00 
+OK       u3-est-consol            i4                                                      computed=150,000.00 key=150,000.00 
+OK       u3-est-consol            cti                                                     computed=700,000.00 key=700,000.00 
+OK       u3-est-consol            tax                                                     computed=147,000.00 key=147,000.00 
+MISMATCH u3-est-consol            EXHIBIT CONSISTENCY: expected 2025 consolidated tax vs computed computed=147,000.00 key=600,000.00 Exhibit says Pine 'expects $600,000 of 2025 tax (consolidated)' but part c computes 2025 consolidated tax = 147,000; on actual tax of 147,000 the minimum installments would be 36,750 each (lesser of current-year tax)
+OK       u6-multistate            eq %                                                    computed=25.00 key=25.00 
+OK       u6-multistate            eqi                                                     computed=750,000.00 key=750,000.00 
+OK       u6-multistate            dw %                                                    computed=23.75 key=23.75 
+OK       u6-multistate            ss % with throwback                                     computed=25.00 key=25.00 
+MISMATCH u6-multistate            ALT: eq % if throwback also applied (label silent)      computed=26.67 key=25.00 26.67% -> label ambiguity
+OK       u6-multistate            cg (Lark §336)                                          computed=300,000.00 key=300,000.00 
+OK       u6-multistate            sg (Mo §331)                                            computed=350,000.00 key=350,000.00 
+OK       x4-property              e §1245                                                 computed=80,000.00 key=80,000.00 
+OK       x4-property              w291                                                    computed=40,000.00 key=40,000.00 
+OK       x4-property              w1231                                                   computed=310,000.00 key=310,000.00 
+OK       x4-property              net §1231                                               computed=260,000.00 key=260,000.00 
+OK       x4-property              xg                                                      computed=50,000.00 key=50,000.00 
+OK       x4-property              xb                                                      computed=400,000.00 key=400,000.00 
+OK       x4-property              dep (formula)                                           computed=79,167.00 key=79,167.00 
+MISMATCH x4-property              dep via IRS Table A-7a (2.033%)                         computed=79,287.00 key=79,167.00 tolerance 0 rejects table result 79,287 and unrounded 79,166.67
+OK       x2-corporate             pre                                                     computed=650,000.00 key=650,000.00 
+MISMATCH x2-corporate             ch (charitable deduction)                               computed=45,000.00 key=65,000.00 key uses 10% x 650,000; base should be net of $200,000 NOL carryforward
+MISMATCH x2-corporate             m1 (line 28)                                            computed=605,000.00 key=585,000.00 
+MISMATCH x2-corporate             ti                                                      computed=372,500.00 key=352,500.00 80% NOL limit = 458,000 (not binding)
+MISMATCH x2-corporate             tax                                                     computed=78,225.00 key=74,025.00 carryforward of charity = 25,000 (key says 5,000)
+OK       u2-ret-edu               ded                                                     computed=2,800.00 key=2,800.00 
+OK       u2-ret-edu               exc                                                     computed=3,000.00 key=3,000.00 
+OK       u2-ret-edu               pen                                                     computed=1,700.00 key=1,700.00 
+OK       u2-ret-edu               tx                                                      computed=2,400.00 key=2,400.00 
+MISMATCH u2-ret-edu               d3 RMD age for Leo (age 50, born ~1975)                 computed=75.00 key=73.00 SECURE 2.0 §107: 75 for those born 1960+; option '75' absent
+OK       tcp-x1-15                donee basis                                             computed=74,444.44 key=74,444.00 
+OK       tcp-x1-18                SEP                                                     computed=22,304.40 key=22,304.00 
+OK       tcp-x1-18                half SE tax                                             computed=8,477.73 key=8,478.00 
+OK       tcp-pa-05                EBL MFJ 2025                                            computed=274,000.00 key=274,000.00 
+OK       tcp-x1-22                SALT                                                    computed=25,000.00 key=25,000.00 
+OK       tcp-x4-08                §179                                                    computed=1,900,000.00 key=1,900,000.00 
+OK       tcp-cr2-chk1             §179                                                    computed=2,200,000.00 key=2,200,000.00 
+OK       tcp-ec-06                §1202                                                   computed=8,000,000.00 key=8,000,000.00 
+OK       u5-trust                 DNI                                                     computed=63,000.00 key=63,000.00 
+OK       u5-trust                 TI                                                      computed=29,900.00 key=29,900.00 
+OK       u4-k1                    Anika end basis                                         computed=146,400.00 key=146,400.00 
+OK       u5-s-corp                stock basis                                             computed=25,000.00 key=25,000.00 
+OK       u7-exch                  realized                                                computed=550,000.00 key=550,000.00 
+OK       u7-exch                  basis                                                   computed=350,000.00 key=350,000.00 
+OK       x3-entity                pct                                                     computed=22.50 key=22.50 
+OK       tbsScoring.parseAmount   input '25'                                              computed=25.00 key=25.00 percent rows: '%' or decimal entry scored wrong
+MISMATCH tbsScoring.parseAmount   input '25%'                                             computed=nan key=25.00 percent rows: '%' or decimal entry scored wrong
+MISMATCH tbsScoring.parseAmount   input '0.25'                                            computed=0.25 key=25.00 percent rows: '%' or decimal entry scored wrong
+MISMATCH tbsScoring.parseAmount   input '23.75%'                                          computed=nan key=25.00 percent rows: '%' or decimal entry scored wrong

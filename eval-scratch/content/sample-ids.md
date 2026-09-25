@@ -1,0 +1,18 @@
+# Accuracy-audit sample (seed 20260923)
+
+## FAR: 25 MCQs + 3 TBS
+MCQs: far-x1-17 (FAR-I, exam), far-con-04 (FAR-I, practice), far-cf-03 (FAR-I, practice), far-eps-11 (FAR-I, practice), far-iso-06 (FAR-I, practice), far-nfs-01 (FAR-I, practice), far-gov-09 (FAR-I, practice), far-bse-03 (FAR-I, practice), far-nd-10 (FAR-I, practice), far-rat-04 (FAR-I, practice), far-x2-12 (FAR-II, exam), far-iv-07 (FAR-II, practice), far-rec-08 (FAR-II, practice), far-bond-09 (FAR-II, practice), far-dsec-08 (FAR-II, practice), far-inv-01 (FAR-II, practice), far-dbt-08 (FAR-II, practice), far-bond-08 (FAR-II, practice), far-inv-03 (FAR-II, practice), far-x3-05 (FAR-III, exam), far-cont-02 (FAR-III, practice), far-tax-10 (FAR-III, practice), far-rev2-05 (FAR-III, practice), far-lso-01 (FAR-III, practice), far-fv-07 (FAR-III, practice)
+TBS: far-tbs-u1-cash-flows (practice), far-tbs-u7-debt-securities (practice), far-tbs-u9-bundle (practice)
+
+## AUD: 25 MCQs + 4 TBS
+MCQs: aud-x1-05 (AUD-I, exam), aud-coc-11 (AUD-I, practice), aud-ea-03 (AUD-I, practice), aud-coc-02 (AUD-I, practice), aud-x2-22 (AUD-II, exam), aud-rr-10 (AUD-II, practice), aud-itc-09 (AUD-II, practice), aud-toc-06 (AUD-II, practice), aud-rr-01 (AUD-II, practice), aud-rr-02 (AUD-II, practice), aud-rr-05 (AUD-II, practice), aud-x3-09 (AUD-III, exam), aud-x3-04 (AUD-III, exam), aud-cash-01 (AUD-III, practice), aud-gc-10 (AUD-III, practice), aud-gc-09 (AUD-III, practice), aud-sa-04 (AUD-III, practice), aud-le-05 (AUD-III, practice), aud-uo-10 (AUD-III, practice), aud-gc-04 (AUD-III, practice), aud-x4-03 (AUD-IV, exam), aud-cm-05 (AUD-IV, practice), aud-uo2-02 (AUD-IV, practice), aud-at-03 (AUD-IV, practice), aud-ss-01 (AUD-IV, practice)
+TBS: aud-tbs-x1-independence (exam), aud-tbs-x2-controls (exam), aud-tbs-u8-subsequent-events (practice), aud-tbs-x7-draft-report (exam)
+
+## REG: 25 MCQs + 5 TBS
+MCQs: reg-x1-09 (REG-I, exam), reg-c230-07 (REG-I, practice), reg-irs-08 (REG-I, practice), reg-pen-01 (REG-I, practice), reg-x2-14 (REG-II, exam), reg-ag-09 (REG-II, practice), reg-fr-07 (REG-II, practice), reg-ag-08 (REG-II, practice), reg-bs-03 (REG-II, practice), reg-x3-01 (REG-III, exam), reg-pb-03 (REG-III, practice), reg-cg-03 (REG-III, practice), reg-x4-04 (REG-IV, exam), reg-x4-13 (REG-IV, exam), reg-gi-07 (REG-IV, practice), reg-ot-07 (REG-IV, practice), reg-fs-05 (REG-IV, practice), reg-id-02 (REG-IV, practice), reg-bri-07 (REG-IV, practice), reg-x5-20 (REG-V, exam), reg-x5-12 (REG-V, exam), reg-cc-09 (REG-V, practice), reg-cc-02 (REG-V, practice), reg-te-03 (REG-V, practice), reg-te-06 (REG-V, practice)
+TBS: reg-tbs-u1-procedures (practice), reg-tbs-u2-bankruptcy (practice), reg-tbs-u3-exchanges (practice), reg-tbs-x4-family (exam), reg-tbs-u6-corporate-ti (practice)
+
+## TCP: 25 MCQs + 4 TBS
+MCQs: tcp-x1-24 (TCP-I, exam), tcp-x1-21 (TCP-I, exam), tcp-ip-04 (TCP-I, practice), tcp-sc-01 (TCP-I, practice), tcp-re-11 (TCP-I, practice), tcp-sc-11 (TCP-I, practice), tcp-pa-09 (TCP-I, practice), tcp-x2-06 (TCP-II, exam), tcp-x2-17 (TCP-II, exam), tcp-te-06 (TCP-II, practice), tcp-sc2-07 (TCP-II, practice), tcp-pf-01 (TCP-II, practice), tcp-eo-03 (TCP-II, practice), tcp-cc-04 (TCP-II, practice), tcp-po-01 (TCP-II, practice), tcp-po-05 (TCP-II, practice), tcp-pf-05 (TCP-II, practice), tcp-x3-04 (TCP-III, exam), tcp-ms-04 (TCP-III, practice), tcp-ms-07 (TCP-III, practice), tcp-fl-10 (TCP-III, practice), tcp-x4-05 (TCP-IV, exam), tcp-dt-08 (TCP-IV, practice), tcp-cr2-01 (TCP-IV, practice), tcp-dt-09 (TCP-IV, practice)
+TBS: tcp-tbs-u2-gift-709 (practice), tcp-tbs-u3-estimates-consolidated (practice), tcp-tbs-u6-multistate-liquidation (practice), tcp-tbs-x4-property (exam)
+

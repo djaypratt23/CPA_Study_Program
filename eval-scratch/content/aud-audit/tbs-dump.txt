@@ -1,0 +1,548 @@
+##### aud-tbs-u1-independence | Independence issues — Brightline CPAs
+INSTR: Brightline CPAs audits **Coastal Savings Bank**, a private company, under AICPA standards. For each situation, determine whether Brightline's independence with respect to Coastal is impaired under the AICPA Code, and identify the primary threat.
+EXH Situations reported by Brightline personnel : 1. Audit manager Ruiz has a Coastal credit card with a $4,200 balance, paid in full each month.
+2. Staff accountant Ono's spouse inherited 50 shares of Coastal common stock eight months ago and plans to keep them.
+3. Tax partner Kent (not on the audit, in another office) spent 6 hours on Coastal's tax return.
+4. Audit senior Patel's father is Coastal's chief lending officer.
+5. Coastal still owes Brightline for tax work completed 16 months before the upcoming report date.
+6. Brightline prepared Coastal's financial statements from its trial balance; Coastal's CFO, a former auditor, reviewed and approved them.
+7. Engagement partner Vail obtained a new home mortgage from Coastal on normal terms.
+8. Brightline's benefit plan holds an immaterial investment in a mutual fund that owns Coastal bonds.
+ PART dropdown imp : Is Brightline's independence impaired? | opts: ['Independence impaired', 'Independence not impaired']
+   - s1 1. Credit card, $4,200 => Independence not impaired | opts:  | Credit card balances of $10,000 or less (reduced to that level by the payment due date) are permitted loans.
+   - s2 2. Spouse's 50 shares => Independence impaired | opts:  | A spouse is immediate family; any direct financial interest impairs independence. Inherited interests avoid impairment only if disposed of as soon as practicable (no later than 30 days after the right to dispose); these are being kept.
+   - s3 3. Tax partner, 6 hours => Independence not impaired | opts:  | Kent is not a covered member: fewer than 10 hours of nonattest services, not in the lead partner's office, and not on the team.
+   - s4 4. Father is chief lending officer => Independence impaired | opts:  | A close relative in a key position impairs the covered member's independence; Patel must be removed from the team.
+   - s5 5. Fees unpaid for 16 months => Independence impaired | opts:  | Unpaid fees for services rendered more than one year before the current report date impair independence.
+   - s6 6. Statement preparation with a qualified CFO => Independence not impaired | opts:  | Nonattest services are permitted when the client designates an individual with suitable SKE, who evaluates and takes responsibility for the results.
+   - s7 7. Home mortgage => Independence impaired | opts:  | A home mortgage from a client lender is not a permitted loan.
+   - s8 8. Immaterial indirect interest => Independence not impaired | opts:  | Indirect financial interests impair independence only if material.
+ PART dropdown thr : Identify the primary threat created in each situation. | opts: ['Self-interest', 'Self-review', 'Familiarity', 'Management participation', 'Adverse interest']
+   - t2 2. Spouse's stock => Self-interest | opts:  | A financial stake in the client's results.
+   - t4 4. Father is chief lending officer => Familiarity | opts:  | A close personal relationship with someone in a key position.
+   - t5 5. Unpaid fees => Self-interest | opts:  | The firm has a financial interest in the client's ability to pay.
+   - t6 6. Statement preparation => Self-review | opts:  | The firm audits statements it prepared.
+ PART research res : Which excerpt (paraphrased for study) resolves situation 7? | opts: None
+   ex a ET 1.260 (paraphrase) : Independence is impaired if a covered member has a loan to or from an attest client that is a lender, other than grandfathered loans or permitted loans such as 
+   ex b ET 1.230 (paraphrase) : Independence is impaired if fees for professional services rendered more than one year before the current-year report date are unpaid.
+   ex c ET 1.270 (paraphrase) : Independence is impaired if an individual on the attest engagement team has a close relative in a key position with the client.
+   ex d ET 1.295 (paraphrase) : Before performing nonattest services, the member should establish and document in writing the understanding with the client.
+   ANSWER a | The mortgage is a loan from a client lender that is neither grandfathered nor on the permitted list.
+##### aud-tbs-u1-issuer | Services to a public company — Summit Industries
+INSTR: Dale & Frost LLP audits **Summit Industries**, an SEC registrant. Summit's audit committee has asked about additional services and staffing changes. Evaluate each item under SEC and PCAOB rules, then review the draft memo to the audit committee.
+EXH Requests from Summit : 1. Prepare Summit's federal and state income tax returns.
+2. Perform a valuation of intangible assets acquired in a business combination.
+3. Perform Summit's internal audit function for one year.
+4. Issue a comfort letter for a planned bond offering.
+5. Prepare the personal tax return of Summit's CFO.
+6. Provide expert testimony in Summit's patent litigation.
+7. Design and implement Summit's new financial reporting system.
+EXH Staffing facts : - Partner Ames has led the audit for 5 consecutive years.
+- Partner Brooks, the engagement quality reviewer, has served 3 years.
+- Partner Cho (another audit partner) has served 7 consecutive years.
+ PART dropdown svc : Classify each requested service. | opts: ['Prohibited', 'Permitted with audit committee pre-approval']
+   - r1 1. Corporate income tax returns => Permitted with audit committee pre-approval | opts:  | Tax compliance is permitted, subject to pre-approval and the PCAOB tax rules.
+   - r2 2. Valuation of intangibles => Prohibited | opts:  | Valuation services would have the auditor audit its own work.
+   - r3 3. Internal audit outsourcing => Prohibited | opts:  | Internal audit outsourcing is a prohibited service.
+   - r4 4. Comfort letter => Permitted with audit committee pre-approval | opts:  | An audit-related service that is permitted.
+   - r5 5. CFO's personal return => Prohibited | opts:  | PCAOB Rule 3523: no tax services to a person in a financial reporting oversight role.
+   - r6 6. Expert testimony in patent litigation => Prohibited | opts:  | Expert services unrelated to the audit are prohibited (advocacy).
+   - r7 7. Financial reporting system design => Prohibited | opts:  | Financial information systems design and implementation is prohibited.
+ PART docreview memo : Review the draft memo to Summit's audit committee. Correct any errors. | opts: None
+   txt: **To the Audit Committee — Partner rotation.** Partner Ames has served as lead engagement partner for five years and 
+   [ m1 ] orig: may continue for two more years =>  must rotate off the engagement for five years | opts: ['may continue for two more years', 'must rotate off the engagement for five years', 'must rotate off the engagement for two years'] | Lead partners serve a maximum of 5 consecutive years, followed by a 5-year time-out.
+   txt: . Partner Brooks, the engagement quality reviewer, 
+   [ m2 ] orig: must also rotate this year =>  may continue for two more years | opts: ['must also rotate this year', 'may continue for two more years', 'must rotate after seven years'] | The EQR partner has served only 3 of the 5 permitted years.
+   txt: . Partner Cho has served seven years and 
+   [ m3 ] orig: must rotate off for two years =>  must rotate off for two years | opts: ['must rotate off for two years', 'must rotate off for five years', 'is not subject to rotation'] | Other audit partners: 7 years on, 2 years off.
+   txt: . All audit and permitted nonaudit services 
+   [ m4 ] orig: may be approved by the CFO =>  must be pre-approved by the audit committee | opts: ['may be approved by the CFO', 'must be pre-approved by the audit committee', 'need approval only if fees exceed audit fees'] | SOX Section 202 requires audit committee pre-approval; it cannot be delegated to management.
+   txt: .
+##### aud-tbs-u10-attestation | Attestation and special reports — Whitfield & Co.
+INSTR: Whitfield & Co. (a CPA firm) receives the requests below. Select the most appropriate engagement or report feature, then identify the governing guidance for one request.
+EXH Requests : 1. A cloud payroll provider wants a report for its customers' auditors on controls relevant to customers' financial reporting, including operating effectiveness over a year.
+2. A hospital system wants a publicly posted report on its data security controls.
+3. A lender wants specific procedures performed on a borrower's inventory records, with the findings reported — no opinion.
+4. A startup wants a CPA's report on its "what-if" statements assuming it wins a major contract, for use in negotiations with one investor.
+5. A private partnership wants its tax-basis statements audited for its members.
+6. A landlord wants an audit of a tenant's gross sales, which determine percentage rent.
+ PART dropdown eng : Select the best-fitting engagement or report. | opts: ['SOC 1 Type 2 examination', 'SOC 3 examination', 'Agreed-upon procedures engagement', 'Examination of a financial projection (restricted use)', 'Audit of special purpose (tax-basis) statements', 'Audit of a specific element (AU-C 805)']
+   - e1 1. Payroll provider — controls relevant to financial reporting, operating effectiveness => SOC 1 Type 2 examination | opts:  | SOC 1 addresses controls relevant to user entities' ICFR; Type 2 covers operating effectiveness.
+   - e2 2. Publicly posted security report => SOC 3 examination | opts:  | SOC 3 is a general-use report on the Trust Services Criteria.
+   - e3 3. Specified procedures with findings only => Agreed-upon procedures engagement | opts:  | AUP engagements report findings without assurance.
+   - e4 4. "What-if" statements for one investor => Examination of a financial projection (restricted use) | opts:  | Hypothetical assumptions make it a projection, restricted to parties negotiating directly with the entity.
+   - e5 5. Tax-basis statements => Audit of special purpose (tax-basis) statements | opts:  | AU-C 800 applies.
+   - e6 6. Tenant's gross sales => Audit of a specific element (AU-C 805) | opts:  | A single element (gross sales) with materiality set relative to it.
+ PART research res : Which excerpt (paraphrased for study) explains why request 4 must be restricted in use? | opts: None
+   ex a AT-C 305 (paraphrase) : A financial projection is appropriate only for the responsible party and parties negotiating directly with it; the practitioner's report on a projection should 
+   ex b AU-C 800 (paraphrase) : The auditor's report on special purpose financial statements should include an emphasis-of-matter paragraph that alerts users to the basis of accounting.
+   ex c AT-C 215 (paraphrase) : The engaging party should acknowledge that the agreed-upon procedures are appropriate for the intended purpose of the engagement.
+   ex d AU-C 805 (paraphrase) : The auditor should determine materiality for the single financial statement or specific element being reported on.
+   ANSWER a | Projections rest on hypothetical assumptions and are restricted to parties negotiating directly with the responsible party.
+##### aud-tbs-u10-ssars | Choosing the service — Martin & Oakes CPAs
+INSTR: Martin & Oakes CPAs serves several private clients. For each statement, select the **one** engagement type it best describes. Then decide how the firm should handle each client situation.
+EXH Client situations : 1. The firm's partner owns 10% of **Birchwood Bakery**, which wants compiled statements for its landlord.
+2. **Delta Printing** wants reviewed statements for its bank; the firm is independent. Analytics show gross margin rising from 22% to 34% with no clear explanation.
+3. **Easton Farms** wants statements prepared for internal use; the owner doesn't want a report.
+4. **Fulton Rentals** wants compiled statements that omit substantially all disclosures.
+ PART dropdown typ : Which engagement does each statement describe? | opts: ['Preparation', 'Compilation', 'Review', 'Audit']
+   - t1 Provides limited assurance based primarily on inquiry and analytical procedures => Review | opts:  | Reviews provide limited assurance.
+   - t2 No report is required; each page states that no assurance is provided => Preparation | opts:  | AR-C 70.
+   - t3 A report is issued, no assurance is provided, and a lack of independence can be disclosed => Compilation | opts:  | AR-C 80.
+   - t4 Requires obtaining an understanding of internal control and reasonable assurance => Audit | opts:  | Audits provide reasonable assurance under GAAS.
+ PART dropdown sit : Select the appropriate response for each client. | opts: None
+   - s1 Birchwood Bakery => Compile and disclose the lack of independence in the report | opts: ['Decline — independence is required', 'Compile and disclose the lack of independence in the report', 'Review instead'] | Compilations permit a disclosed independence impairment.
+   - s2 Delta Printing's unexplained margin increase => Perform additional procedures until the accountant has limited assurance | opts: ['Issue the review report — reviews are limited', 'Perform additional procedures until the accountant has limited assurance', 'Convert to an audit automatically'] | AR-C 90 requires more procedures when information appears incorrect or unsatisfactory.
+   - s3 Easton Farms => Perform a preparation engagement with a "no assurance" legend on each page | opts: ['Perform a preparation engagement with a "no assurance" legend on each page', 'Issue a compilation report', 'Refuse — a report is always required'] | AR-C 70 requires no report.
+   - s4 Fulton Rentals => Permitted — the report states that substantially all disclosures are omitted | opts: ['Not permitted', 'Permitted — the report states that substantially all disclosures are omitted', 'Permitted with no mention in the report'] | AR-C 80 allows omission if disclosed and not intended to mislead.
+ PART dropdown req : Is each item required in a review engagement? | opts: ['Required', 'Not required']
+   - r1 A management representation letter => Required | opts:  | AR-C 90 requires written representations.
+   - r2 Confirmation of receivables => Not required | opts:  | Confirmations are audit procedures.
+   - r3 A written engagement letter => Required | opts:  | All SSARS engagements require one.
+   - r4 Independence => Required | opts:  | Reviews provide assurance.
+##### aud-tbs-u2-engagement-letter | New client acceptance — Lindqvist Marine
+INSTR: Your firm has been asked to audit **Lindqvist Marine, Inc.**, a privately held boat manufacturer, for the year ending December 31, Year 1. Lindqvist's prior auditor audited Year 0. Review the draft engagement letter and decide which inquiries of the predecessor are required before acceptance.
+EXH Background : - Lindqvist changed auditors after a disagreement with the predecessor about warranty reserves.
+- Management has authorized the predecessor to respond to your inquiries.
+- Lindqvist prepares its statements under U.S. GAAP.
+ PART docreview letter : Review the draft engagement letter. For each highlighted phrase, keep it or select the correct replacement. | opts: None
+   txt: We will audit the financial statements of Lindqvist Marine, Inc. in accordance with 
+   [ e1 ] orig: PCAOB auditing standards =>  auditing standards generally accepted in the United States of America | opts: ['PCAOB auditing standards', 'auditing standards generally accepted in the United States of America', 'Statements on Standards for Accounting and Review Services'] | A private company is audited under AICPA GAAS; PCAOB standards apply to issuers.
+   txt: . The objective of our audit is to obtain 
+   [ e2 ] orig: absolute assurance =>  reasonable assurance | opts: ['absolute assurance', 'reasonable assurance', 'limited assurance'] | Audits provide reasonable (high, but not absolute) assurance. Limited assurance is a review.
+   txt:  about whether the financial statements as a whole are free from material misstatement, whether due to fraud or error. 
+   [ e3 ] orig: Because of the inherent limitations of an audit, an unavoidable risk exists that some material misstatements may not be detected =>  Because of the inherent limitations of an audit, an unavoidable risk exists that some material misstatements may not be detected | opts: ['Because of the inherent limitations of an audit, an unavoidable risk exists that some material misstatements may not be detected', 'Our audit is designed to detect all misstatements, including immaterial ones', 'We guarantee the detection of all fraud'] | Inherent limitations are a required term in the engagement letter.
+   txt: . Management is responsible for 
+   [ e4 ] orig: the design, implementation, and maintenance of internal control relevant to the preparation of the financial statements =>  the design, implementation, and maintenance of internal control relevant to the preparation of the financial statements | opts: ['the design, implementation, and maintenance of internal control relevant to the preparation of the financial statements', "reviewing the auditor's internal control documentation only", 'nothing beyond signing the representation letter'] | Internal control responsibility is part of the premise of the audit.
+   txt: , for the preparation and fair presentation of the financial statements, and for providing us with 
+   [ e5 ] orig: access only to the accounting records we specifically request in advance =>  access to all relevant information, additional information we request, and unrestricted access to persons within the entity | opts: ['access only to the accounting records we specifically request in advance', 'access to all relevant information, additional information we request, and unrestricted access to persons within the entity'] | Management must provide unrestricted access; limited access would be a scope limitation.
+   txt: .
+ PART dropdown inq : Is each inquiry of the predecessor required before accepting the engagement? | opts: ['Required before acceptance', 'Not required before acceptance']
+   - q1 Information bearing on the integrity of management => Required before acceptance | opts:  | A required inquiry.
+   - q2 Disagreements with management about accounting policies (e.g., warranty reserves) => Required before acceptance | opts:  | A required inquiry — especially relevant here.
+   - q3 The predecessor's understanding of the reason for the change in auditors => Required before acceptance | opts:  | A required inquiry.
+   - q4 Access to the predecessor's working papers for inventory => Not required before acceptance | opts:  | Reviewing working papers is requested after acceptance.
+   - q5 Communications to those charged with governance about fraud and noncompliance => Required before acceptance | opts:  | A required inquiry.
+   - q6 The fee the predecessor charged for the Year 0 audit => Not required before acceptance | opts:  | Fees are not a required inquiry.
+##### aud-tbs-u2-quality | System of quality management — Reed & Alvarez CPAs
+INSTR: Reed & Alvarez CPAs is designing its system of quality management under SQMS No. 1 and SQMS No. 2. Classify each policy by component, then evaluate the proposed engagement quality reviewers.
+EXH Proposed firm policies : 1. Partner compensation is tied to quality ratings as well as revenue.
+2. Before accepting a client, the firm evaluates the integrity of its principal owners.
+3. The firm buys audit software and trains staff to use it.
+4. All staff confirm their independence annually in writing.
+5. Selected completed engagements are inspected each year, and the root causes of findings are analyzed.
+6. The firm requires consultation with the national office on complex revenue issues.
+7. Quality objectives and quality risks are updated annually as the firm's practice changes.
+EXH Proposed EQ reviewers for the Year 3 audit of Pinecrest Clinics : - **Hale** — engagement partner for Years 1 and 2 of the Pinecrest audit
+- **Irwin** — senior manager on the Year 3 Pinecrest team
+- **Jiang** — partner in another office with health-care expertise, no involvement with Pinecrest
+- **Kerr** — engagement partner on Pinecrest four years ago (Year −1)
+ PART dropdown comp : Select the component each policy primarily addresses. | opts: ['Governance and leadership', "The firm's risk assessment process", 'Relevant ethical requirements', 'Acceptance and continuance', 'Engagement performance', 'Resources', 'Monitoring and remediation']
+   - p1 1. Compensation tied to quality => Governance and leadership | opts:  | Leadership's accountability and incentives support a culture of quality.
+   - p2 2. Evaluating owners' integrity => Acceptance and continuance | opts:  | Client integrity is evaluated before acceptance.
+   - p3 3. Audit software and training => Resources | opts:  | Technological and human resources.
+   - p4 4. Annual independence confirmations => Relevant ethical requirements | opts:  | Independence is a relevant ethical requirement.
+   - p5 5. Inspections and root-cause analysis => Monitoring and remediation | opts:  | Evaluating the system and remediating deficiencies.
+   - p6 6. Required consultation => Engagement performance | opts:  | Consultation on difficult matters is part of engagement performance.
+   - p7 7. Updating objectives and risks => The firm's risk assessment process | opts:  | Establishing objectives and identifying and assessing risks.
+ PART dropdown eqr : May each person serve as the Year 3 EQ reviewer? | opts: ['Eligible', 'Not eligible']
+   - r1 Hale => Not eligible | opts:  | Engagement partner within the past two years; the cooling-off period has not passed.
+   - r2 Irwin => Not eligible | opts:  | A member of the engagement team cannot be the EQ reviewer.
+   - r3 Jiang => Eligible | opts:  | Competent, objective, and not involved in the engagement.
+   - r4 Kerr => Eligible | opts:  | More than two years have passed since Kerr was engagement partner.
+ PART research res : Which excerpt (paraphrased for study) supports your conclusion about Hale? | opts: None
+   ex a QM 20 (SQMS No. 2) (paraphrase) : The firm's policies should require a cooling-off period of two years, or longer if required by ethical requirements, before an individual who served as engageme
+   ex b QM 10 (SQMS No. 1) (paraphrase) : The firm should establish quality objectives that address the acceptance and continuance of client relationships and specific engagements.
+   ex c AU-C 220 (paraphrase) : The engagement partner should take overall responsibility for managing and achieving quality on the audit engagement.
+   ex d ET 1.200.001 (paraphrase) : A member in public practice should be independent in the performance of professional services as required by standards promulgated by bodies designated by Counc
+   ANSWER a | SQMS No. 2 imposes the two-year cooling-off period for former engagement partners.
+##### aud-tbs-u3-analytics | Planning analytics — Norhaven Distributors
+INSTR: You are planning the Year 2 audit of **Norhaven Distributors**. Compute the ratios and identify the account and assertion each result most directly puts at risk. Use a 365-day year and round ratios to one decimal place (percentages to one decimal).
+EXH Selected data : | | Year 2 | Year 1 |
+|---|---:|---:|
+| Net sales (all on credit) | 9,125,000 | 8,030,000 |
+| Cost of sales | 5,840,000 | 5,621,000 |
+| Accounts receivable, year-end | 1,500,000 | 880,000 |
+| Inventory, year-end | 1,460,000 | 1,124,000 |
+| Allowance for credit losses | 30,000 | 44,000 |
+
+Industry gross margins were flat at about 30% in both years.
+ PART numeric r : Compute the Year 2 amounts. | opts: None
+   - gm Gross margin % (Year 2) => 36.0 | opts:  | (9,125,000 − 5,840,000) ÷ 9,125,000 = **36.0%** (Year 1: 30.0%).
+   - dso Days sales outstanding (Year 2) => 60.0 | opts:  | 1,500,000 ÷ (9,125,000 ÷ 365 = 25,000) = **60.0 days** (Year 1: 880,000 ÷ 22,000 = 40.0).
+   - dsi Days sales in inventory (Year 2, using year-end inventory) => 91.3 | opts:  | 1,460,000 ÷ (5,840,000 ÷ 365 = 16,000) = **91.3 days** (Year 1: 1,124,000 ÷ 15,400 = 73.0).
+   - alw Allowance as a % of receivables (Year 2) => 2.0 | opts:  | 30,000 ÷ 1,500,000 = **2.0%** (Year 1: 44,000 ÷ 880,000 = 5.0%).
+ PART dropdown risk : For each finding, select the account and assertion most at risk. | opts: ['Revenue — occurrence', 'Receivables — valuation (allowance)', 'Inventory — valuation', 'Cost of sales — completeness', 'Accounts payable — existence']
+   - k1 Gross margin rose to 36% while the industry stayed at 30% => Revenue — occurrence | opts:  | An inflated margin suggests fictitious or early revenue (or, alternatively, understated cost of sales).
+   - k2 The allowance fell from 5% to 2% of receivables while collections slowed => Receivables — valuation (allowance) | opts:  | A shrinking allowance on slower collections points to an understated allowance.
+   - k3 Days in inventory rose from 73 to 91 days => Inventory — valuation | opts:  | Slower-moving inventory raises obsolescence and write-down risk.
+##### aud-tbs-u3-risk-materiality | Materiality and the risk response — Tallis Foods
+INSTR: You are setting materiality and planning responses for the audit of **Tallis Foods**, a stable, profitable private company. Firm policy: overall materiality = 5% of pretax income from continuing operations; performance materiality = 75% of overall; clearly trivial = 5% of overall.
+EXH Data : - Pretax income from continuing operations: **$3,200,000**
+- Planned audit risk for inventory existence: 5%
+- Assessed inherent risk: 100%; assessed control risk: 20% (controls tested and effective)
+EXH Risk assessments : | Assertion | Inherent risk | Control risk |
+|---|---|---|
+| Revenue cut-off | High | High (no reliance) |
+| Prepaid insurance existence | Low | Maximum (not tested) |
+| Inventory existence | High | Low (tested) |
+ PART numeric m : Compute the thresholds and detection risk. | opts: None
+   - om Overall materiality => 160000 | opts:  | 3,200,000 × 5% = **160,000**.
+   - pm Performance materiality => 120000 | opts:  | 160,000 × 75% = **120,000**.
+   - ct Clearly trivial threshold => 8000 | opts:  | 160,000 × 5% = **8,000**.
+   - dr Acceptable detection risk for inventory existence (%) => 25 | opts:  | DR = 5% ÷ (100% × 20%) = **25%**.
+ PART dropdown resp : Select the most appropriate substantive approach for each assertion. | opts: ['Extensive tests of details at year-end with larger samples', 'Moderate testing, possibly at an interim date', 'Limited substantive procedures (e.g., analytics)']
+   - a1 Revenue cut-off => Extensive tests of details at year-end with larger samples | opts:  | High RMM → low acceptable detection risk → the most persuasive evidence at year-end.
+   - a2 Prepaid insurance existence => Limited substantive procedures (e.g., analytics) | opts:  | Low inherent risk and a small balance allow less extensive procedures — but some substantive work is still required for material items.
+   - a3 Inventory existence => Moderate testing, possibly at an interim date | opts:  | Effective controls reduce RMM, permitting some reduction in the extent of testing.
+ PART dropdown qual : Evaluate each uncorrected misstatement. | opts: ['Accumulate and evaluate', 'Need not be accumulated']
+   - u1 A $6,500 overstatement of accrued expenses => Need not be accumulated | opts:  | Below the $8,000 clearly trivial threshold.
+   - u2 A $40,000 understatement of revenue => Accumulate and evaluate | opts:  | Above clearly trivial; accumulate even though it is below materiality.
+   - u3 A $7,000 misstatement that causes Tallis to meet a debt covenant => Accumulate and evaluate | opts:  | Qualitative factors can make a small misstatement material; it is not clearly inconsequential.
+##### aud-tbs-u4-controls | Purchasing and disbursements controls — Granite Tool Co.
+INSTR: You are documenting internal control over purchasing and cash disbursements at **Granite Tool Co.**, a private manufacturer. Identify the control objective each control addresses, match errors to the application controls that would catch them, and classify deficiencies.
+EXH Process narrative : 1. Department heads submit purchase requisitions; the purchasing agent issues prenumbered purchase orders (POs) only for approved requisitions.
+2. The receiving clerk counts goods and prepares a prenumbered receiving report; the clerk sees a copy of the PO with **quantities blanked out**.
+3. Accounts payable matches the PO, receiving report, and vendor invoice (three-way match) before recording the liability.
+4. The **accounts payable clerk** can add new vendors to the vendor master file **and** prepares checks for signature.
+5. The treasurer signs checks after reviewing supporting documents, then **cancels** the documents.
+6. Programmers at Granite can move program changes directly into production without approval.
+ PART dropdown obj : Select the primary control objective of each control. | opts: ['Prevent payment for goods not received', 'Prevent duplicate payment', 'Ensure purchases are authorized', 'Ensure an independent count of goods received']
+   - o1 1. POs issued only for approved requisitions => Ensure purchases are authorized | opts:  | Authorization of purchases before commitment.
+   - o2 2. Blind copy of the PO for receiving => Ensure an independent count of goods received | opts:  | A blind copy forces the clerk to count rather than copy the ordered quantities.
+   - o3 3. Three-way match before recording => Prevent payment for goods not received | opts:  | The liability is recorded only when goods were ordered, received, and invoiced.
+   - o4 5. Canceling documents after signing => Prevent duplicate payment | opts:  | Canceled documents can't be resubmitted for payment.
+ PART dropdown app : Which application control would detect each error? | opts: ['Validity check against the vendor master file', 'Check digit', 'Limit test', 'Record count']
+   - a1 An invoice keyed with a nonexistent vendor number => Validity check against the vendor master file | opts:  | A validity check rejects values not in the master file.
+   - a2 Vendor number 40718 keyed as 47018 => Check digit | opts:  | Check digits detect transposed digits.
+   - a3 An invoice from a batch of 25 was never keyed => Record count | opts:  | The count of 24 won't match the batch control of 25.
+   - a4 A $98,000 invoice for office supplies (normally under $5,000) => Limit test | opts:  | A limit test flags amounts above a set maximum.
+ PART dropdown def : Evaluate the design of each item. | opts: ['Deficiency — likely significant deficiency or material weakness', 'Effective control']
+   - d1 4. AP clerk maintains the vendor master file and prepares checks => Deficiency — likely significant deficiency or material weakness | opts:  | The clerk could create a fictitious vendor and prepare checks to it — incompatible duties.
+   - d2 6. Unapproved program changes => Deficiency — likely significant deficiency or material weakness | opts:  | An ITGC failure; automated controls such as the three-way match can't be relied on without more testing.
+   - d3 2. Blind receiving copy => Effective control | opts:  | It forces an independent count.
+   - d4 5. Treasurer reviews support and cancels documents => Effective control | opts:  | Authorization of payment with protection against reuse.
+##### aud-tbs-u4-fraud | Fraud risk assessment — Vantage Apparel
+INSTR: During planning for the audit of **Vantage Apparel**, the engagement team gathered the facts below. Classify the fraud risk factors, select the required responses, and identify the governing guidance.
+EXH Engagement team notes : 1. Vantage must maintain a current ratio of 1.5 under its loan agreement; it was 1.52 last year.
+2. The CEO dominates management and the board has no independent members.
+3. The CFO told the team, "Every company in our industry books revenue when orders are received."
+4. The company's warehouse has no inventory cage and no cameras; high-value jackets are stored with other goods.
+5. Management's stock options vest only if annual revenue grows 15%.
+6. Bank reconciliations are prepared by the cashier, who also records receipts.
+ PART dropdown tri : Classify each fact by fraud triangle element. | opts: ['Incentive or pressure', 'Opportunity', 'Attitude or rationalization']
+   - f1 1. Debt covenant => Incentive or pressure | opts:  | Pressure to meet a financial ratio.
+   - f2 2. CEO dominance, no independent board => Opportunity | opts:  | Ineffective oversight creates the opportunity for override.
+   - f3 3. "Everyone books revenue early" => Attitude or rationalization | opts:  | A rationalization for aggressive accounting.
+   - f4 4. No physical safeguards over inventory => Opportunity | opts:  | Weak physical controls allow theft.
+   - f5 5. Options vest on 15% growth => Incentive or pressure | opts:  | A personal financial incentive tied to reported results.
+   - f6 6. Cashier reconciles and records => Opportunity | opts:  | Incompatible duties allow concealment.
+ PART dropdown type : Which type of fraud does each fact most directly relate to? | opts: ['Fraudulent financial reporting', 'Misappropriation of assets']
+   - t1 1. Debt covenant => Fraudulent financial reporting | opts:  | The pressure is to misstate the ratio.
+   - t4 4. Unsecured high-value inventory => Misappropriation of assets | opts:  | Theft of inventory.
+   - t5 5. Options vest on revenue growth => Fraudulent financial reporting | opts:  | The incentive is to inflate revenue.
+   - t6 6. Cashier reconciles and records => Misappropriation of assets | opts:  | Theft of cash concealed in the records.
+ PART dropdown resp : Is each procedure required by AU-C 240 in every audit? | opts: ['Required in every audit', 'Not specifically required']
+   - r1 Test the appropriateness of journal entries and other adjustments => Required in every audit | opts:  | A required response to management override.
+   - r2 Perform a retrospective review of prior-year accounting estimates => Required in every audit | opts:  | A required response to management override.
+   - r3 Engage a forensic specialist => Not specifically required | opts:  | A possible response to heightened risk, but not required in every audit.
+   - r4 Evaluate the business rationale for significant unusual transactions => Required in every audit | opts:  | A required response to management override.
+   - r5 Perform surprise cash counts => Not specifically required | opts:  | A possible response, not required in every audit.
+ PART research res : Which excerpt (paraphrased for study) requires the auditor to treat revenue as a fraud risk at Vantage? | opts: None
+   ex a AU-C 240 (paraphrase) : When identifying and assessing the risks of material misstatement due to fraud, the auditor should, based on a presumption that there are risks of fraud in reve
+   ex b AU-C 240 (paraphrase) : Irrespective of the assessment of the risks of management override, the auditor should design and perform audit procedures to test journal entries, review estim
+   ex c AU-C 265 (paraphrase) : The auditor should communicate in writing to those charged with governance significant deficiencies and material weaknesses identified during the audit.
+   ex d AU-C 315 (paraphrase) : The auditor should identify and assess the risks of material misstatement at the financial statement level and at the assertion level.
+   ANSWER a | The revenue-recognition presumption requires Vantage's revenue to be treated as a fraud risk; excerpt b addresses the separate override procedures.
+##### aud-tbs-u5-estimates | Estimates and related parties — Beacon Medical Supply
+INSTR: You are evaluating estimates and related-party matters in the audit of **Beacon Medical Supply**. Overall materiality is **$150,000**. Enter misstatements as positive numbers.
+EXH Estimates : | Estimate | Management | Auditor's evidence |
+|---|---:|---|
+| Warranty reserve | 520,000 | Reasonable range 560,000–700,000 |
+| Inventory obsolescence reserve | 310,000 | Supported point estimate 290,000 |
+| Allowance for credit losses | 185,000 | Reasonable range 170,000–210,000 |
+
+Retrospective review: last year's warranty reserve was 380,000; actual claims were 505,000.
+EXH Related-party information : - Beacon leases its warehouse from an LLC owned by the CEO's spouse, at a rent 40% above market.
+- On December 29, Beacon sold surplus equipment to a company controlled by a director for $900,000; the equipment's appraised value is $450,000.
+- The CFO's salary and expense reimbursements follow an approved employment contract.
+ PART numeric mis : Compute the minimum likely misstatement for each estimate. | opts: None
+   - w Warranty reserve (understatement) => 40000 | opts:  | 520,000 is below the 560,000 low end: misstatement of at least **40,000**.
+   - o Obsolescence reserve (overstatement) => 20000 | opts:  | 310,000 − 290,000 supported point estimate = **20,000**.
+   - a Allowance for credit losses => 0 | opts:  | 185,000 is within the 170,000–210,000 range, so no misstatement is identified: **0**.
+ PART dropdown eval : Evaluate each matter. | opts: None
+   - e1 The warranty history (380,000 estimated vs. 505,000 actual) together with this year's estimate below the range => Indicator of possible management bias | opts: ['Indicator of possible management bias', 'No concern'] | A repeated tilt toward lower reserves (higher income) indicates possible bias, which is considered in evaluating the statements as a whole.
+   - e2 The equipment sale to a director's company => Significant risk — outside the normal course of business | opts: ['Significant risk — outside the normal course of business', 'Routine related-party transaction'] | A year-end sale at twice appraised value is unusual, with questionable business rationale.
+   - e3 The warehouse lease from the CEO's spouse's LLC => Requires related-party disclosure | opts: ['Requires related-party disclosure', 'No disclosure required'] | A related-party transaction on non-market terms must be disclosed.
+   - e4 The CFO's approved salary and reimbursements => Ordinary-course compensation — not required under ASC 850 | opts: ['Requires related-party disclosure', 'Ordinary-course compensation — not required under ASC 850'] | Compensation arrangements and expense allowances in the ordinary course of business need not be disclosed.
+ PART research res : Which excerpt (paraphrased for study) directs the auditor's response to the equipment sale? | opts: None
+   ex a AU-C 550 (paraphrase) : For significant related-party transactions outside the entity's normal course of business, the auditor should inspect the underlying contracts or agreements and
+   ex b AU-C 540 (paraphrase) : The auditor should evaluate whether judgments and decisions made by management in making accounting estimates indicate possible management bias.
+   ex c AU-C 250 (paraphrase) : The auditor should obtain sufficient appropriate audit evidence regarding compliance with laws and regulations generally recognized to have a direct effect on t
+   ex d AU-C 330 (paraphrase) : The auditor should design and perform substantive procedures for each relevant assertion of each material class of transactions, account balance, and disclosure
+   ANSWER a | AU-C 550 addresses significant related-party transactions outside the normal course of business.
+##### aud-tbs-u5-procedures | Matching procedures to assertions — Fairmont Electric
+INSTR: You are finalizing the audit program for **Fairmont Electric**, a wholesale distributor. For each procedure, identify the assertion it primarily addresses and whether it is a test of controls or a substantive procedure.
+EXH Draft audit program steps : 1. Select entries from the sales journal and vouch them to shipping documents and customer orders.
+2. Select shipping documents from the shipping log and trace them to recorded sales invoices.
+3. Examine sales invoices for the last five days of the year and the first five days of the next year and compare invoice dates with shipping dates.
+4. Inspect a sample of 40 credit memos for the credit manager's approval signature.
+5. Recompute the allowance for credit losses using the client's aging and historical loss rates.
+6. Read the loan agreement and bank confirmation for liens on inventory.
+7. Observe the warehouse clerk and shipping clerk performing their duties, and make inquiries.
+ PART dropdown asr : Select the primary assertion each procedure addresses. | opts: ['Existence or occurrence', 'Completeness', 'Valuation or accuracy', 'Rights and obligations', 'Cut-off']
+   - p1 1. Vouch sales journal to shipping documents => Existence or occurrence | opts:  | Vouching recorded sales tests that they occurred.
+   - p2 2. Trace shipping documents to sales invoices => Completeness | opts:  | Tracing from source documents tests that all shipments were recorded.
+   - p3 3. Compare invoice and shipping dates around year-end => Cut-off | opts:  | Tests that sales are recorded in the correct period.
+   - p5 5. Recompute the allowance => Valuation or accuracy | opts:  | Tests the net realizable value of receivables.
+   - p6 6. Look for liens on inventory => Rights and obligations | opts:  | Liens affect rights and require disclosure.
+ PART dropdown typ : Classify each procedure. | opts: ['Test of controls', 'Substantive procedure']
+   - t1 1. Vouch sales journal to shipping documents => Substantive procedure | opts:  | Tests the recorded amounts.
+   - t4 4. Inspect credit memos for approval => Test of controls | opts:  | Looks for evidence that the approval control operated.
+   - t5 5. Recompute the allowance => Substantive procedure | opts:  | Tests the balance directly.
+   - t7 7. Observe segregation of duties and inquire => Test of controls | opts:  | Observation plus inquiry tests a control that leaves no documentation.
+ PART dropdown tim : The receivables confirmations were sent at October 31 (interim). Which statement is correct? | opts: None
+   - i1 Required for November–December => Perform substantive procedures covering the remaining period (e.g., compare interim and year-end balances and test unusual activity) | opts: ['No further procedures are needed', 'Perform substantive procedures covering the remaining period (e.g., compare interim and year-end balances and test unusual activity)', 'Resend every confirmation at year-end'] | AU-C 330 requires the remaining period to be covered; resending every confirmation isn't necessarily required.
+##### aud-tbs-u6-confirmations | Receivable confirmations — Sable Office Products
+INSTR: The audit team at **Sable Office Products** (a private company) sent positive confirmations for receivables at December 31, Year 1. Determine the follow-up for each result, then review the documentation memo. The auditor's report was released on **March 5, Year 2**.
+EXH Confirmation results : 1. Alder Co. confirmed its $28,400 balance without exception.
+2. Birch LLC replied that its $12,000 payment was mailed December 29.
+3. Cedar Inc. did not respond to two requests.
+4. Dune Corp. stated it returned $3,800 of defective goods in December; no credit memo was recorded.
+5. Management asked the team not to confirm Elm Stores, citing a pending pricing dispute.
+ PART dropdown fu : Select the most appropriate follow-up for each result. | opts: ['No further work needed', 'Verify receipt in the January cash receipts records', 'Examine subsequent cash receipts and, if needed, shipping documents and invoices', 'Investigate as a likely misstatement (sales returns cut-off)', "Evaluate management's reasons and perform alternative procedures"]
+   - r1 1. Alder — agreed => No further work needed | opts:  | An agreed positive confirmation is evidence of existence.
+   - r2 2. Birch — payment in transit => Verify receipt in the January cash receipts records | opts:  | A timing difference, confirmed by the payment's receipt after year-end.
+   - r3 3. Cedar — no response => Examine subsequent cash receipts and, if needed, shipping documents and invoices | opts:  | Alternative procedures are required for positive nonresponses.
+   - r4 4. Dune — unrecorded return => Investigate as a likely misstatement (sales returns cut-off) | opts:  | A December return without a credit memo overstates receivables and revenue.
+   - r5 5. Elm — management request => Evaluate management's reasons and perform alternative procedures | opts:  | AU-C 505: inquire about and evaluate the reasons; if unreasonable, communicate with those charged with governance.
+ PART docreview memo : Review the documentation memo and correct any errors. | opts: None
+   txt: **Documentation memo — Sable Office Products.** Confirmations primarily provide evidence about the 
+   [ m1 ] orig: valuation =>  existence | opts: ['valuation', 'existence', 'completeness'] | Confirmations mainly test existence; collectibility requires other evidence.
+   txt:  of receivables. The final audit file must be assembled no later than 
+   [ m2 ] orig: April 19, Year 2 (45 days after the report release date) =>  May 4, Year 2 (60 days after the report release date) | opts: ['April 19, Year 2 (45 days after the report release date)', 'May 4, Year 2 (60 days after the report release date)', 'March 5, Year 3 (one year after the report release date)'] | Nonissuer (AU-C 230): 60 days. 45 days is the PCAOB rule.
+   txt:  and retained for at least 
+   [ m3 ] orig: seven years =>  five years | opts: ['seven years', 'five years', 'three years'] | AU-C 230: at least 5 years from the report release date (PCAOB: 7).
+   txt: . After the documentation completion date, working papers 
+   [ m4 ] orig: may be deleted if superseded =>  may be added to, with the date, preparer, and reason documented, but not deleted | opts: ['may be deleted if superseded', 'may be added to, with the date, preparer, and reason documented, but not deleted'] | Deletion is prohibited after the completion date.
+   txt: .
+##### aud-tbs-u6-sampling | Sampling applications — Ridgeway Components
+INSTR: You are evaluating sampling applications in the audit of **Ridgeway Components**. Use the data provided; round percentages to one decimal place.
+EXH Test of controls — purchase approval : - Population: 18,400 purchase orders
+- Tolerable deviation rate: 6%; acceptable risk of overreliance: 5%
+- Sample: 100 purchase orders; deviations found: 2
+- Statistical table: upper deviation rate for 2 deviations in 100 at 5% risk = **6.2%**
+EXH Substantive test — receivables (MUS) : - Book value: **$4,200,000**; sample size: **120**
+- Tolerable misstatement: $210,000
+- Misstatements found:
+  - Customer A: book $14,000, audited $10,500
+  - Customer B: book $52,000, audited $49,000
+  - Customer C: book $7,000, audited $6,650
+ PART numeric att : Evaluate the test of controls. | opts: None
+   - sr Sample deviation rate (%) => 2.0 | opts:  | 2 ÷ 100 = **2.0%**.
+   - al Allowance for sampling risk (%) => 4.2 | opts:  | 6.2% − 2.0% = **4.2%**.
+ PART dropdown attc : Conclusion on the test of controls | opts: None
+   - c1 Can the auditor rely on the control as planned? => No — the upper deviation rate exceeds the tolerable rate | opts: ['Yes — the sample rate is below the tolerable rate', 'No — the upper deviation rate exceeds the tolerable rate'] | 6.2% > 6%; the decision uses the upper deviation rate, not the 2% sample rate.
+ PART numeric mus : Evaluate the MUS sample. | opts: None
+   - int Sampling interval => 35000 | opts:  | 4,200,000 ÷ 120 = **35,000**.
+   - pa Projected misstatement — Customer A => 8750 | opts:  | Tainting 3,500 ÷ 14,000 = 25%; 25% × 35,000 = **8,750**.
+   - pb Projected misstatement — Customer B => 3000 | opts:  | Book value ≥ interval → actual misstatement **3,000**.
+   - pc Projected misstatement — Customer C => 1750 | opts:  | Tainting 350 ÷ 7,000 = 5%; 5% × 35,000 = **1,750**.
+   - tot Total projected misstatement => 13500 | opts:  | 8,750 + 3,000 + 1,750 = **13,500**.
+ PART dropdown fac : How would each change affect the attribute sample size, other things equal? | opts: ['Increase', 'Decrease', 'Little or no effect']
+   - f1 Tolerable deviation rate lowered from 6% to 4% => Increase | opts:  | A lower tolerable rate requires a larger sample.
+   - f2 Expected deviation rate raised from 1% to 2% => Increase | opts:  | More expected deviations require a larger sample.
+   - f3 Acceptable risk of overreliance raised from 5% to 10% => Decrease | opts:  | Accepting more risk permits a smaller sample.
+   - f4 Population grows from 18,400 to 25,000 => Little or no effect | opts:  | Population size has little effect on large populations.
+##### aud-tbs-u7-cash-liabilities | Cash transfers and unrecorded liabilities — Quarry Foods
+INSTR: Year-end is **December 31, Year 1**. Evaluate Quarry Foods' interbank transfers and post-year-end disbursements. Enter misstatements as positive amounts (0 if none).
+EXH Bank transfer schedule : | Check | Amount | From → To | Disbursed per books | Disbursed per bank | Received per books | Received per bank |
+|---|---:|---|---|---|---|---|
+| 1401 | 60,000 | Bank A → Bank B | Dec 30 | Jan 3 | Dec 30 | Dec 31 |
+| 1402 | 45,000 | Bank A → Bank C | Jan 2 | Jan 4 | Dec 31 | Dec 31 |
+| 1403 | 20,000 | Bank C → Bank B | Jan 4 | Jan 6 | Jan 4 | Jan 5 |
+EXH January disbursements (over $5,000) : | Date | Payee | Amount | Description | In year-end payables? |
+|---|---|---:|---|---|
+| Jan 6 | Harlow Packaging | 18,500 | Packaging received Dec 22 | Yes |
+| Jan 12 | Vance Electric | 32,000 | Wiring work completed Dec 18 | No |
+| Jan 15 | City Water | 7,200 | Water for December | No |
+| Jan 20 | Lowe Leasing | 12,000 | January equipment rent | No |
+| Jan 28 | Pike Logistics | 9,400 | Freight on inventory received Dec 30 | No |
+ PART dropdown tr : Evaluate each transfer. | opts: ['Properly recorded', 'Cash overstated at year-end (kiting)']
+   - t1 Check 1401 => Properly recorded | opts:  | Both the disbursement and the receipt were recorded in December; the check is an outstanding check at Bank A.
+   - t2 Check 1402 => Cash overstated at year-end (kiting) | opts:  | The receipt was recorded in December but the disbursement not until January — double-counted.
+   - t3 Check 1403 => Properly recorded | opts:  | Both sides were recorded in January; no year-end effect.
+ PART numeric amt : Compute the misstatements. | opts: None
+   - k Cash overstatement from transfers => 45000 | opts:  | Only check 1402 is double-counted: **45,000**.
+   - ul Total unrecorded liabilities at December 31 => 48600 | opts:  | Vance 32,000 + City Water 7,200 + Pike 9,400 = **48,600**. Harlow is recorded; the January rent is a Year 2 obligation.
+ PART dropdown proc : Select the most appropriate procedure for each objective. | opts: None
+   - p1 Verify that the December 31 deposits in transit were real => Examine the cutoff bank statement received directly from the bank | opts: ['Examine the cutoff bank statement received directly from the bank', "Inspect the client's copy of deposit slips only", 'Recompute the book balance'] | Deposits in transit should appear on the bank statement within a few days.
+   - p2 Detect unrecorded debt => Read the standard bank confirmation and board minutes, and review interest expense | opts: ['Read the standard bank confirmation and board minutes, and review interest expense', 'Vouch recorded loan payments', 'Recompute the current ratio'] | These sources reveal borrowings that may be missing from the ledger.
+##### aud-tbs-u7-inventory-ppe | Inventory observation and PP&E — Westfield Plastics
+INSTR: You observed **Westfield Plastics'** December 31 physical inventory count and are auditing PP&E and sales cut-off. For each item, select the assertion tested or the correct treatment.
+EXH Count observation notes : 1. Selected 25 items on the warehouse floor and traced them to the count sheets.
+2. Selected 25 lines from the count sheets and located the items on the floor.
+3. Recorded the last receiving report (#8812) and last shipping document (#5530) used before the count.
+4. Noted 40 pallets of resin held for Omni Corp. under a consignment agreement; they were counted.
+5. Noted a section of molds for a product discontinued in Year 0.
+EXH PP&E and cut-off facts : - Repairs expense includes $95,000 for a new production line conveyor with a 10-year life.
+- A delivery truck sold in October for scrap is still recorded (cost $48,000, accumulated depreciation $44,000).
+- Shipping document #5531 (FOB shipping point, shipped January 2) was recorded as a December sale.
+ PART dropdown as : Select the primary assertion each count procedure tests. | opts: ['Existence', 'Completeness', 'Cut-off', 'Rights and obligations', 'Valuation']
+   - a1 1. Floor → count sheets => Completeness | opts:  | Tracing from the physical goods to the records finds omitted items.
+   - a2 2. Count sheets → floor => Existence | opts:  | Locating recorded items shows they exist.
+   - a3 3. Last receiving and shipping numbers => Cut-off | opts:  | Used later to verify that transactions are recorded in the right period.
+   - a4 4. Consigned resin => Rights and obligations | opts:  | Consigned-in goods belong to the consignor and must be excluded.
+   - a5 5. Discontinued molds => Valuation | opts:  | Obsolete items may need a write-down to NRV.
+ PART dropdown adj : Select the effect on the December 31 statements before correction. | opts: ['Assets overstated', 'Assets understated', 'No misstatement']
+   - e1 Conveyor recorded as repairs expense => Assets understated | opts:  | A $95,000 capital asset was expensed.
+   - e2 Scrapped truck still recorded => Assets overstated | opts:  | Net book value of $4,000 remains for an asset no longer owned (a loss should be recorded).
+   - e3 Shipment #5531 recorded as a December sale => Assets overstated | opts:  | Receivables are overstated (and inventory understated) because control passed January 2.
+   - e4 Consigned resin included in the count => Assets overstated | opts:  | Inventory includes goods owned by Omni Corp.
+ PART numeric n : Compute the following. | opts: None
+   - nbv Net book value of the scrapped truck to remove => 4000 | opts:  | 48,000 − 44,000 = **4,000** (recognize a loss, net of any scrap proceeds received).
+   - dep Depreciation on the conveyor for a full year (straight-line, no salvage) => 9500 | opts:  | 95,000 ÷ 10 = **9,500** (adjust for the months in service if placed in service mid-year).
+##### aud-tbs-u8-going-concern | Going concern evaluation — Harbor Point Marine
+INSTR: You are completing the audit of **Harbor Point Marine**, a private boat builder, for the year ended December 31, Year 1. The statements will be issued March 31, Year 2. Evaluate the conditions and management's plans, then review the draft going concern section of the auditor's report.
+EXH Conditions : - Net losses in each of the last three years; negative operating cash flows of $2.1 million in Year 1
+- A $4 million term loan matures June 30, Year 2; the company is in violation of a covenant, and the lender has not waived it
+- Cash on hand: $0.6 million
+EXH Management's plans : 1. Refinance the term loan — the lender has provided a term sheet stating it is "not a commitment to lend."
+2. Sell a vacant lot — a signed purchase agreement for $1.2 million closes February 15, Year 2 (closed on schedule).
+3. Cut costs by $0.8 million through layoffs announced January 10, Year 2 (already implemented).
+4. The majority owner will "inject capital if necessary" — no written commitment; the owner's finances are unknown.
+ PART dropdown plans : Evaluate each plan. | opts: ['Probable of effective implementation', 'Not probable of effective implementation']
+   - p1 1. Refinancing => Not probable of effective implementation | opts:  | A term sheet that isn't a commitment gives little assurance.
+   - p2 2. Lot sale => Probable of effective implementation | opts:  | A signed agreement that closed provides strong evidence.
+   - p3 3. Cost reductions => Probable of effective implementation | opts:  | Already implemented.
+   - p4 4. Owner capital => Not probable of effective implementation | opts:  | No commitment and no evidence of ability.
+ PART dropdown concl : Conclusion | opts: None
+   - c1 Is substantial doubt alleviated? => No — the probable plans (about $2.0 million) don't cover the $4 million maturity plus operating cash needs | opts: ['Yes — the probable plans cover the $4 million maturity', "No — the probable plans (about $2.0 million) don't cover the $4 million maturity plus operating cash needs"] | 1.2M sale + 0.8M savings ≈ 2.0M, well short of the maturing debt and continuing losses.
+   - c2 If disclosure is adequate, the opinion is => Unmodified, with a going concern section | opts: ['Unmodified, with a going concern section', 'Qualified', 'Adverse', 'Disclaimer'] | Adequate disclosure → unmodified opinion with the required section.
+ PART docreview sec : Review the draft going concern section. Correct any errors. | opts: None
+   [ h ] orig: Emphasis of Matter =>  Substantial Doubt About the Entity's Ability to Continue as a Going Concern | opts: ['Emphasis of Matter', "Substantial Doubt About the Entity's Ability to Continue as a Going Concern"] | AU-C 570 requires this specific heading.
+   txt:  — The accompanying financial statements have been prepared assuming that the Company will continue as a going concern. As discussed in Note 2, the Company has suffered recurring losses from operations and is in violation of a loan covenant, which 
+   [ w ] orig: may raise substantial doubt if refinancing is not obtained =>  raise substantial doubt | opts: ['may raise substantial doubt if refinancing is not obtained', 'raise substantial doubt'] | Conditional language is prohibited.
+   txt:  about its ability to continue as a going concern 
+   [ p ] orig: within one year after the balance sheet date =>  within one year after the date that the financial statements are issued | opts: ['within one year after the balance sheet date', 'within one year after the date that the financial statements are issued'] | U.S. GAAP uses one year after issuance (or availability for issuance).
+   txt: . Management's plans are described in Note 2. The financial statements do not include any adjustments that might result from the outcome of this uncertainty. 
+   [ o ] orig: Accordingly, our opinion is qualified. =>  Our opinion is not modified with respect to this matter. | opts: ['Accordingly, our opinion is qualified.', 'Our opinion is not modified with respect to this matter.'] | With adequate disclosure, the opinion is unmodified.
+##### aud-tbs-u9-opinions | Selecting the report — six clients
+INSTR: Each situation is independent and involves a nonissuer. Unless stated otherwise, all other matters are resolved, and the auditor isn't engaged to report key audit matters. Select the most appropriate report.
+EXH Situations : 1. The client changed from the weighted-average method to FIFO; the change is justified, applied retrospectively, and disclosed. The effect is material.
+2. Management won't record a material impairment of one plant (8% of total assets). Other accounts are unaffected.
+3. The client's records for most of the year were lost in a system failure, and the auditor can't audit revenue, receivables, or inventory.
+4. Substantial doubt about going concern exists; management's plans don't alleviate it; disclosures are adequate.
+5. Management refuses to consolidate a subsidiary that holds 70% of group assets and revenue.
+6. The prior-year statements, presented comparatively, were audited by a predecessor whose report isn't reissued.
+7. The auditor couldn't obtain audited statements of a foreign equity-method investee (6% of total assets; income is material but the effect is confined to the investment account and equity income).
+ PART dropdown op : Select the appropriate report. | opts: ['Unmodified', 'Unmodified with emphasis-of-matter paragraph', 'Unmodified with other-matter paragraph', 'Unmodified with going concern section', 'Qualified', 'Adverse', 'Disclaimer']
+   - s1 1. Justified change in principle => Unmodified with emphasis-of-matter paragraph | opts:  | AU-C 708 requires an emphasis-of-matter paragraph for a material change in principle.
+   - s2 2. Unrecorded impairment, not pervasive => Qualified | opts:  | A material misstatement confined to specific accounts → "except for".
+   - s3 3. Records lost for major accounts => Disclaimer | opts:  | A pervasive inability to obtain evidence.
+   - s4 4. Going concern, adequate disclosure => Unmodified with going concern section | opts:  | AU-C 570 requires a separate section; the opinion is unmodified.
+   - s5 5. Unconsolidated major subsidiary => Adverse | opts:  | A material and pervasive departure from GAAP.
+   - s6 6. Predecessor audited the prior year => Unmodified with other-matter paragraph | opts:  | The other-matter paragraph describes the predecessor's report on the prior-year statements.
+   - s7 7. Equity-method investee evidence unavailable => Qualified | opts:  | A material but not pervasive scope limitation → "except for the possible effects".
+ PART dropdown hd : Select the heading used to explain the modification. | opts: None
+   - h2 Situation 2 => Basis for Qualified Opinion | opts: ['Basis for Qualified Opinion', 'Basis for Adverse Opinion', 'Emphasis of Matter'] | A qualified opinion is explained in a Basis for Qualified Opinion section.
+   - h3 Situation 3 => Basis for Disclaimer of Opinion | opts: ['Basis for Qualified Opinion', 'Basis for Disclaimer of Opinion', 'Other Matter'] | A disclaimer uses Basis for Disclaimer of Opinion.
+   - h5 Situation 5 => Basis for Adverse Opinion | opts: ['Basis for Adverse Opinion', 'Basis for Qualified Opinion', 'Emphasis of Matter'] | Adverse opinions use Basis for Adverse Opinion.
+##### aud-tbs-u9-report | Reviewing a draft report — Lakeside Dental Group
+INSTR: Review the draft unmodified auditor's report on **Lakeside Dental Group, LLC**, a private company, for the year ended December 31, Year 1, and the draft communication to the members' audit committee. Keep correct phrases; replace incorrect ones.
+EXH Engagement facts : - Audit performed under GAAS; the firm is independent.
+- Sufficient appropriate evidence was obtained on March 14, Year 2; the report will be released March 21, Year 2.
+- No going concern issues. The auditor is not engaged to report key audit matters.
+- During the audit, management and the auditor disagreed about the revenue recognition policy; management eventually adopted the auditor's view.
+ PART docreview rpt : Draft auditor's report (excerpts) | opts: None
+   [ t ] orig: Accountant's Compilation Report =>  Independent Auditor's Report | opts: ["Accountant's Compilation Report", "Independent Auditor's Report"] | The title must indicate an independent auditor's report.
+   txt:  — **Opinion.** In our opinion, the accompanying financial statements present fairly, in all material respects, the financial position of Lakeside Dental Group, LLC as of December 31, Year 1 ... in accordance with accounting principles generally accepted in the United States of America. **Basis for 
+   [ s ] orig: the standards of the Public Company Accounting Oversight Board =>  auditing standards generally accepted in the United States of America | opts: ['the standards of the Public Company Accounting Oversight Board', 'auditing standards generally accepted in the United States of America'] | Private companies are audited under GAAS.
+   txt: . We are required to be independent of Lakeside Dental Group, LLC and to meet our other ethical responsibilities. **Auditor's Responsibilities.** Our objectives are to obtain 
+   [ a ] orig: absolute assurance =>  reasonable assurance | opts: ['absolute assurance', 'reasonable assurance'] | Reasonable assurance is high but not absolute.
+   txt:  about whether the financial statements as a whole are free from material misstatement. In performing an audit, we obtain an understanding of internal control relevant to the audit 
+   [ i ] orig: in order to express an opinion on the effectiveness of internal control =>  in order to design audit procedures that are appropriate in the circumstances, but not for the purpose of expressing an opinion on the effectiveness of internal control | opts: ['in order to express an opinion on the effectiveness of internal control', 'in order to design audit procedures that are appropriate in the circumstances, but not for the purpose of expressing an opinion on the effectiveness of internal control'] | No opinion on internal control is expressed in a financial statement audit.
+   txt: . Report date: 
+   [ d ] orig: March 21, Year 2 =>  March 14, Year 2 | opts: ['March 21, Year 2', 'March 14, Year 2', 'December 31, Year 1'] | Dated when sufficient appropriate evidence was obtained, not the release date.
+   txt: .
+ PART dropdown com : Draft communication to the audit committee — is each item required? | opts: ['Required', 'Not required']
+   - c1 The disagreement over the revenue recognition policy, even though resolved => Required | opts:  | Disagreements are significant findings whether or not resolved.
+   - c2 The specific sample sizes used for testing receivables => Not required | opts:  | Detailed procedures aren't required (and could make the audit predictable).
+   - c3 The auditor's views on the qualitative aspects of Lakeside's significant accounting practices => Required | opts:  | A required significant finding.
+   - c4 The written representations the auditor requested from management => Required | opts:  | AU-C 260 requires communicating them.
+##### aud-tbs-x3-risk | Risk assessment — Crescent Biotech
+INSTR: You are planning the audit of **Crescent Biotech**, a private company. Overall materiality: **5% of pretax income**; performance materiality: **70% of overall**. Pretax income: **$4,000,000**.
+EXH Planning notes : - A new multi-element licensing arrangement began this year; revenue allocation depends on estimated standalone selling prices.
+- The CEO's bonus depends on reaching $4 million of pretax income (exactly the reported amount).
+- A research grant from a federal agency requires compliance with specific cost rules.
+- Cash consists of two bank accounts with routine reconciliations.
+- Planned audit risk for license revenue: 4%; inherent risk: 100%; control risk: 40% (controls tested).
+ PART numeric n : Compute the following. | opts: None
+   - om Overall materiality => 200000 | opts:  | 4,000,000 × 5% = **200,000**.
+   - pm Performance materiality => 140000 | opts:  | 200,000 × 70% = **140,000**.
+   - dr Acceptable detection risk for license revenue (%) => 10 | opts:  | 4% ÷ (100% × 40%) = **10%**.
+ PART dropdown rk : Assess each area. | opts: ['Significant risk', 'Not a significant risk']
+   - r1 Allocation of license revenue => Significant risk | opts:  | Complexity, subjectivity, and change — plus the presumed revenue fraud risk.
+   - r2 Cash existence => Not a significant risk | opts:  | Low inherent risk factors.
+   - r3 Management override of controls => Significant risk | opts:  | Always treated as a significant fraud risk.
+ PART dropdown fac : Classify each fact. | opts: ['Incentive or pressure', 'Opportunity', 'Not a fraud risk factor']
+   - f1 The CEO's bonus threshold equals reported income => Incentive or pressure | opts:  | A personal incentive to meet the target.
+   - f2 Revenue allocation depends on management's estimates => Opportunity | opts:  | Judgmental estimates create room for manipulation.
+   - f3 Two routine bank accounts => Not a fraud risk factor | opts:  | Nothing indicates elevated risk.
+ PART dropdown law : How should the auditor treat the grant cost rules? | opts: None
+   - l1 Grant compliance => As a law or regulation with a direct effect on material amounts — obtain evidence of compliance | opts: ['As a law or regulation with a direct effect on material amounts — obtain evidence of compliance', 'As an indirect law — inquiry only', "Ignore — grants aren't audited"] | Grant terms directly affect revenue and receivable amounts.
+##### aud-tbs-x4-sampling | Sampling evaluation — Granger Supply
+INSTR: Evaluate the sampling applications in the audit of **Granger Supply**. Round percentages to one decimal place.
+EXH Test of controls — shipping approval : - Sample size: 75; deviations found: 3
+- Tolerable deviation rate: 8%
+- Upper deviation rate from the statistical table (3 deviations, n = 75, 5% risk): **10.1%**
+EXH MUS — inventory : - Book value: **$3,600,000**; sample size: **90**
+- Misstatements:
+  - Item 1: book $9,000, audited $6,300
+  - Item 2: book $60,000, audited $55,000
+  - Item 3: book $4,000, audited $3,800
+ PART numeric att : Evaluate the test of controls. | opts: None
+   - sr Sample deviation rate (%) => 4.0 | opts:  | 3 ÷ 75 = **4.0%**.
+   - al Allowance for sampling risk (%) => 6.1 | opts:  | 10.1% − 4.0% = **6.1%**.
+ PART dropdown rel : Conclusion | opts: None
+   - c Rely on the shipping approval control as planned? => No | opts: ['Yes', 'No'] | The 10.1% upper deviation rate exceeds the 8% tolerable rate.
+ PART numeric mus : Evaluate the MUS sample. | opts: None
+   - i Sampling interval => 40000 | opts:  | 3,600,000 ÷ 90 = **40,000**.
+   - p1 Projected misstatement — Item 1 => 12000 | opts:  | Tainting 2,700 ÷ 9,000 = 30%; × 40,000 = **12,000**.
+   - p2 Projected misstatement — Item 2 => 5000 | opts:  | Book value ≥ interval → actual **5,000**.
+   - p3 Projected misstatement — Item 3 => 2000 | opts:  | Tainting 200 ÷ 4,000 = 5%; × 40,000 = **2,000**.
+   - t Total projected misstatement => 19000 | opts:  | 12,000 + 5,000 + 2,000 = **19,000**.
+##### aud-tbs-x5-procedures | Substantive procedures — Pioneer Components
+INSTR: For each risk at **Pioneer Components**, select the most effective substantive procedure, then identify the guidance governing a scope issue.
+EXH Risks identified : 1. Unrecorded accounts payable at year-end.
+2. Fictitious sales recorded in the last week of the year.
+3. Obsolete inventory carried at full cost.
+4. Equipment retired during the year but still recorded.
+5. Receivables that don't exist.
+6. Undisclosed pending litigation.
+ PART dropdown proc : Select the most effective procedure for each risk. | opts: ['Examine disbursements after year-end and trace to year-end payables', 'Vouch year-end sales to shipping documents and review subsequent credit memos', 'Compare inventory costs with subsequent selling prices and review slow-moving reports', 'Review insurance and property tax records and scrap sales', 'Confirm balances with customers', 'Send a letter of audit inquiry to outside legal counsel']
+   - p1 1. Unrecorded payables => Examine disbursements after year-end and trace to year-end payables | opts:  | Search for unrecorded liabilities.
+   - p2 2. Fictitious year-end sales => Vouch year-end sales to shipping documents and review subsequent credit memos | opts:  | Tests occurrence and cut-off.
+   - p3 3. Obsolete inventory => Compare inventory costs with subsequent selling prices and review slow-moving reports | opts:  | Tests valuation (NRV).
+   - p4 4. Unrecorded retirements => Review insurance and property tax records and scrap sales | opts:  | Finds assets no longer owned.
+   - p5 5. Nonexistent receivables => Confirm balances with customers | opts:  | Confirmations test existence.
+   - p6 6. Undisclosed litigation => Send a letter of audit inquiry to outside legal counsel | opts:  | The primary corroboration for litigation.
+ PART research res : Pioneer's outside counsel refuses to respond to the inquiry letter. Which excerpt (paraphrased for study) governs the effect on the report? | opts: None
+   ex a AU-C 501 (paraphrase) : A lawyer's refusal to furnish the information requested in an inquiry letter, either in writing or orally, is a limitation on the scope of the audit sufficient 
+   ex b AU-C 505 (paraphrase) : If management refuses to allow the auditor to send a confirmation request, the auditor should inquire about management's reasons and seek evidence of their vali
+   ex c AU-C 580 (paraphrase) : The auditor should request written representations from management with appropriate responsibilities for the financial statements.
+   ex d AU-C 560 (paraphrase) : The auditor should perform audit procedures designed to obtain evidence that all subsequent events requiring adjustment or disclosure have been identified.
+   ANSWER a | AU-C 501 treats a lawyer's refusal to respond as a scope limitation.
+##### aud-tbs-x6-reports | Report decisions — five engagements
+INSTR: Each situation is independent and involves a private company. Select the most appropriate auditor's report.
+EXH Situations : 1. Management refuses to record depreciation on its main plant; the omission is material to net income and PP&E but doesn't affect other accounts.
+2. The auditor was appointed after year-end and can't observe inventory or apply alternative procedures; inventory is 45% of total assets and drives cost of sales.
+3. A major customer's bankruptcy is disclosed; the auditor believes it is fundamental to users' understanding. Everything else is fine.
+4. Management won't disclose a going concern uncertainty that the auditor concluded exists; the omission is fundamental to understanding.
+5. Substantial doubt exists and is adequately disclosed; plans aren't probable of implementation.
+ PART dropdown op : Select the appropriate report. | opts: ['Unmodified', 'Unmodified with emphasis-of-matter paragraph', 'Unmodified with going concern section', 'Qualified', 'Adverse', 'Disclaimer']
+   - s1 1. Unrecorded depreciation => Qualified | opts:  | A material, non-pervasive misstatement.
+   - s2 2. Inventory not observable => Disclaimer | opts:  | A pervasive scope limitation.
+   - s3 3. Customer bankruptcy disclosed => Unmodified with emphasis-of-matter paragraph | opts:  | An emphasis of an adequately disclosed matter.
+   - s4 4. Omitted going concern disclosure => Adverse | opts:  | A pervasive disclosure misstatement.
+   - s5 5. Adequately disclosed going concern => Unmodified with going concern section | opts:  | AU-C 570.
