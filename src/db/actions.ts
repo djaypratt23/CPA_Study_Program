@@ -22,7 +22,24 @@ export interface McqAnswer {
   now?: Date
 }
 
+/** The attempt already recorded for this item in this session, if any (double submits are no-ops). */
+function existingAttempt(d: CpaDb, sessionId: string, itemId: string): Promise<Attempt | undefined> {
+  return d.attempts.where('sessionId').equals(sessionId).and((a) => a.itemId === itemId).first()
+}
+
+/**
+ * Record an answered MCQ and update its review schedule in one transaction.
+ * Idempotent per (sessionId, itemId): a repeated submit returns the first attempt.
+ */
 export async function recordMcqAttempt(q: Mcq, ans: McqAnswer, d: CpaDb = db): Promise<Attempt> {
+  return d.transaction('rw', d.attempts, d.srs, async () => {
+    const prior = await existingAttempt(d, ans.sessionId, q.id)
+    if (prior) return prior
+    return addMcqAttempt(q, ans, d)
+  })
+}
+
+async function addMcqAttempt(q: Mcq, ans: McqAnswer, d: CpaDb): Promise<Attempt> {
   const now = ans.now ?? new Date()
   const attempt: Attempt = {
     itemId: q.id,
@@ -76,19 +93,23 @@ export async function recordTbsAttempt(
   d: CpaDb = db,
   now = new Date(),
 ): Promise<void> {
-  await d.attempts.add({
-    itemId: tbs.id,
-    itemType: 'tbs',
-    moduleId: tbs.moduleIds[0],
-    section: tbs.section,
-    correct: score >= 0.75,
-    score,
-    timeMs,
-    mode,
-    mixed: true,
-    sessionId,
-    at: now.toISOString(),
-    day: dayKey(now),
+  // Idempotent per (sessionId, itemId), like MCQ attempts.
+  await d.transaction('rw', d.attempts, async () => {
+    if (await existingAttempt(d, sessionId, tbs.id)) return
+    await d.attempts.add({
+      itemId: tbs.id,
+      itemType: 'tbs',
+      moduleId: tbs.moduleIds[0],
+      section: tbs.section,
+      correct: score >= 0.75,
+      score,
+      timeMs,
+      mode,
+      mixed: true,
+      sessionId,
+      at: now.toISOString(),
+      day: dayKey(now),
+    })
   })
 }
 

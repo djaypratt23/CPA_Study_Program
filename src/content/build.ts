@@ -35,6 +35,7 @@ export interface ModuleMeta {
   areaId: string
   unitId: string
   order: number // global order within the section
+  blueprint?: string[] // Blueprint task references, when tagged
 }
 
 export interface ContentBundle {
@@ -130,12 +131,12 @@ export function buildContent(files: RawFiles): BuildResult {
       for (const u of a.units)
         for (const m of u.modules) {
           if (moduleIndex.has(m.id)) errors.push(`sections/${s.id}: module ${m.id} listed twice`)
-          const meta = { id: m.id, title: m.title, section: s.id, areaId: a.id, unitId: u.id, order: order++ }
+          const meta: ModuleMeta = { id: m.id, title: m.title, section: s.id, areaId: a.id, unitId: u.id, order: order++, blueprint: m.blueprint }
           moduleIndex.set(m.id, meta)
           bundle.modules.push(meta)
         }
   }
-  const unitIds = new Set(bundle.sections.flatMap((s) => s.areas.flatMap((a) => a.units.map((u) => u.id))))
+  const unitSections = new Map(bundle.sections.flatMap((s) => s.areas.flatMap((a) => a.units.map((u) => [u.id, s.id] as const))))
 
   const lessonChecks: { lessonId: string; qid: string; kind: 'check' | 'pre' }[] = []
 
@@ -229,8 +230,14 @@ export function buildContent(files: RawFiles): BuildResult {
           continue
         }
         claimId(r.data.id, path)
-        if (!unitIds.has(r.data.unitId)) errors.push(`${path}: unknown unit ${r.data.unitId}`)
-        for (const mid of r.data.moduleIds) if (!moduleIndex.has(mid)) errors.push(`${path}: unknown module ${mid}`)
+        const unitSection = unitSections.get(r.data.unitId)
+        if (!unitSection) errors.push(`${path}: unknown unit ${r.data.unitId}`)
+        else if (unitSection !== r.data.section) errors.push(`${path}: unit ${r.data.unitId} belongs to ${unitSection}, not ${r.data.section}`)
+        for (const mid of r.data.moduleIds) {
+          const m = moduleIndex.get(mid)
+          if (!m) errors.push(`${path}: unknown module ${mid}`)
+          else if (m.section !== r.data.section) errors.push(`${path}: module ${mid} belongs to ${m.section}, not ${r.data.section}`)
+        }
         bundle.tbs[r.data.id] = r.data
       } else if (/^[a-z]+\/exams\/[a-z0-9-]+\.json$/.test(path)) {
         const r = ExamForm.safeParse(JSON.parse(text))
@@ -261,7 +268,12 @@ export function buildContent(files: RawFiles): BuildResult {
     if (!q) errors.push(`lesson ${c.lessonId}: ${c.kind} question "${c.qid}" not found`)
     else if (q.pool !== 'lesson') errors.push(`lesson ${c.lessonId}: ${c.kind} question "${c.qid}" must have pool "lesson"`)
   }
+  const examIds = new Set<string>()
   for (const ex of bundle.exams) {
+    if (examIds.has(ex.id)) errors.push(`exam ${ex.id}: duplicate exam form id`)
+    examIds.add(ex.id)
+    const formItems = ex.testlets.flatMap((t) => t.items)
+    for (const id of formItems.filter((id, i) => formItems.indexOf(id) !== i)) errors.push(`exam ${ex.id}: item ${id} appears more than once`)
     const sec = bundle.sections.find((s) => s.id === ex.section)
     if (!sec) {
       errors.push(`exam ${ex.id}: unknown section`)
@@ -285,6 +297,21 @@ export function buildContent(files: RawFiles): BuildResult {
         }
       }
     })
+  }
+
+  // Skill mix vs. the Blueprint's skill allocation (warning): exam-pool and practice MCQs plus TBS.
+  for (const s of bundle.sections) {
+    const mods = new Set(bundle.modules.filter((m) => m.section === s.id).map((m) => m.id))
+    const skills = [
+      ...Object.values(bundle.questions).filter((q) => mods.has(q.moduleId) && q.pool !== 'lesson').map((q) => q.skill),
+      ...Object.values(bundle.tbs).filter((t) => t.section === s.id).map((t) => t.skill),
+    ]
+    if (!skills.length) continue
+    for (const a of s.skillAllocation) {
+      const share = (100 * skills.filter((k) => k === a.level).length) / skills.length
+      if (share < a.min || share > a.max)
+        warnings.push(`skill mix: ${s.id} ${a.level} is ${share.toFixed(1)}% of items (Blueprint ${a.min}–${a.max}%)`)
+    }
   }
 
   // 5. Coverage requirements

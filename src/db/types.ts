@@ -101,6 +101,8 @@ export interface QuizSession {
   startedAt: string
   finishedAt?: string
   timeLimitMs?: number
+  /** Wall-clock deadline for a timed set (ISO). */
+  endsAt?: string
   elapsedMs: number
 }
 
@@ -121,6 +123,8 @@ export interface ExamTestletState {
   flags: Record<string, boolean>
   tbsResponses: Record<string, TbsResponses>
   index: number
+  /** Time spent on each item (ms), accumulated as the candidate moves between items. */
+  itemTimeMs?: Record<string, number>
 }
 
 export interface ExamSession {
@@ -128,15 +132,29 @@ export interface ExamSession {
   examId: string
   section: SectionId
   startedAt: string
+  /** Time left when the clock last stopped (break) or was saved; the live value derives from endsAt. */
   remainingMs: number
+  /** Wall-clock deadline while the exam clock runs (ISO); cleared during the scheduled break. */
+  endsAt?: string
   testletIndex: number
   onBreak: boolean
   breakUsed: boolean
   breakOffered?: boolean
   breakRemainingMs?: number
+  breakEndsAt?: string
   testlets: ExamTestletState[]
   finishedAt?: string
   result?: ExamResult
+}
+
+export interface AreaResult {
+  /** Legacy combined tally (MCQs and TBS counted equally); kept for old results. */
+  earned: number
+  possible: number
+  mcq?: { earned: number; possible: number }
+  tbs?: { earned: number; possible: number }
+  /** Area score weighted by the section's MCQ/TBS weighting. */
+  percent?: number
 }
 
 export interface ExamResult {
@@ -144,7 +162,7 @@ export interface ExamResult {
   tbsPercent: number
   weightedPercent: number
   approxScaled: number
-  byArea: Record<string, { earned: number; possible: number }>
+  byArea: Record<string, AreaResult>
 }
 
 export interface Settings {

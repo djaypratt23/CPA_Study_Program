@@ -137,9 +137,14 @@ export default function Dashboard() {
             Readiness
           </h2>
           <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-3xl font-bold">{r.overall !== null ? `${r.overall}%` : '—'}</span>
+            <span className="text-3xl font-bold">{r.overall !== null ? `≈ ${r.overall}` : '—'}</span>
             <span className="font-semibold">{r.label}</span>
           </div>
+          {r.band && (
+            <p className="text-xs muted">
+              Likely range {r.band[0]}–{r.band[1]} on the approximate 0–99 scale used for mock exams (75 ≈ passing).
+            </p>
+          )}
           <p className="mt-1 text-xs muted">{r.detail}</p>
           <ul className="mt-3 space-y-2 text-sm">
             {r.areas.map((a) => (

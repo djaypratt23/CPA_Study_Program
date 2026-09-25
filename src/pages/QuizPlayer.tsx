@@ -11,6 +11,8 @@ import { content, getModule } from '../content'
 import { db } from '../db'
 import { recordMcqAttempt, setLastLocation } from '../db/actions'
 import type { QuizSession } from '../db/types'
+import { quizDeadline, quizTimeLeftMs } from '../lib/examClock'
+import { summarizeQuiz } from '../lib/quizScoring'
 import type { Confidence } from '../lib/srs'
 
 export default function QuizPlayer() {
@@ -20,6 +22,10 @@ export default function QuizPlayer() {
   const [elapsed, setElapsed] = useState(0)
   const qStart = useRef(Date.now())
   const loadedElapsed = useRef(false)
+  const [now, setNow] = useState(() => Date.now())
+  const finishing = useRef(false)
+  const submitting = useRef(false)
+  const [busy, setBusy] = useState(false)
 
   useEffect(() => {
     if (session && !loadedElapsed.current) {
@@ -32,8 +38,16 @@ export default function QuizPlayer() {
   const finished = !!session?.finishedAt
   useEffect(() => {
     if (!session || finished) return
-    const t = setInterval(() => setElapsed((e) => e + 1000), 1000)
+    const t = setInterval(() => {
+      setElapsed((e) => e + 1000)
+      setNow(Date.now())
+    }, 1000)
     return () => clearInterval(t)
+  }, [session, finished])
+
+  // Timed sets run on a wall-clock deadline, so leaving the page doesn't stop the clock.
+  useEffect(() => {
+    if (session && !finished && session.timeLimitMs && !session.endsAt) db.quizSessions.update(session.id, { endsAt: quizDeadline(session, Date.now()) })
   }, [session, finished])
 
   // Persist elapsed time periodically so resuming restores the clock.
@@ -45,6 +59,13 @@ export default function QuizPlayer() {
   useEffect(() => {
     qStart.current = Date.now()
   }, [session?.index])
+
+  // At the deadline a timed set submits itself (the finish function is bound after the early returns below).
+  const autoSubmit = useRef<(() => unknown) | undefined>(undefined)
+  const timeUp = !!session && !finished && !!session.endsAt && Date.parse(session.endsAt) <= now
+  useEffect(() => {
+    if (timeUp) autoSubmit.current?.()
+  }, [timeUp])
 
   if (session === undefined) return <p className="muted">Loading…</p>
   if (!session)
@@ -66,30 +87,43 @@ export default function QuizPlayer() {
   const answeredCount = Object.values(session.items).filter((i) => (isTest ? i.choice && i.confidence : i.answeredAt)).length
   const last = session.index === session.itemIds.length - 1
   const section = getModule(q.moduleId)?.section ?? session.section
-  const timeLeft = session.timeLimitMs ? session.timeLimitMs - elapsed : null
+  const timeLeft = session.endsAt ? quizTimeLeftMs(session, now) : null
 
+  // Field-level key paths, so quick successive writes (choice, then confidence) never overwrite each other.
   const patchItem = (patch: Partial<QuizSession['items'][string]>) =>
-    db.quizSessions.update(session.id, { [`items.${q.id}`]: { ...st, ...patch } } as never)
+    db.quizSessions.update(session.id, Object.fromEntries(Object.entries(patch).map(([k, v]) => [`items.${q.id}.${k}`, v])) as never)
   const go = (i: number) => db.quizSessions.update(session.id, { index: i, elapsedMs: elapsed })
 
   const submitTutor = async (c: Confidence) => {
-    if (!st.choice) return
-    const timeMs = Date.now() - qStart.current
-    const a = await recordMcqAttempt(q, {
-      choice: st.choice,
-      confidence: c,
-      timeMs,
-      mode: session.mode === 'review' ? 'review' : 'tutor',
-      mixed: session.mixed,
-      sessionId: session.id,
-      section,
-    })
-    await patchItem({ confidence: c, correct: a.correct, timeMs, answeredAt: a.at })
+    if (submitting.current) return
+    submitting.current = true
+    try {
+      // Read the stored choice: the rendered snapshot can lag a fast click.
+      const cur = (await db.quizSessions.get(session.id))?.items[q.id]
+      if (!cur?.choice || cur.answeredAt) return
+      const timeMs = Date.now() - qStart.current
+      const a = await recordMcqAttempt(q, {
+        choice: cur.choice,
+        confidence: c,
+        timeMs,
+        mode: session.mode === 'review' ? 'review' : 'tutor',
+        mixed: session.mixed,
+        sessionId: session.id,
+        section,
+      })
+      await patchItem({ confidence: c, correct: a.correct, timeMs, answeredAt: a.at })
+    } finally {
+      submitting.current = false
+    }
   }
 
   const finishTest = async () => {
-    for (const id of session.itemIds) {
-      const it = session.items[id]
+    if (finishing.current) return
+    finishing.current = true
+    setBusy(true)
+    const fresh = (await db.quizSessions.get(session.id)) ?? session
+    for (const id of fresh.itemIds) {
+      const it = fresh.items[id]
       const qq = content.questions[id]
       if (!qq || !it.choice) continue
       const a = await recordMcqAttempt(qq, {
@@ -101,12 +135,19 @@ export default function QuizPlayer() {
         sessionId: session.id,
         section,
       })
-      session.items[id] = { ...it, correct: a.correct, answeredAt: a.at }
+      fresh.items[id] = { ...it, correct: a.correct, answeredAt: a.at }
     }
-    await db.quizSessions.update(session.id, { items: session.items, finishedAt: new Date().toISOString(), elapsedMs: elapsed })
+    await db.quizSessions.update(session.id, { items: fresh.items, finishedAt: new Date().toISOString(), elapsedMs: elapsed })
   }
 
-  const finishTutor = () => db.quizSessions.update(session.id, { finishedAt: new Date().toISOString(), elapsedMs: elapsed })
+  const finishTutor = async () => {
+    if (finishing.current) return
+    finishing.current = true
+    setBusy(true)
+    await db.quizSessions.update(session.id, { finishedAt: new Date().toISOString(), elapsedMs: elapsed })
+  }
+
+  autoSubmit.current = isTest ? finishTest : finishTutor
 
   return (
     <div>
@@ -168,7 +209,7 @@ export default function QuizPlayer() {
         </button>
         {isTest ? (
           last ? (
-            <button className="btn-primary" onClick={finishTest}>
+            <button className="btn-primary" onClick={finishTest} disabled={busy}>
               Submit set ({answeredCount}/{session.itemIds.length})
             </button>
           ) : (
@@ -178,7 +219,7 @@ export default function QuizPlayer() {
           )
         ) : revealed ? (
           last ? (
-            <button className="btn-primary" onClick={finishTutor}>
+            <button className="btn-primary" onClick={finishTutor} disabled={busy}>
               See results
             </button>
           ) : (
@@ -201,17 +242,18 @@ export default function QuizPlayer() {
 function QuizResults({ session }: { session: QuizSession }) {
   const [open, setOpen] = useState<string | null>(null)
   const items = session.itemIds.map((id) => ({ q: content.questions[id], st: session.items[id] })).filter((x) => x.q)
-  const answered = items.filter((x) => x.st.answeredAt)
-  const correct = answered.filter((x) => x.st.correct).length
-  const guessedRight = answered.filter((x) => x.st.correct && x.st.confidence === 'guess').length
-  const missed = answered.filter((x) => !x.st.correct).length
+  const { correct, guessedRight, missed, skipped, scoredOn, percent } = summarizeQuiz(
+    session,
+    items.map((x) => x.q.id),
+  )
   return (
     <div>
       <PageHeader title="Set complete" subtitle={session.title} />
       <div className="card mb-6">
-        <div className="text-4xl font-bold">{pct(answered.length ? correct / answered.length : 0)}</div>
+        <div className="text-4xl font-bold">{pct(percent)}</div>
         <p className="muted">
-          {correct} of {answered.length} correct{guessedRight ? ` (${guessedRight} were guesses — they’ll come back for review)` : ''}.
+          {correct} of {scoredOn} correct{guessedRight ? ` (${guessedRight} were guesses — they’ll come back for review)` : ''}.
+          {skipped > 0 && ` ${skipped} question${skipped === 1 ? ' was' : 's were'} left unanswered${session.mode === 'test' ? ' and scored as wrong' : ''}.`}
         </p>
         <p className="mt-2 text-sm">
           {missed + guessedRight > 0
