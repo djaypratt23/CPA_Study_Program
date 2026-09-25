@@ -28,12 +28,14 @@ export default function Glossary() {
             <dt className="font-semibold">
               {g.term} <span className="chip ml-1 bg-slate-100 text-xs dark:bg-slate-800">{g.section}</span>
             </dt>
-            <dd className="mt-1 text-sm">{g.definition}</dd>
-            {g.moduleId && getModule(g.moduleId) && content.lessons[g.moduleId] && (
-              <Link to={`/module/${g.moduleId}`} className="mt-1 inline-block text-xs text-blue-700 hover:underline dark:text-blue-400">
-                Lesson: {getModule(g.moduleId)!.title}
-              </Link>
-            )}
+            <dd className="mt-1 text-sm">
+              {g.definition}
+              {g.moduleId && getModule(g.moduleId) && content.lessons[g.moduleId] && (
+                <Link to={`/module/${g.moduleId}`} className="mt-1 block text-xs text-blue-700 hover:underline dark:text-blue-400">
+                  Lesson: {getModule(g.moduleId)!.title}
+                </Link>
+              )}
+            </dd>
           </div>
         ))}
       </dl>

@@ -57,7 +57,7 @@ export default function TbsView({ tbs, responses, onChange, submitted, split = f
               ))}
             </div>
             <div className="min-h-0 overflow-y-auto p-4" role="tabpanel">
-              <h3 className="mb-2 font-semibold">{ex.title}</h3>
+              <h2 className="mb-2 font-semibold">{ex.title}</h2>
               <Markdown>{ex.content}</Markdown>
             </div>
           </aside>
@@ -83,7 +83,7 @@ export default function TbsView({ tbs, responses, onChange, submitted, split = f
 
       {tab >= 0 ? (
         <div className="card" role="tabpanel">
-          <h3 className="mb-2 font-semibold">{tbs.exhibits[tab].title}</h3>
+          <h2 className="mb-2 font-semibold">{tbs.exhibits[tab].title}</h2>
           <Markdown>{tbs.exhibits[tab].content}</Markdown>
           <button className="btn-secondary mt-3" onClick={() => setTab(-1)}>
             Back to task
@@ -102,9 +102,9 @@ function TbsResults({ score }: { score: ReturnType<typeof scoreTbs> }) {
   return (
     <section className="space-y-3" aria-labelledby="tbs-results">
       <div className="card">
-        <h3 id="tbs-results" className="h2">
+        <h2 id="tbs-results" className="h2">
           Score: {score.earned}/{score.possible} cells ({Math.round(score.percent * 100)}%)
-        </h3>
+        </h2>
         <p className="text-sm muted">Each cell is scored separately — partial credit, just like the exam.</p>
       </div>
       <ul className="space-y-2">
@@ -211,8 +211,9 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
         onChange({ kind: 'journal', lines: lines.map((l, j) => (j === i ? { ...l, ...patch } : l)) })
       return (
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[34rem] text-sm">
-            <thead>
+          {/* Below the sm breakpoint each line stacks: account on top, debit and credit side by side. */}
+          <table className="w-full text-sm sm:min-w-[34rem]">
+            <thead className="hidden sm:table-header-group">
               <tr className="text-left text-xs uppercase muted">
                 <th className="py-1 pr-2">Account</th>
                 <th className="w-32 py-1 pr-2 text-right">Debit</th>
@@ -221,8 +222,8 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
             </thead>
             <tbody>
               {lines.map((l, i) => (
-                <tr key={i}>
-                  <td className="py-1 pr-2">
+                <tr key={i} className="grid grid-cols-2 gap-x-2 gap-y-1 border-b border-slate-100 py-2 sm:table-row sm:border-0 sm:py-0 dark:border-slate-800">
+                  <td className="col-span-2 sm:table-cell sm:py-1 sm:pr-2">
                     <select className="input" aria-label={`Line ${i + 1} account`} disabled={disabled} value={l.account} onChange={(e) => update(i, { account: e.target.value })}>
                       <option value="">—</option>
                       {part.accounts.map((a) => (
@@ -232,7 +233,10 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
                       ))}
                     </select>
                   </td>
-                  <td className="py-1 pr-2">
+                  <td className="sm:table-cell sm:py-1 sm:pr-2">
+                    <span className="text-xs muted sm:hidden" aria-hidden="true">
+                      Debit
+                    </span>
                     <input
                       className="input text-right font-mono"
                       inputMode="decimal"
@@ -242,7 +246,10 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
                       onChange={(e) => update(i, { debit: e.target.value === '' ? null : e.target.value })}
                     />
                   </td>
-                  <td className="py-1">
+                  <td className="sm:table-cell sm:py-1">
+                    <span className="text-xs muted sm:hidden" aria-hidden="true">
+                      Credit
+                    </span>
                     <input
                       className="input text-right font-mono"
                       inputMode="decimal"

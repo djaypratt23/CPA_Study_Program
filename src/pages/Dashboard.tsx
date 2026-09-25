@@ -61,7 +61,7 @@ export default function Dashboard() {
       {/* The one obvious next step */}
       <Link
         to={state.next.to}
-        className="block rounded-2xl bg-blue-700 p-5 text-white shadow-lg transition hover:bg-blue-800 focus-visible:outline-offset-4 dark:bg-blue-600 dark:hover:bg-blue-500"
+        className="block rounded-2xl bg-blue-700 p-5 text-white shadow-lg transition hover:bg-blue-800 focus-visible:outline-offset-4 dark:hover:bg-blue-800"
       >
         <div className="flex items-center justify-between gap-4">
           <div className="min-w-0">
@@ -104,7 +104,7 @@ export default function Dashboard() {
       </section>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <section className="card" aria-labelledby="progress">
+        <section className="card min-w-0" aria-labelledby="progress">
           <h2 id="progress" className="h2 mb-3">
             Progress
           </h2>
@@ -132,7 +132,7 @@ export default function Dashboard() {
           </div>
         </section>
 
-        <section className="card" aria-labelledby="ready">
+        <section className="card min-w-0" aria-labelledby="ready">
           <h2 id="ready" className="h2">
             Readiness
           </h2>

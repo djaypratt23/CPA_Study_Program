@@ -8,10 +8,10 @@ import Markdown from './Markdown'
 import { ReviewBadge } from './ui'
 
 const GRADES: { g: Grade; label: string; key: string; cls: string }[] = [
-  { g: Rating.Again, label: 'Again', key: '1', cls: 'bg-rose-600 hover:bg-rose-700' },
-  { g: Rating.Hard, label: 'Hard', key: '2', cls: 'bg-amber-600 hover:bg-amber-700' },
-  { g: Rating.Good, label: 'Good', key: '3', cls: 'bg-emerald-600 hover:bg-emerald-700' },
-  { g: Rating.Easy, label: 'Easy', key: '4', cls: 'bg-blue-600 hover:bg-blue-700' },
+  { g: Rating.Again, label: 'Again', key: '1', cls: 'bg-rose-700 hover:bg-rose-800' },
+  { g: Rating.Hard, label: 'Hard', key: '2', cls: 'bg-amber-700 hover:bg-amber-800' },
+  { g: Rating.Good, label: 'Good', key: '3', cls: 'bg-emerald-700 hover:bg-emerald-800' },
+  { g: Rating.Easy, label: 'Easy', key: '4', cls: 'bg-blue-700 hover:bg-blue-800' },
 ]
 
 /** Studies a fixed queue of cards. "Again" puts the card back at the end of this session. */
@@ -37,7 +37,10 @@ export default function FlashcardPlayer({ cards, onDone }: { cards: FlashcardWit
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement)?.tagName === 'INPUT' || (e.target as HTMLElement)?.tagName === 'TEXTAREA') return
+      // Never grade while the learner is using a form control (e.g. choosing a deck in a <select>).
+      const t = e.target as HTMLElement | null
+      if (t && (['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName) || t.isContentEditable || t.closest('[data-no-hotkeys]'))) return
+      if (e.ctrlKey || e.metaKey || e.altKey) return
       if (e.key === ' ' && !flipped) {
         e.preventDefault()
         setFlipped(true)
@@ -64,27 +67,35 @@ export default function FlashcardPlayer({ cards, onDone }: { cards: FlashcardWit
   return (
     <div className="space-y-4">
       <div className="text-sm muted">{queue.length} left in this session</div>
-      <button
-        className="card flex min-h-56 w-full flex-col items-center justify-center text-center text-lg"
+      {/* The card's text stays readable by screen readers; flipping is a real button, and the answer is announced. */}
+      <div
+        role="group"
+        aria-label="Flashcard"
+        className="card flex min-h-56 w-full cursor-pointer flex-col items-center justify-center text-center text-lg"
         onClick={() => setFlipped(true)}
-        aria-label={flipped ? 'Card answer shown' : 'Show answer'}
       >
         {card.needsReview && <ReviewBadge />}
         <Markdown className="prose-lesson font-semibold">{card.front}</Markdown>
-        {flipped ? (
-          <div className="mt-4 w-full border-t border-slate-200 pt-4 text-base dark:border-slate-700">
-            <Markdown>{card.back}</Markdown>
-          </div>
-        ) : (
-          <span className="mt-6 text-sm muted">Recall the answer, then tap (or press Space) to check</span>
+        <div aria-live="polite" className="w-full">
+          {flipped && (
+            <div className="mt-4 w-full border-t border-slate-200 pt-4 text-base dark:border-slate-700">
+              <Markdown>{card.back}</Markdown>
+            </div>
+          )}
+        </div>
+        {!flipped && (
+          <button className="btn-secondary mt-6" onClick={() => setFlipped(true)}>
+            Show answer
+          </button>
         )}
-      </button>
+        {!flipped && <span className="mt-2 text-sm muted">Recall the answer first, then check (or press Space)</span>}
+      </div>
       {flipped && (
         <div className="grid grid-cols-4 gap-2">
           {GRADES.map((g) => (
             <button key={g.label} className={`btn flex-col gap-0 text-white ${g.cls}`} onClick={() => rate(g.g)}>
               {g.label}
-              <span className="text-[11px] font-normal opacity-90">{intervals?.[g.label.toLowerCase()] ?? ''}</span>
+              <span className="text-xs font-normal">{intervals?.[g.label.toLowerCase()] ?? ''}</span>
             </button>
           ))}
         </div>
