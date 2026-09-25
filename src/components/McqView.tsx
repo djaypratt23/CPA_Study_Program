@@ -1,10 +1,11 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import type { Mcq, SectionId } from '../content/schema'
 import { SKILL_LABELS } from '../content/schema'
 import { db } from '../db'
 import { logError, setItemNote, toggleFlag } from '../db/actions'
 import { ERROR_CAUSES, ERROR_CAUSE_LABELS, type ErrorCause } from '../db/types'
+import { CHOICE_LETTERS, displayChoices, displayLetter } from '../lib/random'
 import type { Confidence } from '../lib/srs'
 import { useHotkeys } from '../hooks/useDesktop'
 import Icon from './Icon'
@@ -48,16 +49,19 @@ interface Props {
   section: SectionId
   /** Enable keyboard shortcuts (A–D choose, 1–3 confidence). Only for the single active question on a page. */
   keyboard?: boolean
+  /** Shuffle the choices per session (pass the session id). Letters follow display order; stored ids don't change. */
+  shuffleSeed?: string
 }
 
-export default function McqView({ q, index, total, selected, confidence, revealed, confidenceSubmits, onSelect, onConfidence, showTools = true, hideConfidence = false, section, keyboard = false }: Props) {
+export default function McqView({ q, index, total, selected, confidence, revealed, confidenceSubmits, onSelect, onConfidence, showTools = true, hideConfidence = false, section, keyboard = false, shuffleSeed }: Props) {
   const meta = useLiveQuery(() => db.itemMeta.get(q.id), [q.id])
   const [noteOpen, setNoteOpen] = useState(false)
   const correct = selected === q.answer
+  const choices = useMemo(() => displayChoices(q.id, q.choices, shuffleSeed), [q.id, q.choices, shuffleSeed])
 
   useHotkeys((e) => {
     if (revealed) return
-    const choice = q.choices.find((c) => c.id === e.key.toLowerCase())
+    const choice = e.key.length === 1 ? choices[CHOICE_LETTERS.indexOf(e.key.toUpperCase() as (typeof CHOICE_LETTERS)[number])] : undefined
     if (choice) {
       e.preventDefault()
       onSelect(choice.id)
@@ -123,12 +127,12 @@ export default function McqView({ q, index, total, selected, confidence, reveale
           ? confidence === 'guess'
             ? 'Correct — but you guessed, so it will come back for review like a miss.'
             : 'Correct.'
-          : `Not quite — the answer is (${q.answer.toUpperCase()}).`}
+          : `Not quite — the answer is (${displayLetter(choices, q.answer)}).`}
       </div>
       )}
 
       <div role="radiogroup" aria-label="Answer choices" className="space-y-2">
-        {q.choices.map((c) => {
+        {choices.map((c, i) => {
           const isSel = selected === c.id
           const isAns = c.id === q.answer
           let cls = 'border-slate-300 bg-white hover:border-blue-400 dark:border-slate-700 dark:bg-slate-900'
@@ -145,7 +149,7 @@ export default function McqView({ q, index, total, selected, confidence, reveale
                 className={`flex w-full items-start gap-3 rounded-lg border p-3 text-left transition-colors disabled:cursor-default ${cls}`}
               >
                 <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-current text-xs font-bold uppercase">
-                  {c.id}
+                  {CHOICE_LETTERS[i]}
                 </span>
                 <span className="min-w-0 flex-1">
                   <Markdown className="prose-lesson [&_p]:my-0">{c.text}</Markdown>
