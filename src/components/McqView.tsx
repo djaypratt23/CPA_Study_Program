@@ -45,12 +45,14 @@ interface Props {
   showTools?: boolean
   /** Simulated exam: no confidence prompt, like the real exam. */
   hideConfidence?: boolean
+  /** Simulated exam: no skill-level chip (it hints at the kind of reasoning needed). */
+  hideSkill?: boolean
   section: SectionId
   /** Enable keyboard shortcuts (A–D choose, 1–3 confidence). Only for the single active question on a page. */
   keyboard?: boolean
 }
 
-export default function McqView({ q, index, total, selected, confidence, revealed, confidenceSubmits, onSelect, onConfidence, showTools = true, hideConfidence = false, section, keyboard = false }: Props) {
+export default function McqView({ q, index, total, selected, confidence, revealed, confidenceSubmits, onSelect, onConfidence, showTools = true, hideConfidence = false, hideSkill = false, section, keyboard = false }: Props) {
   const meta = useLiveQuery(() => db.itemMeta.get(q.id), [q.id])
   const [noteOpen, setNoteOpen] = useState(false)
   const correct = selected === q.answer
@@ -79,7 +81,7 @@ export default function McqView({ q, index, total, selected, confidence, reveale
               Question {index + 1} of {total}
             </span>
           )}
-          <span className="chip bg-slate-100 dark:bg-slate-800">{SKILL_LABELS[q.skill]}</span>
+          {!hideSkill && <span className="chip bg-slate-100 dark:bg-slate-800">{SKILL_LABELS[q.skill]}</span>}
           {q.needsReview && <ReviewBadge note={q.reviewNote} />}
         </div>
         {showTools && (
