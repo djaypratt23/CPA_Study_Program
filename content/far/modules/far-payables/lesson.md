@@ -11,6 +11,8 @@ objectives:
     skill: application
   - text: Compute bonus accruals based on formulas that depend on net income.
     skill: application
+  - text: Reconcile the accounts payable subledger to the general ledger, search for unrecorded liabilities and review an accrued liabilities schedule against source data.
+    skill: analysis
 bigIdea:
   what: >-
     Accrued liabilities are obligations for things the company has already received — goods, labor, services —
@@ -118,3 +120,24 @@ steps:
 ```check
 far-pay-chk2
 ```
+
+## Reconciling AP and reviewing accruals
+
+**AP subledger vs. GL.** Classify each difference by the record it affects:
+
+| Item | Correct |
+|---|---|
+| Invoice in subledger, GL batch not posted | GL only |
+| Debit memo in GL, not posted to the vendor | Subledger only |
+| Goods received, no invoice yet (title passed) | **Both**: an unrecorded liability |
+| Payment posted to the wrong vendor | Neither total (but two vendor balances) |
+
+A reconciliation that agrees proves only that the two records agree with **each other**. Liabilities missing from both records are found by comparing the **receiving log** and January disbursements with year-end payables.
+
+**Reviewing accruals.** Recompute each accrual from its source instead of accepting the prior method:
+
+- **Interest:** principal × rate × the months since the **last payment date**, not a full year.
+- **Wages:** the unpaid workdays since the last pay period ended.
+- **Warranty liability:** beginning liability + expense accrued − claims paid. The year's *expense* is not the year-end *liability*.
+- **Compensated absences:** vested, earned and unused vacation is accrued when earned.
+- **Utilities and other services:** December usage billed in January is a December expense.

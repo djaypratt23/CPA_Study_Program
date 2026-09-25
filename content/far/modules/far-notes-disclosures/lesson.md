@@ -12,6 +12,8 @@ objectives:
     task: Identify and disclose related-party transactions
   - text: Determine when concentrations and significant estimates must be disclosed.
     skill: application
+  - text: Compare note disclosures with the financial statements and supporting documents, and investigate and correct inconsistencies.
+    skill: analysis
 bigIdea:
   what: >-
     The notes are the part of the financial statements that tells readers how the numbers were made and what
@@ -96,3 +98,13 @@ Special rule: **all** concentrations of labor subject to collective bargaining a
 ```check
 far-nd-chk2
 ```
+
+## Tying the notes to the statements
+
+Every number in the notes should agree to a statement line, add up to one, or come from a supporting schedule. When you review a note, check it three ways:
+
+1. **Agree.** The note total agrees to the statement (for example, the total of the debt maturity table equals current plus noncurrent debt).
+2. **Split.** A note component is the right *part* of a statement line (the PP&E note discloses depreciation only, even when the income statement combines depreciation and amortization).
+3. **Recompute.** Supplemental amounts are recomputed from source data (cash paid for interest = interest expense − the increase in interest payable, ± premium or discount amortization).
+
+A table that foots is not necessarily right. A maturity schedule can total correctly while shifting a payment between years, so agree each year to the debt agreements too.

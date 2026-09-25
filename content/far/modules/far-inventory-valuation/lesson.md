@@ -12,6 +12,8 @@ objectives:
     task: Estimate ending inventory
   - text: Analyze the effects of inventory errors across two periods.
     skill: analysis
+  - text: Prepare an inventory roll-forward from source data and reconcile the perpetual subledger to the general ledger, including cutoff and ownership items.
+    skill: analysis
 bigIdea:
   what: >-
     Inventory can't be carried above what the company expects to get for it. When prices fall or goods become
@@ -130,3 +132,22 @@ Ending inventory this year is beginning inventory next year, so errors **counter
 ```check
 far-iv-chk2
 ```
+
+## Inventory roll-forwards and perpetual-record reconciliations
+
+**Roll-forward:** beginning inventory + purchases + freight-in − purchase returns and discounts − cost of goods sold = book inventory. Compare book inventory with the **physical count** at cost. The difference is shrinkage, usually charged to cost of goods sold.
+
+| Check | Why it matters |
+|---|---|
+| Freight-in included | It is a cost of the inventory (ASC 330), not a selling expense |
+| Returns and discounts deducted | They reduce cost |
+| Book vs. count difference is plausible | An unexplained *overage* usually means an error in the roll-forward, not found goods |
+
+**Reconciling the perpetual subledger to the GL.** Ownership, not location, decides what belongs in inventory:
+
+- **FOB shipping point, in transit at year-end**: the buyer owns it, so include it even though it is not on the dock.
+- **FOB destination, in transit**: still the seller's inventory.
+- **Consigned-in goods** (held for someone else): exclude them. **Consigned-out goods** (at a consignee): include them.
+- **Duplicate receiving entries**: remove them.
+
+Adjust the record that is wrong, then confirm that the adjusted subledger equals the general ledger.

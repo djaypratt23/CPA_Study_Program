@@ -23,6 +23,11 @@ function perfectResponses(t: Tbs): TbsResponses {
     if (p.kind === 'docreview')
       responses[p.id] = { kind: 'docreview', values: Object.fromEntries(p.segments.flatMap((s) => ('id' in s ? [[s.id, s.answer]] : []))) }
     if (p.kind === 'research') responses[p.id] = { kind: 'research', value: p.answer }
+    if (p.kind === 'review')
+      responses[p.id] = {
+        kind: 'review',
+        values: Object.fromEntries(p.rows.map((r) => [r.id, r.prepared === r.answer ? { flagged: false } : { flagged: true, corrected: String(r.answer) }])),
+      }
   }
   return responses
 }

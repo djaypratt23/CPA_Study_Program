@@ -12,6 +12,8 @@ objectives:
     task: Prepare consolidating entries for intercompany transactions
   - text: Compute consolidated balances and the noncontrolling interest's share of income.
     skill: analysis
+  - text: Review consolidated amounts against separate-company data and intercompany information, detecting and correcting elimination errors.
+    skill: analysis
 bigIdea:
   what: >-
     Consolidated statements present a parent and the companies it controls as if they were one economic entity.
@@ -150,3 +152,20 @@ steps:
 ```check
 far-con-chk2
 ```
+
+## Reviewing a consolidation
+
+When you review a consolidation worksheet, check each consolidated line against a simple formula: **parent + subsidiary + fair value adjustments − intercompany items**.
+
+| Line | Check |
+|---|---|
+| Sales and COGS | Intercompany sales removed from **both** |
+| COGS and inventory | Unrealized profit in ending inventory deferred: goods still held × seller's gross margin |
+| Receivables and payables | Intercompany balances removed from **both** sides |
+| Dividend or investment income | Dividends from the subsidiary eliminated |
+| Operating expenses | Amortization of acquisition-date fair value adjustments added |
+| Noncontrolling interest in net income | NCI % × (subsidiary net income − amortization − **upstream** unrealized profit) |
+
+**At the acquisition date**, check that goodwill is **full** goodwill (consideration + fair value of NCI − fair value of identifiable net assets), that NCI is at fair value, that identifiable intangibles the subsidiary never recorded (customer relationships, trade names) are recognized, and that the subsidiary's equity is eliminated.
+
+A worksheet that eliminates only one side of an intercompany balance cannot balance. That imbalance is a clue, not a rounding issue.

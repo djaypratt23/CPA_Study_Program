@@ -138,3 +138,21 @@ Items changed for `REMEDIATION_TASKS.md` P0-9 and P1-8. Changed keys are pinned 
 | `aud-tbs-x1-independence` s2 | Rationale addresses the facts (permitted tax service; no interest). | ET 1.295 |
 | `aud-x1-04` c | "holds no more than 5%" matches the >5% rule. | ET 1.200 |
 | `aud-using-others` lesson | SAS 149 terminology note added. | SAS 149 |
+
+## New analysis-level simulations (P1-4, confirm)
+
+New `review` TBS part: the candidate ticks each prepared amount that is wrong and enters the correct amount. Every row is scored, so flagging a correct row costs credit. All figures are fictional. Please confirm each key and explanation.
+
+| Item | Blueprint task (paraphrased) | Authority |
+|---|---|---|
+| `far-tbs-u5-ar-review` | AR roll-forward from multiple sources; reconcile the subledger to the GL | ASC 310-10, 326-20 |
+| `far-tbs-u5-inventory-review` | Inventory roll-forward; reconcile the perpetual subledger to the GL (FOB terms, consignment) | ASC 330-10 |
+| `far-tbs-u6-ppe-rollforward` | PP&E roll-forward from source documents (installation, retirement, gain on sale) | ASC 360-10 |
+| `far-tbs-u6-ppe-subledger` | Reconcile the fixed-asset register to the GL (repairs vs. capitalization) | ASC 360-10 |
+| `far-tbs-u8-ap-recon` | Reconcile the AP subledger to the GL; unrecorded liabilities | ASC 405-10 |
+| `far-tbs-u8-accruals-review` | Review an accrued-liabilities schedule (interest, warranty, vacation) | ASC 460-10, 710-10, 835-30 |
+| `far-tbs-u1-statement-review` | Detect and correct discrepancies between the draft balance sheet, income statement and equity statement and the trial balance | ASC 210, 220, 320-10-35, 505 |
+| `far-tbs-u1-cash-flow-review` | Detect and correct discrepancies in a draft statement of cash flows | ASC 230-10 |
+| `far-tbs-u3-consolidation-review` | Detect and correct errors in consolidated amounts (upstream profit, intercompany balances, NCI) | ASC 810-10 |
+| `far-tbs-u3-acquisition-review` | Acquisition-date consolidated amounts (full goodwill, NCI at fair value, unrecorded intangibles) | ASC 805-20, 805-30 |
+| `far-tbs-u2-notes-review` | Compare the notes with the statements and support (debt maturities, tax note, interest paid) | ASC 470-10-50, 740-10-50, 230-10-50 |

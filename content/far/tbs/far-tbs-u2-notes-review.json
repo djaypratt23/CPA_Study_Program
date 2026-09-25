@@ -1,0 +1,118 @@
+{
+  "id": "far-tbs-u2-notes-review",
+  "section": "FAR",
+  "unitId": "far-u2",
+  "moduleIds": [
+    "far-notes-disclosures"
+  ],
+  "pool": "practice",
+  "title": "Tie the draft notes to the statements and support — Merrow Industries",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Merrow Industries' draft notes for the year ended December 31, Year 2, are ready for review. Compare each note amount with the financial statements and supporting documents in the exhibits. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Debt agreements",
+      "content": "- **Term loan:** $1,000,000, repayable in five equal annual principal installments of **$200,000**, the first due in Year 3.\n- **Mortgage:** $480,000, repayable in equal annual principal installments of **$40,000**, the first due in Year 3.\n- Balance sheet at December 31, Year 2: current portion of long-term debt **$240,000**; long-term debt, less current portion, **$1,240,000**."
+    },
+    {
+      "title": "Statement amounts and workpapers",
+      "content": "- Income statement: depreciation and amortization **$142,000**; interest expense **$64,000**; income tax expense **$176,000**.\n- Intangible assets schedule: amortization for the year **$24,000**.\n- Tax provision workpaper: current tax expense **$168,000**; deferred tax expense **$8,000**.\n- Interest payable increased by **$6,000** during the year."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "mat",
+      "prompt": "Review the maturities table in the long-term debt note.",
+      "preparedLabel": "Per draft note",
+      "rows": [
+        {
+          "id": "y3",
+          "label": "Year 3",
+          "prepared": 240000,
+          "answer": 240000,
+          "explanation": "Term loan 200,000 + mortgage 40,000 = **240,000**, which agrees to the current portion on the balance sheet. **No error.**"
+        },
+        {
+          "id": "y4",
+          "label": "Year 4",
+          "prepared": 240000,
+          "answer": 240000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "y5",
+          "label": "Year 5",
+          "prepared": 200000,
+          "answer": 240000,
+          "explanation": "Term loan 200,000 + mortgage 40,000 = **240,000**. The draft left out the mortgage payment."
+        },
+        {
+          "id": "y6",
+          "label": "Year 6",
+          "prepared": 240000,
+          "answer": 240000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "y7",
+          "label": "Year 7",
+          "prepared": 240000,
+          "answer": 240000,
+          "explanation": "The term loan's final payment. **No error.**"
+        },
+        {
+          "id": "after",
+          "label": "Thereafter",
+          "prepared": 320000,
+          "answer": 280000,
+          "explanation": "Mortgage 480,000 − 5 × 40,000 = **280,000**. The draft's total still summed to 1,480,000 because Year 5 was understated by the same 40,000 — a footing check alone would not catch it."
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "id": "oth",
+      "prompt": "Review the other note amounts.",
+      "preparedLabel": "Per draft note",
+      "rows": [
+        {
+          "id": "dep",
+          "label": "Depreciation expense (property and equipment note)",
+          "prepared": 142000,
+          "answer": 118000,
+          "explanation": "The income statement line \"Depreciation and amortization\" of 142,000 includes 24,000 of intangible amortization. The PP&E note discloses depreciation only: **118,000**."
+        },
+        {
+          "id": "amort",
+          "label": "Amortization expense (intangible assets note)",
+          "prepared": 24000,
+          "answer": 24000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "curtax",
+          "label": "Current income tax expense (income tax note)",
+          "prepared": 168000,
+          "answer": 168000,
+          "explanation": "Agrees to the tax provision workpaper. **No error.**"
+        },
+        {
+          "id": "tottax",
+          "label": "Total income tax expense (income tax note)",
+          "prepared": 168000,
+          "answer": 176000,
+          "explanation": "Current 168,000 + deferred 8,000 = **176,000**, which agrees to the income statement."
+        },
+        {
+          "id": "intpd",
+          "label": "Cash paid for interest (supplemental cash flow disclosure)",
+          "prepared": 64000,
+          "answer": 58000,
+          "explanation": "Interest expense 64,000 − increase in interest payable 6,000 = **58,000** paid."
+        }
+      ]
+    }
+  ]
+}

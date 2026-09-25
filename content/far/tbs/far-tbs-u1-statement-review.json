@@ -1,0 +1,134 @@
+{
+  "id": "far-tbs-u1-statement-review",
+  "section": "FAR",
+  "unitId": "far-u1",
+  "moduleIds": [
+    "far-balance-sheet-equity",
+    "far-income-statement-oci"
+  ],
+  "pool": "practice",
+  "title": "Agree the draft financial statements to the trial balance — Keel & Co.",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "A staff accountant drafted Keel & Co.'s December 31 balance sheet, income statement and statement of changes in equity from the adjusted trial balance. Agree each draft amount to the trial balance and the notes in the exhibits. Tick every amount that is wrong and enter the correct amount. Enter treasury stock and other decreases as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Adjusted trial balance, December 31",
+      "content": "| Account | Debit | Credit |\n|---|---:|---:|\n| Cash | 84,000 | |\n| Accounts receivable | 225,000 | |\n| Allowance for credit losses | | 13,000 |\n| Inventory | 318,000 | |\n| Prepaid insurance | 12,000 | |\n| Available-for-sale debt securities (noncurrent) | 70,000 | |\n| Property and equipment, net | 940,000 | |\n| Accounts payable | | 176,000 |\n| Accrued liabilities | | 58,000 |\n| Note payable (50,000 due within 12 months) | | 400,000 |\n| Common stock | | 200,000 |\n| Additional paid-in capital | | 150,000 |\n| Retained earnings, January 1 | | 449,000 |\n| Accumulated OCI, January 1 | | 12,000 |\n| Treasury stock | 30,000 | |\n| Dividends declared and paid | 40,000 | |\n| Sales | | 2,650,000 |\n| Cost of goods sold | 1,590,000 | |\n| Selling, general and administrative | 612,000 | |\n| Depreciation expense | 96,000 | |\n| Gain on sale of equipment | | 9,000 |\n| Interest expense | 27,000 | |\n| Income tax expense | 81,000 | |\n| Unrealized holding gain on AFS debt securities | | 8,000 |\n| **Totals** | **4,125,000** | **4,125,000** |"
+    },
+    {
+      "title": "Other information",
+      "content": "- The AFS debt securities are held as a long-term investment.\n- No shares were issued or reacquired during the year.\n- Ignore income tax effects on OCI."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "bs",
+      "prompt": "Review the draft balance sheet.",
+      "preparedLabel": "Per draft",
+      "rows": [
+        {
+          "id": "ca",
+          "label": "Total current assets",
+          "prepared": 639000,
+          "answer": 626000,
+          "explanation": "Receivables are reported **net** of the allowance: 84,000 + (225,000 − 13,000) + 318,000 + 12,000 = **626,000**. The draft used gross receivables."
+        },
+        {
+          "id": "ta",
+          "label": "Total assets",
+          "prepared": 1649000,
+          "answer": 1636000,
+          "explanation": "626,000 + 70,000 + 940,000 = **1,636,000**. The draft's total assets did not equal its total liabilities and equity (1,636,000) — the first clue."
+        },
+        {
+          "id": "cl",
+          "label": "Total current liabilities",
+          "prepared": 234000,
+          "answer": 284000,
+          "explanation": "The 50,000 of the note due within 12 months is current: 176,000 + 58,000 + 50,000 = **284,000**."
+        },
+        {
+          "id": "tl",
+          "label": "Total liabilities",
+          "prepared": 634000,
+          "answer": 634000,
+          "explanation": "176,000 + 58,000 + 400,000 = **634,000**. A classification error moves amounts between subtotals but leaves the total unchanged. **No error.**"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "id": "is",
+      "prompt": "Review the draft income statement.",
+      "preparedLabel": "Per draft",
+      "rows": [
+        {
+          "id": "gp",
+          "label": "Gross profit",
+          "prepared": 1060000,
+          "answer": 1060000,
+          "explanation": "2,650,000 − 1,590,000 = **1,060,000**. **No error.**"
+        },
+        {
+          "id": "ibt",
+          "label": "Income before income taxes",
+          "prepared": 342000,
+          "answer": 334000,
+          "explanation": "1,060,000 − 612,000 − 96,000 + 9,000 − 27,000 = **334,000**. The draft included the 8,000 unrealized gain on **AFS debt** securities, which belongs in OCI (ASC 320-10-35)."
+        },
+        {
+          "id": "tax",
+          "label": "Income tax expense",
+          "prepared": 81000,
+          "answer": 81000,
+          "explanation": "Agrees to the trial balance. **No error.**"
+        },
+        {
+          "id": "ni",
+          "label": "Net income",
+          "prepared": 261000,
+          "answer": 253000,
+          "explanation": "334,000 − 81,000 = **253,000**."
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "id": "eq",
+      "prompt": "Review the draft statement of changes in equity.",
+      "preparedLabel": "Per draft",
+      "rows": [
+        {
+          "id": "rebeg",
+          "label": "Retained earnings, January 1",
+          "prepared": 449000,
+          "answer": 449000,
+          "explanation": "Agrees to the trial balance. **No error.**"
+        },
+        {
+          "id": "reend",
+          "label": "Retained earnings, December 31",
+          "prepared": 670000,
+          "answer": 662000,
+          "explanation": "449,000 + 253,000 − 40,000 = **662,000**."
+        },
+        {
+          "id": "aoci",
+          "label": "Accumulated OCI, December 31",
+          "prepared": 12000,
+          "answer": 20000,
+          "explanation": "12,000 + 8,000 unrealized gain = **20,000**."
+        },
+        {
+          "id": "te",
+          "label": "Total stockholders' equity, December 31",
+          "prepared": 1002000,
+          "answer": 1002000,
+          "explanation": "200,000 + 150,000 + 662,000 + 20,000 − 30,000 = **1,002,000**. The draft's two errors (+8,000 in retained earnings, −8,000 in AOCI) offset, so the total is right even though both components are wrong. **No error** in the total."
+        }
+      ]
+    }
+  ]
+}
