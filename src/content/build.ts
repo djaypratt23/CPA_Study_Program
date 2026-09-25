@@ -24,6 +24,7 @@ import {
   type ReviewDoc,
   type SectionId,
 } from './schema'
+import { CUE_LINT_LEVEL, cueProblems, cueStats } from './cueLint'
 
 export type RawFiles = Record<string, string>
 
@@ -311,6 +312,9 @@ export function buildContent(files: RawFiles): BuildResult {
       if (!bundle.exams.some((e) => e.section === s.id)) errors.push(`${s.id} (full): needs a simulated exam form`)
     }
   }
+
+  // 6. Answer-cue lint (P0-6): length and key-letter cues per section and pool.
+  for (const p of cueProblems(cueStats(bundle))) (CUE_LINT_LEVEL === 'error' ? errors : warnings).push(`answer cues: ${p}`)
 
   return { bundle, errors, warnings }
 }

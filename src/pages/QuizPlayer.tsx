@@ -158,6 +158,7 @@ export default function QuizPlayer() {
         onSelect={(c) => patchItem({ choice: c })}
         onConfidence={(c) => (isTest ? patchItem({ confidence: c, timeMs: st.timeMs + (Date.now() - qStart.current) }) : submitTutor(c))}
         keyboard
+        shuffleSeed={session.id}
       />
       <KeyNav onPrev={session.index > 0 ? () => go(session.index - 1) : undefined} onNext={!last ? () => go(session.index + 1) : undefined} />
 
@@ -245,6 +246,7 @@ function QuizResults({ session }: { session: QuizSession }) {
                 <McqView
                   q={q}
                   section={session.section}
+                  shuffleSeed={session.id}
                   selected={st.choice}
                   confidence={st.confidence}
                   revealed
