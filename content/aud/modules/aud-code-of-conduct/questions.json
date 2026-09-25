@@ -6,24 +6,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "No, because the amount is immaterial",
+        "text": "No, because $300 is immaterial to both the spouse and the staff member",
         "explanation": "Materiality matters only for indirect interests; any direct interest held by immediate family impairs independence.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Yes — a direct financial interest held by immediate family impairs independence regardless of amount",
+        "text": "Yes; an immediate family member's direct interest impairs it at any amount",
         "explanation": "Correct. A spouse is immediate family, and the interest is treated as the covered member's own."
       },
       {
         "id": "c",
-        "text": "Only if the spouse works for the client",
+        "text": "Only if the spouse is also employed by the audit client in a key position",
         "explanation": "Employment is not required; ownership alone impairs independence.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "d",
-        "text": "Only if the staff member knew about the investment",
+        "text": "Only if the staff member knew about the investment at the time",
         "explanation": "Knowledge matters for close relatives, not for immediate family.",
         "trap": "wrong-classification"
       }
@@ -40,29 +40,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Advocacy",
+        "text": "Advocacy threat to objectivity",
         "explanation": "Advocacy is promoting the client's position to third parties.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Self-review",
-        "explanation": "Self-review involves auditing the firm's own work.",
-        "trap": "wrong-classification"
+        "text": "Undue influence threat",
+        "explanation": "Correct. The client is using pressure to influence the auditor's judgment."
       },
       {
         "id": "c",
-        "text": "Familiarity",
+        "text": "Familiarity threat",
         "explanation": "Familiarity arises from long or close relationships, not threats.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Undue influence",
-        "explanation": "Correct. The client is using pressure to influence the auditor's judgment."
+        "text": "Self-review threat to objectivity",
+        "explanation": "Self-review involves auditing the firm's own work.",
+        "trap": "wrong-classification"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "Undue influence: attempts by management or others to coerce or exercise excessive influence over the member.",
     "skill": "application",
     "difficulty": 2
@@ -74,15 +74,14 @@
     "choices": [
       {
         "id": "a",
-        "text": "The firm's fee must be below 10% of total fees",
+        "text": "The fee for the service must be below 10% of the firm's total fees from the client",
         "explanation": "The Code sets no fee-percentage test for nonattest services.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "The client's CFO must be a CPA",
-        "explanation": "The overseer needs suitable skill, knowledge and/or experience, not a CPA license.",
-        "trap": "overgeneralization"
+        "text": "The client names a person with suitable SKE who oversees it and accepts the results",
+        "explanation": "Correct. This is one of the general requirements for nonattest services."
       },
       {
         "id": "c",
@@ -92,11 +91,12 @@
       },
       {
         "id": "d",
-        "text": "The client designates an individual with suitable SKE who oversees the service and accepts responsibility for the results",
-        "explanation": "Correct. This is one of the general requirements for nonattest services."
+        "text": "The client's CFO must hold an active CPA license",
+        "explanation": "The overseer needs suitable skill, knowledge and/or experience, not a CPA license.",
+        "trap": "overgeneralization"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "General requirements: no management responsibilities; the client designates a competent overseer, evaluates the results, and accepts responsibility; the understanding is documented.",
     "skill": "application",
     "difficulty": 2
@@ -108,29 +108,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "100 shares of the client held in a brokerage account",
+        "text": "100 shares of the client held in the partner's own brokerage account",
         "explanation": "A direct financial interest of any amount impairs independence.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "An immaterial investment in a diversified mutual fund that holds some client stock",
-        "explanation": "Correct. An indirect financial interest impairs independence only if material."
+        "text": "A material investment in a mutual fund that holds only a small amount of client stock",
+        "explanation": "A material indirect interest impairs independence.",
+        "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "Client bonds held in the partner's IRA that the partner directs",
+        "text": "Client bonds held in an IRA in which the partner directs the investments",
         "explanation": "A self-directed holding is a direct financial interest.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "A material investment in a mutual fund that holds client stock",
-        "explanation": "A material indirect interest impairs independence.",
-        "trap": "overgeneralization"
+        "text": "An immaterial investment in a diversified mutual fund that holds some client stock",
+        "explanation": "Correct. An indirect financial interest impairs independence only if material."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Direct → always impairs. Indirect → impairs if material. A mutual fund's holdings are generally indirect interests.",
     "skill": "application",
     "difficulty": 2
@@ -210,18 +210,18 @@
     "choices": [
       {
         "id": "a",
-        "text": "The firm designed the client's accounting system and now audits the statements it produces",
+        "text": "The firm designed the client's accounting system and now audits its output",
         "explanation": "Correct. The auditor would be evaluating the results of its own work."
       },
       {
         "id": "b",
-        "text": "The engagement partner has audited the client for 12 years",
+        "text": "The engagement partner has audited this client for the past 12 years",
         "explanation": "That is a familiarity threat.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "The firm is suing the client for unpaid fees",
+        "text": "The firm is suing the client to collect a large amount of unpaid fees",
         "explanation": "That is an adverse interest threat.",
         "trap": "wrong-classification"
       },
@@ -250,14 +250,14 @@
       },
       {
         "id": "b",
-        "text": "Fees for Year 1 audit services rendered in February, Year 2",
-        "explanation": "Correct. They were rendered more than one year before the current report date and are still unpaid."
-      },
-      {
-        "id": "c",
         "text": "Fees for the Year 2 audit in progress",
         "explanation": "Current-engagement fees are not past due for this purpose.",
         "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Fees for Year 1 audit services rendered in February, Year 2",
+        "explanation": "Correct. They were rendered more than one year before the current report date and are still unpaid."
       },
       {
         "id": "d",
@@ -266,7 +266,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Unpaid fees for any professional services rendered more than one year before the date of the current-year report impair independence (the fees are treated like a loan to the client).",
     "skill": "application",
     "difficulty": 2
@@ -278,7 +278,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Calculating payroll from time records the client approved",
+        "text": "Calculating payroll from time records that the client has approved",
         "explanation": "Processing client-approved data is permitted if the conditions are met.",
         "trap": "wrong-rule"
       },
@@ -295,7 +295,7 @@
       },
       {
         "id": "d",
-        "text": "Transmitting client-approved payroll data to a bank",
+        "text": "Transmitting client-approved payroll data to the client's bank for payment",
         "explanation": "Transmitting approved data is permitted if the client authorizes the transfer.",
         "trap": "wrong-rule"
       }
@@ -313,7 +313,7 @@
       {
         "id": "a",
         "text": "A review of the financial statements",
-        "explanation": "Correct. Contingent fees are prohibited for clients for which the member performs audits, reviews, or examinations of prospective financial information."
+        "explanation": "Correct. Contingent fees are prohibited for clients for which the member performs audits, reviews, compilations whose report does not disclose a lack of independence, or examinations of prospective financial information."
       },
       {
         "id": "b",
@@ -346,7 +346,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "A staff accountant on the Pine audit team",
+        "text": "A staff accountant assigned to the Pine audit engagement team",
         "explanation": "Attest engagement team members are covered members.",
         "trap": "wrong-rule"
       },
@@ -363,7 +363,7 @@
       },
       {
         "id": "d",
-        "text": "The firm's employee benefit plan",
+        "text": "The firm's own employee benefit plan, which the firm sponsors and manages",
         "explanation": "The firm and its benefit plans are covered members.",
         "trap": "wrong-rule"
       }
@@ -386,14 +386,14 @@
       },
       {
         "id": "b",
-        "text": "Return records the client provided",
-        "explanation": "Correct. Client-provided records must be returned on request."
-      },
-      {
-        "id": "c",
         "text": "Provide the member's working papers",
         "explanation": "Working papers are the member's property and need not be provided.",
         "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Return records the client provided",
+        "explanation": "Correct. Client-provided records must be returned on request."
       },
       {
         "id": "d",
@@ -402,7 +402,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Client-provided records must be returned. Client records prepared by the member may be withheld until fees for that work are paid. Working papers belong to the member.",
     "skill": "application",
     "difficulty": 2
@@ -448,19 +448,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "Permitted, if the client designates an overseer",
+        "text": "Permitted, if the client designates a qualified overseer for the system",
         "explanation": "Designing and operating the system goes beyond what the SKE safeguard can fix.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "Permitted, because the audit committee approved it",
+        "text": "Permitted, because the audit committee has approved the arrangement",
         "explanation": "Audit committee approval does not cure a management responsibility.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Independence is impaired — operating the system is a management responsibility and creates self-review",
+        "text": "Impaired: operating the system is a management responsibility",
         "explanation": "Correct. The threats cannot be reduced to an acceptable level."
       },
       {

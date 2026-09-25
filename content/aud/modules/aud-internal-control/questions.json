@@ -6,9 +6,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "Preparing the payroll and attending training",
-        "explanation": "Not incompatible functions.",
-        "trap": "irrelevant-fact"
+        "text": "Preparing a deposit and posting to customer accounts",
+        "explanation": "Correct. Custody and recording should be separated."
       },
       {
         "id": "b",
@@ -24,11 +23,12 @@
       },
       {
         "id": "d",
-        "text": "Preparing a deposit and posting to customer accounts",
-        "explanation": "Correct. Custody and recording should be separated."
+        "text": "Preparing the payroll and approving employee training requests",
+        "explanation": "Not incompatible functions.",
+        "trap": "irrelevant-fact"
       }
     ],
-    "answer": "d",
+    "answer": "a",
     "explanation": "Separate authorization, recording, and custody.",
     "skill": "application",
     "difficulty": 2
@@ -40,9 +40,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "Control activities",
-        "explanation": "Control activities are specific policies and procedures.",
-        "trap": "wrong-classification"
+        "text": "Control environment",
+        "explanation": "Correct. Tone at the top."
       },
       {
         "id": "b",
@@ -52,8 +51,9 @@
       },
       {
         "id": "c",
-        "text": "Control environment",
-        "explanation": "Correct. Tone at the top."
+        "text": "Control activities",
+        "explanation": "Control activities are specific policies and procedures.",
+        "trap": "wrong-classification"
       },
       {
         "id": "d",
@@ -62,7 +62,7 @@
         "trap": "wrong-classification"
       }
     ],
-    "answer": "c",
+    "answer": "a",
     "explanation": "The control environment is the foundation for all other components.",
     "skill": "remembering",
     "difficulty": 2
@@ -74,29 +74,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "A deficiency only, because the fraud was immaterial",
+        "text": "A deficiency only, because the fraud itself was immaterial",
         "explanation": "Fraud by senior management is an indicator of a material weakness regardless of amount.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "A significant deficiency that need not be communicated",
-        "explanation": "Significant deficiencies must be communicated in writing.",
-        "trap": "wrong-rule"
+        "text": "A material weakness indicator needing written communication",
+        "explanation": "Correct. Identification of fraud, whether or not material, by senior management is an indicator of a material weakness."
       },
       {
         "id": "c",
-        "text": "Not a deficiency, because the auditor found it",
+        "text": "Not a deficiency, because the auditor detected the fraud",
         "explanation": "Detection by the auditor doesn't mean the controls worked.",
         "trap": "reversed"
       },
       {
         "id": "d",
-        "text": "A material weakness indicator requiring evaluation and written communication",
-        "explanation": "Correct. Identification of fraud, whether or not material, by senior management is an indicator of a material weakness."
+        "text": "A significant deficiency that doesn't need to be communicated",
+        "explanation": "Significant deficiencies must be communicated in writing.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "Identification of fraud, whether or not material, by senior management is an indicator of a material weakness.",
     "skill": "evaluation",
     "difficulty": 2
@@ -108,24 +108,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Requiring two signatures on large checks",
+        "text": "Requiring two signatures on all checks above a set amount",
         "explanation": "That is a control activity.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Adopting a code of ethics",
+        "text": "Adopting and distributing a code of ethics to all staff",
         "explanation": "That belongs to the control environment.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Internal audit's periodic testing of controls over payroll",
+        "text": "Internal audit's periodic testing of payroll controls",
         "explanation": "Correct. Monitoring includes ongoing evaluations (built into operations) and separate evaluations such as internal audit reviews."
       },
       {
         "id": "d",
-        "text": "Identifying risks from a new foreign operation",
+        "text": "Identifying the risks arising from a new foreign operation",
         "explanation": "That belongs to risk assessment.",
         "trap": "wrong-classification"
       }
@@ -148,14 +148,14 @@
       },
       {
         "id": "b",
-        "text": "A material weakness",
-        "explanation": "Correct. Material weakness: a deficiency, or combination of deficiencies, with a reasonable possibility of a material misstatement not being prevented, or detected and corrected, timely."
-      },
-      {
-        "id": "c",
         "text": "A control deficiency only",
         "explanation": "The reasonable-possibility-of-material test elevates it.",
         "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "A material weakness",
+        "explanation": "Correct. Material weakness: a deficiency, or combination of deficiencies, with a reasonable possibility of a material misstatement not being prevented, or detected and corrected, timely."
       },
       {
         "id": "d",
@@ -164,7 +164,7 @@
         "trap": "irrelevant-fact"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Material weakness: a deficiency, or combination of deficiencies, with a reasonable possibility of a material misstatement not being prevented, or detected and corrected, timely.",
     "skill": "remembering",
     "difficulty": 2
@@ -176,29 +176,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Before the audit begins",
+        "text": "Before the audit begins, in the engagement letter",
         "explanation": "Deficiencies are identified during the audit.",
         "trap": "wrong-period"
       },
       {
         "id": "b",
-        "text": "No later than 60 days after the report release date",
-        "explanation": "Correct (ideally by the report release date)."
+        "text": "Only if those charged with governance request it",
+        "explanation": "Communication is required.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Within one year",
+        "text": "Within one year of the balance-sheet date",
         "explanation": "One year is far past the 60-day limit.",
         "trap": "wrong-period"
       },
       {
         "id": "d",
-        "text": "Only if requested",
-        "explanation": "Communication is required.",
-        "trap": "wrong-rule"
+        "text": "No later than 60 days after the report release date",
+        "explanation": "Correct (ideally by the report release date)."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "AU-C 265: written communication on a timely basis — best by the report release date and no later than 60 days after it.",
     "skill": "remembering",
     "difficulty": 2
@@ -244,24 +244,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "The owner receives the unopened bank statements and reviews them and the reconciliation",
+        "text": "The owner gets the unopened bank statements and reviews them",
         "explanation": "Correct. Owner oversight compensates for weak segregation."
       },
       {
         "id": "b",
-        "text": "The bookkeeper reconciles the bank account herself",
+        "text": "The bookkeeper reconciles the bank account herself each month",
         "explanation": "That adds no independent check.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "The company buys fidelity insurance only",
+        "text": "The company buys fidelity insurance for the bookkeeper",
         "explanation": "Insurance transfers loss but doesn't detect it.",
         "trap": "partial-computation"
       },
       {
         "id": "d",
-        "text": "The company switches to a larger bank",
+        "text": "The company moves its accounts to a larger bank",
         "explanation": "Irrelevant to segregation.",
         "trap": "irrelevant-fact"
       }
@@ -284,23 +284,23 @@
       },
       {
         "id": "b",
-        "text": "To confirm the auditor's understanding of a process and whether controls are designed and implemented",
-        "explanation": "Correct. A walkthrough traces a transaction from origination through the information system, confirming understanding and evaluating design and implementation."
-      },
-      {
-        "id": "c",
-        "text": "To confirm balances with customers",
+        "text": "To confirm balances with customers and vendors",
         "explanation": "That is a substantive procedure.",
         "trap": "wrong-classification"
       },
       {
+        "id": "c",
+        "text": "To confirm the auditor's understanding of a process and its controls",
+        "explanation": "Correct. A walkthrough traces a transaction from origination through the information system, confirming understanding and evaluating design and implementation."
+      },
+      {
         "id": "d",
-        "text": "To determine materiality",
+        "text": "To determine overall and performance materiality",
         "explanation": "Materiality is set separately.",
         "trap": "irrelevant-fact"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "A walkthrough traces a transaction from origination through the information system, confirming understanding and evaluating design and implementation.",
     "skill": "remembering",
     "difficulty": 2
@@ -346,24 +346,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Monthly reconciliation of the subledger to the general ledger, reviewed by the controller",
+        "text": "Monthly subledger-to-GL reconciliation, reviewed by the controller",
         "explanation": "Correct. Control activities include authorizations, reconciliations, verifications, physical controls, and segregation of duties."
       },
       {
         "id": "b",
-        "text": "The board's commitment to competence",
+        "text": "The board's commitment to competence and integrity",
         "explanation": "That belongs to the control environment.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "An annual fraud risk assessment",
+        "text": "An annual assessment of fraud risks across the entity",
         "explanation": "That belongs to risk assessment.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Internal audit's evaluation of controls",
+        "text": "Internal audit's periodic evaluation of controls",
         "explanation": "That belongs to monitoring.",
         "trap": "wrong-classification"
       }
@@ -386,14 +386,14 @@
       },
       {
         "id": "b",
-        "text": "It is an indicator of a material weakness",
-        "explanation": "Correct. Indicators of a material weakness include the auditor's identification of a material misstatement that would not have been detected by the entity's controls."
-      },
-      {
-        "id": "c",
         "text": "It is automatically only a significant deficiency",
         "explanation": "The material-misstatement indicator points to a material weakness.",
         "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "It is an indicator of a material weakness",
+        "explanation": "Correct. Indicators of a material weakness include the auditor's identification of a material misstatement that would not have been detected by the entity's controls."
       },
       {
         "id": "d",
@@ -402,7 +402,7 @@
         "trap": "overgeneralization"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Indicators of a material weakness include the auditor's identification of a material misstatement that would not have been detected by the entity's controls.",
     "skill": "evaluation",
     "difficulty": 2
@@ -414,24 +414,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Fictitious credit memos concealing theft of customer payments",
+        "text": "Fictitious credit memos that conceal stolen customer payments",
         "explanation": "Correct. Authorization and custody combine with recording."
       },
       {
         "id": "b",
-        "text": "Overstated depreciation",
+        "text": "Overstated depreciation on equipment used by the clerk",
         "explanation": "Unrelated to the clerk's duties.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Understated payroll taxes",
+        "text": "Understated payroll taxes for the sales department",
         "explanation": "Payroll is outside the clerk's duties.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "d",
-        "text": "Misclassified long-term debt",
+        "text": "Misclassified long-term debt on the balance sheet",
         "explanation": "Debt classification is outside the clerk's duties.",
         "trap": "irrelevant-fact"
       }

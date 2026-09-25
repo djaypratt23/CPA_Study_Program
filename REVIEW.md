@@ -9,6 +9,31 @@ prints the current count. Please confirm or correct each one, then remove the fl
 |---|---|---|
 | `far-ppe-10` (government donation of a building to a business entity) | `content/far/modules/far-ppe-acquisition/questions.json` | U.S. GAAP has little explicit guidance on how business entities account for government grants (ASU 2021-10 adds disclosures only). The keyed answer follows common review-course treatment (record the building at fair value, with contribution revenue or a gain); confirm it against current exam materials. |
 
+## Changed in remediation (confirm)
+
+Answer keys and content changed while working through `REMEDIATION_TASKS.md`. Each is pinned by
+`tests/remediationKeys.test.ts`; please confirm the new treatment.
+
+| Item | Change | Authority |
+|---|---|---|
+| `reg-x2-08` (REG mock) | Key **d → a**. The possessory party's interest couldn't attach, and so couldn't be perfected, until value was given on March 5, after the March 1 filing. | UCC 9-203(b), 9-308(a), 9-322(a)(1) |
+| `reg-tbs-u6-corporate-ti` | Charitable base is after the NOL carryforward: `ch` 44,200 (5,800 carries forward), `ti` 358,800, `tax` 75,348; `drd` and `nol` explanations updated. | IRC §170(b)(2)(D) |
+| `tcp-tbs-x2-corporate` (TCP mock) | Same rule: `ch` 45,000 (25,000 carries forward), `m1` 605,000, `ti` 372,500, `tax` 78,225; `nol` explanation updated. | IRC §170(b)(2)(D) |
+| `tcp-tbs-u2-retirement-education` `d3` | Added option "75" and keyed it (Leo, 50 in 2025, was born after 1959). | IRC §401(a)(9)(C)(v); SECURE 2.0 §107 |
+| `far-tbs-u8-bonds` | Keys recomputed from the exhibit's factors: `p` 1,837,774, `c1` 1,851,285, `i2` 74,051; Year 3 carrying amount 1,895,147, `ca` 947,574, `gl` −22,426. Instructions now say to use the factors provided. | Arithmetic |
+| `far-nd-08` | Key **c → b**: a 45%-of-revenue customer concentration must be disclosed because the near-term loss of any customer is always deemed at least reasonably possible. Lesson and flashcard `far-nd-fc8` added. | ASC 275-10-50-18, -50-20 |
+| `aud-wr-10` | Restored the stripped dollar amounts in the stem ($40,000 uncorrected; $100,000 materiality). Key unchanged. | — |
+| `far-tbs-u7-equity` `m5` | Exhibit now states Crestview elected the measurement alternative for Glenco; key unchanged. | ASC 321-10-35-2 |
+| `far-lso-07` | Stem adds rent-free months and escalating payments, and says no impairment was recognized; choice c's explanation no longer calls impairment a possible cause. Key unchanged. | ASC 842-20 |
+| `tcp-tbs-u3-estimates-consolidated` | The estimated-tax part is now self-contained (use the $600,000 expected tax; ignore the consolidated computation). | — |
+| `tcp-tbs-x4-property` `dep` | Label says to use the mid-month formula, not the IRS tables; tolerance 0 → 1 so the unrounded 79,166.67 is accepted. | — |
+| `tcp-tbs-u6-multistate-liquidation` `eq`, `dw` | Labels say "(without throwback)". | — |
+| `aud-tbs-u3-analytics` `k1` | Exhibit adds clean cost-side testing (cutoff, costing, count roll-forward), which rules out cost of sales completeness; key unchanged. | — |
+| `aud-code-of-conduct` lesson, `aud-coc-07`, `aud-x1-05` | Referral fees are permitted with disclosure; commissions and contingent fees are prohibited only for audit, review, compilation (without an independence disclosure) and PFI-examination clients. | ET 1.510, 1.520 |
+
+Still open: `far-ppe-10` (government grant to a business) awaits a decision on the treatment (D3); it keeps its
+`needsReview` flag.
+
 ## REG — 2025 amounts from the One Big Beautiful Bill Act
 
 REG reflects tax year 2025 law, including provisions of the One Big Beautiful Bill Act (P.L. 119-21) effective for
@@ -81,3 +106,35 @@ Every numeric answer key was recomputed independently, and the test suite proves
 
 - The FAR, AUD, REG, and TCP simulated exams (`content/{far,aud,reg,tcp}/exam-questions/`, `content/{far,aud,reg,tcp}/tbs/*-tbs-x*.json`).
 - Judgment-heavy classification items: NFP contributions, subsequent-event type, and contingency disclosure (gain contingencies are keyed "disclose only").
+
+## Changed in remediation (confirm): AUD rules and medium fixes
+
+Items changed for `REMEDIATION_TASKS.md` P0-9 and P1-8. Changed keys are pinned by `tests/remediationContent.test.ts`.
+
+| Item | Change | Authority |
+|---|---|---|
+| `aud-ev-06`, `aud-ev-chk2`, `aud-x3-04`, `aud-tbs-u6-confirmations` m2, `aud-evidence-assertions` lesson and flashcard, `aud-report-guide`, `aud-mnemonics` | PCAOB documentation-completion period 45 → **14 days** (keys unchanged; distractor and rationale text updated). | AS 1215 as amended by AS 1000 (PCAOB Rel. 2024-004) |
+| `aud-ss-07`, `aud-x4-12`, `aud-ssars` lesson | A known departure in a review now leads to a qualified or adverse **conclusion** (SSARS 25), not "disclose the departure". Keys stay b, with rewritten text. | AR-C 90 as amended by SSARS 25 |
+| `aud-professional-standards` lesson | Citation AS 1001/1015 → AS 1000. | AS 1000 |
+| `far-lso-01` | Choice b rationale: $32,240 is finance-lease expense (26,000 + 6,240). | ASC 842-20-25 |
+| `far-cont-02`, `far-tbs-u12-contingencies` t3, `far-contingencies` lesson | Gain-contingency disclosure "shall" be made (not "is allowed"). | ASC 450-30-50-1 |
+| `far-tbs-u1-cash-flows` c4 | Van-for-note row relabelled as a hypothetical so it no longer contradicts the exhibit. | — |
+| `far-dsec-10` | Price corrected to the annual-payment PV $105,154; key $1,581 → **$1,588**; distractors recomputed. | Arithmetic |
+| `far-rev2-10` | Stem no longer says the license sells for $50,000 *and* the bundle for $56,000; $50,000 is now the list price. | ASC 606-10-32-34(c) |
+| `far-tbs-u4-government-plans` | The city's plan follows GASB (fiduciary net position), not FASB ASC 962. Keys unchanged. | GASB 84 |
+| `far-special-purpose` lesson | Cash-to-accrual revenue formula: + beginning unearned − ending unearned. | — |
+| `far-tbs-x2-bonds` | Instructions say to use the PV factors provided. | — |
+| `reg-c230-07` | Cites §10.34(d), not §10.22. | 31 CFR 10.34(d) |
+| `reg-pb-03`, `reg-property-basis` lesson | Restated with the $19,000 2025 exclusion (basis $39,000, FMV $99,000); key $49,000 → **$48,000**. | IRC §1015(d)(6); Rev. Proc. 2024-40 |
+| `reg-tbs-x4-individual` gi | Label "Total income (Form 1040, line 9)". | §61, §62 |
+| `reg-x5-02` | Stem says there are no NOL or capital loss carryovers; rationale explains the carryforward rule. | IRC §170(b)(2)(D) |
+| `reg-tbs-x5-research` p, s | 1065 and 1120-S due **March 16, 2026** (March 15 is a Sunday). | IRC §7503 |
+| `reg-tbs-u7-partnership` se | Label says "before her §179 share"; explanation notes the Schedule SE reduction to 109,200. Key unchanged. | Form 1065 Sch. K line 14a |
+| `tcp-cr2-01` d | Distractor now $12,500 (Q2 mid-quarter rate) with a correct rationale. | Rev. Proc. 87-57 tables |
+| `tcp-tbs-x1-gift-retirement` bx | Label says "using the 2025 amount ($13,990,000)". | — |
+| `tcp-tbs-u3-m1` | Book tax expense 195,720 (current 191,520 + deferred 4,200) and book net income 734,280, so the reconciliation ties; `re` → **1,734,280**. | ASC 740 |
+| `tcp-sc2-01` | Form 2553 deadline key "March 15, 2025" → **"March 17, 2025"** (Saturday). | IRC §7503 |
+| `aud-sa-04` | Audited value $3,500; projected misstatement → **$6,000** (no longer equal to a stem value). | AU-C 530 |
+| `aud-tbs-x1-independence` s2 | Rationale addresses the facts (permitted tax service; no interest). | ET 1.295 |
+| `aud-x1-04` c | "holds no more than 5%" matches the >5% rule. | ET 1.200 |
+| `aud-using-others` lesson | SAS 149 terminology note added. | SAS 149 |

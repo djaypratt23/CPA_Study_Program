@@ -226,6 +226,7 @@ function McqTestlet({ t, session, onPatch }: { t: ExamTestletState; session: Exa
           onSelect={(c) => onPatch({ mcqAnswers: { ...t.mcqAnswers, [q.id]: c } })}
           onConfidence={() => {}}
           keyboard
+          shuffleSeed={session.id}
         />
       </div>
       <KeyNav
@@ -326,7 +327,7 @@ function ExamResults({ session }: { session: ExamSession }) {
                   {open === key && (
                     <div className="mt-4 border-t border-slate-200 pt-4 dark:border-slate-800">
                       {q && (
-                        <McqView q={q} section={session.section} selected={t.mcqAnswers[id]} revealed confidenceSubmits={false} onSelect={() => {}} onConfidence={() => {}} />
+                        <McqView q={q} section={session.section} shuffleSeed={session.id} selected={t.mcqAnswers[id]} revealed confidenceSubmits={false} onSelect={() => {}} onConfidence={() => {}} />
                       )}
                       {tbs && <TbsView tbs={tbs} responses={t.tbsResponses[id] ?? {}} submitted onChange={() => {}} />}
                     </div>

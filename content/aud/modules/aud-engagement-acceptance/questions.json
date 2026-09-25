@@ -40,13 +40,12 @@
     "choices": [
       {
         "id": "a",
-        "text": "Accept the engagement and note the refusal in the report",
-        "explanation": "The preconditions are not met, so the engagement should not be accepted.",
-        "trap": "wrong-rule"
+        "text": "Decline the engagement unless required by law to accept it",
+        "explanation": "Correct. AU-C 210: if the preconditions are not present, the auditor should not accept the engagement (unless required by law or regulation)."
       },
       {
         "id": "b",
-        "text": "Accept and perform extra substantive procedures",
+        "text": "Accept and perform extra substantive procedures on internal control",
         "explanation": "Extra procedures don't cure a missing precondition.",
         "trap": "wrong-rule"
       },
@@ -58,11 +57,12 @@
       },
       {
         "id": "d",
-        "text": "Decline the engagement unless required by law to accept it",
-        "explanation": "Correct. AU-C 210: if the preconditions are not present, the auditor should not accept the engagement (unless required by law or regulation)."
+        "text": "Accept the engagement and note the refusal in the report",
+        "explanation": "The preconditions are not met, so the engagement should not be accepted.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
+    "answer": "a",
     "explanation": "AU-C 210: if the preconditions are not present, the auditor should not accept the engagement (unless required by law or regulation).",
     "skill": "application",
     "difficulty": 2
@@ -74,29 +74,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Agree to the change and issue a review report",
+        "text": "Agree to the change and issue a review report on the statements",
         "explanation": "A change requested to avoid a scope limitation is not reasonably justified.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Agree, but disclose the refusal in the review report",
+        "text": "Refuse the change and weigh the limitation's effect on the opinion",
+        "explanation": "Correct. A request to change the engagement to avoid a scope limitation or unfavorable findings is not a reasonable justification."
+      },
+      {
+        "id": "c",
+        "text": "Agree, but disclose the lawyer refusal in the review report",
         "explanation": "The change itself is not appropriate.",
         "trap": "partial-computation"
       },
       {
-        "id": "c",
-        "text": "Not agree to the change and consider the effect of the limitation on the audit opinion",
-        "explanation": "Correct. A request to change the engagement to avoid a scope limitation or unfavorable findings is not a reasonable justification."
-      },
-      {
         "id": "d",
-        "text": "Withdraw immediately without further consideration",
+        "text": "Withdraw immediately without considering the opinion",
         "explanation": "Withdrawal may be appropriate, but first the auditor evaluates the effect on the opinion.",
         "trap": "overgeneralization"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "A request to change the engagement to avoid a scope limitation or unfavorable findings is not a reasonable justification.",
     "skill": "application",
     "difficulty": 2
@@ -113,19 +113,19 @@
       },
       {
         "id": "b",
-        "text": "The fee arrangement",
+        "text": "The fee arrangement and the billing schedule",
         "explanation": "Fees are commonly included but not required.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "The names of all engagement team members",
+        "text": "The names of all members of the engagement team",
         "explanation": "Staffing is not a required term.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "d",
-        "text": "A guarantee that fraud will be detected",
+        "text": "An assurance that any material fraud will be detected",
         "explanation": "An audit provides no such guarantee.",
         "trap": "wrong-rule"
       }
@@ -142,25 +142,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "The predecessor's fee for the prior audit",
+        "text": "The predecessor's fee for the prior-year audit and any unpaid balance",
         "explanation": "Fees are not a required inquiry.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "b",
-        "text": "The predecessor's staff turnover",
+        "text": "The predecessor's staff turnover on the engagement",
         "explanation": "Not relevant to acceptance.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "The predecessor's audit programs",
+        "text": "The predecessor's audit programs and sample sizes",
         "explanation": "Working papers are reviewed after acceptance, if permitted.",
         "trap": "wrong-period"
       },
       {
         "id": "d",
-        "text": "Disagreements with management about accounting policies or auditing procedures",
+        "text": "Disagreements with management on accounting or auditing",
         "explanation": "Correct. Required inquiries: management integrity; disagreements; communications to TCWG about fraud, noncompliance, and internal control; and the predecessor's understanding of the reason for the change."
       }
     ],
@@ -210,29 +210,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Proceed — the inquiry is optional",
+        "text": "Proceed with acceptance, because the predecessor inquiry is optional",
         "explanation": "The inquiry is required before acceptance.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Inquire about the reasons and consider the implications in deciding whether to accept",
-        "explanation": "Correct. A refusal to permit the predecessor to respond is a significant factor in deciding whether to accept the engagement."
+        "text": "Accept the engagement but plan to issue a disclaimer",
+        "explanation": "A refusal is a red flag for acceptance, not a reporting matter.",
+        "trap": "wrong-period"
       },
       {
         "id": "c",
-        "text": "Contact the predecessor anyway",
+        "text": "Contact the predecessor anyway, without client consent",
         "explanation": "Client consent is needed for the predecessor to respond.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Accept but issue a disclaimer",
-        "explanation": "A refusal is a red flag for acceptance, not a reporting matter.",
-        "trap": "wrong-period"
+        "text": "Ask why, and weigh the refusal in the acceptance decision",
+        "explanation": "Correct. A refusal to permit the predecessor to respond is a significant factor in deciding whether to accept the engagement."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "A refusal to permit the predecessor to respond is a significant factor in deciding whether to accept the engagement.",
     "skill": "application",
     "difficulty": 2
@@ -244,29 +244,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "A new engagement letter every year",
+        "text": "Obtain a new signed engagement letter every year",
         "explanation": "A new letter is not automatically required.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "Assess whether circumstances require the terms to be revised and whether management needs a reminder",
-        "explanation": "Correct. Changes such as new ownership, a changed framework, or changed legal requirements may call for revised terms."
+        "text": "Obtain the predecessor's permission to continue each year",
+        "explanation": "The predecessor has no role in recurring audits.",
+        "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "No consideration is needed after the first year",
+        "text": "No further consideration of terms after the first year",
         "explanation": "The terms must be assessed each year.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Obtain permission from the predecessor each year",
-        "explanation": "The predecessor has no role in recurring audits.",
-        "trap": "irrelevant-fact"
+        "text": "Assess whether the terms need revising or a reminder",
+        "explanation": "Correct. Changes such as new ownership, a changed framework, or changed legal requirements may call for revised terms."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Changes such as new ownership, a changed framework, or changed legal requirements may call for revised terms.",
     "skill": "remembering",
     "difficulty": 2
@@ -278,29 +278,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Report the misstatement to the state board",
+        "text": "Report the misstatement directly to the state board of accountancy",
         "explanation": "This is not the required response.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Request that management inform the predecessor and arrange a meeting of the three parties",
-        "explanation": "Correct. AU-C 510: the successor asks management to inform the predecessor and arrange a three-way discussion."
-      },
-      {
-        "id": "c",
         "text": "Reissue the prior-year statements with its own opinion",
         "explanation": "The successor cannot reissue the predecessor's report.",
         "trap": "wrong-rule"
       },
       {
+        "id": "c",
+        "text": "Ask management to tell the predecessor and meet with all three parties",
+        "explanation": "Correct. AU-C 510: the successor asks management to inform the predecessor and arrange a three-way discussion."
+      },
+      {
         "id": "d",
-        "text": "Ignore it, because the prior year is the predecessor's responsibility",
+        "text": "Ignore it, because the prior year is solely the predecessor's responsibility",
         "explanation": "The successor must take action.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "AU-C 510: the successor asks management to inform the predecessor and arrange a three-way discussion. If management refuses or the response is unsatisfactory, the successor evaluates the implications, possibly consulting legal counsel.",
     "skill": "application",
     "difficulty": 2
@@ -312,19 +312,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "U.S. GAAP",
+        "text": "U.S. GAAP as issued by the FASB",
         "explanation": "U.S. GAAP is an acceptable framework.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "IFRS",
+        "text": "IFRS as issued by the IASB",
         "explanation": "IFRS is an acceptable general-purpose framework.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "The owner's own set of rules, invented for this year",
+        "text": "The owner's own rules, invented for this year",
         "explanation": "Correct. A framework must be established or have characteristics such as relevance and reliability."
       },
       {
@@ -346,19 +346,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "A reference to the original audit engagement",
+        "text": "A reference to the original audit engagement and why it changed",
         "explanation": "The report should not refer to the original engagement.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "A description of audit procedures performed before the change",
+        "text": "A description of the audit procedures performed before the change",
         "explanation": "Audit procedures performed should not be mentioned.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "No reference to the original engagement, procedures performed, or any scope limitation",
+        "text": "No mention of the original engagement, procedures, or scope",
         "explanation": "Correct. When the change is reasonably justified, the report is issued as a standard review report without mentioning the original engagement."
       },
       {
@@ -386,13 +386,13 @@
       },
       {
         "id": "b",
-        "text": "Whether management acknowledges responsibility for internal control",
+        "text": "Whether management acknowledges its responsibility for internal control",
         "explanation": "This is a precondition.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Whether the firm has the competence, capacity, and independence to perform the audit",
+        "text": "Whether the firm has the competence, capacity, and independence",
         "explanation": "Correct. That is part of acceptance and continuance under quality management."
       },
       {
@@ -420,14 +420,14 @@
       },
       {
         "id": "b",
-        "text": "Indicate that its response is limited",
-        "explanation": "Correct. The predecessor should respond promptly and fully unless unusual circumstances (e.g., litigation) exist, in which case it should state that its response is limited."
-      },
-      {
-        "id": "c",
         "text": "Provide full working papers regardless",
         "explanation": "Litigation can justify a limited response.",
         "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Indicate that its response is limited",
+        "explanation": "Correct. The predecessor should respond promptly and fully unless unusual circumstances (e.g., litigation) exist, in which case it should state that its response is limited."
       },
       {
         "id": "d",
@@ -436,7 +436,7 @@
         "trap": "irrelevant-fact"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "The predecessor should respond promptly and fully unless unusual circumstances (e.g., litigation) exist, in which case it should state that its response is limited.",
     "skill": "remembering",
     "difficulty": 2

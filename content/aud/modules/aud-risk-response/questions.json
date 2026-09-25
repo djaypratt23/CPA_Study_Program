@@ -74,13 +74,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "Litigation accruals",
+        "text": "Litigation accruals for pending lawsuits",
         "explanation": "Litigation is unpredictable.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Fraud-related adjustments",
+        "text": "Adjustments arising from suspected fraud",
         "explanation": "Analytics are weak evidence against concealed fraud.",
         "trap": "wrong-rule"
       },
@@ -108,12 +108,12 @@
     "choices": [
       {
         "id": "a",
-        "text": "External confirmation sent and received directly by the auditor",
+        "text": "External confirmations sent and received by the auditor",
         "explanation": "Correct. Evidence obtained directly by the auditor from independent external sources is the most reliable."
       },
       {
         "id": "b",
-        "text": "Inquiry of the credit manager",
+        "text": "Inquiry of the credit manager about key balances",
         "explanation": "Inquiry alone is weak.",
         "trap": "wrong-rule"
       },
@@ -125,7 +125,7 @@
       },
       {
         "id": "d",
-        "text": "Recalculating the allowance",
+        "text": "Recalculating the allowance for credit losses",
         "explanation": "That addresses valuation, not existence.",
         "trap": "wrong-classification"
       }
@@ -142,7 +142,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Nothing — interim testing covers the year",
+        "text": "Nothing, because interim testing covers the whole year",
         "explanation": "The remaining period must be covered.",
         "trap": "wrong-rule"
       },
@@ -154,12 +154,12 @@
       },
       {
         "id": "c",
-        "text": "Perform substantive procedures covering the remaining period (e.g., compare activity and investigate unusual items)",
+        "text": "Do substantive procedures for the remaining period",
         "explanation": "Correct. AU-C 330: when substantive procedures are performed at an interim date, cover the remaining period with further substantive procedures, alone or combined with tests of controls."
       },
       {
         "id": "d",
-        "text": "Rely on management's representation for the gap",
+        "text": "Rely on management's representation for the gap period",
         "explanation": "A representation is not sufficient evidence.",
         "trap": "wrong-rule"
       }
@@ -182,19 +182,19 @@
       },
       {
         "id": "b",
-        "text": "They consist only of tests of details",
+        "text": "They consist only of tests of details, never analytics",
         "explanation": "Substantive analytics are also substantive procedures.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "They are required only for significant risks",
+        "text": "They are required only for areas with significant risks",
         "explanation": "They are required for all material items.",
         "trap": "partial-computation"
       },
       {
         "id": "d",
-        "text": "They are required for each material class of transactions, account balance, and disclosure",
+        "text": "They are required for each material class, balance, and disclosure",
         "explanation": "Correct. Because risk assessment is judgmental and controls have inherent limitations, substantive procedures are always required for material items."
       }
     ],
@@ -244,24 +244,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Accept the recorded amount",
+        "text": "Accept the recorded amount, because rental income varies",
         "explanation": "The $120,000 difference exceeds the threshold.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Investigate the difference, obtain explanations, and corroborate them with evidence",
+        "text": "Investigate the difference and corroborate explanations",
         "explanation": "Correct. Differences above the threshold are investigated; management's explanations must be corroborated."
       },
       {
         "id": "c",
-        "text": "Adjust revenue by $120,000 immediately",
+        "text": "Reduce revenue by $120,000 immediately",
         "explanation": "First investigate; there may be a valid explanation.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "Reduce the threshold until the difference is acceptable",
+        "text": "Raise the threshold until the difference is acceptable",
         "explanation": "That defeats the purpose.",
         "trap": "wrong-rule"
       }
@@ -318,7 +318,7 @@
       },
       {
         "id": "b",
-        "text": "Confirmation",
+        "text": "External confirmation",
         "explanation": "Confirmation involves external parties.",
         "trap": "wrong-classification"
       },
@@ -330,7 +330,7 @@
       },
       {
         "id": "d",
-        "text": "Inquiry",
+        "text": "Inquiry of management",
         "explanation": "Inquiry is asking questions.",
         "trap": "wrong-classification"
       }
@@ -353,7 +353,7 @@
       },
       {
         "id": "b",
-        "text": "Test at year-end, increase the extent of testing, and obtain more reliable evidence",
+        "text": "Test at year-end, with more extensive, reliable evidence",
         "explanation": "Correct. Higher RMM → more persuasive evidence through nature, timing, and extent."
       },
       {
@@ -381,24 +381,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Vouch recorded payables to vendor invoices",
+        "text": "Vouch recorded payables to vendor invoices and receiving reports",
         "explanation": "That tests existence, not completeness.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "Examine cash disbursements after year-end and trace them to the year-end payables",
+        "text": "Trace later disbursements back to year-end payables",
         "explanation": "Correct. The search for unrecorded liabilities starts with evidence outside the recorded payables — subsequent disbursements, unpaid invoices, and receiving reports."
       },
       {
         "id": "c",
-        "text": "Confirm recorded payables with large balances",
+        "text": "Confirm recorded payables that have large balances",
         "explanation": "Confirming recorded balances misses unrecorded ones.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Recalculate the payables trial balance footing",
+        "text": "Recalculate the footing of the payables trial balance",
         "explanation": "Footing tests accuracy.",
         "trap": "wrong-rule"
       }
@@ -415,24 +415,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Data prepared by a reliable, independent source",
+        "text": "Data prepared by a reliable, independent outside source",
         "explanation": "Reliable data supports analytics.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "A stable, predictable relationship",
+        "text": "A stable, predictable relationship among the data",
         "explanation": "Predictability supports analytics.",
         "trap": "reversed"
       },
       {
         "id": "c",
-        "text": "A significant risk for which the auditor wants to rely solely on analytics",
+        "text": "A significant risk addressed by analytics alone",
         "explanation": "Correct. Significant risks addressed only substantively require tests of details."
       },
       {
         "id": "d",
-        "text": "A large volume of homogeneous transactions",
+        "text": "A large volume of homogeneous, routine transactions",
         "explanation": "Supports analytics.",
         "trap": "reversed"
       }

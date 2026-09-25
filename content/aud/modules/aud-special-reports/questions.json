@@ -6,13 +6,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "Balance Sheet",
+        "text": "Balance Sheet (Cash Basis)",
         "explanation": "Implies GAAP accrual statements.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Income Statement",
+        "text": "Income Statement for the Year",
         "explanation": "The title implies GAAP statements.",
         "trap": "wrong-rule"
       },
@@ -74,24 +74,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "An other-matter paragraph describing the predecessor's audit and opinion",
+        "text": "An other-matter paragraph on the predecessor's audit",
         "explanation": "Correct. AU-C 700: an other-matter paragraph states the prior period was audited by a predecessor, the date and type of opinion, and reasons for any modification."
       },
       {
         "id": "b",
-        "text": "Nothing about the prior year",
+        "text": "Nothing about the prior year, since it wasn't audited by us",
         "explanation": "The prior-year audit must be described.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "An opinion on both years",
+        "text": "An opinion on both years' financial statements",
         "explanation": "The auditor didn't audit the prior year.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "An emphasis-of-matter paragraph",
+        "text": "An emphasis-of-matter paragraph on the prior year",
         "explanation": "The matter isn't in the statements.",
         "trap": "wrong-classification"
       }
@@ -108,13 +108,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "IFRS",
+        "text": "IFRS as issued by the IASB",
         "explanation": "A general purpose framework.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "U.S. GAAP",
+        "text": "U.S. GAAP (FASB ASC)",
         "explanation": "A general purpose framework.",
         "trap": "wrong-classification"
       },
@@ -125,7 +125,7 @@
       },
       {
         "id": "d",
-        "text": "GASB standards",
+        "text": "GASB standards for governments",
         "explanation": "A general purpose framework.",
         "trap": "wrong-classification"
       }
@@ -142,24 +142,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "An emphasis-of-matter paragraph alerting users to the basis of accounting",
+        "text": "An emphasis-of-matter paragraph on the basis of accounting",
         "explanation": "Correct. AU-C 800 requires an emphasis-of-matter paragraph describing the framework."
       },
       {
         "id": "b",
-        "text": "A going concern section",
+        "text": "A going concern section describing the entity's financial condition",
         "explanation": "Only if substantial doubt exists.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "An adverse opinion",
+        "text": "An adverse opinion because the statements aren't GAAP",
         "explanation": "The statements aren't misstated.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "A restriction on use",
+        "text": "A paragraph restricting use of the report to the IRS",
         "explanation": "Not required for tax basis.",
         "trap": "overgeneralization"
       }
@@ -215,19 +215,19 @@
       },
       {
         "id": "b",
-        "text": "Positive assurance of compliance",
+        "text": "Positive assurance of compliance with each covenant",
         "explanation": "AU-C 806 provides negative assurance.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "No assurance",
+        "text": "No assurance, because covenants are legal matters",
         "explanation": "Negative assurance is given.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Reasonable assurance on internal control",
+        "text": "Reasonable assurance on internal control over compliance",
         "explanation": "Internal control isn't the subject.",
         "trap": "irrelevant-fact"
       }
@@ -244,24 +244,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "An opinion on both years",
+        "text": "An opinion on both years' financial statements",
         "explanation": "The prior year wasn't audited.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Nothing about the prior year",
+        "text": "Nothing about the prior year, which was not audited",
         "explanation": "The level of service must be described.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "An other-matter paragraph describing the review and stating no audit opinion is expressed on the prior year",
+        "text": "An other-matter paragraph on the prior-year review",
         "explanation": "Correct. AU-C 700: an other-matter paragraph describes the prior-period service."
       },
       {
         "id": "d",
-        "text": "A disclaimer on the current year",
+        "text": "A disclaimer of opinion on the current year",
         "explanation": "The prior-year review is no basis for a disclaimer.",
         "trap": "wrong-rule"
       }
@@ -278,25 +278,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "The original qualified opinion",
+        "text": "The original qualified opinion on the prior year, unchanged",
         "explanation": "The updated opinion should reflect the restatement.",
         "trap": "outdated-rule"
       },
       {
         "id": "b",
-        "text": "No mention of the prior year",
+        "text": "No mention of the prior year or the restatement",
         "explanation": "The opinion covers comparatives.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "A disclaimer on the prior year",
+        "text": "A disclaimer of opinion on the restated prior year",
         "explanation": "There's no basis for a disclaimer.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "An updated unmodified opinion on the prior year with an other-matter paragraph explaining the change",
+        "text": "An updated unmodified prior-year opinion, other-matter paragraph",
         "explanation": "Correct. When the updated opinion differs from the prior one, an other-matter paragraph discloses the date and type of the previous opinion, the reasons, and that the updated opinion differs."
       }
     ],
@@ -312,24 +312,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "The general public",
+        "text": "The general public and the investors",
         "explanation": "Comfort letters are restricted.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "The underwriters and the client (entity)",
+        "text": "The underwriters and the client entity",
         "explanation": "Correct. AU-C 920: letters for underwriters are addressed to the underwriters and the entity."
       },
       {
         "id": "c",
-        "text": "The SEC only",
+        "text": "The SEC's Division of Corporation Finance",
         "explanation": "The SEC isn't the addressee.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Shareholders",
+        "text": "The shareholders of the client entity",
         "explanation": "Shareholders aren't the addressees.",
         "trap": "wrong-rule"
       }
@@ -346,24 +346,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Balance Sheet — GAAP",
+        "text": "Balance Sheet: Generally Accepted Accounting Principles",
         "explanation": "The title implies GAAP statements.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Statement of Admitted Assets, Liabilities, and Capital and Surplus — Statutory Basis",
+        "text": "Statement of Admitted Assets, Liabilities, and Surplus: Statutory",
         "explanation": "Correct. Titles should reflect the framework and avoid implying GAAP."
       },
       {
         "id": "c",
-        "text": "Consolidated Balance Sheet",
+        "text": "Consolidated Balance Sheet and Statement of Income",
         "explanation": "The title implies GAAP statements.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Income Statement",
+        "text": "Income Statement and Statement of Changes in Equity",
         "explanation": "The title implies GAAP statements.",
         "trap": "wrong-rule"
       }
@@ -380,24 +380,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Any CPA; reasonable assurance",
+        "text": "Any independent CPA; reasonable assurance",
         "explanation": "It's by the entity's annual auditor and gives limited assurance.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "The entity's annual auditor; limited assurance based mainly on inquiry and analytics",
+        "text": "The annual auditor; limited assurance via inquiry and analytics",
         "explanation": "Correct. AU-C 930 applies when the auditor of the annual statements reviews interim information."
       },
       {
         "id": "c",
-        "text": "The entity's internal auditors; no assurance",
+        "text": "The entity's internal auditors; no assurance given",
         "explanation": "Not an AU-C 930 review.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "The SEC; positive assurance",
+        "text": "The SEC staff; positive assurance on compliance",
         "explanation": "The SEC doesn't perform reviews.",
         "trap": "irrelevant-fact"
       }

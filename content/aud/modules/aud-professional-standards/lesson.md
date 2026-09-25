@@ -35,7 +35,7 @@ keyTakeaways:
   - "Professional skepticism: a questioning mind and critical assessment of evidence. Professional judgment: applying training, knowledge, and experience to make informed decisions."
 citations:
   - source: AU-C 200 (Overall objectives of the independent auditor)
-  - source: PCAOB AS 1001 and AS 1015 (Responsibilities and due professional care)
+  - source: PCAOB AS 1000 (General responsibilities of the auditor; supersedes AS 1001, 1005, 1010 and 1015)
   - source: AU-C 200.25 and PCAOB Rule 3101 (Categories of professional requirements)
 ---
 

@@ -35,5 +35,5 @@ order: 2
 | Auditor's report | When sufficient appropriate evidence is obtained |
 | Representation letter | Same as the report date |
 | Dual date | "March 1, except for Note X, as to which the date is March 8" |
-| Documentation assembly | 60 days after report release (PCAOB: 45) |
+| Documentation assembly | 60 days after report release (PCAOB: 14, formerly 45) |
 | Retention | 5 years (PCAOB: 7) |
