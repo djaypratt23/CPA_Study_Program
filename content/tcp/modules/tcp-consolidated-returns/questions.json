@@ -6,29 +6,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "A lower tax rate",
+        "text": "A lower corporate tax rate for the group",
         "explanation": "The 21% rate is the same.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Exemption from estimated tax",
+        "text": "One member's losses offset another's income",
+        "explanation": "Correct. Offsetting members' income and losses is the main benefit."
+      },
+      {
+        "id": "c",
+        "text": "Exemption from paying estimated tax",
         "explanation": "The group still pays estimates.",
         "trap": "wrong-rule"
       },
       {
-        "id": "c",
-        "text": "Losses of one member can offset income of another",
-        "explanation": "Correct. Offsetting members' income and losses is the main benefit."
-      },
-      {
         "id": "d",
-        "text": "No need to file Form 1120",
+        "text": "No need to file any Form 1120",
         "explanation": "The group files a consolidated 1120.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "Offsetting members' income and losses is the main benefit.",
     "skill": "remembering",
     "difficulty": 2
@@ -46,23 +46,23 @@
       },
       {
         "id": "b",
-        "text": "P and S1 only",
-        "explanation": "S1 falls short of 80%.",
-        "trap": "wrong-rule"
+        "text": "P only; neither qualifies",
+        "explanation": "Correct. S1 fails the 80% test, so S1's 40% of S2 doesn't count toward members' ownership; P owns only 50% of S2."
       },
       {
         "id": "c",
-        "text": "P, S1, and S2",
+        "text": "P, S1, and S2 together",
         "explanation": "S1 is only 70% owned.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "P only — neither sub qualifies",
-        "explanation": "Correct. S1 fails the 80% test, so S1's 40% of S2 doesn't count toward members' ownership; P owns only 50% of S2."
+        "text": "P and S1 only",
+        "explanation": "S1 falls short of 80%.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "S1 fails the 80% test, so S1's 40% of S2 doesn't count toward members' ownership; P owns only 50% of S2.",
     "skill": "application",
     "difficulty": 2
@@ -74,7 +74,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "No effect — the dividend is eliminated",
+        "text": "No effect; the dividend is eliminated",
         "explanation": "Correct. Intercompany distributions are excluded from consolidated income."
       },
       {
@@ -85,13 +85,13 @@
       },
       {
         "id": "c",
-        "text": "$500,000 of income",
+        "text": "$500,000 of taxable income",
         "explanation": "Intercompany dividends aren't taxed.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "$250,000 of income",
+        "text": "$250,000 of taxable income",
         "explanation": "Not a 50% DRD situation.",
         "trap": "wrong-rule"
       }
@@ -120,12 +120,12 @@
       },
       {
         "id": "c",
-        "text": "A domestic C corporation 85% owned by the parent (vote and value)",
+        "text": "A domestic C corporation 85% owned (vote and value)",
         "explanation": "Correct. Includible corporations meeting the 80% vote-and-value test join the group."
       },
       {
         "id": "d",
-        "text": "A tax-exempt organization",
+        "text": "A tax-exempt organization controlled by the parent",
         "explanation": "Exempt organizations aren't includible.",
         "trap": "wrong-rule"
       }
@@ -211,7 +211,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. Intercompany gain is taken into account when the item leaves the group."
       },
       {
@@ -285,7 +285,7 @@
       },
       {
         "id": "b",
-        "text": "Whichever produces less tax",
+        "text": "Whichever year produces less total tax",
         "explanation": "The year isn't elective.",
         "trap": "wrong-rule"
       },
@@ -313,29 +313,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Nothing — group NOLs are fully shareable",
+        "text": "Nothing, because group NOLs are fully shareable",
         "explanation": "Pre-affiliation losses are restricted.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "The separate return limitation year (SRLY) rules",
-        "explanation": "Correct. SRLY rules (and §382 after an ownership change) limit use of losses the member brought in."
-      },
-      {
-        "id": "c",
-        "text": "The at-risk rules",
+        "text": "The at-risk rules for the members",
         "explanation": "Those apply to individuals and closely held corporations for activities.",
         "trap": "wrong-classification"
       },
       {
+        "id": "c",
+        "text": "The separate return limitation year (SRLY) rules",
+        "explanation": "Correct. SRLY rules (and §382 after an ownership change) limit use of losses the member brought in."
+      },
+      {
         "id": "d",
-        "text": "The NOL is forfeited",
+        "text": "The NOL is forfeited when it joins",
         "explanation": "It can be used, subject to limits.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "SRLY rules (and §382 after an ownership change) limit use of losses the member brought in.",
     "skill": "application",
     "difficulty": 2
@@ -353,8 +353,9 @@
       },
       {
         "id": "b",
-        "text": "No, because there is no common parent corporation",
-        "explanation": "Correct. An affiliated group requires an includible corporation as the common parent."
+        "text": "Only if both are S corporations",
+        "explanation": "S corporations can't consolidate.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -364,12 +365,11 @@
       },
       {
         "id": "d",
-        "text": "Only if both are S corporations",
-        "explanation": "S corporations can't consolidate.",
-        "trap": "wrong-rule"
+        "text": "No, because there is no common parent corporation",
+        "explanation": "Correct. An affiliated group requires an includible corporation as the common parent."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "An affiliated group requires an includible corporation as the common parent.",
     "skill": "application",
     "difficulty": 2
@@ -381,29 +381,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Deducted immediately",
+        "text": "Deducted immediately by Parent",
         "explanation": "Intercompany losses are deferred.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Deferred and taken into account as Sub depreciates or sells the equipment",
-        "explanation": "Correct. Under the matching rule, the deferred loss is taken into account as the buyer's corresponding items occur."
+        "text": "Treated as a capital loss",
+        "explanation": "Character isn't the issue.",
+        "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Permanently disallowed",
+        "text": "Permanently disallowed as related-party",
         "explanation": "It's deferred, not disallowed.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Treated as a capital loss",
-        "explanation": "Character isn't the issue.",
-        "trap": "irrelevant-fact"
+        "text": "Deferred; recognized as Sub depreciates or sells",
+        "explanation": "Correct. Under the matching rule, the deferred loss is taken into account as the buyer's corresponding items occur."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Under the matching rule, the deferred loss is taken into account as the buyer's corresponding items occur.",
     "skill": "application",
     "difficulty": 2
@@ -421,23 +421,23 @@
       },
       {
         "id": "b",
-        "text": "$200,000",
-        "explanation": "Correct. The 10% limit applies to consolidated taxable income; $50,000 carries forward."
-      },
-      {
-        "id": "c",
         "text": "$25,000",
         "explanation": "Applies 10% to the contributions instead of taxable income.",
         "trap": "wrong-rule"
       },
       {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "Correct. The 10% limit applies to consolidated taxable income; $50,000 carries forward."
+      },
+      {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Contributions are deductible.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "The 10% limit applies to consolidated taxable income; $50,000 carries forward.",
     "skill": "application",
     "difficulty": 2,

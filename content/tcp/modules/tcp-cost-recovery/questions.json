@@ -12,9 +12,8 @@
       },
       {
         "id": "b",
-        "text": "Taxpayer's choice",
-        "explanation": "The order is fixed.",
-        "trap": "wrong-rule"
+        "text": "§179, bonus, MACRS",
+        "explanation": "Correct. §179 reduces basis first; bonus applies to the remainder; MACRS to what's left."
       },
       {
         "id": "c",
@@ -24,11 +23,12 @@
       },
       {
         "id": "d",
-        "text": "§179, bonus, MACRS",
-        "explanation": "Correct. §179 reduces basis first; bonus applies to the remainder; MACRS to what's left."
+        "text": "Taxpayer's choice",
+        "explanation": "The order is fixed.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "§179 reduces basis first; bonus applies to the remainder; MACRS to what's left.",
     "skill": "remembering",
     "difficulty": 2
@@ -57,7 +57,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The phase-out isn't complete.",
         "trap": "wrong-rule"
       }
@@ -77,9 +77,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "§179 can create a net operating loss",
-        "explanation": "It's limited to business taxable income.",
-        "trap": "wrong-rule"
+        "text": "Disallowed §179 carries forward",
+        "explanation": "Correct. §179(b)(3): the deduction can't exceed taxable income from active trades or businesses; excess carries forward."
       },
       {
         "id": "b",
@@ -89,8 +88,9 @@
       },
       {
         "id": "c",
-        "text": "Disallowed §179 carries forward",
-        "explanation": "Correct. §179(b)(3): the deduction can't exceed taxable income from active trades or businesses; excess carries forward."
+        "text": "§179 can create a net operating loss",
+        "explanation": "It's limited to business taxable income.",
+        "trap": "wrong-rule"
       },
       {
         "id": "d",
@@ -99,7 +99,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "c",
+    "answer": "a",
     "explanation": "§179(b)(3): the deduction can't exceed taxable income from active trades or businesses; excess carries forward.",
     "skill": "remembering",
     "difficulty": 2
@@ -182,19 +182,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "$120,000",
+        "text": "$120,000, as elected",
         "explanation": "Limited by business income.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0); all carries forward",
         "explanation": "Deduction allowed up to income.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$80,000; $40,000 is lost",
+        "text": "$80,000; the other $40,000 is lost",
         "explanation": "Excess carries forward.",
         "trap": "wrong-rule"
       },
@@ -252,13 +252,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "§179 expensing",
+        "text": "§179 expensing of the full cost",
         "explanation": "Business use must exceed 50%.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "100% bonus depreciation",
+        "text": "100% bonus depreciation in year one",
         "explanation": "Business use must exceed 50%.",
         "trap": "wrong-rule"
       },
@@ -269,7 +269,7 @@
       },
       {
         "id": "d",
-        "text": "200% declining balance MACRS",
+        "text": "200% declining balance under MACRS",
         "explanation": "Requires more than 50% business use.",
         "trap": "wrong-rule"
       }
@@ -292,7 +292,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Acquired goodwill is amortizable.",
         "trap": "wrong-rule"
       },
@@ -327,8 +327,9 @@
       },
       {
         "id": "b",
-        "text": "$4,550",
-        "explanation": "Correct. (5,000 − 3,000) + (53,000 − 2,000) ÷ 180 × 9."
+        "text": "$2,550",
+        "explanation": "Omits the $2,000 immediate deduction.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
@@ -338,12 +339,11 @@
       },
       {
         "id": "d",
-        "text": "$2,550",
-        "explanation": "Omits the $2,000 immediate deduction.",
-        "trap": "partial-computation"
+        "text": "$4,550",
+        "explanation": "Correct. (5,000 − 3,000) + (53,000 − 2,000) ÷ 180 × 9."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Immediate deduction 5,000 − 3,000 = 2,000; amortize 51,000 ÷ 180 × 9 months = 2,550; total 4,550.",
     "skill": "application",
     "difficulty": 2,
@@ -362,14 +362,14 @@
       },
       {
         "id": "b",
-        "text": "Deducted currently under §174A",
-        "explanation": "Correct. P.L. 119-21 added §174A: domestic research is deductible for tax years beginning after 2024."
-      },
-      {
-        "id": "c",
         "text": "Amortized over 15 years",
         "explanation": "That's for foreign research.",
         "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Deducted currently under §174A",
+        "explanation": "Correct. P.L. 119-21 added §174A: domestic research is deductible for tax years beginning after 2024."
       },
       {
         "id": "d",
@@ -378,7 +378,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "P.L. 119-21 added §174A: domestic research is deductible for tax years beginning after 2024.",
     "skill": "remembering",
     "difficulty": 2,
@@ -392,29 +392,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Always take 100% bonus",
+        "text": "Always take 100% bonus to get the deduction now",
         "explanation": "Timing of deductions has value, but the rate matters.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "Electing out of bonus so more depreciation falls in higher-rate years",
-        "explanation": "Correct. Deferring deductions can increase their value when future rates are higher — compare the present value of the tax saved."
-      },
-      {
-        "id": "c",
-        "text": "Deducting nothing now or later",
+        "text": "Deducting nothing now or later on the equipment",
         "explanation": "Depreciation can't be forgone like that.",
         "trap": "wrong-rule"
       },
       {
+        "id": "c",
+        "text": "Electing out, so depreciation falls in high-rate years",
+        "explanation": "Correct. Deferring deductions can increase their value when future rates are higher — compare the present value of the tax saved."
+      },
+      {
         "id": "d",
-        "text": "Treating the equipment as inventory",
+        "text": "Treating the equipment as inventory held for sale",
         "explanation": "Equipment used in the business isn't inventory.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Deferring deductions can increase their value when future rates are higher — compare the present value of the tax saved.",
     "skill": "analysis",
     "difficulty": 2
@@ -426,29 +426,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Both are limited to business taxable income",
+        "text": "Both are limited to the business's taxable income for the year",
         "explanation": "Only §179 is income-limited.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "§179 can be elected asset by asset; bonus applies to all property in a class unless the taxpayer elects out for that class",
-        "explanation": "Correct. §179 offers asset-by-asset flexibility within dollar and income limits; bonus is class-wide and unlimited."
+        "text": "§179 can create or increase an NOL",
+        "explanation": "§179 can't create a loss.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Bonus depreciation has a dollar cap",
+        "text": "Bonus depreciation has an annual dollar cap",
         "explanation": "Bonus has no dollar cap.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "§179 can create an NOL",
-        "explanation": "§179 can't create a loss.",
-        "trap": "wrong-rule"
+        "text": "§179 is asset by asset; bonus opt-out is by class",
+        "explanation": "Correct. §179 offers asset-by-asset flexibility within dollar and income limits; bonus is class-wide and unlimited."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "§179 offers asset-by-asset flexibility within dollar and income limits; bonus is class-wide and unlimited.",
     "skill": "application",
     "difficulty": 2

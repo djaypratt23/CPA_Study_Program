@@ -42,13 +42,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "As an S corporation",
+        "text": "As an S corporation owned by the parent",
         "explanation": "A corporation can't own an S corporation's stock (except a QSub).",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "As a partnership",
+        "text": "As a partnership with the parent",
         "explanation": "A partnership needs two or more owners.",
         "trap": "wrong-rule"
       },
@@ -60,7 +60,7 @@
       },
       {
         "id": "d",
-        "text": "As a division (disregarded) of the corporation",
+        "text": "As a disregarded division of the parent",
         "explanation": "Correct. Single-owner eligible entities default to disregarded status."
       }
     ],
@@ -77,24 +77,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "It is available to C corporations",
+        "text": "It is available to C corporations on their taxable income",
         "explanation": "It's for noncorporate taxpayers.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "It applies to wages an S corporation pays its owner",
+        "text": "It applies to wages that an S corporation pays its owner",
         "explanation": "Wages aren't QBI.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "It can reduce the top effective rate on pass-through business income to 29.6%",
+        "text": "It can cut the top rate on pass-through income to 29.6%",
         "explanation": "Correct. 37% × (1 − 20%) = 29.6%."
       },
       {
         "id": "d",
-        "text": "It expired after 2025",
+        "text": "It expired for tax years beginning after 2025",
         "explanation": "It was made permanent by P.L. 119-21.",
         "trap": "outdated-rule"
       }
@@ -190,13 +190,13 @@
       },
       {
         "id": "b",
-        "text": "Always capital gain",
+        "text": "Always capital gain treatment",
         "explanation": "Redemptions must qualify.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "Complete termination",
+        "text": "Complete termination of interest",
         "explanation": "She still owns shares.",
         "trap": "wrong-rule"
       },
@@ -220,19 +220,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "It is lost",
+        "text": "It is lost on liquidation",
         "explanation": "Attributes carry over.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "It is refunded",
+        "text": "It is refunded to the parent",
         "explanation": "NOLs aren't refunded.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "It carries over to the parent (subject to limits)",
+        "text": "It carries over to the parent, with limits",
         "explanation": "Correct. §381 carries over tax attributes in a §332 liquidation."
       },
       {
@@ -255,25 +255,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "No — P.L. 86-272 protects Q",
+        "text": "No, because P.L. 86-272 protects Q",
         "explanation": "Repairs exceed solicitation.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Only if sales exceed $500,000",
+        "text": "Only if Q's sales there exceed $500,000",
         "explanation": "Economic thresholds aren't needed with physical presence.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "No — one employee isn't nexus",
+        "text": "No, because one employee can't create nexus",
         "explanation": "Physical presence of an employee creates nexus.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Yes — repair services exceed protected solicitation",
+        "text": "Yes; repairs exceed protected solicitation",
         "explanation": "Correct. Non-solicitation activities remove P.L."
       }
     ],
@@ -326,25 +326,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Sales of inventory",
+        "text": "Gross receipts from sales of inventory",
         "explanation": "Business income is apportioned.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Interest on working capital",
+        "text": "Interest earned on working capital",
         "explanation": "Working capital interest is usually business income.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Service revenue",
+        "text": "Revenue from services to customers",
         "explanation": "Operating revenue is apportioned.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Rent from a vacant lot held as an investment unrelated to the business",
+        "text": "Rent from an unrelated investment lot",
         "explanation": "Correct. Nonbusiness income, like rent on unrelated investment property, is allocated."
       }
     ],
@@ -414,7 +414,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The lookback applies.",
         "trap": "wrong-rule"
       }
@@ -450,7 +450,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "§291 applies to corporations.",
         "trap": "wrong-rule"
       }
@@ -547,7 +547,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. §267(d): her 20,000 gain is reduced by the father's 30,000 disallowed loss (not below zero)."
       },
       {
@@ -577,18 +577,18 @@
     "choices": [
       {
         "id": "a",
-        "text": "An individual's sale of a rental building with payments over 10 years",
+        "text": "An individual's sale of a rental building, paid over 10 years",
         "explanation": "Correct. Non-dealer sales of real property qualify."
       },
       {
         "id": "b",
-        "text": "A dealer's sale of lots",
+        "text": "A dealer's sale of subdivided lots",
         "explanation": "Dealer sales are excluded.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Sale of listed stock",
+        "text": "A sale of publicly traded stock",
         "explanation": "Publicly traded property is excluded.",
         "trap": "wrong-rule"
       },
@@ -629,7 +629,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Not fully phased out.",
         "trap": "wrong-rule"
       }
