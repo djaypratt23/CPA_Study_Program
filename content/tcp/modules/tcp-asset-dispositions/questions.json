@@ -12,9 +12,8 @@
       },
       {
         "id": "b",
-        "text": "Tax-free",
-        "explanation": "Gain is taxable.",
-        "trap": "wrong-rule"
+        "text": "Ordinary income",
+        "explanation": "Correct. §1245 recaptures depreciation as ordinary income up to the gain."
       },
       {
         "id": "c",
@@ -24,11 +23,12 @@
       },
       {
         "id": "d",
-        "text": "Ordinary income",
-        "explanation": "Correct. §1245 recaptures depreciation as ordinary income up to the gain."
+        "text": "Tax-free",
+        "explanation": "Gain is taxable.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "§1245 recaptures depreciation as ordinary income up to the gain.",
     "skill": "application",
     "difficulty": 2
@@ -46,14 +46,14 @@
       },
       {
         "id": "b",
-        "text": "$45,000 ordinary",
-        "explanation": "Recapture is limited to depreciation.",
-        "trap": "overgeneralization"
+        "text": "$30,000 ordinary; $15,000 §1231",
+        "explanation": "Correct. Gain 45,000."
       },
       {
         "id": "c",
-        "text": "$30,000 ordinary; $15,000 §1231",
-        "explanation": "Correct. Gain 45,000."
+        "text": "$45,000 ordinary",
+        "explanation": "Recapture is limited to depreciation.",
+        "trap": "overgeneralization"
       },
       {
         "id": "d",
@@ -62,7 +62,7 @@
         "trap": "reversed"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "Gain = 95,000 − 50,000 = 45,000; ordinary = lesser of 45,000 or 30,000.",
     "skill": "application",
     "difficulty": 2,
@@ -75,29 +75,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "To extend the holding period",
+        "text": "To extend the holding period of §1231 assets",
         "explanation": "Holding periods aren't affected.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "b",
-        "text": "To allow capital losses to offset ordinary income",
-        "explanation": "That's not what the lookback does.",
-        "trap": "wrong-rule"
+        "text": "To stop mixing ordinary losses and later capital gains",
+        "explanation": "Correct. Net §1231 gains are ordinary to the extent of net §1231 losses deducted in the prior 5 years."
       },
       {
         "id": "c",
-        "text": "To recapture accelerated depreciation",
+        "text": "To recapture accelerated depreciation as ordinary",
         "explanation": "That's §1245/§1250.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "To stop taxpayers from taking ordinary §1231 losses in one year and capital-gain §1231 gains in later years",
-        "explanation": "Correct. Net §1231 gains are ordinary to the extent of net §1231 losses deducted in the prior 5 years."
+        "text": "To allow capital losses to offset ordinary income",
+        "explanation": "That's not what the lookback does.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "Net §1231 gains are ordinary to the extent of net §1231 losses deducted in the prior 5 years.",
     "skill": "remembering",
     "difficulty": 2
@@ -115,8 +115,9 @@
       },
       {
         "id": "b",
-        "text": "$120,000",
-        "explanation": "Correct. Gain = 600,000 − 380,000 = 220,000; the 120,000 attributable to straight-line depreciation is taxed at max 25%."
+        "text": "None ($0)",
+        "explanation": "Individuals have unrecaptured §1250 gain.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -126,12 +127,11 @@
       },
       {
         "id": "d",
-        "text": "$0",
-        "explanation": "Individuals have unrecaptured §1250 gain.",
-        "trap": "wrong-rule"
+        "text": "$120,000",
+        "explanation": "Correct. Gain = 600,000 − 380,000 = 220,000; the 120,000 attributable to straight-line depreciation is taxed at max 25%."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Gain = 600,000 − 380,000 = 220,000; the 120,000 attributable to straight-line depreciation is taxed at max 25%.",
     "skill": "application",
     "difficulty": 2,
@@ -161,7 +161,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "§291 applies to corporations.",
         "trap": "wrong-rule"
       }
@@ -185,8 +185,9 @@
       },
       {
         "id": "b",
-        "text": "Ordinary loss",
-        "explanation": "Correct. Business property held 1 year or less produces ordinary gain or loss."
+        "text": "Nondeductible",
+        "explanation": "It's deductible.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -196,12 +197,11 @@
       },
       {
         "id": "d",
-        "text": "Nondeductible",
-        "explanation": "It's deductible.",
-        "trap": "wrong-rule"
+        "text": "Ordinary loss",
+        "explanation": "Correct. Business property held 1 year or less produces ordinary gain or loss."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Business property held 1 year or less produces ordinary gain or loss.",
     "skill": "application",
     "difficulty": 2
@@ -219,8 +219,9 @@
       },
       {
         "id": "b",
-        "text": "$15,000 ordinary loss",
-        "explanation": "Correct. Net §1231 loss is fully ordinary."
+        "text": "$3,000 deductible loss",
+        "explanation": "The capital loss limit doesn't apply.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -230,12 +231,11 @@
       },
       {
         "id": "d",
-        "text": "$3,000 deductible loss",
-        "explanation": "The capital loss limit doesn't apply.",
-        "trap": "wrong-rule"
+        "text": "$15,000 ordinary loss",
+        "explanation": "Correct. Net §1231 loss is fully ordinary."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Net §1231 loss is fully ordinary.",
     "skill": "application",
     "difficulty": 2,
@@ -248,14 +248,15 @@
     "choices": [
       {
         "id": "a",
-        "text": "Inventory",
+        "text": "Inventory held for sale",
         "explanation": "Inventory is ordinary-income property.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "A warehouse used in the business for 5 years",
-        "explanation": "Correct. Depreciable or real property used in a business and held more than 1 year."
+        "text": "A car used only personally",
+        "explanation": "Personal-use property is a capital asset.",
+        "trap": "wrong-classification"
       },
       {
         "id": "c",
@@ -265,12 +266,11 @@
       },
       {
         "id": "d",
-        "text": "A personal-use car",
-        "explanation": "Personal-use property is a capital asset.",
-        "trap": "wrong-classification"
+        "text": "A warehouse used for 5 years",
+        "explanation": "Correct. Depreciable or real property used in a business and held more than 1 year."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Depreciable or real property used in a business and held more than 1 year.",
     "skill": "remembering",
     "difficulty": 2
@@ -282,8 +282,9 @@
     "choices": [
       {
         "id": "a",
-        "text": "$25,000 ordinary income",
-        "explanation": "Correct. Basis is 0; gain 25,000 is less than the 60,000 deducted → all §1245 ordinary."
+        "text": "$35,000 ordinary loss",
+        "explanation": "It was sold at a gain.",
+        "trap": "reversed"
       },
       {
         "id": "b",
@@ -299,12 +300,11 @@
       },
       {
         "id": "d",
-        "text": "$35,000 ordinary loss",
-        "explanation": "It was sold at a gain.",
-        "trap": "reversed"
+        "text": "$25,000 ordinary income",
+        "explanation": "Correct. Basis is 0; gain 25,000 is less than the 60,000 deducted → all §1245 ordinary."
       }
     ],
-    "answer": "a",
+    "answer": "d",
     "explanation": "Basis is 0; gain 25,000 is less than the 60,000 deducted → all §1245 ordinary.",
     "skill": "application",
     "difficulty": 2,
@@ -334,7 +334,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The lookback applies.",
         "trap": "wrong-rule"
       }
@@ -352,8 +352,9 @@
     "choices": [
       {
         "id": "a",
-        "text": "$10,000 ordinary loss (§1231 loss)",
-        "explanation": "Correct. Loss = 50,000 − 60,000 = (10,000), a §1231 loss (ordinary if net §1231 is a loss)."
+        "text": "$40,000 ordinary recapture",
+        "explanation": "Recapture applies only to gains.",
+        "trap": "wrong-rule"
       },
       {
         "id": "b",
@@ -363,18 +364,17 @@
       },
       {
         "id": "c",
-        "text": "$40,000 ordinary recapture",
-        "explanation": "Recapture applies only to gains.",
-        "trap": "wrong-rule"
+        "text": "$10,000 ordinary (§1231) loss",
+        "explanation": "Correct. Loss = 50,000 − 60,000 = (10,000), a §1231 loss (ordinary if net §1231 is a loss)."
       },
       {
         "id": "d",
-        "text": "No loss is allowed",
+        "text": "No loss is allowed on the sale",
         "explanation": "Business losses are deductible.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "a",
+    "answer": "c",
     "explanation": "Loss = 50,000 − 60,000 = (10,000), a §1231 loss (ordinary if net §1231 is a loss).",
     "skill": "application",
     "difficulty": 2,
@@ -387,29 +387,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Real property gain attributable to straight-line depreciation is taxed at max 25%, not ordinary rates",
-        "explanation": "Correct. §1245 recapture is ordinary (up to 37%); unrecaptured §1250 gain is capped at 25%."
+        "text": "Gains on equipment sales are tax-free to individuals",
+        "explanation": "Equipment gains are ordinary up to depreciation.",
+        "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Real property has no recapture of any kind",
+        "text": "Real property has no depreciation recapture of any kind",
         "explanation": "Unrecaptured §1250 gain is taxed at up to 25%.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "Equipment gains are tax-free",
-        "explanation": "Equipment gains are ordinary up to depreciation.",
-        "trap": "wrong-rule"
+        "text": "Straight-line real property gain is capped at 25%",
+        "explanation": "Correct. §1245 recapture is ordinary (up to 37%); unrecaptured §1250 gain is capped at 25%."
       },
       {
         "id": "d",
-        "text": "Real property gains are all ordinary",
+        "text": "Real property gains are all taxed as ordinary income",
         "explanation": "Most real property gain is §1231.",
         "trap": "reversed"
       }
     ],
-    "answer": "a",
+    "answer": "c",
     "explanation": "§1245 recapture is ordinary (up to 37%); unrecaptured §1250 gain is capped at 25%.",
     "skill": "analysis",
     "difficulty": 2
@@ -421,29 +421,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "$50,000 ordinary (§1245); $20,000 §1231",
-        "explanation": "Correct. Amortizable §197 intangibles are §1245 property."
+        "text": "$20,000 ordinary; $50,000 §1231",
+        "explanation": "The two amounts are reversed.",
+        "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "$70,000 capital gain",
+        "text": "$70,000 long-term capital gain",
         "explanation": "Amortization is recaptured.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$70,000 ordinary",
+        "text": "$70,000 ordinary income",
         "explanation": "Only amortization is recaptured.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "$20,000 ordinary; $50,000 §1231",
-        "explanation": "The two amounts are reversed.",
-        "trap": "reversed"
+        "text": "$50,000 ordinary; $20,000 §1231",
+        "explanation": "Correct. Amortizable §197 intangibles are §1245 property."
       }
     ],
-    "answer": "a",
+    "answer": "d",
     "explanation": "Amortizable §197 intangibles are §1245 property.",
     "skill": "application",
     "difficulty": 2,

@@ -43,7 +43,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Wages from an S corporation",
+        "text": "Wages paid to her by an S corporation",
         "explanation": "Wages aren't NII.",
         "trap": "wrong-classification"
       },
@@ -55,7 +55,7 @@
       },
       {
         "id": "c",
-        "text": "Distributions from a Roth IRA",
+        "text": "Qualified distributions from a Roth IRA",
         "explanation": "Retirement distributions are excluded.",
         "trap": "wrong-classification"
       },
@@ -84,7 +84,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "MAGI exceeds $250,000.",
         "trap": "wrong-rule"
       },
@@ -114,7 +114,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The kiddie tax applies.",
         "trap": "wrong-rule"
       },
@@ -150,19 +150,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "Donate appreciated stock held 5 years",
+        "text": "Donate appreciated stock she has held for 5 years",
         "explanation": "Deduction, but not an AGI exclusion or an RMD.",
         "trap": "partial-computation"
       },
       {
         "id": "b",
-        "text": "Donate cash from a taxable account",
+        "text": "Donate cash from a taxable brokerage account",
         "explanation": "Itemized deduction only.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "Make a qualified charitable distribution from her IRA",
+        "text": "Make a qualified charitable distribution from the IRA",
         "explanation": "Correct. QCDs are excluded from income and count toward the RMD."
       },
       {
@@ -221,7 +221,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$20 per share of wages",
+        "text": "$20 per share of wages in that year",
         "explanation": "ISO exercise produces no wages.",
         "trap": "wrong-classification"
       },
@@ -233,12 +233,12 @@
       },
       {
         "id": "c",
-        "text": "A $20-per-share positive AMT adjustment",
+        "text": "A $20-per-share AMT adjustment",
         "explanation": "Correct. §56(b)(3): the ISO spread at exercise is a positive AMT adjustment; regular tax is deferred until sale."
       },
       {
         "id": "d",
-        "text": "No effect for any tax",
+        "text": "No effect for regular tax or AMT",
         "explanation": "AMT is affected.",
         "trap": "wrong-rule"
       }
@@ -256,7 +256,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "It makes the shares ISOs",
+        "text": "It converts the restricted shares into ISOs",
         "explanation": "Restricted stock doesn't become an option.",
         "trap": "irrelevant-fact"
       },
@@ -268,13 +268,13 @@
       },
       {
         "id": "c",
-        "text": "It can be filed when the shares vest",
+        "text": "It can be filed when the shares finally vest",
         "explanation": "The deadline is 30 days after transfer.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "It must be filed within 30 days, and it includes $10,000 in income now",
+        "text": "Filed within 30 days; $10,000 of income now",
         "explanation": "Correct. §83(b): elect within 30 days; income = FMV − amount paid at transfer."
       }
     ],
@@ -308,7 +308,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The allowance applies.",
         "trap": "wrong-rule"
       }
@@ -327,19 +327,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "$70,000 deductible",
+        "text": "$70,000 deductible against any income",
         "explanation": "Limited to passive income.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "$0 deductible",
+        "text": "None ($0) deductible; all suspended",
         "explanation": "Passive losses offset passive income.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$25,000 deductible",
+        "text": "$25,000 deductible under the rental rule",
         "explanation": "The $25,000 allowance is for rental real estate.",
         "trap": "wrong-rule"
       },
@@ -363,19 +363,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "A doctor who owns and manages two rentals",
+        "text": "A doctor who owns and actively manages two rentals",
         "explanation": "Rentals are passive unless an exception applies.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "A retiree with a rental managed by an agent",
+        "text": "A retiree with a rental managed by a property agent",
         "explanation": "Rentals managed by an agent are passive.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "A real estate professional who materially participates in her rentals",
+        "text": "A real estate pro who materially participates",
         "explanation": "Correct. §469(c)(7): a real estate professional's rentals with material participation are not passive."
       },
       {
@@ -398,25 +398,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Rental property with no personal-use limits",
+        "text": "Rental property, with no personal-use limits",
         "explanation": "25 days exceeds the greater of 14 days or 20 days.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Business property subject to §1231",
+        "text": "Business property subject to §1231 rules",
         "explanation": "Not the classification issue.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Rent excluded from income",
+        "text": "The rent is excluded from gross income",
         "explanation": "Rented more than 14 days.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Personal residence; rental deductions limited to rental income",
+        "text": "Residence; deductions limited to rental income",
         "explanation": "Correct. Personal use of 25 days > greater of 14 or 10% × 200 = 20 → residence."
       }
     ],
@@ -450,7 +450,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Each gift exceeds the exclusion.",
         "trap": "wrong-rule"
       }
@@ -540,7 +540,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Only the donor spouse files Form 709",
+        "text": "Only the donor spouse needs to file Form 709",
         "explanation": "Both generally file when splitting.",
         "trap": "wrong-rule"
       },
@@ -558,7 +558,7 @@
       },
       {
         "id": "d",
-        "text": "Splitting applies to all gifts to third parties by either spouse that year",
+        "text": "It covers all gifts to third parties that year",
         "explanation": "Correct. §2513 consent applies to all gifts to third parties during the calendar year."
       }
     ],
@@ -647,7 +647,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Taxable, no 10% additional tax",
+        "text": "Taxable, but no 10% additional tax",
         "explanation": "Correct. §72(t)(2)(E): higher education exception for IRAs."
       },
       {
@@ -658,13 +658,13 @@
       },
       {
         "id": "c",
-        "text": "Taxable plus 10%",
+        "text": "Taxable, plus the 10% additional tax",
         "explanation": "The education exception applies to IRAs.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Not allowed before 59½",
+        "text": "Not permitted before age 59½",
         "explanation": "Withdrawals are allowed.",
         "trap": "wrong-rule"
       }
@@ -682,7 +682,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Owners must take RMDs at 73",
+        "text": "Owners must begin RMDs at age 73",
         "explanation": "Roth IRAs have no lifetime RMDs.",
         "trap": "wrong-rule"
       },
@@ -694,13 +694,13 @@
       },
       {
         "id": "c",
-        "text": "Contributions are deductible",
+        "text": "Contributions are deductible for AGI",
         "explanation": "Roth contributions are after-tax.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Contributions can be withdrawn at any time without tax or penalty",
+        "text": "Contributions come out anytime tax-free",
         "explanation": "Correct. Ordering rules: regular contributions come out first, tax- and penalty-free."
       }
     ],
@@ -797,13 +797,13 @@
       },
       {
         "id": "b",
-        "text": "$20,000",
+        "text": "$20,000, the at-risk amount",
         "explanation": "The passive limit still applies.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. After basis (30,000) and at-risk (20,000), the passive limit suspends the rest because there is no passive income."
       },
       {
@@ -826,24 +826,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "When the asset has a low basis and the son may sell it soon after her death",
+        "text": "Low-basis asset the son may sell soon after her death",
         "explanation": "Correct. Gifted property keeps the donor's low basis; inherited property gets a stepped-up basis (§1014)."
       },
       {
         "id": "b",
-        "text": "When the asset has a basis above FMV",
+        "text": "When the asset's basis exceeds its fair market value",
         "explanation": "A bequest would step the basis down, too.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "When the asset is cash",
+        "text": "When the asset is cash in a bank account",
         "explanation": "Cash has no built-in gain.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "d",
-        "text": "It never matters",
+        "text": "It never matters for income tax purposes",
         "explanation": "Basis rules differ.",
         "trap": "overgeneralization"
       }
@@ -878,7 +878,7 @@
       },
       {
         "id": "d",
-        "text": "Municipal bond interest",
+        "text": "Interest received on municipal bonds held",
         "explanation": "It is subtracted.",
         "trap": "reversed"
       }
@@ -932,7 +932,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "A corporation with average annual adjusted financial statement income of $1.5 billion",
+        "text": "Average adjusted financial statement income over $1 billion",
         "explanation": "Correct. CAMT applies to applicable corporations with average AFSI over $1 billion."
       },
       {
@@ -949,7 +949,7 @@
       },
       {
         "id": "d",
-        "text": "A small corporation with large NOLs",
+        "text": "A small corporation with large NOL carryforwards",
         "explanation": "Size, not NOLs, drives CAMT.",
         "trap": "wrong-rule"
       }
@@ -1002,24 +1002,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "All in the year of sale",
+        "text": "All in the year of the intercompany sale",
         "explanation": "Intercompany gain is deferred.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "As the buyer claims depreciation on the stepped-up basis",
+        "text": "As the buyer depreciates the stepped-up basis",
         "explanation": "Correct. Matching rule: the seller's gain offsets the buyer's extra depreciation over time."
       },
       {
         "id": "c",
-        "text": "Never",
+        "text": "Never; intercompany gains are ignored",
         "explanation": "It's taken into account under the matching rule.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Only on liquidation of the group",
+        "text": "Only when the consolidated group liquidates",
         "explanation": "It's taken in as depreciation occurs.",
         "trap": "wrong-rule"
       }
@@ -1073,7 +1073,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "No income; basis $0",
+        "text": "No income; a $0 basis in the interest",
         "explanation": "A capital interest for services is taxable.",
         "trap": "wrong-rule"
       },
@@ -1084,13 +1084,13 @@
       },
       {
         "id": "c",
-        "text": "$50,000 capital gain",
+        "text": "$50,000 capital gain; basis $50,000",
         "explanation": "It's compensation.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Income deferred until sale",
+        "text": "Income deferred until the interest is sold",
         "explanation": "It's taxed when received.",
         "trap": "wrong-rule"
       }
@@ -1184,19 +1184,19 @@
       },
       {
         "id": "b",
-        "text": "2025, as wages on a W-2",
+        "text": "2025, as wages reported on a Form W-2",
         "explanation": "Partners don't get W-2s.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "When paid, as capital gain",
+        "text": "When paid, as long-term capital gain",
         "explanation": "Guaranteed payments are ordinary income.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Never — it reduces basis",
+        "text": "Never; it reduces the partner's basis",
         "explanation": "It's income and doesn't change basis.",
         "trap": "wrong-rule"
       }
@@ -1231,7 +1231,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Remaining basis is assigned.",
         "trap": "wrong-rule"
       }
@@ -1286,7 +1286,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Recapture is a §751 hot asset.",
         "trap": "wrong-rule"
       },
@@ -1339,7 +1339,7 @@
       },
       {
         "id": "d",
-        "text": "No — spouses count as two",
+        "text": "No, because the spouses count as two shareholders",
         "explanation": "Spouses count as one, and either way it's under 100.",
         "trap": "wrong-rule"
       }
@@ -1403,7 +1403,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The recognition period is 5 years.",
         "trap": "wrong-rule"
       },
@@ -1428,24 +1428,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "A second class of stock may be found if governing provisions give different distribution rights",
+        "text": "A second class of stock, if rights differ by document",
         "explanation": "Correct. Non-pro-rata distributions can raise a second-class-of-stock issue if they reflect different rights under governing provisions."
       },
       {
         "id": "b",
-        "text": "The distributions are automatically dividends",
+        "text": "The distributions are automatically taxed as dividends",
         "explanation": "Dividend status depends on E&P.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "B recognizes $30,000 of income",
+        "text": "B recognizes $30,000 of income on the shortfall",
         "explanation": "Income follows ownership, not distributions.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "None",
+        "text": "None; S corporation distributions are flexible",
         "explanation": "Disproportionate distributions raise issues.",
         "trap": "wrong-rule"
       }
@@ -1469,7 +1469,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. 30,000 − 30,000 distribution deduction − 300 exemption → 0."
       },
       {
@@ -1480,7 +1480,7 @@
       },
       {
         "id": "d",
-        "text": "$300",
+        "text": "$300, the exemption",
         "explanation": "The exemption reduces income; it doesn't create income.",
         "trap": "wrong-rule"
       }
@@ -1499,7 +1499,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Calendar year 2025",
+        "text": "The calendar year 2025",
         "explanation": "Estates can choose a fiscal year.",
         "trap": "partial-computation"
       },
@@ -1510,13 +1510,13 @@
       },
       {
         "id": "c",
-        "text": "Any 18-month period",
+        "text": "Any 18-month period the executor picks",
         "explanation": "A tax year can't exceed 12 months.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "The decedent's last year",
+        "text": "The decedent's final tax year",
         "explanation": "The estate is a new taxpayer.",
         "trap": "wrong-rule"
       }
@@ -1534,24 +1534,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Taxable interest",
+        "text": "Taxable interest income",
         "explanation": "Interest is part of DNI.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Tax-exempt interest (net of expenses)",
+        "text": "Tax-exempt interest, net of related expenses",
         "explanation": "Net tax-exempt interest is added to DNI.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Capital gains allocated to corpus and not distributed",
+        "text": "Capital gains allocated to corpus, not paid out",
         "explanation": "Correct. §643(a)(3): capital gains allocated to corpus and not distributed are excluded from DNI and taxed to the trust."
       },
       {
         "id": "d",
-        "text": "Dividends",
+        "text": "Qualified dividends received",
         "explanation": "Dividends are part of DNI.",
         "trap": "wrong-rule"
       }
@@ -1569,24 +1569,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "UBTI",
+        "text": "Taxable as UBTI",
         "explanation": "The convenience exception applies.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Excluded from UBTI under the convenience exception",
+        "text": "Excluded under the convenience exception",
         "explanation": "Correct. §513(a)(2): activities carried on primarily for the convenience of members, students, or employees."
       },
       {
         "id": "c",
-        "text": "Taxed at trust rates",
+        "text": "Taxed at the trust rates",
         "explanation": "Bookstore sales to students are excluded.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Passive income",
+        "text": "Excluded as passive income",
         "explanation": "It's business income, but excluded.",
         "trap": "wrong-classification"
       }
@@ -1675,24 +1675,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Tax owed by the partnership",
+        "text": "The tax owed by the partnership for the year",
         "explanation": "Partnerships generally owe no income tax.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "The number of partners and the months late (up to 12)",
+        "text": "The number of partners and the months late",
         "explanation": "Correct. §6698: a per-partner, per-month penalty."
       },
       {
         "id": "c",
-        "text": "Gross receipts",
+        "text": "The partnership's gross receipts for the year",
         "explanation": "Receipts aren't the penalty base.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Total assets",
+        "text": "The partnership's total assets at year-end",
         "explanation": "Assets aren't the penalty base.",
         "trap": "wrong-rule"
       }

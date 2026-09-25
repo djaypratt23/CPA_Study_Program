@@ -6,29 +6,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Yes, as unrelated business income",
+        "text": "Yes, as unrelated business taxable income",
         "explanation": "Passive investment income is excluded.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Only if it exceeds $1,000",
-        "explanation": "The $1,000 threshold is for filing Form 990-T.",
-        "trap": "wrong-rule"
+        "text": "No, unless the stock is debt-financed",
+        "explanation": "Correct. §512(b)(1) excludes dividends, interest, and similar passive income."
       },
       {
         "id": "c",
-        "text": "Yes, at trust rates",
+        "text": "Yes, at the trust tax rates",
         "explanation": "Endowment dividends are excluded.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "No, dividends are excluded from UBTI unless debt-financed",
-        "explanation": "Correct. §512(b)(1) excludes dividends, interest, and similar passive income."
+        "text": "Only if the dividends exceed $1,000",
+        "explanation": "The $1,000 threshold is for filing Form 990-T.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "§512(b)(1) excludes dividends, interest, and similar passive income.",
     "skill": "remembering",
     "difficulty": 2
@@ -46,14 +46,14 @@
       },
       {
         "id": "b",
-        "text": "Form 990-EZ",
-        "explanation": "Assets are $500,000 or more.",
-        "trap": "wrong-rule"
+        "text": "Form 990",
+        "explanation": "Correct. 990-EZ requires receipts under $200,000 AND assets under $500,000."
       },
       {
         "id": "c",
-        "text": "Form 990",
-        "explanation": "Correct. 990-EZ requires receipts under $200,000 AND assets under $500,000."
+        "text": "Form 990-EZ",
+        "explanation": "Assets are $500,000 or more.",
+        "trap": "wrong-rule"
       },
       {
         "id": "d",
@@ -62,7 +62,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "990-EZ requires receipts under $200,000 AND assets under $500,000.",
     "skill": "application",
     "difficulty": 2
@@ -74,24 +74,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Renting its stadium with services (catering, staff) to a professional team for the season",
+        "text": "Renting its stadium, with staff and catering, to a pro team",
         "explanation": "Correct. Rent with significant services and a regularly carried-on, unrelated business is UBTI."
       },
       {
         "id": "b",
-        "text": "A bookstore selling textbooks to students",
+        "text": "A campus bookstore selling textbooks to students",
         "explanation": "Convenience of students — excluded.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Interest on bank deposits",
+        "text": "Interest earned on its bank deposits",
         "explanation": "Passive income is excluded.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "A volunteer-staffed bake sale",
+        "text": "A bake sale staffed entirely by volunteers",
         "explanation": "The volunteer exception applies.",
         "trap": "wrong-rule"
       }
@@ -193,7 +193,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "A's income is taxable.",
         "trap": "wrong-rule"
       }
@@ -286,7 +286,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Intermediate sanctions apply.",
         "trap": "wrong-rule"
       },
@@ -321,8 +321,9 @@
       },
       {
         "id": "b",
-        "text": "A company pays to have its name and logo displayed at a charity run, with no qualitative claims",
-        "explanation": "Correct. §513(i): acknowledgment of the sponsor's name/logo without advertising is excluded."
+        "text": "A company buys the charity's mailing list",
+        "explanation": "List rentals are generally UBTI except among exempt organizations.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -332,12 +333,11 @@
       },
       {
         "id": "d",
-        "text": "A company buys the charity's mailing list",
-        "explanation": "List rentals are generally UBTI except among exempt organizations.",
-        "trap": "wrong-rule"
+        "text": "A company pays to have its name and logo displayed at a charity run, with no qualitative claims",
+        "explanation": "Correct. §513(i): acknowledgment of the sponsor's name/logo without advertising is excluded."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "§513(i): acknowledgment of the sponsor's name/logo without advertising is excluded.",
     "skill": "application",
     "difficulty": 2
@@ -355,14 +355,14 @@
       },
       {
         "id": "b",
-        "text": "Within 27 months of formation",
-        "explanation": "Correct. Filed within 27 months (15 months + automatic 12-month extension), exemption is retroactive to formation."
-      },
-      {
-        "id": "c",
         "text": "Within 5 years",
         "explanation": "Too late for retroactivity.",
         "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Within 27 months of formation",
+        "explanation": "Correct. Filed within 27 months (15 months + automatic 12-month extension), exemption is retroactive to formation."
       },
       {
         "id": "d",
@@ -371,7 +371,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Filed within 27 months (15 months + automatic 12-month extension), exemption is retroactive to formation.",
     "skill": "remembering",
     "difficulty": 2
@@ -394,7 +394,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The debt-financed share is taxable.",
         "trap": "wrong-rule"
       },
