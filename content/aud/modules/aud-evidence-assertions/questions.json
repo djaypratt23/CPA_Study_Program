@@ -6,9 +6,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "Valuation",
-        "explanation": "Confirmation doesn't show the customer can pay.",
-        "trap": "wrong-classification"
+        "text": "Existence",
+        "explanation": "Correct. Confirmations primarily provide evidence of existence (and to some extent rights)."
       },
       {
         "id": "b",
@@ -24,11 +23,12 @@
       },
       {
         "id": "d",
-        "text": "Existence",
-        "explanation": "Correct. Confirmations primarily provide evidence of existence (and to some extent rights)."
+        "text": "Valuation",
+        "explanation": "Confirmation doesn't show the customer can pay.",
+        "trap": "wrong-classification"
       }
     ],
-    "answer": "d",
+    "answer": "a",
     "explanation": "Confirmations primarily provide evidence of existence (and to some extent rights).",
     "skill": "remembering",
     "difficulty": 2
@@ -46,23 +46,23 @@
       },
       {
         "id": "b",
+        "text": "Rights and obligations",
+        "explanation": "Correct. Rights and obligations: the entity holds or controls the rights to assets, and liabilities are its obligations."
+      },
+      {
+        "id": "c",
         "text": "Completeness",
         "explanation": "Completeness concerns whether all equipment is recorded.",
         "trap": "wrong-classification"
       },
       {
-        "id": "c",
-        "text": "Rights and obligations",
-        "explanation": "Correct. Rights and obligations: the entity holds or controls the rights to assets, and liabilities are its obligations."
-      },
-      {
         "id": "d",
-        "text": "Accuracy",
+        "text": "Accuracy, valuation and allocation",
         "explanation": "Accuracy concerns amounts.",
         "trap": "wrong-classification"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "Rights and obligations: the entity holds or controls the rights to assets, and liabilities are its obligations.",
     "skill": "remembering",
     "difficulty": 2
@@ -74,9 +74,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "March 10",
-        "explanation": "Assembly follows the report release date.",
-        "trap": "wrong-period"
+        "text": "Within 60 days — May 9",
+        "explanation": "Correct. AU-C 230: the documentation completion date is no later than 60 days after the report release date."
       },
       {
         "id": "b",
@@ -86,8 +85,9 @@
       },
       {
         "id": "c",
-        "text": "Within 60 days — May 9",
-        "explanation": "Correct. AU-C 230: the documentation completion date is no later than 60 days after the report release date."
+        "text": "March 10",
+        "explanation": "Assembly follows the report release date.",
+        "trap": "wrong-period"
       },
       {
         "id": "d",
@@ -96,7 +96,7 @@
         "trap": "wrong-period"
       }
     ],
-    "answer": "c",
+    "answer": "a",
     "explanation": "AU-C 230: the documentation completion date is no later than 60 days after the report release date.",
     "skill": "application",
     "difficulty": 2
@@ -108,25 +108,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "When RMM is high",
+        "text": "When the risk of material misstatement is assessed as high",
         "explanation": "Negative requests give weaker evidence.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "When balances are large and few",
+        "text": "When balances are large and few, and exceptions are likely",
         "explanation": "Large balances call for positive requests.",
         "trap": "reversed"
       },
       {
         "id": "c",
-        "text": "When customers are unlikely to respond",
+        "text": "When customers are unlikely to respond to any request",
         "explanation": "Nonresponse means negative requests give no evidence.",
         "trap": "reversed"
       },
       {
         "id": "d",
-        "text": "When RMM is low, there are many small homogeneous balances, few exceptions are expected, and recipients are expected to read the requests",
+        "text": "When RMM is low and there are many small, similar balances",
         "explanation": "Correct. AU-C 505 lists conditions that must all be present for negative confirmations to be the sole substantive procedure."
       }
     ],
@@ -142,18 +142,18 @@
     "choices": [
       {
         "id": "a",
-        "text": "Perform alternative procedures, such as examining subsequent cash receipts and shipping documents",
+        "text": "Perform alternative procedures, such as testing later cash receipts",
         "explanation": "Correct. For positive request nonresponses, perform alternative procedures to obtain relevant and reliable evidence."
       },
       {
         "id": "b",
-        "text": "Treat the balance as confirmed",
+        "text": "Treat the balance as confirmed, because no exception has been reported",
         "explanation": "A nonresponse provides no evidence.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Propose writing off the balance",
+        "text": "Propose writing off the balance as uncollectible",
         "explanation": "Nonresponse doesn't prove the balance is invalid.",
         "trap": "overgeneralization"
       },
@@ -176,7 +176,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Comply without further consideration",
+        "text": "Comply with the request without further consideration",
         "explanation": "The auditor must evaluate the reasons.",
         "trap": "wrong-rule"
       },
@@ -188,12 +188,12 @@
       },
       {
         "id": "c",
-        "text": "Inquire about the reasons, seek evidence of their validity, and evaluate the implications",
+        "text": "Ask why, look for evidence supporting it, and weigh the implications",
         "explanation": "Correct. AU-C 505: inquire about management's reasons, seek evidence of their validity, evaluate implications for risk, and perform alternative procedures."
       },
       {
         "id": "d",
-        "text": "Send the confirmation anyway",
+        "text": "Send the confirmation anyway, without telling management",
         "explanation": "The auditor evaluates the request before deciding.",
         "trap": "wrong-rule"
       }
@@ -278,29 +278,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "5 years",
+        "text": "5 years from the report release date",
         "explanation": "That is the AICPA minimum.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "7 years from the report release date",
-        "explanation": "Correct. PCAOB AS 1215: retain 7 years; assemble within 14 days (as amended by AS 1000)."
+        "text": "Until the next year's audit is completed",
+        "explanation": "Retention extends years beyond the next audit.",
+        "trap": "wrong-period"
       },
       {
         "id": "c",
-        "text": "3 years",
+        "text": "3 years from the balance-sheet date",
         "explanation": "Three years is shorter than any required retention period.",
         "trap": "wrong-period"
       },
       {
         "id": "d",
-        "text": "Until the next audit",
-        "explanation": "Retention extends years beyond the next audit.",
-        "trap": "wrong-period"
+        "text": "7 years from the report release date",
+        "explanation": "Correct. PCAOB AS 1215: retain 7 years; assemble within 14 days (as amended by AS 1000)."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "PCAOB AS 1215: retain 7 years from the report release date; assemble the final file within 14 days (reduced from 45 days by AS 1000, effective for fiscal years beginning on or after December 15, 2024 at firms issuing more than 100 issuer audit reports, and December 15, 2025 at other firms). AICPA: at least 5 years; 60 days.",
     "skill": "remembering",
     "difficulty": 2
@@ -318,23 +318,23 @@
       },
       {
         "id": "b",
-        "text": "Add the memo, documenting when and by whom it was added and why",
-        "explanation": "Correct. After the completion date, documentation may be added (not deleted), with the date, preparer, and reason."
+        "text": "Add the memo and date it as of the report date",
+        "explanation": "Backdating is improper.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Nothing can be changed",
+        "text": "Nothing; the file can't be changed after that date",
         "explanation": "Additions are allowed with documentation.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "Backdate the memo",
-        "explanation": "Backdating is improper.",
-        "trap": "wrong-rule"
+        "text": "Add the memo, noting when, by whom, and why",
+        "explanation": "Correct. After the completion date, documentation may be added (not deleted), with the date, preparer, and reason."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "After the completion date, documentation may be added (not deleted), with the date, preparer, and reason.",
     "skill": "application",
     "difficulty": 2
@@ -352,14 +352,14 @@
       },
       {
         "id": "b",
-        "text": "Allowing the client to mail the requests and collect the replies",
-        "explanation": "Correct. The auditor should maintain control over sending requests and receiving responses to reduce the risk of interception or alteration."
-      },
-      {
-        "id": "c",
         "text": "Verifying the addresses independently",
         "explanation": "This strengthens control.",
         "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Allowing the client to mail the requests and collect the replies",
+        "explanation": "Correct. The auditor should maintain control over sending requests and receiving responses to reduce the risk of interception or alteration."
       },
       {
         "id": "d",
@@ -368,7 +368,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "The auditor should maintain control over sending requests and receiving responses to reduce the risk of interception or alteration.",
     "skill": "application",
     "difficulty": 2
@@ -385,13 +385,13 @@
       },
       {
         "id": "b",
-        "text": "Occurrence",
+        "text": "Occurrence and cutoff of transactions",
         "explanation": "Occurrence concerns whether transactions happened.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Completeness",
+        "text": "Completeness of recorded balances",
         "explanation": "Completeness concerns omissions.",
         "trap": "wrong-classification"
       },
@@ -414,29 +414,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Enough for the engagement partner to recall the work",
+        "text": "Enough for the engagement partner to recall the work performed",
         "explanation": "The standard is an outside experienced auditor.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Enough for an experienced auditor with no previous connection to the audit to understand the procedures, results, and significant findings",
-        "explanation": "Correct. The experienced auditor standard: understand the nature, timing, and extent of procedures, the results and evidence, and significant findings and judgments."
+        "text": "Enough to satisfy the IRS in a tax examination",
+        "explanation": "IRS needs are not the documentation standard.",
+        "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Enough for a client's accountant to reperform the audit",
+        "text": "Enough for the client's accountant to reperform the audit",
         "explanation": "The client's accountant is not the benchmark for documentation.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Enough to satisfy the IRS",
-        "explanation": "IRS needs are not the documentation standard.",
-        "trap": "irrelevant-fact"
+        "text": "Enough for an experienced auditor new to the audit to understand it",
+        "explanation": "Correct. The experienced auditor standard: understand the nature, timing, and extent of procedures, the results and evidence, and significant findings and judgments."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "The experienced auditor standard: understand the nature, timing, and extent of procedures, the results and evidence, and significant findings and judgments.",
     "skill": "remembering",
     "difficulty": 2

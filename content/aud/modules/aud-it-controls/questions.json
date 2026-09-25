@@ -6,25 +6,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "A limit test on payroll hours",
+        "text": "A limit test on the number of payroll hours entered per week",
         "explanation": "That works inside a specific application.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "A three-way match of PO, receiving report, and invoice",
+        "text": "A three-way match of purchase order, receiving report, and invoice",
         "explanation": "That is a processing application control.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "A check digit on customer numbers",
+        "text": "A check digit on customer account numbers",
         "explanation": "That is an input application control.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Requiring approval and testing before program changes move into production",
+        "text": "Approval and testing of program changes before production",
         "explanation": "Correct. Change management applies across systems."
       }
     ],
@@ -40,24 +40,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "A backup and recovery plan",
+        "text": "A tested backup and recovery plan for the system",
         "explanation": "That addresses availability, not access.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "A hash total on vendor numbers",
+        "text": "A hash total on vendor numbers in each batch",
         "explanation": "That detects changes in batch data.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Prompt removal of user access upon termination",
+        "text": "Prompt removal of user access on termination",
         "explanation": "Correct. An access ITGC."
       },
       {
         "id": "d",
-        "text": "A limit test on disbursement amounts",
+        "text": "A limit test on the amount of each disbursement",
         "explanation": "That is an input edit, not an access control.",
         "trap": "wrong-classification"
       }
@@ -74,9 +74,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "Record count",
-        "explanation": "A record count confirms the number of items, not their content.",
-        "trap": "wrong-rule"
+        "text": "Check digit",
+        "explanation": "Correct. Designed to catch transposition errors."
       },
       {
         "id": "b",
@@ -92,11 +91,12 @@
       },
       {
         "id": "d",
-        "text": "Check digit",
-        "explanation": "Correct. Designed to catch transposition errors."
+        "text": "Record count",
+        "explanation": "A record count confirms the number of items, not their content.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
+    "answer": "a",
     "explanation": "A check digit is calculated from the other digits; a transposition produces a mismatch.",
     "skill": "application",
     "difficulty": 2
@@ -142,24 +142,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "None, as long as programs have edit checks",
+        "text": "None, as long as the programs contain edit checks",
         "explanation": "Unauthorized changes could disable edit checks.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "The auditor must issue an adverse opinion",
+        "text": "The auditor must issue an adverse opinion on the statements",
         "explanation": "A control weakness doesn't automatically change the opinion.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "The auditor cannot rely on automated controls operating consistently without additional testing",
+        "text": "Automated controls can't be assumed to work consistently",
         "explanation": "Correct. Ineffective change-management ITGCs undermine reliance on automated application controls for the period."
       },
       {
         "id": "d",
-        "text": "Backup procedures become ineffective",
+        "text": "Backup and recovery procedures become ineffective",
         "explanation": "Backups are a different ITGC.",
         "trap": "irrelevant-fact"
       }
@@ -176,29 +176,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Validity check",
+        "text": "Validity check against a master list",
         "explanation": "Validity checks compare against a list of valid values.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Limit (reasonableness) test",
-        "explanation": "Correct. A limit test flags values above a predetermined maximum."
+        "text": "Sequence check on time-card numbers",
+        "explanation": "Sequence checks detect gaps or duplicates in numbering.",
+        "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Check digit",
+        "text": "Check digit on the employee number",
         "explanation": "Check digits validate identification numbers.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Sequence check",
-        "explanation": "Sequence checks detect gaps or duplicates in numbering.",
-        "trap": "wrong-classification"
+        "text": "Limit (reasonableness) test",
+        "explanation": "Correct. A limit test flags values above a predetermined maximum."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "A limit test flags values above a predetermined maximum.",
     "skill": "remembering",
     "difficulty": 2
@@ -244,24 +244,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Operating the live production system and handling production data",
+        "text": "Operating the live system and handling production data",
         "explanation": "Correct. Separate systems development (programming) from operations and from user departments; programmers should not access production programs or live data."
       },
       {
         "id": "b",
-        "text": "Writing program documentation",
+        "text": "Writing and updating the program documentation",
         "explanation": "Documentation is part of programming.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Testing programs in a test environment",
+        "text": "Testing new programs in a separate test environment",
         "explanation": "Programmers test in test environments.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Attending design meetings",
+        "text": "Attending system design meetings with users",
         "explanation": "Part of development.",
         "trap": "wrong-rule"
       }
@@ -278,29 +278,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Rely on the control without any testing this year",
+        "text": "Rely on the control this year without testing anything",
         "explanation": "The auditor must still test the ITGCs and confirm no changes.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "Use benchmarking: confirm the program is unchanged and the ITGCs are effective, then rely on the control",
-        "explanation": "Correct. Benchmarking: with effective ITGCs and no program changes, an automated control can be relied on in later periods without a full retest."
+        "text": "Retest the control using a large sample of transactions",
+        "explanation": "Automated controls don't require large samples.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Not rely on the control at all",
+        "text": "Not rely on the control, because it was tested only in the prior year",
         "explanation": "Benchmarking can support reliance.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Retest the control using a large sample of transactions",
-        "explanation": "Automated controls don't require large samples.",
-        "trap": "wrong-rule"
+        "text": "Confirm the program is unchanged and ITGCs work, then rely",
+        "explanation": "Correct. Benchmarking: with effective ITGCs and no program changes, an automated control can be relied on in later periods without a full retest."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Benchmarking: with effective ITGCs and no program changes, an automated control can be relied on in later periods without a full retest.",
     "skill": "application",
     "difficulty": 3
@@ -312,24 +312,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Reviewing an exception report of rejected transactions and following up",
+        "text": "Reviewing and following up an exception report of rejected items",
         "explanation": "Correct. Output controls include reconciling output to input, reviewing exception reports, and controlling report distribution."
       },
       {
         "id": "b",
-        "text": "A check digit on account numbers",
+        "text": "A check digit on customer account numbers at data entry",
         "explanation": "A check digit is an input control.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Role-based access to the general ledger",
+        "text": "Role-based access to the general ledger by job function",
         "explanation": "Role-based access is an access ITGC.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "A required field for invoice date",
+        "text": "A required field for the invoice date on each entry",
         "explanation": "A required field is an input control.",
         "trap": "wrong-classification"
       }
@@ -346,24 +346,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Only in an integrated audit of an issuer",
+        "text": "Only in an integrated audit of an issuer's internal control",
         "explanation": "SAS 145 applies to nonissuer audits.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "For the IT applications that are subject to risks arising from IT — including those supporting controls the auditor plans to rely on",
+        "text": "For IT applications subject to risks arising from IT",
         "explanation": "Correct. AU-C 315 (SAS 145): understand the IT environment, identify the applications and other aspects subject to risks arising from IT, and identify the related ITGCs."
       },
       {
         "id": "c",
-        "text": "Never — ITGCs are the IT auditor's concern only",
+        "text": "Never; ITGCs are the IT auditor's concern alone",
         "explanation": "ITGCs are part of understanding internal control.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Only when the entity uses cloud computing",
+        "text": "Only when the entity uses cloud computing providers",
         "explanation": "The requirement applies to any IT environment.",
         "trap": "irrelevant-fact"
       }
@@ -380,24 +380,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "An invoice was lost",
+        "text": "An invoice was lost during processing",
         "explanation": "The record count agrees at 40.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "An amount was keyed incorrectly (likely a transposition)",
+        "text": "An amount was keyed wrong, likely a transposition",
         "explanation": "Correct. The count agrees but the financial total differs by $180."
       },
       {
         "id": "c",
-        "text": "A duplicate invoice was entered",
+        "text": "A duplicate invoice was entered into the batch",
         "explanation": "A duplicate would change the record count.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Processing was correct",
+        "text": "Processing was correct and complete",
         "explanation": "The totals don't agree.",
         "trap": "wrong-rule"
       }
@@ -415,12 +415,12 @@
     "choices": [
       {
         "id": "a",
-        "text": "Sequentially prenumbered shipping documents accounted for and matched to invoices",
+        "text": "Prenumbered shipping documents, accounted for and matched to invoices",
         "explanation": "Correct. Completeness of billing."
       },
       {
         "id": "b",
-        "text": "A limit test on invoice amounts",
+        "text": "A limit test on the amount of each invoice",
         "explanation": "Limits address accuracy, not completeness.",
         "trap": "wrong-rule"
       },
@@ -432,7 +432,7 @@
       },
       {
         "id": "d",
-        "text": "A hash total of customer numbers",
+        "text": "A hash total of the customer numbers in each batch",
         "explanation": "Batch integrity, not whether all shipments were billed.",
         "trap": "wrong-rule"
       }
