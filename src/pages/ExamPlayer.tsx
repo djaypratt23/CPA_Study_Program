@@ -13,7 +13,8 @@ import { areaTitle, content, getSection } from '../content'
 import { db } from '../db'
 import { recordMcqAttempt, recordTbsAttempt } from '../db/actions'
 import type { ExamSession, ExamTestletState } from '../db/types'
-import { scoreExam } from '../lib/examScoring'
+import { breakRemainingMs, examRemainingMs, isExamClockPaused, pauseExamClock, resumeExamClock } from '../lib/examClock'
+import { areaPercent, scoreExam } from '../lib/examScoring'
 import { scoreTbs, type TbsResponses } from '../lib/tbsScoring'
 
 export default function ExamPlayer() {
@@ -32,74 +33,132 @@ export default function ExamPlayer() {
 
 function ExamRunner({ session }: { session: ExamSession }) {
   const section = getSection(session.section)!
-  const [remaining, setRemaining] = useState(session.remainingMs)
-  const [breakLeft, setBreakLeft] = useState(session.breakRemainingMs ?? (section.exam.breakMinutes ?? 15) * 60_000)
+  const breakMs = (section.exam.breakMinutes ?? 15) * 60_000
+  const [now, setNow] = useState(() => Date.now())
   const [calc, setCalc] = useState(false)
   const [confirm, setConfirm] = useState(false)
-  const remRef = useRef(remaining)
-  remRef.current = remaining
   const t = session.testlets[session.testletIndex]
   const onBreak = session.onBreak
+  const paused = isExamClockPaused(session)
+  const remaining = examRemainingMs(session, now)
+  const breakLeft = breakRemainingMs(session, now, breakMs)
+  const finishing = useRef(false)
+  const sessionRef = useRef(session)
+  sessionRef.current = session
+
+  // Per-item time: the clock for the item on screen starts when it appears and is
+  // banked into the testlet whenever the candidate moves, answers, submits, or leaves.
+  const itemSince = useRef(Date.now())
+  const currentItem = t && !paused ? t.items[t.index] : undefined
+  useEffect(() => {
+    itemSince.current = Date.now()
+  }, [currentItem, session.testletIndex])
+  const bankTime = (s: ExamSession): Partial<ExamTestletState> => {
+    const tl = s.testlets[s.testletIndex]
+    const id = tl && !isExamClockPaused(s) && !tl.submitted ? tl.items[tl.index] : undefined
+    const at = Date.now()
+    const spent = at - itemSince.current
+    itemSince.current = at
+    if (!id || spent <= 0) return {}
+    return { itemTimeMs: { ...tl.itemTimeMs, [id]: (tl.itemTimeMs?.[id] ?? 0) + spent } }
+  }
 
   const finish = async (s: ExamSession) => {
+    if (finishing.current) return
+    finishing.current = true
     // Lock everything, record attempts, and score.
     const testlets = s.testlets.map((x) => ({ ...x, submitted: true }))
     for (const tl of testlets) {
       for (const id of tl.items) {
+        const timeMs = Math.round(tl.itemTimeMs?.[id] ?? 0)
         if (tl.kind === 'mcq') {
           const q = content.questions[id]
-          if (q && tl.mcqAnswers[id])
-            await recordMcqAttempt(q, { choice: tl.mcqAnswers[id], timeMs: 0, mode: 'exam', mixed: true, sessionId: s.id, section: s.section })
+          if (q && tl.mcqAnswers[id]) await recordMcqAttempt(q, { choice: tl.mcqAnswers[id], timeMs, mode: 'exam', mixed: true, sessionId: s.id, section: s.section })
         } else {
           const tbs = content.tbs[id]
-          if (tbs) await recordTbsAttempt(tbs, scoreTbs(tbs, tl.tbsResponses[id] ?? {}).percent, 0, 'exam', s.id)
+          if (tbs) await recordTbsAttempt(tbs, scoreTbs(tbs, tl.tbsResponses[id] ?? {}).percent, timeMs, 'exam', s.id)
         }
       }
     }
     const result = scoreExam(testlets, section, content)
-    await db.examSessions.update(s.id, { testlets, finishedAt: new Date().toISOString(), result, remainingMs: remRef.current })
+    await db.examSessions.update(s.id, { testlets, finishedAt: new Date().toISOString(), result, remainingMs: examRemainingMs(s, Date.now()), endsAt: undefined })
   }
 
-  // Exam clock (paused during the optional break and while the page is closed).
+  // Sessions saved before the wall clock existed get a deadline on first load.
   useEffect(() => {
-    const id = setInterval(() => {
-      if (onBreak) setBreakLeft((b) => Math.max(0, b - 1000))
-      else setRemaining((r) => Math.max(0, r - 1000))
-    }, 1000)
+    if (!session.endsAt && !isExamClockPaused(session)) db.examSessions.update(session.id, resumeExamClock(session, Date.now()))
+  }, [session])
+
+  // Re-render twice a second; all times derive from Date.now(), so a throttled tab stays accurate.
+  useEffect(() => {
+    const id = setInterval(() => setNow(Date.now()), 500)
     return () => clearInterval(id)
-  }, [onBreak])
+  }, [])
 
+  // Time is up: submit everything (also on return after the deadline passed while away).
   useEffect(() => {
-    if (remaining % 5000 === 0) db.examSessions.update(session.id, { remainingMs: remaining })
-    if (remaining === 0)
-      db.examSessions.get(session.id).then((s) => {
-        if (s && !s.finishedAt) finish(s)
-      })
+    if (remaining > 0 || paused || !session.endsAt) return
+    db.examSessions.get(session.id).then((s) => {
+      if (s && !s.finishedAt) finish({ ...s, testlets: s.testlets.map((x, i) => (i === s.testletIndex ? { ...x, ...bankTime(s) } : x)) })
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [remaining])
+  }, [remaining, paused, session.endsAt, session.id])
 
+  // The scheduled break ends on its own when its time runs out.
   useEffect(() => {
-    if (onBreak && breakLeft % 5000 === 0) db.examSessions.update(session.id, { breakRemainingMs: breakLeft })
-    if (onBreak && breakLeft === 0) db.examSessions.update(session.id, { onBreak: false })
-  }, [breakLeft, onBreak, session.id])
+    if (onBreak && breakLeft === 0) db.examSessions.update(session.id, { onBreak: false, breakEndsAt: undefined, ...resumeExamClock(session, Date.now()) })
+  }, [onBreak, breakLeft, session])
+
+  // Leaving or hiding the page saves the item time and a remaining-time snapshot. The clock keeps running.
+  useEffect(() => {
+    // Reads the stored session inside a transaction, so a stale render can never overwrite newer answers or a finished exam.
+    const save = () => {
+      if (finishing.current) return
+      const id = sessionRef.current.id
+      void db.transaction('rw', db.examSessions, async () => {
+        const s = await db.examSessions.get(id)
+        if (!s || s.finishedAt) return
+        const patch = bankTime(s)
+        const testlets = patch.itemTimeMs ? s.testlets.map((x, i) => (i === s.testletIndex ? { ...x, ...patch } : x)) : undefined
+        await db.examSessions.update(id, { remainingMs: examRemainingMs(s, Date.now()), ...(testlets ? { testlets } : {}) })
+      })
+    }
+    const onVisibility = () => document.visibilityState === 'hidden' && save()
+    window.addEventListener('pagehide', save)
+    document.addEventListener('visibilitychange', onVisibility)
+    return () => {
+      window.removeEventListener('pagehide', save)
+      document.removeEventListener('visibilitychange', onVisibility)
+      save()
+    }
+  }, [])
 
   const patchTestlet = (patch: Partial<ExamTestletState>) => {
-    const testlets = session.testlets.map((x, i) => (i === session.testletIndex ? { ...x, ...patch } : x))
+    const timed = patch.index !== undefined || patch.mcqAnswers !== undefined ? bankTime(session) : {}
+    const testlets = session.testlets.map((x, i) => (i === session.testletIndex ? { ...x, ...timed, ...patch } : x))
     return db.examSessions.update(session.id, { testlets })
   }
 
   const submitTestlet = async () => {
     setConfirm(false)
-    const testlets = session.testlets.map((x, i) => (i === session.testletIndex ? { ...x, submitted: true } : x))
+    const testlets = session.testlets.map((x, i) => (i === session.testletIndex ? { ...x, ...bankTime(session), submitted: true } : x))
     const next = session.testletIndex + 1
     if (next >= testlets.length) {
       await finish({ ...session, testlets })
       return
     }
     const offerBreak = section.exam.breakAfterTestlet === next && !session.breakUsed
-    await db.examSessions.update(session.id, { testlets, testletIndex: next, remainingMs: remaining, onBreak: false, breakOffered: offerBreak })
+    const at = Date.now()
+    // Offering the break stops the clock; declining it restarts the clock.
+    const clock = offerBreak ? pauseExamClock(session, at) : { remainingMs: examRemainingMs(session, at) }
+    await db.examSessions.update(session.id, { testlets, testletIndex: next, onBreak: false, breakOffered: offerBreak, ...clock })
     window.scrollTo(0, 0)
   }
+
+  const takeBreak = () =>
+    db.examSessions.update(session.id, { breakUsed: true, onBreak: true, breakOffered: false, breakEndsAt: new Date(Date.now() + breakMs).toISOString() })
+  const skipBreak = () => db.examSessions.update(session.id, { breakUsed: true, breakOffered: false, ...resumeExamClock(session, Date.now()) })
+  const endBreak = () => db.examSessions.update(session.id, { onBreak: false, breakEndsAt: undefined, ...resumeExamClock(session, Date.now()) })
 
   const breakOffered = session.breakOffered && !session.breakUsed
 
@@ -117,8 +176,8 @@ function ExamRunner({ session }: { session: ExamSession }) {
           <button className="rounded px-2 py-1 hover:bg-slate-700" onClick={() => setCalc((c) => !c)} aria-label="Calculator">
             <Icon name="calc" />
           </button>
-          <Link to="/exam" className="rounded px-2 py-1 text-xs hover:bg-slate-700" title="The clock pauses while you are away">
-            Pause & exit
+          <Link to="/exam" className="rounded px-2 py-1 text-xs hover:bg-slate-700" title="Your answers are saved, but the exam clock keeps running while you are away, as on the real exam">
+            Save & exit
           </Link>
         </div>
       </header>
@@ -131,7 +190,7 @@ function ExamRunner({ session }: { session: ExamSession }) {
             <div className="text-4xl font-bold">
               <Clock ms={breakLeft} label="Break remaining" />
             </div>
-            <button className="btn-primary w-full" onClick={() => db.examSessions.update(session.id, { onBreak: false })}>
+            <button className="btn-primary w-full" onClick={endBreak}>
               Resume exam
             </button>
           </div>
@@ -142,10 +201,10 @@ function ExamRunner({ session }: { session: ExamSession }) {
               You have finished testlet {section.exam.breakAfterTestlet}. You may take a {section.exam.breakMinutes ?? 15}-minute break that does not count against your exam time.
             </p>
             <div className="flex gap-2">
-              <button className="btn-secondary flex-1" onClick={() => db.examSessions.update(session.id, { breakUsed: true, breakOffered: false })}>
+              <button className="btn-secondary flex-1" onClick={skipBreak}>
                 Skip break
               </button>
-              <button className="btn-primary flex-1" onClick={() => db.examSessions.update(session.id, { breakUsed: true, onBreak: true, breakOffered: false })}>
+              <button className="btn-primary flex-1" onClick={takeBreak}>
                 Take break
               </button>
             </div>
@@ -223,6 +282,7 @@ function McqTestlet({ t, session, onPatch }: { t: ExamTestletState; session: Exa
           confidenceSubmits={false}
           showTools={false}
           hideConfidence
+          hideSkill
           onSelect={(c) => onPatch({ mcqAnswers: { ...t.mcqAnswers, [q.id]: c } })}
           onConfidence={() => {}}
           keyboard
@@ -297,7 +357,14 @@ function ExamResults({ session }: { session: ExamSession }) {
         {Object.entries(r.byArea).map(([a, v]) => (
           <li key={a} className="flex justify-between gap-2">
             <span>{areaTitle(a)}</span>
-            <span className="tabular-nums">{pct(v.possible ? v.earned / v.possible : 0)}</span>
+            <span className="tabular-nums">
+              {pct(areaPercent(v, section.exam.weighting))}
+              {v.mcq && v.tbs && (
+                <span className="ml-2 text-xs muted">
+                  (MCQ {pct(v.mcq.earned / v.mcq.possible)} · TBS {pct(v.tbs.earned / v.tbs.possible)})
+                </span>
+              )}
+            </span>
           </li>
         ))}
       </ul>
