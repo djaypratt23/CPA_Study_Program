@@ -1,0 +1,158 @@
+{
+  "id": "tcp-tbs-u7-disposition-review",
+  "section": "TCP",
+  "unitId": "tcp-u7",
+  "moduleIds": [
+    "tcp-asset-dispositions",
+    "tcp-deferral-transactions"
+  ],
+  "pool": "practice",
+  "title": "Review a disposition schedule and resolve Form 4797 diagnostics — Ellis Fabrication",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Rae Ellis operates Ellis Fabrication as a sole proprietorship. A staff member prepared the 2025 disposition schedule for Form 4797 and Form 8824. Review it, resolve the software diagnostics, then compute the replacement basis. Tick every amount that is wrong and enter the correct amount. Enter losses as negative numbers.",
+  "exhibits": [
+    {
+      "title": "2025 dispositions",
+      "content": "| Asset | Held | Cost | Accumulated depreciation | Amount realized |\n|---|---|---:|---:|---:|\n| Equipment A | 4 years | 80,000 | 50,000 | 45,000 |\n| Equipment B | 3 years | 60,000 | 20,000 | 70,000 |\n| Building (nonresidential, straight-line) | 9 years | 500,000 | 120,000 | 450,000 |\n| Land (parking lot) | 5 years | 90,000 | — | 75,000 |\n| Truck | 8 months | 40,000 | 6,000 | 30,000 |\n\n**Exchange:** Rae exchanged business land (basis **$120,000**, FMV **$200,000**, held 6 years) for other business land (FMV **$180,000**) plus **$20,000** cash.\n\nRae had no §1231 losses in the prior five years."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "sched",
+      "prompt": "Review the disposition schedule.",
+      "preparedLabel": "Per staff schedule",
+      "rows": [
+        {
+          "id": "a1245",
+          "label": "Equipment A — ordinary gain (§1245 recapture)",
+          "prepared": 15000,
+          "answer": 15000,
+          "explanation": "Gain 45,000 − (80,000 − 50,000) = 15,000, all recapture because depreciation (50,000) exceeds the gain. **No error.**"
+        },
+        {
+          "id": "b1245",
+          "label": "Equipment B — ordinary gain (§1245 recapture)",
+          "prepared": 0,
+          "answer": 20000,
+          "explanation": "Gain 70,000 − 40,000 = 30,000. Recapture is the lesser of the gain or the depreciation taken: **20,000** ordinary."
+        },
+        {
+          "id": "b1231",
+          "label": "Equipment B — §1231 gain",
+          "prepared": 30000,
+          "answer": 10000,
+          "explanation": "Only the gain above the depreciation taken is §1231: 30,000 − 20,000 = **10,000**."
+        },
+        {
+          "id": "bldg",
+          "label": "Building — §1231 gain",
+          "prepared": 70000,
+          "answer": 70000,
+          "explanation": "450,000 − 380,000 = 70,000. Straight-line depreciation leaves no §1250 ordinary recapture. **No error.**"
+        },
+        {
+          "id": "land",
+          "label": "Land — §1231 loss",
+          "prepared": -15000,
+          "answer": -15000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "truck",
+          "label": "Truck — ordinary loss (Form 4797 Part II)",
+          "prepared": 0,
+          "answer": -4000,
+          "explanation": "Held only 8 months, so it is **not** §1231 property: the 4,000 loss is ordinary."
+        },
+        {
+          "id": "lke",
+          "label": "Land exchange — recognized gain",
+          "prepared": 80000,
+          "answer": 20000,
+          "explanation": "Realized gain 80,000, recognized only to the extent of the **20,000** cash boot (§1031(b)). The rest is deferred."
+        },
+        {
+          "id": "net",
+          "label": "Net §1231 gain",
+          "prepared": 161000,
+          "answer": 85000,
+          "explanation": "10,000 + 70,000 − 15,000 + 20,000 = **85,000**. The truck is excluded. There are no nonrecaptured §1231 losses from prior years, so the full amount is long-term capital gain."
+        },
+        {
+          "id": "u1250",
+          "label": "Unrecaptured §1250 gain (25% rate)",
+          "prepared": 70000,
+          "answer": 70000,
+          "explanation": "The lesser of the straight-line depreciation on the building (120,000) and its gain (70,000). **No error.**"
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "Choose the correct resolution for each diagnostic.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Form 8824: delivery van exchanged for a new van reported as a like-kind exchange.",
+          "options": [
+            "Keep the deferral",
+            "Report it as a taxable sale — §1031 now applies only to real property",
+            "Report it as an involuntary conversion"
+          ],
+          "answer": "Report it as a taxable sale — §1031 now applies only to real property",
+          "explanation": "Since 2018 like-kind treatment is limited to real property not held primarily for sale."
+        },
+        {
+          "id": "d2",
+          "label": "An asset held one year or less is reported in Form 4797 Part I.",
+          "options": [
+            "Keep it in Part I",
+            "Move it to Part II (ordinary gain or loss)",
+            "Move it to Schedule D"
+          ],
+          "answer": "Move it to Part II (ordinary gain or loss)",
+          "explanation": "§1231 requires a holding period of more than one year."
+        },
+        {
+          "id": "d3",
+          "label": "Depreciation was allowed on Equipment B but no recapture is reported.",
+          "options": [
+            "Report §1245 recapture in Part III",
+            "Clear the flag — the gain is all §1231",
+            "Report the recapture as a capital gain"
+          ],
+          "answer": "Report §1245 recapture in Part III",
+          "explanation": "Gain up to prior depreciation on personal property is ordinary."
+        },
+        {
+          "id": "d4",
+          "label": "Form 8824: cash received in a land-for-land exchange.",
+          "options": [
+            "Recognize gain up to the cash received",
+            "Recognize the entire realized gain",
+            "Recognize no gain"
+          ],
+          "answer": "Recognize gain up to the cash received",
+          "explanation": "Boot triggers gain up to the lesser of the boot or the realized gain."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "b",
+      "prompt": "Compute the basis of the replacement land.",
+      "rows": [
+        {
+          "id": "basis",
+          "label": "Basis of the land received",
+          "answer": 120000,
+          "tolerance": 0,
+          "explanation": "Old basis 120,000 + gain recognized 20,000 − cash received 20,000 = **120,000** (FMV 180,000 − deferred gain 60,000)."
+        }
+      ]
+    }
+  ]
+}

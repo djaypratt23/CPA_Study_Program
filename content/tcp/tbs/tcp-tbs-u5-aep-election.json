@@ -1,0 +1,114 @@
+{
+  "id": "tcp-tbs-u5-aep-election",
+  "section": "TCP",
+  "unitId": "tcp-u5",
+  "moduleIds": [
+    "tcp-s-corp-compliance"
+  ],
+  "pool": "practice",
+  "title": "Evaluate the election to distribute AEP first — Sycamore Holdings",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Sycamore Holdings, Inc. converted from a C corporation to an S corporation several years ago. Its sole shareholder, Priya Shah, will receive a $60,000 cash distribution in 2025. The controller prepared a comparison with and without the election to distribute accumulated earnings and profits (AEP) before AAA. Review the comparison and complete the recommendation. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Data before the distribution",
+      "content": "- Accumulated adjustments account (AAA): **$40,000** (after the year's income).\n- Accumulated E&P from C corporation years: **$25,000**.\n- Priya's stock basis: **$100,000**.\n- Passive investment income (rents and interest) exceeded **25%** of gross receipts in 2023 and 2024 and is projected to do so in 2025.\n- Priya's dividend rate: **15%**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "cmp",
+      "prompt": "Review the controller's comparison.",
+      "preparedLabel": "Per controller",
+      "rows": [
+        {
+          "id": "n_div",
+          "label": "Without election — dividend income",
+          "prepared": 20000,
+          "answer": 20000,
+          "explanation": "AAA first (40,000 tax-free), then 20,000 from AEP = **20,000** dividend (§1368(c)). **No error.**"
+        },
+        {
+          "id": "n_basis",
+          "label": "Without election — stock basis after the distribution",
+          "prepared": 40000,
+          "answer": 60000,
+          "explanation": "Only the AAA portion reduces stock basis: 100,000 − 40,000 = **60,000**. Distributions out of AEP are dividends and do not reduce basis."
+        },
+        {
+          "id": "n_aep",
+          "label": "Without election — AEP remaining",
+          "prepared": 5000,
+          "answer": 5000,
+          "explanation": "25,000 − 20,000 = **5,000**. **No error.**"
+        },
+        {
+          "id": "e_div",
+          "label": "With the §1368(e)(3) election — dividend income",
+          "prepared": 25000,
+          "answer": 25000,
+          "explanation": "AEP is distributed first: **25,000**. **No error.**"
+        },
+        {
+          "id": "e_aaa",
+          "label": "With the election — tax-free distribution from AAA",
+          "prepared": 35000,
+          "answer": 35000,
+          "explanation": "60,000 − 25,000 = **35,000**. **No error.**"
+        },
+        {
+          "id": "e_basis",
+          "label": "With the election — stock basis after the distribution",
+          "prepared": 40000,
+          "answer": 65000,
+          "explanation": "100,000 − 35,000 = **65,000**."
+        },
+        {
+          "id": "e_aep",
+          "label": "With the election — AEP remaining",
+          "prepared": 5000,
+          "answer": 0,
+          "explanation": "All 25,000 of AEP is distributed: **0**."
+        },
+        {
+          "id": "e_aaa_rem",
+          "label": "With the election — AAA remaining",
+          "prepared": 0,
+          "answer": 5000,
+          "explanation": "40,000 − 35,000 = **5,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "rec",
+      "prompt": "Complete the planning conclusion.",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Recommendation",
+          "options": [
+            "Make the election — it eliminates AEP, removing the passive-investment-income tax and the risk of termination",
+            "Do not elect — it only increases current tax",
+            "The election is unavailable while AAA is positive"
+          ],
+          "answer": "Make the election — it eliminates AEP, removing the passive-investment-income tax and the risk of termination",
+          "explanation": "The extra 5,000 of dividend income costs 750 at 15%. Without AEP, neither §1375 nor §1362(d)(3) can apply, and Sycamore has had passive investment income above 25% for two years running."
+        },
+        {
+          "id": "r2",
+          "label": "Consent required for the election",
+          "options": [
+            "The corporation alone",
+            "All shareholders who receive a distribution during the year",
+            "A majority of shares"
+          ],
+          "answer": "All shareholders who receive a distribution during the year",
+          "explanation": "§1368(e)(3)(B): all affected shareholders must consent."
+        }
+      ]
+    }
+  ]
+}
