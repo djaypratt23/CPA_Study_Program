@@ -36,16 +36,16 @@
         {
           "id": "ch",
           "label": "Charitable contribution deduction",
-          "answer": 65000,
+          "answer": 45000,
           "tolerance": 0,
-          "explanation": "10% × 650,000 = **65,000**; 5,000 carries forward."
+          "explanation": "The 10% limit is figured before the charitable deduction, the DRD, and any NOL *carryback*, but after the NOL *carryforward* (IRC §170(b)(2)(D)): 10% × (650,000 − 200,000) = **45,000**; the other 25,000 carries forward."
         },
         {
           "id": "m1",
           "label": "Schedule M-1, line 10 (Form 1120, line 28)",
-          "answer": 585000,
+          "answer": 605000,
           "tolerance": 0,
-          "explanation": "650,000 − 65,000 = **585,000**."
+          "explanation": "Line 28 is taxable income before the NOL and special deductions: 650,000 − 45,000 = **605,000**."
         },
         {
           "id": "drd",
@@ -59,21 +59,21 @@
           "label": "NOL deduction",
           "answer": 200000,
           "tolerance": 0,
-          "explanation": "Limit 80% × 552,500 = 442,000; the full **200,000** is allowed."
+          "explanation": "Limit 80% × (605,000 − 32,500) = 80% × 572,500 = 458,000; the full **200,000** is allowed."
         },
         {
           "id": "ti",
           "label": "Taxable income",
-          "answer": 352500,
+          "answer": 372500,
           "tolerance": 0,
-          "explanation": "585,000 − 32,500 − 200,000 = **352,500**."
+          "explanation": "605,000 − 32,500 − 200,000 = **372,500**."
         },
         {
           "id": "tax",
           "label": "Income tax",
-          "answer": 74025,
+          "answer": 78225,
           "tolerance": 0,
-          "explanation": "21% × 352,500 = **74,025**."
+          "explanation": "21% × 372,500 = **78,225**."
         }
       ]
     },
