@@ -51,7 +51,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "A qualifying financing agreement allows noncurrent classification.",
         "trap": "wrong-rule"
       },
@@ -158,7 +158,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Imputed interest is recognized.",
         "trap": "wrong-rule"
       }
@@ -181,8 +181,9 @@
       },
       {
         "id": "b",
-        "text": "Current",
-        "explanation": "Correct. It was settled with current assets."
+        "text": "Removed from the balance sheet at December 31",
+        "explanation": "It was outstanding at December 31.",
+        "trap": "wrong-period"
       },
       {
         "id": "c",
@@ -192,12 +193,11 @@
       },
       {
         "id": "d",
-        "text": "Removed from the balance sheet at December 31",
-        "explanation": "It was outstanding at December 31.",
-        "trap": "wrong-period"
+        "text": "Current",
+        "explanation": "Correct. It was settled with current assets."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "If a short-term obligation is repaid with current assets after the balance sheet date and new long-term debt is issued later, the obligation was settled with current assets — it remains current.",
     "skill": "analysis"
   },
@@ -214,8 +214,9 @@
       },
       {
         "id": "b",
-        "text": "$80,000 gain",
-        "explanation": "Correct. 2,040,000 − 1,960,000."
+        "text": "$80,000 loss",
+        "explanation": "Paying less than carrying amount is a gain.",
+        "trap": "wrong-sign"
       },
       {
         "id": "c",
@@ -225,12 +226,11 @@
       },
       {
         "id": "d",
-        "text": "$80,000 loss",
-        "explanation": "Paying less than carrying amount is a gain.",
-        "trap": "wrong-sign"
+        "text": "$80,000 gain",
+        "explanation": "Correct. 2,040,000 − 1,960,000."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Carrying amount = 2,040,000. Reacquisition = 1,960,000. Gain = **80,000**.",
     "skill": "application",
     "calc": true
@@ -242,18 +242,18 @@
     "choices": [
       {
         "id": "a",
-        "text": "Aggregate maturities for each of the five years following the balance sheet date",
+        "text": "Aggregate maturities for each of the next five years",
         "explanation": "Correct. ASC 470-10-50-1: disclose combined aggregate maturities and sinking fund requirements for each of the five years after the balance sheet date."
       },
       {
         "id": "b",
-        "text": "Fair value of the lender's collateral",
+        "text": "The fair value of the lender's collateral",
         "explanation": "Not a debtor disclosure requirement.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Names of all bondholders",
+        "text": "The names of all bondholders",
         "explanation": "Bondholder identities are not a required disclosure.",
         "trap": "irrelevant-fact"
       },
@@ -281,8 +281,9 @@
       },
       {
         "id": "b",
-        "text": "Current",
-        "explanation": "Correct. Obligations callable by the creditor at the balance sheet date because of a violation are current unless waived for more than a year or curable within a grace period."
+        "text": "Current only to the extent of next year's scheduled payment",
+        "explanation": "The entire callable amount is current.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
@@ -292,12 +293,11 @@
       },
       {
         "id": "d",
-        "text": "Current only to the extent of next year's scheduled payment",
-        "explanation": "The entire callable amount is current.",
-        "trap": "partial-computation"
+        "text": "Current",
+        "explanation": "Correct. Obligations callable by the creditor at the balance sheet date because of a violation are current unless waived for more than a year or curable within a grace period."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Obligations callable by the creditor at the balance sheet date because of a violation are current unless waived for more than a year or curable within a grace period.",
     "skill": "application"
   },
@@ -381,8 +381,9 @@
       },
       {
         "id": "b",
-        "text": "Current",
-        "explanation": "Correct. Without an actual long-term refinancing or a qualifying financing agreement before issuance, the obligation is current."
+        "text": "Half current, half noncurrent",
+        "explanation": "No proportional split rule exists for refinancing intent.",
+        "trap": "other"
       },
       {
         "id": "c",
@@ -392,12 +393,11 @@
       },
       {
         "id": "d",
-        "text": "Half current, half noncurrent",
-        "explanation": "No proportional split rule exists for refinancing intent.",
-        "trap": "other"
+        "text": "Current",
+        "explanation": "Correct. Without an actual long-term refinancing or a qualifying financing agreement before issuance, the obligation is current."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Without an actual long-term refinancing or a qualifying financing agreement before issuance, the obligation is current.",
     "skill": "application"
   },

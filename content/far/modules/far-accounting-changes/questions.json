@@ -39,9 +39,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "Change in accounting principle — retrospective",
-        "explanation": "Moving from a non-GAAP method to GAAP is an error correction.",
-        "trap": "wrong-classification"
+        "text": "Correction of an error — restatement",
+        "explanation": "Correct. A change from an accounting principle that isn't GAAP to one that is GAAP is an error correction (restatement)."
       },
       {
         "id": "b",
@@ -51,8 +50,9 @@
       },
       {
         "id": "c",
-        "text": "Correction of an error — restatement",
-        "explanation": "Correct. A change from an accounting principle that isn't GAAP to one that is GAAP is an error correction (restatement)."
+        "text": "Change in accounting principle — retrospective",
+        "explanation": "Moving from a non-GAAP method to GAAP is an error correction.",
+        "trap": "wrong-classification"
       },
       {
         "id": "d",
@@ -61,7 +61,7 @@
         "trap": "wrong-classification"
       }
     ],
-    "answer": "c",
+    "answer": "a",
     "explanation": "A change from an accounting principle that isn't GAAP to one that is GAAP is an error correction (restatement).",
     "skill": "analysis"
   },
@@ -72,7 +72,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Retrospective application to all prior periods presented, with an adjustment to the earliest period's opening retained earnings",
+        "text": "Retrospective application, adjusting opening retained earnings",
         "explanation": "Correct. ASC 250-10-45-5: retrospective application unless impracticable."
       },
       {
@@ -83,13 +83,13 @@
       },
       {
         "id": "c",
-        "text": "Prospectively only",
+        "text": "Prospectively only, with disclosure",
         "explanation": "Prospective treatment is for estimates.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Disclosure only",
+        "text": "Disclosure only, with no adjustment",
         "explanation": "Recognition is required.",
         "trap": "wrong-rule"
       }
@@ -105,29 +105,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Change from FIFO to LIFO",
+        "text": "A change from FIFO to LIFO for inventory",
         "explanation": "A change in principle.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Change from straight-line to sum-of-the-years'-digits depreciation",
-        "explanation": "Correct. Changes in depreciation, amortization, or depletion methods are treated as changes in estimate effected by a change in principle — prospective."
+        "text": "Correcting a math error in last year's depreciation",
+        "explanation": "That's an error correction, not a method change.",
+        "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Change in the bad debt percentage",
+        "text": "A change in the bad debt percentage",
         "explanation": "A pure change in estimate.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Correction of a math error in last year's depreciation",
-        "explanation": "That's an error correction, not a method change.",
-        "trap": "wrong-classification"
+        "text": "Straight-line to sum-of-the-years'-digits",
+        "explanation": "Correct. Changes in depreciation, amortization, or depletion methods are treated as changes in estimate effected by a change in principle — prospective."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Changes in depreciation, amortization, or depletion methods are treated as changes in estimate effected by a change in principle — prospective.",
     "skill": "remembering"
   },
@@ -144,8 +144,9 @@
       },
       {
         "id": "b",
-        "text": "Increase of $60,000",
-        "explanation": "Correct. 80,000 × 75%."
+        "text": "No adjustment; the change is prospective",
+        "explanation": "Principle changes are retrospective when practicable.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -155,12 +156,11 @@
       },
       {
         "id": "d",
-        "text": "No adjustment; the change is prospective",
-        "explanation": "Principle changes are retrospective when practicable.",
-        "trap": "wrong-rule"
+        "text": "Increase of $60,000",
+        "explanation": "Correct. 80,000 × 75%."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Cumulative effect before the earliest period presented = 80,000 × (1 − 0.25) = **60,000** increase to opening retained earnings of Year 2.",
     "skill": "application",
     "calc": true
@@ -206,7 +206,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "A company changes its inventory method",
+        "text": "A company changes its inventory costing method",
         "explanation": "Change in principle.",
         "trap": "wrong-classification"
       },
@@ -218,7 +218,7 @@
       },
       {
         "id": "c",
-        "text": "A company presents consolidated statements in place of the individual statements previously issued",
+        "text": "Consolidated statements replace individual statements",
         "explanation": "Correct. Changes in reporting entity include presenting consolidated statements instead of individual statements and changing the specific subsidiaries in the consolidated group (not business combinations)."
       },
       {
@@ -245,8 +245,9 @@
       },
       {
         "id": "b",
-        "text": "Apply 3% to current and future sales; no prior-period changes",
-        "explanation": "Correct. Changes in estimate affect the period of change and future periods only."
+        "text": "Disclose only",
+        "explanation": "The new estimate is applied.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -256,12 +257,11 @@
       },
       {
         "id": "d",
-        "text": "Disclose only",
-        "explanation": "The new estimate is applied.",
-        "trap": "wrong-rule"
+        "text": "Apply 3% to current and future sales; no prior-period changes",
+        "explanation": "Correct. Changes in estimate affect the period of change and future periods only."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Changes in estimate affect the period of change and future periods only.",
     "skill": "application"
   },
@@ -338,29 +338,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Retrospectively, estimating prior layers",
+        "text": "Retrospectively, estimating the prior layers",
         "explanation": "If impracticable, retrospective application isn't required.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Prospectively from the beginning of the year of change, with disclosure",
-        "explanation": "Correct. When retrospective application is impracticable (common for a change to LIFO), apply the new principle prospectively, with the beginning inventory becoming the base LIFO layer, and disclose why."
+        "text": "It is prohibited without prior data",
+        "explanation": "Changes to LIFO are allowed if preferable.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "As an error correction",
+        "text": "As a correction of an error",
         "explanation": "Changing between GAAP methods isn't an error.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "It is prohibited",
-        "explanation": "Changes to LIFO are allowed if preferable.",
-        "trap": "wrong-rule"
+        "text": "Prospectively from the start of the year",
+        "explanation": "Correct. When retrospective application is impracticable (common for a change to LIFO), apply the new principle prospectively, with the beginning inventory becoming the base LIFO layer, and disclose why."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "When retrospective application is impracticable (common for a change to LIFO), apply the new principle prospectively, with the beginning inventory becoming the base LIFO layer, and disclose why.",
     "skill": "application"
   },
@@ -377,8 +377,9 @@
       },
       {
         "id": "b",
-        "text": "Increase of $36,000",
-        "explanation": "Correct. 60,000 − (2 × 12,000)."
+        "text": "Decrease of $36,000",
+        "explanation": "Expensing overstated past expenses, understating retained earnings.",
+        "trap": "wrong-sign"
       },
       {
         "id": "c",
@@ -388,12 +389,11 @@
       },
       {
         "id": "d",
-        "text": "Decrease of $36,000",
-        "explanation": "Expensing overstated past expenses, understating retained earnings.",
-        "trap": "wrong-sign"
+        "text": "Increase of $36,000",
+        "explanation": "Correct. 60,000 − (2 × 12,000)."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Retained earnings was understated by the 60,000 expense, offset by 24,000 of depreciation that should have been recorded: net increase **36,000**. Machine 60,000, accumulated depreciation 24,000.",
     "skill": "analysis",
     "calc": true
@@ -411,23 +411,23 @@
       },
       {
         "id": "b",
-        "text": "Recognized in the period of the change (an indirect effect), not retrospectively",
-        "explanation": "Correct. Indirect effects are recognized when the change is made."
+        "text": "Treated as the correction of an error",
+        "explanation": "The bonus was properly computed under the prior method.",
+        "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Ignored entirely",
+        "text": "Ignored entirely in all periods",
         "explanation": "Indirect effects that are actually incurred are recognized.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Treated as an error correction",
-        "explanation": "The bonus was properly computed under the prior method.",
-        "trap": "wrong-classification"
+        "text": "Recognized in the period of change, not restated",
+        "explanation": "Correct. Indirect effects are recognized when the change is made."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "ASC 250-10-45-8: retrospective application includes only the direct effects of the change (and related tax effects). Indirect effects, such as changes in profit-sharing payments, are recognized in the period of change.",
     "skill": "analysis"
   }

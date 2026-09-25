@@ -73,3 +73,11 @@ describe('answer-cue lint', () => {
     expect(CUE_LIMITS).toMatchObject({ maxUniqueLongest: 0.35, maxLengthRatio: 1.25, minLetterShare: 0.18, maxLetterShare: 0.32 })
   })
 })
+
+describe('repository bank passes the cue lint', () => {
+  it('has no answer-cue problems in any section or pool', async () => {
+    const { loadContent } = await import('../scripts/load-content')
+    const { bundle } = loadContent()
+    expect(cueProblems(cueStats(bundle))).toEqual([])
+  })
+})
