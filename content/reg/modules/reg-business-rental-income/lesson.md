@@ -14,6 +14,8 @@ objectives:
   - text: Apply the at-risk and passive activity loss limitations, including the $25,000 rental allowance.
     skill: analysis
     task: Determine deductible losses from passive activities
+  - text: Review loss deductions on Form 1040 against source data and resolve loss-limitation diagnostics.
+    skill: analysis
 bigIdea:
   what: >-
     Sole proprietors report business income on Schedule C; landlords report rent on Schedule E. Losses from these
@@ -105,3 +107,23 @@ steps:
 ```check
 reg-bri-chk2
 ```
+
+## Reviewing losses on a return
+
+Losses pass through several limits, applied in order. A prepared return that deducts every loss in full has almost always skipped one:
+
+| Loss | Limit | What happens to the excess |
+|---|---|---|
+| Net capital loss | 3,000 a year against ordinary income (§1211(b)) | Carried forward indefinitely, keeping its character |
+| Rental real estate, active participation | Up to 25,000, reduced by 50% of MAGI over 100,000 (gone at 150,000) | Suspended passive loss |
+| Other passive activity (for example, limited partner) | Only against passive income | Suspended until passive income or disposition |
+| Personal casualty (2025) | Only losses attributable to a federally declared disaster | Not deductible |
+| Gambling (2025) | Up to gambling winnings, as an itemized deduction | Lost |
+
+**Resolving diagnostics.** Tax software raises a diagnostic whenever an entry looks unusual. It is a question, not an error. For each one, decide whether:
+
+1. the **input is wrong** — fix the entry;
+2. the entry is **right and the difference is expected** — clear the flag and document why; or
+3. the source documents **cannot answer it** — ask the client.
+
+Clearing a flag without understanding it is how errors reach a filed return.

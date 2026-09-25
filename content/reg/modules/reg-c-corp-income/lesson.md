@@ -14,6 +14,8 @@ objectives:
   - text: Identify corporate filing and estimated tax requirements and cost recovery rules for 2025.
     skill: remembering
     task: Recall corporate compliance requirements
+  - text: Review a C corporation's trial balance for book-tax differences and the completeness of Schedule M-1, and resolve related diagnostics.
+    skill: analysis
 bigIdea:
   what: >-
     A C corporation pays a flat 21% tax on its taxable income. Taxable income starts from book income and is adjusted
@@ -103,3 +105,26 @@ insight: The DRD taxable income limit matters only when taxable income before th
 ```check
 reg-cc-chk2
 ```
+
+## Reviewing Schedule M-1 for completeness
+
+Scan every trial balance account and ask: *is the book amount the tax amount?* Anything that is not goes on Schedule M-1:
+
+| Add back (books > tax) | Subtract (tax > books) |
+|---|---|
+| Federal income tax expense | Tax-exempt interest |
+| 50% of business meals; all entertainment | Excess of tax over book depreciation |
+| Fines and penalties paid to a government | |
+| Premiums on life insurance where the corporation is the beneficiary | |
+| Bad debt expense in excess of write-offs | |
+| Capital losses over capital gains | |
+
+Schedule M-1 ends at taxable income **before** special deductions (Form 1120 line 28). The **dividends-received deduction** and NOL deduction come after it and must not also appear on M-1. Corporations with total assets of 10 million dollars or more file Schedule M-3 instead.
+
+**Resolving diagnostics.** Tax software raises a diagnostic whenever an entry looks unusual. It is a question, not an error. For each one, decide whether:
+
+1. the **input is wrong** — fix the entry;
+2. the entry is **right and the difference is expected** — clear the flag and document why; or
+3. the source documents **cannot answer it** — ask the client.
+
+Clearing a flag without understanding it is how errors reach a filed return.

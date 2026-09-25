@@ -14,6 +14,8 @@ objectives:
   - text: Determine the taxation of S corporation distributions and entity-level taxes.
     skill: application
     task: Determine the tax treatment of S corporation distributions
+  - text: Review Form 1120-S classification of ordinary and separately stated items and resolve related diagnostics.
+    skill: analysis
 bigIdea:
   what: >-
     An S corporation is a corporation for legal purposes but generally a pass-through for tax: its income passes to
@@ -102,3 +104,23 @@ flowchart TD
 ```check
 reg-sc-chk2
 ```
+
+## Reviewing Form 1120-S classification
+
+An item is **separately stated** when it could affect any shareholder's tax differently. When you review Schedule K, check that none of these reached ordinary business income:
+
+- Portfolio income: interest, dividends, royalties.
+- Capital gains and losses; §1231 gains and losses.
+- §179 deduction (each shareholder's limit applies).
+- Charitable contributions.
+- Tax-exempt income and **nondeductible expenses** (line 16): they adjust basis and AAA but are never deducted.
+
+Health insurance for a 2% shareholder is deductible by the S corporation when it is included in the shareholder's W-2 wages.
+
+**Resolving diagnostics.** Tax software raises a diagnostic whenever an entry looks unusual. It is a question, not an error. For each one, decide whether:
+
+1. the **input is wrong** — fix the entry;
+2. the entry is **right and the difference is expected** — clear the flag and document why; or
+3. the source documents **cannot answer it** — ask the client.
+
+Clearing a flag without understanding it is how errors reach a filed return.

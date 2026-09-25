@@ -1,0 +1,119 @@
+{
+  "id": "reg-tbs-u4-loss-review",
+  "section": "REG",
+  "unitId": "reg-u4",
+  "moduleIds": [
+    "reg-business-rental-income",
+    "reg-capital-gains"
+  ],
+  "pool": "practice",
+  "title": "Review loss limitations on a joint return — Jordan and Casey Park",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Jordan and Casey Park file jointly for 2025. The preparer deducted every loss in full. Review the prepared amounts against the source data, then resolve the diagnostics. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Source data (2025)",
+      "content": "- **Form 1099-B:** short-term gain **$2,000**; long-term loss **$9,500**. No capital loss carryover from prior years.\n- **Rental house:** net loss **$18,000**. The Parks actively participate (they approve tenants and set rents).\n- **Modified AGI** for the rental loss allowance: **$120,000**.\n- **Schedule K-1** from a limited partnership (Casey is a limited partner): loss **$4,000**. The Parks have no other passive income.\n- **Car accident:** their personal car was damaged in a collision; the uninsured loss was **$6,000**. The area was not a federally declared disaster area.\n- **Gambling:** winnings **$2,500** (Form W-2G); documented losses **$4,000**. The Parks itemize deductions."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "loss",
+      "prompt": "Review the prepared loss amounts.",
+      "preparedLabel": "Per prepared return",
+      "rows": [
+        {
+          "id": "cl",
+          "label": "Net capital loss deducted",
+          "prepared": 7500,
+          "answer": 3000,
+          "explanation": "Short-term gain 2,000 − long-term loss 9,500 = net loss 7,500. Individuals deduct at most **3,000** a year against ordinary income (§1211(b))."
+        },
+        {
+          "id": "clc",
+          "label": "Capital loss carryover to 2026",
+          "prepared": 0,
+          "answer": 4500,
+          "explanation": "7,500 − 3,000 = **4,500**, carried forward indefinitely and keeping its long-term character (§1212(b))."
+        },
+        {
+          "id": "rent",
+          "label": "Rental real estate loss allowed",
+          "prepared": 18000,
+          "answer": 15000,
+          "explanation": "Active participation allows up to 25,000, reduced by 50% of MAGI over 100,000: 25,000 − 50% × 20,000 = **15,000** (§469(i))."
+        },
+        {
+          "id": "rsus",
+          "label": "Rental loss suspended",
+          "prepared": 0,
+          "answer": 3000,
+          "explanation": "18,000 − 15,000 = **3,000**, carried forward as a passive loss."
+        },
+        {
+          "id": "lp",
+          "label": "Limited partnership loss allowed",
+          "prepared": 0,
+          "answer": 0,
+          "explanation": "A limited partner's loss is passive and the Parks have no passive income; the loss is suspended. **No error.**"
+        },
+        {
+          "id": "cas",
+          "label": "Casualty loss deducted",
+          "prepared": 0,
+          "answer": 0,
+          "explanation": "A personal casualty loss outside a federally declared disaster is not deductible (§165(h)(5)). **No error.**"
+        },
+        {
+          "id": "gamb",
+          "label": "Gambling losses deducted (itemized)",
+          "prepared": 4000,
+          "answer": 2500,
+          "explanation": "For 2025, gambling losses are deductible only up to gambling winnings: **2,500** (§165(d))."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "Choose the correct resolution for each diagnostic.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Schedule D net loss exceeds the annual limit.",
+          "options": [
+            "Deduct the full loss",
+            "Deduct 3,000 and carry the rest forward",
+            "Deduct 3,000 and forfeit the rest"
+          ],
+          "answer": "Deduct 3,000 and carry the rest forward",
+          "explanation": "Individuals carry capital losses forward indefinitely."
+        },
+        {
+          "id": "d2",
+          "label": "Schedule E rental loss with MAGI above $100,000 — Form 8582 required.",
+          "options": [
+            "Allow the full loss under the $25,000 allowance",
+            "Apply the phase-out of the $25,000 allowance",
+            "Suspend the entire loss"
+          ],
+          "answer": "Apply the phase-out of the $25,000 allowance",
+          "explanation": "The allowance phases out between MAGI of 100,000 and 150,000."
+        },
+        {
+          "id": "d3",
+          "label": "K-1 limited partnership loss with no passive income reported.",
+          "options": [
+            "Deduct it against wages",
+            "Suspend it and carry it forward",
+            "Treat it as a capital loss"
+          ],
+          "answer": "Suspend it and carry it forward",
+          "explanation": "Passive losses offset only passive income; the excess is carried forward until there is passive income or a disposition."
+        }
+      ]
+    }
+  ]
+}
