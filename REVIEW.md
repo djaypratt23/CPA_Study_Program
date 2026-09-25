@@ -162,3 +162,9 @@ New `review` TBS part: the candidate ticks each prepared amount that is wrong an
 | `reg-tbs-u6-book-tax-review` | Find book-tax differences in a trial balance; check Schedule M-1 for completeness | §§162(f), 243, 264, 274; Form 1120 Sch. M-1/M-3 instructions |
 | `reg-tbs-u7-1120s-review` | Review Form 1120-S classification; resolve diagnostics | §§1363, 1366, 1368; Rev. Rul. 91-26 |
 | `reg-tbs-u7-1065-review` | Review Form 1065 classification; resolve diagnostics | §§702, 707(c), 1402(a)(13); Rev. Rul. 91-26 |
+| `tcp-tbs-u5-s-basis-review` | Review S corporation stock and debt basis; loan repayment planning | §§1366(d), 1367; Reg. 1.1366-2, 1.1367-1(f), 1.1367-2 |
+| `tcp-tbs-u4-partner-basis-review` | Review a partner's basis schedule; split the loss among the basis, at-risk and passive limits | §§465, 469, 704(d), 752 |
+| `tcp-tbs-u7-disposition-review` | Review a disposition schedule's amount and character; resolve Form 4797/8824 diagnostics | §§1031, 1231, 1245, 1250, 1(h)(6) |
+| `tcp-tbs-u5-aep-election` | Derive and compare distributions with and without the election to distribute AEP first | §§1362(d)(3), 1368(c), 1368(e)(3), 1375 |
+| `tcp-tbs-u6-liquidation-compare` | Derive and compare liquidation results for a C corporation, an S corporation and a partnership | §§331, 336, 731, 732(b) |
+| `tcp-tbs-u3-shareholder-review` | Review shareholder loan documents (imputed interest) and post-formation shareholder–corporation transactions | §§162(a)(1), 7872 |

@@ -14,6 +14,8 @@ objectives:
   - text: Determine the taxability of distributions from an S corporation with accumulated E&P, and compute the built-in gains and excess passive income taxes.
     skill: analysis
     task: Analyze S corporation distributions and entity-level taxes
+  - text: Review a shareholder's stock and debt basis schedule, evaluate loan repayments, and compare distributions with and without the election to distribute AEP first.
+    skill: analysis
 bigIdea:
   what: >-
     An S corporation is a corporation for legal purposes but a pass-through for tax. Its income flows to
@@ -112,3 +114,22 @@ tcp-sc2-chk2
 | Built-in gains (§1374) | Converted C corporation sells appreciated assets within 5 years | 21% of net recognized built-in gain |
 | Excess net passive income (§1375) | Passive investment income > 25% of gross receipts + accumulated E&P | 21% |
 | LIFO recapture | C corporation using LIFO converts to S | Tax on LIFO reserve, paid over 4 years |
+
+## Reviewing a basis schedule (Form 7203)
+
+Check the adjustments in the required order (Reg. 1.1367-1(f)):
+
+1. **Increase** for contributions and all income items, **including tax-exempt income**.
+2. **Decrease** for distributions (the AAA portion only; dividends out of AEP do not reduce basis).
+3. **Decrease** for nondeductible expenses.
+4. **Decrease** for losses and deductions — first stock basis, then **debt basis**.
+
+What counts as **debt basis**: only loans the shareholder makes **directly** to the corporation. A guarantee of a bank loan creates no basis until the shareholder actually pays.
+
+**Loan repayments.** A later year's *net* increase in basis restores debt basis before stock basis. If the corporation repays a loan while debt basis is still reduced, part of each payment is gain: repayment × (1 − debt basis ÷ face). The gain is capital on a formal note and ordinary on an open account. Planning point: repay only after basis is restored.
+
+## Distributing AEP first: the §1368(e)(3) election
+
+An S corporation that was once a C corporation may have accumulated E&P. Normally distributions come from AAA first (tax-free up to basis), then AEP (dividends). With the consent of all shareholders receiving distributions, the corporation can elect to distribute **AEP first**.
+
+Why pay tax sooner? Once AEP is zero, the corporation can no longer owe the §1375 tax on excess passive investment income, or lose its S election under §1362(d)(3) after three years of passive investment income above 25% of gross receipts. When you compare the two alternatives, track the dividend income, the stock basis (only the AAA portion reduces it), and the AEP and AAA left afterwards.

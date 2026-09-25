@@ -14,6 +14,8 @@ objectives:
   - text: Determine unrecaptured §1250 gain for individuals and the §291 recapture for corporations.
     skill: analysis
     task: Analyze recapture on the sale of depreciable real property
+  - text: Review a disposition schedule for the amount and character of gains and losses, and resolve related Form 4797 and Form 8824 diagnostics.
+    skill: analysis
 bigIdea:
   what: >-
     Business property held more than a year gets the best of both worlds under §1231: net gains are taxed like
@@ -104,3 +106,15 @@ steps:
 ```check
 tcp-ad-chk2
 ```
+
+## Reviewing a disposition schedule
+
+For each asset, confirm: (1) the **holding period** (more than one year for §1231), (2) the **realized gain or loss**, (3) the **recapture** (§1245: lesser of gain or depreciation; §1250 ordinary recapture only for accelerated depreciation), (4) the **§1231** remainder, and (5) for individuals, the **unrecaptured §1250 gain** taxed at up to 25%.
+
+| Diagnostic | Usual resolution |
+|---|---|
+| Asset held one year or less in Form 4797 Part I | Move to Part II (ordinary) |
+| Depreciated personal property with no recapture | Report §1245 recapture in Part III |
+| Like-kind exchange of personal property | Taxable — §1031 covers real property only |
+| Cash or other boot received in an exchange | Recognize gain up to the boot |
+| Net §1231 gain with prior §1231 losses | Apply the five-year lookback |
