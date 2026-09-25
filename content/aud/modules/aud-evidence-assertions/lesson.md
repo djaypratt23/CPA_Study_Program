@@ -13,6 +13,8 @@ objectives:
   - text: Apply audit documentation requirements, including assembly and retention periods.
     skill: remembering
     task: Recall audit documentation requirements
+  - text: Conclude whether sufficient appropriate audit evidence has been obtained and identify the evidence still needed.
+    skill: evaluation
 bigIdea:
   what: >-
     Evidence must be sufficient (enough of it) and appropriate (relevant to the assertion and reliable). Assertions
@@ -97,3 +99,12 @@ After the documentation completion date, nothing may be deleted. Additions must 
 ```check
 aud-ev-chk2
 ```
+
+## Concluding on sufficiency and appropriateness
+
+Before concluding on an area, ask two separate questions:
+
+- **Appropriate?** Is the evidence relevant to the assertion and reliable? External evidence the auditor obtains directly beats internal evidence; documents beat inquiry; evidence from a self-interested source (a sales manager vouching for their own inventory) is weak, especially when it contradicts other data.
+- **Sufficient?** Is there enough of it, given the assessed risk? A procedure performed on far fewer items than planned is the right kind of evidence, just not enough.
+
+The fix differs: insufficient evidence needs **more of the same**; inappropriate evidence needs **different** evidence. More copies of internally generated invoices will never prove that goods shipped. If the auditor cannot obtain the evidence (for example, management forbids a letter to legal counsel), the result is a scope limitation.

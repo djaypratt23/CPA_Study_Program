@@ -1,0 +1,99 @@
+{
+  "id": "aud-tbs-u6-ada-review",
+  "section": "AUD",
+  "unitId": "aud-u6",
+  "moduleIds": [
+    "aud-data-analytics",
+    "aud-fraud-risk"
+  ],
+  "pool": "practice",
+  "title": "Use data-analytics outputs to identify notable items — Ferris Components",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "The engagement team ran journal-entry tests and a margin visualization over Ferris Components' full-year general ledger (a private company). Performance materiality is $150,000. Review the outputs and decide how the team should respond.",
+  "exhibits": [
+    {
+      "title": "Journal-entry test results",
+      "content": "| Test | Entries flagged | Total amount | Notes from the data |\n|---|---:|---:|---|\n| 1. Manual entries to revenue posted after the period-end close | 5 | 640,000 | All by the controller; descriptions \"true-up\" |\n| 2. Entries posted by users without posting authority | 3 | 412,000 | Users in the warehouse department |\n| 3. Entries posted on Saturday or Sunday | 14 | 86,000 | All posted by user SYS-BATCH (nightly scheduled job) |\n| 4. Round-dollar entries over $50,000 | 9 | 1,250,000 | Monthly depreciation and prepaid amortization |"
+    },
+    {
+      "title": "Gross margin visualization",
+      "content": "Monthly gross margin ran between **37% and 39%** from January to November and rose to **46%** in December. Drilling down shows that the December increase comes almost entirely from sales to **Halden Supply**, a new customer invoiced on December 28–30 under **bill-and-hold** terms; the goods remain in Ferris's warehouse.\n\nThe recurring depreciation and amortization schedules were tested earlier and agree to approved fixed-asset and prepaid records."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "resp",
+      "prompt": "For each output, select the most appropriate response.",
+      "options": [
+        "Investigate every flagged item: inspect support and inquire of someone other than the preparer",
+        "Refine the test parameters and rerun before investigating",
+        "No further investigation: the flags are explained by corroborated, expected activity"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Test 1 — manual entries to revenue posted after the period-end close",
+          "answer": "Investigate every flagged item: inspect support and inquire of someone other than the preparer",
+          "explanation": "Post-close manual revenue entries are a classic management-override indicator, and revenue carries a presumed fraud risk (AU-C 240). Every entry is examined."
+        },
+        {
+          "id": "r2",
+          "label": "Test 2 — entries posted by users without posting authority",
+          "answer": "Investigate every flagged item: inspect support and inquire of someone other than the preparer",
+          "explanation": "These indicate an access-control failure. Each entry is examined for validity and support, and the access deficiency is evaluated."
+        },
+        {
+          "id": "r3",
+          "label": "Test 3 — entries posted on weekends",
+          "answer": "Refine the test parameters and rerun before investigating",
+          "explanation": "All 14 were posted by the scheduled nightly batch user. The test was not designed to exclude system-generated entries, so refine it and rerun to find any manual weekend entries."
+        },
+        {
+          "id": "r4",
+          "label": "Test 4 — round-dollar entries over $50,000",
+          "answer": "No further investigation: the flags are explained by corroborated, expected activity",
+          "explanation": "All nine agree to approved recurring depreciation and amortization schedules that the auditor has already tested."
+        },
+        {
+          "id": "r5",
+          "label": "Visualization — December gross margin 46% vs. 37–39% in other months",
+          "answer": "Investigate every flagged item: inspect support and inquire of someone other than the preparer",
+          "explanation": "An unexpected spike driven by one new customer on bill-and-hold terms is a notable item; test every December sale to that customer against the bill-and-hold criteria and cutoff."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "asrt",
+      "prompt": "Identify the area most directly affected by each finding.",
+      "options": [
+        "Occurrence and cutoff of revenue",
+        "Completeness of expenses",
+        "Valuation of receivables",
+        "IT general controls over access"
+      ],
+      "rows": [
+        {
+          "id": "a1",
+          "label": "Test 1 — post-close manual revenue entries",
+          "answer": "Occurrence and cutoff of revenue",
+          "explanation": "Entries recorded after the close that increase revenue bear on whether the revenue occurred in the period."
+        },
+        {
+          "id": "a2",
+          "label": "Test 2 — unauthorized users posting entries",
+          "answer": "IT general controls over access",
+          "explanation": "Users posting without authority point to a failure of logical access controls, which affects the reliability of all system data."
+        },
+        {
+          "id": "a3",
+          "label": "Bill-and-hold sales to the new customer",
+          "answer": "Occurrence and cutoff of revenue",
+          "explanation": "Revenue is recognized only when control transfers; bill-and-hold arrangements must meet specific criteria."
+        }
+      ]
+    }
+  ]
+}

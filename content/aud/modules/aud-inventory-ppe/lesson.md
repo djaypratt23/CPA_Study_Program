@@ -13,6 +13,8 @@ objectives:
   - text: Design substantive procedures for PP&E additions, disposals, and depreciation.
     skill: application
     task: Perform substantive procedures for long-lived assets
+  - text: Evaluate inventory observation results, including test-count exceptions and inventory held by others, and conclude on the evidence.
+    skill: evaluation
 bigIdea:
   what: >-
     For inventory, the auditor attends the client's physical count (if material and practicable), test-counts in
@@ -105,3 +107,15 @@ insight: Expense accounts are where capitalizable items hide; asset accounts are
 ```check
 aud-inv-chk2
 ```
+
+## Evaluating the observation results
+
+After the count, summarize what the test counts found:
+
+- **Floor-to-sheet** exceptions point to **completeness** (understatement).
+- **Sheet-to-floor** exceptions point to **existence** (overstatement). A client's assurance that missing goods are "probably elsewhere" is not evidence; the goods must be inspected.
+- **Damaged or obsolete** goods seen during the count raise **valuation**: carry them at net realizable value.
+
+Exceptions in both directions suggest the count itself may be unreliable. Ask for a recount and extend testing before relying on it.
+
+**Inventory held by others.** A confirmation from the custodian is normally acceptable. When the auditor doubts the custodian's independence or integrity (for example, a related party), perform other procedures: observe a count there, examine warehouse receipts, or obtain another auditor's report on the custodian's controls.

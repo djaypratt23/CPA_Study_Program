@@ -1,0 +1,102 @@
+{
+  "id": "aud-tbs-u8-subsequent-review",
+  "section": "AUD",
+  "unitId": "aud-u8",
+  "moduleIds": [
+    "aud-subsequent-events"
+  ],
+  "pool": "practice",
+  "title": "Determine whether subsequent events are properly reflected — Quarry Hill Mills",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Quarry Hill Mills (a private company, December 31, Year 1 year-end) recorded the adjustments below for events after the balance sheet date. The audit report is dated March 5, Year 2. Review management's adjustments, then determine the disclosure and reporting effects. Tick every amount that is wrong and enter the correct amount. Enter reductions of income as negative numbers in the total.",
+  "exhibits": [
+    {
+      "title": "Events after December 31, Year 1",
+      "content": "1. **Feb 2:** customer Varga Co., which owed **$180,000** at year-end, filed for bankruptcy. Varga had missed payments since October, Year 1.\n2. **Feb 20:** a lawsuit over a Year 1 product defect settled for **$450,000**. The company had accrued **$300,000** at year-end.\n3. **Jan 15:** a competitor launched a cheaper product; selling prices for Quarry Hill's inventory fell, reducing its net realizable value by **$70,000** below cost. At December 31, NRV was above cost.\n4. **Feb 10:** a fire destroyed an uninsured warehouse (loss **$900,000**, material).\n5. **Feb 28:** the company issued **$8 million** of common stock.\n\nManagement recorded: allowance for Varga **$0**; additional litigation accrual **$450,000**; inventory write-down **$70,000**; fire loss **$0**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "adj",
+      "prompt": "Review management's subsequent-event adjustments.",
+      "preparedLabel": "Per management",
+      "rows": [
+        {
+          "id": "bk",
+          "label": "Allowance for credit losses — Varga Co. receivable",
+          "prepared": 0,
+          "answer": 180000,
+          "explanation": "Varga's financial difficulty existed at year-end; its February bankruptcy is evidence about a condition at the balance sheet date. Reserve the full **180,000** (AU-C 560; ASC 855 recognized event)."
+        },
+        {
+          "id": "suit",
+          "label": "Additional litigation accrual",
+          "prepared": 450000,
+          "answer": 150000,
+          "explanation": "The suit arose from a Year 1 event. Settlement at 450,000 against the 300,000 accrued requires an additional **150,000**, not the full settlement."
+        },
+        {
+          "id": "nrv",
+          "label": "Inventory write-down for the January price decline",
+          "prepared": 70000,
+          "answer": 0,
+          "explanation": "The price fell because a competitor launched a product on January 15; the condition arose **after** year-end, so there is **no adjustment** (disclose if material)."
+        },
+        {
+          "id": "fire",
+          "label": "Loss accrued for the February warehouse fire",
+          "prepared": 0,
+          "answer": 0,
+          "explanation": "A nonrecognized event: disclose, do not accrue. **No error.**"
+        },
+        {
+          "id": "tot",
+          "label": "Net pretax income effect of subsequent-event adjustments",
+          "prepared": -520000,
+          "answer": -330000,
+          "explanation": "−180,000 − 150,000 = **−330,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "disc",
+      "prompt": "Determine the disclosure and reporting effects.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "February warehouse fire (material, uninsured)",
+          "options": [
+            "Disclose in the notes",
+            "No disclosure needed"
+          ],
+          "answer": "Disclose in the notes",
+          "explanation": "A material nonrecognized event is disclosed so the statements are not misleading."
+        },
+        {
+          "id": "d2",
+          "label": "February 28 issuance of $8 million of common stock",
+          "options": [
+            "Disclose in the notes",
+            "No disclosure needed"
+          ],
+          "answer": "Disclose in the notes",
+          "explanation": "A significant capital transaction after year-end is a disclosed nonrecognized event."
+        },
+        {
+          "id": "d3",
+          "label": "Report date March 5; on March 12, before release, management adds a note on a new lawsuit filed March 10",
+          "options": [
+            "Dual-date the report for this note, or re-date it and extend subsequent-events procedures",
+            "No action — the event occurred after year-end",
+            "Withdraw from the engagement"
+          ],
+          "answer": "Dual-date the report for this note, or re-date it and extend subsequent-events procedures",
+          "explanation": "For a subsequent event disclosed after the report date, the auditor dual-dates the report (March 5, except for Note X, March 12) or re-dates it and extends procedures to the new date (AU-C 560.13)."
+        }
+      ]
+    }
+  ]
+}

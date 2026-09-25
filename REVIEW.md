@@ -168,3 +168,9 @@ New `review` TBS part: the candidate ticks each prepared amount that is wrong an
 | `tcp-tbs-u5-aep-election` | Derive and compare distributions with and without the election to distribute AEP first | §§1362(d)(3), 1368(c), 1368(e)(3), 1375 |
 | `tcp-tbs-u6-liquidation-compare` | Derive and compare liquidation results for a C corporation, an S corporation and a partnership | §§331, 336, 731, 732(b) |
 | `tcp-tbs-u3-shareholder-review` | Review shareholder loan documents (imputed interest) and post-formation shareholder–corporation transactions | §§162(a)(1), 7872 |
+| `aud-tbs-u6-ada-review` | Use data-analytics outputs to identify trends and notable items, and respond | AU-C 240.32, 500; AICPA Guide to Audit Data Analytics |
+| `aud-tbs-u6-analytics-evaluation` | Evaluate and investigate analytical-procedure differences; final analytical procedures | AU-C 520.05–.07 |
+| `aud-tbs-u6-sufficiency` | Conclude whether sufficient appropriate evidence has been obtained | AU-C 500, 501.16, 705 |
+| `aud-tbs-u4-deficiency-evaluation` | Effect of misstatements on the ICFR assessment; impact of deficiencies on nature, timing and extent | AS 2201.62–.70; AU-C 265, 330 |
+| `aud-tbs-u8-subsequent-review` | Determine whether subsequent events are properly reflected; dual-dating | AU-C 560; ASC 855 |
+| `aud-tbs-u7-inventory-evaluation` | Evaluate test-count results and inventory held by others | AU-C 501.11–.12 |
