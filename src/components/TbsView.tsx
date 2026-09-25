@@ -3,7 +3,7 @@ import { useIsWide } from '../hooks/useDesktop'
 import type { Tbs, TbsPart } from '../content/schema'
 import { scoreTbs, type JournalLineResponse, type PartResponse, type TbsResponses } from '../lib/tbsScoring'
 import Markdown from './Markdown'
-import { ReviewBadge } from './ui'
+import { amountInputProps, ReviewBadge } from './ui'
 
 interface Props {
   tbs: Tbs
@@ -161,18 +161,35 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
               <label htmlFor={`${part.id}-${r.id}`} className="text-sm sm:max-w-[60%]">
                 {r.label}
               </label>
-              <input
-                id={`${part.id}-${r.id}`}
-                className="input font-mono sm:w-44 sm:text-right"
-                inputMode="decimal"
-                disabled={disabled}
-                value={values[r.id] ?? ''}
-                placeholder="0"
-                onChange={(e) => onChange({ kind: 'numeric', values: { ...values, [r.id]: e.target.value } })}
-              />
+              <div className="flex items-center gap-1 sm:w-52 sm:justify-end">
+                {r.unit === '$' && (
+                  <span className="muted font-mono text-sm" aria-hidden="true">
+                    $
+                  </span>
+                )}
+                <input
+                  id={`${part.id}-${r.id}`}
+                  className="input font-mono sm:w-44 sm:text-right"
+                  {...amountInputProps}
+                  aria-describedby={r.unit && r.unit !== '$' ? `${part.id}-${r.id}-unit` : undefined}
+                  disabled={disabled}
+                  value={values[r.id] ?? ''}
+                  placeholder="0"
+                  onChange={(e) => onChange({ kind: 'numeric', values: { ...values, [r.id]: e.target.value } })}
+                />
+                {r.unit && r.unit !== '$' && (
+                  <span id={`${part.id}-${r.id}-unit`} className="muted font-mono text-sm">
+                    {r.unit}
+                  </span>
+                )}
+              </div>
             </div>
           ))}
-          <p className="pt-2 text-xs muted">Enter whole dollars unless told otherwise. Commas and $ are fine; use a minus sign or (parentheses) for negatives.</p>
+          <p className="pt-2 text-xs muted">
+            Enter whole dollars unless the row shows another unit.{' '}
+            {part.rows.some((r) => r.unit === '%') && 'Enter percentages as percent points (25 or 25% for 25%). '}
+            Commas and $ are fine; use a minus sign or (parentheses) for negatives.
+          </p>
         </div>
       )
     }
@@ -235,7 +252,7 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
                   <td className="py-1 pr-2">
                     <input
                       className="input text-right font-mono"
-                      inputMode="decimal"
+                      {...amountInputProps}
                       aria-label={`Line ${i + 1} debit`}
                       disabled={disabled}
                       value={l.debit ?? ''}
@@ -245,7 +262,7 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
                   <td className="py-1">
                     <input
                       className="input text-right font-mono"
-                      inputMode="decimal"
+                      {...amountInputProps}
                       aria-label={`Line ${i + 1} credit`}
                       disabled={disabled}
                       value={l.credit ?? ''}

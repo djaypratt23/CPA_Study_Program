@@ -245,6 +245,8 @@ export type FlashcardWithModule = Flashcard & { moduleId: string; section: Secti
 /* Task-based simulations                                              */
 /* ------------------------------------------------------------------ */
 
+export const NUMERIC_UNITS = ['$', '%', 'x', 'years', 'days'] as const
+
 const NumericPart = z.object({
   kind: z.literal('numeric'),
   id: z.string(),
@@ -256,6 +258,8 @@ const NumericPart = z.object({
         label: z.string(),
         answer: z.number(),
         tolerance: z.number().min(0).default(1),
+        /** Unit shown beside the input. "%" rows are keyed in percent points (25 means 25%). */
+        unit: z.enum(NUMERIC_UNITS).optional(),
         explanation: z.string().min(5),
       }),
     )
