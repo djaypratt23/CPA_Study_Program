@@ -53,6 +53,15 @@ describe('mastery gating', () => {
     const m = computeMastery([...day('2026-03-01', 5, 0), ...day('2026-03-04', 5, 0), ...day('2026-03-20', 1, 4)], true)
     expect(m.status).toBe('slipping')
   })
+  it('one repeated question cannot produce mastery', () => {
+    const same = (d: string) => Array.from({ length: 5 }, () => att(d, true, { itemId: 'only-one' }))
+    const m = computeMastery([...same('2026-03-01'), ...same('2026-03-04')], true)
+    expect(m.qualifyingDays).toEqual([])
+    expect(m.status).toBe('learning')
+  })
+  it('does not count review-queue or mock answers', () => {
+    expect(computeMastery([...day('2026-03-01', 5, 0, { mode: 'review' }), ...day('2026-03-04', 5, 0, { mode: 'exam' })], true).status).toBe('learning')
+  })
   it('is not-started with no activity', () => {
     expect(computeMastery([], false).status).toBe('not-started')
   })

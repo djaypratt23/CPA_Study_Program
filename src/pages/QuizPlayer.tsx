@@ -24,6 +24,8 @@ export default function QuizPlayer() {
   const loadedElapsed = useRef(false)
   const [now, setNow] = useState(() => Date.now())
   const finishing = useRef(false)
+  const submitting = useRef(false)
+  const [busy, setBusy] = useState(false)
 
   useEffect(() => {
     if (session && !loadedElapsed.current) {
@@ -87,30 +89,41 @@ export default function QuizPlayer() {
   const section = getModule(q.moduleId)?.section ?? session.section
   const timeLeft = session.endsAt ? quizTimeLeftMs(session, now) : null
 
+  // Field-level key paths, so quick successive writes (choice, then confidence) never overwrite each other.
   const patchItem = (patch: Partial<QuizSession['items'][string]>) =>
-    db.quizSessions.update(session.id, { [`items.${q.id}`]: { ...st, ...patch } } as never)
+    db.quizSessions.update(session.id, Object.fromEntries(Object.entries(patch).map(([k, v]) => [`items.${q.id}.${k}`, v])) as never)
   const go = (i: number) => db.quizSessions.update(session.id, { index: i, elapsedMs: elapsed })
 
   const submitTutor = async (c: Confidence) => {
-    if (!st.choice) return
-    const timeMs = Date.now() - qStart.current
-    const a = await recordMcqAttempt(q, {
-      choice: st.choice,
-      confidence: c,
-      timeMs,
-      mode: session.mode === 'review' ? 'review' : 'tutor',
-      mixed: session.mixed,
-      sessionId: session.id,
-      section,
-    })
-    await patchItem({ confidence: c, correct: a.correct, timeMs, answeredAt: a.at })
+    if (submitting.current) return
+    submitting.current = true
+    try {
+      // Read the stored choice: the rendered snapshot can lag a fast click.
+      const cur = (await db.quizSessions.get(session.id))?.items[q.id]
+      if (!cur?.choice || cur.answeredAt) return
+      const timeMs = Date.now() - qStart.current
+      const a = await recordMcqAttempt(q, {
+        choice: cur.choice,
+        confidence: c,
+        timeMs,
+        mode: session.mode === 'review' ? 'review' : 'tutor',
+        mixed: session.mixed,
+        sessionId: session.id,
+        section,
+      })
+      await patchItem({ confidence: c, correct: a.correct, timeMs, answeredAt: a.at })
+    } finally {
+      submitting.current = false
+    }
   }
 
   const finishTest = async () => {
     if (finishing.current) return
     finishing.current = true
-    for (const id of session.itemIds) {
-      const it = session.items[id]
+    setBusy(true)
+    const fresh = (await db.quizSessions.get(session.id)) ?? session
+    for (const id of fresh.itemIds) {
+      const it = fresh.items[id]
       const qq = content.questions[id]
       if (!qq || !it.choice) continue
       const a = await recordMcqAttempt(qq, {
@@ -122,14 +135,15 @@ export default function QuizPlayer() {
         sessionId: session.id,
         section,
       })
-      session.items[id] = { ...it, correct: a.correct, answeredAt: a.at }
+      fresh.items[id] = { ...it, correct: a.correct, answeredAt: a.at }
     }
-    await db.quizSessions.update(session.id, { items: session.items, finishedAt: new Date().toISOString(), elapsedMs: elapsed })
+    await db.quizSessions.update(session.id, { items: fresh.items, finishedAt: new Date().toISOString(), elapsedMs: elapsed })
   }
 
   const finishTutor = async () => {
     if (finishing.current) return
     finishing.current = true
+    setBusy(true)
     await db.quizSessions.update(session.id, { finishedAt: new Date().toISOString(), elapsedMs: elapsed })
   }
 
@@ -194,7 +208,7 @@ export default function QuizPlayer() {
         </button>
         {isTest ? (
           last ? (
-            <button className="btn-primary" onClick={finishTest}>
+            <button className="btn-primary" onClick={finishTest} disabled={busy}>
               Submit set ({answeredCount}/{session.itemIds.length})
             </button>
           ) : (
@@ -204,7 +218,7 @@ export default function QuizPlayer() {
           )
         ) : revealed ? (
           last ? (
-            <button className="btn-primary" onClick={finishTutor}>
+            <button className="btn-primary" onClick={finishTutor} disabled={busy}>
               See results
             </button>
           ) : (
