@@ -36,37 +36,37 @@
         {
           "id": "ch",
           "label": "Charitable contribution deduction",
-          "answer": 50000,
+          "answer": 44200,
           "tolerance": 0,
-          "explanation": "Limit 10% × 542,000 = 54,200; all 50,000 is deductible."
+          "explanation": "The 10% limit is figured before the charitable deduction, the DRD, and any NOL *carryback*, but after the NOL *carryforward* (IRC §170(b)(2)(D)): 10% × (542,000 − 100,000) = **44,200**. The other 5,800 carries forward 5 years."
         },
         {
           "id": "drd",
           "label": "Dividends-received deduction",
           "answer": 39000,
           "tolerance": 0,
-          "explanation": "65% × 60,000 = **39,000** (65% × TI of 492,000 is larger)."
+          "explanation": "65% × 60,000 = **39,000** (the taxable-income limit, 65% × (542,000 − 44,200) = 65% × 497,800 = 323,570, doesn't bind)."
         },
         {
           "id": "nol",
           "label": "NOL deduction",
           "answer": 100000,
           "tolerance": 0,
-          "explanation": "Limit 80% × 453,000 = 362,400; the full 100,000 is deductible."
+          "explanation": "Limit 80% × (542,000 − 44,200 − 39,000) = 80% × 458,800 = 367,040; the full 100,000 is deductible."
         },
         {
           "id": "ti",
           "label": "Taxable income",
-          "answer": 353000,
+          "answer": 358800,
           "tolerance": 0,
-          "explanation": "542,000 − 50,000 − 39,000 − 100,000 = **353,000**."
+          "explanation": "542,000 − 44,200 − 39,000 − 100,000 = **358,800**."
         },
         {
           "id": "tax",
           "label": "Income tax",
-          "answer": 74130,
+          "answer": 75348,
           "tolerance": 0,
-          "explanation": "353,000 × 21% = **74,130**."
+          "explanation": "358,800 × 21% = **75,348**."
         }
       ]
     },

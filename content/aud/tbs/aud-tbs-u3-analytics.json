@@ -13,7 +13,7 @@
   "exhibits": [
     {
       "title": "Selected data",
-      "content": "| | Year 2 | Year 1 |\n|---|---:|---:|\n| Net sales (all on credit) | 9,125,000 | 8,030,000 |\n| Cost of sales | 5,840,000 | 5,621,000 |\n| Accounts receivable, year-end | 1,500,000 | 880,000 |\n| Inventory, year-end | 1,460,000 | 1,124,000 |\n| Allowance for credit losses | 30,000 | 44,000 |\n\nIndustry gross margins were flat at about 30% in both years."
+      "content": "| | Year 2 | Year 1 |\n|---|---:|---:|\n| Net sales (all on credit) | 9,125,000 | 8,030,000 |\n| Cost of sales | 5,840,000 | 5,621,000 |\n| Accounts receivable, year-end | 1,500,000 | 880,000 |\n| Inventory, year-end | 1,460,000 | 1,124,000 |\n| Allowance for credit losses | 30,000 | 44,000 |\n\nIndustry gross margins were flat at about 30% in both years.\n\nInterim work on the cost side is complete: the purchases cutoff, inventory costing, and the roll-forward from the physical count to cost of sales were all tested without exception."
     }
   ],
   "parts": [
@@ -61,7 +61,7 @@
           "id": "k1",
           "label": "Gross margin rose to 36% while the industry stayed at 30%",
           "answer": "Revenue — occurrence",
-          "explanation": "An inflated margin suggests fictitious or early revenue (or, alternatively, understated cost of sales)."
+          "explanation": "An inflated margin suggests fictitious or early revenue. Understated cost of sales (completeness) would also raise the margin, but the clean purchases-cutoff, costing, and count-to-cost-of-sales testing rules that out, and receivables growing much faster than sales (DSO 40 → 60 days) points to revenue."
         },
         {
           "id": "k2",
