@@ -32,7 +32,7 @@ keyTakeaways:
   - "Confirmations: the auditor controls the requests and responses. Positive requests ask for a reply in every case; negative requests ask for a reply only if the recipient disagrees — used only when RMM is low, there are many small, homogeneous balances, few exceptions are expected, and recipients are expected to read them."
   - "Positive nonresponse → perform alternative procedures (e.g., examine subsequent cash receipts, or shipping documents and invoices)."
   - "If management refuses to allow a confirmation: inquire about the reasons, evaluate them, perform alternative procedures; if the refusal is unreasonable, communicate with those charged with governance and consider the effect on the opinion."
-  - "Documentation (AU-C 230): enough for an experienced auditor with no connection to the audit to understand it. Assemble the final file within 60 days after the report release date; retain it at least 5 years. PCAOB: 45 days and 7 years."
+  - "Documentation (AU-C 230): enough for an experienced auditor with no connection to the audit to understand it. Assemble the final file within 60 days after the report release date; retain it at least 5 years. PCAOB: 14 days (formerly 45; AS 1215 as amended by AS 1000) and 7 years."
 citations:
   - source: AU-C 500 (Audit evidence), as amended by SAS No. 142
   - source: AU-C 315 (Assertions)
@@ -89,7 +89,7 @@ insight: A confirmation proves existence. Collectibility (valuation) is tested s
 | | AICPA (nonissuers) | PCAOB (issuers) |
 |---|---|---|
 | Report date | Date sufficient appropriate evidence obtained | Same |
-| Assembly of the final file | Within **60 days** after the report release date | Within **45 days** |
+| Assembly of the final file | Within **60 days** after the report release date | Within **14 days** (AS 1000 amendment; formerly 45) |
 | Retention | At least **5 years** from the report release date | **7 years** |
 
 After the documentation completion date, nothing may be deleted. Additions must note who made them, when, and why.

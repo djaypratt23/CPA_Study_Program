@@ -27,7 +27,7 @@ preQuestions: [far-spf-pre1]
 keyTakeaways:
   - "Special purpose frameworks: cash basis, modified cash basis, income tax basis, regulatory basis, contractual basis, and other bases with substantial support (e.g., the AICPA FRF for SMEs)."
   - "Statements must use titles that signal the basis — e.g., statement of revenues collected and expenses paid; statement of revenues and expenses — income tax basis. Avoid GAAP titles like 'balance sheet' or 'income statement' without a qualifier."
-  - "Cash to accrual revenue: cash collected + ending receivables − beginning receivables (− beginning unearned revenue + ending unearned revenue when unearned revenue exists, reversed)."
+  - "Cash to accrual revenue: cash collected + ending receivables − beginning receivables + beginning unearned revenue − ending unearned revenue."
   - "Cash to accrual expense: cash paid + ending accrued liabilities − beginning accrued liabilities − ending prepaids + beginning prepaids."
   - Modified cash basis adds accrual-like treatment with substantial support, such as capitalizing and depreciating fixed assets and recording debt.
   - Disclosures describe the basis, how it differs from GAAP (effects need not be quantified), and contain the same informative disclosures as GAAP for similar items.

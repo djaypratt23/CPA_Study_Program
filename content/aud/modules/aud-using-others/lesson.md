@@ -106,3 +106,5 @@ aud-uo-chk2
 ## Group audits (component auditors)
 
 In a group audit, the group engagement partner decides whether to **assume responsibility** for a component auditor's work (no reference in the report) or to **make reference** to the component auditor's report — indicating the division of responsibility. Either way, the group auditor evaluates the component auditor's independence, competence, and professional reputation.
+
+**SAS 149 terminology (AU-C 600 as revised, effective for audits of periods ending on or after December 15, 2026).** The standard speaks of the **group auditor** (the group engagement partner and the group engagement team) and a **component auditor**, which can be another firm or another office or network firm doing work for the group audit. The old "significant component" category is gone: the group auditor identifies components and plans the work on them based on the assessed risks of material misstatement to the group statements, and sets **component performance materiality**. The U.S. option to **make reference** to a component auditor's report remains, subject to conditions.
