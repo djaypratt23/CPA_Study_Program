@@ -7,11 +7,11 @@
   "title": "Government funds & a city retirement plan — City of Millbrook",
   "minutes": 18,
   "skill": "application",
-  "instructions": "The City of Millbrook is assembling its annual comprehensive financial report. Classify its activities and fund balances, then compute the change in net assets for the defined contribution plan it sponsors for employees (the plan issues separate GAAP financial statements under FASB ASC 962).",
+  "instructions": "The City of Millbrook is assembling its annual comprehensive financial report. Classify its activities and fund balances, then compute the change in fiduciary net position for the defined contribution plan it sponsors for employees. Because the sponsor is a government, the plan follows GASB standards (not FASB ASC 962): the city reports it as a pension (and other employee benefit) trust fund, with a statement of changes in fiduciary net position showing additions and deductions.",
   "exhibits": [
     { "title": "City activities", "content": "- **A.** Municipal golf course financed by greens fees charged to the public.\n- **B.** Central garage that repairs vehicles for police, fire, and parks and bills each department at cost.\n- **C.** Gasoline tax revenue legally restricted by state law to road maintenance.\n- **D.** Accumulating resources to pay principal and interest on general obligation bonds.\n- **E.** Taxes collected on behalf of the county school district and remitted monthly." },
     { "title": "General fund balance items", "content": "- Supplies inventory **$25,000**.\n- **$400,000** set aside by city council ordinance for a future fire station.\n- **$150,000** of a federal grant that may be used only for public health.\n- **$90,000** the finance director (delegated authority) intends to use for software upgrades." },
-    { "title": "Employee 401(k)-type plan data", "content": "| Item | Amount |\n|---|---:|\n| Net assets, beginning | 6,400,000 |\n| Participant contributions | 780,000 |\n| City contributions (incl. $30,000 receivable at year-end) | 390,000 |\n| Dividends and interest | 150,000 |\n| Net appreciation in fair value | 520,000 |\n| Benefits paid | 610,000 |\n| Administrative expenses | 25,000 |" }
+    { "title": "Employee 401(k)-type plan data", "content": "| Item | Amount |\n|---|---:|\n| Fiduciary net position, beginning | 6,400,000 |\n| Participant contributions | 780,000 |\n| City contributions (incl. $30,000 receivable at year-end) | 390,000 |\n| Dividends and interest | 150,000 |\n| Net appreciation in fair value | 520,000 |\n| Benefits paid | 610,000 |\n| Administrative expenses | 25,000 |" }
   ],
   "parts": [
     {
@@ -42,11 +42,11 @@
     {
       "kind": "numeric",
       "id": "plan",
-      "prompt": "Compute for the employee plan's Year 2 statements.",
+      "prompt": "Compute for the plan's Year 2 statement of changes in fiduciary net position.",
       "rows": [
         { "id": "add", "label": "Total additions", "answer": 1840000, "tolerance": 0, "explanation": "780,000 + 390,000 + 150,000 + 520,000 = **1,840,000** (the $30,000 receivable is already included, on the accrual basis)." },
         { "id": "ded", "label": "Total deductions", "answer": 635000, "tolerance": 0, "explanation": "610,000 + 25,000 = **635,000**." },
-        { "id": "end", "label": "Net assets available for benefits, end of year", "answer": 7605000, "tolerance": 0, "explanation": "6,400,000 + 1,840,000 − 635,000 = **7,605,000**." }
+        { "id": "end", "label": "Fiduciary net position, end of year", "answer": 7605000, "tolerance": 0, "explanation": "6,400,000 + 1,840,000 − 635,000 = **7,605,000**." }
       ]
     }
   ]

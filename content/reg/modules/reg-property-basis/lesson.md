@@ -103,19 +103,19 @@ Basis increase = gift tax paid × (net appreciation ÷ taxable amount of the gif
 ```faded
 title: Your turn — gift with gift tax paid
 scenario: |
-  Donor's basis is $40,000; FMV at the gift is $100,000. The taxable gift after the annual exclusion is $80,000,
-  and the donor paid $12,000 of gift tax on it.
+  In 2025, the donor's basis is $39,000; FMV at the gift is $99,000. The taxable gift after the $19,000 annual
+  exclusion is $80,000, and the donor paid $12,000 of gift tax on it.
 steps:
   - label: Net appreciation
     answer: 60000
-    solution: 100,000 − 40,000 = 60,000
+    solution: 99,000 − 39,000 = 60,000
   - label: Gift tax added to basis
     answer: 9000
     hint: 12,000 × 60,000 ÷ 80,000
     solution: 12,000 × 0.75 = 9,000
   - label: Donee's basis
-    answer: 49000
-    solution: 40,000 + 9,000 = 49,000 (never more than FMV)
+    answer: 48000
+    solution: 39,000 + 9,000 = 48,000 (never more than FMV)
 ```
 
 ## Loss disallowance rules

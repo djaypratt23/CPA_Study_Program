@@ -29,7 +29,7 @@ preQuestions: [far-cont-pre1]
 keyTakeaways:
   - "Loss contingency: accrue if probable AND reasonably estimable. Probable but not estimable, or reasonably possible → disclose. Remote → generally nothing (guarantees are still disclosed)."
   - "Range of loss: accrue the best estimate in the range; if no amount is better, accrue the minimum and disclose the additional exposure."
-  - Gain contingencies are not recognized until realized or realizable; disclose without misleading implications.
+  - Gain contingencies are not recognized until realized or realizable; adequate disclosure is required (ASC 450-30-50-1), without misleading implications.
   - Assurance-type warranties are accrued as an expense and liability in the period of sale based on estimated costs.
   - Guarantees generally require recognizing a liability at inception for the fair value of the obligation to stand ready, even if payment is not probable.
   - Unasserted claims are disclosed only if assertion is probable and an unfavorable outcome is at least reasonably possible.
@@ -107,7 +107,7 @@ steps:
 
 ## Gain contingencies
 
-Don't recognize until **realized or realizable** — e.g., a lawsuit the company expects to win, a pending tax refund claim. Disclosure is allowed but must avoid misleading implications about likelihood.
+Don't recognize until **realized or realizable** — e.g., a lawsuit the company expects to win, a pending tax refund claim. Adequate disclosure **shall** be made (ASC 450-30-50-1), taking care to avoid misleading implications about the likelihood of realization.
 
 ## Commitments
 

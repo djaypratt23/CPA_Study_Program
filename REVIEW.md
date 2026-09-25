@@ -106,3 +106,35 @@ Every numeric answer key was recomputed independently, and the test suite proves
 
 - The FAR, AUD, REG, and TCP simulated exams (`content/{far,aud,reg,tcp}/exam-questions/`, `content/{far,aud,reg,tcp}/tbs/*-tbs-x*.json`).
 - Judgment-heavy classification items: NFP contributions, subsequent-event type, and contingency disclosure (gain contingencies are keyed "disclose only").
+
+## Changed in remediation (confirm): AUD rules and medium fixes
+
+Items changed for `REMEDIATION_TASKS.md` P0-9 and P1-8. Changed keys are pinned by `tests/remediationContent.test.ts`.
+
+| Item | Change | Authority |
+|---|---|---|
+| `aud-ev-06`, `aud-ev-chk2`, `aud-x3-04`, `aud-tbs-u6-confirmations` m2, `aud-evidence-assertions` lesson and flashcard, `aud-report-guide`, `aud-mnemonics` | PCAOB documentation-completion period 45 → **14 days** (keys unchanged; distractor and rationale text updated). | AS 1215 as amended by AS 1000 (PCAOB Rel. 2024-004) |
+| `aud-ss-07`, `aud-x4-12`, `aud-ssars` lesson | A known departure in a review now leads to a qualified or adverse **conclusion** (SSARS 25), not "disclose the departure". Keys stay b, with rewritten text. | AR-C 90 as amended by SSARS 25 |
+| `aud-professional-standards` lesson | Citation AS 1001/1015 → AS 1000. | AS 1000 |
+| `far-lso-01` | Choice b rationale: $32,240 is finance-lease expense (26,000 + 6,240). | ASC 842-20-25 |
+| `far-cont-02`, `far-tbs-u12-contingencies` t3, `far-contingencies` lesson | Gain-contingency disclosure "shall" be made (not "is allowed"). | ASC 450-30-50-1 |
+| `far-tbs-u1-cash-flows` c4 | Van-for-note row relabelled as a hypothetical so it no longer contradicts the exhibit. | — |
+| `far-dsec-10` | Price corrected to the annual-payment PV $105,154; key $1,581 → **$1,588**; distractors recomputed. | Arithmetic |
+| `far-rev2-10` | Stem no longer says the license sells for $50,000 *and* the bundle for $56,000; $50,000 is now the list price. | ASC 606-10-32-34(c) |
+| `far-tbs-u4-government-plans` | The city's plan follows GASB (fiduciary net position), not FASB ASC 962. Keys unchanged. | GASB 84 |
+| `far-special-purpose` lesson | Cash-to-accrual revenue formula: + beginning unearned − ending unearned. | — |
+| `far-tbs-x2-bonds` | Instructions say to use the PV factors provided. | — |
+| `reg-c230-07` | Cites §10.34(d), not §10.22. | 31 CFR 10.34(d) |
+| `reg-pb-03`, `reg-property-basis` lesson | Restated with the $19,000 2025 exclusion (basis $39,000, FMV $99,000); key $49,000 → **$48,000**. | IRC §1015(d)(6); Rev. Proc. 2024-40 |
+| `reg-tbs-x4-individual` gi | Label "Total income (Form 1040, line 9)". | §61, §62 |
+| `reg-x5-02` | Stem says there are no NOL or capital loss carryovers; rationale explains the carryforward rule. | IRC §170(b)(2)(D) |
+| `reg-tbs-x5-research` p, s | 1065 and 1120-S due **March 16, 2026** (March 15 is a Sunday). | IRC §7503 |
+| `reg-tbs-u7-partnership` se | Label says "before her §179 share"; explanation notes the Schedule SE reduction to 109,200. Key unchanged. | Form 1065 Sch. K line 14a |
+| `tcp-cr2-01` d | Distractor now $12,500 (Q2 mid-quarter rate) with a correct rationale. | Rev. Proc. 87-57 tables |
+| `tcp-tbs-x1-gift-retirement` bx | Label says "using the 2025 amount ($13,990,000)". | — |
+| `tcp-tbs-u3-m1` | Book tax expense 195,720 (current 191,520 + deferred 4,200) and book net income 734,280, so the reconciliation ties; `re` → **1,734,280**. | ASC 740 |
+| `tcp-sc2-01` | Form 2553 deadline key "March 15, 2025" → **"March 17, 2025"** (Saturday). | IRC §7503 |
+| `aud-sa-04` | Audited value $3,500; projected misstatement → **$6,000** (no longer equal to a stem value). | AU-C 530 |
+| `aud-tbs-x1-independence` s2 | Rationale addresses the facts (permitted tax service; no interest). | ET 1.295 |
+| `aud-x1-04` c | "holds no more than 5%" matches the >5% rule. | ET 1.200 |
+| `aud-using-others` lesson | SAS 149 terminology note added. | SAS 149 |
