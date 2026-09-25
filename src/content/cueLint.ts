@@ -19,8 +19,8 @@ export const CUE_LIMITS = {
   minPoolForLetters: 40,
 }
 
-/** Start as warnings; switch to 'error' once the bank passes. */
-export const CUE_LINT_LEVEL: 'warning' | 'error' = 'warning'
+/** Errors: every section and pool passed after the P0-6 part 3 rewrites, so a regression now fails the build. */
+export const CUE_LINT_LEVEL: 'warning' | 'error' = 'error'
 
 export interface CueStats {
   section: string

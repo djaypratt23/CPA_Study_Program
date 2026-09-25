@@ -39,9 +39,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "Cash set aside in a sinking fund to retire bonds in five years",
-        "explanation": "Cash restricted for a noncurrent purpose is noncurrent.",
-        "trap": "wrong-classification"
+        "text": "Insurance premiums prepaid for the next six months",
+        "explanation": "Correct. Prepaids consumed within a year are current assets."
       },
       {
         "id": "b",
@@ -51,8 +50,9 @@
       },
       {
         "id": "c",
-        "text": "Insurance premiums prepaid for the next six months",
-        "explanation": "Correct. Prepaids consumed within a year are current assets."
+        "text": "Cash set aside in a sinking fund to retire bonds in five years",
+        "explanation": "Cash restricted for a noncurrent purpose is noncurrent.",
+        "trap": "wrong-classification"
       },
       {
         "id": "d",
@@ -61,7 +61,7 @@
         "trap": "wrong-classification"
       }
     ],
-    "answer": "c",
+    "answer": "a",
     "explanation": "Current assets are realized, sold, or **consumed** within a year or the operating cycle. Prepaids are consumed in operations.",
     "skill": "application"
   },
@@ -178,8 +178,9 @@
       },
       {
         "id": "b",
-        "text": "$565,000",
-        "explanation": "Correct. 500,000 − 15,000 + 120,000 − 40,000 = 565,000."
+        "text": "$575,000",
+        "explanation": "This deducts only the $30,000 of dividends paid; retained earnings drops when dividends are declared.",
+        "trap": "wrong-period"
       },
       {
         "id": "c",
@@ -189,12 +190,11 @@
       },
       {
         "id": "d",
-        "text": "$575,000",
-        "explanation": "This deducts only the $30,000 of dividends paid; retained earnings drops when dividends are declared.",
-        "trap": "wrong-period"
+        "text": "$565,000",
+        "explanation": "Correct. 500,000 − 15,000 + 120,000 − 40,000 = 565,000."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Prior-period adjustment: understated expenses overstated prior income by 20,000 × (1 − 0.25) = **15,000** after tax, reducing opening RE. Ending RE = 500,000 − 15,000 + 120,000 − 40,000 declared = **565,000**.",
     "skill": "application",
     "calc": true
@@ -218,17 +218,17 @@
       },
       {
         "id": "c",
-        "text": "Receivable of $30,000 and payable of $50,000",
-        "explanation": "Correct. Without a right of setoff, present gross."
-      },
-      {
-        "id": "d",
         "text": "Payable of $50,000 only; the rebate is recognized when collected",
         "explanation": "A valid receivable is recognized when earned, not when collected.",
         "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Receivable of $30,000 and payable of $50,000",
+        "explanation": "Correct. Without a right of setoff, present gross."
       }
     ],
-    "answer": "c",
+    "answer": "d",
     "explanation": "ASC 210-20 permits offsetting only when a right of setoff exists (determinable amounts, mutual debts, intent to set off, legally enforceable). Otherwise present gross.",
     "skill": "application"
   },
@@ -257,7 +257,7 @@
       },
       {
         "id": "d",
-        "text": "Unrealized holding loss on available-for-sale debt securities (not credit-related)",
+        "text": "Unrealized loss on AFS debt securities (not credit)",
         "explanation": "Correct. Non-credit unrealized AFS changes go to OCI, accumulating in AOCI."
       }
     ],
@@ -278,8 +278,9 @@
       },
       {
         "id": "b",
-        "text": "A reduction of total stockholders' equity",
-        "explanation": "Correct. Treasury stock is a contra-equity account."
+        "text": "A reduction of retained earnings only",
+        "explanation": "Under the cost method it is shown as a separate deduction from total equity, not netted only against retained earnings.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
@@ -289,12 +290,11 @@
       },
       {
         "id": "d",
-        "text": "A reduction of retained earnings only",
-        "explanation": "Under the cost method it is shown as a separate deduction from total equity, not netted only against retained earnings.",
-        "trap": "partial-computation"
+        "text": "A reduction of total stockholders' equity",
+        "explanation": "Correct. Treasury stock is a contra-equity account."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Treasury stock (cost method) is shown as a deduction from total stockholders' equity. It is not an asset regardless of intent to reissue.",
     "skill": "remembering"
   },
@@ -351,17 +351,17 @@
       },
       {
         "id": "c",
-        "text": "Equity $500,000; working capital $180,000",
-        "explanation": "Correct. 900,000 − 400,000 = 500,000; 330,000 − 150,000 = 180,000."
-      },
-      {
-        "id": "d",
         "text": "Equity $650,000; working capital $180,000",
         "explanation": "This subtracts only long-term liabilities.",
         "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Equity $500,000; working capital $180,000",
+        "explanation": "Correct. 900,000 − 400,000 = 500,000; 330,000 − 150,000 = 180,000."
       }
     ],
-    "answer": "c",
+    "answer": "d",
     "explanation": "Equity = assets − all liabilities = 900,000 − (150,000 + 250,000) = **500,000**. Working capital = 330,000 − 150,000 = **180,000**.",
     "skill": "application",
     "calc": true
@@ -391,7 +391,7 @@
       },
       {
         "id": "d",
-        "text": "It reconciles the beginning and ending balances of each component of equity, either as a statement or in the notes",
+        "text": "It reconciles each equity component, in a statement or notes",
         "explanation": "Correct. ASC 505-10 requires disclosure of changes in each equity component."
       }
     ],
@@ -412,8 +412,9 @@
       },
       {
         "id": "b",
-        "text": "The CD is a current asset and the customer deposit is a current liability; the note receivable is noncurrent",
-        "explanation": "Correct. One year governs because it is longer than the 9-month cycle."
+        "text": "All three are noncurrent because the cycle is less than one year",
+        "explanation": "A shorter cycle means one year is the test, not that nothing is current.",
+        "trap": "reversed"
       },
       {
         "id": "c",
@@ -423,12 +424,11 @@
       },
       {
         "id": "d",
-        "text": "All three are noncurrent because the cycle is less than one year",
-        "explanation": "A shorter cycle means one year is the test, not that nothing is current.",
-        "trap": "reversed"
+        "text": "The CD is a current asset and the customer deposit is a current liability; the note receivable is noncurrent",
+        "explanation": "Correct. One year governs because it is longer than the 9-month cycle."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Use the longer of one year or the operating cycle — here, one year. CD (10 months): current asset. Customer deposit (3 months): current liability. Note (14 months): noncurrent.",
     "skill": "application"
   },

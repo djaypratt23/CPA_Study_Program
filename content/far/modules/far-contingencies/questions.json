@@ -6,18 +6,18 @@
     "choices": [
       {
         "id": "a",
-        "text": "Accrue $1,000,000",
+        "text": "Accrue the $1,000,000 loss",
         "explanation": "Accrual requires probable.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Disclose the lawsuit and possible loss; no accrual",
+        "text": "Disclose it; no accrual",
         "explanation": "Correct. Reasonably possible → disclose the nature and an estimate of the possible loss (or range), no accrual."
       },
       {
         "id": "c",
-        "text": "Nothing",
+        "text": "Nothing, until it is probable",
         "explanation": "Reasonably possible losses must be disclosed.",
         "trap": "wrong-rule"
       },
@@ -39,7 +39,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Accrue a nominal amount",
+        "text": "Accrue a nominal amount as a placeholder",
         "explanation": "Accrual requires a reasonable estimate.",
         "trap": "wrong-rule"
       },
@@ -51,12 +51,12 @@
       },
       {
         "id": "c",
-        "text": "Disclose the contingency and that an estimate can't be made",
+        "text": "Disclose it, and that no estimate can be made",
         "explanation": "Correct. Probable but not reasonably estimable → disclose; no accrual."
       },
       {
         "id": "d",
-        "text": "No disclosure until estimable",
+        "text": "No disclosure until the loss is estimable",
         "explanation": "Disclosure is required.",
         "trap": "wrong-rule"
       }
@@ -77,19 +77,19 @@
       },
       {
         "id": "b",
-        "text": "Disclosure only",
+        "text": "Disclosure only in the notes",
         "explanation": "A loss on a firm commitment is recognized when the price declines.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Inventory of $84,000,000",
+        "text": "Inventory of $84,000,000 at year-end",
         "explanation": "No inventory has been received.",
         "trap": "wrong-period"
       },
       {
         "id": "d",
-        "text": "Gain of $6,000,000",
+        "text": "Gain of $6,000,000 in current income",
         "explanation": "The company is committed to paying above market — a loss.",
         "trap": "wrong-sign"
       }
@@ -118,7 +118,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Probable and reasonably estimable (as a range) requires accrual.",
         "trap": "wrong-rule"
       },
@@ -146,8 +146,9 @@
       },
       {
         "id": "b",
-        "text": "Nothing in the accounts; adequate disclosure, avoiding misleading implications",
-        "explanation": "Correct. Gain contingencies are not recognized until realized or realizable, and adequate disclosure shall be made without misleading implications about likelihood (ASC 450-30-25-1, 450-30-50-1)."
+        "text": "A deferred gain to be recognized next year",
+        "explanation": "No recognition.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -157,12 +158,11 @@
       },
       {
         "id": "d",
-        "text": "A deferred gain",
-        "explanation": "No recognition.",
-        "trap": "wrong-rule"
+        "text": "No entry; adequate, non-misleading disclosure",
+        "explanation": "Correct. Gain contingencies are not recognized until realized or realizable, and adequate disclosure shall be made without misleading implications about likelihood (ASC 450-30-25-1, 450-30-50-1)."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Gain contingencies are not recognized until realized or realizable (ASC 450-30-25-1). ASC 450-30-50-1 requires adequate disclosure, taking care to avoid misleading implications about the likelihood of realization.",
     "skill": "application"
   },
@@ -213,8 +213,9 @@
       },
       {
         "id": "b",
-        "text": "A guarantee of another entity's debt",
-        "explanation": "Correct. Guarantees (e.g., of the indebtedness of others) are disclosed even when the likelihood of loss is remote."
+        "text": "A pending gain contingency",
+        "explanation": "Gains follow different guidance.",
+        "trap": "irrelevant-fact"
       },
       {
         "id": "c",
@@ -224,12 +225,11 @@
       },
       {
         "id": "d",
-        "text": "A pending gain contingency",
-        "explanation": "Gains follow different guidance.",
-        "trap": "irrelevant-fact"
+        "text": "A guarantee of another entity's debt",
+        "explanation": "Correct. Guarantees (e.g., of the indebtedness of others) are disclosed even when the likelihood of loss is remote."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Guarantees (e.g., of the indebtedness of others) are disclosed even when the likelihood of loss is remote.",
     "skill": "remembering"
   },
@@ -347,23 +347,23 @@
       },
       {
         "id": "b",
-        "text": "The condition giving rise to the loss must exist at the balance sheet date for accrual",
-        "explanation": "Correct. Accrual requires information indicating that an asset was impaired or a liability incurred at the balance sheet date."
+        "text": "Probable means a likelihood of more than 50%",
+        "explanation": "'Probable' means likely to occur — a higher threshold than more-likely-than-not.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Remote losses must be disclosed",
+        "text": "Remote losses must always be disclosed in the notes",
         "explanation": "Generally not, except certain guarantees.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "Probable means more than 50%",
-        "explanation": "'Probable' means likely to occur — a higher threshold than more-likely-than-not.",
-        "trap": "wrong-rule"
+        "text": "The underlying condition must exist at the balance sheet date",
+        "explanation": "Correct. Accrual requires information indicating that an asset was impaired or a liability incurred at the balance sheet date."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Accrual requires information indicating that an asset was impaired or a liability incurred at the balance sheet date. Reserves for general contingencies are not permitted.",
     "skill": "remembering"
   },
@@ -380,8 +380,9 @@
       },
       {
         "id": "b",
-        "text": "$36,000",
-        "explanation": "Correct. 4% × 900,000."
+        "text": "$46,000",
+        "explanation": "Repairs reduce the liability; they aren't added to expense.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -391,12 +392,11 @@
       },
       {
         "id": "d",
-        "text": "$46,000",
-        "explanation": "Repairs reduce the liability; they aren't added to expense.",
-        "trap": "wrong-rule"
+        "text": "$36,000",
+        "explanation": "Correct. 4% × 900,000."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Expense = 900,000 × 4% = **36,000** in the year of sale; liability at year-end = 36,000 − 10,000 = 26,000.",
     "skill": "application",
     "calc": true

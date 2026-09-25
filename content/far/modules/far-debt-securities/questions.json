@@ -78,18 +78,18 @@
       },
       {
         "id": "b",
-        "text": "$60,000 in OCI",
+        "text": "$60,000 loss in OCI",
         "explanation": "The credit portion goes through an allowance to net income.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "$25,000 credit loss in net income (allowance); $35,000 in OCI",
+        "text": "$25,000 credit loss in NI; $35,000 in OCI",
         "explanation": "Correct. Credit loss (25,000) → allowance and net income, limited to 60,000 (amortized cost − fair value)."
       },
       {
         "id": "d",
-        "text": "$25,000 in OCI; $35,000 in net income",
+        "text": "$25,000 in OCI; $35,000 in NI",
         "explanation": "Reversed — the credit portion goes to net income and the rest to OCI.",
         "trap": "reversed"
       }
@@ -281,8 +281,9 @@
       },
       {
         "id": "b",
-        "text": "Held-to-maturity",
-        "explanation": "Correct. HTM is reserved for debt securities the entity has the positive intent and ability to hold to maturity."
+        "text": "Fair value option",
+        "explanation": "The FVO is an election, not an intent test.",
+        "trap": "irrelevant-fact"
       },
       {
         "id": "c",
@@ -292,12 +293,11 @@
       },
       {
         "id": "d",
-        "text": "Fair value option",
-        "explanation": "The FVO is an election, not an intent test.",
-        "trap": "irrelevant-fact"
+        "text": "Held-to-maturity",
+        "explanation": "Correct. HTM is reserved for debt securities the entity has the positive intent and ability to hold to maturity."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "HTM is reserved for debt securities the entity has the positive intent and ability to hold to maturity.",
     "skill": "remembering"
   },
