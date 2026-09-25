@@ -9,6 +9,31 @@ prints the current count. Please confirm or correct each one, then remove the fl
 |---|---|---|
 | `far-ppe-10` (government donation of a building to a business entity) | `content/far/modules/far-ppe-acquisition/questions.json` | U.S. GAAP has little explicit guidance on how business entities account for government grants (ASU 2021-10 adds disclosures only). The keyed answer follows common review-course treatment (record the building at fair value, with contribution revenue or a gain); confirm it against current exam materials. |
 
+## Changed in remediation (confirm)
+
+Answer keys and content changed while working through `REMEDIATION_TASKS.md`. Each is pinned by
+`tests/remediationKeys.test.ts`; please confirm the new treatment.
+
+| Item | Change | Authority |
+|---|---|---|
+| `reg-x2-08` (REG mock) | Key **d → a**. The possessory party's interest couldn't attach, and so couldn't be perfected, until value was given on March 5, after the March 1 filing. | UCC 9-203(b), 9-308(a), 9-322(a)(1) |
+| `reg-tbs-u6-corporate-ti` | Charitable base is after the NOL carryforward: `ch` 44,200 (5,800 carries forward), `ti` 358,800, `tax` 75,348; `drd` and `nol` explanations updated. | IRC §170(b)(2)(D) |
+| `tcp-tbs-x2-corporate` (TCP mock) | Same rule: `ch` 45,000 (25,000 carries forward), `m1` 605,000, `ti` 372,500, `tax` 78,225; `nol` explanation updated. | IRC §170(b)(2)(D) |
+| `tcp-tbs-u2-retirement-education` `d3` | Added option "75" and keyed it (Leo, 50 in 2025, was born after 1959). | IRC §401(a)(9)(C)(v); SECURE 2.0 §107 |
+| `far-tbs-u8-bonds` | Keys recomputed from the exhibit's factors: `p` 1,837,774, `c1` 1,851,285, `i2` 74,051; Year 3 carrying amount 1,895,147, `ca` 947,574, `gl` −22,426. Instructions now say to use the factors provided. | Arithmetic |
+| `far-nd-08` | Key **c → b**: a 45%-of-revenue customer concentration must be disclosed because the near-term loss of any customer is always deemed at least reasonably possible. Lesson and flashcard `far-nd-fc8` added. | ASC 275-10-50-18, -50-20 |
+| `aud-wr-10` | Restored the stripped dollar amounts in the stem ($40,000 uncorrected; $100,000 materiality). Key unchanged. | — |
+| `far-tbs-u7-equity` `m5` | Exhibit now states Crestview elected the measurement alternative for Glenco; key unchanged. | ASC 321-10-35-2 |
+| `far-lso-07` | Stem adds rent-free months and escalating payments, and says no impairment was recognized; choice c's explanation no longer calls impairment a possible cause. Key unchanged. | ASC 842-20 |
+| `tcp-tbs-u3-estimates-consolidated` | The estimated-tax part is now self-contained (use the $600,000 expected tax; ignore the consolidated computation). | — |
+| `tcp-tbs-x4-property` `dep` | Label says to use the mid-month formula, not the IRS tables; tolerance 0 → 1 so the unrounded 79,166.67 is accepted. | — |
+| `tcp-tbs-u6-multistate-liquidation` `eq`, `dw` | Labels say "(without throwback)". | — |
+| `aud-tbs-u3-analytics` `k1` | Exhibit adds clean cost-side testing (cutoff, costing, count roll-forward), which rules out cost of sales completeness; key unchanged. | — |
+| `aud-code-of-conduct` lesson, `aud-coc-07`, `aud-x1-05` | Referral fees are permitted with disclosure; commissions and contingent fees are prohibited only for audit, review, compilation (without an independence disclosure) and PFI-examination clients. | ET 1.510, 1.520 |
+
+Still open: `far-ppe-10` (government grant to a business) awaits a decision on the treatment (D3); it keeps its
+`needsReview` flag.
+
 ## REG — 2025 amounts from the One Big Beautiful Bill Act
 
 REG reflects tax year 2025 law, including provisions of the One Big Beautiful Bill Act (P.L. 119-21) effective for

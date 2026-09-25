@@ -89,6 +89,8 @@ Four disclosure areas:
 3. **Certain significant estimates** — disclose when it is **at least reasonably possible** that an estimate will **change in the near term** (within one year of the statement date) and the effect would be **material**.
 4. **Current vulnerability due to concentrations** — concentrations in customers, suppliers, lenders, products, markets, or geographic areas, disclosed when the concentration exists at the statement date, makes the entity vulnerable to a **near-term severe impact**, and that impact is at least reasonably possible.
 
+**Customers are always "reasonably possible" to lose.** ASC 275-10-50-20 says it is always considered at least reasonably possible that any customer, grantor, or contributor will be lost in the near term (and that operations outside the home country will be disrupted). So a major-customer concentration that makes the entity vulnerable to a severe impact is disclosed even if the customer is stable and the contract is long-term.
+
 Special rule: **all** concentrations of labor subject to collective bargaining agreements, and operations located outside the entity's home country, are candidates; for labor, disclose the percentage covered and whether agreements expire within one year when the vulnerability test is met.
 
 ```check
