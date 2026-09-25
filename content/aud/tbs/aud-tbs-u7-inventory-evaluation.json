@@ -1,0 +1,97 @@
+{
+  "id": "aud-tbs-u7-inventory-evaluation",
+  "section": "AUD",
+  "unitId": "aud-u7",
+  "moduleIds": [
+    "aud-inventory-ppe"
+  ],
+  "pool": "practice",
+  "title": "Evaluate inventory observation results — Norrland Hardware",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "You observed Norrland Hardware's year-end physical count (a private company). Tolerable misstatement for inventory is $75,000. Review the staff's summary of known misstatements from the observation, then evaluate the evidence. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Observation results",
+      "content": "- **Floor-to-sheet** test counts (30 items): two items on the floor, totaling **$4,800** at cost, were missing from the count sheets.\n- **Sheet-to-floor** test counts (30 items): the goods for tag 1187 (**$12,000** at cost) could not be located. The staff's note says the client \"thinks they are probably in another building.\"\n- In aisle 7, the staff saw water-damaged goods carried at their full cost of **$60,000**. The purchasing manager estimates they could be sold for **$10,000**.\n- **Keystone Warehousing** holds goods with a book value of **$1.4 million** (35% of inventory). Keystone is owned by the CEO's brother. Keystone confirmed the quantities in writing."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "sum",
+      "prompt": "Review the staff's summary of known misstatements.",
+      "preparedLabel": "Per staff",
+      "rows": [
+        {
+          "id": "comp",
+          "label": "Floor-to-sheet exceptions (items on the floor not on count sheets) — understatement",
+          "prepared": -4800,
+          "answer": -4800,
+          "explanation": "Two items totaling 4,800 were omitted from the count: an **understatement** of 4,800. **No error.**"
+        },
+        {
+          "id": "exist",
+          "label": "Sheet-to-floor exceptions (tagged goods not located) — overstatement",
+          "prepared": 0,
+          "answer": 12000,
+          "explanation": "Tag 1187 (12,000) could not be located, and the staff's note that \"the client says it's probably in another building\" is not evidence. Treat it as a **12,000** overstatement until the goods are inspected."
+        },
+        {
+          "id": "obs",
+          "label": "Damaged goods carried at full cost — overstatement",
+          "prepared": 0,
+          "answer": 50000,
+          "explanation": "Cost 60,000 − estimated NRV 10,000 = **50,000** overstatement (valuation)."
+        },
+        {
+          "id": "net",
+          "label": "Net known misstatement (overstatement positive)",
+          "prepared": -4800,
+          "answer": 57200,
+          "explanation": "12,000 + 50,000 − 4,800 = **57,200** overstatement."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "ev",
+      "prompt": "Evaluate the results.",
+      "rows": [
+        {
+          "id": "e1",
+          "label": "Goods held at Keystone Warehousing (35% of inventory; Keystone is owned by the CEO's brother)",
+          "options": [
+            "Confirmation alone is not enough — observe a count at the warehouse or perform other procedures",
+            "The confirmation is sufficient",
+            "Exclude the goods from inventory"
+          ],
+          "answer": "Confirmation alone is not enough — observe a count at the warehouse or perform other procedures",
+          "explanation": "When the auditor has doubts about the third party's independence, a confirmation is not reliable enough. Observe a count, or obtain evidence such as warehouse receipts or another auditor's report (AU-C 501.12)."
+        },
+        {
+          "id": "e2",
+          "label": "Test-count exception rates (3 exceptions in 60 tests, including a missing tag)",
+          "options": [
+            "Ask the client to recount the affected areas and extend the auditor's test counts before concluding",
+            "Accept the count — the exceptions are below tolerable misstatement",
+            "Disclaim an opinion"
+          ],
+          "answer": "Ask the client to recount the affected areas and extend the auditor's test counts before concluding",
+          "explanation": "Exceptions in both directions suggest the count may not be reliable; the auditor asks for a recount and extends testing before relying on it."
+        },
+        {
+          "id": "e3",
+          "label": "Overall conclusion at this stage",
+          "options": [
+            "Not yet able to conclude — more evidence is needed on existence and valuation",
+            "Inventory is fairly stated",
+            "Inventory is materially misstated"
+          ],
+          "answer": "Not yet able to conclude — more evidence is needed on existence and valuation",
+          "explanation": "Existence at the related-party warehouse is not yet supported and the count exceptions are unresolved."
+        }
+      ]
+    }
+  ]
+}

@@ -13,6 +13,8 @@ objectives:
   - text: Evaluate outliers and results of analytics, including the final overall review.
     skill: analysis
     task: Evaluate the results of analytical procedures
+  - text: Use data-analytic outputs to identify notable items and select responses, and evaluate explanations for differences found by analytical procedures.
+    skill: analysis
 bigIdea:
   what: >-
     Audit data analytics (ADAs) analyze entire populations with software — sorting, filtering, matching, and
@@ -91,3 +93,22 @@ Near the end of the audit, the auditor performs analytics to check that the stat
 ```check
 aud-da-chk2
 ```
+
+## Acting on analytics output
+
+An exception report is a starting point, not a conclusion. For each flag, decide which of three responses fits:
+
+| Situation | Response |
+|---|---|
+| Flags point to a fraud or override risk (post-close manual entries, unauthorized users, unusual revenue spikes) | Investigate **every** flagged item: inspect support, and inquire of someone other than the preparer |
+| The test was poorly designed (it flags system batch jobs or other expected activity) | Refine the parameters and rerun |
+| The flags are explained by activity already corroborated (tested recurring schedules) | Document the explanation; no further investigation |
+
+## Evaluating differences in analytical procedures
+
+1. Compare the recorded amount with the **expectation** and the **threshold** set in advance.
+2. If the difference exceeds the threshold, investigate the **whole** difference, not just the excess.
+3. Accept only the explanations you **corroborate** with other evidence; inquiry alone is not enough (AU-C 520).
+4. If the difference left after corroborated explanations is below the threshold, the procedure supports the balance. If it is above, perform other substantive procedures or consider a misstatement.
+
+**Final analytical procedures** near the end of the audit may reveal a previously unrecognized risk (for example, receivables growing much faster than revenue). The auditor then revises the risk assessment and performs more procedures.
