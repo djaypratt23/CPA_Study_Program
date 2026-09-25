@@ -17,7 +17,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Up to $3,000 is deductible.",
         "trap": "wrong-rule"
       },
@@ -40,24 +40,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "$3,000",
+        "text": "$3,000, with the rest carried forward",
         "explanation": "The $3,000 allowance is for individuals.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "$20,000",
+        "text": "$20,000 against ordinary income",
         "explanation": "Corporations can't deduct capital losses against ordinary income.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$0 — it carries back 3 years and forward 5 years",
+        "text": "$0; carried back 3 years, forward 5",
         "explanation": "Correct. Corporate capital losses offset only capital gains; excess is carried back 3 and forward 5 years as short-term losses."
       },
       {
         "id": "d",
-        "text": "$10,000",
+        "text": "$10,000, with the rest carried forward",
         "explanation": "There's no partial deduction.",
         "trap": "wrong-rule"
       }
@@ -91,7 +91,7 @@
       },
       {
         "id": "d",
-        "text": "$30,000 ordinary income",
+        "text": "$30,000 ordinary income (§1245)",
         "explanation": "Recapture is limited to the gain.",
         "trap": "overgeneralization"
       }
@@ -109,13 +109,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "Inventory held by a retailer",
+        "text": "Inventory held for sale by a retailer",
         "explanation": "Inventory is excluded.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Equipment used in a business",
+        "text": "Equipment used in the taxpayer's business",
         "explanation": "§1231 property, not a capital asset.",
         "trap": "wrong-classification"
       },
@@ -126,7 +126,7 @@
       },
       {
         "id": "d",
-        "text": "Accounts receivable from sales",
+        "text": "Accounts receivable from sales of inventory",
         "explanation": "Receivables from business sales are excluded.",
         "trap": "wrong-classification"
       }
@@ -149,19 +149,19 @@
       },
       {
         "id": "b",
-        "text": "$4,000 short-term loss",
+        "text": "$4,000 net short-term capital loss, $3,000 deductible",
         "explanation": "The net loss is long-term.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "$6,000 short-term gain taxed and $10,000 loss carried forward",
+        "text": "$6,000 short-term gain taxed; $10,000 loss carried forward",
         "explanation": "Gains and losses are netted.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "$4,000 net long-term loss; $3,000 deductible; $1,000 carried forward",
+        "text": "$4,000 net long-term loss; $3,000 deducted, $1,000 carried",
         "explanation": "Correct. Net: 6,000 − 10,000 = (4,000) long-term."
       }
     ],
@@ -229,7 +229,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Unrecaptured §1250 gain exists.",
         "trap": "wrong-rule"
       }
@@ -264,7 +264,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "§291 applies to corporations.",
         "trap": "wrong-rule"
       }
@@ -300,7 +300,7 @@
       },
       {
         "id": "d",
-        "text": "$15,000 ordinary income and $35,000 long-term capital gain",
+        "text": "$15,000 ordinary and $35,000 LTCG",
         "explanation": "Correct. 5-year lookback: net §1231 gain is ordinary to the extent of nonrecaptured §1231 losses of the prior 5 years."
       }
     ],
@@ -323,14 +323,14 @@
       },
       {
         "id": "b",
-        "text": "An ordinary loss",
-        "explanation": "Correct. Net §1231 losses are ordinary — fully deductible."
-      },
-      {
-        "id": "c",
         "text": "Nondeductible",
         "explanation": "It's deductible.",
         "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "An ordinary loss",
+        "explanation": "Correct. Net §1231 losses are ordinary — fully deductible."
       },
       {
         "id": "d",
@@ -339,7 +339,7 @@
         "trap": "wrong-classification"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Net §1231 losses are ordinary — fully deductible.",
     "skill": "remembering",
     "difficulty": 2
@@ -351,29 +351,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "$130,000",
+        "text": "$100,000; the rest is capital",
+        "explanation": "Correct. §1244 allows ordinary loss up to $50,000 ($100,000 MFJ); the excess is capital loss."
+      },
+      {
+        "id": "b",
+        "text": "$130,000, all ordinary",
         "explanation": "The ordinary loss is capped.",
         "trap": "overgeneralization"
       },
       {
-        "id": "b",
-        "text": "$100,000; the remaining $30,000 is a capital loss",
-        "explanation": "Correct. §1244 allows ordinary loss up to $50,000 ($100,000 MFJ); the excess is capital loss."
-      },
-      {
         "id": "c",
-        "text": "$50,000",
+        "text": "$50,000; the rest is capital",
         "explanation": "That's the cap for single filers.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "$3,000",
+        "text": "$3,000; the rest carries over",
         "explanation": "That's the net capital loss limit.",
         "trap": "wrong-classification"
       }
     ],
-    "answer": "b",
+    "answer": "a",
     "explanation": "§1244 allows ordinary loss up to $50,000 ($100,000 MFJ); the excess is capital loss.",
     "skill": "application",
     "difficulty": 2,
@@ -386,29 +386,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Long-term",
+        "text": "Long-term, because it was held one year",
         "explanation": "Must be held more than one year.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Short-term — the holding period must exceed one year",
-        "explanation": "Correct. Long-term requires holding more than one year; the day of acquisition is excluded, and the sale day is included — March 10 to March 10 is exactly one year."
-      },
-      {
-        "id": "c",
-        "text": "It depends on the gain amount",
+        "text": "It depends on the amount of the gain",
         "explanation": "Holding period is time-based.",
         "trap": "irrelevant-fact"
       },
       {
+        "id": "c",
+        "text": "Short-term; it must be held over one year",
+        "explanation": "Correct. Long-term requires holding more than one year; the day of acquisition is excluded, and the sale day is included — March 10 to March 10 is exactly one year."
+      },
+      {
         "id": "d",
-        "text": "Long-term if it's a gain",
+        "text": "Long-term only if it is sold at a gain",
         "explanation": "Gain or loss doesn't change the holding period.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Long-term requires holding more than one year; the day of acquisition is excluded, and the sale day is included — March 10 to March 10 is exactly one year.",
     "skill": "application",
     "difficulty": 2
@@ -420,29 +420,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "$65,000 ordinary",
+        "text": "$65,000 ordinary income (§1245)",
         "explanation": "Recapture is limited to depreciation.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "$50,000 ordinary (§1245) and $15,000 §1231",
-        "explanation": "Correct. Gain = 95,000 − 30,000 = 65,000."
+        "text": "$30,000 ordinary and $35,000 §1231",
+        "explanation": "Uses the wrong recapture amount.",
+        "trap": "distractor-number"
       },
       {
         "id": "c",
-        "text": "$65,000 §1231",
+        "text": "$65,000 §1231 gain",
         "explanation": "Recapture comes first.",
         "trap": "partial-computation"
       },
       {
         "id": "d",
-        "text": "$30,000 ordinary and $35,000 §1231",
-        "explanation": "Uses the wrong recapture amount.",
-        "trap": "distractor-number"
+        "text": "$50,000 ordinary and $15,000 §1231",
+        "explanation": "Correct. Gain = 95,000 − 30,000 = 65,000."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Gain = 95,000 − 30,000 = 65,000. §1245 ordinary = 50,000 (depreciation); remaining 15,000 (above original cost) is §1231.",
     "skill": "application",
     "difficulty": 2,

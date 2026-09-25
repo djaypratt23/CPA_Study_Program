@@ -92,7 +92,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "MAGI exceeds $200,000.",
         "trap": "wrong-rule"
       }
@@ -116,7 +116,7 @@
       },
       {
         "id": "b",
-        "text": "Charitable contributions",
+        "text": "Charitable contributions to public charities",
         "explanation": "Charity is allowed for AMT.",
         "trap": "wrong-rule"
       },
@@ -144,19 +144,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "$40,000 of ordinary income",
+        "text": "$40,000 of ordinary income for regular tax",
         "explanation": "ISOs don't create regular-tax income at exercise.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Nothing for any purpose",
+        "text": "Nothing for regular or AMT purposes",
         "explanation": "The spread is an AMT adjustment.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$40,000 capital gain",
+        "text": "$40,000 of capital gain in that year",
         "explanation": "No sale has occurred.",
         "trap": "wrong-period"
       },
@@ -184,7 +184,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Not fully phased out.",
         "trap": "overgeneralization"
       },
@@ -219,7 +219,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The kiddie tax applies.",
         "trap": "wrong-rule"
       },
@@ -300,7 +300,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Wages exceed the threshold.",
         "trap": "wrong-rule"
       }
@@ -329,7 +329,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Wages are below the wage base.",
         "trap": "wrong-rule"
       },
@@ -387,24 +387,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Because ISOs are permanently excluded",
+        "text": "Because ISO gains are permanently excluded from income",
         "explanation": "ISO gain is eventually taxed.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Because it's a timing (deferral) item — the credit prevents double taxation when regular tax later exceeds tentative minimum tax",
+        "text": "It's a timing item; the credit prevents double taxation",
         "explanation": "Correct. AMT from deferral items (ISOs, depreciation) generates a credit usable in later years; exclusion items (SALT) don't."
       },
       {
         "id": "c",
-        "text": "Because all AMT is refundable",
+        "text": "Because all AMT paid is refundable in later years",
         "explanation": "AMT isn't generally refundable.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "Because the credit is required for municipal bonds",
+        "text": "Because the credit is required for municipal bond interest",
         "explanation": "Private activity bond interest is an exclusion item.",
         "trap": "wrong-classification"
       }
@@ -421,24 +421,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0 — SE tax applies only if net SE earnings are $400 or more",
+        "text": "$0, below the $400 threshold",
         "explanation": "Correct. No SE tax is due when net SE earnings are under $400."
       },
       {
         "id": "b",
-        "text": "$53.55",
+        "text": "$53.55 (15.3% of $350)",
         "explanation": "The $400 threshold isn't met.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$49.45",
+        "text": "$49.45 (15.3% of 92.35%)",
         "explanation": "The $400 threshold isn't met.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "$26.78",
+        "text": "$26.78 (half of $53.55)",
         "explanation": "The $400 threshold isn't met.",
         "trap": "wrong-rule"
       }

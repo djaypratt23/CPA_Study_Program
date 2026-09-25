@@ -6,14 +6,14 @@
     "choices": [
       {
         "id": "a",
-        "text": "Advise the client promptly of the error and its consequences",
-        "explanation": "Correct. Circular 230 §10.21."
+        "text": "Notify the IRS of the error in writing immediately",
+        "explanation": "Confidentiality prevents contacting the IRS without client consent.",
+        "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Notify the IRS immediately",
-        "explanation": "Confidentiality prevents contacting the IRS without client consent.",
-        "trap": "wrong-rule"
+        "text": "Advise the client promptly of the error and its consequences",
+        "explanation": "Correct. Circular 230 §10.21."
       },
       {
         "id": "c",
@@ -28,7 +28,7 @@
         "trap": "overgeneralization"
       }
     ],
-    "answer": "a",
+    "answer": "b",
     "explanation": "Practitioners must advise the client of the noncompliance, error, or omission and its consequences.",
     "skill": "application",
     "difficulty": 2
@@ -40,25 +40,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Keep all records until the fee is paid",
+        "text": "Keep all of the records until the fee is paid in full",
         "explanation": "Records necessary for compliance must be returned.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Send the records to the IRS",
+        "text": "Send the records to the IRS for safekeeping",
         "explanation": "The records go to the client.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Return only the records the CPA created",
+        "text": "Return only the records that the CPA created",
         "explanation": "The rule covers client records needed for compliance.",
         "trap": "reversed"
       },
       {
         "id": "d",
-        "text": "Return the records necessary for the client to comply with its federal tax obligations",
+        "text": "Return records the client needs to comply with tax law",
         "explanation": "Correct. §10.28."
       }
     ],
@@ -74,29 +74,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "When records aren't available or practical to obtain, and the estimates are reasonable and don't imply greater accuracy than exists",
-        "explanation": "Correct. SSTS permits reasonable estimates when records are unavailable."
-      },
-      {
-        "id": "b",
-        "text": "Never",
+        "text": "Never; a return must be based on actual records",
         "explanation": "Estimates are allowed in some circumstances.",
         "trap": "wrong-rule"
       },
       {
+        "id": "b",
+        "text": "When records aren't available and the estimates are reasonable",
+        "explanation": "Correct. SSTS permits reasonable estimates when records are unavailable."
+      },
+      {
         "id": "c",
-        "text": "Whenever the client prefers",
+        "text": "Whenever the client prefers estimates for convenience",
         "explanation": "Estimates must be reasonable and appropriate.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "Only for amounts under $1,000",
+        "text": "Only for amounts under $1,000 on any schedule",
         "explanation": "There is no dollar threshold.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "a",
+    "answer": "b",
     "explanation": "SSTS permits reasonable estimates when records are unavailable.",
     "skill": "remembering",
     "difficulty": 2
@@ -142,13 +142,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "Preparing an original return",
+        "text": "Preparing an original individual income tax return",
         "explanation": "Contingent fees are prohibited for original returns.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Preparing a client's tax planning memo",
+        "text": "Preparing a client's year-end tax planning memo",
         "explanation": "Not an exception.",
         "trap": "wrong-rule"
       },
@@ -176,24 +176,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Informed written consent from each affected client, confirmed within a reasonable time",
+        "text": "Informed written consent from each affected client",
         "explanation": "Correct. §10.29: the practitioner must reasonably believe it can competently represent each client, and each must give informed consent confirmed in writing (no later than 30 days)."
       },
       {
         "id": "b",
-        "text": "Nothing, if both are long-time clients",
+        "text": "Nothing, if both taxpayers are long-time clients",
         "explanation": "A conflict requires consent.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "IRS approval",
+        "text": "Written approval from the IRS before proceeding",
         "explanation": "IRS approval isn't required.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Oral consent from either client",
+        "text": "Oral consent from either one of the clients",
         "explanation": "Consent must be from each client and confirmed in writing.",
         "trap": "partial-computation"
       }
@@ -278,25 +278,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Leave it blank as requested",
+        "text": "Leave the question blank as the client requested",
         "explanation": "The CPA should make a reasonable effort to answer all questions.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Attach a statement refusing to answer",
+        "text": "Attach a statement refusing to answer the question",
         "explanation": "There's no reason to refuse.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Withdraw immediately",
+        "text": "Withdraw from the engagement immediately",
         "explanation": "Withdrawal isn't required here.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "Answer the question (e.g., \"No\") because a reasonable effort should be made to answer all questions",
+        "text": "Answer it (e.g., \"No\"); make an effort to answer all",
         "explanation": "Correct. SSTS: make a reasonable effort to obtain information and answer all applicable questions."
       }
     ],
@@ -312,29 +312,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Must independently verify every item",
+        "text": "Must independently verify every item the client provides",
         "explanation": "Verification isn't required absent red flags.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "Shouldn't ignore implications of information known and should ask about information that appears incorrect or incomplete",
-        "explanation": "Correct. Circular 230 §10.34(d) and the SSTS: good-faith reliance without verification, but with reasonable inquiries when information appears incorrect, inconsistent, or incomplete."
+        "text": "May never ask the client follow-up questions",
+        "explanation": "Reasonable inquiries are expected.",
+        "trap": "reversed"
       },
       {
         "id": "c",
-        "text": "Must obtain an audit of the records",
+        "text": "Must first obtain an audit of the client's records",
         "explanation": "An audit isn't required for tax preparation.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "May never ask follow-up questions",
-        "explanation": "Reasonable inquiries are expected.",
-        "trap": "reversed"
+        "text": "Must not ignore known facts; must ask about doubtful items",
+        "explanation": "Correct. Circular 230 §10.34(d) and the SSTS: good-faith reliance without verification, but with reasonable inquiries when information appears incorrect, inconsistent, or incomplete."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Circular 230 §10.34(d) (and SSTS No. 1.3): a practitioner may rely in good faith, without verification, on client information, but may not ignore the implications of information furnished or known and must make reasonable inquiries if it appears incorrect, inconsistent, or incomplete.",
     "skill": "application",
     "difficulty": 2
@@ -346,29 +346,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "The CPA must always update the advice",
+        "text": "None, unless implementing the advice or agreed to update",
+        "explanation": "Correct. SSTS on advice: no obligation to communicate later developments unless engaged to do so or assisting in implementation."
+      },
+      {
+        "id": "b",
+        "text": "The CPA must always update the advice for any change",
         "explanation": "No obligation unless agreed or implementing the advice.",
         "trap": "overgeneralization"
       },
       {
-        "id": "b",
-        "text": "No obligation to update unless the CPA is assisting in implementing the advice or has agreed to update it",
-        "explanation": "Correct. SSTS on advice: no obligation to communicate later developments unless engaged to do so or assisting in implementation."
-      },
-      {
         "id": "c",
-        "text": "The CPA must notify the IRS",
+        "text": "The CPA must notify the IRS of the change in law",
         "explanation": "The IRS isn't involved.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "The advice becomes void",
+        "text": "The advice becomes void once the law changes",
         "explanation": "Advice isn't automatically void.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "a",
     "explanation": "SSTS on advice: no obligation to communicate later developments unless engaged to do so or assisting in implementation.",
     "skill": "remembering",
     "difficulty": 2
@@ -380,29 +380,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Advertising fees in a newspaper",
+        "text": "Advertising fixed fees for services in a newspaper",
         "explanation": "Fee advertising is allowed if not misleading.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Making false or misleading statements about the practitioner's qualifications",
-        "explanation": "Correct. §10.30 prohibits false, fraudulent, coercive, misleading, or deceptive solicitation."
-      },
-      {
-        "id": "c",
-        "text": "Stating that the practitioner is an enrolled agent",
+        "text": "Stating truthfully that the practitioner is an EA",
         "explanation": "True statements are permitted.",
         "trap": "wrong-rule"
       },
       {
+        "id": "c",
+        "text": "False or misleading statements about qualifications",
+        "explanation": "Correct. §10.30 prohibits false, fraudulent, coercive, misleading, or deceptive solicitation."
+      },
+      {
         "id": "d",
-        "text": "Sending mailers to the public",
+        "text": "Sending mailers to the general public",
         "explanation": "Direct mail is allowed with conditions.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "§10.30 prohibits false, fraudulent, coercive, misleading, or deceptive solicitation.",
     "skill": "remembering",
     "difficulty": 2
@@ -414,29 +414,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Reporting the client to the IRS",
+        "text": "Withdrawing, and steps so the error isn't repeated",
+        "explanation": "Correct. SSTS: if the client doesn't correct an error, consider whether to continue the relationship; don't knowingly repeat the error."
+      },
+      {
+        "id": "b",
+        "text": "Reporting the client to the IRS without consent",
         "explanation": "Not without client consent (absent legal requirement).",
         "trap": "wrong-rule"
       },
       {
-        "id": "b",
-        "text": "Whether to withdraw from preparing the current return and take reasonable steps so the error isn't repeated",
-        "explanation": "Correct. SSTS: if the client doesn't correct an error, consider whether to continue the relationship; don't knowingly repeat the error."
-      },
-      {
         "id": "c",
-        "text": "Repeating the error for consistency",
+        "text": "Repeating the error on the current return for consistency",
         "explanation": "Knowingly repeating an error is improper.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Charging a higher fee",
+        "text": "Charging a higher fee for the additional risk",
         "explanation": "The fee is irrelevant to the obligation.",
         "trap": "irrelevant-fact"
       }
     ],
-    "answer": "b",
+    "answer": "a",
     "explanation": "SSTS: if the client doesn't correct an error, consider whether to continue the relationship; don't knowingly repeat the error.",
     "skill": "application",
     "difficulty": 2,

@@ -83,7 +83,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The taxpayer qualifies.",
         "trap": "wrong-rule"
       },
@@ -129,7 +129,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Expenses exceed the floor.",
         "trap": "wrong-rule"
       }
@@ -216,24 +216,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "$8,000, with $4,000 carried forward",
+        "text": "$8,000; $4,000 carried forward",
         "explanation": "Correct. §163(d): investment interest is deductible up to net investment income; the excess carries forward."
       },
       {
         "id": "b",
-        "text": "$12,000",
+        "text": "$12,000, all deductible now",
         "explanation": "Limited to net investment income.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "$0; all carried forward",
         "explanation": "Up to net investment income is deductible.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "$4,000",
+        "text": "$4,000; $8,000 carried forward",
         "explanation": "That's the carryforward.",
         "trap": "reversed"
       }
@@ -268,7 +268,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The excess over value received is deductible.",
         "trap": "wrong-rule"
       }
@@ -292,7 +292,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Federally declared disaster losses are deductible.",
         "trap": "wrong-rule"
       },
@@ -321,7 +321,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "All of it",
+        "text": "All of the interest",
         "explanation": "The $750,000 limit applies.",
         "trap": "overgeneralization"
       },
@@ -332,13 +332,13 @@
       },
       {
         "id": "c",
-        "text": "None",
+        "text": "None of the interest",
         "explanation": "Some is deductible.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Interest on $1 million",
+        "text": "Interest on $1 million of debt",
         "explanation": "That's the pre-2018 limit for older loans.",
         "trap": "outdated-rule"
       }
@@ -355,24 +355,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "It's available only to taxpayers who itemize",
+        "text": "It is available only to taxpayers who itemize",
         "explanation": "It's available regardless.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "It reduces taxable income but not AGI, and is available with the standard deduction",
+        "text": "It reduces taxable income, not AGI, even with the standard deduction",
         "explanation": "Correct. §199A is a below-the-line deduction available to itemizers and non-itemizers."
       },
       {
         "id": "c",
-        "text": "It's a refundable credit",
+        "text": "It is a refundable credit against income tax",
         "explanation": "It's a deduction.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "It applies to W-2 wages",
+        "text": "It applies to W-2 wages earned as an employee",
         "explanation": "Wages aren't QBI.",
         "trap": "wrong-rule"
       }
@@ -423,24 +423,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Excluded from gross income",
+        "text": "Excluded from gross income as a fringe benefit",
         "explanation": "Tips remain in gross income.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Included in gross income, with a deduction of $18,000 available whether or not he itemizes",
+        "text": "Included, with an $18,000 deduction, itemizing or not",
         "explanation": "Correct. OBBBA: qualified tips are deductible up to $25,000 for 2025–2028 (phased out above $150,000 MAGI); they remain income and subject to payroll taxes."
       },
       {
         "id": "c",
-        "text": "Included, with no deduction",
+        "text": "Included in gross income, with no deduction",
         "explanation": "The 2025 tips deduction applies.",
         "trap": "outdated-rule"
       },
       {
         "id": "d",
-        "text": "Deductible only up to $10,000",
+        "text": "Included, with a deduction capped at $10,000",
         "explanation": "The cap is $25,000.",
         "trap": "wrong-rule"
       }

@@ -94,7 +94,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "MAGI is below the joint phase-out.",
         "trap": "wrong-rule"
       }
@@ -290,8 +290,9 @@
       },
       {
         "id": "b",
-        "text": "$3,000",
-        "explanation": "Correct. Lesser of $3,000 cap, $4,000 paid, and the lower earner's $3,000."
+        "text": "None ($0)",
+        "explanation": "The lower earner has earned income.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -301,12 +302,11 @@
       },
       {
         "id": "d",
-        "text": "$0",
-        "explanation": "The lower earner has earned income.",
-        "trap": "wrong-rule"
+        "text": "$3,000",
+        "explanation": "Correct. Lesser of $3,000 cap, $4,000 paid, and the lower earner's $3,000."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Eligible expenses are limited by the cap and by each spouse's earned income.",
     "skill": "application",
     "difficulty": 2,
@@ -319,14 +319,14 @@
     "choices": [
       {
         "id": "a",
-        "text": "A single parent with MAGI of $70,000 paying her son's tuition",
-        "explanation": "Below the phase-out, so eligible.",
-        "trap": "wrong-rule"
+        "text": "A married taxpayer filing separately",
+        "explanation": "Correct. MFS filers can't claim education credits."
       },
       {
         "id": "b",
-        "text": "A married taxpayer filing separately",
-        "explanation": "Correct. MFS filers can't claim education credits."
+        "text": "A single parent with MAGI of $70,000 paying her son's tuition",
+        "explanation": "Below the phase-out, so eligible.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -341,7 +341,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "a",
     "explanation": "Married filing separately taxpayers can't claim the AOTC or LLC.",
     "skill": "remembering",
     "difficulty": 2
@@ -393,14 +393,14 @@
       },
       {
         "id": "b",
-        "text": "$6,000 (30%)",
-        "explanation": "Correct. The 30% residential clean energy credit applies to expenditures made through December 31, 2025 (OBBBA ended it for later expenditures)."
-      },
-      {
-        "id": "c",
         "text": "$2,000",
         "explanation": "That's a different credit's cap.",
         "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$6,000 (30%)",
+        "explanation": "Correct. The 30% residential clean energy credit applies to expenditures made through December 31, 2025 (OBBBA ended it for later expenditures)."
       },
       {
         "id": "d",
@@ -409,7 +409,7 @@
         "trap": "overgeneralization"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "The 30% residential clean energy credit applies to expenditures made through December 31, 2025 (OBBBA ended it for later expenditures).",
     "skill": "application",
     "difficulty": 2,
@@ -430,23 +430,23 @@
       },
       {
         "id": "b",
-        "text": "$550",
-        "explanation": "Correct. $10,500 over the threshold → 11 increments × $50."
-      },
-      {
-        "id": "c",
         "text": "$525",
         "explanation": "The phase-out uses whole $1,000 increments.",
         "trap": "wrong-rule"
       },
       {
+        "id": "c",
+        "text": "$550",
+        "explanation": "Correct. $10,500 over the threshold → 11 increments × $50."
+      },
+      {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "MAGI exceeds the $200,000 threshold.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "The CTC phases out by $50 per $1,000 or fraction thereof over the threshold.",
     "skill": "application",
     "difficulty": 2,
