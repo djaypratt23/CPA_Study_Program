@@ -51,7 +51,8 @@ export default function TbsPage() {
     const s = scoreTbs(tbs, responses)
     await db.tbsSessions.put({ id: tbs.id, responses, startedAt: session?.startedAt ?? new Date().toISOString(), elapsedMs: elapsed, submittedAt: new Date().toISOString(), score: s.percent })
     await recordTbsAttempt(tbs, s.percent, elapsed, 'tutor', `tbs-${tbs.id}`)
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top: document.body.scrollHeight, behavior: reduce ? 'auto' : 'smooth' })
   }
   const retry = async () => {
     await db.tbsSessions.delete(tbs.id)
