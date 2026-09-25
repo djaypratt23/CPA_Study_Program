@@ -60,7 +60,8 @@ export default function TbsPage() {
     } finally {
       setBusy(false)
     }
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top: document.body.scrollHeight, behavior: reduce ? 'auto' : 'smooth' })
   }
   const retry = async () => {
     await db.tbsSessions.delete(tbs.id)

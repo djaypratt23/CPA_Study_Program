@@ -153,7 +153,7 @@ export default function QuizPlayer() {
     <div>
       <div className="sticky top-[57px] z-20 -mx-4 mb-4 flex items-center justify-between gap-2 border-b border-slate-200 bg-slate-50/95 px-4 py-2 backdrop-blur md:top-0 dark:border-slate-800 dark:bg-slate-950/95">
         <div className="min-w-0">
-          <div className="truncate text-sm font-semibold">{session.title}</div>
+          <h1 className="truncate text-sm font-semibold">{session.title}</h1>
           <div className="text-xs muted">
             {isTest ? 'Test mode — feedback at the end' : session.mode === 'review' ? 'Review mode' : 'Tutor mode — instant feedback'} · {answeredCount}/{session.itemIds.length} answered
           </div>

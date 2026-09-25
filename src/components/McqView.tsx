@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { Mcq, SectionId } from '../content/schema'
 import { SKILL_LABELS } from '../content/schema'
 import { db } from '../db'
@@ -63,6 +63,24 @@ export default function McqView({ q, index, total, selected, confidence, reveale
   const noteSave = useDebouncedSave(saveNote)
   const correct = selected === q.answer
   const choices = useMemo(() => displayChoices(q.id, q.choices, shuffleSeed), [q.id, q.choices, shuffleSeed])
+  const feedbackRef = useRef<HTMLDivElement>(null)
+  const wasRevealed = useRef(revealed)
+  // When feedback appears, the choice buttons become disabled; move focus to the verdict so it isn't lost to <body>.
+  useEffect(() => {
+    if (revealed && !wasRevealed.current) feedbackRef.current?.focus()
+    wasRevealed.current = revealed
+  }, [revealed])
+  const onRadioKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    // Up/Down only: Left/Right stay the app-wide previous/next-question keys.
+    const step = e.key === 'ArrowDown' ? 1 : e.key === 'ArrowUp' ? -1 : 0
+    if (!step || revealed) return
+    e.preventDefault()
+    e.stopPropagation()
+    const idx = Math.max(0, choices.findIndex((c) => c.id === selected))
+    const next = choices[(idx + step + choices.length) % choices.length]
+    onSelect(next.id)
+    e.currentTarget.querySelector<HTMLButtonElement>(`[data-choice="${next.id}"]`)?.focus()
+  }
 
   useHotkeys((e) => {
     if (revealed) return
@@ -124,20 +142,22 @@ export default function McqView({ q, index, total, selected, confidence, reveale
         <Markdown>{q.stem}</Markdown>
       </div>
 
-      {revealed && (
-        <div
-        className={`rounded-lg p-3 font-semibold ${correct ? 'bg-emerald-100 text-emerald-900 dark:bg-emerald-900/40 dark:text-emerald-100' : 'bg-rose-100 text-rose-900 dark:bg-rose-900/40 dark:text-rose-100'}`}
-        role="status"
-      >
-        {correct
-          ? confidence === 'guess'
-            ? 'Correct — but you guessed, so it will come back for review like a miss.'
-            : 'Correct.'
-          : `Not quite — the answer is (${displayLetter(choices, q.answer)}).`}
+      {/* A persistent live region, so the verdict is announced when it appears (not only when it mounts). */}
+      <div role="status" aria-live="polite" ref={feedbackRef} tabIndex={-1} className="focus:outline-none">
+        {revealed && (
+          <div
+            className={`rounded-lg p-3 font-semibold ${correct ? 'bg-emerald-100 text-emerald-900 dark:bg-emerald-900/40 dark:text-emerald-100' : 'bg-rose-100 text-rose-900 dark:bg-rose-900/40 dark:text-rose-100'}`}
+          >
+            {correct
+              ? confidence === 'guess'
+                ? 'Correct — but you guessed, so it will come back for review like a miss.'
+                : 'Correct.'
+              : `Not quite — the answer is (${displayLetter(choices, q.answer)}).`}
+          </div>
+        )}
       </div>
-      )}
 
-      <div role="radiogroup" aria-label="Answer choices" className="space-y-2">
+      <div role="radiogroup" aria-label="Answer choices" className="space-y-2" onKeyDown={onRadioKey}>
         {choices.map((c, i) => {
           const isSel = selected === c.id
           const isAns = c.id === q.answer
@@ -151,6 +171,9 @@ export default function McqView({ q, index, total, selected, confidence, reveale
                 role="radio"
                 aria-checked={isSel}
                 disabled={revealed}
+                // Roving tabindex (ARIA radio pattern): one tab stop; arrow keys move between choices.
+                tabIndex={isSel || (!selected && i === 0) ? 0 : -1}
+                data-choice={c.id}
                 onClick={() => onSelect(c.id)}
                 className={`flex w-full items-start gap-3 rounded-lg border p-3 text-left transition-colors disabled:cursor-default ${cls}`}
               >

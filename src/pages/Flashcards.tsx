@@ -20,13 +20,16 @@ export default function Flashcards() {
 
   if (session)
     return (
-      <FlashcardPlayer
-        cards={session}
-        onDone={() => {
-          setSession(null)
-          setParams({})
-        }}
-      />
+      <>
+        <h1 className="sr-only">Flashcard review</h1>
+        <FlashcardPlayer
+          cards={session}
+          onDone={() => {
+            setSession(null)
+            setParams({})
+          }}
+        />
+      </>
     )
 
   const decks = section.areas.flatMap((a) =>

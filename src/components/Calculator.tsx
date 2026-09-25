@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { evaluate } from '../lib/calc'
 
 /** Basic four-function calculator with memory, similar to the exam's on-screen tool. */
@@ -9,6 +9,14 @@ export default function Calculator({ onClose }: { onClose: () => void }) {
   const [op, setOp] = useState<string | null>(null)
   const [fresh, setFresh] = useState(true)
   const [mem, setMem] = useState(0)
+  const dialog = useRef<HTMLDivElement>(null)
+
+  // Move focus into the calculator on open, and return it to where it was (the toggle) on close.
+  useEffect(() => {
+    const previous = document.activeElement as HTMLElement | null
+    dialog.current?.focus()
+    return () => previous?.focus?.()
+  }, [])
 
   const cur = () => Number(display)
   const show = (n: number) => setDisplay(Number.isFinite(n) ? String(Math.round(n * 1e10) / 1e10) : 'Error')
@@ -65,6 +73,8 @@ export default function Calculator({ onClose }: { onClose: () => void }) {
       className="fixed right-3 bottom-24 z-50 w-64 rounded-xl border border-slate-300 bg-white p-3 shadow-2xl md:bottom-6 dark:border-slate-700 dark:bg-slate-900"
       role="dialog"
       aria-label="Calculator"
+      ref={dialog}
+      tabIndex={-1}
       data-no-hotkeys
       onKeyDown={(e) => {
         if (/^[0-9.]$/.test(e.key)) digit(e.key)
