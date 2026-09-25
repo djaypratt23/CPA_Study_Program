@@ -57,7 +57,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The payment was late.",
         "trap": "wrong-rule"
       }
@@ -144,7 +144,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "When it exceeds $1,000",
+        "text": "When it exceeds $1,000 of tax",
         "explanation": "The threshold is higher.",
         "trap": "wrong-rule"
       },
@@ -156,12 +156,12 @@
       },
       {
         "id": "c",
-        "text": "When it exceeds the greater of 10% of the correct tax or $5,000",
+        "text": "Over the greater of 10% of tax or $5,000",
         "explanation": "Correct. §6662(d): greater of 10% of the tax required to be shown or $5,000 (corporations have a different test)."
       },
       {
         "id": "d",
-        "text": "Any understatement",
+        "text": "Any understatement, however small",
         "explanation": "Only substantial ones.",
         "trap": "overgeneralization"
       }
@@ -184,7 +184,7 @@
       },
       {
         "id": "b",
-        "text": "100% of the tax",
+        "text": "100% of the tax due",
         "explanation": "There is no 100% civil fraud penalty.",
         "trap": "wrong-rule"
       },
@@ -196,7 +196,7 @@
       },
       {
         "id": "d",
-        "text": "75% of the underpayment attributable to fraud",
+        "text": "75% of the fraud underpayment",
         "explanation": "Correct. §6663: 75% of the portion of the underpayment attributable to fraud."
       }
     ],
@@ -218,18 +218,18 @@
       },
       {
         "id": "b",
-        "text": "The understatement attributable to the position is reduced, so the penalty doesn't apply to it",
+        "text": "That item is excluded from the understatement",
         "explanation": "Correct. Substantial authority (without disclosure) or reasonable basis (with disclosure) reduces the understatement."
       },
       {
         "id": "c",
-        "text": "Only a 10% penalty applies",
+        "text": "Only a reduced 10% penalty applies",
         "explanation": "There's no reduced rate.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "The fraud penalty applies",
+        "text": "The civil fraud penalty applies instead",
         "explanation": "No fraud is indicated.",
         "trap": "wrong-rule"
       }
@@ -349,18 +349,18 @@
     "choices": [
       {
         "id": "a",
-        "text": "1 year",
+        "text": "1 year after filing",
         "explanation": "The period is longer.",
         "trap": "wrong-period"
       },
       {
         "id": "b",
-        "text": "3 years after the close of the return period",
+        "text": "3 years after the period",
         "explanation": "Correct. §6107: keep a copy or list for 3 years after the close of the return period."
       },
       {
         "id": "c",
-        "text": "7 years",
+        "text": "7 years after filing",
         "explanation": "Longer than required.",
         "trap": "wrong-period"
       },
@@ -383,7 +383,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Failure to file",
+        "text": "Failure to file, from April 15",
         "explanation": "The return is timely under the extension.",
         "trap": "wrong-rule"
       },
@@ -394,13 +394,13 @@
       },
       {
         "id": "c",
-        "text": "No penalty",
+        "text": "No penalty, given the extension",
         "explanation": "Payment was late.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Both penalties",
+        "text": "Both failure to file and to pay",
         "explanation": "The return is timely.",
         "trap": "overgeneralization"
       }

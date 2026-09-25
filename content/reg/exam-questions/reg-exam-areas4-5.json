@@ -7,7 +7,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "A single taxpayer living alone",
+        "text": "A single taxpayer who lives alone and has no dependents",
         "explanation": "No qualifying person.",
         "trap": "wrong-rule"
       },
@@ -25,7 +25,7 @@
       },
       {
         "id": "d",
-        "text": "An unmarried parent who pays all costs of a home where her dependent son lived all year",
+        "text": "An unmarried parent maintaining a home for her son",
         "explanation": "Correct. HOH: unmarried, maintains a home for a qualifying person for more than half the year."
       }
     ],
@@ -48,18 +48,18 @@
       },
       {
         "id": "b",
-        "text": "A friend who lived with the taxpayer for 6 months",
+        "text": "A friend who lived with the taxpayer for only 6 months",
         "explanation": "Household members must live there all year.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "The taxpayer's widowed father with $4,000 of taxable interest income whom the taxpayer supports",
+        "text": "His widowed father with $4,000 of interest, whom he supports",
         "explanation": "Correct. Qualifying relative: relationship, gross income under $5,200, over half support."
       },
       {
         "id": "d",
-        "text": "The taxpayer's brother with $12,000 of wages",
+        "text": "The taxpayer's brother, who earned $12,000 of wages",
         "explanation": "Gross income exceeds the limit.",
         "trap": "wrong-rule"
       }
@@ -149,7 +149,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Gift cards are cash equivalents.",
         "trap": "partial-computation"
       },
@@ -201,7 +201,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Only $15,000 is excluded.",
         "trap": "overgeneralization"
       }
@@ -226,7 +226,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Unemployment is taxable.",
         "trap": "wrong-rule"
       },
@@ -255,24 +255,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "A rental property with full deductions",
+        "text": "A rental property with full deductions allowed",
         "explanation": "Personal use exceeds 14 days (greater of 14 or 10% of 120 = 14).",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "A home rented under 15 days",
+        "text": "A home rented for fewer than 15 days",
         "explanation": "It's rented 120 days.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "A residence; rental deductions are limited to rental income",
+        "text": "A residence; deductions limited to rental income",
         "explanation": "Correct. Personal use of 20 days exceeds the greater of 14 days or 12 days (10% of 120)."
       },
       {
         "id": "d",
-        "text": "A hobby",
+        "text": "A hobby activity",
         "explanation": "Not the classification.",
         "trap": "wrong-classification"
       }
@@ -302,7 +302,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The allowance isn't fully phased out.",
         "trap": "wrong-rule"
       },
@@ -368,7 +368,7 @@
       },
       {
         "id": "b",
-        "text": "Home mortgage interest",
+        "text": "Home mortgage interest on a residence",
         "explanation": "That's itemized.",
         "trap": "wrong-classification"
       },
@@ -379,7 +379,7 @@
       },
       {
         "id": "d",
-        "text": "Gambling losses",
+        "text": "Gambling losses up to gambling winnings",
         "explanation": "Gambling losses are itemized.",
         "trap": "wrong-classification"
       }
@@ -402,7 +402,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "MAGI is below the phase-out range.",
         "trap": "wrong-rule"
       },
@@ -432,25 +432,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "$40,000",
+        "text": "$40,000, all deductible",
         "explanation": "Limited to 60% of AGI.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "$30,000",
+        "text": "$30,000; $10,000 carried",
         "explanation": "Miscomputes the 60% limit.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$18,000",
+        "text": "$18,000; $22,000 carried",
         "explanation": "That's the 30% limit.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "$36,000, with $4,000 carried forward",
+        "text": "$36,000; $4,000 carried",
         "explanation": "Correct. Cash to public charities: 60% × 60,000 = 36,000; 5-year carryforward."
       }
     ],
@@ -468,7 +468,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Real estate taxes on a principal residence (within the SALT cap)",
+        "text": "Real estate taxes on a principal residence",
         "explanation": "Correct. Real property taxes are deductible subject to the SALT limit."
       },
       {
@@ -479,13 +479,13 @@
       },
       {
         "id": "c",
-        "text": "Foreign real property taxes on a personal vacation home",
+        "text": "Foreign real property taxes on a vacation home",
         "explanation": "Not deductible.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Personal credit card interest",
+        "text": "Interest on personal credit card balances",
         "explanation": "Personal interest isn't deductible.",
         "trap": "wrong-rule"
       }
@@ -509,7 +509,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The taxpayer qualifies.",
         "trap": "wrong-rule"
       },
@@ -736,7 +736,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "A dividends-received deduction applies.",
         "trap": "wrong-rule"
       }
@@ -754,24 +754,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "$50,000, with $20,000 carried forward",
+        "text": "$50,000; $20,000 carried",
         "explanation": "Correct. 10% × 500,000 = 50,000."
       },
       {
         "id": "b",
-        "text": "$70,000",
+        "text": "$70,000; none carried",
         "explanation": "Limited to 10%.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "$35,000",
+        "text": "$35,000; $35,000 carried",
         "explanation": "Miscomputes the limit.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None; all $70,000 carried",
         "explanation": "Deductible up to the limit.",
         "trap": "wrong-rule"
       }
@@ -825,7 +825,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Limited to 80% of taxable income.",
         "trap": "overgeneralization"
       },
@@ -932,7 +932,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Gain is recognized on appreciated property.",
         "trap": "wrong-rule"
       },
@@ -1039,24 +1039,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Yes — she owns less than 50% and less than 80% of 30% (24%)",
+        "text": "Yes; she owns under 50% and under 80% of 30%",
         "explanation": "Correct. 20% < 50% and 20% < 24% (80% × 30%)."
       },
       {
         "id": "b",
-        "text": "No — she still owns stock",
+        "text": "No, because she still owns some stock",
         "explanation": "Complete termination isn't required for this test.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "No — she must own less than 10%",
+        "text": "No, because she must own less than 10%",
         "explanation": "That isn't the test.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Yes — any redemption qualifies",
+        "text": "Yes, because any redemption qualifies",
         "explanation": "Not every redemption qualifies.",
         "trap": "overgeneralization"
       }
@@ -1074,13 +1074,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "FMV",
+        "text": "Fair market value",
         "explanation": "Carryover basis applies under §334(b).",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "The subsidiary's basis (carryover)",
+        "text": "Carryover basis",
         "explanation": "Correct. §332/§334(b): no gain or loss; carryover basis."
       },
       {
@@ -1091,7 +1091,7 @@
       },
       {
         "id": "d",
-        "text": "Zero",
+        "text": "Zero basis",
         "explanation": "The parent takes the subsidiary's basis.",
         "trap": "wrong-rule"
       }
@@ -1126,7 +1126,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Basis remains positive.",
         "trap": "wrong-rule"
       }
@@ -1151,7 +1151,7 @@
       },
       {
         "id": "b",
-        "text": "Rent expense for the partnership's office",
+        "text": "Rent expense for the office",
         "explanation": "Correct. It nets into ordinary business income."
       },
       {
@@ -1191,7 +1191,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Outside basis remains after the cash distribution.",
         "trap": "wrong-rule"
       },
@@ -1216,24 +1216,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "As a tax-free distribution",
+        "text": "As a tax-free distribution of cash",
         "explanation": "It's ordinary income.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "As ordinary income subject to self-employment tax",
+        "text": "As ordinary income subject to SE tax",
         "explanation": "Correct. Guaranteed payments are ordinary income and SE income."
       },
       {
         "id": "c",
-        "text": "As capital gain",
+        "text": "As long-term capital gain",
         "explanation": "Guaranteed payments aren't capital gain.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "As a reduction of basis",
+        "text": "As a reduction of basis only",
         "explanation": "It doesn't reduce basis.",
         "trap": "wrong-rule"
       }
@@ -1303,7 +1303,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Up to basis is deductible.",
         "trap": "wrong-rule"
       }
@@ -1328,7 +1328,7 @@
       },
       {
         "id": "b",
-        "text": "Accumulated adjustments account (AAA)",
+        "text": "Accumulated adjustments account",
         "explanation": "Correct. Ordering: AAA → E&P → basis → gain."
       },
       {
@@ -1339,7 +1339,7 @@
       },
       {
         "id": "d",
-        "text": "Capital gain",
+        "text": "Capital gain on excess",
         "explanation": "Gain comes last.",
         "trap": "wrong-period"
       }
@@ -1374,7 +1374,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The cash gift exceeds the exclusion.",
         "trap": "wrong-rule"
       }
@@ -1399,12 +1399,12 @@
       },
       {
         "id": "b",
-        "text": "Income from a regularly operated commercial parking garage open to the public, staffed by employees",
+        "text": "Income from a commercial parking garage it regularly runs",
         "explanation": "Correct. A regularly carried-on, unrelated trade or business produces UBTI."
       },
       {
         "id": "c",
-        "text": "Sales of donated goods",
+        "text": "Sales of donated goods in its thrift shop",
         "explanation": "Donated goods sales are excluded.",
         "trap": "wrong-rule"
       },

@@ -12,14 +12,14 @@
       },
       {
         "id": "b",
-        "text": "0%",
-        "explanation": "Entertainment is 0%, but meals are 50%.",
-        "trap": "wrong-classification"
+        "text": "50%",
+        "explanation": "Correct. §274: business meals are 50% deductible; entertainment isn't deductible."
       },
       {
         "id": "c",
-        "text": "50%",
-        "explanation": "Correct. §274: business meals are 50% deductible; entertainment isn't deductible."
+        "text": "0%",
+        "explanation": "Entertainment is 0%, but meals are 50%.",
+        "trap": "wrong-classification"
       },
       {
         "id": "d",
@@ -28,7 +28,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "§274: business meals are 50% deductible; entertainment isn't deductible.",
     "skill": "remembering",
     "difficulty": 2
@@ -40,29 +40,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "$5,000",
+        "text": "$5,000, with the rest amortized",
         "explanation": "The $5,000 is reduced by costs above $50,000.",
         "trap": "partial-computation"
       },
       {
         "id": "b",
-        "text": "$0",
-        "explanation": "Some immediate deduction remains.",
-        "trap": "wrong-rule"
+        "text": "$2,000, with the rest amortized",
+        "explanation": "Correct. $5,000 − $3,000."
       },
       {
         "id": "c",
-        "text": "$53,000",
+        "text": "$53,000 in the first year",
         "explanation": "Start-up costs are limited.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "$2,000 (plus amortization of the rest over 180 months)",
-        "explanation": "Correct. $5,000 − $3,000."
+        "text": "$0, with all of it amortized",
+        "explanation": "Some immediate deduction remains.",
+        "trap": "wrong-rule"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "§195: $5,000 reduced dollar for dollar by costs over $50,000 → 5,000 − 3,000 = 2,000.",
     "skill": "application",
     "difficulty": 2,
@@ -81,14 +81,14 @@
       },
       {
         "id": "b",
-        "text": "$5,000",
-        "explanation": "No partial allowance above $150,000.",
-        "trap": "wrong-rule"
+        "text": "None ($0)",
+        "explanation": "Correct. The allowance is gone at $150,000."
       },
       {
         "id": "c",
-        "text": "$0",
-        "explanation": "Correct. The allowance is gone at $150,000."
+        "text": "$5,000",
+        "explanation": "No partial allowance above $150,000.",
+        "trap": "wrong-rule"
       },
       {
         "id": "d",
@@ -97,7 +97,7 @@
         "trap": "wrong-classification"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "The $25,000 allowance phases out completely at MAGI of $150,000.",
     "skill": "application",
     "difficulty": 2,
@@ -162,7 +162,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The office qualifies.",
         "trap": "wrong-rule"
       }
@@ -180,7 +180,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Excluded from gross income, and no rental expenses are deductible",
+        "text": "Excluded from income; no rental expenses deducted",
         "explanation": "Correct. §280A(g): a dwelling rented fewer than 15 days — the rent is excluded."
       },
       {
@@ -191,13 +191,13 @@
       },
       {
         "id": "c",
-        "text": "Included, with no expenses deductible",
+        "text": "Included in income, with no expenses deductible",
         "explanation": "The rent is excluded.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Half included",
+        "text": "Half included in income, half excluded",
         "explanation": "There's no partial rule.",
         "trap": "wrong-rule"
       }
@@ -214,24 +214,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Passive rules, then at-risk rules",
+        "text": "Passive activity rules first, then the at-risk rules",
         "explanation": "At-risk rules come first.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "Only the passive rules apply to rentals",
+        "text": "Only the passive activity rules apply to rentals",
         "explanation": "At-risk rules also apply.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "Basis and at-risk limits first, then the passive activity rules, then the excess business loss limit",
+        "text": "Basis, at-risk, passive, then excess business loss",
         "explanation": "Correct. Losses must clear basis, then at-risk (§465), then passive (§469), then §461(l)."
       },
       {
         "id": "d",
-        "text": "Excess business loss first",
+        "text": "Excess business loss limit first, then passive rules",
         "explanation": "The excess business loss limit is applied last.",
         "trap": "reversed"
       }
@@ -282,29 +282,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "1 of 5 years",
+        "text": "1 of the last 5 years",
         "explanation": "One year isn't enough.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "3 of 5 consecutive years (2 of 7 for horse activities)",
-        "explanation": "Correct. §183(d) presumption."
-      },
-      {
-        "id": "c",
-        "text": "5 of 5 years",
+        "text": "5 of the last 5 years",
         "explanation": "Profit every year isn't required.",
         "trap": "wrong-rule"
       },
       {
+        "id": "c",
+        "text": "3 of 5 consecutive years",
+        "explanation": "Correct. §183(d) presumption."
+      },
+      {
         "id": "d",
-        "text": "Any single year",
+        "text": "Any single year in 5",
         "explanation": "A single year isn't sufficient.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "§183(d) presumption.",
     "skill": "remembering",
     "difficulty": 2
@@ -316,18 +316,18 @@
     "choices": [
       {
         "id": "a",
+        "text": "A 1,500-hour real estate pro who materially participates",
+        "explanation": "Correct. Real estate professional: more than 750 hours and more than half of personal services in real property businesses, plus material participation."
+      },
+      {
+        "id": "b",
         "text": "An engineer who manages two rentals on weekends",
         "explanation": "Doesn't meet the real estate professional hours test.",
         "trap": "wrong-rule"
       },
       {
-        "id": "b",
-        "text": "A real estate agent who works 1,500 hours a year in real estate and nothing else, and materially participates in her rentals",
-        "explanation": "Correct. Real estate professional: more than 750 hours and more than half of personal services in real property businesses, plus material participation."
-      },
-      {
         "id": "c",
-        "text": "Any active participant",
+        "text": "Any taxpayer who actively participates in the rental",
         "explanation": "Active participation gives only the $25,000 allowance.",
         "trap": "wrong-classification"
       },
@@ -338,7 +338,7 @@
         "trap": "wrong-rule"
       }
     ],
-    "answer": "b",
+    "answer": "a",
     "explanation": "Real estate professional: more than 750 hours and more than half of personal services in real property businesses, plus material participation.",
     "skill": "application",
     "difficulty": 2
@@ -356,14 +356,14 @@
       },
       {
         "id": "b",
-        "text": "$4,000 included; expenses not deductible",
-        "explanation": "Correct. Hobby income is gross income; hobby expenses aren't deductible (miscellaneous itemized deductions are eliminated)."
-      },
-      {
-        "id": "c",
         "text": "Nothing reported",
         "explanation": "Hobby income is taxable.",
         "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$4,000 included; expenses not deductible",
+        "explanation": "Correct. Hobby income is gross income; hobby expenses aren't deductible (miscellaneous itemized deductions are eliminated)."
       },
       {
         "id": "d",
@@ -372,7 +372,7 @@
         "trap": "outdated-rule"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "Hobby income is gross income; hobby expenses aren't deductible (miscellaneous itemized deductions are eliminated).",
     "skill": "application",
     "difficulty": 2
@@ -390,8 +390,9 @@
       },
       {
         "id": "b",
-        "text": "$20,000",
-        "explanation": "Correct. $25,000 − 50% × $10,000."
+        "text": "None ($0)",
+        "explanation": "Some allowance remains.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -401,12 +402,11 @@
       },
       {
         "id": "d",
-        "text": "$0",
-        "explanation": "Some allowance remains.",
-        "trap": "wrong-rule"
+        "text": "$20,000",
+        "explanation": "Correct. $25,000 − 50% × $10,000."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "25,000 − 5,000 = 20,000 allowance; deduct 20,000; suspend 2,000.",
     "skill": "application",
     "difficulty": 2,
@@ -424,19 +424,19 @@
       },
       {
         "id": "b",
-        "text": "$75 per recipient",
+        "text": "$75 per recipient per year",
         "explanation": "That isn't the gift limit.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$100 per recipient",
+        "text": "$100 per recipient per gift",
         "explanation": "That isn't the gift limit.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Unlimited",
+        "text": "Unlimited, if ordinary",
         "explanation": "Gifts are capped.",
         "trap": "overgeneralization"
       }
