@@ -14,6 +14,8 @@ objectives:
   - text: Determine the tax consequences of current distributions and the sale of a partnership interest.
     skill: application
     task: Determine the consequences of partnership distributions
+  - text: Review Form 1065 classification, guaranteed payments and self-employment items, and resolve related diagnostics.
+    skill: analysis
 bigIdea:
   what: >-
     A partnership doesn't pay income tax. It reports ordinary business income and "separately stated" items on
@@ -98,3 +100,19 @@ flowchart TD
 ```check
 reg-pt-chk2
 ```
+
+## Reviewing Form 1065 classification
+
+Checklist for a prepared Schedule K:
+
+- **Guaranteed payments** (including health premiums paid for a partner) are deducted in computing ordinary business income **and** reported separately on line 4.
+- **Separately stated items** (interest, dividends, §1231, capital gains, §179, charity, tax-exempt income) stay out of ordinary income.
+- **Self-employment earnings** (line 14a): a general partner's share of ordinary income plus guaranteed payments for services. A **limited partner's** distributive share is excluded; only guaranteed payments for services count.
+
+**Resolving diagnostics.** Tax software raises a diagnostic whenever an entry looks unusual. It is a question, not an error. For each one, decide whether:
+
+1. the **input is wrong** — fix the entry;
+2. the entry is **right and the difference is expected** — clear the flag and document why; or
+3. the source documents **cannot answer it** — ask the client.
+
+Clearing a flag without understanding it is how errors reach a filed return.

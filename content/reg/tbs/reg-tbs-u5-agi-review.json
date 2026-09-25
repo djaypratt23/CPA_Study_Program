@@ -1,0 +1,133 @@
+{
+  "id": "reg-tbs-u5-agi-review",
+  "section": "REG",
+  "unitId": "reg-u5",
+  "moduleIds": [
+    "reg-adjustments",
+    "reg-itemized-deductions"
+  ],
+  "pool": "practice",
+  "title": "Review AGI and taxable income against source data — Morgan Lee",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Morgan Lee, a single self-employed consultant, gave the preparer the documents summarized below for 2025. Review the prepared adjustments, deductions and taxable income, then resolve the diagnostics. Tick every amount that is wrong and enter the correct amount. Use the amounts given in the exhibit; they are provided on the exam.",
+  "exhibits": [
+    {
+      "title": "Source data (2025)",
+      "content": "- Schedule C net profit **$60,000**; Morgan has no other income.\n- Self-employment tax computed by the software: **$8,478**.\n- SEP-IRA contribution for 2025: **$11,000**.\n- HSA contribution **$3,000**; the insurer confirms **self-only high-deductible** coverage all year (2025 self-only HSA limit: **$4,300**).\n- Health insurance premiums paid by Morgan: **$6,600**. Morgan was not eligible for any employer plan.\n- Student loan interest paid: **$2,800**. Morgan's income is below the phase-out range.\n- Home mortgage interest **$9,000**; state income tax **$4,000**; real property tax **$3,500**; cash gifts to charity **$1,200**.\n- 2025 standard deduction (single): **$15,750**.\n- The business is not a specified service trade or business, and taxable income is below the QBI threshold."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "agi",
+      "prompt": "Review the prepared amounts.",
+      "preparedLabel": "Per prepared return",
+      "rows": [
+        {
+          "id": "se",
+          "label": "Deductible part of self-employment tax",
+          "prepared": 4239,
+          "answer": 4239,
+          "explanation": "60,000 × 92.35% × 15.3% = 8,478; half = **4,239**. **No error.**"
+        },
+        {
+          "id": "sep",
+          "label": "SEP-IRA contribution",
+          "prepared": 11000,
+          "answer": 11000,
+          "explanation": "The limit is 20% × (60,000 − 4,239) = 11,152, so 11,000 is fully deductible. **No error.**"
+        },
+        {
+          "id": "hsa",
+          "label": "HSA deduction",
+          "prepared": 3000,
+          "answer": 3000,
+          "explanation": "Within the 4,300 self-only limit; HDHP coverage all year. **No error.**"
+        },
+        {
+          "id": "sehi",
+          "label": "Self-employed health insurance deduction",
+          "prepared": 0,
+          "answer": 6600,
+          "explanation": "A self-employed person not eligible for an employer plan deducts health premiums **for AGI** (§162(l)), up to net SE earnings: **6,600**. The preparer put them in itemized medical expenses."
+        },
+        {
+          "id": "sli",
+          "label": "Student loan interest deduction",
+          "prepared": 2800,
+          "answer": 2500,
+          "explanation": "The deduction is capped at **2,500** (§221(b)(1)). Morgan's income is below the phase-out."
+        },
+        {
+          "id": "agi",
+          "label": "Adjusted gross income",
+          "prepared": 38961,
+          "answer": 32661,
+          "explanation": "60,000 − 4,239 − 11,000 − 3,000 − 6,600 − 2,500 = **32,661**."
+        },
+        {
+          "id": "item",
+          "label": "Itemized deductions",
+          "prepared": 21378,
+          "answer": 17700,
+          "explanation": "Mortgage interest 9,000 + state income tax 4,000 + property tax 3,500 + charity 1,200 = **17,700** (more than the 15,750 standard deduction). With the premiums moved to Schedule 1 there are no medical expenses."
+        },
+        {
+          "id": "qbi",
+          "label": "Qualified business income deduction",
+          "prepared": 3517,
+          "answer": 2992,
+          "explanation": "QBI = 60,000 − 4,239 − 6,600 − 11,000 = 38,161; 20% = 7,632. The deduction is limited to 20% × taxable income before QBI (32,661 − 17,700 = 14,961) = **2,992**."
+        },
+        {
+          "id": "ti",
+          "label": "Taxable income",
+          "prepared": 14066,
+          "answer": 11969,
+          "explanation": "14,961 − 2,992 = **11,969**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "Choose the correct resolution for each diagnostic.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Medical expenses include health insurance premiums paid by a self-employed taxpayer.",
+          "options": [
+            "Keep in itemized medical expenses",
+            "Move to the Schedule 1 self-employed health insurance deduction",
+            "Remove — premiums are not deductible"
+          ],
+          "answer": "Move to the Schedule 1 self-employed health insurance deduction",
+          "explanation": "§162(l) allows the premiums as an adjustment for AGI; they cannot also be itemized."
+        },
+        {
+          "id": "d2",
+          "label": "Student loan interest entered (2,800) exceeds the maximum deduction.",
+          "options": [
+            "Limit the deduction to 2,500",
+            "Deduct 2,800 as itemized interest",
+            "Carry the excess forward"
+          ],
+          "answer": "Limit the deduction to 2,500",
+          "explanation": "The excess is neither deductible elsewhere nor carried forward."
+        },
+        {
+          "id": "d3",
+          "label": "HSA deduction claimed — confirm high-deductible health plan coverage.",
+          "options": [
+            "Clear the flag — the source shows self-only HDHP coverage all year",
+            "Remove the HSA deduction",
+            "Treat the contribution as an excess contribution"
+          ],
+          "answer": "Clear the flag — the source shows self-only HDHP coverage all year",
+          "explanation": "The insurer's statement confirms eligibility, so no change is needed."
+        }
+      ]
+    }
+  ]
+}

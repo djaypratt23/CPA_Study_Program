@@ -1,0 +1,136 @@
+{
+  "id": "reg-tbs-u6-book-tax-review",
+  "section": "REG",
+  "unitId": "reg-u6",
+  "moduleIds": [
+    "reg-c-corp-income"
+  ],
+  "pool": "practice",
+  "title": "Review the book-tax reconciliation — Halvorsen Inc.",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Halvorsen Inc., a calendar-year C corporation, has pretax book income of $850,000 for 2025. A staff preparer drafted Schedule M-1 from the adjusted trial balance. Review it, then resolve the diagnostics. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Selected trial balance data (2025)",
+      "content": "| Account | Book amount |\n|---|---:|\n| Pretax book income | 850,000 |\n| Federal income tax expense | 178,500 |\n| Business meals (50% deductible) | 24,000 |\n| Client entertainment (golf outings) | 9,000 |\n| Fines and penalties (EPA violation) | 5,000 |\n| Premiums on officer life insurance (Halvorsen is beneficiary) | 6,000 |\n| Municipal bond interest income | 14,000 |\n| Dividend income from a 25%-owned domestic corporation | 40,000 |\n| Book depreciation | 120,000 |\n| Bad debt expense (allowance method) | 18,000 |\n\nTax depreciation (Form 4562): **$185,000**. Accounts actually written off in 2025: **$11,000**. Total assets at year-end: **$6.2 million**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "m1",
+      "prompt": "Review the prepared Schedule M-1 and taxable income.",
+      "preparedLabel": "Per prepared return",
+      "rows": [
+        {
+          "id": "ni",
+          "label": "Net income (loss) per books",
+          "prepared": 671500,
+          "answer": 671500,
+          "explanation": "850,000 − 178,500 = **671,500**. **No error.**"
+        },
+        {
+          "id": "fit",
+          "label": "Federal income tax per books",
+          "prepared": 178500,
+          "answer": 178500,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "exp",
+          "label": "Expenses recorded on books not deducted on the return",
+          "prepared": 34000,
+          "answer": 39000,
+          "explanation": "Meals 50% (12,000) + entertainment (9,000) + fines (5,000) + officer life insurance (6,000) + excess of bad debt expense over write-offs (7,000) = **39,000**. The preparer missed the fine (§162(f))."
+        },
+        {
+          "id": "tei",
+          "label": "Income recorded on books not included on the return",
+          "prepared": 14000,
+          "answer": 14000,
+          "explanation": "Tax-exempt municipal interest. **No error.**"
+        },
+        {
+          "id": "dep",
+          "label": "Deductions on the return not charged against book income",
+          "prepared": 185000,
+          "answer": 65000,
+          "explanation": "Only the **excess** of tax over book depreciation: 185,000 − 120,000 = **65,000**."
+        },
+        {
+          "id": "drd",
+          "label": "Dividends-received deduction included on Schedule M-1",
+          "prepared": 26000,
+          "answer": 0,
+          "explanation": "The DRD is a **special deduction** taken on Form 1120 line 29b after the M-1 total, so it does not belong on M-1: **0**."
+        },
+        {
+          "id": "m1",
+          "label": "Income per Schedule M-1 (Form 1120 line 28)",
+          "prepared": 659000,
+          "answer": 810000,
+          "explanation": "671,500 + 178,500 + 39,000 − 14,000 − 65,000 = **810,000**."
+        },
+        {
+          "id": "ti",
+          "label": "Taxable income (line 30)",
+          "prepared": 659000,
+          "answer": 784000,
+          "explanation": "810,000 − DRD 26,000 (65% × 40,000, 25%-owned) = **784,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "Choose the correct resolution for each diagnostic.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Book depreciation (120,000) differs from Form 4562 depreciation (185,000).",
+          "options": [
+            "Expected — report the 65,000 excess on Schedule M-1",
+            "Use book depreciation on the return",
+            "Report 185,000 on Schedule M-1"
+          ],
+          "answer": "Expected — report the 65,000 excess on Schedule M-1",
+          "explanation": "Tax depreciation methods differ from book; only the difference reconciles."
+        },
+        {
+          "id": "d2",
+          "label": "The trial balance has a balance in \"Fines and penalties\" but Schedule M-1 has no matching add-back.",
+          "options": [
+            "Add back the fine on Schedule M-1",
+            "Deduct the fine",
+            "Treat it as a capital expenditure"
+          ],
+          "answer": "Add back the fine on Schedule M-1",
+          "explanation": "Fines paid to a government for violating a law are not deductible (§162(f))."
+        },
+        {
+          "id": "d3",
+          "label": "The dividend deduction appears on both Schedule M-1 and line 29b.",
+          "options": [
+            "Remove it from Schedule M-1; claim it on line 29b only",
+            "Remove it from line 29b",
+            "Keep both"
+          ],
+          "answer": "Remove it from Schedule M-1; claim it on line 29b only",
+          "explanation": "Keeping both double-counts the deduction."
+        },
+        {
+          "id": "d4",
+          "label": "Total assets at year-end: $6.2 million. Confirm the reconciliation schedule.",
+          "options": [
+            "File Schedule M-3",
+            "Schedule M-1 is sufficient",
+            "No reconciliation is required"
+          ],
+          "answer": "Schedule M-1 is sufficient",
+          "explanation": "Schedule M-3 is required when total assets are $10 million or more."
+        }
+      ]
+    }
+  ]
+}

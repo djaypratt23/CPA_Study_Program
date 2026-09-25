@@ -156,3 +156,9 @@ New `review` TBS part: the candidate ticks each prepared amount that is wrong an
 | `far-tbs-u3-consolidation-review` | Detect and correct errors in consolidated amounts (upstream profit, intercompany balances, NCI) | ASC 810-10 |
 | `far-tbs-u3-acquisition-review` | Acquisition-date consolidated amounts (full goodwill, NCI at fair value, unrecorded intangibles) | ASC 805-20, 805-30 |
 | `far-tbs-u2-notes-review` | Compare the notes with the statements and support (debt maturities, tax note, interest paid) | ASC 470-10-50, 740-10-50, 230-10-50 |
+| `reg-tbs-u4-gross-income-review` | Review Form 1040 gross income against source documents; resolve diagnostics | §§61, 85, 102, 103, 111, 402(g); pre-2019 alimony rules |
+| `reg-tbs-u5-agi-review` | Review AGI and taxable income against source data; resolve diagnostics | §§162(l), 164, 199A, 221, 223, 404; 2025 standard deduction stated in the exhibit |
+| `reg-tbs-u4-loss-review` | Review losses against source data; resolve loss-limitation diagnostics | §§165(d), 165(h)(5), 469(i), 1211(b), 1212(b) |
+| `reg-tbs-u6-book-tax-review` | Find book-tax differences in a trial balance; check Schedule M-1 for completeness | §§162(f), 243, 264, 274; Form 1120 Sch. M-1/M-3 instructions |
+| `reg-tbs-u7-1120s-review` | Review Form 1120-S classification; resolve diagnostics | §§1363, 1366, 1368; Rev. Rul. 91-26 |
+| `reg-tbs-u7-1065-review` | Review Form 1065 classification; resolve diagnostics | §§702, 707(c), 1402(a)(13); Rev. Rul. 91-26 |
