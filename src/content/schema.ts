@@ -484,7 +484,7 @@ export const ReviewDocFrontmatter = z.object({
   id: z.string(),
   section: SectionId,
   title: z.string(),
-  kind: z.enum(['condensed', 'formulas', 'mnemonics', 'high-yield']),
+  kind: z.enum(['condensed', 'formulas', 'mnemonics', 'high-yield', 'orientation']),
   order: z.number().int().default(0),
 })
 export type ReviewDoc = z.infer<typeof ReviewDocFrontmatter> & { body: string }
