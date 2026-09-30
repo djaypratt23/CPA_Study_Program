@@ -175,3 +175,34 @@ describe('computeStudyState', () => {
     return bundle.modules.find((x) => x.section === 'FAR')!.id
   }
 })
+
+describe('optional off-Blueprint material (P2-2)', () => {
+  const { bundle } = loadContent()
+  const far = bundle.sections.find((s) => s.id === 'FAR')!
+  const empty = { attempts: [], progress: [], srs: [], errors: [], quizSessions: [], tbsSessions: [], examSessions: [] }
+  const base = { ...DEFAULT_SETTINGS, onboarded: true, examDates: { FAR: '2026-12-15' } }
+  const now = new Date('2026-09-25T12:00:00Z')
+  const planned = (s: ReturnType<typeof computeStudyState>) => new Set(s.plan.days.flatMap((d) => d.tasks.map((t) => t.moduleId)).filter(Boolean))
+
+  it('marks the off-Blueprint FAR modules and items optional', () => {
+    expect(bundle.modules.find((m) => m.id === 'far-conceptual-framework')?.optional).toBe(true)
+    expect(bundle.modules.find((m) => m.id === 'far-benefit-plans')?.optional).toBe(true)
+    for (const id of ['far-sec-04', 'far-imp-04', 'far-gov-04', 'aud-sp-07']) expect(bundle.questions[id].optional, id).toBe(true)
+  })
+
+  it('keeps optional material off every mock exam', () => {
+    for (const ex of bundle.exams)
+      for (const t of ex.testlets)
+        for (const id of t.items) {
+          const q = bundle.questions[id]
+          if (q) expect(q.optional || bundle.modules.find((m) => m.id === q.moduleId)?.optional, `${ex.id}/${id}`).toBeFalsy()
+        }
+  })
+
+  it('leaves optional modules out of the plan unless the learner opts in', () => {
+    const off = planned(computeStudyState({ content: bundle, section: far, settings: base, ...empty, now }))
+    const on = planned(computeStudyState({ content: bundle, section: far, settings: { ...base, includeOptional: true }, ...empty, now }))
+    expect(off.has('far-conceptual-framework')).toBe(false)
+    expect(on.has('far-conceptual-framework')).toBe(true)
+  })
+})

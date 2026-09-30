@@ -393,7 +393,8 @@
     "explanation": "ASU 2017-04 (one step): impairment = carrying amount − fair value = 1,200,000 − 1,000,000 = **$200,000**, not exceeding goodwill of 300,000. The old implied-goodwill step 2 no longer applies.",
     "skill": "application",
     "difficulty": 2,
-    "calc": true
+    "calc": true,
+    "optional": true
   },
   {
     "id": "far-x2-12",
@@ -609,6 +610,41 @@
     "explanation": "First reissue: 4,000 × (35 − 30) = 20,000 credit to APIC–TS. Second: 3,000 × (26 − 30) = 12,000 debit to APIC–TS (enough balance, so retained earnings is not touched). Balance = **$8,000**.",
     "skill": "application",
     "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-rec-07",
+    "moduleId": "far-receivables",
+    "pool": "exam",
+    "stem": "A company factors $80,000 of receivables **without recourse**. The factor charges a 2% fee and withholds 4% for sales returns. The transfer qualifies as a sale. What loss on sale is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,600",
+        "explanation": "Correct. Only the 2% fee is a loss; the 4% holdback is a receivable from the factor."
+      },
+      {
+        "id": "b",
+        "text": "$4,800",
+        "explanation": "This includes the holdback, which is expected to be returned.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$3,200",
+        "explanation": "That is the holdback amount.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "None ($0)",
+        "explanation": "The factor's fee is a loss on the sale.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Fee = 80,000 × 2% = 1,600 (loss). Holdback = 80,000 × 4% = 3,200 (due from factor). Cash = 80,000 − 1,600 − 3,200 = 75,200.",
+    "skill": "application",
     "calc": true
   }
 ]

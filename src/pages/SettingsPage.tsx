@@ -134,6 +134,13 @@ export default function SettingsPage() {
           </label>
           <input id="newcards" type="number" min={0} max={100} className="input max-w-32" value={s.newCardsPerDay} onChange={(e) => saveSettings({ newCardsPerDay: Math.max(0, Number(e.target.value) || 0) })} />
         </div>
+        <label className="flex items-start gap-2 text-sm">
+          <input type="checkbox" className="mt-1 accent-blue-700" checked={!!s.includeOptional} onChange={(e) => saveSettings({ includeOptional: e.target.checked })} />
+          <span>
+            Include optional material outside the 2026 Blueprint in my plan, readiness and mixed practice
+            <span className="block text-xs muted">For example the FAR conceptual framework and employee benefit plan modules. Mock exams never include it.</span>
+          </span>
+        </label>
       </section>
 
       <section className="card space-y-4" aria-labelledby="display">

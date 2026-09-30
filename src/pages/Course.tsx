@@ -82,6 +82,7 @@ export default function Course() {
                               <Link to={`/module/${m.id}`} className="min-w-0 text-sm hover:text-blue-700 hover:underline dark:hover:text-blue-400">
                                 {m.title}
                                 <span className="ml-2 text-xs muted">{lesson.minutes} min</span>
+                                {m.optional && <span className="ml-2 chip bg-slate-200 text-xs dark:bg-slate-800">Optional · outside the 2026 Blueprint</span>}
                               </Link>
                             ) : (
                               <span className="min-w-0 text-sm muted">{m.title}</span>

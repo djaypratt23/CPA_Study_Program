@@ -210,3 +210,11 @@ The REG and TCP Blueprints say inflation-indexed amounts are not tested. Every i
 | `reg-c-corp-income` | Corporate credits; general business credit limit and carryovers; `reg-cc-12` | §§38, 39, 901, 904 |
 | `reg-preparer-penalties` | Tax return preparer definition; FBAR; `reg-pen-11`, `-12` | §7701(a)(36); 31 CFR 1010.350; 31 USC 5321 |
 | `reg-contracts` | Discharge of contracts (performance, agreement, operation of law, breach); `reg-ct-11` | Restatement (Second) of Contracts; UCC 2-615 |
+
+## Optional off-Blueprint material (P2-2, confirm)
+
+Marked `optional` per `coverage-FAR.md` §(d) and `coverage-AUD.md` §(d). Optional material stays browsable, but it is left out of the default plan, readiness, mixed practice and diagnostics, and it is never on a mock exam (the validator enforces this). Learners can opt in under Settings.
+
+- Modules: `far-conceptual-framework`, `far-benefit-plans`.
+- Items: `far-gov-04`, `-05`, `-08` (GASB fund balance); `far-imp-04`, `-05`, `-08`, `far-int-09`, `far-x2-11` (goodwill); `far-sec-04` to `-07`, `-09`, `-10`, `far-x1-11` (segments); `far-x1-01`, `far-x1-18` (exam items in the optional modules); `aud-sp-07` (comfort letters).
+- `far-mock-1`: the four optional exam items are replaced by in-scope items moved from the practice pool with the same key letter: `far-x1-01` → `far-scf-01`, `far-x1-18` → `far-iso-01`, `far-x1-11` → `far-eps-03`, `far-x2-11` → `far-rec-07`.

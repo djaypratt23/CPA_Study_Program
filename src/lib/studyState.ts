@@ -36,6 +36,8 @@ export interface ModuleState {
   lessonDone: boolean
   mastery: MasteryInfo
   practiceCount: number
+  /** Outside the current Blueprint (P2-2). */
+  optional?: boolean
 }
 
 export interface NextAction {
@@ -99,9 +101,15 @@ export function computeStudyState(inp: StudyInputs): StudyState {
       lessonDone,
       mastery: computeMastery(list, lessonDone),
       practiceCount: list.filter((a) => a.itemType === 'mcq' && a.mode !== 'lesson').length,
+      ...(m.optional ? { optional: true } : {}),
     }
   })
-  const available = modules.filter((m) => m.available)
+  // Off-Blueprint (optional) modules stay browsable but are left out of the plan, readiness and progress
+  // unless the learner opts in (P2-2).
+  const includeOptional = !!inp.settings.includeOptional
+  const available = modules.filter((m) => m.available && (includeOptional || !m.optional))
+  const availableIds = new Set(available.map((m) => m.id))
+  const optionalItem = (itemId: string) => !includeOptional && !!inp.content.questions[itemId]?.optional
 
   // Blocked practice counts as "done" once the learner has answered >= 8 non-lesson questions in the module.
   const tbsDone = new Set(inp.tbsSessions.filter((s) => s.submittedAt).map((s) => s.id))
@@ -114,7 +122,7 @@ export function computeStudyState(inp: StudyInputs): StudyState {
   const dueCount = inp.srs.filter((s) => s.section === sectionId && !s.suspended && s.due <= now.toISOString()).length
   const mockTaken = inp.examSessions.some((e) => e.section === sectionId && e.finishedAt)
   // Readiness by blueprint area.
-  const first = firstAttempts(inp.attempts.filter((a) => a.section === sectionId))
+  const first = firstAttempts(inp.attempts.filter((a) => a.section === sectionId && availableIds.has(a.moduleId) && !optionalItem(a.itemId)))
   const scoring = first.filter((a) => a.itemType === 'mcq')
   const tbsFirst = first.filter((a) => a.itemType === 'tbs')
   const modArea = new Map(mods.map((m) => [m.id, m.areaId]))
@@ -123,7 +131,7 @@ export function computeStudyState(inp: StudyInputs): StudyState {
       areaId: a.id,
       title: a.title,
       weight: (a.allocation.min + a.allocation.max) / 2,
-      modules: modules.filter((m) => m.areaId === a.id).map((m) => ({ id: m.id, lessonDone: m.lessonDone, status: m.mastery.status })),
+      modules: available.filter((m) => m.areaId === a.id).map((m) => ({ id: m.id, lessonDone: m.lessonDone, status: m.mastery.status })),
       attempts: scoring.filter((x) => modArea.get(x.moduleId) === a.id),
       tbsAttempts: tbsFirst.filter((x) => modArea.get(x.moduleId) === a.id),
       weighting: inp.section.exam.weighting,

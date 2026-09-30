@@ -90,9 +90,15 @@ export function questionsForModule(id: string, pool: Mcq['pool'] = 'practice'): 
   return Object.values(content.questions).filter((q) => q.moduleId === id && q.pool === pool)
 }
 
-export function practiceQuestions(section?: string): Mcq[] {
+/** Inside the current Blueprint: neither the item nor its module is marked optional (P2-2). */
+export function inScope(q: Mcq): boolean {
+  return !q.optional && !getModule(q.moduleId)?.optional
+}
+
+/** Practice-pool questions, excluding off-Blueprint (optional) material unless asked for. */
+export function practiceQuestions(section?: string, includeOptional = false): Mcq[] {
   return Object.values(content.questions).filter(
-    (q) => q.pool === 'practice' && (!section || getModule(q.moduleId)?.section === section),
+    (q) => q.pool === 'practice' && (!section || getModule(q.moduleId)?.section === section) && (includeOptional || inScope(q)),
   )
 }
 

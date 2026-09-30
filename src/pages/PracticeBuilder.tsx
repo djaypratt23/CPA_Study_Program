@@ -28,7 +28,9 @@ export default function PracticeBuilder() {
   const [mode, setMode] = useState<'tutor' | 'test'>('tutor')
   const [timed, setTimed] = useState(false)
 
-  const pool = useMemo(() => practiceQuestions(section.id), [section.id])
+  // Explicitly chosen modules are allowed even if optional; off-Blueprint items inside in-scope modules only when opted in (P2-2).
+  const includeOptional = !!settings.includeOptional
+  const pool = useMemo(() => practiceQuestions(section.id, true).filter((q) => includeOptional || !q.optional), [section.id, includeOptional])
   const hist = useMemo(() => historyByItem(attempts ?? []), [attempts])
   const meta = useMemo(() => new Map((metaRows ?? []).map((m) => [m.itemId, m])), [metaRows])
   const withQuestions = new Set(pool.map((q) => q.moduleId))

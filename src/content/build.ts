@@ -36,6 +36,7 @@ export interface ModuleMeta {
   unitId: string
   order: number // global order within the section
   blueprint?: string[] // Blueprint task references, when tagged
+  optional?: boolean // outside the current Blueprint (P2-2)
 }
 
 export interface ContentBundle {
@@ -131,7 +132,7 @@ export function buildContent(files: RawFiles): BuildResult {
       for (const u of a.units)
         for (const m of u.modules) {
           if (moduleIndex.has(m.id)) errors.push(`sections/${s.id}: module ${m.id} listed twice`)
-          const meta: ModuleMeta = { id: m.id, title: m.title, section: s.id, areaId: a.id, unitId: u.id, order: order++, blueprint: m.blueprint }
+          const meta: ModuleMeta = { id: m.id, title: m.title, section: s.id, areaId: a.id, unitId: u.id, order: order++, blueprint: m.blueprint, ...(m.optional ? { optional: true } : {}) }
           moduleIndex.set(m.id, meta)
           bundle.modules.push(meta)
         }
@@ -290,6 +291,7 @@ export function buildContent(files: RawFiles): BuildResult {
           const q = bundle.questions[id]
           if (!q) errors.push(`exam ${ex.id}: question ${id} not found`)
           else if (q.pool !== 'exam') errors.push(`exam ${ex.id}: question ${id} should be exam-pool`)
+          else if (q.optional || moduleIndex.get(q.moduleId)?.optional) errors.push(`exam ${ex.id}: question ${id} is outside the Blueprint (optional) and should not be on a mock`)
         } else {
           const tb = bundle.tbs[id]
           if (!tb) errors.push(`exam ${ex.id}: TBS ${id} not found`)

@@ -36,6 +36,8 @@ export const ModuleRef = z.object({
   title: z.string().min(3),
   /** Optional Blueprint task references (e.g. "II.B"), for automated coverage checks. */
   blueprint: z.array(z.string().regex(/^[IVX]+(\.[A-Z](\.\d+)?)?$/, 'blueprint refs look like II.B or III.E.6')).optional(),
+  /** Outside the current Blueprint (P2-2): browsable, but left out of the default plan, readiness and mocks. */
+  optional: z.boolean().optional(),
 })
 
 export const UnitConfig = z.object({
@@ -222,6 +224,8 @@ export const Mcq = z
     calc: z.boolean().default(false),
     needsReview: z.boolean().default(false),
     reviewNote: z.string().optional(),
+    /** Outside the current Blueprint (P2-2): kept for reference, excluded from mixed sets, diagnostics and mocks. */
+    optional: z.boolean().default(false),
   })
   .superRefine((q, ctx) => {
     const ids = q.choices.map((c) => c.id)

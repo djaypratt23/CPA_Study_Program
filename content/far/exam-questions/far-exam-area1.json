@@ -33,7 +33,8 @@
     "explanation": "Fundamental: relevance (predictive value, confirmatory value, materiality) and faithful representation (complete, neutral, free from error). Enhancing: comparability, verifiability, timeliness, understandability.",
     "skill": "remembering",
     "difficulty": 2,
-    "calc": false
+    "calc": false,
+    "optional": true
   },
   {
     "id": "far-x1-02",
@@ -393,7 +394,8 @@
     "explanation": "Three 10% tests (any one qualifies): revenue (including intersegment), profit/loss (greater of absolute combined profit or combined loss), and assets. Reportable segments' external revenue must also reach 75% of consolidated revenue.",
     "skill": "remembering",
     "difficulty": 2,
-    "calc": false
+    "calc": false,
+    "optional": true
   },
   {
     "id": "far-x1-12",
@@ -645,6 +647,112 @@
     "explanation": "DB plan statements: statement of net assets available for benefits, statement of changes in net assets available for benefits, and information about the actuarial present value of accumulated plan benefits and changes in it.",
     "skill": "remembering",
     "difficulty": 2,
-    "calc": false
+    "calc": false,
+    "optional": true
+  },
+  {
+    "id": "far-scf-01",
+    "moduleId": "far-cash-flows",
+    "pool": "exam",
+    "stem": "Net income was $200,000. Depreciation was $35,000; accounts receivable increased $18,000; inventory increased $12,000; accounts payable increased $9,000; and there was a $6,000 loss on sale of land. What is net cash provided by operating activities (indirect method)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$220,000",
+        "explanation": "Correct. 200,000 + 35,000 + 6,000 − 18,000 − 12,000 + 9,000 = 220,000."
+      },
+      {
+        "id": "b",
+        "text": "$208,000",
+        "explanation": "This subtracts the loss instead of adding it back.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$280,000",
+        "explanation": "This adds the increases in AR and inventory instead of subtracting them (200,000 + 35,000 + 6,000 + 18,000 + 12,000 + 9,000).",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$214,000",
+        "explanation": "This omits the add-back of the loss on sale of land.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "200,000 + 35,000 depreciation + 6,000 loss − 18,000 AR − 12,000 inventory + 9,000 AP = **220,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iso-01",
+    "moduleId": "far-income-statement-oci",
+    "pool": "exam",
+    "stem": "A company has sales $900,000; COGS $540,000; selling expenses $120,000; administrative expenses $90,000; interest expense $15,000; gain on sale of equipment $5,000. What is operating income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$140,000",
+        "explanation": "This also subtracts interest and adds the gain — those are non-operating.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$360,000",
+        "explanation": "That is gross profit, before operating expenses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$240,000",
+        "explanation": "This omits administrative expenses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$150,000",
+        "explanation": "Correct. 900,000 − 540,000 − 120,000 − 90,000 = 150,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Gross profit 900,000 − 540,000 = 360,000. Operating income = 360,000 − 120,000 − 90,000 = **150,000**. Interest and the equipment gain are other income/expense.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-03",
+    "moduleId": "far-eps",
+    "pool": "exam",
+    "stem": "Net income was $1,200,000. There are 20,000 shares of $100 par, 5% **cumulative** preferred stock; no dividends were declared this year or last year. Weighted-average common shares: 400,000. What is basic EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2.75",
+        "explanation": "Correct. (1,200,000 − 100,000) ÷ 400,000 = 2.75."
+      },
+      {
+        "id": "b",
+        "text": "$3.00",
+        "explanation": "Cumulative preferred dividends are subtracted even if not declared.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$2.50",
+        "explanation": "This subtracts two years of dividends; arrears from the prior year were already deducted last year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$2.95",
+        "explanation": "This subtracts only 5% of the $400,000 of common shares rather than the preferred dividend.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Current-year cumulative dividend = 20,000 × $100 × 5% = 100,000, subtracted whether or not declared. Basic EPS = (1,200,000 − 100,000) ÷ 400,000 = **$2.75**.",
+    "skill": "application",
+    "calc": true
   }
 ]
