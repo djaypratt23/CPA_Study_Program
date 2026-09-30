@@ -13,6 +13,8 @@ objectives:
   - text: Determine remedies, risk of loss, and warranties in sales of goods.
     skill: application
     task: Apply UCC Article 2 rules on performance and remedies
+  - text: Identify the ways a contract is discharged, including by performance, agreement, operation of law and breach.
+    skill: remembering
 bigIdea:
   what: >-
     A contract is an enforceable promise: offer + acceptance + consideration, between parties with capacity, for a
@@ -99,3 +101,14 @@ insight: The statute of frauds asks what kind of contract it is — not how big 
 ```check
 reg-ct-chk2
 ```
+
+## Discharge of contracts
+
+| How | Examples |
+|---|---|
+| **Performance** | Complete performance; **substantial performance** (discharges the duty, less damages for minor deviations) |
+| **Agreement** | **Mutual rescission**; **novation** (a new party replaces an original party with everyone's consent, releasing the original party); **accord and satisfaction** (agreeing to accept a different performance, discharged when it is rendered); release |
+| **Operation of law** | Objective **impossibility** (death of a party to a personal-services contract, destruction of the subject matter, supervening illegality); **commercial impracticability** (UCC); **frustration of purpose**; discharge in bankruptcy; the statute of limitations bars the remedy |
+| **Breach** | A **material breach** discharges the non-breaching party's duties; an anticipatory repudiation allows immediate suit |
+
+Contrast **assignment and delegation**: a party who delegates duties remains liable unless a novation releases it.

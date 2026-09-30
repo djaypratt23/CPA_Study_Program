@@ -447,5 +447,40 @@
     "explanation": "No SE tax is due when net SE earnings are under $400.",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "reg-ot-11",
+    "pool": "practice",
+    "stem": "For 2025, a single taxpayer has taxable income of $60,000, including $10,000 of qualified dividends. Use these given 2025 amounts: ordinary rates of 10% up to $11,925, 12% up to $48,475 and 22% up to $103,350; the 0% rate on qualified dividends applies only to taxable income up to $48,350, and 15% applies above that. What is the regular tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,114",
+        "explanation": "This taxes the dividends at ordinary rates.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$7,414",
+        "explanation": "Correct. Ordinary income of 50,000: 1,192.50 + 4,386 + 22% × 1,525 (335.50) = 5,914. The dividends stack from 50,000 to 60,000, all above 48,350, so 15% × 10,000 = 1,500. Total 7,414."
+      },
+      {
+        "id": "c",
+        "text": "$5,914",
+        "explanation": "This taxes the dividends at 0%; they sit above the 0% breakpoint.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$7,914",
+        "explanation": "This taxes the dividends at 20%.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Tax ordinary income on the schedule, then stack preferential income on top to find its rate.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

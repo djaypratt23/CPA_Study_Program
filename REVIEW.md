@@ -205,3 +205,8 @@ The REG and TCP Blueprints say inflation-indexed amounts are not tested. Every i
 | `aud-quality-management` | PCAOB QC 1000 (effective December 15, 2026); `aud-qm-11` | QC 1000 |
 | `aud-modified-opinions` | ICFR opinion and report form in an integrated audit; `aud-mo-11`, `-12` | AS 2201; AU-C 940 |
 | `aud-professional-standards` | Auditor biases and skepticism; `aud-ps-11` | — |
+| `reg-filing-status` | Decedent's final return, IRD; `reg-fs-11` | §§691, 6012(b), 6013(a)(2) |
+| `reg-amt-other-taxes` | Regular-tax computation with given schedules and preferential rates; `reg-ot-11` | §1(h); Rev. Proc. 2024-40 (as amended by P.L. 119-21) |
+| `reg-c-corp-income` | Corporate credits; general business credit limit and carryovers; `reg-cc-12` | §§38, 39, 901, 904 |
+| `reg-preparer-penalties` | Tax return preparer definition; FBAR; `reg-pen-11`, `-12` | §7701(a)(36); 31 CFR 1010.350; 31 USC 5321 |
+| `reg-contracts` | Discharge of contracts (performance, agreement, operation of law, breach); `reg-ct-11` | Restatement (Second) of Contracts; UCC 2-615 |

@@ -14,6 +14,8 @@ objectives:
   - text: Apply the net investment income tax, additional Medicare tax, kiddie tax, and estimated tax rules.
     skill: application
     task: Determine other taxes and estimated tax requirements
+  - text: Compute regular income tax using a given rate schedule, including the preferential rates on qualified dividends and long-term capital gains.
+    skill: application
 bigIdea:
   what: >-
     Beyond regular income tax, individuals can owe self-employment tax (Social Security and Medicare for the
@@ -91,3 +93,10 @@ AMT caused by timing items (such as ISOs) creates a **minimum tax credit** that 
 ```check
 reg-ot-chk2
 ```
+
+## Computing the regular tax
+
+1. Split taxable income into **ordinary income** and the **preferential portion** (qualified dividends plus net long-term capital gain).
+2. Apply the ordinary **rate schedule** (given on the exam) to the ordinary income.
+3. Stack the preferential income **on top of** ordinary income and tax it at 0%, 15% or 20% depending on where it falls relative to the breakpoints (given on the exam).
+4. Add the unrecaptured §1250 gain (25% maximum) and collectibles gain (28% maximum) layers when present.

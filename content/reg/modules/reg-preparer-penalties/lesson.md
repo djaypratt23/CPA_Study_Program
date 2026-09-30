@@ -14,6 +14,8 @@ objectives:
   - text: Identify the preparer penalties for unreasonable positions and procedural failures.
     skill: remembering
     task: Recall tax preparer penalties
+  - text: Identify who is a tax return preparer, and the FBAR filing requirement and penalties for foreign financial accounts.
+    skill: remembering
 bigIdea:
   what: >-
     Penalties enforce the tax system: late filing and late payment penalties for procedural failures, accuracy
@@ -112,3 +114,13 @@ reg-pen-chk1
 ```check
 reg-pen-chk2
 ```
+
+## Who is a tax return preparer?
+
+A **tax return preparer** is any person who prepares **for compensation**, or employs others to prepare, all or a **substantial portion** of a tax return or claim for refund (§7701(a)(36)). A **signing** preparer has primary responsibility and signs; a **nonsigning** preparer prepares a substantial portion without signing. Every paid preparer needs a **PTIN**.
+
+Not preparers: people who only type or provide clerical help, an employee preparing the employer's own return, a fiduciary preparing a return for the trust or estate, and anyone preparing a return **without compensation**.
+
+## Foreign financial accounts (FBAR)
+
+A U.S. person with a financial interest in, or signature authority over, foreign financial accounts whose **aggregate** value exceeded **$10,000 at any time** during the year must file **FinCEN Form 114** electronically with FinCEN (not with the tax return). It is due April 15, with an automatic extension to October 15. Penalties: a civil penalty for **non-willful** failures (inflation-adjusted, applied per report) and, for **willful** failures, the greater of an inflation-adjusted amount or **50% of the account balance**, plus possible criminal penalties. Form 8938 (FATCA) is a separate requirement with higher thresholds, filed with the return.

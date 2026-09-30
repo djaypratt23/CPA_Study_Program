@@ -16,6 +16,8 @@ objectives:
     task: Recall corporate compliance requirements
   - text: Review a C corporation's trial balance for book-tax differences and the completeness of Schedule M-1, and resolve related diagnostics.
     skill: analysis
+  - text: Identify the main credits available to C corporations and the general business credit limitation and carryover rules.
+    skill: remembering
 bigIdea:
   what: >-
     A C corporation pays a flat 21% tax on its taxable income. Taxable income starts from book income and is adjusted
@@ -128,3 +130,9 @@ Schedule M-1 ends at taxable income **before** special deductions (Form 1120 lin
 3. the source documents **cannot answer it** — ask the client.
 
 Clearing a flag without understanding it is how errors reach a filed return.
+
+## Corporate tax credits
+
+- **General business credit** (a combination of credits such as the research credit and the work opportunity credit): limited to net income tax minus the greater of the tentative minimum tax or 25% of net regular tax liability above $25,000. Unused credits carry **back 1 year and forward 20**.
+- **Foreign tax credit:** limited to U.S. tax on foreign-source income; excess carries back 1 year and forward 10.
+- Credits reduce tax dollar for dollar, so they are worth more than deductions of the same amount.
