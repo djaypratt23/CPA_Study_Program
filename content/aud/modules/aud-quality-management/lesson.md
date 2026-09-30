@@ -13,6 +13,8 @@ objectives:
   - text: Distinguish peer review and PCAOB inspections.
     skill: remembering
     task: Recall the external monitoring of accounting firms
+  - text: Identify the key requirements of PCAOB QC 1000 for registered firms' quality control systems.
+    skill: remembering
 bigIdea:
   what: >-
     Quality management moves firms from following a checklist of policies to running a risk-based system: set
@@ -113,3 +115,13 @@ consultation on difficult or contentious matters; and resolving differences of o
 ```check
 aud-qm-chk2
 ```
+
+## PCAOB QC 1000
+
+QC 1000, *A Firm's System of Quality Control*, replaces the PCAOB's legacy QC standards for registered firms. Its effective date has been postponed to **December 15, 2026**. Key features:
+
+- A **risk-based** system: the firm sets quality objectives, identifies and assesses quality risks, and designs responses, across components that include governance and leadership, ethics and independence, acceptance and continuance, engagement performance, resources, information and communication, and monitoring and remediation.
+- An **annual evaluation** of the system as of September 30, reported to the PCAOB on **Form QC** and certified by firm leadership.
+- Firms that audit more than 100 issuers must also establish an **external quality control function** (an independent person with oversight of the QC system).
+
+It parallels the AICPA's SQMS No. 1 for non-issuer practices.

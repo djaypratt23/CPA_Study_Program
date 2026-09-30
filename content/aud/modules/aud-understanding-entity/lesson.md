@@ -13,6 +13,8 @@ objectives:
   - text: Distinguish assertion-level from financial-statement-level risks and apply the stand-back requirement.
     skill: analysis
     task: Identify risks of material misstatement at the financial statement and assertion levels
+  - text: Understand basic economic concepts (supply and demand, elasticity, profit maximization, business cycles and economic indicators) and entity corporate governance responsibilities under the Sarbanes-Oxley Act.
+    skill: remembering
 bigIdea:
   what: >-
     Before assessing risk, the auditor learns how the business works: its industry, how it makes money, how it is
@@ -99,3 +101,23 @@ aud-ue-chk2
 - **Inherent risk** is assessed for every relevant assertion.
 - **Control risk** is assessed separately. If the auditor does not plan to test operating effectiveness, control risk is at **maximum** — the RMM then equals the inherent risk assessment.
 - **Stand-back:** for material items where no relevant assertion was identified, re-evaluate that conclusion. Material items always get substantive procedures.
+
+## Economic conditions
+
+- **Supply and demand.** Price moves toward the level where quantity demanded equals quantity supplied. A rise in demand (or fall in supply) raises the equilibrium price.
+- **Price elasticity of demand** = % change in quantity ÷ % change in price. **Elastic** (greater than 1): raising price lowers total revenue. **Inelastic** (less than 1): raising price raises total revenue.
+- **Profit maximization:** produce until **marginal revenue = marginal cost**.
+- **Business cycle:** expansion → peak → contraction (recession) → trough. **Leading** indicators move before the economy (stock prices, building permits, new orders); **coincident** indicators move with it (employment, industrial production, personal income); **lagging** indicators move after it (unemployment duration, the prime rate, inventory-to-sales ratios).
+
+The auditor uses this understanding to assess risks — for example, a customer base in a contracting, price-elastic market raises inventory valuation and credit loss risk.
+
+## Sarbanes-Oxley governance responsibilities (issuers)
+
+| Section | Responsibility |
+|---|---|
+| §301 | An independent **audit committee** appoints, compensates and oversees the auditor and handles complaints (whistleblowers) |
+| §302 | The **CEO and CFO certify** each quarterly and annual report, including disclosure controls and procedures |
+| §404(a) | **Management assesses** and reports on internal control over financial reporting |
+| §404(b) | The **auditor attests** to ICFR (accelerated and large accelerated filers) |
+| §407 | Disclose whether the audit committee includes a **financial expert** |
+| §906 | Criminal penalties for knowingly false certifications |

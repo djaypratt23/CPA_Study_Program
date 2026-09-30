@@ -196,3 +196,12 @@ The REG and TCP Blueprints say inflation-indexed amounts are not tested. Every i
 | `tcp-individual-planning` | Investment risk, insurance, beneficiary designations; `tcp-ip-12`, `-13` | §101; SECURE Act 10-year rule |
 | `tcp-partnership-formation` | Recourse/nonrecourse allocation, partner loans; `tcp-pf-13` | §752; Reg. 1.752-2, -3 |
 | `tcp-deferral-transactions` | §1033 involuntary conversions; §267(c) constructive ownership; `tcp-dt-11`, `-12` | §§1033, 267 |
+| `aud-government-compliance` (new module) | GAGAS engagements and reporting, single audits (2024 Uniform Guidance: $1,000,000 threshold, 40%/20% coverage, $25,000 questioned costs), AU-C 935, AT-C 315, ERISA plan audits and DOL independence; 12 MCQs (`aud-gov-*`) and 6 flashcards | GAGAS 2024; 2 CFR 200 Subpart F; AU-C 703, 935; AT-C 315; 29 CFR 2509.75-9 |
+| `aud-data-analytics` | Relational data, measurement scales, data requests and cleaning, PCAOB technology-assisted analysis; `aud-da-13` to `-15` | AS 1105, AS 2301 (as amended 2024) |
+| `aud-understanding-entity` | Economics (elasticity, business cycle, indicators); SOX §§301, 302, 404, 407, 906; `aud-ue-11` to `-13` | SOX |
+| `aud-internal-control` | COSO objectives and inherent limitations; `aud-ic-12` | COSO 2013 |
+| `aud-it-controls` | IT infrastructure, cloud services, SOC 1 type 2; `aud-itc-11` | AU-C 402; AS 2601 |
+| `aud-evidence-assertions` | AS 2310 (revised) confirmation requirements; `aud-ev-12` | AS 2310 (2023) |
+| `aud-quality-management` | PCAOB QC 1000 (effective December 15, 2026); `aud-qm-11` | QC 1000 |
+| `aud-modified-opinions` | ICFR opinion and report form in an integrated audit; `aud-mo-11`, `-12` | AS 2201; AU-C 940 |
+| `aud-professional-standards` | Auditor biases and skepticism; `aud-ps-11` | — |

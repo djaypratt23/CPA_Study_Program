@@ -15,6 +15,8 @@ objectives:
     task: Evaluate the results of analytical procedures
   - text: Use data-analytic outputs to identify notable items and select responses, and evaluate explanations for differences found by analytical procedures.
     skill: analysis
+  - text: Explain relational data structures and measurement scales, and determine how to request, transform and clean data for analysis.
+    skill: application
 bigIdea:
   what: >-
     Audit data analytics (ADAs) analyze entire populations with software — sorting, filtering, matching, and
@@ -112,3 +114,22 @@ An exception report is a starting point, not a conclusion. For each flag, decide
 4. If the difference left after corroborated explanations is below the threshold, the procedure supports the balance. If it is above, perform other substantive procedures or consider a misstatement.
 
 **Final analytical procedures** near the end of the audit may reveal a previously unrecognized risk (for example, receivables growing much faster than revenue). The auditor then revises the risk assessment and performs more procedures.
+
+## Requesting and preparing data
+
+**Relational databases.** Data sit in **tables** (entities such as customers or invoices) made of **records** (rows) and **fields** (columns). A **primary key** uniquely identifies each record; a **foreign key** in one table points to the primary key of another, linking, for example, invoice lines to invoices. **Normalization** splits data into related tables so each fact is stored once, avoiding redundancy and update errors.
+
+**Measurement scales.**
+
+| Scale | Meaning | Example |
+|---|---|---|
+| Nominal | Categories with no order | Customer region, GL account type |
+| Ordinal | Ranked categories; intervals not equal | Credit rating, risk level (low/medium/high) |
+| Interval | Equal intervals, no true zero | Temperature, calendar dates |
+| Ratio | Equal intervals with a true zero | Dollar amounts, quantities, days outstanding |
+
+**Data requests.** Specify the system and tables, the **fields** needed, the **period**, the **format** (for example, delimited text) and **control totals** (record counts and amount totals) so the auditor can check completeness against the general ledger.
+
+**Transforming and cleaning** ("extract, transform, load"): standardize date and number formats, remove duplicates, handle blank or invalid values, join tables on their keys, and **reconcile** the cleaned data to control totals before analyzing it.
+
+**PCAOB technology-assisted analysis.** Amendments to AS 1105 and AS 2301 (effective for fiscal years beginning on or after December 15, 2025) require the auditor to evaluate the reliability of information used in technology-assisted analysis and to investigate items the analysis identifies for further investigation, individually or in groups, when designing substantive procedures.

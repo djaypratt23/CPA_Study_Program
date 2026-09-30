@@ -509,5 +509,107 @@
     "explanation": "When analytics output is dominated by expected items, refine the parameters before investigating.",
     "skill": "analysis",
     "difficulty": 2
+  },
+  {
+    "id": "aud-da-13",
+    "pool": "practice",
+    "stem": "In a sales database, the Invoice table contains a CustomerID field that matches the unique identifier in the Customer table. In the Invoice table, CustomerID is best described as which of the following?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A foreign key",
+        "explanation": "Correct. A foreign key in one table refers to the primary key of another table, linking the records."
+      },
+      {
+        "id": "b",
+        "text": "A primary key",
+        "explanation": "CustomerID uniquely identifies customers in the Customer table, not invoices in the Invoice table.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "A calculated field",
+        "explanation": "CustomerID is stored data, not a calculation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A normalization error",
+        "explanation": "Linking tables by keys is the purpose of normalization.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Primary keys identify records within a table; foreign keys link tables.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-da-14",
+    "pool": "practice",
+    "stem": "Which data field is measured on a ratio scale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Customer credit rating (A, B, C)",
+        "explanation": "Credit ratings are ranked categories: an ordinal scale.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Invoice amount in dollars",
+        "explanation": "Correct. Dollar amounts have equal intervals and a true zero: a ratio scale."
+      },
+      {
+        "id": "c",
+        "text": "Sales region code",
+        "explanation": "Region codes are unordered categories: a nominal scale.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Invoice date",
+        "explanation": "Dates have equal intervals but no true zero: an interval scale.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Nominal, ordinal, interval, ratio: only ratio data have a true zero.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-da-15",
+    "pool": "practice",
+    "stem": "After extracting a full year of journal entries from a client's ERP system, what should the auditor do before running analytics on the data?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Delete entries with blank descriptions",
+        "explanation": "Blank descriptions may be exactly what the analysis should flag.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Ask management to confirm the results",
+        "explanation": "Management confirmation does not test the completeness of the data.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Agree counts and totals to the GL",
+        "explanation": "Correct. Agreeing the extracted data to control totals establishes that the data set is complete before it is analyzed."
+      },
+      {
+        "id": "d",
+        "text": "Select a random sample of entries",
+        "explanation": "The point of full-population analytics is to test all entries once the data are validated.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Validate completeness and accuracy of extracted data against control totals before analysis.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

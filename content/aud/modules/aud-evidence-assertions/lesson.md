@@ -15,6 +15,8 @@ objectives:
     task: Recall audit documentation requirements
   - text: Conclude whether sufficient appropriate audit evidence has been obtained and identify the evidence still needed.
     skill: evaluation
+  - text: Apply the PCAOB confirmation requirements of AS 2310 (as revised).
+    skill: application
 bigIdea:
   what: >-
     Evidence must be sufficient (enough of it) and appropriate (relevant to the assertion and reliable). Assertions
@@ -108,3 +110,12 @@ Before concluding on an area, ask two separate questions:
 - **Sufficient?** Is there enough of it, given the assessed risk? A procedure performed on far fewer items than planned is the right kind of evidence, just not enough.
 
 The fix differs: insufficient evidence needs **more of the same**; inappropriate evidence needs **different** evidence. More copies of internally generated invoices will never prove that goods shipped. If the auditor cannot obtain the evidence (for example, management forbids a letter to legal counsel), the result is a scope limitation.
+
+## PCAOB AS 2310 (revised) confirmations
+
+For audits of issuers (fiscal years ending on or after June 15, 2025), AS 2310 requires the auditor to:
+
+- **confirm cash** held by third parties and **accounts receivable** arising from transactions with customers, or — for receivables — document why confirmation would not be feasible or effective and obtain other evidence from knowledgeable external sources;
+- keep **control** of the confirmation process (selecting items, sending and receiving requests);
+- not use **negative confirmations** as the only substantive procedure for a balance;
+- perform **alternative procedures** (for example, examining subsequent cash receipts and shipping documents) when no response is received.
