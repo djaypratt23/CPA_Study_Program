@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { PageHeader } from '../components/ui'
 import { content, contentErrors } from '../content'
 import type { SectionId } from '../content/schema'
-import { exportBackup, importBackup, parseBackup, resetAll, saveSettings, TABLES } from '../db'
+import { db, exportBackup, importBackup, parseBackup, resetAll, saveSettings, TABLES } from '../db'
+import { attemptsToCsv } from '../lib/csv'
 import { TABLE_LABELS } from '../db/backupSchema'
 import { usePersistence } from '../lib/storage'
 import { useSettingsOrDefault } from '../hooks/useStore'
@@ -26,6 +27,16 @@ export default function SettingsPage() {
     a.download = name
     a.click()
     URL.revokeObjectURL(a.href)
+  }
+
+  const doCsv = async () => {
+    const blob = new Blob([attemptsToCsv(await db.attempts.toArray())], { type: 'text/csv;charset=utf-8' })
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(blob)
+    a.download = `cpa-study-attempts-${dayKey()}.csv`
+    a.click()
+    URL.revokeObjectURL(a.href)
+    setMsg('Attempts exported as CSV (one row per answered question or simulation).')
   }
 
   const doExport = async () => {
@@ -180,6 +191,9 @@ export default function SettingsPage() {
         <div className="flex flex-wrap gap-2">
           <button className="btn-primary" onClick={doExport}>
             Export backup (JSON)
+          </button>
+          <button className="btn-secondary" onClick={doCsv}>
+            Export attempts (CSV)
           </button>
           <button className="btn-secondary" onClick={() => fileRef.current?.click()}>
             Import backup
