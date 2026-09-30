@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import InlineQuestion from '../components/InlineQuestion'
 import LessonMarkdown from '../components/LessonMarkdown'
 import { ReviewBadge, StatusChip } from '../components/ui'
-import { areaTitle, content, getModule, questionsForModule, unitTitle } from '../content'
+import { areaTitle, content, ensureAllSections, getModule, questionsForModule, unitTitle } from '../content'
 import { SKILL_LABELS } from '../content/schema'
 import { db } from '../db'
 import { addHighlight, completeLesson, setLastLocation, setModuleNotes, touchModule } from '../db/actions'
@@ -73,6 +73,7 @@ export default function ModulePage() {
     return () => document.removeEventListener('selectionchange', onSel)
   }, [])
 
+  if (!lesson && ensureAllSections()) return <p className="muted">Loading…</p>
   if (!lesson || !meta) {
     return (
       <div className="card">

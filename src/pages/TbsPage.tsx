@@ -7,7 +7,7 @@ import Icon from '../components/Icon'
 import TbsView from '../components/TbsView'
 import Clock from '../components/Timer'
 import { PageHeader } from '../components/ui'
-import { content, unitTitle } from '../content'
+import { content, ensureAllSections, unitTitle } from '../content'
 import { db } from '../db'
 import { recordTbsAttempt, setLastLocation } from '../db/actions'
 import { scoreTbs, type TbsResponses } from '../lib/tbsScoring'
@@ -43,7 +43,7 @@ export default function TbsPage() {
     return () => clearInterval(t)
   }, [submitted, ready])
 
-  if (!tbs) return <p>Simulation not found.</p>
+  if (!tbs) return ensureAllSections() ? <p className="muted">Loading…</p> : <p>Simulation not found.</p>
   if (session === undefined) return <p className="muted">Loading…</p>
 
   const save = (r: TbsResponses) => {

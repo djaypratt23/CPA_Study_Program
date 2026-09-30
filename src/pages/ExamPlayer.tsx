@@ -11,7 +11,7 @@ import McqView from '../components/McqView'
 import TbsView from '../components/TbsView'
 import Clock from '../components/Timer'
 import { pct } from '../components/ui'
-import { areaTitle, content, getSection } from '../content'
+import { areaTitle, content, getSection, isSectionLoaded, loadSection } from '../content'
 import { db } from '../db'
 import { recordMcqAttempt, recordTbsAttempt } from '../db/actions'
 import type { ExamSession, ExamTestletState } from '../db/types'
@@ -31,6 +31,10 @@ export default function ExamPlayer() {
         Exam not found. <Link to="/exam">Back</Link>
       </p>
     )
+  if (!isSectionLoaded(session.section)) {
+    void loadSection(session.section)
+    return <p className="p-6 muted">Loading…</p>
+  }
   if (session.finishedAt && session.result) return <ExamResults session={session} />
   if (lock.blocked)
     return (

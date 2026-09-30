@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { content } from '../content'
 import { saveSettings } from '../db'
@@ -62,7 +62,12 @@ export default function Layout() {
   // Simulations use a side-by-side task/exhibit layout on desktop, so give them the full width.
   const wide = pathname.startsWith('/tbs/')
 
-  if (immersive) return <Outlet />
+  if (immersive)
+    return (
+      <Suspense fallback={<p className="p-6 muted">Loading…</p>}>
+        <Outlet />
+      </Suspense>
+    )
 
   return (
     <div className="min-h-dvh md:flex">
@@ -108,7 +113,9 @@ export default function Layout() {
           </div>
         </header>
         <main id="main" tabIndex={-1} className={`focus:outline-none mx-auto w-full ${wide ? 'max-w-4xl lg:max-w-7xl' : 'max-w-4xl'} px-4 pt-4 pb-28 md:px-8 md:pt-8 md:pb-12`}>
-          <Outlet />
+          <Suspense fallback={<p className="muted">Loading…</p>}>
+            <Outlet />
+          </Suspense>
         </main>
       </div>
 

@@ -8,7 +8,7 @@ import Icon from '../components/Icon'
 import KeyNav from '../components/KeyNav'
 import McqView, { TRAP_LABELS } from '../components/McqView'
 import { PageHeader, pct } from '../components/ui'
-import { content, getModule } from '../content'
+import { content, getModule, isSectionLoaded, loadSection } from '../content'
 import { db } from '../db'
 import { recordMcqAttempt, setLastLocation } from '../db/actions'
 import type { Mcq } from '../content/schema'
@@ -82,6 +82,10 @@ export default function QuizPlayer() {
         </Link>
       </div>
     )
+  if (!isSectionLoaded(session.section)) {
+    void loadSection(session.section)
+    return <p className="muted">Loading…</p>
+  }
   if (session.finishedAt) return <QuizResults session={session} />
 
   const q = content.questions[session.itemIds[session.index]]
