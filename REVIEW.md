@@ -174,3 +174,7 @@ New `review` TBS part: the candidate ticks each prepared amount that is wrong an
 | `aud-tbs-u4-deficiency-evaluation` | Effect of misstatements on the ICFR assessment; impact of deficiencies on nature, timing and extent | AS 2201.62–.70; AU-C 265, 330 |
 | `aud-tbs-u8-subsequent-review` | Determine whether subsequent events are properly reflected; dual-dating | AU-C 560; ASC 855 |
 | `aud-tbs-u7-inventory-evaluation` | Evaluate test-count results and inventory held by others | AU-C 501.11–.12 |
+
+## Indexed amounts now stated (P1-5, confirm)
+
+The REG and TCP Blueprints say inflation-indexed amounts are not tested. Every item that required recalling one now states it: the stem for 38 MCQs, the instructions for 9 TBS. Keys are unchanged, except for the seven pure-recall items rewritten to apply the amount: `reg-te-pre1` (key $6,000), `reg-adj-01`, `reg-fs-05`, `reg-x4-03` (key $33,100), `tcp-gt-04` (key $9,990,000), `tcp-re-01` and `tcp-x1-17`. Please confirm the 2025 figures quoted. Twenty-six flashcards now teach the rule instead of the number. The ‡ rows in `reg-numbers.md` and `tcp-numbers.md` are marked "given on the exam".
