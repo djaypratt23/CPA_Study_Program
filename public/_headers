@@ -1,5 +1,11 @@
+# P2-4 security headers. The CSP script hash covers the inline theme script in index.html;
+# tests/securityHeaders.test.ts recomputes it, so editing that script without updating the hash fails CI.
 /*
   X-Robots-Tag: noindex, nofollow
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-+Cf32nwUR6u63rd9IIChhfM0K4EZTG0AAX6hNFkwwlg='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
 
 # Always revalidate files that identify the current release.
 /version.json
