@@ -469,5 +469,75 @@
     "answer": "b",
     "explanation": "Days in inventory = 365 ÷ turnover: 365 ÷ 8 ≈ 46 days vs. 365 ÷ 5 = 73 days. Goods are staying in stock longer — a warning sign for obsolescence and cash tied up.",
     "skill": "analysis"
+  },
+  {
+    "id": "far-rat-12",
+    "pool": "practice",
+    "stem": "A company reports net income of $500,000, interest expense of $80,000, income tax expense of $150,000, depreciation of $120,000 and amortization of $30,000. What is EBITDA?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$730,000",
+        "explanation": "This leaves out depreciation and amortization, giving EBIT.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$880,000",
+        "explanation": "Correct. 500,000 + 80,000 + 150,000 + 120,000 + 30,000 = 880,000."
+      },
+      {
+        "id": "c",
+        "text": "$850,000",
+        "explanation": "This leaves out amortization.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$650,000",
+        "explanation": "This adds back only depreciation and amortization.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "EBITDA adds interest, taxes, depreciation and amortization back to net income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-rat-13",
+    "pool": "practice",
+    "stem": "A division budgeted revenue of $800,000 and operating expenses of $520,000. Actual revenue was $760,000 and actual operating expenses were $500,000. What is the operating income variance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000 favorable",
+        "explanation": "Actual operating income is below budget, so the variance is unfavorable.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "$60,000 unfavorable",
+        "explanation": "This treats the favorable expense variance as unfavorable.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$20,000 unfavorable",
+        "explanation": "Correct. Budgeted income 280,000; actual 260,000. The 40,000 unfavorable revenue variance outweighs the 20,000 favorable expense variance."
+      },
+      {
+        "id": "d",
+        "text": "$40,000 unfavorable",
+        "explanation": "This is the revenue variance only.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Variance = actual − budget; lower income than budgeted is unfavorable.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

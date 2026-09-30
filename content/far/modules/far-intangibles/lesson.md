@@ -12,6 +12,8 @@ objectives:
     task: Identify costs to capitalize for intangible assets
   - text: Compute goodwill arising in an acquisition.
     skill: application
+  - text: Determine the carrying amount of purchased software, capitalized internal-use software and cloud computing implementation costs.
+    skill: application
 bigIdea:
   what: >-
     Intangible assets are rights and relationships without physical substance — patents, trademarks, customer
@@ -48,7 +50,7 @@ citations:
 | **Acquired in a business combination** | Recognize identifiable intangibles (those arising from **contractual/legal rights** or that are **separable**) at fair value, separate from goodwill |
 | **Developed internally** | Expense research, development, advertising, training, and the like. Capitalize only direct costs such as **legal and registration fees** for a patent or trademark |
 
-> Detailed R&D and internal-use software accounting is tested in BAR; for FAR, remember that internal development costs are expensed.
+> Research and development costs are expensed (ASC 730). **Software is different** — purchased software and internal-use software development costs can be capitalized, and cloud computing implementation costs follow the same rules. See *Software and cloud computing arrangements* below; FAR tests these.
 
 ## Finite vs. indefinite lives
 
@@ -125,4 +127,44 @@ Start-up costs (opening a new facility, entering a new market), organization cos
 
 ```check
 far-int-chk2
+```
+
+## Software and cloud computing arrangements
+
+**Purchased software licenses** are intangible assets: capitalize the cost and amortize it straight-line over the expected useful life, testing for impairment like other long-lived assets.
+
+**Internal-use software** (ASC 350-40) — software developed or obtained for the entity's own use, not for sale:
+
+| Stage | Treatment |
+|---|---|
+| Preliminary project (evaluating alternatives, selecting a vendor) | Expense |
+| Application development (design, coding, installation, testing) | **Capitalize** external direct costs, payroll of employees working directly on the project, and interest |
+| Post-implementation / operation (training, maintenance, data conversion) | Expense |
+
+Amortize capitalized costs straight-line once the software is ready for its intended use.
+
+> ASU 2025-06 replaces the stage model with a "probable-to-complete" threshold for fiscal years beginning after December 15, 2027. Until then, the stage model applies.
+
+**Cloud computing arrangements (hosting).** First ask whether the contract includes a **software license** — the customer can take possession of the software without significant penalty and run it on its own or a third party's hardware.
+
+- **Yes:** account for the license as purchased software (an intangible asset).
+- **No — it is a service contract:** expense the hosting fees over the contract term. **Implementation costs** are capitalized or expensed using the same stages as internal-use software. Capitalized amounts are presented as a prepaid (not an intangible), amortized straight-line over the term of the arrangement including reasonably certain renewals, and the amortization is reported in the **same line as the hosting fees**.
+
+```worked
+title: Implementation costs of a hosted ERP system
+scenario: |
+  A company signs a 5-year hosting contract for an ERP system (no software license). It pays $60,000 a year in
+  hosting fees. It incurs $20,000 evaluating vendors, $150,000 configuring and testing the system, and $30,000
+  training staff. The system goes live on January 1.
+steps:
+  - label: Expensed immediately
+    work: Vendor evaluation 20,000 + training 30,000
+    result: 50,000
+  - label: Capitalized implementation costs
+    work: Configuration and testing (application development stage)
+    result: 150,000
+  - label: Annual amortization, reported with hosting expense
+    work: 150,000 ÷ 5 years
+    result: 30,000
+insight: Total annual operating expense for the arrangement is 60,000 hosting + 30,000 amortization = 90,000, all in the same income statement line.
 ```

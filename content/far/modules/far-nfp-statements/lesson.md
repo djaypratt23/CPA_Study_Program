@@ -11,6 +11,8 @@ objectives:
     skill: application
   - text: Identify the required NFP statements and liquidity disclosures.
     skill: remembering
+  - text: Prepare and correct a not-for-profit statement of cash flows and liquidity and availability disclosures.
+    skill: application
 bigIdea:
   what: >-
     A not-for-profit has no owners, so instead of equity it reports net assets — split by whether donors have
@@ -141,3 +143,16 @@ steps:
 ```check
 far-nfs-chk2
 ```
+
+## The NFP statement of cash flows and notes
+
+An NFP's statement of cash flows looks like a business's, with a few differences:
+
+- The indirect method starts from the **change in net assets**, not net income.
+- **Contributions restricted for long-term purposes** (endowment, buildings, equipment) are **financing** inflows. Unrestricted contributions and contributions restricted to programs are operating.
+- Receipts from sale of donated financial assets are operating if converted to cash nearly immediately without donor restriction; otherwise investing (or financing if restricted for long-term purposes).
+- Noncash contributions (donated buildings, securities) are disclosed as noncash investing and financing activities.
+
+Common errors to correct: an endowment gift reported as operating; gains on investments not removed from the change in net assets; donated property reported as an investing outflow.
+
+**Notes.** NFPs disclose quantitative and qualitative information about **liquidity and availability** of financial assets to meet general expenditures within one year, the composition of net assets with donor restrictions, and an analysis of expenses by nature and function (if not on the face of the statements). An error-correction task typically asks you to fix a liquidity table that includes donor-restricted endowment or board-designated funds without explanation.

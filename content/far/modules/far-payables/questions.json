@@ -471,5 +471,74 @@
     "explanation": "A reconciliation proves only that two records agree with each other. Completeness needs evidence from outside both records.",
     "skill": "analysis",
     "difficulty": 2
+  },
+  {
+    "id": "far-pay-12",
+    "pool": "practice",
+    "stem": "On October 1, a company communicates a plant closure to employees. Each will receive $6,000 of termination benefits only if they stay until the plant closes on March 31, well beyond the minimum retention period. There are 50 employees. What termination liability is recognized at December 31 (calendar year-end)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000",
+        "explanation": "The full amount is recognized at communication only if no future service is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "None ($0)",
+        "explanation": "The liability is recognized over the service period, not at the closure date.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "This spreads the benefit over 9 months instead of the 6-month service period.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$150,000",
+        "explanation": "Correct. Employees must render future service, so the 300,000 is recognized ratably over the 6-month service period: 3 of 6 months = 150,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "One-time termination benefits requiring service beyond the minimum retention period are recognized ratably over that service period (ASC 420).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-pay-13",
+    "pool": "practice",
+    "stem": "When should a liability for a contract termination cost under an exit plan be recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "When the contract is actually terminated",
+        "explanation": "Correct. ASC 420 recognizes contract termination costs when the entity terminates the contract, not when it commits to the plan."
+      },
+      {
+        "id": "b",
+        "text": "When the board approves the exit plan",
+        "explanation": "Commitment to a plan is not enough to create a liability.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "When the related exit plan is announced",
+        "explanation": "Announcing the plan does not terminate the contract.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Over the remaining original contract term",
+        "explanation": "A termination cost is recognized when the contract is terminated.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Exit and disposal liabilities are recognized when incurred, not at the plan commitment date.",
+    "skill": "remembering",
+    "difficulty": 2
   }
 ]

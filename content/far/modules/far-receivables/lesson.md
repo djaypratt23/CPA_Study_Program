@@ -14,6 +14,8 @@ objectives:
     task: Account for transfers of receivables
   - text: Prepare a receivables roll-forward from source data and reconcile the customer subledger to the general ledger, investigating each difference.
     skill: analysis
+  - text: Apply the ASU 2025-05 practical expedient when estimating credit losses on current receivables and contract assets.
+    skill: application
 bigIdea:
   what: >-
     A receivable is only worth what the company expects to collect. The allowance for credit losses reduces gross
@@ -153,3 +155,7 @@ On the exam, analysis tasks rarely ask you to *compute* a balance from scratch. 
 - **Misposted between customers**: no effect on the total. It matters for collections and the aging, not the reconciliation.
 
 A reconciliation that ends with an unexplained difference is not finished. Never plug the difference to expense.
+
+## ASU 2025-05: a CECL practical expedient
+
+For **current** accounts receivable and contract assets arising from revenue contracts (ASC 606), any entity may elect to **assume that current conditions at the balance sheet date do not change** for the remaining life of the asset when developing reasonable and supportable forecasts. Entities other than public business entities may also elect to consider **collection activity after the balance sheet date** when estimating expected losses. Effective for annual periods beginning after December 15, 2025 (early adoption permitted).

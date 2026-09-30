@@ -13,6 +13,8 @@ objectives:
   - text: Compute the gain or loss on early extinguishment of debt.
     skill: application
     task: Calculate gains and losses on debt extinguishment
+  - text: Perform debt covenant calculations, and distinguish a debt modification from an extinguishment and a troubled debt restructuring.
+    skill: application
 bigIdea:
   what: >-
     Debt is recorded at the present value of what will be paid, classified by when it must be paid, and removed
@@ -111,3 +113,28 @@ For long-term debt: interest rates, maturity dates, restrictive covenants, colla
 ```check
 far-dbt-chk2
 ```
+
+## Debt covenant compliance
+
+Loan agreements define their own ratios, so compute each covenant **exactly as the agreement defines it**. Common covenants:
+
+| Covenant | Computation |
+|---|---|
+| Maximum leverage | Total debt ÷ EBITDA (EBITDA = net income + interest + taxes + depreciation and amortization) |
+| Minimum interest coverage | EBITDA (or EBIT) ÷ interest expense |
+| Minimum current ratio | Current assets ÷ current liabilities |
+| Minimum net worth | Total equity, often with specified adjustments |
+
+If a covenant is breached at the balance sheet date and the lender can call the debt, the debt is **current** unless, before the statements are issued, the lender waives the right to demand repayment for more than a year from the balance sheet date, or a grace period cure is probable (ASC 470-10-45-11).
+
+## Modification, extinguishment and troubled debt restructurings
+
+**Modification or extinguishment?** When a borrower and its existing lender change the terms of debt, compare the present value of the cash flows under the new terms with the present value of the remaining cash flows under the old terms, both discounted at the **original effective rate**. A difference of **10% or more** means the terms are substantially different (ASC 470-50):
+
+- **Extinguishment:** derecognize the old debt, record the new debt at fair value, and recognize a gain or loss. Fees paid to the lender are part of the gain or loss.
+- **Modification:** keep the old debt; compute a new effective rate prospectively. Fees paid to the lender adjust the carrying amount and are amortized.
+
+**Troubled debt restructuring (debtor)** — the creditor grants a concession because the debtor is in financial difficulty (ASC 470-60):
+
+- **Settlement by transferring an asset:** gain on disposal of the asset (fair value − carrying amount) plus a **gain on restructuring** (carrying amount of debt − fair value of the asset).
+- **Modification of terms:** compare total **undiscounted** future cash payments under the new terms with the debt's carrying amount (including accrued interest). If the payments are less, reduce the debt to the total payments and recognize a gain; all later payments reduce principal and no interest expense is recognized. If they are not less, recognize no gain and use a new effective rate prospectively.

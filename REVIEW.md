@@ -178,3 +178,15 @@ New `review` TBS part: the candidate ticks each prepared amount that is wrong an
 ## Indexed amounts now stated (P1-5, confirm)
 
 The REG and TCP Blueprints say inflation-indexed amounts are not tested. Every item that required recalling one now states it: the stem for 38 MCQs, the instructions for 9 TBS. Keys are unchanged, except for the seven pure-recall items rewritten to apply the amount: `reg-te-pre1` (key $6,000), `reg-adj-01`, `reg-fs-05`, `reg-x4-03` (key $33,100), `tcp-gt-04` (key $9,990,000), `tcp-re-01` and `tcp-x1-17`. Please confirm the 2025 figures quoted. Twenty-six flashcards now teach the rule instead of the number. The ‡ rows in `reg-numbers.md` and `tcp-numbers.md` are marked "given on the exam".
+
+## New topic coverage (P1-7, confirm)
+
+| Module | Added | Authority |
+|---|---|---|
+| `far-intangibles` | Purchased software, internal-use software stages, cloud computing implementation costs; the old "tested in BAR" note is removed; MCQs `far-int-11`, `-12` | ASC 350-40; ASU 2018-15; ASU 2025-06 |
+| `far-income-statement-oci` | Foreign-currency transaction gains and losses; ASU 2024-03 expense disaggregation; `far-iso-13`, `-14` | ASC 830-20; ASU 2024-03 |
+| `far-debt-other` | Covenant calculations; the modification vs. extinguishment 10% test; debtor TDR accounting; `far-dbt-11` to `-13` | ASC 470-10-45-11, 470-50, 470-60 |
+| `far-payables` | Exit and disposal liabilities and one-time termination benefits; `far-pay-12`, `-13` | ASC 420, 712 |
+| `far-ratios` | EBITDA; budget-to-actual variances; `far-rat-12`, `-13` | — |
+| `far-nfp-statements` | NFP statement of cash flows and liquidity notes; `far-nfs-11`, `-12` | ASC 230-10-45-14; ASU 2016-14 |
+| `far-receivables` | ASU 2025-05 practical expedient; `far-rec-13` | ASU 2025-05 |
