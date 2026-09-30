@@ -76,7 +76,8 @@ export default function PracticeStart() {
           title: 'Review: missed & low-confidence questions',
           mode: 'review',
           mixed: true,
-          itemIds: items.slice(0, 25).map((s) => s.itemId),
+          // Most overdue first.
+          itemIds: [...items].sort((a, b) => a.due.localeCompare(b.due)).slice(0, 25).map((s) => s.itemId),
         })
       }
       if (!id) return setError('Nothing to practice with those settings.')

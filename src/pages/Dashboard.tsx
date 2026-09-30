@@ -86,6 +86,15 @@ export default function Dashboard() {
         </div>
       </Link>
 
+      {settings.lastLocation && settings.lastLocation.path !== state.next.to && settings.lastLocation.path !== '/' && (
+        <p className="-mt-3 text-sm">
+          <span className="muted">Where you left off: </span>
+          <Link to={settings.lastLocation.path} className="text-blue-700 underline dark:text-blue-400">
+            {settings.lastLocation.label}
+          </Link>
+        </p>
+      )}
+
       <section className="card" aria-labelledby="today">
         <div className="mb-3 flex items-center justify-between">
           <h2 id="today" className="h2">

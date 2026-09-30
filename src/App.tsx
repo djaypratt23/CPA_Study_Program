@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react'
-import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import ErrorBoundary from './components/ErrorBoundary'
 import Layout from './components/Layout'
 import UpdatePrompt from './components/UpdatePrompt'
@@ -64,6 +64,12 @@ function Gate({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }
 
+/** Remount the simulation page per id, so state never leaks from /tbs/a to /tbs/b (P2-5). */
+function KeyedTbsPage() {
+  const { tbsId } = useParams()
+  return <TbsPage key={tbsId} />
+}
+
 /** Loads the active section's content when the learner switches section (P2-1). */
 function SectionLoader() {
   const settings = useSettings()
@@ -105,7 +111,7 @@ export default function App() {
                 <Route path="/practice/start" element={<PracticeStart />} />
                 <Route path="/quiz/:sessionId" element={<QuizPlayer />} />
                 <Route path="/tbs" element={<TbsList />} />
-                <Route path="/tbs/:tbsId" element={<TbsPage />} />
+                <Route path="/tbs/:tbsId" element={<KeyedTbsPage />} />
                 <Route path="/review" element={<ReviewQueue />} />
                 <Route path="/flashcards" element={<Flashcards />} />
                 <Route path="/exam" element={<ExamHome />} />

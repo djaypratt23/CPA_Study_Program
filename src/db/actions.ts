@@ -116,7 +116,7 @@ export async function recordTbsAttempt(
 export async function logError(itemId: string, moduleId: string, section: SectionId, cause: ErrorCause, note?: string, d: CpaDb = db) {
   // One cause per item per day: re-tagging replaces the earlier tag.
   const today = dayKey()
-  const prior = await d.errors.where('itemId').equals(itemId).filter((e) => e.at.slice(0, 10) === today).first()
+  const prior = await d.errors.where('itemId').equals(itemId).filter((e) => dayKey(new Date(e.at)) === today).first()
   if (prior?.id) await d.errors.update(prior.id, { cause, note })
   else await d.errors.add({ itemId, moduleId, section, cause, note, at: new Date().toISOString() })
 }

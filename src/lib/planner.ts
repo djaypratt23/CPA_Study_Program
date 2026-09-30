@@ -177,14 +177,23 @@ function readyOn(item: WorkItem, day: string): boolean {
   return true
 }
 
+/** Longest schedule generated, whatever the exam date (P2-5). */
+export const MAX_PLAN_DAYS = 400
+const isDayKey = (d?: string): d is string => !!d && /^\d{4}-\d{2}-\d{2}$/.test(d)
+
 export function generatePlan(input: PlanInput): Plan {
   const { today } = input
   const cap = (d: string) => Math.max(0, input.minutesByWeekday[weekday(d)] ?? 0)
-  const hasExam = !!input.examDate && input.examDate > today
-  const totalDays = hasExam ? diffDays(today, input.examDate!) : (input.horizonDays ?? 28)
+  // Ignore malformed dates (e.g. a five-digit year typed into the date field).
+  const examDate = isDayKey(input.examDate) ? input.examDate : undefined
+  if (examDate === today) return examDayPlan(today)
+  const examPassed = !!examDate && examDate < today
+  const hasExam = !!examDate && examDate > today
+  const totalDays = hasExam ? diffDays(today, examDate) : (input.horizonDays ?? 28)
   const finalDays = hasExam ? finalReviewDays(totalDays) : 0
-  const finalStart = hasExam ? addDays(input.examDate!, -finalDays) : null
-  const lastDay = hasExam ? input.examDate! : addDays(today, totalDays - 1)
+  const finalStart = hasExam ? addDays(examDate, -finalDays) : null
+  const horizonEnd = addDays(today, MAX_PLAN_DAYS - 1)
+  const lastDay = hasExam ? (examDate < horizonEnd ? examDate : horizonEnd) : addDays(today, Math.min(totalDays, MAX_PLAN_DAYS) - 1)
 
   const queue = buildQueue(input)
   const days: PlanDay[] = []
@@ -196,14 +205,19 @@ export function generatePlan(input: PlanInput): Plan {
   let mockDay: string | null = null
   if (hasExam && !input.mockTaken && finalStart) {
     let best: string | null = null
-    const windowEnd = addDays(input.examDate!, -3)
+    const windowEnd = addDays(examDate!, -3)
     for (let d = finalStart; d <= windowEnd; d = addDays(d, 1)) if (!best || cap(d) > cap(best)) best = d
     mockDay = best ?? finalStart
   }
+  // Flag a mock that lands on a day with less than four hours planned, rather than hiding the conflict.
+  const mockLabel =
+    mockDay && cap(mockDay) < MOCK_MINUTES
+      ? `Full simulated exam (4 hours) — block out 4 hours; you usually plan ${cap(mockDay)} min this day`
+      : 'Full simulated exam (4 hours)'
 
   for (let d = today; d <= lastDay; d = addDays(d, 1)) {
     const capacity = cap(d)
-    const isExamDay = hasExam && d === input.examDate
+    const isExamDay = hasExam && d === examDate
     const inFinal = !!finalStart && d >= finalStart && !isExamDay
     const day: PlanDay = { date: d, capacity, phase: isExamDay ? 'exam' : inFinal ? 'final-review' : 'learn', tasks: [] }
     days.push(day)
@@ -221,10 +235,10 @@ export function generatePlan(input: PlanInput): Plan {
     }
 
     if (d === mockDay) {
-      day.tasks.push({ kind: 'mock', minutes: MOCK_MINUTES, label: 'Full simulated exam (4 hours)' })
+      day.tasks.push({ kind: 'mock', minutes: MOCK_MINUTES, label: mockLabel })
       continue
     }
-    if (hasExam && d === addDays(input.examDate!, -1)) {
+    if (hasExam && d === addDays(examDate, -1)) {
       day.tasks.push({ kind: 'final', minutes: Math.min(left, 45), label: 'Light review: formula sheet and high-yield notes, then rest' })
       continue
     }
@@ -269,7 +283,10 @@ export function generatePlan(input: PlanInput): Plan {
   const extraMinutesPerWeek = onTrack ? 0 : Math.ceil((shortfall / studyDaysBeforeFinal) * 7)
 
   let message: string
-  if (!hasExam) message = 'Set an exam date in Settings to get a full schedule with final-review weeks.'
+  if (examPassed) message = `Your exam date (${examDate}) has passed. Set your next exam date in Settings for a new schedule.`
+  else if (!hasExam) message = 'Set an exam date in Settings to get a full schedule with final-review weeks.'
+  else if (!onTrack && totalDays < 7)
+    message = `Your exam is ${totalDays === 1 ? 'tomorrow' : `in ${totalDays} days`} — too close to cover everything left. Focus on spaced review, mixed practice and your weakest areas.`
   else if (!queue.length) message = 'All modules are learned and mastered. Focus on mixed practice, weak areas, and the simulated exam.'
   else if (onTrack)
     message = `On track: new material finishes by ${projectedFinish ?? 'the final-review window'}, leaving ${finalDays} days for final review.`
@@ -288,6 +305,24 @@ export function generatePlan(input: PlanInput): Plan {
       extraMinutesPerWeek,
       projectedFinish,
       message,
+    },
+  }
+}
+
+/** The plan when the exam is today: nothing new to learn, just the exam (P2-5). */
+function examDayPlan(today: string): Plan {
+  return {
+    days: [{ date: today, capacity: 0, phase: 'exam', tasks: [{ kind: 'exam', minutes: 0, label: 'Exam day — trust your preparation' }] }],
+    status: {
+      hasExamDate: true,
+      daysLeft: 0,
+      finalReviewStart: null,
+      requiredMinutes: 0,
+      availableMinutes: 0,
+      onTrack: true,
+      extraMinutesPerWeek: 0,
+      projectedFinish: null,
+      message: 'Today is exam day. Skip new material: eat, arrive early, and trust your preparation.',
     },
   }
 }

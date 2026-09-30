@@ -43,6 +43,22 @@ export default function TbsPage() {
     return () => clearInterval(t)
   }, [submitted, ready])
 
+  // Persist the elapsed time every 15 s and on leaving, not only when an answer changes (P2-5).
+  // update() is a no-op until the learner has started (a session row exists).
+  const elapsedRef = useRef(elapsed)
+  useEffect(() => {
+    elapsedRef.current = elapsed
+  }, [elapsed])
+  useEffect(() => {
+    if (submitted || !ready) return
+    const persist = () => void db.tbsSessions.update(tbsId, { elapsedMs: elapsedRef.current })
+    const t = setInterval(persist, 15_000)
+    return () => {
+      clearInterval(t)
+      persist()
+    }
+  }, [submitted, ready, tbsId])
+
   if (!tbs) return ensureAllSections() ? <p className="muted">Loading…</p> : <p>Simulation not found.</p>
   if (session === undefined) return <p className="muted">Loading…</p>
 

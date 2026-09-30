@@ -5,7 +5,7 @@ import { content, getSection } from '../content'
 import { db } from '../db'
 import type { ExamSession } from '../db/types'
 import { useSettingsOrDefault } from '../hooks/useStore'
-import { formatDay } from '../lib/dates'
+import { formatDay, dayKey } from '../lib/dates'
 import { uid } from '../lib/random'
 
 export default function ExamHome() {
@@ -84,7 +84,7 @@ export default function ExamHome() {
               .map((s) => (
                 <li key={s.id}>
                   <Link to={`/exam/${s.id}`} className="card flex justify-between hover:border-blue-400">
-                    <span>{formatDay(s.finishedAt!.slice(0, 10))}</span>
+                    <span>{formatDay(dayKey(new Date(s.finishedAt!)))}</span>
                     <span className="font-semibold">≈ {s.result!.approxScaled} (approx.)</span>
                   </Link>
                 </li>

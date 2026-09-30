@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { Rating, type Grade } from 'ts-fsrs'
 import type { FlashcardWithModule } from '../content/schema'
 import { db } from '../db'
@@ -27,12 +27,19 @@ export default function FlashcardPlayer({ cards, onDone }: { cards: FlashcardWit
     db.srs.get(`card:${card.id}`).then((s) => setIntervals(previewIntervals(s?.card ?? newCard())))
   }, [card])
 
+  // One grade per card: ignore key repeats and a second press while the first is being saved.
+  const grading = useRef(false)
   const rate = async (g: Grade) => {
-    if (!card) return
-    await reviewFlashcard(card, g)
-    setReviewed((n) => n + 1)
-    setFlipped(false)
-    setQueue((q) => (g === Rating.Again ? [...q.slice(1), q[0]] : q.slice(1)))
+    if (!card || grading.current) return
+    grading.current = true
+    try {
+      await reviewFlashcard(card, g)
+      setReviewed((n) => n + 1)
+      setFlipped(false)
+      setQueue((q) => (g === Rating.Again ? [...q.slice(1), q[0]] : q.slice(1)))
+    } finally {
+      grading.current = false
+    }
   }
 
   useEffect(() => {
@@ -40,7 +47,7 @@ export default function FlashcardPlayer({ cards, onDone }: { cards: FlashcardWit
       // Never grade while the learner is using a form control (e.g. choosing a deck in a <select>).
       const t = e.target as HTMLElement | null
       if (t && (['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName) || t.isContentEditable || t.closest('[data-no-hotkeys]'))) return
-      if (e.ctrlKey || e.metaKey || e.altKey) return
+      if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return
       if (e.key === ' ' && !flipped) {
         e.preventDefault()
         setFlipped(true)

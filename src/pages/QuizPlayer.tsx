@@ -137,7 +137,8 @@ export default function QuizPlayer() {
       if (!qq || !it.choice) continue
       const a = await recordMcqAttempt(qq, {
         choice: it.choice,
-        confidence: it.confidence ?? 'unsure',
+        // No confidence in test mode unless the learner gave one; don't invent 'unsure'.
+        confidence: it.confidence,
         timeMs: it.timeMs,
         mode: 'test',
         mixed: session.mixed,
