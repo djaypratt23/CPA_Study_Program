@@ -107,6 +107,14 @@ describe('remediated MCQ answer keys', () => {
     expect(q.choices.find((c) => c.id === 'd')?.trap).toBe('wrong-rule')
   })
 
+  it('far-ppe-10 (D3): a private non-owner donation is contribution revenue at fair value', () => {
+    const q = bundle.questions['far-ppe-10']
+    expect(q.stem).toMatch(/private foundation/)
+    expect(q.stem).not.toMatch(/city|government/i)
+    expect(q.answer).toBe('a')
+    expect(q.needsReview).toBeFalsy()
+  })
+
   it('far-nd-08: a 45% customer concentration must be disclosed', () => {
     const q = bundle.questions['far-nd-08']
     expect(q.answer).toBe('b')

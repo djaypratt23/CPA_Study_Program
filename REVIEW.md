@@ -5,9 +5,7 @@ prints the current count. Please confirm or correct each one, then remove the fl
 
 ## Flagged content items
 
-| Item | File | Why it's flagged |
-|---|---|---|
-| `far-ppe-10` (government donation of a building to a business entity) | `content/far/modules/far-ppe-acquisition/questions.json` | U.S. GAAP has little explicit guidance on how business entities account for government grants (ASU 2021-10 adds disclosures only). The keyed answer follows common review-course treatment (record the building at fair value, with contribution revenue or a gain); confirm it against current exam materials. |
+No individual items are open here; the OBBBA-amount items below keep their flags until those amounts are confirmed.
 
 ## Changed in remediation (confirm)
 
@@ -29,10 +27,8 @@ Answer keys and content changed while working through `REMEDIATION_TASKS.md`. Ea
 | `tcp-tbs-x4-property` `dep` | Label says to use the mid-month formula, not the IRS tables; tolerance 0 → 1 so the unrounded 79,166.67 is accepted. | — |
 | `tcp-tbs-u6-multistate-liquidation` `eq`, `dw` | Labels say "(without throwback)". | — |
 | `aud-tbs-u3-analytics` `k1` | Exhibit adds clean cost-side testing (cutoff, costing, count roll-forward), which rules out cost of sales completeness; key unchanged. | — |
+| `far-ppe-10` | Decision D3: rewritten from a city's relocation inducement (a government-to-business transfer, outside ASC 958-605 and unsettled) to an unconditional donation from a private foundation that holds no ownership interest. Key unchanged (fair value, contribution revenue or gain); `needsReview` removed. | ASC 958-605-15-2, 958-605-25-2, 958-605-30-2 |
 | `aud-code-of-conduct` lesson, `aud-coc-07`, `aud-x1-05` | Referral fees are permitted with disclosure; commissions and contingent fees are prohibited only for audit, review, compilation (without an independence disclosure) and PFI-examination clients. | ET 1.510, 1.520 |
-
-Still open: `far-ppe-10` (government grant to a business) awaits a decision on the treatment (D3); it keeps its
-`needsReview` flag.
 
 ## REG — 2025 amounts from the One Big Beautiful Bill Act
 
