@@ -37,6 +37,8 @@ citations:
   - source: Public Law 119-21 (One Big Beautiful Bill Act, 2025)
 ---
 
+> **Tax year:** 2025. Questions use 2025 law. **Looking ahead to 2026:** P.L. 119-21 raises the child and dependent care credit's top rate to 50%, phasing down to 35% as AGI rises above $15,000 and then toward 20% at higher incomes ($75,000 single; $150,000 MFJ). The $3,000/$6,000 expense limits are unchanged.
+
 ## Family credits
 
 ```worked

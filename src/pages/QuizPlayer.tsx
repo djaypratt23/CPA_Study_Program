@@ -8,7 +8,7 @@ import Icon from '../components/Icon'
 import KeyNav from '../components/KeyNav'
 import McqView, { TRAP_LABELS } from '../components/McqView'
 import { PageHeader, pct } from '../components/ui'
-import { content, getModule, isSectionLoaded, loadSection } from '../content'
+import { content, getModule, getSection, isSectionLoaded, loadSection } from '../content'
 import { db } from '../db'
 import { useSettings, useStudyState } from '../hooks/useStore'
 import { recordMcqAttempt, setLastLocation } from '../db/actions'
@@ -181,6 +181,7 @@ export default function QuizPlayer() {
           <h1 className="truncate text-sm font-semibold">{session.title}</h1>
           <div className="text-xs muted">
             {isTest ? 'Test mode — feedback at the end' : session.mode === 'review' ? 'Review mode' : 'Tutor mode — instant feedback'} · {answeredCount}/{session.itemIds.length} answered
+            {getSection(section)?.taxYear && ` · ${getSection(section)!.taxYear} tax law`}
           </div>
         </div>
         <div className="flex items-center gap-2 text-sm">

@@ -115,6 +115,11 @@ describe('remediated MCQ answer keys', () => {
     expect(q.needsReview).toBeFalsy()
   })
 
+  it('D2: tax stems whose answer changes under 2026 law say 2025', () => {
+    for (const id of ['reg-cr-01', 'reg-cr-06', 'reg-id-02', 'reg-id-05', 'reg-x4-13', 'reg-cc-chk2', 'reg-cc-09', 'tcp-cr-10', 'tcp-x1-05', 'tcp-ip-08']) expect(bundle.questions[id].stem, id).toMatch(/2025/)
+    expect(bundle.questions['tcp-ip-08'].stem).toMatch(/age 74/)
+  })
+
   it('far-nd-08: a 45% customer concentration must be disclosed', () => {
     const q = bundle.questions['far-nd-08']
     expect(q.answer).toBe('b')

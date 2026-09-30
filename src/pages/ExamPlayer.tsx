@@ -219,6 +219,7 @@ function ExamRunner({ session }: { session: ExamSession }) {
       <header className="sticky top-0 z-30 flex items-center justify-between gap-2 bg-slate-800 px-4 py-2 text-white">
         <div className="text-sm">
           <span className="font-bold">{section.id}</span> · Testlet {session.testletIndex + 1} of {session.testlets.length}
+          {section.taxYear && <span className="hidden sm:inline"> · {section.taxYear} tax law</span>}
         </div>
         <div className="flex items-center gap-3 text-sm">
           <span className="flex items-center gap-1">

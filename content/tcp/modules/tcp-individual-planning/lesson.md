@@ -45,7 +45,7 @@ citations:
   - source: IRC §164(b)(6) as amended by Public Law 119-21; §408(d)(8) (Qualified charitable distributions)
 ---
 
-> **Tax year:** 2025 law, including One Big Beautiful Bill Act changes (see REVIEW.md for amounts to confirm).
+> **Tax year:** 2025 law, including One Big Beautiful Bill Act changes (see REVIEW.md for amounts to confirm). **Looking ahead to 2026:** P.L. 119-21 adds a 0.5%-of-AGI floor on itemized charitable deductions, caps the benefit of itemized deductions at 35% for the 37% bracket, and allows non-itemizers up to $1,000 ($2,000 MFJ) for cash gifts to public charities. Bunching gifts into 2025, before the floor and cap apply, can be worth more than the same gifts spread over later years.
 
 ## Estimated tax: paying as you go
 

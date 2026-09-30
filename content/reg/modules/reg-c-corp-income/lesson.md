@@ -45,6 +45,8 @@ citations:
   - source: Form 1120, Schedule M-1 instructions
 ---
 
+> **Tax year:** 2025. Questions use 2025 law. **Looking ahead to 2026:** P.L. 119-21 adds a floor: a corporation deducts charitable contributions only to the extent they exceed 1% of taxable income, still subject to the 10% ceiling.
+
 ## From book income to taxable income
 
 ```worked

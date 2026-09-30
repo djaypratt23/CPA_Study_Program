@@ -43,8 +43,8 @@ order: 1
 | Traditional IRA deduction phase-out (active participant) ‡ | $79,000–$89,000 single; $126,000–$146,000 MFJ |
 | Spouse not covered, other spouse covered ‡ | $236,000–$246,000 |
 | Roth IRA phase-out ‡ | $150,000–$165,000 single; $236,000–$246,000 MFJ |
-| RMD age / missed RMD excise | 73 / 25% (10% if corrected timely) |
-| §529 K-12 tuition | $10,000 per year |
+| RMD age / missed RMD excise | 73 (born 1951–1959) or 75 (born 1960+) / 25% (10% if corrected timely) |
+| §529 K-12 expenses | $10,000 for 2025 (tuition; broader expenses after July 4, 2025); $20,000 from 2026 |
 | §529 to Roth rollover | $35,000 lifetime; account open 15+ years |
 | Coverdell ESA | $2,000 per beneficiary |
 | AOTC / LLC | $2,500 / $2,000; phase-out $80,000–$90,000 single, $160,000–$180,000 MFJ |
