@@ -100,7 +100,7 @@ export function computeStudyState(inp: StudyInputs): StudyState {
       available: !!inp.content.lessons[m.id],
       lessonDone,
       mastery: computeMastery(list, lessonDone),
-      practiceCount: list.filter((a) => a.itemType === 'mcq' && a.mode !== 'lesson').length,
+      practiceCount: list.filter((a) => a.itemType === 'mcq' && a.mode !== 'lesson' && a.mode !== 'exam').length,
       ...(m.optional ? { optional: true } : {}),
     }
   })

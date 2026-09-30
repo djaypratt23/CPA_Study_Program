@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it } from 'vitest'
 import { Rating } from 'ts-fsrs'
 import { Mcq, type Tbs } from '../src/content/schema'
 import { CpaDb, exportBackup, importBackup, parseBackup, resetAll, saveSettings } from '../src/db'
-import { recordMcqAttempt, recordTbsAttempt } from '../src/db/actions'
+import { addMissedMockToReview, recordMcqAttempt, recordTbsAttempt } from '../src/db/actions'
 import { newCard, review } from '../src/lib/srs'
 
 const q = Mcq.parse({
@@ -43,6 +43,14 @@ describe('recording attempts', () => {
     await d.srs.clear()
     await recordMcqAttempt(q, { ...base, sessionId: 's2', choice: 'a', confidence: 'guess' }, d)
     expect(await d.srs.get('q:far-test-q1')).toBeTruthy()
+  })
+  it('keeps missed mock items out of spaced review until the learner opts in (D4)', async () => {
+    await recordMcqAttempt(q, { ...base, mode: 'exam', mixed: true, sessionId: 'mock1', choice: 'b' }, d)
+    expect(await d.attempts.count()).toBe(1)
+    expect(await d.srs.count()).toBe(0)
+    expect(await addMissedMockToReview('mock1', new Date(), d)).toBe(1)
+    expect((await d.srs.get('q:far-test-q1'))?.kind).toBe('question')
+    expect(await addMissedMockToReview('other', new Date(), d)).toBe(0)
   })
 })
 

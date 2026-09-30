@@ -58,8 +58,19 @@ async function addMcqAttempt(q: Mcq, ans: McqAnswer, d: CpaDb): Promise<Attempt>
     day: dayKey(now),
   }
   attempt.id = await d.attempts.add(attempt)
-  await scheduleQuestion(q.id, q.moduleId, ans.section, attempt.correct, ans.confidence ?? 'confident', now, d)
+  // D4: mock items stay out of spaced review; the learner opts in from the results page.
+  if (ans.mode !== 'exam') await scheduleQuestion(q.id, q.moduleId, ans.section, attempt.correct, ans.confidence ?? 'confident', now, d)
   return attempt
+}
+
+/**
+ * D4: after a mock, the learner may choose to add the questions they missed to spaced
+ * review. Returns how many were added (already-queued items are updated, not duplicated).
+ */
+export async function addMissedMockToReview(sessionId: string, now = new Date(), d: CpaDb = db): Promise<number> {
+  const missed = (await d.attempts.where('sessionId').equals(sessionId).toArray()).filter((a) => a.itemType === 'mcq' && a.mode === 'exam' && !a.correct)
+  for (const a of missed) await scheduleQuestion(a.itemId, a.moduleId, a.section, false, 'confident', now, d)
+  return missed.length
 }
 
 /**

@@ -13,7 +13,7 @@ import Clock from '../components/Timer'
 import { pct } from '../components/ui'
 import { areaTitle, content, getSection, isSectionLoaded, loadSection } from '../content'
 import { db } from '../db'
-import { recordMcqAttempt, recordTbsAttempt } from '../db/actions'
+import { addMissedMockToReview, recordMcqAttempt, recordTbsAttempt } from '../db/actions'
 import type { ExamSession, ExamTestletState } from '../db/types'
 import { breakRemainingMs, examRemainingMs, isExamClockPaused, pauseExamClock, resumeExamClock } from '../lib/examClock'
 import { areaPercent, scoreExam } from '../lib/examScoring'
@@ -391,6 +391,7 @@ function ExamResults({ session }: { session: ExamSession }) {
   const r = session.result!
   const section = getSection(session.section)!
   const [open, setOpen] = useState<string | null>(null)
+  const [added, setAdded] = useState<number | null>(null)
   return (
     <div className="mx-auto max-w-4xl px-4 py-8">
       <Link to="/" className="text-sm text-blue-700 hover:underline dark:text-blue-400">
@@ -444,7 +445,18 @@ function ExamResults({ session }: { session: ExamSession }) {
       </ul>
       <p className="-mt-4 mb-6 text-xs muted">Targets are study guidance (about 90 seconds per multiple-choice question and each simulation's suggested minutes), not AICPA figures.</p>
       <h2 className="h2 mb-2">Review every item</h2>
-      <p className="mb-3 text-sm muted">Missed questions were added to your spaced review queue.</p>
+      <div className="mb-3 flex flex-wrap items-center gap-3 text-sm">
+        {added === null ? (
+          <>
+            <span className="muted">Mock questions are kept out of spaced review so later mocks stay fresh.</span>
+            <button type="button" className="btn-secondary" onClick={() => void addMissedMockToReview(session.id).then(setAdded)}>
+              Add missed questions to spaced review
+            </button>
+          </>
+        ) : (
+          <span role="status">{added ? `${added} missed question(s) added to your spaced review queue.` : 'No missed multiple-choice questions to add.'}</span>
+        )}
+      </div>
       {session.testlets.map((t, ti) => (
         <section key={ti} className="mb-6">
           <h3 className="mb-2 font-semibold">
