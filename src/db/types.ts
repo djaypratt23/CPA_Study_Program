@@ -184,6 +184,8 @@ export interface Settings {
   lastLocation?: { path: string; label: string; at: string }
   /** Include material outside the current Blueprint in the plan, readiness and mixed practice (P2-2). */
   includeOptional?: boolean
+  /** Move to the next question after a confident correct answer in tutor mode (P2-3). Default on. */
+  autoAdvance?: boolean
 }
 
 export const DEFAULT_SETTINGS: Settings = {

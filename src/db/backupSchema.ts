@@ -141,6 +141,7 @@ const Settings = z.looseObject({
   newCardsPerDay: z.number().int().min(0),
   lastLocation: z.looseObject({ path: z.string().startsWith('/'), label: z.string(), at: z.string() }).optional(),
   includeOptional: z.boolean().optional(),
+  autoAdvance: z.boolean().optional(),
 })
 
 export const TABLE_SCHEMAS: Record<(typeof TABLES)[number], z.ZodType> = {

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useEffect, useState, useRef } from 'react'
 import { Rating, type Grade } from 'ts-fsrs'
 import type { FlashcardWithModule } from '../content/schema'
@@ -15,7 +16,7 @@ const GRADES: { g: Grade; label: string; key: string; cls: string }[] = [
 ]
 
 /** Studies a fixed queue of cards. "Again" puts the card back at the end of this session. */
-export default function FlashcardPlayer({ cards, onDone }: { cards: FlashcardWithModule[]; onDone: () => void }) {
+export default function FlashcardPlayer({ cards, onDone, next }: { cards: FlashcardWithModule[]; onDone: () => void; next?: { label: string; to: string } }) {
   const [queue, setQueue] = useState(cards)
   const [flipped, setFlipped] = useState(false)
   const [intervals, setIntervals] = useState<Record<string, string> | null>(null)
@@ -65,7 +66,12 @@ export default function FlashcardPlayer({ cards, onDone }: { cards: FlashcardWit
       <div className="card text-center">
         <p className="text-lg font-semibold">Done — {reviewed} review{reviewed === 1 ? '' : 's'}.</p>
         <p className="muted text-sm">The scheduler will bring each card back right before you would forget it.</p>
-        <button className="btn-primary mt-4" onClick={onDone}>
+        {next && (
+          <Link to={next.to} className="btn-primary mt-4 mr-2">
+            {next.label} →
+          </Link>
+        )}
+        <button className={next ? 'btn-secondary mt-4' : 'btn-primary mt-4'} onClick={onDone}>
           Finish
         </button>
       </div>

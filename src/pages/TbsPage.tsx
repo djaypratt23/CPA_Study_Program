@@ -9,6 +9,7 @@ import Clock from '../components/Timer'
 import { PageHeader } from '../components/ui'
 import { content, ensureAllSections, unitTitle } from '../content'
 import { db } from '../db'
+import { useStudyState } from '../hooks/useStore'
 import { recordTbsAttempt, setLastLocation } from '../db/actions'
 import { scoreTbs, type TbsResponses } from '../lib/tbsScoring'
 
@@ -24,6 +25,7 @@ export default function TbsPage() {
   const loaded = useRef(false)
   const [ready, setReady] = useState(false)
   const [busy, setBusy] = useState(false)
+  const { state } = useStudyState()
 
   useEffect(() => {
     if (session === undefined || loaded.current) return
@@ -119,7 +121,12 @@ export default function TbsPage() {
             <button className="btn-secondary" onClick={retry}>
               Try again from scratch
             </button>
-            <Link to={`/tbs?unit=${tbs.unitId}`} className="btn-primary">
+            {state?.next && state.next.to !== `/tbs/${tbs.id}` && (
+              <Link to={state.next.to} className="btn-primary">
+                Next: {state.next.detail} →
+              </Link>
+            )}
+            <Link to={`/tbs?unit=${tbs.unitId}`} className={state?.next && state.next.to !== `/tbs/${tbs.id}` ? 'btn-secondary' : 'btn-primary'}>
               More simulations
             </Link>
           </>

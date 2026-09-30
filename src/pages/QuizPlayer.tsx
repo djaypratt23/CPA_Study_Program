@@ -10,6 +10,7 @@ import McqView, { TRAP_LABELS } from '../components/McqView'
 import { PageHeader, pct } from '../components/ui'
 import { content, getModule, isSectionLoaded, loadSection } from '../content'
 import { db } from '../db'
+import { useSettings, useStudyState } from '../hooks/useStore'
 import { recordMcqAttempt, setLastLocation } from '../db/actions'
 import type { Mcq } from '../content/schema'
 import type { QuizItemState, QuizSession } from '../db/types'
@@ -31,6 +32,19 @@ export default function QuizPlayer() {
   const finishing = useRef(false)
   const submitting = useRef(false)
   const [busy, setBusy] = useState(false)
+  // Auto-advance (P2-3): after a confident correct answer in tutor mode, move on after a short pause.
+  const settings = useSettings()
+  const [autoNextFrom, setAutoNextFrom] = useState<number | null>(null)
+  const sessionKey = session?.id
+  const sessionIndex = session?.index
+  useEffect(() => {
+    if (autoNextFrom === null || sessionKey === undefined || sessionIndex !== autoNextFrom) return
+    const t = setTimeout(() => {
+      void db.quizSessions.update(sessionKey, { index: autoNextFrom + 1 })
+      setAutoNextFrom(null)
+    }, 1500)
+    return () => clearTimeout(t)
+  }, [autoNextFrom, sessionKey, sessionIndex])
 
   useEffect(() => {
     if (session && !loadedElapsed.current) {
@@ -121,6 +135,7 @@ export default function QuizPlayer() {
         section,
       })
       await patchItem({ confidence: c, correct: a.correct, timeMs, answeredAt: a.at })
+      if (a.correct && c !== 'guess' && settings?.autoAdvance !== false && !last) setAutoNextFrom(session.index)
     } finally {
       submitting.current = false
     }
@@ -216,7 +231,16 @@ export default function QuizPlayer() {
       />
       <KeyNav onPrev={session.index > 0 ? () => go(session.index - 1) : undefined} onNext={!last ? () => go(session.index + 1) : undefined} />
 
-      <div className="mt-6 flex flex-wrap justify-between gap-2">
+      {autoNextFrom === session.index && (
+        <p className="mt-4 flex items-center gap-2 text-sm" role="status">
+          Next question in a moment…
+          <button className="btn-ghost min-h-9 px-2 text-sm" onClick={() => setAutoNextFrom(null)}>
+            Stay here
+          </button>
+        </p>
+      )}
+      {/* On phones the controls stay in view above the bottom navigation bar (P2-3). */}
+      <div className="sticky bottom-[calc(4rem+env(safe-area-inset-bottom))] z-10 -mx-4 mt-6 flex flex-wrap justify-between gap-2 border-t border-slate-200 bg-white/95 px-4 py-2 backdrop-blur md:static md:mx-0 md:border-0 md:bg-transparent md:p-0 md:backdrop-blur-none dark:border-slate-800 dark:bg-slate-950/95 md:dark:bg-transparent">
         <button className="btn-secondary" disabled={session.index === 0} onClick={() => go(session.index - 1)}>
           ← Previous
         </button>
@@ -261,6 +285,8 @@ function QuizResults({ session }: { session: QuizSession }) {
     items.map((x) => x.q.id),
   )
   const pace = pacing(items.map(({ st }) => ({ timeMs: st.timeMs, targetMs: MCQ_TARGET_MS })))
+  const { state } = useStudyState()
+  const nextStep = state?.next && state.next.to !== `/quiz/${session.id}` ? state.next : undefined
   return (
     <div>
       <PageHeader title="Set complete" subtitle={session.title} />
@@ -284,7 +310,12 @@ function QuizResults({ session }: { session: QuizSession }) {
           </p>
         )}
         <div className="mt-4 flex flex-wrap gap-2">
-          <Link to="/" className="btn-primary">
+          {nextStep && (
+            <Link to={nextStep.to} className="btn-primary">
+              Next: {nextStep.detail} →
+            </Link>
+          )}
+          <Link to="/" className={nextStep ? 'btn-secondary' : 'btn-primary'}>
             Back to today’s plan
           </Link>
           <Link to="/practice" className="btn-secondary">
