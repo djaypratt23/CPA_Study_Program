@@ -4,9 +4,9 @@ import { availableModules, content, getModule, getSection, practiceQuestions } f
 import type { SectionId } from '../content/schema'
 import { db, getSettings } from '../db'
 import { createQuizSession } from '../db/quizzes'
-import { buildMasteryCheck, buildQuiz, historyByItem } from '../lib/quiz'
+import { buildDiagnostic, buildMasteryCheck, buildQuiz, historyByItem } from '../lib/quiz'
 
-/** Creates a quiz session from URL intent (?module=, ?mastery=, ?mixed=, ?due=) and opens it. */
+/** Creates a quiz session from URL intent (?module=, ?mastery=, ?mixed=, ?due=, ?diagnostic=) and opens it. */
 export default function PracticeStart() {
   const [params] = useSearchParams()
   const nav = useNavigate()
@@ -27,6 +27,7 @@ export default function PracticeStart() {
       const masteryId = params.get('mastery')
       const mixedSection = params.get('mixed') as SectionId | null
       const due = params.get('due')
+      const diagnostic = params.get('diagnostic') as SectionId | null
 
       let id: string | null = null
       const empty = 'No practice questions match yet for this selection.'
@@ -44,7 +45,7 @@ export default function PracticeStart() {
           .map((x) => x.id)
         const qs = buildMasteryCheck(practiceQuestions(m.section), masteryId, others, hist)
         if (!qs.length) return setError(empty)
-        id = await createQuizSession({ section: m.section, title: `Mastery check: ${m.title}`, mode: 'tutor', mixed: true, itemIds: qs.map((q) => q.id) })
+        id = await createQuizSession({ section: m.section, title: `Mastery check: ${m.title}`, mode: 'tutor', mixed: true, itemIds: qs.map((q) => q.id), purpose: 'mastery', moduleId: masteryId })
       } else if (mixedSection) {
         const sec = getSection(mixedSection)
         if (!sec) return setError('Unknown section.')
@@ -54,6 +55,18 @@ export default function PracticeStart() {
         const qs = buildQuiz(practiceQuestions(sec.id), { moduleIds: ids, status: 'all', count: 20 }, hist, meta)
         if (!qs.length) return setError(empty)
         id = await createQuizSession({ section: sec.id, title: `Mixed practice (${sec.id})`, mode: 'tutor', mixed: true, itemIds: qs.map((q) => q.id) })
+      } else if (diagnostic) {
+        const sec = getSection(diagnostic)
+        if (!sec) return setError('Unknown section.')
+        const avail = new Set(availableModules(sec.id).map((m) => m.id))
+        const areas = sec.areas.map((a) => ({
+          id: a.id,
+          weight: (a.allocation.min + a.allocation.max) / 2,
+          moduleIds: a.units.flatMap((u) => u.modules.map((m) => m.id)).filter((m) => avail.has(m)),
+        }))
+        const qs = buildDiagnostic(practiceQuestions(sec.id), areas, hist, 40)
+        if (!qs.length) return setError(empty)
+        id = await createQuizSession({ section: sec.id, title: `Diagnostic (${sec.id})`, mode: 'test', mixed: true, itemIds: qs.map((q) => q.id), purpose: 'diagnostic' })
       } else if (due) {
         const now = new Date().toISOString()
         const items = (await db.srs.where('kind').equals('question').toArray()).filter((s) => s.due <= now && s.section === settings.activeSection && content.questions[s.itemId])

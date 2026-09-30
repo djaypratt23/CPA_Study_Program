@@ -6,15 +6,17 @@ import Spreadsheet from '../components/Spreadsheet'
 import Clock from '../components/Timer'
 import Icon from '../components/Icon'
 import KeyNav from '../components/KeyNav'
-import McqView from '../components/McqView'
+import McqView, { TRAP_LABELS } from '../components/McqView'
 import { PageHeader, pct } from '../components/ui'
 import { content, getModule } from '../content'
 import { db } from '../db'
 import { recordMcqAttempt, setLastLocation } from '../db/actions'
-import type { QuizSession } from '../db/types'
+import type { Mcq } from '../content/schema'
+import type { QuizItemState, QuizSession } from '../db/types'
 import { quizDeadline, quizTimeLeftMs } from '../lib/examClock'
 import { summarizeQuiz } from '../lib/quizScoring'
 import { MCQ_TARGET_MS, formatDuration, pacing } from '../lib/pacing'
+import { MASTERY_THRESHOLD } from '../lib/mastery'
 import type { Confidence } from '../lib/srs'
 
 export default function QuizPlayer() {
@@ -285,6 +287,12 @@ function QuizResults({ session }: { session: QuizSession }) {
           </Link>
         </div>
       </div>
+      {session.purpose === 'mastery' && session.moduleId && percent < MASTERY_THRESHOLD && <Remediation session={session} items={items} />}
+      {session.purpose === 'diagnostic' && (
+        <p className="card mb-6 text-sm">
+          Diagnostic complete. Your study plan now puts the Blueprint areas where you scored lowest — weighted by how much of the exam they cover — ahead of the others.
+        </p>
+      )}
       <h2 className="h2 mb-2">Review every question</h2>
       <ul className="space-y-2">
         {items.map(({ q, st }, i) => (
@@ -318,5 +326,58 @@ function QuizResults({ session }: { session: QuizSession }) {
         ))}
       </ul>
     </div>
+  )
+}
+
+/**
+ * After a failed mastery check (P1-13): show which traps caught the learner, point to the lesson's
+ * worked and faded examples and the module's flashcards, then offer a retest on questions not yet seen.
+ */
+function Remediation({ session, items }: { session: QuizSession; items: { q: Mcq; st: QuizItemState }[] }) {
+  const traps = new Map<string, number>()
+  for (const { q, st } of items) {
+    if (!st.answeredAt || st.correct) continue
+    const trap = q.choices.find((c) => c.id === st.choice)?.trap
+    if (trap) traps.set(trap, (traps.get(trap) ?? 0) + 1)
+  }
+  const moduleId = session.moduleId!
+  return (
+    <section className="card mb-6 border-amber-300 dark:border-amber-800" aria-labelledby="remediate">
+      <h2 id="remediate" className="h2">
+        Not mastered yet — here is the fastest way back
+      </h2>
+      {traps.size > 0 && (
+        <div className="mt-2 text-sm">
+          <p className="font-semibold">What caught you</p>
+          <ul className="mt-1 list-disc pl-5">
+            {[...traps.entries()]
+              .sort((a, b) => b[1] - a[1])
+              .map(([t, n]) => (
+                <li key={t}>
+                  {TRAP_LABELS[t] ?? t} ({n})
+                </li>
+              ))}
+          </ul>
+          <p className="mt-1 muted">Open each missed question below and read why your choice was a trap.</p>
+        </div>
+      )}
+      <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm">
+        <li>
+          <Link to={`/module/${moduleId}`} className="text-blue-700 underline dark:text-blue-400">
+            Rework the lesson's worked and faded examples
+          </Link>
+        </li>
+        <li>
+          <Link to={`/flashcards?module=${moduleId}`} className="text-blue-700 underline dark:text-blue-400">
+            Drill the module's flashcards
+          </Link>
+        </li>
+        <li>
+          <Link to={`/practice/start?mastery=${moduleId}`} className="text-blue-700 underline dark:text-blue-400">
+            Retest on questions you haven't seen
+          </Link>
+        </li>
+      </ol>
+    </section>
   )
 }

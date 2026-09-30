@@ -97,3 +97,40 @@ export function buildMasteryCheck(pool: Mcq[], moduleId: string, otherModuleIds:
   const others = byLeastSeen(pool.filter((q) => q.pool === 'practice' && otherModuleIds.includes(q.moduleId) && q.moduleId !== moduleId)).slice(0, 3)
   return interleave(shuffle([...own, ...others], rand))
 }
+
+/**
+ * A stratified diagnostic (P1-13): about `count` practice questions spread across Blueprint areas in
+ * proportion to their weight, and across the modules within each area, preferring unseen items.
+ */
+export function buildDiagnostic(
+  pool: Mcq[],
+  areas: { id: string; weight: number; moduleIds: string[] }[],
+  hist: Map<string, ItemHistory>,
+  count = 40,
+  seed = Date.now(),
+): Mcq[] {
+  const rand = mulberry32(seed)
+  const total = areas.reduce((a, x) => a + x.weight, 0) || 1
+  const leastSeenFirst = (list: Mcq[]) => shuffle(list, rand).sort((a, b) => (hist.get(a.id)?.attempts ?? 0) - (hist.get(b.id)?.attempts ?? 0))
+  const picked: Mcq[] = []
+  for (const area of areas) {
+    const quota = Math.max(1, Math.round((count * area.weight) / total))
+    const queues = shuffle(
+      area.moduleIds.map((m) => leastSeenFirst(pool.filter((q) => q.pool === 'practice' && q.moduleId === m))),
+      rand,
+    )
+    // Round-robin across the area's modules so the diagnostic samples its breadth.
+    let taken = 0
+    while (taken < quota && queues.some((l) => l.length)) {
+      for (const list of queues) {
+        if (taken >= quota) break
+        const q = list.shift()
+        if (q) {
+          picked.push(q)
+          taken++
+        }
+      }
+    }
+  }
+  return interleave(shuffle(picked, rand))
+}

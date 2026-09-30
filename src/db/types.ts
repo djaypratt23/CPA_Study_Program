@@ -104,6 +104,10 @@ export interface QuizSession {
   /** Wall-clock deadline for a timed set (ISO). */
   endsAt?: string
   elapsedMs: number
+  /** Why the set exists (P1-13): drives the diagnostic banner and mastery remediation. */
+  purpose?: 'diagnostic' | 'mastery'
+  /** The module a mastery check is for. */
+  moduleId?: string
 }
 
 export interface TbsSession {

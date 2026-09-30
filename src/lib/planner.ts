@@ -32,6 +32,11 @@ export interface PlanInput {
   dueReviews: number // SRS items due today
   mockTaken: boolean
   horizonDays?: number // how far to plan when there is no exam date
+  /**
+   * Optional priority per unit (higher first), e.g. Blueprint area weight × weakness (P1-13).
+   * Units already started keep their course order at the front; untouched units follow by priority.
+   */
+  unitPriority?: Record<string, number>
 }
 
 export type TaskKind = 'review' | 'lesson' | 'practice' | 'mastery' | 'tbs' | 'mixed' | 'mock' | 'final' | 'exam'
@@ -103,7 +108,7 @@ function buildQueue(input: PlanInput): WorkItem[] {
   const q: WorkItem[] = []
   const byUnit = new Map<string, PlanModule[]>()
   for (const m of input.modules) byUnit.set(m.unitId, [...(byUnit.get(m.unitId) ?? []), m])
-  const unitOrder = [...new Set(input.modules.map((m) => m.unitId))]
+  const unitOrder = orderUnits(input)
   for (const unitId of unitOrder) {
     const mods = byUnit.get(unitId) ?? []
     let lastLearning: WorkItem | undefined
@@ -147,6 +152,19 @@ function buildQueue(input: PlanInput): WorkItem[] {
       })
   }
   return q
+}
+
+/** Course order, except that untouched units are reordered by `unitPriority` (stable for ties). */
+export function orderUnits(input: Pick<PlanInput, 'modules' | 'unitPriority'>): string[] {
+  const course = [...new Set(input.modules.map((m) => m.unitId))]
+  const pri = input.unitPriority
+  if (!pri) return course
+  const started = (u: string) => input.modules.some((m) => m.unitId === u && (m.lessonDone || m.practiceDone || m.masteryDays > 0))
+  const begun = course.filter(started)
+  const fresh = course.filter((u) => !started(u))
+  const rank = new Map(course.map((u, i) => [u, i]))
+  fresh.sort((a, b) => (pri[b] ?? 0) - (pri[a] ?? 0) || rank.get(a)! - rank.get(b)!)
+  return [...begun, ...fresh]
 }
 
 function readyOn(item: WorkItem, day: string): boolean {

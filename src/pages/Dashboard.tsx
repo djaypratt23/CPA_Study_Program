@@ -58,6 +58,20 @@ export default function Dashboard() {
         )}
       </div>
 
+      {r.areas.every((a) => a.n === 0) && (
+        <section className="card border-blue-200 dark:border-blue-900" aria-labelledby="diag">
+          <h2 id="diag" className="h2">
+            Start with a diagnostic
+          </h2>
+          <p className="mt-1 text-sm">
+            A 40-question test spread across every Blueprint area, weighted like the exam. Your results reorder the plan so your weakest, heaviest-weighted areas come first.
+          </p>
+          <Link to={`/practice/start?diagnostic=${section.id}`} className="btn-secondary mt-3">
+            Take the diagnostic (about 60 minutes)
+          </Link>
+        </section>
+      )}
+
       {/* The one obvious next step */}
       <Link
         to={state.next.to}

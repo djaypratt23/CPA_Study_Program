@@ -92,6 +92,8 @@ const QuizSession = z.looseObject({
   finishedAt: z.string().optional(),
   timeLimitMs: z.number().optional(),
   elapsedMs: z.number().min(0),
+  purpose: z.enum(['diagnostic', 'mastery']).optional(),
+  moduleId: z.string().optional(),
 })
 
 const TbsSession = z.looseObject({

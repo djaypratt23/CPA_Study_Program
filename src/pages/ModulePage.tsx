@@ -11,6 +11,7 @@ import { addHighlight, completeLesson, setLastLocation, setModuleNotes, touchMod
 import { useDebouncedSave } from '../hooks/useDebouncedSave'
 import { useStudyState } from '../hooks/useStore'
 import { uid } from '../lib/random'
+import { unmasteredPrerequisites } from '../lib/studyState'
 
 export default function ModulePage() {
   const { moduleId = '' } = useParams()
@@ -87,6 +88,7 @@ export default function ModulePage() {
   const practiceCount = questionsForModule(moduleId).length
   const cardCount = content.flashcards.filter((f) => f.moduleId === moduleId).length
   const done = !!progress?.lessonCompletedAt
+  const pending = state ? unmasteredPrerequisites(state.modules, moduleId) : []
 
   return (
     <article className="pb-8">
@@ -108,6 +110,22 @@ export default function ModulePage() {
           {lesson.needsReview && <ReviewBadge note={lesson.reviewNote} />}
         </div>
       </header>
+
+      {!done && pending.length > 0 && (
+        <aside className="mb-6 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm dark:border-amber-800 dark:bg-amber-950/30" aria-label="Before you start">
+          <p className="font-semibold">Before starting a new unit: {pending.length === 1 ? 'one module you studied is' : `${pending.length} modules you studied are`} not mastered yet.</p>
+          <p className="mt-1 muted">Passing their mastery checks first makes the new material stick better. You can still continue.</p>
+          <ul className="mt-2 space-y-1">
+            {pending.map((m) => (
+              <li key={m.id}>
+                <Link to={`/practice/start?mastery=${m.id}`} className="text-blue-700 underline dark:text-blue-400">
+                  Mastery check: {m.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
 
       <section className="card mb-6" aria-labelledby="objectives">
         <h2 id="objectives" className="mb-2 text-sm font-bold uppercase tracking-wide muted">
