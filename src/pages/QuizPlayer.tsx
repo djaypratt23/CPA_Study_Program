@@ -2,6 +2,7 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Calculator from '../components/Calculator'
+import Spreadsheet from '../components/Spreadsheet'
 import Clock from '../components/Timer'
 import Icon from '../components/Icon'
 import KeyNav from '../components/KeyNav'
@@ -13,12 +14,14 @@ import { recordMcqAttempt, setLastLocation } from '../db/actions'
 import type { QuizSession } from '../db/types'
 import { quizDeadline, quizTimeLeftMs } from '../lib/examClock'
 import { summarizeQuiz } from '../lib/quizScoring'
+import { MCQ_TARGET_MS, formatDuration, pacing } from '../lib/pacing'
 import type { Confidence } from '../lib/srs'
 
 export default function QuizPlayer() {
   const { sessionId = '' } = useParams()
   const session = useLiveQuery(() => db.quizSessions.get(sessionId).then((s) => s ?? null), [sessionId])
   const [calc, setCalc] = useState(false)
+  const [sheet, setSheet] = useState(false)
   const [elapsed, setElapsed] = useState(0)
   const qStart = useRef(Date.now())
   const loadedElapsed = useRef(false)
@@ -164,6 +167,9 @@ export default function QuizPlayer() {
           <button className="btn-ghost min-h-9 px-2" onClick={() => setCalc((c) => !c)} aria-pressed={calc} aria-label="Calculator">
             <Icon name="calc" />
           </button>
+          <button className="btn-ghost min-h-9 px-2" onClick={() => setSheet((c) => !c)} aria-pressed={sheet} aria-label="Spreadsheet">
+            <Icon name="sheet" />
+          </button>
         </div>
       </div>
 
@@ -235,6 +241,7 @@ export default function QuizPlayer() {
       </div>
       <p className="mt-3 hidden text-xs muted md:block">Keyboard: ← / → previous and next question.</p>
       {calc && <Calculator onClose={() => setCalc(false)} />}
+      {sheet && <Spreadsheet onClose={() => setSheet(false)} />}
     </div>
   )
 }
@@ -246,6 +253,7 @@ function QuizResults({ session }: { session: QuizSession }) {
     session,
     items.map((x) => x.q.id),
   )
+  const pace = pacing(items.map(({ st }) => ({ timeMs: st.timeMs, targetMs: MCQ_TARGET_MS })))
   return (
     <div>
       <PageHeader title="Set complete" subtitle={session.title} />
@@ -260,6 +268,14 @@ function QuizResults({ session }: { session: QuizSession }) {
             ? `${missed + guessedRight} question(s) were added to your spaced review queue.`
             : 'Clean sweep. These will stay out of your review queue.'}
         </p>
+        {pace.timed > 0 && (
+          <p className="mt-2 text-sm">
+            Pacing: {formatDuration(pace.avgMs)} per question on average (target about {formatDuration(MCQ_TARGET_MS)}).{' '}
+            {pace.slow.length
+              ? `Took more than twice the target: question${pace.slow.length === 1 ? '' : 's'} ${pace.slow.map((i) => i + 1).join(', ')}.`
+              : 'No question took more than twice the target.'}
+          </p>
+        )}
         <div className="mt-4 flex flex-wrap gap-2">
           <Link to="/" className="btn-primary">
             Back to today’s plan

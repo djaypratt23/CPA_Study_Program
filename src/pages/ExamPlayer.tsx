@@ -2,6 +2,8 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Calculator from '../components/Calculator'
+import { MCQ_TARGET_MS, formatDuration } from '../lib/pacing'
+import Spreadsheet from '../components/Spreadsheet'
 import Icon from '../components/Icon'
 import Markdown from '../components/Markdown'
 import KeyNav from '../components/KeyNav'
@@ -48,6 +50,7 @@ function ExamRunner({ session }: { session: ExamSession }) {
   const breakMs = (section.exam.breakMinutes ?? 15) * 60_000
   const [now, setNow] = useState(() => Date.now())
   const [calc, setCalc] = useState(false)
+  const [sheet, setSheet] = useState(false)
   const [confirm, setConfirm] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const t = session.testlets[session.testletIndex]
@@ -221,6 +224,9 @@ function ExamRunner({ session }: { session: ExamSession }) {
           <button className="rounded px-2 py-1 hover:bg-slate-700" onClick={() => setCalc((c) => !c)} aria-label="Calculator">
             <Icon name="calc" />
           </button>
+          <button className="rounded px-2 py-1 hover:bg-slate-700" onClick={() => setSheet((c) => !c)} aria-pressed={sheet} aria-label="Spreadsheet">
+            <Icon name="sheet" />
+          </button>
           <Link to="/exam" className="rounded px-2 py-1 text-xs hover:bg-slate-700" title="Your answers are saved, but the exam clock keeps running while you are away, as on the real exam">
             Save & exit
           </Link>
@@ -283,6 +289,7 @@ function ExamRunner({ session }: { session: ExamSession }) {
         )}
       </main>
       {calc && <Calculator onClose={() => setCalc(false)} />}
+      {sheet && <Spreadsheet onClose={() => setSheet(false)} />}
     </div>
   )
 }
@@ -414,6 +421,24 @@ function ExamResults({ session }: { session: ExamSession }) {
           </li>
         ))}
       </ul>
+      <h2 className="h2 mb-2">Pacing by testlet</h2>
+      <ul className="card mb-6 space-y-1 text-sm">
+        {session.testlets.map((t, ti) => {
+          const used = Object.values(t.itemTimeMs ?? {}).reduce((a, b) => a + b, 0)
+          const target = t.kind === 'mcq' ? t.items.length * MCQ_TARGET_MS : t.items.reduce((a, id) => a + (content.tbs[id]?.minutes ?? 15) * 60_000, 0)
+          return (
+            <li key={ti} className="flex justify-between gap-2">
+              <span>
+                Testlet {ti + 1} ({t.kind === 'mcq' ? `${t.items.length} multiple choice` : `${t.items.length} simulations`})
+              </span>
+              <span className={`tabular-nums ${used > target * 1.1 ? 'text-rose-700 dark:text-rose-400' : ''}`}>
+                {used ? formatDuration(used) : '—'} used · target {formatDuration(target)}
+              </span>
+            </li>
+          )
+        })}
+      </ul>
+      <p className="-mt-4 mb-6 text-xs muted">Targets are study guidance (about 90 seconds per multiple-choice question and each simulation's suggested minutes), not AICPA figures.</p>
       <h2 className="h2 mb-2">Review every item</h2>
       <p className="mb-3 text-sm muted">Missed questions were added to your spaced review queue.</p>
       {session.testlets.map((t, ti) => (

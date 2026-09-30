@@ -2,6 +2,7 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Calculator from '../components/Calculator'
+import Spreadsheet from '../components/Spreadsheet'
 import Icon from '../components/Icon'
 import TbsView from '../components/TbsView'
 import Clock from '../components/Timer'
@@ -19,6 +20,7 @@ export default function TbsPage() {
   const [responses, setResponses] = useState<TbsResponses>({})
   const [elapsed, setElapsed] = useState(0)
   const [calc, setCalc] = useState(false)
+  const [sheet, setSheet] = useState(false)
   const loaded = useRef(false)
   const [ready, setReady] = useState(false)
   const [busy, setBusy] = useState(false)
@@ -84,6 +86,9 @@ export default function TbsPage() {
             <button className="btn-ghost min-h-9 px-2" onClick={() => setCalc((c) => !c)} aria-label="Calculator">
               <Icon name="calc" />
             </button>
+            <button className="btn-ghost min-h-9 px-2" onClick={() => setSheet((c) => !c)} aria-pressed={sheet} aria-label="Spreadsheet">
+              <Icon name="sheet" />
+            </button>
           </div>
         }
       />
@@ -105,6 +110,7 @@ export default function TbsPage() {
         )}
       </div>
       {calc && <Calculator onClose={() => setCalc(false)} />}
+      {sheet && <Spreadsheet onClose={() => setSheet(false)} />}
     </div>
   )
 }

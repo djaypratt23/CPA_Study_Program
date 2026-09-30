@@ -312,23 +312,8 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
         </div>
       )
     }
-    case 'research': {
-      const value = response?.kind === 'research' ? response.value : ''
-      return (
-        <fieldset className="space-y-2">
-          <legend className="text-sm muted">Select the excerpt that answers the question.</legend>
-          {part.excerpts.map((e) => (
-            <label key={e.id} className={`card flex cursor-pointer gap-3 p-3 ${value === e.id ? 'border-blue-600 ring-2 ring-blue-600/30' : ''}`}>
-              <input type="radio" name={part.id} className="mt-1 accent-blue-700" disabled={disabled} checked={value === e.id} onChange={() => onChange({ kind: 'research', value: e.id })} />
-              <span>
-                <span className="block text-xs font-bold">{e.citation}</span>
-                <span className="text-sm">{e.text}</span>
-              </span>
-            </label>
-          ))}
-        </fieldset>
-      )
-    }
+    case 'research':
+      return <ResearchPart part={part} response={response} onChange={onChange} disabled={disabled} />
     case 'review': {
       const values: Record<string, ReviewRowResponse> = response?.kind === 'review' ? response.values : {}
       const update = (id: string, patch: Partial<ReviewRowResponse>) =>
@@ -394,4 +379,47 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
       )
     }
   }
+}
+
+/** Research part with a search box over the excerpts, like the exam's authoritative-literature search (P1-10). */
+function ResearchPart({
+  part,
+  response,
+  onChange,
+  disabled,
+}: {
+  part: Extract<TbsPart, { kind: 'research' }>
+  response: PartResponse | undefined
+  onChange: (r: PartResponse) => void
+  disabled: boolean
+}) {
+  const value = response?.kind === 'research' ? response.value : ''
+  const [query, setQuery] = useState('')
+  const terms = query.toLowerCase().split(/\s+/).filter(Boolean)
+  const shown = part.excerpts.filter((e) => e.id === value || terms.every((t) => `${e.citation} ${e.text}`.toLowerCase().includes(t)))
+  return (
+    <fieldset className="space-y-2">
+      <legend className="text-sm muted">Select the excerpt that answers the question.</legend>
+      <input
+        type="search"
+        className="input text-sm"
+        placeholder="Search the excerpts (e.g., a keyword or citation)"
+        aria-label="Search research excerpts"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      <p className="text-xs muted" aria-live="polite">
+        {terms.length ? `${shown.length} of ${part.excerpts.length} excerpts match` : `${part.excerpts.length} excerpts`}
+      </p>
+      {shown.map((e) => (
+        <label key={e.id} className={`card flex cursor-pointer gap-3 p-3 ${value === e.id ? 'border-blue-600 ring-2 ring-blue-600/30' : ''}`}>
+          <input type="radio" name={part.id} className="mt-1 accent-blue-700" disabled={disabled} checked={value === e.id} onChange={() => onChange({ kind: 'research', value: e.id })} />
+          <span>
+            <span className="block text-xs font-bold">{e.citation}</span>
+            <span className="text-sm">{e.text}</span>
+          </span>
+        </label>
+      ))}
+    </fieldset>
+  )
 }
