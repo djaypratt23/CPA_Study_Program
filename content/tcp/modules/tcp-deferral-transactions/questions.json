@@ -446,5 +446,75 @@
     "explanation": "§453A imposes interest on the deferred tax when installment obligations exceed $5 million at year-end.",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-dt-11",
+    "pool": "practice",
+    "stem": "A warehouse (adjusted basis $300,000) is destroyed by fire, and the owner receives $500,000 of insurance proceeds. Within the replacement period she buys a replacement warehouse for $450,000. What gain is recognized, and what is the basis of the new warehouse?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Gain $200,000; basis $450,000",
+        "explanation": "Gain is deferred to the extent the proceeds are reinvested.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No gain; basis $250,000",
+        "explanation": "The 50,000 not reinvested must be recognized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Gain $50,000; basis $450,000",
+        "explanation": "Basis is reduced by the 150,000 deferred gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Gain $50,000; basis $300,000",
+        "explanation": "Correct. Realized gain 200,000; recognized = proceeds not reinvested (50,000); deferred 150,000; basis = 450,000 − 150,000 = 300,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§1033: recognize the lesser of realized gain or unreinvested proceeds; replacement basis = cost − deferred gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-dt-12",
+    "pool": "practice",
+    "stem": "Ken owns 30% of X Corp. His father owns 25%, his brother-in-law owns 20%, and a partnership in which Ken is a 50% partner owns 10%. What percentage of X Corp does Ken own under §267(c)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "60%",
+        "explanation": "Correct. Ken's 30% + father's 25% (family) + 50% of the partnership's 10% (5%) = 60%. A brother-in-law is not family under §267."
+      },
+      {
+        "id": "b",
+        "text": "80%",
+        "explanation": "In-laws are not family members for §267.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "55%",
+        "explanation": "This leaves out the stock owned through the partnership.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "35%",
+        "explanation": "This leaves out the father's stock, which is attributed to Ken.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§267(c): family (spouse, ancestors, lineal descendants, siblings) and proportionate entity attribution.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

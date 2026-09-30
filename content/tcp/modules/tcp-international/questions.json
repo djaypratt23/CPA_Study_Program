@@ -1,0 +1,447 @@
+[
+  {
+    "id": "tcp-intl-pre1",
+    "pool": "lesson",
+    "stem": "Best guess: a U.S. corporation opens a sales office in France that loses money in its first year. If the office is a branch rather than a French subsidiary, what happens to the loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It stays in France",
+        "explanation": "That describes a subsidiary, a separate taxpayer.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "It is deducted on the U.S. return",
+        "explanation": "Correct. A branch is part of the U.S. corporation, so its loss flows into the U.S. return."
+      },
+      {
+        "id": "c",
+        "text": "It becomes a foreign tax credit",
+        "explanation": "A loss is a deduction, not a credit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "It is disallowed by the U.S.",
+        "explanation": "Branch losses are deductible currently.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A branch's income and losses are part of the U.S. corporation's return.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-chk1",
+    "pool": "lesson",
+    "stem": "A U.S. corporation has worldwide taxable income of $1,000,000, including $300,000 of foreign-source taxable income, and U.S. tax before credits of $210,000. It paid $50,000 of foreign income tax. What foreign tax credit is allowed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$63,000",
+        "explanation": "That is the limit; the credit cannot exceed the foreign tax paid.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$210,000",
+        "explanation": "The credit is limited to U.S. tax on foreign-source income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Correct. The limit is 210,000 × 300,000 ÷ 1,000,000 = 63,000; foreign tax paid (50,000) is lower."
+      },
+      {
+        "id": "d",
+        "text": "$15,000",
+        "explanation": "This multiplies the foreign tax by the foreign-source share.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Credit = lesser of foreign taxes paid or U.S. tax × foreign-source ÷ worldwide taxable income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-01",
+    "pool": "practice",
+    "stem": "A U.S. corporation receives interest on a loan to a French company and dividends from a U.S. corporation. How is each sourced?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Interest foreign; dividends U.S.",
+        "explanation": "Correct. Interest and dividends are sourced by the residence of the payer."
+      },
+      {
+        "id": "b",
+        "text": "Interest U.S.; dividends U.S.",
+        "explanation": "Interest is sourced by the payer's residence, not the recipient's.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Interest foreign; dividends foreign",
+        "explanation": "Dividends from a domestic corporation are U.S.-source.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Interest U.S.; dividends foreign",
+        "explanation": "Both are sourced by the payer; this reverses them.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Interest and dividend income are sourced by the residence of the payer.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-02",
+    "pool": "practice",
+    "stem": "A U.S. engineer employed by a U.S. company spends three months working in Brazil on a client project and is paid $60,000 for that work by the U.S. company. Where is the $60,000 sourced?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "U.S., the employer's residence",
+        "explanation": "Compensation is sourced where the services are performed, not by the payer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Brazil, where the work was done",
+        "explanation": "Correct. Compensation for personal services is sourced where the services are performed."
+      },
+      {
+        "id": "c",
+        "text": "U.S., the employee's residence",
+        "explanation": "The worker's residence does not determine the source of compensation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Split evenly between both countries",
+        "explanation": "The services were all performed in Brazil.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Personal services income is sourced where the services are performed.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-03",
+    "pool": "practice",
+    "stem": "A U.S. manufacturer buys inventory in Mexico and resells it to customers in Canada, with title passing in Canada. Where is the income from the sales sourced?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "U.S., the seller's residence",
+        "explanation": "Purchased inventory is sourced where title passes, not by residence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Mexico, where it was bought",
+        "explanation": "The place of purchase does not determine source.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Canada, where title passes",
+        "explanation": "Correct. Income from the sale of purchased inventory is sourced where title passes."
+      },
+      {
+        "id": "d",
+        "text": "Wherever payment is received",
+        "explanation": "The payment location is irrelevant.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Purchased inventory: title-passage rule. Produced inventory: where the production occurs.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-04",
+    "pool": "practice",
+    "stem": "A foreign corporation with no U.S. trade or business receives $100,000 of dividends from a U.S. corporation. No treaty applies. How is the income taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "21% on the net dividend income",
+        "explanation": "Net-basis tax at regular rates applies to effectively connected income, not passive FDAP income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "It is exempt from U.S. tax",
+        "explanation": "U.S.-source FDAP income of a foreign person is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It is taxed only when repatriated",
+        "explanation": "The tax is collected at the time of payment.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "30% of the gross amount, withheld",
+        "explanation": "Correct. U.S.-source FDAP income is taxed at 30% of the gross amount, collected by withholding, absent a treaty."
+      }
+    ],
+    "answer": "d",
+    "explanation": "FDAP income not connected with a U.S. business: 30% gross withholding (§§881, 1442), often reduced by treaty.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-05",
+    "pool": "practice",
+    "stem": "A German company sells machines to U.S. customers. Which arrangement is most likely to create a U.S. permanent establishment under a typical treaty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A U.S. agent who signs its contracts",
+        "explanation": "Correct. A dependent agent who habitually concludes contracts on the company's behalf creates a permanent establishment."
+      },
+      {
+        "id": "b",
+        "text": "Shipping directly from Germany",
+        "explanation": "Selling into the U.S. without a presence creates no permanent establishment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A U.S. warehouse used only for storage",
+        "explanation": "Storage alone is a preparatory or auxiliary activity.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "An independent U.S. distributor",
+        "explanation": "An independent agent acting in the ordinary course of its business is not a permanent establishment.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A permanent establishment is a fixed place of business or a dependent agent that habitually concludes contracts; auxiliary activities are excluded.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-06",
+    "pool": "practice",
+    "stem": "A U.S. corporation expects its new foreign operation to lose money for three years. Which structure lets it use those losses against U.S. income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A foreign subsidiary",
+        "explanation": "A foreign subsidiary is a separate taxpayer; its losses stay abroad.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "A foreign branch",
+        "explanation": "Correct. A branch is part of the U.S. corporation, so its losses reduce U.S. taxable income."
+      },
+      {
+        "id": "c",
+        "text": "A controlled foreign corporation",
+        "explanation": "A CFC is a foreign subsidiary; its losses do not flow to the parent.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Either structure; the choice is irrelevant",
+        "explanation": "Only the branch passes losses through.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Start-up losses favor a branch; later profits taxed at lower foreign rates may favor a subsidiary.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-07",
+    "pool": "practice",
+    "stem": "Five unrelated U.S. corporations each own 11% of the voting stock of a foreign corporation; foreign persons own the rest. Is the foreign corporation a CFC?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No — no single owner has control",
+        "explanation": "CFC status looks at all U.S. shareholders together.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No — U.S. owners need 80%",
+        "explanation": "The threshold is more than 50%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "Yes — U.S. shareholders own 55%",
+        "explanation": "Correct. Each owns at least 10%, so each is a U.S. shareholder; together they own 55%, more than 50%."
+      },
+      {
+        "id": "d",
+        "text": "Yes — any U.S. ownership makes it one",
+        "explanation": "Owners below 10% are not counted, and the total must exceed 50%.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "CFC: more than 50% of vote or value owned by U.S. shareholders, each owning at least 10%.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-08",
+    "pool": "practice",
+    "stem": "What is the main consequence for a U.S. shareholder of a CFC that earns Subpart F income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The CFC pays U.S. tax at 21% directly",
+        "explanation": "The U.S. shareholder, not the CFC, is taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The income is exempt until sold",
+        "explanation": "Subpart F income is taxed currently.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "A 30% withholding tax applies",
+        "explanation": "Withholding applies to FDAP paid to foreign persons.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "It is taxed on its share as earned",
+        "explanation": "Correct. Subpart F requires U.S. shareholders to include their pro rata share currently."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Subpart F (and GILTI) are anti-deferral regimes: U.S. shareholders include CFC income currently.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-09",
+    "pool": "practice",
+    "stem": "A U.S. corporation has worldwide taxable income of $4,000,000, including $1,000,000 of foreign-source taxable income, and U.S. tax before credits of $840,000. It paid $300,000 of foreign tax. What is its excess foreign tax credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$90,000",
+        "explanation": "Correct. Limit = 840,000 × 1,000,000 ÷ 4,000,000 = 210,000; 300,000 − 210,000 = 90,000, carried back 1 year and forward 10."
+      },
+      {
+        "id": "b",
+        "text": "$210,000",
+        "explanation": "That is the credit allowed, not the excess.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "None ($0)",
+        "explanation": "The foreign tax paid exceeds the limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$75,000",
+        "explanation": "This uses 25% of the foreign tax instead of the limit formula.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Excess credit = foreign taxes paid − FTC limit.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-10",
+    "pool": "practice",
+    "stem": "A U.S. corporation has $900,000 of gross income: $600,000 U.S.-source and $300,000 foreign-source. It has $150,000 of expenses definitely related to the foreign income and $200,000 of general expenses apportioned by gross income. What is its foreign-source taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "This omits the apportioned share of general expenses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$83,333",
+        "explanation": "Correct. 300,000 − 150,000 − (200,000 × 300,000 ÷ 900,000 = 66,667) = 83,333."
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "This apportions half of the general expenses instead of one-third.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$300,000",
+        "explanation": "Deductions must be allocated and apportioned to foreign-source income.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Allocate definitely related expenses first, then apportion the rest on a reasonable basis.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-11",
+    "pool": "practice",
+    "stem": "A U.S. corporation owns 30% of a foreign corporation (not a CFC) and receives a dividend paid out of the foreign corporation's foreign earnings. What deduction may apply?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A 50% dividends-received deduction",
+        "explanation": "The 50% and 65% DRDs apply to dividends from domestic corporations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A foreign tax credit for all taxes",
+        "explanation": "A deduction, not a credit, is the key relief here; §245A dividends do not carry a deemed-paid credit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "100% DRD, foreign-source portion",
+        "explanation": "Correct. §245A allows a 100% deduction for the foreign-source portion of dividends from a 10%-owned foreign corporation (holding period met)."
+      },
+      {
+        "id": "d",
+        "text": "None; foreign dividends are fully taxed",
+        "explanation": "§245A provides a participation exemption for 10% corporate shareholders.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§245A: a 100% DRD for the foreign-source portion of dividends from specified 10%-owned foreign corporations.",
+    "skill": "remembering",
+    "difficulty": 2
+  }
+]

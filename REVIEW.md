@@ -190,3 +190,9 @@ The REG and TCP Blueprints say inflation-indexed amounts are not tested. Every i
 | `far-ratios` | EBITDA; budget-to-actual variances; `far-rat-12`, `-13` | — |
 | `far-nfp-statements` | NFP statement of cash flows and liquidity notes; `far-nfs-11`, `-12` | ASC 230-10-45-14; ASU 2016-14 |
 | `far-receivables` | ASU 2025-05 practical expedient; `far-rec-13` | ASU 2025-05 |
+| `tcp-international` (new module) | Sourcing rules, ECI vs. FDAP withholding, permanent establishment, branch vs. subsidiary, CFC/Subpart F/GILTI, FTC limit; 12 MCQs and 6 flashcards | IRC §§245A, 861–865, 881, 882, 884, 901, 904, 951–957, 951A, 1442 |
+| `tcp-c-corp-compliance` | NOL 80% limit and capital-loss utilization savings; `tcp-cc-11`, `-12` | §§172, 1211(a), 1212(a) |
+| `tcp-formation-liquidation` | §311(b) property distributions by C and S corporations; `tcp-fl-13`, `-14` | §§301, 311(b), 312, 1367, 1368 |
+| `tcp-individual-planning` | Investment risk, insurance, beneficiary designations; `tcp-ip-12`, `-13` | §101; SECURE Act 10-year rule |
+| `tcp-partnership-formation` | Recourse/nonrecourse allocation, partner loans; `tcp-pf-13` | §752; Reg. 1.752-2, -3 |
+| `tcp-deferral-transactions` | §1033 involuntary conversions; §267(c) constructive ownership; `tcp-dt-11`, `-12` | §§1033, 267 |

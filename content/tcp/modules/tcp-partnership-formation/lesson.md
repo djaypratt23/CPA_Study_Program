@@ -16,6 +16,8 @@ objectives:
     task: Analyze the effect of liabilities on a partner's basis
   - text: Review a partner's outside basis schedule and apply the loss limitations in order (basis, at-risk, then passive).
     skill: analysis
+  - text: Allocate recourse and nonrecourse partnership liabilities, including partner loans, among partners' outside bases.
+    skill: application
 bigIdea:
   what: >-
     Forming a partnership is generally tax-free: contributing property for a partnership interest is a
@@ -138,3 +140,14 @@ A partner's loss must pass **four gates in order**; review each one separately:
 | Excess business loss (§461(l)) | Business losses above the annual threshold given in the problem | Forgetting it for large losses |
 
 Each gate's excess is suspended **separately** and carried forward under its own rule, so a correct schedule reports each suspended amount.
+
+## Allocating partnership liabilities (§752)
+
+| Liability | Allocated to |
+|---|---|
+| **Recourse** — a partner bears the economic risk of loss | The partner(s) who would have to pay if the partnership's assets were worthless (constructive liquidation), usually per the loss-sharing ratio for general partners |
+| **Nonrecourse** — no partner bears the risk | Generally by profit-sharing ratios (after minimum-gain and §704(c) tiers) |
+| **Partner loan to the partnership** | Recourse to the **lending partner** — that partner bears the risk of loss |
+| **Guarantee by a partner** | Recourse to the guarantor |
+
+A limited partner generally bears no risk of loss beyond its capital commitment, so it shares recourse debt only if it guarantees or lends. **Qualified nonrecourse financing** on real estate counts toward the at-risk amount even though it is nonrecourse.

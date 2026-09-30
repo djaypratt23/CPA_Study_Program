@@ -515,5 +515,40 @@
     "skill": "analysis",
     "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "tcp-pf-13",
+    "pool": "practice",
+    "stem": "A and B are equal general partners. The partnership borrows $100,000 from a bank on a recourse basis and $40,000 from partner A. How are the liabilities allocated for basis purposes?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $70,000; B $70,000",
+        "explanation": "A partner's loan to the partnership is allocated to that partner, not shared.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $50,000; B $50,000",
+        "explanation": "This leaves out the partner loan.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "A $90,000; B $50,000",
+        "explanation": "Correct. The bank loan is shared by loss ratio (50,000 each); A's own loan is recourse to A alone: A 50,000 + 40,000 = 90,000."
+      },
+      {
+        "id": "d",
+        "text": "A $140,000; B $0",
+        "explanation": "The bank's recourse debt is shared by the general partners' loss ratio.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Recourse debt follows economic risk of loss; a partner loan is recourse to the lending partner.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

@@ -14,6 +14,8 @@ objectives:
   - text: Apply related-party rules (§267, §1239, and the related-party rules for installment sales and exchanges).
     skill: analysis
     task: Analyze related-party transactions
+  - text: Compute deferred gain and replacement basis in an involuntary conversion under §1033, and apply the related-party constructive ownership rules of §267(c).
+    skill: application
 bigIdea:
   what: >-
     Some transactions let the seller postpone gain: the installment method matches tax to cash as it's collected,
@@ -106,3 +108,23 @@ tcp-dt-chk2
 | §453(e) | Related buyer resells within 2 years → seller recognizes the deferred installment gain |
 | §453(g) | No installment method for depreciable property sold to a related person (unless no tax-avoidance purpose) |
 | §1031(f) | Related-party exchange; a disposition within 2 years triggers the deferred gain |
+
+## Involuntary conversions (§1033)
+
+When property is destroyed, stolen or condemned and the owner reinvests the proceeds in qualifying replacement property, gain can be deferred:
+
+- **Gain recognized** = the lesser of the realized gain or the proceeds **not** reinvested. (Losses are recognized normally.)
+- **Replacement period:** 2 years after the end of the tax year in which gain is realized; **3 years** for condemned business or investment real property; 4 years for a principal residence in a federally declared disaster area.
+- **Replacement property:** *similar or related in service or use* — but for condemned business or investment **real** property, like-kind is enough.
+- **Basis** of replacement property = cost − deferred gain.
+
+## Related parties and constructive ownership (§267)
+
+Losses on sales between related parties are **disallowed**. The buyer may use the disallowed loss to reduce a later gain on resale (but not to create a loss).
+
+Related parties include family members (spouse, **ancestors, lineal descendants and siblings** — not in-laws, aunts or cousins) and an individual and a corporation of which he or she owns **more than 50%**, directly or constructively. Under **§267(c)**:
+
+- Stock owned by a corporation, partnership, estate or trust is treated as owned **proportionately** by its owners or beneficiaries.
+- An individual is treated as owning stock owned by his or her **family**.
+- A partner is treated as owning stock owned by his or her **partners**.
+- Family attribution is not applied twice (stock attributed from a family member is not re-attributed to another family member).

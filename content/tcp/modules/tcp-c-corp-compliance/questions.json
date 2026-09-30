@@ -444,5 +444,74 @@
     "explanation": "§1211(a) and §1212(a): capital losses offset only capital gains; carry back 3, forward 5.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-11",
+    "pool": "practice",
+    "stem": "A C corporation has 2025 taxable income of $300,000 before its NOL deduction and a $400,000 NOL carryforward from 2021. What is its 2025 NOL deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$240,000",
+        "explanation": "Correct. Post-2017 NOLs can offset only 80% of taxable income: 80% × 300,000 = 240,000; the remaining 160,000 carries forward."
+      },
+      {
+        "id": "b",
+        "text": "$300,000",
+        "explanation": "This ignores the 80% limitation.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$400,000",
+        "explanation": "The deduction cannot exceed 80% of taxable income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$320,000",
+        "explanation": "This applies 80% to the NOL instead of to taxable income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Post-2017 NOL deduction = lesser of the carryforward or 80% of taxable income before the NOL deduction.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-12",
+    "pool": "practice",
+    "stem": "A C corporation has a $50,000 net capital loss in 2025 and ordinary income of $400,000. It had net capital gains of $30,000 in 2022 and none in 2023 or 2024. What happens to the capital loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000 deducted; the rest forward",
+        "explanation": "The $3,000 allowance applies to individuals, not corporations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000 back to 2022; $20,000 forward",
+        "explanation": "Correct. Carry back 3 years (2022 is the only year with gains) and the rest forward up to 5 years, as a short-term loss."
+      },
+      {
+        "id": "c",
+        "text": "It offsets ordinary income in 2025",
+        "explanation": "A corporation's capital losses offset only capital gains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "All of it carries forward indefinitely",
+        "explanation": "Corporate capital losses carry back 3 and forward 5 years.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "C corporation net capital losses: back 3 years, forward 5, as short-term losses, against capital gains only.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]
