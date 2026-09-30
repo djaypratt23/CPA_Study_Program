@@ -10,6 +10,7 @@ import type { Confidence } from '../lib/srs'
 import { useDebouncedSave } from '../hooks/useDebouncedSave'
 import { useHotkeys } from '../hooks/useDesktop'
 import { useTextHighlights } from '../hooks/useTextHighlights'
+import { issueUrl } from '../lib/report'
 import Icon from './Icon'
 import Markdown from './Markdown'
 import { ReviewBadge } from './ui'
@@ -276,6 +277,11 @@ export default function McqView({ q, index, total, selected, confidence, reveale
             <Markdown>{q.explanation}</Markdown>
           </div>
           {(!correct || confidence === 'guess') && <ErrorTagger q={q} section={section} />}
+          <p className="text-xs">
+            <a href={issueUrl(q.id, 'question', q.stem)} target="_blank" rel="noopener noreferrer" className="muted underline">
+              Report an issue with this question (opens GitHub)
+            </a>
+          </p>
         </div>
       )}
     </article>

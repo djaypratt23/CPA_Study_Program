@@ -3,6 +3,7 @@ import { useIsWide } from '../hooks/useDesktop'
 import type { Tbs, TbsPart } from '../content/schema'
 import { fmt, scoreTbs, type JournalLineResponse, type PartResponse, type ReviewRowResponse, type TbsResponses } from '../lib/tbsScoring'
 import Markdown from './Markdown'
+import { issueUrl } from '../lib/report'
 import { amountInputProps, ReviewBadge } from './ui'
 
 interface Props {
@@ -38,6 +39,13 @@ export default function TbsView({ tbs, responses, onChange, submitted, split = f
           <PartInput part={p} response={responses[p.id]} onChange={(r) => set(p.id, r)} disabled={submitted} />
         </section>
       ))}
+      {submitted && (
+        <p className="text-xs">
+          <a href={issueUrl(tbs.id, 'simulation', tbs.title)} target="_blank" rel="noopener noreferrer" className="muted underline">
+            Report an issue with this simulation (opens GitHub)
+          </a>
+        </p>
+      )}
     </div>
   )
 
