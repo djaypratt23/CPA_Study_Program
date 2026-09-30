@@ -469,5 +469,40 @@
     "explanation": "Combined 480,000 − intercompany 40,000 = **440,000**. The matching 40,000 payable in Sub's books is eliminated too.",
     "skill": "application",
     "calc": true
+  },
+  {
+    "id": "far-con-12",
+    "pool": "practice",
+    "stem": "Pell Corp. owns 80% of Sato Inc. Sato sold goods to Pell at a gross margin of 20% of the selling price, and Pell held $30,000 of those goods at year-end. Sato's net income was $120,000. The draft consolidation reports net income attributable to the noncontrolling interest of $24,000. What amount should it report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$24,000",
+        "explanation": "This is the draft figure; it ignores the unrealized profit on an upstream sale.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$25,200",
+        "explanation": "This adds the unrealized profit instead of deducting it.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$18,000",
+        "explanation": "This deducts the full 30,000 of intercompany inventory rather than the profit in it.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$22,800",
+        "explanation": "Correct. The sale is upstream, so the unrealized profit (30,000 × 20% = 6,000) reduces Sato's income before the NCI share: 20% × 114,000 = 22,800."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Only upstream deferrals are shared with the noncontrolling interest; downstream deferrals fall entirely on the parent.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
   }
 ]

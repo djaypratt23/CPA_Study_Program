@@ -449,5 +449,40 @@
     "explanation": "§264: premiums are nondeductible when the corporation is the beneficiary (and the proceeds are tax-exempt).",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "reg-cc-11",
+    "pool": "practice",
+    "stem": "A prepared Schedule M-1 shows taxable income before special deductions (line 28) of $500,000. In reviewing it, you find that (1) a $4,000 EPA fine was deducted and not added back and (2) the $30,000 dividends-received deduction was subtracted on Schedule M-1 and again on line 29b. What is the correct line 28 amount?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$504,000",
+        "explanation": "This fixes the fine but leaves the DRD on Schedule M-1.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$534,000",
+        "explanation": "Correct. 500,000 + 4,000 (fine added back) + 30,000 (DRD removed from M-1) = 534,000; the DRD is then claimed only on line 29b."
+      },
+      {
+        "id": "c",
+        "text": "$530,000",
+        "explanation": "This removes the DRD but still deducts the fine.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$466,000",
+        "explanation": "This subtracts both corrections instead of adding them.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Line 28 is before special deductions, so the DRD never appears on Schedule M-1. Government fines are nondeductible under §162(f).",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
   }
 ]

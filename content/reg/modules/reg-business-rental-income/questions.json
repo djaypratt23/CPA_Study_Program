@@ -445,5 +445,40 @@
     "explanation": "§274(b): $25 per recipient per year.",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "reg-bri-11",
+    "pool": "practice",
+    "stem": "A married couple filing jointly actively participate in a rental house that produced a $20,000 loss. Their modified AGI is $130,000, and they have no passive income. The prepared return deducts the full $20,000. What amount is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Correct. The 25,000 allowance is reduced by 50% × (130,000 − 100,000) = 15,000, leaving 10,000."
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "This is the prepared amount; it ignores the phase-out.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "15,000 is the reduction, not the remaining allowance.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The allowance does not disappear until modified AGI reaches 150,000.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Apply the §469(i) phase-out before deducting active-participation rental losses. The disallowed 10,000 is suspended.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
   }
 ]

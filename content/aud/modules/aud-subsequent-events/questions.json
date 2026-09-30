@@ -440,5 +440,40 @@
     "explanation": "ASC 855: nonrecognized subsequent events are disclosed if material, with the nature and an estimate of the effect.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "aud-se-11",
+    "pool": "practice",
+    "stem": "Before the report date, a lawsuit arising from a year-end product defect settled for $250,000. The company had accrued $180,000 at year-end, and management recorded an additional $250,000. What adjustment is appropriate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An additional accrual of $250,000",
+        "explanation": "That double-counts the 180,000 already accrued.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "An additional accrual of $70,000",
+        "explanation": "Correct. The settlement is evidence about a condition at year-end; only the increase over the existing accrual (250,000 − 180,000) is recorded."
+      },
+      {
+        "id": "c",
+        "text": "No adjustment; disclose the settlement",
+        "explanation": "The condition existed at year-end, so this is a recognized event.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Reverse the $180,000 accrual",
+        "explanation": "The settlement confirms and increases the liability.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "For recognized subsequent events, adjust by the incremental amount, not the full settlement.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
   }
 ]

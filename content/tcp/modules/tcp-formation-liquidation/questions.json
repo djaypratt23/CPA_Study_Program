@@ -340,7 +340,7 @@
     ],
     "answer": "a",
     "explanation": "§302(c)(2): family attribution waiver for complete terminations.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -443,6 +443,75 @@
     ],
     "answer": "b",
     "explanation": "30% < 50% and < 36% (80% × 45%) → exchange treatment: capital gain only on the excess over the redeemed shares' basis.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-11",
+    "pool": "practice",
+    "stem": "A business has a $200,000 built-in gain on its assets (fair value $500,000). As a C corporation it would sell the assets, pay 21% tax and distribute the cash to the owner, whose stock basis is $100,000. As an S corporation with no built-in gains tax, the gain would pass through and the owner's basis would rise to match the cash. At a 20% owner rate, how much tax does the S corporation structure save?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$73,600",
+        "explanation": "Correct. C: 42,000 corporate + (458,000 − 100,000) × 20% = 71,600, total 113,600. S: 200,000 × 20% = 40,000. Savings 73,600."
+      },
+      {
+        "id": "b",
+        "text": "$42,000",
+        "explanation": "That is only the corporate-level tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$113,600",
+        "explanation": "That is the total C corporation tax, not the difference.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$31,600",
+        "explanation": "This compares the shareholder-level taxes only (71,600 − 40,000).",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Liquidating a C corporation taxes the gain twice (§§336 and 331); an S corporation taxes it once.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-12",
+    "pool": "practice",
+    "stem": "A C corporation made a $150,000 interest-free demand loan to its sole shareholder for personal use, outstanding all year. The blended annual rate is 5%. Neither party reported anything. What correction is needed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "None — the de minimis exception applies to the loan",
+        "explanation": "The exception covers only loans of 10,000 or less.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Corporation: $7,500 interest income; shareholder: $7,500 dividend",
+        "explanation": "Correct. Under §7872 the foregone interest is treated as a dividend paid to the shareholder and interest paid back to the corporation."
+      },
+      {
+        "id": "c",
+        "text": "Corporation: $7,500 compensation deduction",
+        "explanation": "A loan to a shareholder gives rise to a dividend, not compensation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Shareholder: $7,500 deductible interest expense",
+        "explanation": "Interest on a personal-use loan is nondeductible personal interest.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Below-market corporation–shareholder loans produce a deemed dividend to the shareholder and interest income to the corporation.",
     "skill": "analysis",
     "difficulty": 2
   }

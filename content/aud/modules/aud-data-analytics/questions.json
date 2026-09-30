@@ -336,7 +336,7 @@
     ],
     "answer": "d",
     "explanation": "An ADA is only as reliable as its data; test the completeness and accuracy of the inputs.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -439,6 +439,75 @@
     "answer": "a",
     "explanation": "Gaps in prenumbered documents can mean transactions were not recorded.",
     "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-da-11",
+    "pool": "practice",
+    "stem": "An auditor's expectation of interest expense is $500,000 and the recorded amount is $548,000. The threshold for investigating differences is $30,000. Management explains $25,000 of the difference, and the auditor corroborates it with the loan agreement. What should the auditor conclude?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Propose an adjustment for $48,000",
+        "explanation": "Part of the difference has been corroborated, and the remainder is below the threshold.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Investigate only the $18,000 over the threshold",
+        "explanation": "When a difference exceeds the threshold, the whole difference is investigated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The procedure supports the balance",
+        "explanation": "Correct. The remaining unexplained difference (48,000 − 25,000 = 23,000) is below the 30,000 threshold."
+      },
+      {
+        "id": "d",
+        "text": "Perform more work; $23,000 remains unexplained",
+        "explanation": "An unexplained difference below the threshold is acceptable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Investigate the whole difference, accept only corroborated explanations, then compare what remains with the threshold (AU-C 520).",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "aud-da-12",
+    "pool": "practice",
+    "stem": "A journal-entry test flags 14 entries posted on weekends. All were posted by the user SYS-BATCH, a scheduled nightly job. What is the most appropriate next step?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Inspect support for all 14 flagged entries",
+        "explanation": "The flags are explained by expected automated activity; refining the test is more effective.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Conclude that there are no weekend-entry risks",
+        "explanation": "Refining the test may still reveal manual weekend entries.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Report a significant deficiency in IT controls",
+        "explanation": "A scheduled batch job is not in itself a control deficiency.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Exclude system entries and rerun the test",
+        "explanation": "Correct. The test was not designed to separate expected automated activity from manual weekend entries."
+      }
+    ],
+    "answer": "d",
+    "explanation": "When analytics output is dominated by expected items, refine the parameters before investigating.",
+    "skill": "analysis",
     "difficulty": 2
   }
 ]

@@ -445,5 +445,40 @@
     "explanation": "Employer contributions are excluded from income but reduce the employee's remaining contribution room.",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "reg-adj-11",
+    "pool": "practice",
+    "stem": "A self-employed taxpayer with AGI of $80,000 (as prepared) paid $7,200 of health insurance premiums and was not eligible for an employer plan. The preparer included the premiums in itemized medical expenses. What is the effect of correcting the return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "AGI decreases by $1,200",
+        "explanation": "1,200 is the medical deduction above the 7.5% floor (7,200 − 6,000); the adjustment is the full premium.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "AGI is unchanged; itemized deductions fall",
+        "explanation": "The premiums belong above the line, so AGI does change.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "AGI decreases by $3,600",
+        "explanation": "There is no 50% limit on the self-employed health insurance deduction.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "AGI decreases by $7,200",
+        "explanation": "Correct. Self-employed health insurance is deducted for AGI under §162(l), so the full 7,200 comes off AGI and is removed from itemized medical expenses."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Moving a deduction above the line also changes every AGI-based floor and phase-out computed afterward.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
   }
 ]

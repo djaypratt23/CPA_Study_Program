@@ -466,5 +466,39 @@
     "answer": "b",
     "explanation": "ASC 326-20-30: estimate expected credit losses using relevant information about past events, current conditions, and reasonable and supportable forecasts, reverting to history beyond the forecast period.",
     "skill": "remembering"
+  },
+  {
+    "id": "far-rec-12",
+    "pool": "practice",
+    "stem": "Grove Co.'s customer subledger totals $512,300 and its general ledger control account shows $498,900. Investigation finds (1) a $6,200 customer payment posted to the general ledger but not to the customer's account and (2) a $7,200 credit sale posted to the subledger twice. The staff proposes increasing the general ledger by $13,400. What is the correct resolution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reduce the subledger by $13,400; no GL entry",
+        "explanation": "Correct. Both items are subledger errors: 512,300 − 6,200 − 7,200 = 498,900, which already agrees to the GL."
+      },
+      {
+        "id": "b",
+        "text": "Increase the GL by $13,400; no subledger entry",
+        "explanation": "This is the staff's proposal. It forces agreement by changing the record that is already right.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Reduce the subledger by $1,000; increase the GL",
+        "explanation": "This nets the two items against each other (7,200 − 6,200) instead of correcting each one.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Increase the GL $6,200; cut the subledger $7,200",
+        "explanation": "The payment is already in the GL; only the subledger is missing it.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Reconcile by identifying which record each item affects: both items are missing from, or duplicated in, the subledger, so the GL needs no entry.",
+    "skill": "analysis",
+    "difficulty": 2
   }
 ]

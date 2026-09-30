@@ -445,5 +445,40 @@
     "explanation": "S corporations file by the 15th day of the 3rd month.",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "reg-sc-11",
+    "pool": "practice",
+    "stem": "A draft Form 1120-S reports ordinary business income of $90,000 after deducting $10,000 of charitable contributions and a $15,000 §179 expense, and after including $2,000 of savings account interest. What is the correct ordinary business income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$115,000",
+        "explanation": "This adds back the charity and §179 but leaves the portfolio interest in ordinary income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$90,000",
+        "explanation": "This is the draft amount; three separately stated items are misclassified.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$113,000",
+        "explanation": "Correct. 90,000 + 10,000 + 15,000 − 2,000 = 113,000; the charity, §179 and interest are all separately stated."
+      },
+      {
+        "id": "d",
+        "text": "$117,000",
+        "explanation": "This adds the interest back instead of removing it.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Items that could affect shareholders differently (charity, §179, portfolio income) are separately stated on Schedule K.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
   }
 ]
