@@ -1,0 +1,68 @@
+{
+  "id": "far-tbs-x2-equity",
+  "section": "FAR",
+  "unitId": "far-u8",
+  "moduleIds": [
+    "far-equity"
+  ],
+  "pool": "exam",
+  "title": "Stockholders' equity rollforward — Talbot Inc.",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Prepare Talbot Inc.'s December 31, 2025 equity balances. Talbot uses the cost method for treasury stock and applies stock dividends to shares outstanding.",
+  "exhibits": [
+    {
+      "title": "January 1, 2025 balances",
+      "content": "| Account | Amount |\n|---|---:|\n| Common stock, $1 par (500,000 shares issued and outstanding) | 500,000 |\n| Additional paid-in capital | 4,500,000 |\n| Retained earnings | 3,000,000 |"
+    },
+    {
+      "title": "2025 transactions, in order",
+      "content": "1. Issued **50,000** shares for **$25** each.\n2. Bought **10,000** shares of treasury stock for **$28** each.\n3. Reissued **4,000** treasury shares for **$30** each.\n4. Declared and distributed a **10%** stock dividend when the market price was **$30**.\n5. Declared and paid a cash dividend of **$0.50** per outstanding share.\n6. Net income: **$900,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "eq",
+      "prompt": "Compute the December 31, 2025 amounts.",
+      "rows": [
+        {
+          "id": "sh",
+          "label": "Shares outstanding at December 31",
+          "answer": 598400,
+          "explanation": "550,000 issued − 10,000 + 4,000 = 544,000 outstanding before the dividend; × 1.10 = **598,400**."
+        },
+        {
+          "id": "cs",
+          "label": "Common stock",
+          "answer": 604400,
+          "explanation": "500,000 + 50,000 + 54,400 dividend shares at $1 par = **604,400**."
+        },
+        {
+          "id": "apic",
+          "label": "Additional paid-in capital (all sources)",
+          "answer": 7285600,
+          "explanation": "4,500,000 + 1,200,000 (issuance) + 8,000 (treasury reissue, 4,000 × $2) + 1,577,600 (stock dividend, 54,400 × $29) = **7,285,600**."
+        },
+        {
+          "id": "ts",
+          "label": "Treasury stock (a deduction)",
+          "answer": 168000,
+          "explanation": "6,000 shares remaining × $28 = **168,000**."
+        },
+        {
+          "id": "re",
+          "label": "Retained earnings",
+          "answer": 1968800,
+          "explanation": "3,000,000 − 1,632,000 stock dividend (54,400 × $30) − 299,200 cash dividend (598,400 × $0.50) + 900,000 = **1,968,800**."
+        },
+        {
+          "id": "tot",
+          "label": "Total stockholders' equity",
+          "answer": 9690800,
+          "explanation": "604,400 + 7,285,600 + 1,968,800 − 168,000 = **9,690,800**."
+        }
+      ]
+    }
+  ]
+}

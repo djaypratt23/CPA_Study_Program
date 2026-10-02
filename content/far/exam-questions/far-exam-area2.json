@@ -646,5 +646,614 @@
     "explanation": "Fee = 80,000 × 2% = 1,600 (loss). Holdback = 80,000 × 4% = 3,200 (due from factor). Cash = 80,000 − 1,600 − 3,200 = 75,200.",
     "skill": "application",
     "calc": true
+  },
+  {
+    "id": "far-x2-18",
+    "moduleId": "far-cash",
+    "pool": "exam",
+    "stem": "At December 31, Fenn Co.'s bank statement shows $50,000. Deposits in transit are $6,000 and outstanding checks are $9,000. The bank mistakenly credited Fenn's account with a $1,000 deposit belonging to another customer. What is Fenn's correct cash balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$47,000",
+        "explanation": "The bank's error overstates the bank balance and must be removed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$53,000",
+        "explanation": "Outstanding checks reduce, and deposits in transit increase, the bank balance.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$46,000",
+        "explanation": "Correct. 50,000 + 6,000 − 9,000 − 1,000 bank error = 46,000."
+      },
+      {
+        "id": "d",
+        "text": "$44,000",
+        "explanation": "Deposits in transit are added to the bank balance.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Adjusted bank balance = bank balance + deposits in transit − outstanding checks ± bank errors.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-19",
+    "moduleId": "far-receivables",
+    "pool": "exam",
+    "stem": "At year-end, accounts receivable total $400,000, and the company estimates expected credit losses of 5%. Before adjustment, the allowance for credit losses has a $6,000 credit balance. What is credit loss expense for the year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "The existing credit balance reduces the adjustment needed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$26,000",
+        "explanation": "A credit balance is subtracted, not added.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$6,000",
+        "explanation": "That is the existing balance, not the expense.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$14,000",
+        "explanation": "Correct. Required allowance 20,000 − existing credit balance 6,000 = 14,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Under the balance-sheet approach, expense is the amount needed to bring the allowance to the expected credit loss (5% × $400,000 = $20,000).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-20",
+    "moduleId": "far-inventory-valuation",
+    "pool": "exam",
+    "stem": "A company using FIFO has ending inventory with a cost of $50,000, a replacement cost of $44,000, and a net realizable value of $46,000. At what amount is inventory reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$46,000",
+        "explanation": "Correct. FIFO inventory is measured at the lower of cost and net realizable value."
+      },
+      {
+        "id": "b",
+        "text": "$44,000",
+        "explanation": "Replacement cost applies only under LIFO or the retail method (lower of cost or market).",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Cost exceeds NRV, so a write-down is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$45,000",
+        "explanation": "There is no averaging of replacement cost and NRV.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 330: inventory measured using FIFO or average cost is reported at the lower of cost and NRV: $46,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-21",
+    "moduleId": "far-ppe-acquisition",
+    "pool": "exam",
+    "stem": "During construction of its own plant, a company's weighted-average accumulated expenditures are $1,000,000. It has a $600,000 construction loan at 8% and other general debt at 10%. Actual interest incurred is $150,000. How much interest is capitalized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "Capitalized interest is limited to avoidable interest.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$88,000",
+        "explanation": "Correct. 600,000 × 8% + 400,000 × 10% = 48,000 + 40,000 = 88,000, which is less than actual interest."
+      },
+      {
+        "id": "c",
+        "text": "$48,000",
+        "explanation": "Expenditures above the specific loan use the weighted rate on other debt.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "The specific borrowing's rate applies to the first 600,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Avoidable interest: specific borrowing rate on expenditures up to that loan, then the weighted-average rate on other debt for the excess, limited to actual interest.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-22",
+    "moduleId": "far-intangibles",
+    "pool": "exam",
+    "stem": "A company develops software to be sold to customers. Which costs are capitalized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All costs from initial planning through general release",
+        "explanation": "Costs before technological feasibility are R&D expense.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Only costs incurred before technological feasibility is established",
+        "explanation": "Those are research and development, expensed.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Costs after technological feasibility, until general release",
+        "explanation": "Correct. ASC 985-20 capitalizes production costs between technological feasibility and general release."
+      },
+      {
+        "id": "d",
+        "text": "No costs; all software development costs are always expensed",
+        "explanation": "Costs after feasibility are capitalized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Software to be sold: expense until technological feasibility; capitalize until available for general release; then amortize.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x2-23",
+    "moduleId": "far-debt-securities",
+    "pool": "exam",
+    "stem": "A company classifies a debt security as held to maturity. At year-end its fair value has risen above amortized cost. How is the security reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At fair value, with the gain in net income",
+        "explanation": "That is the treatment for trading securities.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "At fair value, with the gain in other comprehensive income",
+        "explanation": "That is the treatment for available-for-sale securities.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "At the lower of amortized cost or fair value",
+        "explanation": "Lower-of rules don't apply to HTM securities.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "At amortized cost, net of any allowance for credit losses",
+        "explanation": "Correct. HTM securities are carried at amortized cost; fair value changes aren't recognized."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 320: held-to-maturity debt securities are measured at amortized cost less an allowance for expected credit losses.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x2-24",
+    "moduleId": "far-bonds",
+    "pool": "exam",
+    "stem": "On January 1, a company issues $1,000,000 of 5% bonds when the market rate is 6%, receiving $957,355. Interest is paid annually on December 31. Using the effective interest method, what is interest expense for the first year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$57,441",
+        "explanation": "Correct. 957,355 × 6% = 57,441."
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "That is the cash interest at the stated rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$60,000",
+        "explanation": "Effective interest applies to the carrying amount, not face value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$54,256",
+        "explanation": "Discount amortization increases, not decreases, expense.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Interest expense = carrying amount × market rate; the $7,441 excess over cash interest amortizes the discount.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-25",
+    "moduleId": "far-equity",
+    "pool": "exam",
+    "stem": "A company with 100,000 shares of $1 par common stock outstanding declares a 10% stock dividend when the market price is $20 per share. By how much is retained earnings reduced?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Par value is used only for large stock dividends (over 20–25%).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "Correct. A small stock dividend is recorded at fair value: 10,000 shares × $20."
+      },
+      {
+        "id": "c",
+        "text": "$190,000",
+        "explanation": "That is the credit to additional paid-in capital, not the total charge.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$     0",
+        "explanation": "A stock dividend transfers retained earnings to paid-in capital.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Small stock dividends (less than 20–25%) are recorded at market value: Dr Retained earnings 200,000; Cr Common stock 10,000; Cr APIC 190,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-26",
+    "moduleId": "far-receivables",
+    "pool": "exam",
+    "stem": "Which transfer of receivables is accounted for as a sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Pledging receivables as collateral for a bank loan",
+        "explanation": "A pledge is a secured borrowing.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Assigning receivables to a lender while keeping collection rights",
+        "explanation": "A general assignment is a borrowing.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Factoring receivables without recourse, surrendering control",
+        "explanation": "Correct. When control is surrendered and the transferor has no continuing involvement, the transfer is a sale."
+      },
+      {
+        "id": "d",
+        "text": "Transferring receivables with an agreement to repurchase them",
+        "explanation": "Repurchase agreements keep control with the transferor.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 860: a transfer is a sale if the assets are isolated from the transferor, the transferee can pledge or exchange them, and the transferor doesn't maintain effective control.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x2-27",
+    "moduleId": "far-inventory-cost",
+    "pool": "exam",
+    "stem": "Beginning inventory is 100 units at $10. Purchases: 200 units at $12, then 100 units at $13. The company sold 300 units. Under periodic FIFO, what is cost of goods sold?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,700",
+        "explanation": "That is LIFO: 100 × 13 + 200 × 12.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$3,525",
+        "explanation": "That is the weighted average (4,700 ÷ 400 × 300).",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$3,900",
+        "explanation": "That prices all 300 units at the last cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$3,400",
+        "explanation": "Correct. 100 × 10 + 200 × 12 = 3,400."
+      }
+    ],
+    "answer": "d",
+    "explanation": "FIFO charges the oldest costs to cost of goods sold first: beginning inventory, then the earliest purchase.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-28",
+    "moduleId": "far-depreciation",
+    "pool": "exam",
+    "stem": "Equipment costs $50,000, with a 5-year life and a $5,000 salvage value. Using double-declining balance, what is depreciation in year 2?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000",
+        "explanation": "Correct. Year 1: 40% × 50,000 = 20,000; year 2: 40% × 30,000 = 12,000."
+      },
+      {
+        "id": "b",
+        "text": "$10,800",
+        "explanation": "Salvage value isn't subtracted when applying the DDB rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$18,000",
+        "explanation": "That is year 1 computed on cost less salvage.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$9,000",
+        "explanation": "That is straight-line depreciation.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "DDB rate = 2 ÷ 5 = 40% of the beginning carrying amount, ignoring salvage until the floor is reached.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-29",
+    "moduleId": "far-impairment",
+    "pool": "exam",
+    "stem": "A machine held and used has a carrying amount of $100,000. Its undiscounted future cash flows are $90,000, and its fair value is $75,000. What impairment loss is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "The undiscounted cash flows test recoverability; the loss is measured at fair value.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$25,000",
+        "explanation": "Correct. It fails the recoverability test (90,000 < 100,000), so the loss is carrying amount less fair value."
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "That is the difference between cash flows and fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$     0",
+        "explanation": "Undiscounted cash flows are below the carrying amount, so it is impaired.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 360: if the carrying amount exceeds undiscounted cash flows, recognize a loss equal to carrying amount minus fair value.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-30",
+    "moduleId": "far-equity-investments",
+    "pool": "exam",
+    "stem": "Wren Co. owns 30% of Dale Co. and has significant influence. Dale reports net income of $200,000 and pays dividends of $50,000. By how much does Wren's investment account change?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Increases by $60,000",
+        "explanation": "Dividends received reduce the investment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Increases by $15,000",
+        "explanation": "Dividends are not income under the equity method.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Increases by $45,000",
+        "explanation": "Correct. 30% × 200,000 = 60,000 increase, less 30% × 50,000 = 15,000 dividends."
+      },
+      {
+        "id": "d",
+        "text": "No change; only dividends are recorded as income",
+        "explanation": "That is the cost method, not the equity method.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Equity method: increase for the investor's share of income, decrease for dividends received.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-31",
+    "moduleId": "far-payables",
+    "pool": "exam",
+    "stem": "In 2025 a company sells products for $1,000,000 with an assurance warranty; it estimates warranty costs at 2% of sales. It paid $8,000 of warranty claims during 2025. What is the warranty liability at December 31, 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Claims paid reduce the liability.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$8,000",
+        "explanation": "That is the amount paid, not the remaining liability.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$28,000",
+        "explanation": "Payments are subtracted from the accrual.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$12,000",
+        "explanation": "Correct. Accrued 20,000 − 8,000 paid = 12,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "An assurance warranty is accrued as an expense when the sale occurs (2% × $1,000,000 = $20,000); payments reduce the liability.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-32",
+    "moduleId": "far-debt-other",
+    "pool": "exam",
+    "stem": "A company retires bonds with a carrying amount of $980,000 by paying $1,000,000 before maturity. How is the difference reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a $20,000 loss on extinguishment in income",
+        "explanation": "Correct. Reacquisition price exceeds the carrying amount by 20,000, a loss recognized currently."
+      },
+      {
+        "id": "b",
+        "text": "As a $20,000 gain on extinguishment in income",
+        "explanation": "Paying more than carrying amount is a loss.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "As a $20,000 adjustment to retained earnings",
+        "explanation": "Extinguishment gains and losses go through income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Deferred and amortized over the original remaining term",
+        "explanation": "Extinguishment gains and losses are recognized immediately.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 470-50: the difference between the reacquisition price and the net carrying amount is recognized in income in the period of extinguishment.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-33",
+    "moduleId": "far-equity",
+    "pool": "exam",
+    "stem": "A company buys 1,000 of its own shares for $30 each and later reissues them for $35 each, using the cost method. How is the $5,000 difference recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a gain on reissuance in net income",
+        "explanation": "Companies don't recognize income on transactions in their own stock.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a credit to APIC from treasury stock",
+        "explanation": "Correct. Gains on treasury stock reissuance go to paid-in capital, never income."
+      },
+      {
+        "id": "c",
+        "text": "As a credit directly to retained earnings",
+        "explanation": "Retained earnings may absorb losses but doesn't receive the excess.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a reduction of common stock at par",
+        "explanation": "Common stock isn't changed under the cost method.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Cost method: Dr Cash 35,000; Cr Treasury stock 30,000; Cr APIC—treasury stock 5,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x2-34",
+    "moduleId": "far-ppe-acquisition",
+    "pool": "exam",
+    "stem": "In an exchange with commercial substance, a company gives equipment with a carrying amount of $40,000 and a fair value of $50,000, plus $10,000 cash, for new equipment. At what amount is the new equipment recorded, and what gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000; no gain",
+        "explanation": "Exchanges with commercial substance are measured at fair value with gains recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000; gain $10,000",
+        "explanation": "The cash paid is also part of the cost.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$60,000; gain $10,000",
+        "explanation": "Correct. New asset = fair value given (50,000) + cash (10,000); gain = 50,000 − 40,000."
+      },
+      {
+        "id": "d",
+        "text": "$60,000; gain $20,000",
+        "explanation": "The gain compares the old asset's fair value with its carrying amount.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 845: with commercial substance, record the new asset at the fair value of what is given and recognize the gain or loss on the old asset.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

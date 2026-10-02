@@ -1,0 +1,129 @@
+{
+  "id": "far-tbs-x1-statement-review",
+  "section": "FAR",
+  "unitId": "far-u1",
+  "moduleIds": [
+    "far-income-statement-oci"
+  ],
+  "pool": "exam",
+  "title": "Review the draft income statement — Lumen Corp.",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "A staff accountant drafted Lumen Corp.'s 2025 income statement. Compare it with the trial balance data. Tick each amount that is wrong and enter the correct amount, then answer the classification questions. Enter the loss from discontinued operations as a positive number.",
+  "exhibits": [
+    {
+      "title": "Trial balance data — 2025",
+      "content": "| Item | Amount |\n|---|---:|\n| Sales revenue | 2,400,000 |\n| Cost of goods sold, before inventory write-down | 1,450,000 |\n| Write-down of inventory to net realizable value (not yet in the draft) | 30,000 |\n| Selling and administrative expenses | 480,000 |\n| Operating loss of the Harbor division, sold in 2025 (a strategic shift with a major effect on operations) | 40,000 |\n| Unrealized holding gain on available-for-sale debt securities | 25,000 |\n\nIncome tax rate: 21% on all items."
+    },
+    {
+      "title": "Draft income statement",
+      "content": "| Line | Amount |\n|---|---:|\n| Sales revenue | 2,400,000 |\n| Cost of goods sold | (1,450,000) |\n| Operating expenses (includes the Harbor division loss) | (520,000) |\n| Unrealized gain on AFS debt securities | 25,000 |\n| Income before tax | 455,000 |\n| Income tax expense | (95,550) |\n| **Net income** | **359,450** |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "is",
+      "prompt": "Review the draft income statement.",
+      "preparedLabel": "Per draft",
+      "rows": [
+        {
+          "id": "sales",
+          "label": "Sales revenue",
+          "prepared": 2400000,
+          "answer": 2400000,
+          "explanation": "Agrees with the trial balance. **No error.**"
+        },
+        {
+          "id": "cogs",
+          "label": "Cost of goods sold",
+          "prepared": 1450000,
+          "answer": 1480000,
+          "explanation": "The 30,000 write-down of inventory to net realizable value is part of continuing operations, usually in cost of goods sold: **1,480,000**."
+        },
+        {
+          "id": "opex",
+          "label": "Operating expenses",
+          "prepared": 520000,
+          "answer": 480000,
+          "explanation": "The preparer included the 40,000 discontinued-segment loss; operating expenses are **480,000**."
+        },
+        {
+          "id": "afs",
+          "label": "Other income — unrealized holding gain on AFS debt securities",
+          "prepared": 25000,
+          "answer": 0,
+          "explanation": "Unrealized gains on AFS debt securities go to **OCI**, not net income: **0**."
+        },
+        {
+          "id": "pre",
+          "label": "Income from continuing operations before tax",
+          "prepared": 455000,
+          "answer": 440000,
+          "explanation": "2,400,000 − 1,480,000 − 480,000 = **440,000**."
+        },
+        {
+          "id": "tax",
+          "label": "Income tax expense on continuing operations",
+          "prepared": 95550,
+          "answer": 92400,
+          "explanation": "21% × 440,000 = **92,400**."
+        },
+        {
+          "id": "disc",
+          "label": "Loss from discontinued operations, net of tax",
+          "prepared": 0,
+          "answer": 31600,
+          "explanation": "40,000 × (1 − 21%) = **31,600**, shown separately after continuing operations."
+        },
+        {
+          "id": "ni",
+          "label": "Net income",
+          "prepared": 359450,
+          "answer": 316000,
+          "explanation": "440,000 − 92,400 − 31,600 = **316,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Where should each item be reported?",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "The Harbor division operating loss",
+          "options": [
+            "Continuing operations",
+            "Discontinued operations, net of tax",
+            "Other comprehensive income"
+          ],
+          "answer": "Discontinued operations, net of tax",
+          "explanation": "A disposed component that is a strategic shift with a major effect is reported in **discontinued operations, net of tax**."
+        },
+        {
+          "id": "c2",
+          "label": "The unrealized holding gain on AFS debt securities",
+          "options": [
+            "Continuing operations",
+            "Discontinued operations, net of tax",
+            "Other comprehensive income"
+          ],
+          "answer": "Other comprehensive income",
+          "explanation": "AFS debt securities' unrealized gains go to **OCI**."
+        },
+        {
+          "id": "c3",
+          "label": "The inventory write-down to NRV",
+          "options": [
+            "Continuing operations",
+            "Discontinued operations, net of tax",
+            "Other comprehensive income"
+          ],
+          "answer": "Continuing operations",
+          "explanation": "Write-downs of inventory are a normal **continuing operations** expense."
+        }
+      ]
+    }
+  ]
+}

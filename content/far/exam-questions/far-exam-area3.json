@@ -538,5 +538,538 @@
     "skill": "application",
     "difficulty": 2,
     "calc": false
+  },
+  {
+    "id": "far-x3-16",
+    "moduleId": "far-revenue-contracts",
+    "pool": "exam",
+    "stem": "A contract sells a product (standalone selling price $800) and a one-year service plan (standalone selling price $200) for a total of $900. How much of the price is allocated to the product?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$720",
+        "explanation": "Correct. 900 × 800 ÷ 1,000 = 720."
+      },
+      {
+        "id": "b",
+        "text": "$800",
+        "explanation": "The discount is allocated proportionately to both obligations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$700",
+        "explanation": "The whole discount isn't assigned to the product.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$900",
+        "explanation": "The price is allocated between both obligations.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 606 allocates the transaction price in proportion to relative standalone selling prices.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x3-17",
+    "moduleId": "far-revenue-measurement",
+    "pool": "exam",
+    "stem": "A retailer sells goods for $100,000 with a right of return and expects, based on experience, that 5% will be returned. How much revenue does it recognize at the point of sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Expected returns are variable consideration and are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$95,000",
+        "explanation": "Correct. Revenue excludes expected returns; a refund liability of 5,000 is recorded."
+      },
+      {
+        "id": "c",
+        "text": "$0, until the return period expires",
+        "explanation": "Revenue is recognized net of estimated returns at transfer of control.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$90,000",
+        "explanation": "Only the 5% expected returns are excluded.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Sales with a right of return: recognize revenue for the consideration expected to be retained, a refund liability, and an asset for goods expected back.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x3-18",
+    "moduleId": "far-income-taxes",
+    "pool": "exam",
+    "stem": "At year-end, equipment's carrying amount for financial reporting exceeds its tax basis by $50,000 because of accelerated tax depreciation. The enacted tax rate for future years is 21%. What deferred tax amount results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A deferred tax asset of $10,500",
+        "explanation": "Book basis above tax basis creates future taxable amounts, a liability.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "A deferred tax liability of $50,000",
+        "explanation": "The temporary difference is multiplied by the enacted rate.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "A deferred tax liability of $10,500",
+        "explanation": "Correct. A future taxable amount × 21% = 10,500 liability."
+      },
+      {
+        "id": "d",
+        "text": "No deferred tax, because depreciation is permanent",
+        "explanation": "Depreciation timing differences reverse; they are temporary.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Temporary difference × enacted future rate: $50,000 × 21% = $10,500 deferred tax liability.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x3-19",
+    "moduleId": "far-fair-value",
+    "pool": "exam",
+    "stem": "Which input is a Level 2 input under ASC 820?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A quoted price for the identical asset in an active market",
+        "explanation": "That is Level 1.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Management's own projections of future cash flows",
+        "explanation": "Unobservable inputs are Level 3.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "The historical cost paid for the asset several years ago",
+        "explanation": "Historical cost isn't a fair value input.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A quoted price for a similar asset in an active market",
+        "explanation": "Correct. Level 2 includes quoted prices for similar items and other observable inputs."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Level 1: quoted prices for identical items in active markets. Level 2: other observable inputs (similar items, inactive markets, observable rates). Level 3: unobservable inputs.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x3-20",
+    "moduleId": "far-leases-operating",
+    "pool": "exam",
+    "stem": "A lessee signs a two-year operating lease with payments of $10,000 in year 1 and $12,000 in year 2. What lease cost does it recognize in year 1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$11,000",
+        "explanation": "Correct. Operating lease cost is recognized straight-line: 22,000 ÷ 2."
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "Operating lease cost is straight-lined, not based on cash paid.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$12,000",
+        "explanation": "Year 2's payment isn't the year 1 cost.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$22,000",
+        "explanation": "The total is spread over the lease term.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 842: lessees recognize a single operating lease cost on a straight-line basis over the lease term.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x3-21",
+    "moduleId": "far-accounting-changes",
+    "pool": "exam",
+    "stem": "A company changes from straight-line to double-declining balance depreciation for existing equipment. How is the change reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Retrospectively, restating all prior periods presented",
+        "explanation": "Depreciation method changes aren't applied retrospectively.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Prospectively, as a change in accounting estimate",
+        "explanation": "Correct. A change in depreciation method is treated as a change in estimate, prospectively."
+      },
+      {
+        "id": "c",
+        "text": "As a cumulative-effect adjustment to opening retained earnings",
+        "explanation": "That isn't how a change in estimate is reported.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a prior-period adjustment correcting an error",
+        "explanation": "It is a change in estimate, not an error.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 250: a change in depreciation method is a change in accounting estimate effected by a change in accounting principle, applied prospectively.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x3-22",
+    "moduleId": "far-contingencies",
+    "pool": "exam",
+    "stem": "A lawsuit loss is probable, and the loss is estimated to be between $200,000 and $500,000, with no amount in the range more likely than any other. What is accrued?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$350,000, the midpoint of the estimated range",
+        "explanation": "U.S. GAAP accrues the minimum, not the midpoint.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$500,000, the maximum of the estimated range",
+        "explanation": "Conservatism doesn't require accruing the maximum.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$200,000, disclosing the possible further loss",
+        "explanation": "Correct. When no amount in the range is better, accrue the minimum and disclose the range."
+      },
+      {
+        "id": "d",
+        "text": "Nothing, because the exact amount isn't yet certain",
+        "explanation": "A reasonable estimate of a probable loss must be accrued.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 450-20: accrue a probable, reasonably estimable loss; if no amount in a range is a better estimate, accrue the minimum.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x3-23",
+    "moduleId": "far-subsequent-events",
+    "pool": "exam",
+    "stem": "After the December 31 balance sheet date but before issuance, a major customer files for bankruptcy because of financial difficulties that existed at year-end. How is this reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a nonrecognized subsequent event, disclosed only",
+        "explanation": "The condition existed at year-end, so it is recognized.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Ignored, because it occurred after the balance sheet date",
+        "explanation": "Events before issuance that relate to year-end conditions are recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a loss in the following year's income statement",
+        "explanation": "The adjustment belongs in the current-year statements.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Recognized: adjust the December 31 allowance",
+        "explanation": "Correct. The bankruptcy provides evidence of a condition existing at the balance sheet date."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 855: recognized (Type I) subsequent events provide additional evidence about conditions that existed at the balance sheet date.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x3-24",
+    "moduleId": "far-revenue-contracts",
+    "pool": "exam",
+    "stem": "An online marketplace arranges for third-party sellers to deliver goods to customers. It never controls the goods and keeps a 10% commission on $500,000 of sales. What revenue does it report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Correct. As an agent, it recognizes revenue net, equal to its commission."
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "Gross reporting applies only to a principal that controls the goods.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$450,000",
+        "explanation": "That is the amount remitted to sellers.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0, because it never holds inventory",
+        "explanation": "An agent recognizes its fee as revenue.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 606 principal-versus-agent: an entity that doesn't control the specified goods before transfer is an agent and reports its fee or commission.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x3-25",
+    "moduleId": "far-revenue-measurement",
+    "pool": "exam",
+    "stem": "A contractor recognizes revenue over time using costs incurred to date. The contract price is $1,400,000; estimated total costs are $1,000,000; costs to date are $300,000. What cumulative revenue is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000",
+        "explanation": "That is cost incurred, not revenue.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$420,000",
+        "explanation": "Correct. 300,000 ÷ 1,000,000 = 30% × 1,400,000."
+      },
+      {
+        "id": "c",
+        "text": "$120,000",
+        "explanation": "That is gross profit to date.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$1,400,000",
+        "explanation": "Revenue over time is recognized by progress.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Input method: progress = costs to date ÷ estimated total costs (30%); revenue = 30% × $1,400,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x3-26",
+    "moduleId": "far-income-taxes",
+    "pool": "exam",
+    "stem": "When is a valuation allowance recorded against a deferred tax asset?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Whenever the company reported a loss in the current year",
+        "explanation": "A loss is evidence to weigh, not an automatic trigger.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Only when realization of the asset is remote",
+        "explanation": "The threshold is more likely than not, not remote.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "When realization is not more likely than not",
+        "explanation": "Correct. ASC 740 requires an allowance when realization is not more likely than not."
+      },
+      {
+        "id": "d",
+        "text": "Never; deferred tax assets are always recognized in full",
+        "explanation": "A valuation allowance is required if realization is unlikely.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A valuation allowance reduces a DTA to the amount more likely than not (over 50%) to be realized.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x3-27",
+    "moduleId": "far-leases-finance",
+    "pool": "exam",
+    "stem": "At lease commencement, a lessee records a finance lease liability of $100,000 at an implicit rate of 6%. The first annual payment of $25,000 is made at the end of year 1. What interest expense is recognized in year 1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,500",
+        "explanation": "Interest isn't computed on the payment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$4,500",
+        "explanation": "The payment is made at year-end, so the full liability earns interest.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "$25,000",
+        "explanation": "The payment includes principal; only 6,000 is interest.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$6,000",
+        "explanation": "Correct. 100,000 × 6% = 6,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Finance leases use the effective interest method on the lease liability; the payment reduces the liability by $19,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x3-28",
+    "moduleId": "far-fair-value",
+    "pool": "exam",
+    "stem": "Measuring the fair value of a nonfinancial asset, such as land, is based on:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Its highest and best use by market participants",
+        "explanation": "Correct. Fair value of nonfinancial assets assumes the highest and best use that is physically possible, legally permissible and financially feasible."
+      },
+      {
+        "id": "b",
+        "text": "The entity's current use, whatever market participants would do",
+        "explanation": "The market participant view governs, not the entity's own intent.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The price the entity originally paid for it",
+        "explanation": "Historical cost isn't fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The entity's own value in use from its projections",
+        "explanation": "Entity-specific value isn't fair value.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 820-10-35-10A: fair value of a nonfinancial asset considers a market participant's highest and best use.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x3-29",
+    "moduleId": "far-accounting-changes",
+    "pool": "exam",
+    "stem": "In 2025 a company discovers that 2024 depreciation was overstated by $30,000 (net of tax effects, $23,700). The statements are comparative. How is the error corrected?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Include a $30,000 gain in 2025 net income now",
+        "explanation": "Error corrections don't flow through current income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Restate 2024 and adjust opening retained earnings",
+        "explanation": "Correct. Material prior-period errors are corrected by restating prior periods presented, with a cumulative adjustment to the earliest period's opening retained earnings."
+      },
+      {
+        "id": "c",
+        "text": "Adjust 2025 and later depreciation prospectively",
+        "explanation": "Prospective treatment is for changes in estimate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Disclose the error only; no adjustment is needed now",
+        "explanation": "Material errors must be corrected.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 250: correct a prior-period error by restating the prior-period statements; adjust the opening balance of retained earnings for the earliest period presented.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x3-30",
+    "moduleId": "far-contingencies",
+    "pool": "exam",
+    "stem": "A company is the plaintiff in a lawsuit and expects to win a $400,000 judgment, which is probable and estimable. How is it reported before settlement?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Recognized as a $400,000 receivable and gain",
+        "explanation": "Gain contingencies aren't accrued.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Recognized as a gain in other comprehensive income",
+        "explanation": "Gain contingencies aren't recognized anywhere before realization.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Disclosed, but not recognized as a gain",
+        "explanation": "Correct. Gain contingencies aren't recognized until realized or realizable."
+      },
+      {
+        "id": "d",
+        "text": "Not disclosed at all, to avoid misleading users",
+        "explanation": "Adequate disclosure is made, avoiding misleading implications.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 450-30: gain contingencies are not recognized before realization; they may be disclosed, with care not to mislead.",
+    "skill": "remembering",
+    "difficulty": 2
   }
 ]

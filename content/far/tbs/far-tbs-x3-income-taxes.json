@@ -1,0 +1,66 @@
+{
+  "id": "far-tbs-x3-income-taxes",
+  "section": "FAR",
+  "unitId": "far-u10",
+  "moduleIds": [
+    "far-income-taxes"
+  ],
+  "pool": "exam",
+  "title": "Current and deferred taxes — Corbin Inc.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Compute Corbin Inc.'s 2025 income tax amounts. The enacted rate for 2025 and later years is 21%. No valuation allowance is needed, and there were no deferred tax balances at January 1, 2025. Round the effective rate to two decimals.",
+  "exhibits": [
+    {
+      "title": "Corbin Inc. — 2025 data",
+      "content": "- Pretax financial income: **$900,000**.\n- Tax depreciation exceeds book depreciation by **$60,000**.\n- Warranty expense accrued for books but not yet paid: **$30,000** (deductible when paid).\n- Interest on municipal bonds: **$20,000**.\n- Fines paid for environmental violations: **$10,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "tax",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "ti",
+          "label": "Taxable income",
+          "answer": 860000,
+          "explanation": "900,000 − 60,000 + 30,000 − 20,000 + 10,000 = **860,000**."
+        },
+        {
+          "id": "cur",
+          "label": "Current income tax expense",
+          "answer": 180600,
+          "explanation": "21% × 860,000 = **180,600**."
+        },
+        {
+          "id": "dtl",
+          "label": "Deferred tax liability at December 31",
+          "answer": 12600,
+          "explanation": "21% × 60,000 depreciation difference = **12,600**."
+        },
+        {
+          "id": "dta",
+          "label": "Deferred tax asset at December 31",
+          "answer": 6300,
+          "explanation": "21% × 30,000 warranty accrual = **6,300**."
+        },
+        {
+          "id": "tot",
+          "label": "Total income tax expense",
+          "answer": 186900,
+          "explanation": "180,600 + (12,600 − 6,300) deferred = **186,900**; check: 21% × (900,000 − 20,000 + 10,000)."
+        },
+        {
+          "id": "etr",
+          "label": "Effective tax rate",
+          "answer": 20.77,
+          "explanation": "186,900 ÷ 900,000 = **20.77%**; the permanent differences move it from 21%.",
+          "tolerance": 0.01,
+          "unit": "%"
+        }
+      ]
+    }
+  ]
+}

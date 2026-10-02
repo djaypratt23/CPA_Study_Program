@@ -34,6 +34,15 @@ Answer keys and content changed while working through `REMEDIATION_TASKS.md`. Ea
 | "Looking ahead to 2026" notes in `reg-itemized-deductions`, `reg-c-corp-income`, `reg-individual-credits`, `tcp-individual-planning` | Decision D2: 2026 changes are taught as lesson notes, not tested. Confirm the amounts: 0.5%-of-AGI individual charitable floor; 35% cap on the itemized-deduction benefit; $1,000/$2,000 non-itemizer cash gift deduction; 1% corporate charitable floor; dependent care credit top rate 50%, phasing down to 35% above $15,000 AGI and toward 20% above $75,000/$150,000. | P.L. 119-21 amending IRC §21, §68, §170 |
 | `aud-code-of-conduct` lesson, `aud-coc-07`, `aud-x1-05` | Referral fees are permitted with disclosure; commissions and contingent fees are prohibited only for audit, review, compilation (without an independence disclosure) and PFI-examination clients. | ET 1.510, 1.520 |
 
+## Mock forms 2 and 3 (P1-9) — new exam items to spot-check
+
+Each later form reuses half of form 1's multiple-choice questions (forms 2 and 3 take different halves) and adds new
+exam-pool items that never appear in practice. Please spot-check the new keys and computations:
+
+| Section | New items | Forms |
+|---|---|---|
+| FAR | MCQs `far-x1-19`–`36`, `far-x2-18`–`34`, `far-x3-16`–`30`; TBS `far-tbs-x1-eps`, `far-tbs-x2-receivables-inventory`, `far-tbs-x3-income-taxes`, `far-tbs-x1-government`, `far-tbs-x1-statement-review`, `far-tbs-x2-equity`, `far-tbs-x3-operating-lease` | `far-mock-2`, `far-mock-3` |
+
 ## REG/TCP re-scope (decision D1) — new content to confirm
 
 | Item | What to confirm | Authority |
