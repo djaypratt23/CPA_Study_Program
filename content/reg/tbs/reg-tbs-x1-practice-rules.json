@@ -1,0 +1,108 @@
+{
+  "id": "reg-tbs-x1-practice-rules",
+  "section": "REG",
+  "unitId": "reg-u1",
+  "moduleIds": [
+    "reg-circular-230",
+    "reg-preparer-penalties",
+    "reg-irs-procedures"
+  ],
+  "pool": "exam",
+  "title": "Practice rules and penalties — Ellery Tax Group",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Ellery Tax Group's CPAs prepare individual returns. Select the most appropriate response to each situation, then compute the penalties for Mia Chen.",
+  "exhibits": [
+    {
+      "title": "Situations",
+      "content": "1. A client wants to claim a deduction for which there is **no reasonable basis**, and offers to attach a disclosure statement.\n2. A position has a **reasonable basis** but not substantial authority, and isn't a tax shelter item.\n3. While preparing a 2025 return, a CPA learns the client didn't file a required 2023 return.\n4. A client's 2025 return was filed on **March 1, 2026**; the due date was April 15, 2026. No fraud or substantial omission.\n5. An IRS agent properly requests records the CPA holds for a client under examination; the CPA doesn't believe they are privileged."
+    },
+    {
+      "title": "Mia Chen",
+      "content": "Mia filed a timely extension for her 2025 return but paid nothing by April 15, 2026. She filed the return and paid the **$20,000** balance on **August 15, 2026**. Ignore interest."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "pr",
+      "prompt": "Select the response.",
+      "rows": [
+        {
+          "id": "s1",
+          "label": "1. No reasonable basis",
+          "options": [
+            "Permitted with disclosure",
+            "Not permitted, even with disclosure",
+            "Permitted without disclosure"
+          ],
+          "answer": "Not permitted, even with disclosure",
+          "explanation": "A position must have at least a reasonable basis and be disclosed to avoid the §6694(a) penalty; disclosure can't rescue a position with no reasonable basis."
+        },
+        {
+          "id": "s2",
+          "label": "2. Reasonable basis only",
+          "options": [
+            "Permitted with disclosure",
+            "Not permitted, even with disclosure",
+            "Permitted without disclosure"
+          ],
+          "answer": "Permitted with disclosure",
+          "explanation": "A reasonable-basis position is acceptable if adequately disclosed (for example, on Form 8275)."
+        },
+        {
+          "id": "s3",
+          "label": "3. Unfiled prior-year return",
+          "options": [
+            "Promptly advise the client of the noncompliance and its consequences",
+            "Notify the IRS of the client's noncompliance",
+            "Prepare the 2025 return and say nothing"
+          ],
+          "answer": "Promptly advise the client of the noncompliance and its consequences",
+          "explanation": "Circular 230 §10.21 requires the practitioner to advise the client promptly of the noncompliance and its consequences; there is no duty to notify the IRS."
+        },
+        {
+          "id": "s4",
+          "label": "4. Assessment period ends",
+          "options": [
+            "March 1, 2029",
+            "April 15, 2029",
+            "April 15, 2032"
+          ],
+          "answer": "April 15, 2029",
+          "explanation": "An early return is treated as filed on the due date, so the three-year period runs from April 15, 2026."
+        },
+        {
+          "id": "s5",
+          "label": "5. IRS records request",
+          "options": [
+            "Promptly submit the records",
+            "Refuse unless the client consents in writing",
+            "Ignore it until a summons is issued"
+          ],
+          "answer": "Promptly submit the records",
+          "explanation": "Circular 230 §10.20: a practitioner must promptly submit records properly requested by the IRS unless believed in good faith to be privileged."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "pen",
+      "prompt": "Compute Mia's penalties.",
+      "rows": [
+        {
+          "id": "ftf",
+          "label": "Failure-to-file penalty",
+          "answer": 0,
+          "explanation": "The return was filed within the extended due date: **0**."
+        },
+        {
+          "id": "ftp",
+          "label": "Failure-to-pay penalty",
+          "answer": 400,
+          "explanation": "An extension doesn't extend the time to pay: 0.5% × 4 months × 20,000 = **400**."
+        }
+      ]
+    }
+  ]
+}

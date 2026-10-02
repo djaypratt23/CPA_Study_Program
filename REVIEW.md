@@ -43,6 +43,7 @@ exam-pool items that never appear in practice. Please spot-check the new keys an
 |---|---|---|
 | FAR | MCQs `far-x1-19`–`36`, `far-x2-18`–`34`, `far-x3-16`–`30`; TBS `far-tbs-x1-eps`, `far-tbs-x2-receivables-inventory`, `far-tbs-x3-income-taxes`, `far-tbs-x1-government`, `far-tbs-x1-statement-review`, `far-tbs-x2-equity`, `far-tbs-x3-operating-lease` | `far-mock-2`, `far-mock-3` |
 | AUD | MCQs `aud-x1-17`–`32`, `aud-x2-24`–`46`, `aud-x3-28`–`54`, `aud-x4-13`–`24`; TBS `aud-tbs-x8-materiality`, `aud-tbs-x9-confirmations`, `aud-tbs-x10-single-audit`, `aud-tbs-x11-acceptance-quality`, `aud-tbs-x12-control-deviations`, `aud-tbs-x13-subsequent-events`, `aud-tbs-x14-engagement-types` | `aud-mock-2`, `aud-mock-3` |
+| REG | MCQs `reg-x1-13`–`23`, `reg-x2-17`–`30`, `reg-x3-09`–`15`, `reg-x4-23`–`42`, `reg-x5-27`–`46`; TBS `reg-tbs-x3-basis`, `reg-tbs-x3-depreciation-review`, `reg-tbs-x4-self-employed`, `reg-tbs-x5-s-corp-basis`, `reg-tbs-x1-practice-rules`, `reg-tbs-x2-secured-bankruptcy`, `reg-tbs-x3-capital-gains`, `reg-tbs-x4-return-review` (2025 standard deduction, flagged) | `reg-mock-2`, `reg-mock-3` |
 
 ## REG/TCP re-scope (decision D1) — new content to confirm
 
@@ -71,6 +72,7 @@ so you can confirm them against current IRS guidance and your review course:
 | `reg-id-10` | Qualified tips deduction (up to $25,000; 2025–2028) |
 | `reg-cr-09` | Residential clean energy credit ending for expenditures after 2025 |
 | `reg-cc-08` | 100% bonus depreciation after January 19, 2025; §179 limit of $2,500,000 |
+| TBS `reg-tbs-x4-return-review`, MCQ `reg-x4-39` | 2025 standard deduction ($15,750 single) and SALT cap ($40,000) |
 | TBS `reg-tbs-u4-gross-income`, `reg-tbs-u5-taxable-income`, `reg-tbs-x4-individual`, `reg-tbs-x4-family` | Standard deduction, child tax credit, and SALT amounts |
 
 The REG lessons and the `reg-numbers` review sheet also cite the senior deduction ($6,000), the overtime and car

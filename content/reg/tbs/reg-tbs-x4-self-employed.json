@@ -1,0 +1,57 @@
+{
+  "id": "reg-tbs-x4-self-employed",
+  "section": "REG",
+  "unitId": "reg-u5",
+  "moduleIds": [
+    "reg-amt-other-taxes",
+    "reg-business-rental-income",
+    "reg-adjustments"
+  ],
+  "pool": "exam",
+  "title": "Schedule C and self-employment tax — Kai Moreno",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Kai Moreno, single, runs a consulting business as a sole proprietor. Compute the amounts for Kai's 2025 return. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "2025 business data",
+      "content": "- Gross receipts: **$150,000**.\n- Office supplies: **$12,000**.\n- Business meals with clients: **$6,000**.\n- Tickets to sporting events for clients: **$2,000**.\n- Home office: **250** square feet used regularly and exclusively; Kai uses the simplified method ($5 per square foot, up to 300 square feet).\n- Business driving: **10,000** miles; Kai uses the standard mileage rate of **70 cents** per mile.\n- Health insurance premiums for Kai (no employer plan available): **$6,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "sc",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "np",
+          "label": "Schedule C net profit",
+          "answer": 126750,
+          "explanation": "150,000 − 12,000 supplies − 3,000 meals (50%) − 0 entertainment − 1,250 home office − 7,000 mileage = **126,750**."
+        },
+        {
+          "id": "se",
+          "label": "Self-employment tax",
+          "answer": 17909,
+          "explanation": "126,750 × 92.35% × 15.3% = **17,909** (below the Social Security wage base).",
+          "tolerance": 2
+        },
+        {
+          "id": "half",
+          "label": "Deduction for half of self-employment tax",
+          "answer": 8955,
+          "explanation": "50% × 17,909 = **8,955**.",
+          "tolerance": 2
+        },
+        {
+          "id": "adj",
+          "label": "Total adjustments to income from these items",
+          "answer": 14955,
+          "explanation": "8,955 + 6,000 self-employed health insurance = **14,955**.",
+          "tolerance": 2
+        }
+      ]
+    }
+  ]
+}

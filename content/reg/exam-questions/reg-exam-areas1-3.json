@@ -1271,5 +1271,1134 @@
     "skill": "application",
     "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "reg-x1-13",
+    "moduleId": "reg-circular-230",
+    "pool": "exam",
+    "stem": "Which individual has unlimited rights to represent taxpayers before the IRS in all matters?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An enrolled agent",
+        "explanation": "Correct. CPAs, attorneys and enrolled agents have unlimited practice rights."
+      },
+      {
+        "id": "b",
+        "text": "An unenrolled preparer with an AFSP record",
+        "explanation": "AFSP participants have only limited representation rights.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "A bookkeeper who prepared the return",
+        "explanation": "Preparing a return doesn't grant representation rights.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A paid tax return preparer with a PTIN only",
+        "explanation": "A PTIN alone grants no representation rights.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Circular 230 §10.3: attorneys, CPAs and enrolled agents may practice before the IRS in all matters.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x1-14",
+    "moduleId": "reg-circular-230",
+    "pool": "exam",
+    "stem": "Under Circular 230, a practitioner preparing a return may rely in good faith on information the client furnishes, but must:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Independently verify every item with third parties",
+        "explanation": "Verification isn't required absent red flags.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Make reasonable inquiries if it looks wrong",
+        "explanation": "Correct. The practitioner can't ignore implications of information known or that appears inconsistent."
+      },
+      {
+        "id": "c",
+        "text": "Obtain a signed affidavit for each deduction",
+        "explanation": "No affidavit is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Refuse to prepare any return with unusual items",
+        "explanation": "Unusual items require inquiry, not refusal.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Circular 230 §10.22 and §10.34(d): reasonable reliance is allowed, but the practitioner must make reasonable inquiries when information appears incorrect, inconsistent or incomplete.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x1-15",
+    "moduleId": "reg-preparer-penalties",
+    "pool": "exam",
+    "stem": "A paid preparer takes an undisclosed return position with no substantial authority, for which the preparer earned a $3,000 fee. The §6694(a) penalty is the greater of $1,000 or:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "25% of the understatement of tax",
+        "explanation": "That isn't the §6694(a) measure.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "100% of the fee derived from the return",
+        "explanation": "The rate is 50% for §6694(a).",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "50% of the fee derived from the return",
+        "explanation": "Correct. 50% × 3,000 = 1,500, which exceeds 1,000."
+      },
+      {
+        "id": "d",
+        "text": "75% of the fee derived from the return",
+        "explanation": "75% applies to willful or reckless conduct under §6694(b).",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §6694(a): the greater of $1,000 or 50% of the income derived by the preparer from the return; §6694(b) (willful or reckless) is the greater of $5,000 or 75%.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x1-16",
+    "moduleId": "reg-preparer-penalties",
+    "pool": "exam",
+    "stem": "An individual files her 2025 return exactly three months late without an extension and pays the $10,000 balance due with it. Ignoring interest, what are the combined failure-to-file and failure-to-pay penalties?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,650",
+        "explanation": "The failure-to-file rate is reduced by the failure-to-pay rate for months both apply.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$1,350",
+        "explanation": "The failure-to-pay penalty is also owed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$2,500",
+        "explanation": "The 25% maximum doesn't apply after three months.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$1,500",
+        "explanation": "Correct. Failure-to-pay 0.5% × 3 × 10,000 = 150; failure-to-file 4.5% × 3 × 10,000 = 1,350 (5% reduced by the failure-to-pay rate)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §6651: failure to file 5% per month (max 25%), reduced by the 0.5% failure-to-pay penalty for months both apply.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x1-17",
+    "moduleId": "reg-irs-procedures",
+    "pool": "exam",
+    "stem": "A taxpayer omits gross income exceeding 25% of the gross income reported on a timely filed return. Absent fraud, the IRS may assess additional tax within:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Six years after the return was filed",
+        "explanation": "Correct. A substantial omission extends the statute of limitations to six years."
+      },
+      {
+        "id": "b",
+        "text": "Three years after the return was filed",
+        "explanation": "Three years is the general rule.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "Ten years after the return was filed",
+        "explanation": "Ten years is the collection period.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Any time, with no limit",
+        "explanation": "Unlimited time applies to fraud or a failure to file.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §6501(e): omission of more than 25% of gross income extends the assessment period to six years.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x1-18",
+    "moduleId": "reg-accountant-liability",
+    "pool": "exam",
+    "stem": "The IRC §7525 privilege for communications with a federally authorized tax practitioner applies to:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Any communication in a criminal tax prosecution",
+        "explanation": "The privilege doesn't apply to criminal matters.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Tax advice in a noncriminal IRS matter",
+        "explanation": "Correct. The privilege covers noncriminal tax matters before the IRS or in federal court."
+      },
+      {
+        "id": "c",
+        "text": "Written communications promoting a tax shelter",
+        "explanation": "Tax shelter promotions are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "All work papers prepared for a financial audit",
+        "explanation": "Audit work isn't tax advice.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§7525 extends attorney-client-type confidentiality to tax advice from federally authorized practitioners in noncriminal tax matters, excluding written tax shelter communications.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-17",
+    "moduleId": "reg-agency",
+    "pool": "exam",
+    "stem": "An agent's apparent authority arises from:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The agent's own statements to the third party",
+        "explanation": "An agent can't create apparent authority by itself.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The terms of the written agency agreement only",
+        "explanation": "That creates actual express authority.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "The agent's secret instructions",
+        "explanation": "Secret limits don't affect apparent authority.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The principal's conduct toward the third party",
+        "explanation": "Correct. Apparent authority rests on the principal's manifestations to the third party."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Apparent authority exists when the principal's words or conduct lead a third party reasonably to believe the agent has authority.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-18",
+    "moduleId": "reg-agency",
+    "pool": "exam",
+    "stem": "An employee, while making deliveries for the employer, negligently injures a pedestrian. Who is liable to the pedestrian?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Both the employee and the employer",
+        "explanation": "Correct. The employee is liable for the tort, and the employer is vicariously liable under respondeat superior."
+      },
+      {
+        "id": "b",
+        "text": "Only the employee",
+        "explanation": "The employer is liable for torts within the scope of employment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Only the employer",
+        "explanation": "The employee remains personally liable.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Neither, if the employer had a safety policy",
+        "explanation": "A policy doesn't avoid vicarious liability.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Respondeat superior makes an employer liable for an employee's torts within the scope of employment; the employee also remains liable.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-19",
+    "moduleId": "reg-contracts",
+    "pool": "exam",
+    "stem": "Under the UCC statute of frauds, which contract must be evidenced by a writing to be enforceable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A contract for services to finish in six months",
+        "explanation": "Contracts performable within a year needn't be written.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A contract for the sale of goods for $800",
+        "explanation": "Correct. Sales of goods for $500 or more require a writing."
+      },
+      {
+        "id": "c",
+        "text": "A contract to sell goods for $300",
+        "explanation": "Below the $500 threshold.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "An oral promise to pay one's own debt",
+        "explanation": "Promises to pay one's own debt aren't covered.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "UCC 2-201: a contract for the sale of goods for $500 or more requires a signed writing, subject to exceptions.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-20",
+    "moduleId": "reg-contracts",
+    "pool": "exam",
+    "stem": "A merchant makes a signed written offer to sell goods, stating it will remain open for 60 days. No consideration is given. The offer is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Revocable at any time before acceptance",
+        "explanation": "Firm offers by merchants can't be revoked.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Irrevocable only if the buyer pays for the option",
+        "explanation": "A firm offer needs no consideration.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Irrevocable for the 60 days",
+        "explanation": "Correct. A merchant's firm offer is irrevocable for the stated period, up to three months."
+      },
+      {
+        "id": "d",
+        "text": "Irrevocable for one year",
+        "explanation": "The maximum without consideration is three months.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "UCC 2-205: a merchant's signed written firm offer is irrevocable without consideration for the time stated, not exceeding three months.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-21",
+    "moduleId": "reg-debtor-creditor",
+    "pool": "exam",
+    "stem": "A retailer sells a refrigerator to a consumer on credit and retains a purchase money security interest. No financing statement is filed. The security interest is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Unperfected until a financing statement is filed",
+        "explanation": "Filing isn't needed for a consumer-goods PMSI.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Perfected only while the retailer has possession",
+        "explanation": "The buyer has possession.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Unenforceable against the buyer",
+        "explanation": "It attached and is enforceable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Perfected automatically on attachment",
+        "explanation": "Correct. A PMSI in consumer goods is perfected automatically."
+      }
+    ],
+    "answer": "d",
+    "explanation": "UCC 9-309: a purchase money security interest in consumer goods is perfected upon attachment.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-22",
+    "moduleId": "reg-debtor-creditor",
+    "pool": "exam",
+    "stem": "In a Chapter 7 bankruptcy, which unsecured claim has the highest priority?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Domestic support obligations",
+        "explanation": "Correct. Domestic support obligations are first in the priority order."
+      },
+      {
+        "id": "b",
+        "text": "Employee wages within the limits",
+        "explanation": "Wages follow administrative expenses.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Certain recent income taxes",
+        "explanation": "Taxes are lower in the order.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "General trade creditors",
+        "explanation": "General unsecured claims come last.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Bankruptcy Code §507: domestic support obligations first, then administrative expenses, then wages within limits, and later certain taxes.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-23",
+    "moduleId": "reg-business-structures",
+    "pool": "exam",
+    "stem": "In a limited partnership, a limited partner who doesn't participate in management is liable for partnership debts:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Personally and without limit",
+        "explanation": "General partners have unlimited liability.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Only up to her investment",
+        "explanation": "Correct. A limited partner's liability is limited to the capital contributed."
+      },
+      {
+        "id": "c",
+        "text": "Jointly with the general partners",
+        "explanation": "Limited partners aren't jointly liable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only for debts over $10,000",
+        "explanation": "No such threshold exists.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A limited partner risks only the capital contributed (or promised); general partners are personally liable.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x3-09",
+    "moduleId": "reg-property-basis",
+    "pool": "exam",
+    "stem": "A donor gives stock with a basis of $10,000 and a fair value of $7,000 at the gift date. The donee later sells it for $8,000. What gain or loss does the donee recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $1,000 capital gain",
+        "explanation": "Gain uses the donor's 10,000 basis, so there is no gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No gain or loss",
+        "explanation": "Correct. The sale price falls between the loss basis (7,000) and the gain basis (10,000)."
+      },
+      {
+        "id": "c",
+        "text": "A $2,000 loss",
+        "explanation": "Loss uses the 7,000 fair value, so there is no loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A $3,000 loss",
+        "explanation": "The donor's unrealized loss doesn't carry over.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRC §1015 dual basis: gain basis is the donor's basis; loss basis is the lower fair value. A price between the two gives no gain or loss.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x3-10",
+    "moduleId": "reg-property-basis",
+    "pool": "exam",
+    "stem": "A taxpayer inherits land that the decedent bought for $40,000. Fair value at death was $90,000. She sells it two months later for $95,000. Her gain is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000 short-term",
+        "explanation": "Inherited property is always treated as long-term.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$55,000 long-term",
+        "explanation": "Basis steps up to fair value at death.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$5,000 long-term",
+        "explanation": "Correct. Basis is the $90,000 date-of-death value, and inherited property is automatically long-term."
+      },
+      {
+        "id": "d",
+        "text": "$50,000 long-term",
+        "explanation": "That uses the decedent's basis.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §1014: inherited basis is fair value at death; §1223(9) treats the holding period as long-term.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x3-11",
+    "moduleId": "reg-cost-recovery",
+    "pool": "exam",
+    "stem": "A self-employed consultant buys a car used 40% for business. Which cost recovery method applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "MACRS 200% DB with bonus",
+        "explanation": "Bonus requires more than 50% business use.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A full §179 deduction",
+        "explanation": "§179 requires more than 50% business use.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No depreciation, because it is personal use",
+        "explanation": "The 40% business portion is depreciable.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "ADS straight-line, with no §179 or bonus",
+        "explanation": "Correct. Listed property used 50% or less for business must use ADS straight-line."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §280F(b): listed property not predominantly (more than 50%) used for business uses the alternative depreciation system, with no §179 or bonus.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x1-19",
+    "moduleId": "reg-irs-procedures",
+    "pool": "exam",
+    "stem": "After an examination, a taxpayer receives a statutory notice of deficiency (90-day letter). To contest the deficiency without first paying it, the taxpayer should:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "File suit in U.S. District Court within 90 days",
+        "explanation": "District Court requires payment and a refund claim first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Request an Appeals conference within 30 days",
+        "explanation": "The 30-day letter period has passed.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Petition the U.S. Tax Court within 90 days",
+        "explanation": "Correct. The Tax Court is the only forum where the tax needn't be paid first."
+      },
+      {
+        "id": "d",
+        "text": "File a claim for refund with the IRS",
+        "explanation": "A refund claim requires payment first.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A notice of deficiency gives 90 days to petition the Tax Court without paying; District Court and the Court of Federal Claims require payment.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x1-20",
+    "moduleId": "reg-preparer-penalties",
+    "pool": "exam",
+    "stem": "Which action by a paid preparer triggers an IRC §6695 penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Charging a fee based on time spent",
+        "explanation": "Time-based fees are proper.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Advising a client to keep receipts",
+        "explanation": "Advising on records is proper.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Preparing a return that results in a refund",
+        "explanation": "Refunds aren't penalized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Not giving the client a copy of the return",
+        "explanation": "Correct. §6695 penalizes failures such as not furnishing a copy, not signing, or not including a PTIN."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §6695 imposes per-return penalties for failing to furnish a copy, sign, provide an identifying number, retain records or meet due-diligence requirements.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x1-21",
+    "moduleId": "reg-circular-230",
+    "pool": "exam",
+    "stem": "Under Circular 230, a practitioner may charge a contingent fee for:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A refund claim within 120 days of an exam notice",
+        "explanation": "Correct. That is one of the listed exceptions."
+      },
+      {
+        "id": "b",
+        "text": "Preparing an original income tax return",
+        "explanation": "Contingent fees for original returns are prohibited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Any amended return, regardless of timing",
+        "explanation": "Only amended returns within the 120-day exception qualify.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Advice on tax planning before a business transaction",
+        "explanation": "Planning advice isn't an exception.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Circular 230 §10.27: contingent fees are permitted for IRS examinations of original returns, amended returns or claims filed within 120 days of a written examination notice, interest and penalty refund claims, and judicial proceedings.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x1-22",
+    "moduleId": "reg-accountant-liability",
+    "pool": "exam",
+    "stem": "Under the Restatement (Second) of Torts approach, a CPA who negligently prepares financial statements is liable to:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only the client, under the strict privity rule",
+        "explanation": "That is the Ultramares rule, followed by fewer states.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Third parties the CPA knew would rely on them",
+        "explanation": "Correct. Liability extends to a limited group of intended or known users."
+      },
+      {
+        "id": "c",
+        "text": "Anyone who could reasonably be foreseen to rely",
+        "explanation": "That is the broader foreseeability approach.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "No one, unless the CPA committed fraud",
+        "explanation": "Negligence liability exists to known users.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The Restatement §552 approach extends negligence liability to a limited group of persons the accountant intends or knows will rely on the information.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x1-23",
+    "moduleId": "reg-irs-procedures",
+    "pool": "exam",
+    "stem": "An individual's tax understatement is $12,000, and the correct tax is $80,000. Absent reasonable cause, what accuracy-related penalty applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No penalty, because the understatement is under 25%",
+        "explanation": "The test is 10% of correct tax or $5,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "40% of the understatement for gross misstatement",
+        "explanation": "40% applies to gross valuation misstatements.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A 20% substantial understatement penalty",
+        "explanation": "Correct. The understatement exceeds the greater of 10% of the correct tax (8,000) or $5,000."
+      },
+      {
+        "id": "d",
+        "text": "75% of the understatement for civil fraud",
+        "explanation": "Fraud requires intent, not shown here.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §6662: 20% penalty on a substantial understatement — more than the greater of 10% of the correct tax or $5,000 for individuals.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x2-24",
+    "moduleId": "reg-agency",
+    "pool": "exam",
+    "stem": "Which duty does a principal owe an agent?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "To account for all property held",
+        "explanation": "The agent owes the duty to account.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "To obey the agent's reasonable instructions",
+        "explanation": "Obedience is the agent's duty.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "To reimburse the agent's expenses",
+        "explanation": "Correct. Principals owe compensation, reimbursement and indemnification."
+      },
+      {
+        "id": "d",
+        "text": "To avoid conflicts of interest",
+        "explanation": "Loyalty is owed by the agent.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The principal owes compensation, reimbursement, indemnification and cooperation; the agent owes loyalty, obedience, care and accounting.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-25",
+    "moduleId": "reg-contracts",
+    "pool": "exam",
+    "stem": "After an employee retires, the employer promises to pay her $5,000 for her past years of loyal service. The promise is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Enforceable, because the service had value",
+        "explanation": "Past service isn't bargained-for consideration.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Enforceable once the employee accepts",
+        "explanation": "Acceptance doesn't supply consideration.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Enforceable under the UCC",
+        "explanation": "The UCC governs goods, not services.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Unenforceable for lack of consideration",
+        "explanation": "Correct. Something already done can't be bargained for."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Consideration must be bargained for; past consideration doesn't support a new promise.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-26",
+    "moduleId": "reg-contracts",
+    "pool": "exam",
+    "stem": "Two merchants exchange forms. The buyer's acceptance adds a minor term that doesn't materially alter the offer; the seller doesn't object. Under UCC 2-207, the added term:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Becomes part of the contract",
+        "explanation": "Correct. Between merchants, nonmaterial additional terms become part unless the offer limits acceptance or an objection is made."
+      },
+      {
+        "id": "b",
+        "text": "Is a counteroffer that prevents a contract",
+        "explanation": "Under the UCC a definite acceptance forms a contract.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "Is ignored because all terms must match",
+        "explanation": "The mirror-image rule doesn't apply to goods.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "Requires a new signed writing",
+        "explanation": "No new writing is needed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "UCC 2-207: additional terms between merchants become part of the contract unless they materially alter it, the offer expressly limits acceptance, or timely objection is given.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-27",
+    "moduleId": "reg-debtor-creditor",
+    "pool": "exam",
+    "stem": "Lender A files a financing statement on March 1 but doesn't give value until March 10. Lender B lends and perfects by filing on March 5. Both claim the same equipment. Who has priority?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Lender B, because it gave value first",
+        "explanation": "Priority runs from filing or perfection, not value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Lender A, because it filed first",
+        "explanation": "Correct. Between perfected interests, priority goes to the first to file or perfect."
+      },
+      {
+        "id": "c",
+        "text": "They share pro rata",
+        "explanation": "Priority is not shared.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Neither, because both are unperfected",
+        "explanation": "Both are perfected.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "UCC 9-322(a)(1): conflicting perfected security interests rank by the earlier of filing or perfection.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-28",
+    "moduleId": "reg-debtor-creditor",
+    "pool": "exam",
+    "stem": "Which debt is generally discharged in a Chapter 7 bankruptcy?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Child support owed to a former spouse",
+        "explanation": "Domestic support obligations aren't dischargeable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Federal student loans, absent undue hardship",
+        "explanation": "Student loans generally aren't discharged.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Unsecured credit card debt incurred normally",
+        "explanation": "Correct. Ordinary unsecured consumer debt is dischargeable."
+      },
+      {
+        "id": "d",
+        "text": "Income taxes due within the past three years",
+        "explanation": "Recent taxes aren't discharged.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Nondischargeable debts include domestic support, most student loans, certain recent taxes, and debts from fraud or willful injury.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-29",
+    "moduleId": "reg-federal-regulation",
+    "pool": "exam",
+    "stem": "An employer qualifies for the full 5.4% state credit against FUTA. What FUTA does it owe for an employee paid $30,000 in 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$420",
+        "explanation": "That is 6.0% before the state credit.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$180",
+        "explanation": "That applies 0.6% to all wages.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$378",
+        "explanation": "That is the credit, not the tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$42",
+        "explanation": "Correct. (6.0% − 5.4%) × the first $7,000 = 42."
+      }
+    ],
+    "answer": "d",
+    "explanation": "FUTA: 6.0% of the first $7,000 of each employee's wages, less a credit of up to 5.4% for state unemployment taxes, for a net 0.6% ($42).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x2-30",
+    "moduleId": "reg-business-structures",
+    "pool": "exam",
+    "stem": "Courts are most likely to pierce the corporate veil when the shareholders:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Commingle personal and corporate funds",
+        "explanation": "Correct. Commingling and undercapitalization are classic grounds."
+      },
+      {
+        "id": "b",
+        "text": "Elect S corporation status",
+        "explanation": "Tax status doesn't affect limited liability.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Hold regular annual shareholder meetings",
+        "explanation": "Observing formalities supports the veil.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Purchase liability insurance",
+        "explanation": "Insurance supports, not undermines, the entity.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Courts disregard the entity when it is the shareholders' alter ego, for example through commingling, undercapitalization or fraud.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x3-12",
+    "moduleId": "reg-property-basis",
+    "pool": "exam",
+    "stem": "An investor sells 100 shares with a basis of $5,000 for $3,000 and buys 100 shares of the same stock 10 days later for $3,200. What is the basis of the new shares?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,200",
+        "explanation": "Correct. The $2,000 wash-sale loss is disallowed and added to the new shares' basis."
+      },
+      {
+        "id": "b",
+        "text": "$3,200",
+        "explanation": "The disallowed loss increases basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$3,000",
+        "explanation": "Basis starts from the new purchase price.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "The new purchase price, not the old basis, starts the computation.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §1091: a loss is disallowed when substantially identical stock is bought within 30 days; the loss is added to the new basis: 3,200 + 2,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x3-13",
+    "moduleId": "reg-capital-gains",
+    "pool": "exam",
+    "stem": "An individual has a $8,000 short-term capital loss and a $2,000 long-term capital gain in 2025, and no other capital transactions. How much loss is deductible in 2025, and what carries forward?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,000 deductible; nothing carries forward",
+        "explanation": "The annual limit is $3,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$3,000 now; $3,000 short-term carryover",
+        "explanation": "Correct. Net short-term loss 6,000; deduct 3,000; carry 3,000 forward as short-term."
+      },
+      {
+        "id": "c",
+        "text": "$3,000 deductible; $3,000 long-term carryforward",
+        "explanation": "The carryforward keeps its short-term character.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$8,000 deductible against ordinary income",
+        "explanation": "Losses first offset gains, and then the $3,000 limit applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Net the gains and losses (6,000 net short-term loss), deduct up to $3,000 against ordinary income, and carry the rest forward indefinitely with its character.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x3-14",
+    "moduleId": "reg-cost-recovery",
+    "pool": "exam",
+    "stem": "A business with $60,000 of taxable income from its active trade (before §179) elects $90,000 of §179 expense in 2025. What is its 2025 §179 deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$90,000",
+        "explanation": "§179 can't exceed business income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$60,000; the $30,000 is lost",
+        "explanation": "The disallowed amount carries forward.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$60,000; $30,000 carries forward",
+        "explanation": "Correct. §179 is limited to business taxable income; the excess carries forward."
+      },
+      {
+        "id": "d",
+        "text": "$90,000, creating a $30,000 loss",
+        "explanation": "§179 can't create a loss.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §179(b)(3): the deduction is limited to taxable income from the active conduct of a trade or business; the excess carries forward.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x3-15",
+    "moduleId": "reg-nontaxable-exchanges",
+    "pool": "exam",
+    "stem": "A married couple filing jointly sells their home of 10 years for a $620,000 gain. Both meet the ownership and use tests. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$370,000",
+        "explanation": "Joint filers who both qualify exclude $500,000.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The gain exceeds the exclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$620,000",
+        "explanation": "The §121 exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$120,000",
+        "explanation": "Correct. Up to $500,000 is excluded for joint filers: 620,000 − 500,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §121: exclude up to $250,000 ($500,000 joint) of gain on a principal residence owned and used 2 of the last 5 years.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

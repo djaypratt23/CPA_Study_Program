@@ -1,0 +1,70 @@
+{
+  "id": "reg-tbs-x3-capital-gains",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-capital-gains",
+    "reg-property-basis"
+  ],
+  "pool": "exam",
+  "title": "Capital gain netting — Omar Haddad",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Omar Haddad, single, had the capital transactions below in 2025. Compute each amount. Enter losses as positive numbers.",
+  "exhibits": [
+    {
+      "title": "2025 transactions",
+      "content": "1. Sold Ardent Co. stock held 3 years: basis $20,000; proceeds $35,000.\n2. Sold Bexley Inc. stock held 5 months: basis $18,000; proceeds $12,000.\n3. Sold investment land held 2 years: basis $26,000; proceeds $30,000.\n4. Sold stock his mother gave him in June 2025, two months before the sale. Her basis was $5,000 (held 6 years); fair value at the gift was $8,000; proceeds $11,000. No gift tax was paid.\n5. Long-term capital loss carryforward from 2024: **$9,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "cg",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "gift",
+          "label": "Gain on the gifted stock",
+          "answer": 6000,
+          "explanation": "Gain basis is the donor's 5,000: 11,000 − 5,000 = **6,000**. The donor's holding period tacks, so it is long-term."
+        },
+        {
+          "id": "st",
+          "label": "Net short-term capital loss",
+          "answer": 6000,
+          "explanation": "Bexley: 12,000 − 18,000 = **6,000** loss."
+        },
+        {
+          "id": "lt",
+          "label": "Net long-term capital gain (after the carryforward)",
+          "answer": 16000,
+          "explanation": "15,000 + 4,000 + 6,000 − 9,000 = **16,000**."
+        },
+        {
+          "id": "ncg",
+          "label": "Net capital gain",
+          "answer": 10000,
+          "explanation": "16,000 − 6,000 = **10,000**, eligible for preferential rates."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "hp",
+      "prompt": "Holding period of the gifted stock",
+      "rows": [
+        {
+          "id": "h1",
+          "label": "Holding period of the gifted stock",
+          "options": [
+            "Long-term — the donor's holding period carries over",
+            "Short-term — Omar held it only two months"
+          ],
+          "answer": "Long-term — the donor's holding period carries over",
+          "explanation": "When the donee uses the donor's basis, the donor's holding period is added (§1223(2))."
+        }
+      ]
+    }
+  ]
+}
