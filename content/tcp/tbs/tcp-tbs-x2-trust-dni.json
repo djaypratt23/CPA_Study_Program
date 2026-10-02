@@ -1,0 +1,101 @@
+{
+  "id": "tcp-tbs-x2-trust-dni",
+  "section": "TCP",
+  "unitId": "tcp-u5",
+  "moduleIds": [
+    "tcp-trusts-estates"
+  ],
+  "pool": "exam",
+  "title": "Complex trust income — Hollis Family Trust",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "The Hollis Family Trust is a complex trust. Capital gains are allocated to corpus under the trust instrument and are not distributed. Compute its 2025 amounts. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "2025 trust data",
+      "content": "| Item | Amount |\n|---|---:|\n| Taxable interest | 30,000 |\n| Qualified dividends | 20,000 |\n| Tax-exempt municipal interest | 10,000 |\n| Long-term capital gain (allocated to corpus) | 15,000 |\n| Trustee fees (charged to income) | 6,000 |\n| Discretionary distribution to the beneficiary | 40,000 |\n\nTrustee fees are allocated to tax-exempt income in proportion to income (10,000 ÷ 60,000). The complex trust exemption is $100."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "t",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "fee",
+          "label": "Trustee fees deductible by the trust",
+          "answer": 5000,
+          "explanation": "6,000 × 50,000 ÷ 60,000 = **5,000**; 1,000 is allocable to tax-exempt income and nondeductible."
+        },
+        {
+          "id": "dni",
+          "label": "Distributable net income",
+          "answer": 54000,
+          "explanation": "30,000 + 20,000 + 10,000 − 6,000 = **54,000**; capital gains allocated to corpus are excluded."
+        },
+        {
+          "id": "dd",
+          "label": "Distribution deduction",
+          "answer": 33333,
+          "explanation": "40,000 × (taxable DNI 45,000 ÷ DNI 54,000) = **33,333**; the tax-exempt portion isn't deductible.",
+          "tolerance": 2
+        },
+        {
+          "id": "ben",
+          "label": "Amount taxable to the beneficiary",
+          "answer": 33333,
+          "explanation": "The beneficiary includes the taxable share of the distribution: **33,333**; 6,667 keeps its tax-exempt character.",
+          "tolerance": 2
+        },
+        {
+          "id": "ti",
+          "label": "Trust taxable income",
+          "answer": 26567,
+          "explanation": "65,000 − 5,000 − 33,333 − 100 = **26,567** (including the 15,000 capital gain kept in corpus).",
+          "tolerance": 2
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer the questions.",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Who is taxed on the $15,000 capital gain?",
+          "options": [
+            "The trust",
+            "The beneficiary",
+            "Neither — it is excluded"
+          ],
+          "answer": "The trust",
+          "explanation": "Gains allocated to corpus and not distributed are excluded from DNI and taxed to the trust."
+        },
+        {
+          "id": "q2",
+          "label": "The character of the beneficiary's $40,000 distribution is:",
+          "options": [
+            "All taxable interest",
+            "A proportionate share of each class of DNI, including tax-exempt interest",
+            "All tax-exempt"
+          ],
+          "answer": "A proportionate share of each class of DNI, including tax-exempt interest",
+          "explanation": "Distributions carry out each class of income in proportion to DNI."
+        },
+        {
+          "id": "q3",
+          "label": "Due date of the 2025 Form 1041 for a calendar-year trust",
+          "options": [
+            "March 15, 2026",
+            "April 15, 2026",
+            "May 15, 2026"
+          ],
+          "answer": "April 15, 2026",
+          "explanation": "Form 1041 is due on the 15th day of the fourth month after year-end."
+        }
+      ]
+    }
+  ]
+}

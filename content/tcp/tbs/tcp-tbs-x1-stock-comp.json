@@ -1,0 +1,70 @@
+{
+  "id": "tcp-tbs-x1-stock-comp",
+  "section": "TCP",
+  "unitId": "tcp-u1",
+  "moduleIds": [
+    "tcp-stock-compensation"
+  ],
+  "pool": "exam",
+  "title": "Equity compensation — Dev Raman",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Dev Raman, an employee of Lattice Inc., had the equity compensation events below in 2025. Compute each amount.",
+  "exhibits": [
+    {
+      "title": "2025 events",
+      "content": "1. **Nonqualified options:** exercised 2,000 options at $15 when the stock was $40; sold the 2,000 shares in December 2025 at $42.\n2. **Incentive stock options:** exercised 1,000 ISOs at $10 when the stock was $35; still holds the shares.\n3. **Restricted stock units:** 500 RSUs vested and settled in shares when the stock was $40.\n4. **Restricted stock:** received 1,000 restricted shares worth $5 each (paid nothing), vesting in 2028, and made a timely §83(b) election."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "sc",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "nq",
+          "label": "Ordinary income from the NQSO exercise",
+          "answer": 50000,
+          "explanation": "(40 − 15) × 2,000 = **50,000**."
+        },
+        {
+          "id": "nqs",
+          "label": "Gain on the December sale of the NQSO shares",
+          "answer": 4000,
+          "explanation": "(42 − 40) × 2,000 = **4,000**, short-term (basis is the $40 value at exercise)."
+        },
+        {
+          "id": "iso",
+          "label": "AMT adjustment from the ISO exercise",
+          "answer": 25000,
+          "explanation": "(35 − 10) × 1,000 = **25,000**; no regular income."
+        },
+        {
+          "id": "rsu",
+          "label": "Ordinary income from the RSUs",
+          "answer": 20000,
+          "explanation": "500 × 40 = **20,000** at settlement."
+        },
+        {
+          "id": "rs",
+          "label": "Ordinary income from the §83(b) election",
+          "answer": 5000,
+          "explanation": "1,000 × 5 = **5,000** at grant."
+        },
+        {
+          "id": "tot",
+          "label": "Total 2025 ordinary compensation income from these events",
+          "answer": 75000,
+          "explanation": "50,000 + 20,000 + 5,000 = **75,000**."
+        },
+        {
+          "id": "dq",
+          "label": "Ordinary income if Dev sells the ISO shares in March 2026 for $30",
+          "answer": 20000,
+          "explanation": "A disqualifying disposition: ordinary income is the lesser of the spread (25,000) or the gain ((30 − 10) × 1,000 = 20,000): **20,000**."
+        }
+      ]
+    }
+  ]
+}

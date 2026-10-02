@@ -1,0 +1,125 @@
+{
+  "id": "tcp-tbs-x2-ubti",
+  "section": "TCP",
+  "unitId": "tcp-u5",
+  "moduleIds": [
+    "tcp-exempt-organizations"
+  ],
+  "pool": "exam",
+  "title": "Unrelated business income — Riverside Arts Center",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Riverside Arts Center is a §501(c)(3) public charity organized as a corporation. Classify each activity, then compute its 2025 unrelated business taxable income and tax.",
+  "exhibits": [
+    {
+      "title": "2025 activities",
+      "content": "1. A gift shop selling donated items, staffed by volunteers: net income $35,000.\n2. A parking lot operated for the public on weekends: gross receipts $60,000, directly connected expenses $20,000.\n3. Dividends on its endowment: $25,000.\n4. Rent from a building it bought with borrowed money and leases to an unrelated business: rent $50,000, directly connected expenses $20,000; average acquisition debt $300,000; average adjusted basis $600,000.\n5. A corporate sponsor's payment that receives only an acknowledgment of its name and logo: $30,000.\n6. Paid advertising in its monthly magazine: income $20,000, direct expenses $12,000 (no readership costs exceed circulation income)."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify each activity.",
+      "rows": [
+        {
+          "id": "a1",
+          "label": "1. Donated-goods gift shop run by volunteers",
+          "options": [
+            "Taxable as UBI",
+            "Excluded from UBTI"
+          ],
+          "answer": "Excluded from UBTI",
+          "explanation": "Sales of donated goods and volunteer-run activities are excluded."
+        },
+        {
+          "id": "a2",
+          "label": "2. Public parking lot",
+          "options": [
+            "Taxable as UBI",
+            "Excluded from UBTI"
+          ],
+          "answer": "Taxable as UBI",
+          "explanation": "Operating a parking lot for the public is a trade or business, not passive rent."
+        },
+        {
+          "id": "a3",
+          "label": "3. Endowment dividends",
+          "options": [
+            "Taxable as UBI",
+            "Excluded from UBTI"
+          ],
+          "answer": "Excluded from UBTI",
+          "explanation": "Dividends are passive income excluded under §512(b)(1)."
+        },
+        {
+          "id": "a4",
+          "label": "4. Debt-financed rental building",
+          "options": [
+            "Taxable as UBI",
+            "Excluded from UBTI"
+          ],
+          "answer": "Taxable as UBI",
+          "explanation": "Debt-financed property income is UBTI in proportion to acquisition debt."
+        },
+        {
+          "id": "a5",
+          "label": "5. Qualified sponsorship payment",
+          "options": [
+            "Taxable as UBI",
+            "Excluded from UBTI"
+          ],
+          "answer": "Excluded from UBTI",
+          "explanation": "Acknowledgment without qualitative advertising is a qualified sponsorship payment."
+        },
+        {
+          "id": "a6",
+          "label": "6. Magazine advertising",
+          "options": [
+            "Taxable as UBI",
+            "Excluded from UBTI"
+          ],
+          "answer": "Taxable as UBI",
+          "explanation": "Selling advertising is an unrelated trade or business."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "u",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "park",
+          "label": "Unrelated business income from the parking lot",
+          "answer": 40000,
+          "explanation": "60,000 − 20,000 = **40,000**."
+        },
+        {
+          "id": "debt",
+          "label": "UBTI from the debt-financed building",
+          "answer": 15000,
+          "explanation": "Debt/basis 300,000 ÷ 600,000 = 50%; 50% × (50,000 − 20,000) = **15,000**."
+        },
+        {
+          "id": "ad",
+          "label": "UBTI from advertising",
+          "answer": 8000,
+          "explanation": "20,000 − 12,000 = **8,000**."
+        },
+        {
+          "id": "ubti",
+          "label": "Total UBTI after the specific deduction",
+          "answer": 62000,
+          "explanation": "40,000 + 15,000 + 8,000 − 1,000 = **62,000**."
+        },
+        {
+          "id": "tax",
+          "label": "Tax on UBTI",
+          "answer": 13020,
+          "explanation": "21% corporate rate × 62,000 = **13,020**; Form 990-T is required."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "tcp-tbs-x2-s-corp-aaa",
+  "section": "TCP",
+  "unitId": "tcp-u5",
+  "moduleIds": [
+    "tcp-s-corp-compliance"
+  ],
+  "pool": "exam",
+  "title": "AAA and distributions — Crane Inc.",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Crane Inc. converted from a C corporation to an S corporation in 2021 and has accumulated E&P of $30,000 from its C years. Its sole shareholder, Mo Crane, has stock basis of $70,000 at January 1, 2025. Crane's AAA at January 1, 2025 is $25,000. Compute the 2025 amounts. No elections are made.",
+  "exhibits": [
+    {
+      "title": "Crane Inc. — 2025",
+      "content": "| Item | Amount |\n|---|---:|\n| Ordinary business income | 80,000 |\n| Tax-exempt interest | 5,000 |\n| Long-term capital gain | 10,000 |\n| Nondeductible fines | 2,000 |\n| Cash distributions to Mo | 120,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "aaa",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "pre",
+          "label": "AAA before distributions",
+          "answer": 113000,
+          "explanation": "25,000 + 80,000 + 10,000 − 2,000 = **113,000**; tax-exempt interest doesn't affect AAA."
+        },
+        {
+          "id": "tf",
+          "label": "Tax-free portion of the distribution",
+          "answer": 113000,
+          "explanation": "Distributions come first from AAA: **113,000**."
+        },
+        {
+          "id": "dv",
+          "label": "Dividend portion of the distribution",
+          "answer": 7000,
+          "explanation": "The next 7,000 comes from accumulated E&P: **7,000** dividend."
+        },
+        {
+          "id": "ep",
+          "label": "Accumulated E&P at December 31",
+          "answer": 23000,
+          "explanation": "30,000 − 7,000 = **23,000**."
+        },
+        {
+          "id": "bas",
+          "label": "Mo's stock basis at December 31",
+          "answer": 50000,
+          "explanation": "70,000 + 80,000 + 5,000 + 10,000 = 165,000; − 113,000 AAA distribution = 52,000; − 2,000 nondeductible fines = **50,000**. The dividend portion doesn't reduce basis."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer the questions.",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Which account tracks Crane's tax-exempt interest?",
+          "options": [
+            "The other adjustments account (OAA)",
+            "AAA",
+            "Accumulated E&P"
+          ],
+          "answer": "The other adjustments account (OAA)",
+          "explanation": "Tax-exempt income increases stock basis and OAA, not AAA."
+        },
+        {
+          "id": "q2",
+          "label": "Why might Crane elect to distribute E&P before AAA?",
+          "options": [
+            "To eliminate E&P and the passive investment income tax and termination risk",
+            "To make distributions tax-free",
+            "To increase the shareholder's stock basis"
+          ],
+          "answer": "To eliminate E&P and the passive investment income tax and termination risk",
+          "explanation": "A §1368(e)(3) election purges accumulated E&P, removing exposure to the §1375 tax and to termination for excess passive income."
+        }
+      ]
+    }
+  ]
+}

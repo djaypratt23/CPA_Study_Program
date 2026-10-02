@@ -1,0 +1,99 @@
+{
+  "id": "tcp-tbs-x1-passive-amt",
+  "section": "TCP",
+  "unitId": "tcp-u1",
+  "moduleIds": [
+    "tcp-passive-rental",
+    "tcp-individual-planning"
+  ],
+  "pool": "exam",
+  "title": "Passive losses and AMT planning — Leah Nakamura",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Leah Nakamura, single, asks for help with her 2025 return and planning. Compute the amounts and answer the planning questions.",
+  "exhibits": [
+    {
+      "title": "Leah's 2025 data",
+      "content": "- Modified AGI for the rental allowance: **$130,000**.\n- Rental house she actively participates in managing: net loss **$30,000**.\n- Limited partnership A (passive): net income **$8,000**.\n- Limited partnership B (passive): net loss **$5,000**.\n- She exercised incentive stock options with a bargain element of **$50,000** and still holds the shares.\n- No prior-year suspended losses."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "pa",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "net",
+          "label": "Net passive loss before the rental allowance",
+          "answer": 27000,
+          "explanation": "8,000 − 5,000 − 30,000 = **27,000** net loss."
+        },
+        {
+          "id": "allow",
+          "label": "Rental real estate special allowance available",
+          "answer": 10000,
+          "explanation": "25,000 − 50% × (130,000 − 100,000) = **10,000**."
+        },
+        {
+          "id": "susp",
+          "label": "Passive loss suspended and carried forward",
+          "answer": 17000,
+          "explanation": "27,000 − 10,000 = **17,000**."
+        },
+        {
+          "id": "reg",
+          "label": "Regular taxable income from the ISO exercise",
+          "answer": 0,
+          "explanation": "Exercising ISOs creates no regular income: **0**."
+        },
+        {
+          "id": "amt",
+          "label": "AMT adjustment from the ISO exercise",
+          "answer": 50000,
+          "explanation": "The bargain element is an AMT adjustment: **50,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "pl",
+      "prompt": "Planning questions.",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "If Leah sells the rental house to an unrelated buyer in 2026 in a taxable sale, the suspended rental losses are:",
+          "options": [
+            "Deductible in full in 2026",
+            "Lost permanently",
+            "Usable only against future passive income"
+          ],
+          "answer": "Deductible in full in 2026",
+          "explanation": "A complete taxable disposition to an unrelated party frees suspended losses (§469(g))."
+        },
+        {
+          "id": "q2",
+          "label": "To reduce AMT from future ISO exercises, Leah should consider:",
+          "options": [
+            "Spreading exercises over several years",
+            "Exercising all remaining options in one year",
+            "Converting the ISOs to nonqualified options after exercise"
+          ],
+          "answer": "Spreading exercises over several years",
+          "explanation": "Spreading exercises keeps each year's AMT adjustment below the level that triggers AMT."
+        },
+        {
+          "id": "q3",
+          "label": "If her MAGI rises to $150,000, the special allowance becomes:",
+          "options": [
+            "$0",
+            "$12,500",
+            "$25,000"
+          ],
+          "answer": "$0",
+          "explanation": "The allowance phases out completely at $150,000 of MAGI."
+        }
+      ]
+    }
+  ]
+}
