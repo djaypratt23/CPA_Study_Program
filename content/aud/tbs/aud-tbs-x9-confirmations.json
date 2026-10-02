@@ -1,0 +1,112 @@
+{
+  "id": "aud-tbs-x9-confirmations",
+  "section": "AUD",
+  "unitId": "aud-u7",
+  "moduleIds": [
+    "aud-revenue-receivables"
+  ],
+  "pool": "exam",
+  "title": "Evaluate confirmation results — Harlow Instruments",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "You sent positive confirmations of December 31 receivable balances for Harlow Instruments. Select the most appropriate response to each result.",
+  "exhibits": [
+    {
+      "title": "Confirmation results",
+      "content": "| Customer | Result |\n|---|---|\n| Adler | Confirms the balance without exception. |\n| Benning | Says $18,000 of the balance is for goods it hadn't received at December 31. Harlow's shipping log shows the goods left the dock on January 3; the sale was recorded December 30. |\n| Carver | Says it mailed a $9,500 check on December 30. Harlow recorded the receipt on January 4. |\n| Dorsey | No response after a second request. |\n| Ellison | Disputes $12,000, saying the goods arrived damaged and a credit was promised. |\n| Fenwick | Confirms the balance, but the reply came from a free personal email address rather than Fenwick's corporate domain. |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "res",
+      "prompt": "Select the response for each confirmation.",
+      "rows": [
+        {
+          "id": "a",
+          "label": "Adler",
+          "options": [
+            "No further action needed",
+            "Timing difference — verify the subsequent receipt",
+            "Cutoff error — propose an adjustment",
+            "Investigate the dispute and evaluate the allowance",
+            "Perform alternative procedures",
+            "Assess the reliability of the response before relying on it"
+          ],
+          "answer": "No further action needed",
+          "explanation": "An agreed confirmation is sufficient evidence for that balance."
+        },
+        {
+          "id": "b",
+          "label": "Benning",
+          "options": [
+            "No further action needed",
+            "Timing difference — verify the subsequent receipt",
+            "Cutoff error — propose an adjustment",
+            "Investigate the dispute and evaluate the allowance",
+            "Perform alternative procedures",
+            "Assess the reliability of the response before relying on it"
+          ],
+          "answer": "Cutoff error — propose an adjustment",
+          "explanation": "Goods shipped January 3 were billed December 30: revenue and receivables are overstated at year-end."
+        },
+        {
+          "id": "c",
+          "label": "Carver",
+          "options": [
+            "No further action needed",
+            "Timing difference — verify the subsequent receipt",
+            "Cutoff error — propose an adjustment",
+            "Investigate the dispute and evaluate the allowance",
+            "Perform alternative procedures",
+            "Assess the reliability of the response before relying on it"
+          ],
+          "answer": "Timing difference — verify the subsequent receipt",
+          "explanation": "A payment in transit is a timing difference; verify it by tracing to the January deposit."
+        },
+        {
+          "id": "d",
+          "label": "Dorsey",
+          "options": [
+            "No further action needed",
+            "Timing difference — verify the subsequent receipt",
+            "Cutoff error — propose an adjustment",
+            "Investigate the dispute and evaluate the allowance",
+            "Perform alternative procedures",
+            "Assess the reliability of the response before relying on it"
+          ],
+          "answer": "Perform alternative procedures",
+          "explanation": "For a nonresponse to a positive confirmation, examine subsequent cash receipts, shipping documents and invoices."
+        },
+        {
+          "id": "e",
+          "label": "Ellison",
+          "options": [
+            "No further action needed",
+            "Timing difference — verify the subsequent receipt",
+            "Cutoff error — propose an adjustment",
+            "Investigate the dispute and evaluate the allowance",
+            "Perform alternative procedures",
+            "Assess the reliability of the response before relying on it"
+          ],
+          "answer": "Investigate the dispute and evaluate the allowance",
+          "explanation": "A disputed amount may require a credit memo or an allowance; investigate with sales and returns records."
+        },
+        {
+          "id": "f",
+          "label": "Fenwick",
+          "options": [
+            "No further action needed",
+            "Timing difference — verify the subsequent receipt",
+            "Cutoff error — propose an adjustment",
+            "Investigate the dispute and evaluate the allowance",
+            "Perform alternative procedures",
+            "Assess the reliability of the response before relying on it"
+          ],
+          "answer": "Assess the reliability of the response before relying on it",
+          "explanation": "A reply from an unexpected source raises doubts about its reliability; verify it, for example by contacting the customer directly."
+        }
+      ]
+    }
+  ]
+}

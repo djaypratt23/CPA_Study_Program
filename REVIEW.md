@@ -42,6 +42,7 @@ exam-pool items that never appear in practice. Please spot-check the new keys an
 | Section | New items | Forms |
 |---|---|---|
 | FAR | MCQs `far-x1-19`–`36`, `far-x2-18`–`34`, `far-x3-16`–`30`; TBS `far-tbs-x1-eps`, `far-tbs-x2-receivables-inventory`, `far-tbs-x3-income-taxes`, `far-tbs-x1-government`, `far-tbs-x1-statement-review`, `far-tbs-x2-equity`, `far-tbs-x3-operating-lease` | `far-mock-2`, `far-mock-3` |
+| AUD | MCQs `aud-x1-17`–`32`, `aud-x2-24`–`46`, `aud-x3-28`–`54`, `aud-x4-13`–`24`; TBS `aud-tbs-x8-materiality`, `aud-tbs-x9-confirmations`, `aud-tbs-x10-single-audit`, `aud-tbs-x11-acceptance-quality`, `aud-tbs-x12-control-deviations`, `aud-tbs-x13-subsequent-events`, `aud-tbs-x14-engagement-types` | `aud-mock-2`, `aud-mock-3` |
 
 ## REG/TCP re-scope (decision D1) — new content to confirm
 

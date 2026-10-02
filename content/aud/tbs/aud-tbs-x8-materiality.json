@@ -1,0 +1,129 @@
+{
+  "id": "aud-tbs-x8-materiality",
+  "section": "AUD",
+  "unitId": "aud-u3",
+  "moduleIds": [
+    "aud-risk-materiality"
+  ],
+  "pool": "exam",
+  "title": "Materiality and misstatements — Brightwater Foods",
+  "minutes": 25,
+  "skill": "evaluation",
+  "instructions": "You are the senior on the audit of Brightwater Foods, a private company. Compute the materiality amounts, classify the misstatements identified, and evaluate them.",
+  "exhibits": [
+    {
+      "title": "Planning decisions",
+      "content": "- Benchmark: **5%** of pretax income from continuing operations of **$3,200,000**.\n- Performance materiality: **70%** of materiality.\n- Clearly trivial threshold: **5%** of materiality."
+    },
+    {
+      "title": "Misstatements identified (all uncorrected)",
+      "content": "1. An invoice for December repairs of **$45,000** was not recorded.\n2. A sample of inventory price tests projects an overstatement of **$60,000** for the population.\n3. Management's warranty reserve is **$200,000**; the auditor's supportable range is **$230,000–$260,000**.\n4. A **$5,000** expense was recorded in the wrong expense account."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "mat",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "m",
+          "label": "Materiality for the financial statements as a whole",
+          "answer": 160000,
+          "explanation": "5% × 3,200,000 = **160,000**."
+        },
+        {
+          "id": "pm",
+          "label": "Performance materiality",
+          "answer": 112000,
+          "explanation": "70% × 160,000 = **112,000**."
+        },
+        {
+          "id": "ct",
+          "label": "Clearly trivial threshold",
+          "answer": 8000,
+          "explanation": "5% × 160,000 = **8,000**."
+        },
+        {
+          "id": "war",
+          "label": "Misstatement in the warranty reserve",
+          "answer": 30000,
+          "explanation": "Management's estimate is outside the auditor's range; the misstatement is measured to the nearest end of the range: 230,000 − 200,000 = **30,000** (understated)."
+        },
+        {
+          "id": "agg",
+          "label": "Aggregate uncorrected misstatements to evaluate",
+          "answer": 135000,
+          "explanation": "45,000 + 60,000 + 30,000 = **135,000**; the 5,000 classification error is below the clearly trivial threshold."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify each misstatement and conclude.",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "1. Unrecorded repair invoice",
+          "options": [
+            "Factual",
+            "Judgmental",
+            "Projected",
+            "Clearly trivial — not accumulated"
+          ],
+          "answer": "Factual",
+          "explanation": "A misstatement about which there is no doubt: **factual**."
+        },
+        {
+          "id": "c2",
+          "label": "2. Inventory pricing projection",
+          "options": [
+            "Factual",
+            "Judgmental",
+            "Projected",
+            "Clearly trivial — not accumulated"
+          ],
+          "answer": "Projected",
+          "explanation": "The auditor's best estimate of misstatement in the population from a sample: **projected**."
+        },
+        {
+          "id": "c3",
+          "label": "3. Warranty reserve",
+          "options": [
+            "Factual",
+            "Judgmental",
+            "Projected",
+            "Clearly trivial — not accumulated"
+          ],
+          "answer": "Judgmental",
+          "explanation": "Differences in estimates the auditor considers unreasonable: **judgmental**."
+        },
+        {
+          "id": "c4",
+          "label": "4. $5,000 classification error",
+          "options": [
+            "Factual",
+            "Judgmental",
+            "Projected",
+            "Clearly trivial — not accumulated"
+          ],
+          "answer": "Clearly trivial — not accumulated",
+          "explanation": "Below the 8,000 threshold: **clearly trivial**."
+        },
+        {
+          "id": "c5",
+          "label": "Effect if management declines to correct the misstatements",
+          "options": [
+            "Unmodified; communicate them to governance and obtain a representation",
+            "Qualified, because the total exceeds performance materiality",
+            "Adverse, because some of the misstatements are only judgmental",
+            "Disclaimer, because the projected misstatements remain uncertain"
+          ],
+          "answer": "Unmodified; communicate them to governance and obtain a representation",
+          "explanation": "Aggregate uncorrected misstatements of 135,000 are below materiality of 160,000 (with no qualitative factors noted), so the opinion is unmodified. AU-C 450 requires communicating uncorrected misstatements and obtaining management's representation that their effects are immaterial."
+        }
+      ]
+    }
+  ]
+}

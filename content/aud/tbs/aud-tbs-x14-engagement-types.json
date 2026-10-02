@@ -1,0 +1,151 @@
+{
+  "id": "aud-tbs-x14-engagement-types",
+  "section": "AUD",
+  "unitId": "aud-u10",
+  "moduleIds": [
+    "aud-ssars",
+    "aud-attestation"
+  ],
+  "pool": "exam",
+  "title": "Choosing the engagement — five clients",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Each client is a private company. Select the engagement that fits each request, then indicate whether each procedure is required in a review of financial statements.",
+  "exhibits": [
+    {
+      "title": "Client requests",
+      "content": "1. A start-up wants its accountant to prepare its financial statements for internal use; it wants no report, and the accountant isn't independent.\n2. A lender requires limited assurance on the borrower's annual financial statements.\n3. A landlord will receive the tenant's statements; the tenant wants a report but no assurance, and the accountant isn't independent.\n4. A licensor wants the accountant to perform specified procedures on the licensee's royalty calculations and report the findings.\n5. A manufacturer wants an opinion on its statement of greenhouse gas emissions."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "eng",
+      "prompt": "Select the engagement.",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "1. Internal-use statements, no report",
+          "options": [
+            "Preparation engagement (AR-C 70)",
+            "Compilation (AR-C 80)",
+            "Review of financial statements (AR-C 90)",
+            "Examination (AT-C 205)",
+            "Agreed-upon procedures (AT-C 215)"
+          ],
+          "answer": "Preparation engagement (AR-C 70)",
+          "explanation": "A preparation engagement requires no report and no independence; each page states that no assurance is provided."
+        },
+        {
+          "id": "c2",
+          "label": "2. Lender wants limited assurance",
+          "options": [
+            "Preparation engagement (AR-C 70)",
+            "Compilation (AR-C 80)",
+            "Review of financial statements (AR-C 90)",
+            "Examination (AT-C 205)",
+            "Agreed-upon procedures (AT-C 215)"
+          ],
+          "answer": "Review of financial statements (AR-C 90)",
+          "explanation": "A review provides limited assurance and requires independence."
+        },
+        {
+          "id": "c3",
+          "label": "3. Report with no assurance",
+          "options": [
+            "Preparation engagement (AR-C 70)",
+            "Compilation (AR-C 80)",
+            "Review of financial statements (AR-C 90)",
+            "Examination (AT-C 205)",
+            "Agreed-upon procedures (AT-C 215)"
+          ],
+          "answer": "Compilation (AR-C 80)",
+          "explanation": "A compilation report provides no assurance; lack of independence is disclosed."
+        },
+        {
+          "id": "c4",
+          "label": "4. Findings on specified procedures",
+          "options": [
+            "Preparation engagement (AR-C 70)",
+            "Compilation (AR-C 80)",
+            "Review of financial statements (AR-C 90)",
+            "Examination (AT-C 205)",
+            "Agreed-upon procedures (AT-C 215)"
+          ],
+          "answer": "Agreed-upon procedures (AT-C 215)",
+          "explanation": "The practitioner reports findings from procedures agreed with the engaging party."
+        },
+        {
+          "id": "c5",
+          "label": "5. Opinion on emissions statement",
+          "options": [
+            "Preparation engagement (AR-C 70)",
+            "Compilation (AR-C 80)",
+            "Review of financial statements (AR-C 90)",
+            "Examination (AT-C 205)",
+            "Agreed-upon procedures (AT-C 215)"
+          ],
+          "answer": "Examination (AT-C 205)",
+          "explanation": "An examination provides reasonable assurance and an opinion on subject matter other than historical statements."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "rev",
+      "prompt": "In a review of financial statements under AR-C 90, is each procedure required?",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Inquiries of management",
+          "options": [
+            "Required",
+            "Not required"
+          ],
+          "answer": "Required",
+          "explanation": "Inquiry and analytical procedures are the primary review procedures."
+        },
+        {
+          "id": "r2",
+          "label": "Analytical procedures",
+          "options": [
+            "Required",
+            "Not required"
+          ],
+          "answer": "Required",
+          "explanation": "Required to obtain limited assurance."
+        },
+        {
+          "id": "r3",
+          "label": "Written representations from management",
+          "options": [
+            "Required",
+            "Not required"
+          ],
+          "answer": "Required",
+          "explanation": "AR-C 90 requires a representation letter."
+        },
+        {
+          "id": "r4",
+          "label": "Tests of the operating effectiveness of controls",
+          "options": [
+            "Required",
+            "Not required"
+          ],
+          "answer": "Not required",
+          "explanation": "A review doesn't involve obtaining an understanding of, or testing, internal control."
+        },
+        {
+          "id": "r5",
+          "label": "Confirmation of receivables",
+          "options": [
+            "Required",
+            "Not required"
+          ],
+          "answer": "Not required",
+          "explanation": "Confirmations are audit procedures, not required in a review."
+        }
+      ]
+    }
+  ]
+}
