@@ -51,7 +51,7 @@ areas:
           - { id: reg-agency, title: 'Agency' }
           - { id: reg-contracts, title: 'Contracts' }
           - { id: reg-debtor-creditor, title: 'Debtor-creditor relationships, secured transactions & bankruptcy' }
-          - { id: reg-federal-regulation, title: 'Federal employment & securities regulation' }
+          - { id: reg-federal-regulation, title: 'Federal laws: employment tax, health plans, worker classification & FCPA' }
           - { id: reg-business-structures, title: 'Business structures' }
   - id: REG-III
     title: 'Area III: Federal Taxation of Property Transactions'
@@ -61,8 +61,9 @@ areas:
         title: Property Transactions
         modules:
           - { id: reg-property-basis, title: 'Basis of property & gain or loss' }
-          - { id: reg-capital-gains, title: 'Capital gains & losses, §1231 & recapture' }
-          - { id: reg-nontaxable-exchanges, title: 'Like-kind exchanges, involuntary conversions & related-party rules' }
+          - { id: reg-cost-recovery, title: 'Cost recovery: MACRS, §179, bonus & amortization' }
+          - { id: reg-capital-gains, title: 'Capital gains & losses (§1231 and recapture are TCP)' }
+          - { id: reg-nontaxable-exchanges, title: 'Home-sale exclusion (like-kind and §1033 are TCP)' }
   - id: REG-IV
     title: 'Area IV: Federal Taxation of Individuals'
     allocation: { min: 22, max: 32 }
@@ -88,11 +89,12 @@ areas:
         title: Corporations
         modules:
           - { id: reg-c-corp-income, title: 'C corporation taxable income & book-tax reconciliation' }
-          - { id: reg-corp-distributions, title: 'E&P and corporate distributions' }
-          - { id: reg-corp-formation-liquidation, title: 'Formation (§351), redemptions & liquidations' }
+          - { id: reg-state-local-tax, title: 'State and local taxation: nexus & apportionment' }
+          - { id: reg-corp-distributions, title: 'E&P and corporate distributions', optional: true }
+          - { id: reg-corp-formation-liquidation, title: 'Formation (§351), redemptions & liquidations', optional: true }
       - id: reg-u7
         title: Flow-Through & Other Entities
         modules:
           - { id: reg-partnerships, title: 'Partnerships: formation, operations & basis' }
           - { id: reg-s-corporations, title: 'S corporations' }
-          - { id: reg-trusts-exempt, title: 'Trusts, estates & tax-exempt organizations (overview)' }
+          - { id: reg-trusts-exempt, title: 'Tax-exempt organizations (trusts, estates & gift tax are TCP)' }

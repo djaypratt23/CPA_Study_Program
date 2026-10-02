@@ -292,10 +292,12 @@ export function buildContent(files: RawFiles): BuildResult {
           if (!q) errors.push(`exam ${ex.id}: question ${id} not found`)
           else if (q.pool !== 'exam') errors.push(`exam ${ex.id}: question ${id} should be exam-pool`)
           else if (q.optional || moduleIndex.get(q.moduleId)?.optional) errors.push(`exam ${ex.id}: question ${id} is outside the Blueprint (optional) and should not be on a mock`)
+          else if (moduleIndex.get(q.moduleId)?.section !== ex.section) errors.push(`exam ${ex.id}: question ${id} belongs to ${moduleIndex.get(q.moduleId)?.section}, not ${ex.section}`)
         } else {
           const tb = bundle.tbs[id]
           if (!tb) errors.push(`exam ${ex.id}: TBS ${id} not found`)
           else if (tb.pool !== 'exam') errors.push(`exam ${ex.id}: TBS ${id} should be exam-pool`)
+          else if (tb.section !== ex.section) errors.push(`exam ${ex.id}: TBS ${id} belongs to ${tb.section}, not ${ex.section}`)
         }
       }
     })

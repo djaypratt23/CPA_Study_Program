@@ -386,40 +386,6 @@
     "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials."
   },
   {
-    "id": "tcp-cr2-09",
-    "pool": "practice",
-    "stem": "A profitable business in the 21% bracket expects to be subject to much higher effective rates in 3 years. It buys equipment eligible for 100% bonus. What should it consider?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "Always take 100% bonus to get the deduction now",
-        "explanation": "Timing of deductions has value, but the rate matters.",
-        "trap": "overgeneralization"
-      },
-      {
-        "id": "b",
-        "text": "Deducting nothing now or later on the equipment",
-        "explanation": "Depreciation can't be forgone like that.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "c",
-        "text": "Electing out, so depreciation falls in high-rate years",
-        "explanation": "Correct. Deferring deductions can increase their value when future rates are higher — compare the present value of the tax saved."
-      },
-      {
-        "id": "d",
-        "text": "Treating the equipment as inventory held for sale",
-        "explanation": "Equipment used in the business isn't inventory.",
-        "trap": "wrong-rule"
-      }
-    ],
-    "answer": "c",
-    "explanation": "Deferring deductions can increase their value when future rates are higher — compare the present value of the tax saved.",
-    "skill": "application",
-    "difficulty": 2
-  },
-  {
     "id": "tcp-cr2-10",
     "pool": "practice",
     "stem": "Which statement correctly contrasts §179 with bonus depreciation?",
@@ -452,5 +418,215 @@
     "explanation": "§179 offers asset-by-asset flexibility within dollar and income limits; bonus is class-wide and unlimited.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "reg-dep-01",
+    "pool": "practice",
+    "stem": "A company placed 7-year equipment costing $100,000 in service in March 2024. It took no §179 or bonus depreciation, and the half-year convention applied. MACRS rates for 7-year property (half-year): 14.29%, 24.49%, 17.49%. What is the 2025 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$14,290",
+        "explanation": "That is the first-year rate.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$28,571",
+        "explanation": "That is 200% declining balance on full cost with no convention.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$24,490",
+        "explanation": "Correct. 2025 is the second recovery year: 24.49% × 100,000."
+      },
+      {
+        "id": "d",
+        "text": "$12,245",
+        "explanation": "The half-year convention affects only the first and last years.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The table rates already build in the half-year convention; year 2 uses 24.49% × $100,000 = $24,490.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-dep-02",
+    "pool": "practice",
+    "stem": "In November 2025 a calendar-year business places $200,000 of 5-year equipment in service — its only depreciable personal property for the year. No §179 or bonus is taken. The first-year rate for 5-year property is 20% (half-year) and 5% (mid-quarter, fourth quarter). What is the 2025 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Correct. All of the year's personal property was placed in service in Q4, so the mid-quarter convention applies: 5% × 200,000."
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "The half-year convention is unavailable when more than 40% is placed in service in Q4.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$80,000",
+        "explanation": "That is a full year of 200% declining balance with no convention.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$ 6,667",
+        "explanation": "MACRS doesn't prorate by month for personal property.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "More than 40% of the year's depreciable personal property was placed in service in the last quarter, so the mid-quarter convention applies: 5% × $200,000 = $10,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-dep-03",
+    "pool": "practice",
+    "stem": "In July 2025 an investor places a residential rental building in service. Its cost is $400,000, including $70,000 for the land. What is the 2025 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,000",
+        "explanation": "July counts as half a month under the mid-month convention, so 5.5 months, not 6.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$6,667",
+        "explanation": "That includes the $70,000 of land, which isn't depreciable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$4,231",
+        "explanation": "That uses 39 years, the life for nonresidential real property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$5,500",
+        "explanation": "Correct. (400,000 − 70,000) ÷ 27.5 = 12,000 a year; mid-month gives 5.5 months: 12,000 × 5.5 ÷ 12."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Residential rental: 27.5 years, straight-line, mid-month. Basis $330,000 ÷ 27.5 = $12,000; × 5.5/12 = $5,500.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-dep-04",
+    "pool": "practice",
+    "stem": "For 2025 the §179 limit is $2,500,000, reduced dollar for dollar once qualifying property placed in service exceeds $4,000,000. A business places $4,600,000 of qualifying equipment in service and has ample business income. What is its maximum §179 deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,500,000",
+        "explanation": "The limit is reduced by the $600,000 excess over the threshold.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$1,900,000",
+        "explanation": "Correct. 2,500,000 − (4,600,000 − 4,000,000) = 1,900,000."
+      },
+      {
+        "id": "c",
+        "text": "$  600,000",
+        "explanation": "That is the reduction, not the remaining limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$1,500,000",
+        "explanation": "Subtracting the limit from the threshold isn't the phase-out rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The $2,500,000 limit is reduced by purchases above $4,000,000: $2,500,000 − $600,000 = $1,900,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-dep-05",
+    "pool": "practice",
+    "stem": "A company placed 7-year equipment costing $50,000 in service in 2023 (half-year convention; no §179 or bonus) and sold it in 2025. The year-3 rate is 17.49%. What depreciation is allowed for 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,745",
+        "explanation": "A disposal year allows only half a year under the half-year convention.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$     0",
+        "explanation": "Depreciation is allowed in the year of sale, for half a year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$4,373",
+        "explanation": "Correct. In the year of disposition the half-year convention allows half of the year-3 amount: 17.49% × 50,000 × ½."
+      },
+      {
+        "id": "d",
+        "text": "$6,123",
+        "explanation": "That halves the year-2 rate instead of the year-3 rate.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under the half-year convention, the year of disposition gets half a year: 17.49% × $50,000 × ½ = $4,373.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-dep-06",
+    "pool": "practice",
+    "stem": "You are reviewing a 2025 depreciation schedule. The client placed $250,000 of 7-year equipment in service in March and $250,000 in November (no other personal property; no §179 or bonus). The preparer used the half-year rate of 14.29% on all $500,000. Mid-quarter first-year rates for 7-year property are Q1 25.00%, Q3 10.71% and Q4 3.57%. What is the correct 2025 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$71,450",
+        "explanation": "That is the preparer's half-year figure; mid-quarter is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$62,500",
+        "explanation": "The November equipment also gets a (small) first-year deduction.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$89,275",
+        "explanation": "That uses the third-quarter rate for the November assets.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$71,425",
+        "explanation": "Correct. 50% of the year's personal property was placed in service in Q4, so mid-quarter applies: 25% × 250,000 + 3.57% × 250,000 = 62,500 + 8,925."
+      }
+    ],
+    "answer": "d",
+    "explanation": "More than 40% (here 50%) of the year's personal property was placed in service in Q4, so every 2025 personal-property asset uses the mid-quarter rate for its quarter: $62,500 + $8,925 = $71,425.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

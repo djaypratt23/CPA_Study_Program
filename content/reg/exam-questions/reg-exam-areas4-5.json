@@ -283,42 +283,6 @@
     "difficulty": 2
   },
   {
-    "id": "reg-x4-09",
-    "moduleId": "reg-business-rental-income",
-    "pool": "exam",
-    "stem": "A single taxpayer with MAGI of $130,000 actively participates in a rental with a $20,000 loss and has no passive income. How much is deductible?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "$20,000",
-        "explanation": "The allowance is reduced.",
-        "trap": "overgeneralization"
-      },
-      {
-        "id": "b",
-        "text": "$15,000",
-        "explanation": "Miscomputes the phase-out.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "c",
-        "text": "None ($0)",
-        "explanation": "The allowance isn't fully phased out.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "d",
-        "text": "$10,000",
-        "explanation": "Correct. $25,000 − 50% × $30,000."
-      }
-    ],
-    "answer": "d",
-    "explanation": "Allowance = 25,000 − 15,000 = 10,000.",
-    "skill": "application",
-    "difficulty": 2,
-    "calc": true
-  },
-  {
     "id": "reg-x4-10",
     "moduleId": "reg-business-rental-income",
     "pool": "exam",
@@ -677,41 +641,6 @@
     "calc": true
   },
   {
-    "id": "reg-x4-20",
-    "moduleId": "reg-amt-other-taxes",
-    "pool": "exam",
-    "stem": "Which item is a tax preference or adjustment for individual AMT?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "Interest on private activity bonds",
-        "explanation": "Correct. Private activity bond interest is an AMT preference."
-      },
-      {
-        "id": "b",
-        "text": "Charitable contributions",
-        "explanation": "Charity is allowed for AMT.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "c",
-        "text": "Qualified residence acquisition interest",
-        "explanation": "Acquisition interest is allowed for AMT.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "d",
-        "text": "Medical expenses above 7.5% of AGI",
-        "explanation": "Allowed at the same floor for AMT.",
-        "trap": "wrong-rule"
-      }
-    ],
-    "answer": "a",
-    "explanation": "Private activity bond interest is an AMT preference.",
-    "skill": "remembering",
-    "difficulty": 2
-  },
-  {
     "id": "reg-x5-01",
     "moduleId": "reg-c-corp-income",
     "pool": "exam",
@@ -889,219 +818,6 @@
     "difficulty": 2
   },
   {
-    "id": "reg-x5-06",
-    "moduleId": "reg-corp-distributions",
-    "pool": "exam",
-    "stem": "A corporation has accumulated E&P of $10,000 and current E&P of $25,000. It distributes $50,000 to its sole shareholder (basis $40,000). What is the dividend?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "$50,000",
-        "explanation": "Limited to total E&P.",
-        "trap": "overgeneralization"
-      },
-      {
-        "id": "b",
-        "text": "$25,000",
-        "explanation": "Accumulated E&P also counts.",
-        "trap": "partial-computation"
-      },
-      {
-        "id": "c",
-        "text": "$35,000",
-        "explanation": "Correct. Dividend = 25,000 current + 10,000 accumulated = 35,000; 15,000 reduces basis."
-      },
-      {
-        "id": "d",
-        "text": "$10,000",
-        "explanation": "Current E&P comes first.",
-        "trap": "partial-computation"
-      }
-    ],
-    "answer": "c",
-    "explanation": "Dividend = 25,000 current + 10,000 accumulated = 35,000; 15,000 reduces basis.",
-    "skill": "application",
-    "difficulty": 2,
-    "calc": true
-  },
-  {
-    "id": "reg-x5-07",
-    "moduleId": "reg-corp-distributions",
-    "pool": "exam",
-    "stem": "A corporation distributes land (FMV $60,000; basis $20,000) to a shareholder. What gain does the corporation recognize?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "None ($0)",
-        "explanation": "Gain is recognized on appreciated property.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "b",
-        "text": "$20,000",
-        "explanation": "That's the property's basis, not the gain.",
-        "trap": "distractor-number"
-      },
-      {
-        "id": "c",
-        "text": "$60,000",
-        "explanation": "Gain is FMV − basis.",
-        "trap": "overgeneralization"
-      },
-      {
-        "id": "d",
-        "text": "$40,000",
-        "explanation": "Correct. §311(b): recognize gain as if sold."
-      }
-    ],
-    "answer": "d",
-    "explanation": "§311(b): recognize gain as if sold.",
-    "skill": "application",
-    "difficulty": 2,
-    "calc": true
-  },
-  {
-    "id": "reg-x5-08",
-    "moduleId": "reg-corp-distributions",
-    "pool": "exam",
-    "stem": "Which is most likely treated as a constructive dividend?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "Reasonable salary paid to a shareholder-employee",
-        "explanation": "Deductible compensation.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "b",
-        "text": "A corporation's payment of a shareholder's personal vacation",
-        "explanation": "Correct. Payments of shareholders' personal expenses are constructive dividends."
-      },
-      {
-        "id": "c",
-        "text": "Repayment of a bona fide loan from a shareholder",
-        "explanation": "Loan repayment isn't a dividend.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "d",
-        "text": "Rent paid to a shareholder at fair market rates",
-        "explanation": "Deductible rent.",
-        "trap": "wrong-rule"
-      }
-    ],
-    "answer": "b",
-    "explanation": "Payments of shareholders' personal expenses are constructive dividends.",
-    "skill": "application",
-    "difficulty": 2
-  },
-  {
-    "id": "reg-x5-09",
-    "moduleId": "reg-corp-formation-liquidation",
-    "pool": "exam",
-    "stem": "In a §351 exchange, a shareholder transfers property (basis $60,000; FMV $100,000) for stock worth $90,000 and $10,000 cash. What is her stock basis?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "$60,000",
-        "explanation": "Correct. $60,000 + $10,000 gain − $10,000 cash."
-      },
-      {
-        "id": "b",
-        "text": "$90,000",
-        "explanation": "FMV isn't used.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "c",
-        "text": "$50,000",
-        "explanation": "Omits the gain recognized.",
-        "trap": "partial-computation"
-      },
-      {
-        "id": "d",
-        "text": "$70,000",
-        "explanation": "Omits the boot reduction.",
-        "trap": "partial-computation"
-      }
-    ],
-    "answer": "a",
-    "explanation": "Gain = min(40,000, 10,000) = 10,000; basis = 60,000 + 10,000 − 10,000.",
-    "skill": "application",
-    "difficulty": 2,
-    "calc": true
-  },
-  {
-    "id": "reg-x5-10",
-    "moduleId": "reg-corp-formation-liquidation",
-    "pool": "exam",
-    "stem": "A shareholder owns 30% of a corporation; after a redemption she owns 20%. No attribution applies. Is the redemption substantially disproportionate?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "Yes; she owns under 50% and under 80% of 30%",
-        "explanation": "Correct. 20% < 50% and 20% < 24% (80% × 30%)."
-      },
-      {
-        "id": "b",
-        "text": "No, because she still owns some stock",
-        "explanation": "Complete termination isn't required for this test.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "c",
-        "text": "No, because she must own less than 10%",
-        "explanation": "That isn't the test.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "d",
-        "text": "Yes, because any redemption qualifies",
-        "explanation": "Not every redemption qualifies.",
-        "trap": "overgeneralization"
-      }
-    ],
-    "answer": "a",
-    "explanation": "20% < 50% and 20% < 24% (80% × 30%).",
-    "skill": "application",
-    "difficulty": 2
-  },
-  {
-    "id": "reg-x5-11",
-    "moduleId": "reg-corp-formation-liquidation",
-    "pool": "exam",
-    "stem": "A parent corporation owning 100% of a subsidiary receives the subsidiary's assets in a complete liquidation. What is the parent's basis in those assets?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "Fair market value",
-        "explanation": "Carryover basis applies under §334(b).",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "b",
-        "text": "Carryover basis",
-        "explanation": "Correct. §332/§334(b): no gain or loss; carryover basis."
-      },
-      {
-        "id": "c",
-        "text": "The parent's stock basis",
-        "explanation": "Stock basis disappears.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "d",
-        "text": "Zero basis",
-        "explanation": "The parent takes the subsidiary's basis.",
-        "trap": "wrong-rule"
-      }
-    ],
-    "answer": "b",
-    "explanation": "§332/§334(b): no gain or loss; carryover basis.",
-    "skill": "remembering",
-    "difficulty": 2
-  },
-  {
     "id": "reg-x5-12",
     "moduleId": "reg-partnerships",
     "pool": "exam",
@@ -1171,42 +887,6 @@
     "explanation": "Ordinary operating expenses net into ordinary business income.",
     "skill": "remembering",
     "difficulty": 2
-  },
-  {
-    "id": "reg-x5-14",
-    "moduleId": "reg-partnerships",
-    "pool": "exam",
-    "stem": "A partner with a $15,000 basis receives a current distribution of $5,000 cash and inventory with a partnership basis of $12,000. What is her basis in the inventory?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "$12,000",
-        "explanation": "Limited by remaining outside basis.",
-        "trap": "overgeneralization"
-      },
-      {
-        "id": "b",
-        "text": "$10,000",
-        "explanation": "Correct. $15,000 − $5,000 cash."
-      },
-      {
-        "id": "c",
-        "text": "None ($0)",
-        "explanation": "Outside basis remains after the cash distribution.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "d",
-        "text": "$17,000",
-        "explanation": "Adds instead of limiting.",
-        "trap": "wrong-sign"
-      }
-    ],
-    "answer": "b",
-    "explanation": "Cash first reduces basis to 10,000; inventory takes the lesser of 12,000 or 10,000.",
-    "skill": "application",
-    "difficulty": 2,
-    "calc": true
   },
   {
     "id": "reg-x5-15",
@@ -1350,73 +1030,396 @@
     "difficulty": 2
   },
   {
-    "id": "reg-x5-19",
-    "moduleId": "reg-trusts-exempt",
+    "id": "tcp-x2-01",
+    "moduleId": "reg-c-corp-income",
     "pool": "exam",
-    "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A donor gives $30,000 to a friend in 2025 and pays $12,000 directly to a hospital for the friend's surgery. What is the taxable gift?",
+    "stem": "Which item is added to book income on Schedule M-1?",
     "choices": [
       {
         "id": "a",
-        "text": "$23,000",
-        "explanation": "Medical payments made directly are excluded.",
-        "trap": "partial-computation"
+        "text": "Tax depreciation in excess of book depreciation",
+        "explanation": "It is subtracted.",
+        "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "$11,000",
-        "explanation": "Correct. $30,000 − $19,000."
+        "text": "Life insurance proceeds received on a key officer",
+        "explanation": "Nontaxable proceeds are subtracted.",
+        "trap": "reversed"
       },
       {
         "id": "c",
-        "text": "$42,000",
-        "explanation": "Exclusions apply.",
-        "trap": "overgeneralization"
+        "text": "Charitable contributions in excess of the 10% limit",
+        "explanation": "Correct. Excess charitable contributions are book expenses not deducted."
       },
       {
         "id": "d",
-        "text": "None ($0)",
-        "explanation": "The cash gift exceeds the exclusion.",
-        "trap": "wrong-rule"
+        "text": "Interest received on municipal bonds held",
+        "explanation": "It is subtracted.",
+        "trap": "reversed"
       }
     ],
-    "answer": "b",
-    "explanation": "Direct medical payments are excluded; the cash gift exceeds the $19,000 exclusion by $11,000.",
+    "answer": "c",
+    "explanation": "Excess charitable contributions are book expenses not deducted.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-02",
+    "moduleId": "reg-c-corp-income",
+    "pool": "exam",
+    "stem": "Book income is $300,000, including $66,000 of federal income tax expense and a $10,000 net capital loss. What is taxable income before special deductions (no other differences)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$376,000",
+        "explanation": "Correct. 300,000 + 66,000 + 10,000."
+      },
+      {
+        "id": "b",
+        "text": "$366,000",
+        "explanation": "Omits the capital loss add-back.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$310,000",
+        "explanation": "Omits the tax expense.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$224,000",
+        "explanation": "Subtracts the add-backs.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "300,000 + 66,000 + 10,000.",
     "skill": "application",
     "difficulty": 2,
     "calc": true
   },
   {
-    "id": "reg-x5-20",
-    "moduleId": "reg-trusts-exempt",
+    "id": "tcp-x2-23",
+    "moduleId": "reg-c-corp-income",
     "pool": "exam",
-    "stem": "Which income of a 501(c)(3) organization is most likely UBTI?",
+    "stem": "A corporation's Schedule M-2 shows beginning retained earnings of $400,000, net income per books of $120,000, and cash distributions of $50,000. It also recorded a $10,000 prior-period adjustment increasing retained earnings. What is ending retained earnings?",
     "choices": [
       {
         "id": "a",
-        "text": "Dividends on endowment investments",
-        "explanation": "Passive income is excluded.",
-        "trap": "wrong-rule"
+        "text": "$480,000",
+        "explanation": "Correct. 400,000 + 120,000 + 10,000 − 50,000."
       },
       {
         "id": "b",
-        "text": "Income from a commercial parking garage it regularly runs",
-        "explanation": "Correct. A regularly carried-on, unrelated trade or business produces UBTI."
+        "text": "$470,000",
+        "explanation": "Omits the adjustment.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "Sales of donated goods in its thrift shop",
-        "explanation": "Donated goods sales are excluded.",
+        "text": "$520,000",
+        "explanation": "Omits distributions.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$460,000",
+        "explanation": "Subtracts the adjustment.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "400,000 + 120,000 + 10,000 − 50,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x4-21",
+    "moduleId": "reg-amt-other-taxes",
+    "pool": "exam",
+    "stem": "A single taxpayer has 2025 modified AGI of $260,000, including $30,000 of net investment income. What is her net investment income tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,140",
+        "explanation": "Correct. 3.8% × the lesser of NII (30,000) or MAGI over $200,000 (60,000)."
+      },
+      {
+        "id": "b",
+        "text": "$2,280",
+        "explanation": "That applies 3.8% to the 60,000 excess of MAGI over the threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$9,880",
+        "explanation": "That applies 3.8% to all of MAGI.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Proceeds of an annual volunteer-run bake sale",
-        "explanation": "The volunteer exception applies.",
+        "text": "$  270",
+        "explanation": "0.9% is the additional Medicare tax rate, not the NIIT rate.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "NIIT = 3.8% × the lesser of net investment income or MAGI above $200,000 (single): 3.8% × $30,000 = $1,140.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x4-22",
+    "moduleId": "reg-amt-other-taxes",
+    "pool": "exam",
+    "stem": "A taxpayer's 2024 AGI was $180,000 and his 2024 tax was $30,000. His 2025 tax is expected to be $40,000. What is the minimum he must pay through withholding and timely estimates to avoid an underpayment penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "100% of prior-year tax is enough only if prior-year AGI was $150,000 or less.",
         "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$36,000",
+        "explanation": "90% of current-year tax works but isn't the minimum here.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$33,000",
+        "explanation": "Correct. Prior-year AGI over $150,000 requires 110% of prior-year tax (33,000), which is less than 90% of current-year tax (36,000)."
+      },
+      {
+        "id": "d",
+        "text": "$40,000",
+        "explanation": "Paying 100% of current-year tax isn't required.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Safe harbor: the lesser of 90% of current-year tax or 100% of prior-year tax (110% when prior-year AGI exceeded $150,000). Lesser of $36,000 and $33,000 = $33,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-21",
+    "moduleId": "reg-partnerships",
+    "pool": "exam",
+    "stem": "Cove Partners reports: revenue $500,000; operating expenses $300,000; guaranteed payments to a partner $60,000; net §1231 gain $20,000; charitable contributions $5,000. What is Cove's ordinary business income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$155,000",
+        "explanation": "That nets the separately stated §1231 gain and charity into ordinary income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$140,000",
+        "explanation": "Correct. 500,000 − 300,000 − 60,000 = 140,000; the §1231 gain and charity are separately stated."
+      },
+      {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "Guaranteed payments are deductible in computing ordinary income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$135,000",
+        "explanation": "Charitable contributions are separately stated, not deducted.",
+        "trap": "wrong-classification"
       }
     ],
     "answer": "b",
-    "explanation": "A regularly carried-on, unrelated trade or business produces UBTI.",
+    "explanation": "Guaranteed payments are deducted in computing ordinary business income; §1231 gains and charitable contributions are separately stated.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-22",
+    "moduleId": "reg-s-corporations",
+    "pool": "exam",
+    "stem": "An S corporation shareholder's stock basis at January 1, 2025 is $20,000. Her 2025 share of items: ordinary business income $30,000; tax-exempt interest $2,000; cash distribution $10,000. What is her stock basis at December 31, 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Tax-exempt income also increases basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$52,000",
+        "explanation": "Distributions reduce basis.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "That ignores the distribution entirely.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$42,000",
+        "explanation": "Correct. 20,000 + 30,000 + 2,000 − 10,000 = 42,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Stock basis increases for all income items, including tax-exempt income, and decreases for distributions: $20,000 + $32,000 − $10,000 = $42,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-23",
+    "moduleId": "reg-c-corp-income",
+    "pool": "exam",
+    "stem": "A C corporation with taxable income before special deductions of $400,000 receives $100,000 of dividends from a domestic corporation in which it owns 30%. What is its dividends-received deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "50% applies to ownership under 20%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "100% requires 80% or more ownership.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$65,000",
+        "explanation": "Correct. 20%-to-under-80% ownership gives a 65% DRD; the taxable income limit (65% × 400,000) doesn't bind."
+      },
+      {
+        "id": "d",
+        "text": "$260,000",
+        "explanation": "The limit is 65% of taxable income, but the deduction can't exceed 65% of the dividends.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "30% ownership → 65% DRD: 65% × $100,000 = $65,000, below the 65% × taxable income limit.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-24",
+    "moduleId": "reg-c-corp-income",
+    "pool": "exam",
+    "stem": "A C corporation has 2025 taxable income of $500,000 before any NOL deduction and a $600,000 NOL carryforward from 2022. What NOL deduction is allowed for 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$400,000",
+        "explanation": "Correct. Post-2017 NOLs offset only 80% of taxable income: 80% × 500,000."
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "Post-2017 NOLs can't reduce taxable income to zero.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$600,000",
+        "explanation": "The deduction can't exceed the 80% limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$480,000",
+        "explanation": "That is 80% of the NOL, not of taxable income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "NOLs arising after 2017 are carried forward indefinitely and limited to 80% of taxable income: $400,000; $200,000 carries forward.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-25",
+    "moduleId": "reg-state-local-tax",
+    "pool": "exam",
+    "stem": "Trent Co. has $2,000,000 of apportionable business income. Its State Z factors are sales 40%, property 25% and payroll 25%; State Z uses an equally weighted three-factor formula. Trent also earns $100,000 of nonbusiness interest, allocated to its commercial domicile in another state. What is Trent's State Z taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$630,000",
+        "explanation": "The nonbusiness interest is allocated to the domicile state, not apportioned.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$600,000",
+        "explanation": "Correct. (40% + 25% + 25%) ÷ 3 = 30%; 30% × 2,000,000 = 600,000. The interest is allocated elsewhere."
+      },
+      {
+        "id": "c",
+        "text": "$800,000",
+        "explanation": "That uses the sales factor alone.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$700,000",
+        "explanation": "The interest belongs to the domicile state, not State Z.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Apportionment percentage 30% × $2,000,000 = $600,000; nonbusiness interest is allocated to the commercial domicile.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-26",
+    "moduleId": "reg-state-local-tax",
+    "pool": "exam",
+    "stem": "A seller of tangible goods ships to customers in State W from its out-of-state plant. Which additional activity in State W would give State W income tax nexus despite P.L. 86-272?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Sending sales representatives who only solicit orders approved out of state",
+        "explanation": "That is exactly the activity P.L. 86-272 protects.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Advertising its products on State W radio stations and websites",
+        "explanation": "Advertising is part of protected solicitation.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Shipping all orders by common carrier from outside State W",
+        "explanation": "Shipping from outside the state is part of the protected pattern.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Keeping a stock of inventory in a State W warehouse to fill orders",
+        "explanation": "Correct. Property such as in-state inventory goes beyond solicitation and creates nexus."
+      }
+    ],
+    "answer": "d",
+    "explanation": "P.L. 86-272 protects only solicitation of orders for tangible goods approved and filled from outside the state. In-state inventory is property that creates nexus.",
     "skill": "application",
     "difficulty": 2
   }

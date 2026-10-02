@@ -34,6 +34,19 @@ Answer keys and content changed while working through `REMEDIATION_TASKS.md`. Ea
 | "Looking ahead to 2026" notes in `reg-itemized-deductions`, `reg-c-corp-income`, `reg-individual-credits`, `tcp-individual-planning` | Decision D2: 2026 changes are taught as lesson notes, not tested. Confirm the amounts: 0.5%-of-AGI individual charitable floor; 35% cap on the itemized-deduction benefit; $1,000/$2,000 non-itemizer cash gift deduction; 1% corporate charitable floor; dependent care credit top rate 50%, phasing down to 35% above $15,000 AGI and toward 20% above $75,000/$150,000. | P.L. 119-21 amending IRC §21, §68, §170 |
 | `aud-code-of-conduct` lesson, `aud-coc-07`, `aud-x1-05` | Referral fees are permitted with disclosure; commissions and contingent fees are prohibited only for audit, review, compilation (without an independence disclosure) and PFI-examination clients. | ET 1.510, 1.520 |
 
+## REG/TCP re-scope (decision D1) — new content to confirm
+
+| Item | What to confirm | Authority |
+|---|---|---|
+| `reg-state-local-tax` lesson, `reg-slt-*`, `reg-x5-25`, `reg-x5-26` | Nexus, P.L. 86-272 scope, three-factor and double-weighted apportionment, allocation of nonbusiness rents and interest, throwback | P.L. 86-272 (15 U.S.C. §381); UDITPA §§4–17 |
+| `reg-cost-recovery` lesson additions, `reg-dep-01`–`06`, `reg-x3-08` | MACRS table rates (7-year 14.29/24.49/17.49%; mid-quarter Q1 25%, Q3 10.71%, Q4 3.57%; 5-year Q4 5%), mid-month real property, §179 phase-out, §195/§197 amortization | IRC §168, §179, §195, §197; Rev. Proc. 87-57 |
+| TBS `reg-tbs-u3-depreciation`, `reg-tbs-u3-depreciation-review`, `reg-tbs-x3-cost-recovery` | Keys: 808,517; 37,985 (mid-quarter applied to all 2025 personal property); 192,195 | Same |
+| `reg-fr-11`–`14`, `reg-x2-15`, `reg-x2-16` | ACA applicable large employer (50 FTE; 30 hours), §4980H trigger, common-law worker test, FCPA anti-bribery and accounting provisions | IRC §4980H, §36B, §3509; 15 U.S.C. §78dd-1, §78m(b) |
+| `reg-sc-12`, `reg-sc-13`, `reg-x5-21`, `reg-x5-22` | Ordinary business income vs. separately stated items; S stock basis order | IRC §1366, §1367, §702, §703 |
+| `reg-c230-11`, `reg-c230-12` | State board licensing, revocation and substantial-equivalency mobility | Uniform Accountancy Act §7, §23 |
+| `reg-te-11`–`13` | §501(c)(3)/(4)/(6)/(7) types, deductibility, private foundation presumption | IRC §501(c), §508(b), §509, §170(c) |
+| `reg-x1-12`, `reg-x4-21`, `reg-x4-22`, `reg-x5-23`, `reg-x5-24` | FBAR $10,000 aggregate test and due date; NIIT; 110% estimated-tax safe harbor; 65% DRD; 80% NOL limit | 31 C.F.R. §1010.350, §1010.306(c); IRC §1411, §6654(d), §243, §172 |
+
 ## REG — 2025 amounts from the One Big Beautiful Bill Act
 
 REG reflects tax year 2025 law, including provisions of the One Big Beautiful Bill Act (P.L. 119-21) effective for

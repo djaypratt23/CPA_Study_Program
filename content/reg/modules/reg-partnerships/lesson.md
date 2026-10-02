@@ -42,6 +42,8 @@ citations:
   - source: IRC §721–§723 (Contributions), §731–§733 (Distributions), §741, §751 (Sales of interests), §752 (Liabilities)
 ---
 
+> **Scope (2026 Blueprints):** REG covers ordinary income, separately stated items and outside basis. Property distributions, sales of an interest and §751 are TCP topics, so those items are optional here.
+
 ## Ordinary income vs. separately stated items
 
 ```worked

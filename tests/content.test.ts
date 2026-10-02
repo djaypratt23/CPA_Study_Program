@@ -207,6 +207,26 @@ areas:
     expect(errorsFor(files)).toMatch(/far-mock: duplicate exam form id/)
     expect(errorsFor(files)).toMatch(/item far-q1 appears more than once/)
   })
+  it('rejects mock items that belong to another section (D1 re-scope)', () => {
+    const q = {
+      id: 'aud-q1',
+      moduleId: 'aud-x',
+      pool: 'exam',
+      stem: 'A question stem here',
+      choices: ['a', 'b', 'c', 'd'].map((c) => ({ id: c, text: c, explanation: 'because of reasons', ...(c === 'a' ? {} : { trap: 'other' }) })),
+      answer: 'a',
+      explanation: 'overall explanation',
+      skill: 'application',
+    }
+    const form = { id: 'far-mock', section: 'FAR', title: 'Mock', testlets: [{ kind: 'mcq', items: ['aud-q1', 'aud-q1'] }, { kind: 'tbs', items: ['far-tbs-t'] }] }
+    const files = {
+      ...sectionYaml({ extraSection: true }),
+      '/content/aud/exam-questions/aud-exam.json': JSON.stringify([q]),
+      '/content/far/tbs/far-tbs-t.json': tbs({ pool: 'exam' }),
+      '/content/far/exams/far-mock.json': JSON.stringify(form),
+    }
+    expect(errorsFor(files)).toMatch(/question aud-q1 belongs to AUD, not FAR/)
+  })
   it('carries optional Blueprint tags on modules', () => {
     expect(buildContent(sectionYaml()).bundle.modules[0].blueprint).toEqual(['I.A'])
   })

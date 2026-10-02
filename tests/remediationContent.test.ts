@@ -128,3 +128,52 @@ describe('P1-5 indexed amounts are stated, not recalled', () => {
     expect(bundle.tbs[id].instructions).toContain(amount)
   })
 })
+
+describe('D1 (P0-8) REG/TCP re-scope', () => {
+  const mod = (id: string) => bundle.modules.find((m) => m.id === id)
+  const outOfReg = (id: string) => {
+    const item = q(id)
+    const m = mod(item.moduleId)
+    return item.optional || !!m?.optional || m?.section !== 'REG'
+  }
+  // Items mapped out of scope for REG in the 2026 Blueprint coverage review (TCP-only topics and non-REG References).
+  const oos = [
+    ...['01', '02', '03', '04', '05', '06', '07', '09', '10'].map((n) => `reg-ep-${n}`),
+    ...['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'].map((n) => `reg-fl-${n}`),
+    ...['01', '02', '03', '04', '05', '07', '08', '10'].map((n) => `reg-nt-${n}`),
+    ...['04', '05', '06', '07', '08', '10'].map((n) => `reg-cg-${n}`),
+    'reg-ot-01', 'reg-ot-02', 'reg-ot-03', 'reg-ot-04', 'reg-ot-09',
+    'reg-te-01', 'reg-te-02', 'reg-te-03', 'reg-te-04', 'reg-te-05', 'reg-te-06', 'reg-te-07', 'reg-te-08', 'reg-te-09', 'reg-te-10',
+    'reg-bri-05', 'reg-bri-07', 'reg-bri-09', 'reg-pt-04', 'reg-pt-06', 'reg-pt-07', 'reg-sc-03', 'reg-sc-06', 'reg-pb-04',
+    'reg-al-02', 'reg-al-03', 'reg-al-08', 'reg-fr-01', 'reg-fr-02', 'reg-fr-03', 'reg-fr-04', 'reg-fr-06', 'reg-fr-07', 'reg-fr-08', 'reg-fr-09', 'reg-fr-10',
+    'reg-c230-06', 'reg-c230-08', 'reg-c230-10',
+    ...['x3-04', 'x3-05', 'x3-06', 'x3-07', 'x4-09', 'x4-20', 'x5-06', 'x5-07', 'x5-08', 'x5-09', 'x5-10', 'x5-11', 'x5-14', 'x5-19', 'x5-20', 'x1-03', 'x1-11', 'x2-11', 'x2-12'].map((n) => `reg-${n}`),
+  ]
+
+  it.each(oos)('%s is optional in REG or lives in TCP', (id) => {
+    expect(outOfReg(id)).toBe(true)
+  })
+
+  it('REG in-scope practice has no mapped out-of-scope items', () => {
+    const practice = Object.values(bundle.questions).filter((x) => x.pool === 'practice' && mod(x.moduleId)?.section === 'REG')
+    const inScope = practice.filter((x) => !outOfReg(x.id))
+    expect(inScope.filter((x) => oos.includes(x.id))).toEqual([])
+    expect(inScope.length).toBeGreaterThan(200)
+  })
+
+  it('cost recovery is a REG module and state and local tax is covered', () => {
+    expect(mod('reg-cost-recovery')?.section).toBe('REG')
+    expect(mod('tcp-cost-recovery')).toBeUndefined()
+    expect(mod('reg-state-local-tax')?.section).toBe('REG')
+    expect(Object.values(bundle.tbs).filter((t) => t.unitId === 'reg-u3' && t.pool === 'practice').map((t) => t.id).sort()).toEqual(['reg-tbs-u3-depreciation', 'reg-tbs-u3-depreciation-review'])
+  })
+
+  it('each mock holds only its own section’s in-scope items', () => {
+    for (const ex of bundle.exams.filter((e) => e.section === 'REG' || e.section === 'TCP'))
+      for (const t of ex.testlets)
+        for (const id of t.items) {
+          if (t.kind === 'tbs') expect(bundle.tbs[id].section, id).toBe(ex.section)
+          else expect(mod(q(id).moduleId)?.section, id).toBe(ex.section)
+        }
+  })
+})

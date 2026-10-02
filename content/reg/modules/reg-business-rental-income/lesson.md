@@ -42,6 +42,8 @@ citations:
   - source: IRC §465 (At-risk rules), §469 (Passive activity losses), §461(l) (Excess business losses)
 ---
 
+> **Scope (2026 Blueprints):** REG covers Schedule C, rental income and the order of the loss limits. Detailed passive-activity and real estate professional rules are TCP topics, so those items are optional here.
+
 ## Schedule C deductions
 
 | Expense | Treatment |

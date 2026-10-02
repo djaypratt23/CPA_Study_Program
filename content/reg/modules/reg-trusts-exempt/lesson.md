@@ -43,6 +43,8 @@ citations:
   - source: IRC §501(c)(3), §511–§514 (Unrelated business income)
 ---
 
+> **Scope (2026 Blueprints):** REG covers the types of exempt organizations. Trusts and estates, gift tax, UBTI and loss of exemption are TCP topics, so those sections and items are optional here.
+
 ## Trusts and estates
 
 | Type | Distributions | Exemption |
@@ -110,3 +112,14 @@ insight: The three-part test — trade or business, regularly carried on, not su
 ```check
 reg-te-chk2
 ```
+
+## Types of tax-exempt organizations
+
+| Section | Organization | Gifts deductible as charity? |
+|---|---|---|
+| §501(c)(3) | Charitable, religious, educational, scientific organizations (public charities and private foundations) | Yes |
+| §501(c)(4) | Social welfare organizations and civic leagues | Generally no |
+| §501(c)(6) | Business leagues, trade associations, chambers of commerce | No (dues may be business expenses) |
+| §501(c)(7) | Social and recreational clubs | No |
+
+A §501(c)(3) organization is presumed a **private foundation** unless it shows broad public support or is a church, school, hospital or supporting organization.

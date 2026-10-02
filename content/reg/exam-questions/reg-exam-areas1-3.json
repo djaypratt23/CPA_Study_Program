@@ -102,7 +102,8 @@
     "answer": "d",
     "explanation": "SSTS: inform the client and consider whether to continue; take reasonable steps not to repeat the error.",
     "skill": "application",
-    "difficulty": 2
+    "difficulty": 2,
+    "optional": true
   },
   {
     "id": "reg-x1-04",
@@ -384,7 +385,8 @@
     "answer": "a",
     "explanation": "10b-5 elements: material misstatement or omission, scienter, reliance, causation, and damages.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 2,
+    "optional": true
   },
   {
     "id": "reg-x2-01",
@@ -769,7 +771,8 @@
     "answer": "d",
     "explanation": "506(c): general solicitation, unlimited amount, all purchasers accredited and verified.",
     "skill": "application",
-    "difficulty": 2
+    "difficulty": 2,
+    "optional": true
   },
   {
     "id": "reg-x2-12",
@@ -804,7 +807,8 @@
     "answer": "b",
     "explanation": "FMLA applies to employers with 50 or more employees.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 2,
+    "optional": true
   },
   {
     "id": "reg-x2-13",
@@ -984,145 +988,288 @@
     "calc": true
   },
   {
-    "id": "reg-x3-04",
-    "moduleId": "reg-capital-gains",
+    "id": "tcp-x4-08",
+    "moduleId": "reg-cost-recovery",
     "pool": "exam",
-    "stem": "A business sells machinery (cost $70,000; accumulated depreciation $45,000) for $30,000. What is the character of the gain?",
+    "stem": "For 2025 the §179 limit is $2,500,000, reduced dollar for dollar once qualifying property placed in service exceeds $4,000,000. A business places $4,600,000 of qualifying property in service in 2025 and has ample income. What is its maximum §179 deduction?",
     "choices": [
       {
         "id": "a",
-        "text": "$5,000 §1231 gain",
-        "explanation": "Recapture first.",
+        "text": "$2,500,000",
+        "explanation": "The phase-out applies.",
         "trap": "partial-computation"
       },
       {
         "id": "b",
-        "text": "$5,000 ordinary (§1245)",
-        "explanation": "Correct. Gain = 30,000 − 25,000 = 5,000; all §1245 recapture."
+        "text": "$1,900,000",
+        "explanation": "Correct. 2,500,000 − 600,000."
       },
       {
         "id": "c",
-        "text": "$5,000 long-term capital gain",
-        "explanation": "Machinery isn't a capital asset.",
-        "trap": "wrong-classification"
-      },
-      {
-        "id": "d",
-        "text": "$45,000 ordinary (§1245)",
-        "explanation": "Recapture is limited to the gain.",
-        "trap": "overgeneralization"
-      }
-    ],
-    "answer": "b",
-    "explanation": "Gain = 30,000 − 25,000 = 5,000; all §1245 recapture.",
-    "skill": "application",
-    "difficulty": 2,
-    "calc": true
-  },
-  {
-    "id": "reg-x3-05",
-    "moduleId": "reg-capital-gains",
-    "pool": "exam",
-    "stem": "What is the maximum federal rate on unrecaptured §1250 gain for an individual?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "15%",
-        "explanation": "Unrecaptured §1250 gain has a higher cap.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "b",
-        "text": "25%",
-        "explanation": "Correct. Unrecaptured §1250 gain is taxed at a maximum of 25%."
-      },
-      {
-        "id": "c",
-        "text": "28%",
-        "explanation": "That's collectibles.",
-        "trap": "wrong-classification"
-      },
-      {
-        "id": "d",
-        "text": "37%",
-        "explanation": "That's the top ordinary rate.",
-        "trap": "wrong-rule"
-      }
-    ],
-    "answer": "b",
-    "explanation": "Unrecaptured §1250 gain is taxed at a maximum of 25%.",
-    "skill": "remembering",
-    "difficulty": 2
-  },
-  {
-    "id": "reg-x3-06",
-    "moduleId": "reg-nontaxable-exchanges",
-    "pool": "exam",
-    "stem": "In a like-kind exchange, a taxpayer gives real property (basis $80,000; FMV $150,000) and receives real property (FMV $140,000) plus $10,000 cash. What gain is recognized?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "$70,000",
-        "explanation": "Only boot is taxed.",
-        "trap": "overgeneralization"
-      },
-      {
-        "id": "b",
-        "text": "$10,000",
-        "explanation": "Correct. Recognized gain = lesser of realized 70,000 or boot 10,000."
-      },
-      {
-        "id": "c",
-        "text": "None ($0)",
-        "explanation": "Boot triggers gain.",
-        "trap": "wrong-rule"
-      },
-      {
-        "id": "d",
-        "text": "$60,000",
-        "explanation": "That's the deferred gain.",
-        "trap": "reversed"
-      }
-    ],
-    "answer": "b",
-    "explanation": "Recognized gain = lesser of realized 70,000 or boot 10,000.",
-    "skill": "application",
-    "difficulty": 2,
-    "calc": true
-  },
-  {
-    "id": "reg-x3-07",
-    "moduleId": "reg-nontaxable-exchanges",
-    "pool": "exam",
-    "stem": "Which property can qualify for a §1031 like-kind exchange in 2025?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "A business delivery truck",
-        "explanation": "Personal property no longer qualifies.",
+        "text": "$1,250,000",
+        "explanation": "That's the pre-2025 base amount.",
         "trap": "outdated-rule"
       },
       {
-        "id": "b",
-        "text": "Land held for investment",
-        "explanation": "Correct. Only real property held for business or investment qualifies."
-      },
-      {
-        "id": "c",
-        "text": "A personal residence",
-        "explanation": "Not held for business or investment.",
-        "trap": "wrong-rule"
-      },
-      {
         "id": "d",
-        "text": "Inventory of a homebuilder",
-        "explanation": "Property held for sale is excluded.",
+        "text": "None ($0)",
+        "explanation": "Not fully phased out.",
         "trap": "wrong-rule"
       }
     ],
     "answer": "b",
-    "explanation": "Only real property held for business or investment qualifies.",
+    "explanation": "Reduced dollar for dollar by purchases over $4,000,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true,
+    "needsReview": true,
+    "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials."
+  },
+  {
+    "id": "tcp-x4-09",
+    "moduleId": "reg-cost-recovery",
+    "pool": "exam",
+    "stem": "A company places $500,000 of 7-year property in service in November and $300,000 in March, electing out of bonus and not using §179. Which convention applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Half-year",
+        "explanation": "More than 40% was placed in service in Q4.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Mid-quarter",
+        "explanation": "Correct. 500,000 ÷ 800,000 = 62.5% in Q4."
+      },
+      {
+        "id": "c",
+        "text": "Mid-month",
+        "explanation": "That's for real property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Full-month",
+        "explanation": "Not a MACRS convention for personal property.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§168(d)(3): mid-quarter convention when more than 40% is placed in service in the last quarter.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x4-10",
+    "moduleId": "reg-cost-recovery",
+    "pool": "exam",
+    "stem": "A residential rental building (cost $550,000, excluding land) is placed in service in July. Using the mid-month convention, what is first-year depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Omits the mid-month convention.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$9,167",
+        "explanation": "Correct. 20,000 × 5.5 ÷ 12."
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "Uses a half-year convention.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$14,103",
+        "explanation": "Uses 39 years with the wrong months.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "550,000 ÷ 27.5 = 20,000 per year; July → 5.5 months.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-24",
+    "moduleId": "reg-preparer-penalties",
+    "pool": "exam",
+    "stem": "A partnership's late-filing penalty for Form 1065 is computed based on:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The tax owed by the partnership for the year",
+        "explanation": "Partnerships generally owe no income tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The number of partners and the months late",
+        "explanation": "Correct. §6698: a per-partner, per-month penalty."
+      },
+      {
+        "id": "c",
+        "text": "The partnership's gross receipts for the year",
+        "explanation": "Receipts aren't the penalty base.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The partnership's total assets at year-end",
+        "explanation": "Assets aren't the penalty base.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§6698: a per-partner, per-month penalty.",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "reg-x1-12",
+    "moduleId": "reg-preparer-penalties",
+    "pool": "exam",
+    "stem": "A U.S. citizen holds two foreign bank accounts with maximum balances during 2025 of $6,000 and $7,000. Which statement about FBAR reporting is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No FBAR is required because neither account exceeded $10,000 on its own",
+        "explanation": "The $10,000 test uses the aggregate of all foreign accounts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "She must file FinCEN Form 114, due April 15 (extended to October 15)",
+        "explanation": "Correct. The aggregate maximum value ($13,000) exceeded $10,000 at some point in the year."
+      },
+      {
+        "id": "c",
+        "text": "She reports the accounts only on Form 1040, Schedule B, with no other filing",
+        "explanation": "Schedule B asks about foreign accounts, but the FBAR itself is filed with FinCEN.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "She must file the FBAR with her Form 1040 by the return's extended due date",
+        "explanation": "The FBAR is filed electronically with FinCEN, not attached to the return.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "An FBAR (FinCEN Form 114) is required when the aggregate maximum value of foreign financial accounts exceeds $10,000 at any time during the year; it is due April 15 with an automatic extension to October 15.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-15",
+    "moduleId": "reg-federal-regulation",
+    "pool": "exam",
+    "stem": "A company treated a worker as an independent contractor, but the IRS determines the worker was a common-law employee. Which consequence most likely follows for the company?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The worker alone owes all of the unpaid Social Security and Medicare taxes",
+        "explanation": "The employer is liable for the employer share and the failure to withhold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Nothing, as long as the company issued the worker a Form 1099-NEC each year",
+        "explanation": "A Form 1099 doesn't change the worker's status.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It owes the unpaid employment taxes, plus penalties and interest",
+        "explanation": "Correct. Reclassification makes the company liable for FICA, FUTA and income tax withholding (at reduced §3509 rates if the error wasn't intentional)."
+      },
+      {
+        "id": "d",
+        "text": "The company may deduct the worker's pay only in the year of reclassification",
+        "explanation": "Reclassification doesn't change when wages are deductible.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Misclassifying an employee exposes the employer to unpaid FICA and FUTA, failure-to-withhold liability (reduced under §3509 for unintentional errors), penalties and interest.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x2-16",
+    "moduleId": "reg-federal-regulation",
+    "pool": "exam",
+    "stem": "The FCPA's books-and-records and internal accounting control provisions apply to:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Issuers whose securities are registered with the SEC",
+        "explanation": "Correct. The accounting provisions apply to issuers; the anti-bribery provisions reach a wider group."
+      },
+      {
+        "id": "b",
+        "text": "Every U.S. business that makes any sale to a foreign customer",
+        "explanation": "Foreign sales alone don't trigger the accounting provisions.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Only foreign companies operating with offices in the United States",
+        "explanation": "They apply to issuers, U.S. or foreign, with SEC-registered securities.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Tax-exempt organizations that receive foreign government grants",
+        "explanation": "Exempt organizations aren't the target of the accounting provisions.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Issuers must keep books and records that accurately reflect transactions and maintain a system of internal accounting controls.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x3-08",
+    "moduleId": "reg-cost-recovery",
+    "pool": "exam",
+    "stem": "On April 1, 2025, a company buys a business and allocates $450,000 of the price to goodwill. What is its 2025 amortization of the goodwill for tax purposes?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "That is a full year (450,000 ÷ 15); amortization starts in April.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$     0",
+        "explanation": "Purchased goodwill is a §197 intangible and is amortizable.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$11,250",
+        "explanation": "That uses 30 years, not 15.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$22,500",
+        "explanation": "Correct. §197 goodwill is amortized over 15 years (180 months) from the month acquired: 450,000 ÷ 180 × 9."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Purchased goodwill is a §197 intangible: straight-line over 180 months beginning with the month of acquisition. $450,000 ÷ 180 × 9 = $22,500.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

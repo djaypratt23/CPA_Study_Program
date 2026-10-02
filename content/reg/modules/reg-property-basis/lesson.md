@@ -44,6 +44,8 @@ citations:
   - source: IRC §267 and §1091 (Related-party losses; wash sales)
 ---
 
+> **Scope (2026 Blueprints):** Related-party resale under §267(d) is a TCP topic; that item is optional here.
+
 > **Tax year:** 2025 law. The core basis rules in this module were not changed by the One Big Beautiful Bill Act.
 
 ## The core equation

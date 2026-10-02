@@ -124,3 +124,14 @@ Health insurance for a 2% shareholder is deductible by the S corporation when it
 3. the source documents **cannot answer it** — ask the client.
 
 Clearing a flag without understanding it is how errors reach a filed return.
+
+## Ordinary business income vs. separately stated items
+
+| Ordinary business income (Form 1120-S page 1) | Separately stated (Schedule K) |
+|---|---|
+| Gross receipts less cost of goods sold | Capital gains and losses; net §1231 gain or loss |
+| Salaries and wages, including reasonable compensation to shareholder-employees | Interest, dividends, royalties (portfolio income) |
+| Rent, repairs, taxes, depreciation (other than §179) | Charitable contributions; §179 expense |
+| Employee benefit programs | Tax-exempt income; foreign taxes; credits |
+
+> Built-in gains tax and the allocation of items in the year a shareholder sells stock are TCP topics; those items are marked optional here.

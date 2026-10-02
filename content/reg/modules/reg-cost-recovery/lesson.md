@@ -1,7 +1,7 @@
 ---
-id: tcp-cost-recovery
-section: TCP
-title: Cost recovery planning (MACRS, §179, bonus)
+id: reg-cost-recovery
+section: REG
+title: 'Cost recovery: MACRS, §179, bonus & amortization'
 minutes: 20
 taxYear: '2025'
 objectives:
@@ -11,9 +11,12 @@ objectives:
   - text: Apply §179 expensing (including the business income limit) and bonus depreciation for 2025.
     skill: application
     task: Calculate §179 and bonus depreciation
-  - text: Plan the order and amount of expensing, amortization, and R&E expensing to manage taxable income across years.
+  - text: Compute amortization of start-up and organizational costs and §197 intangibles.
+    skill: application
+    task: Calculate amortization of intangibles
+  - text: Review a depreciation and amortization schedule against source documents and resolve diagnostic discrepancies.
     skill: analysis
-    task: Analyze cost recovery planning strategies
+    task: Review depreciation and amortization for accuracy
 bigIdea:
   what: >-
     Cost recovery decides when a business deducts what it spends on long-lived assets. Immediate expensing
@@ -21,9 +24,9 @@ bigIdea:
     start-up costs are amortized. Planning is choosing the timing that produces the most value — usually sooner,
     but not always.
   why: >-
-    TCP asks you to compute the deduction and to recommend a strategy — for example, when §179 is better than
-    bonus depreciation because of its flexibility, or when to skip expensing to preserve deductions for a
-    higher-rate year.
+    REG asks you to compute each year's deduction (convention, recovery period, §179 limits, bonus) and to review a
+    prepared depreciation schedule against invoices and placed-in-service dates. Deciding *when* to expense is a
+    TCP planning question; getting the numbers right is REG.
   example: >-
     A profitable company buys $500,000 of equipment in 2025 after January 19. It can expense the full cost with
     100% bonus depreciation, or elect out and depreciate over 7 years if it expects much higher income later.
@@ -103,3 +106,68 @@ steps:
 ```check
 tcp-cr2-chk2
 ```
+
+## Real property: the mid-month convention
+
+Residential rental property (27.5 years) and nonresidential real property (39 years) use straight-line and the
+**mid-month** convention: the asset is treated as placed in service (or disposed of) in the middle of its month.
+
+```worked
+title: First-year depreciation on a nonresidential building
+scenario: |
+  A company places a warehouse in service on April 10, 2025. Its cost is $1,560,000, of which $120,000 is land.
+steps:
+  - label: Depreciable basis
+    work: 1,560,000 − 120,000
+    result: 1,440,000
+  - label: Months in 2025 under mid-month
+    work: April counts as a half month; May–December are 8 months
+    result: 8.5
+  - label: 2025 depreciation
+    work: 1,440,000 ÷ 39 × 8.5 ÷ 12
+    result: 26,154 (rounded)
+insight: Land never depreciates. In the year of sale, the mid-month convention again gives half a month for the month of disposal.
+```
+
+## Amortization of intangibles
+
+| Cost | Treatment |
+|---|---|
+| Start-up costs (§195) | Deduct up to $5,000 in the year business begins, reduced dollar for dollar by costs over $50,000; amortize the rest over 180 months from the month business begins |
+| Organizational costs (§248 corporations, §709 partnerships) | Same $5,000 / $50,000 / 180-month rule, computed separately from start-up costs |
+| Purchased §197 intangibles (goodwill, customer lists, covenants not to compete) | 15-year straight-line from the month acquired; no first-year expensing |
+| Self-created goodwill | Not amortizable |
+
+```worked
+title: Start-up cost deduction
+scenario: |
+  A new business incurs $51,500 of start-up costs and begins operations on October 1, 2025.
+steps:
+  - label: Immediate deduction
+    work: 5,000 − (51,500 − 50,000)
+    result: 3,500
+  - label: Amortizable balance
+    work: 51,500 − 3,500
+    result: 48,000
+  - label: 2025 amortization (3 months)
+    work: 48,000 ÷ 180 × 3
+    result: 800
+  - label: Total 2025 deduction
+    work: 3,500 + 800
+    result: 4,300
+insight: At $55,000 or more of start-up costs, the immediate deduction is zero and everything is amortized over 180 months.
+```
+
+## Reviewing a depreciation schedule
+
+When you review a prepared depreciation schedule, tie each line to its source document and ask:
+
+1. **Placed-in-service date** — does it match the invoice or the installation record? A December asset changes the
+   mid-quarter test.
+2. **Class and life** — is the asset in the right MACRS class (5-, 7-, 15-, 27.5- or 39-year)?
+3. **Basis** — is land excluded, and are installation and freight included?
+4. **Convention** — half-year unless more than 40% of personal property was placed in service in Q4; mid-month for real property.
+5. **Elections** — does the §179 amount respect the dollar limit, the phase-out and the business income limit?
+   Was bonus elected out by class?
+
+A diagnostic such as "mid-quarter convention may apply" or "§179 exceeds business income" points you to items 4 and 5.

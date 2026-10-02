@@ -82,6 +82,26 @@ Compliance 30–40% · III Entity Tax Planning 10–20% · IV Property Transacti
 10–20%. Skills: R&U 5–15%, Application 55–65%, Analysis 25–35%. _(areas I–II confirmed; III–IV and skills
 verify)_. 2026 change: one international-tax representative task removed.
 
+**REG / TCP split (decision D1).** The 2026 Blueprints place several topics only in TCP. The app follows that
+placement:
+
+- **Optional in REG (taught and tested in TCP):** AMT and the kiddie tax; detailed passive-activity and at-risk
+  rules; gift tax; trusts and estates; UBTI and loss of exempt status; E&P, distributions, §351, redemptions and
+  liquidations; like-kind exchanges, §1033 and installment sales; §1231, §1245, §1250 and §1244; partnership
+  property distributions and sales of an interest; S corporation built-in gains tax and sale-year allocation. The
+  modules `reg-corp-distributions` and `reg-corp-formation-liquidation` are optional as a whole; elsewhere the
+  individual items are flagged `optional`. Securities Acts, FLSA, ERISA, COBRA, FMLA, workers' compensation and the
+  AICPA SSTS are outside the REG References and are also optional. Optional items are excluded from practice
+  and readiness by default (Settings → include optional content) and never appear on a mock.
+- **Moved to REG:** cost recovery (`reg-cost-recovery`: MACRS, §179, bonus, amortization), with the TCP cost
+  recovery exam items. The Schedule M-1/M-3 exam items and the Form 1065 penalty item moved to the REG exam pool;
+  the corresponding TCP practice items are optional in TCP.
+- **Added to REG:** state and local taxation (`reg-state-local-tax`: nexus, P.L. 86-272, apportionment and
+  allocation); ACA employer rules, worker classification and the FCPA; S corporation ordinary income vs.
+  separately stated items; state boards of accountancy and mobility; types of exempt organizations; FBAR.
+- **Mocks:** `reg-mock-1` and `tcp-mock-1` contain only items from their own section's in-scope modules; the
+  validator rejects a mock item from another section or an optional item.
+
 **BAR** — I Business Analysis 40–50% · II Technical Accounting & Reporting 35–45% · III State & Local
 Governments 10–20%. _(confirmed)_ Not built in Phase 1 (learner chose TCP).
 

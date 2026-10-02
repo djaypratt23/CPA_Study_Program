@@ -1,0 +1,128 @@
+{
+  "id": "reg-tbs-u3-depreciation-review",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-cost-recovery"
+  ],
+  "pool": "practice",
+  "title": "Review the depreciation schedule — Sorrel LLC",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "A staff accountant prepared Sorrel LLC's 2025 depreciation schedule. Compare it with the source documents. Tick each amount that is wrong and enter the correct amount, then resolve the diagnostics. Sorrel elected out of bonus depreciation for every class and took no §179.",
+  "exhibits": [
+    {
+      "title": "Source documents",
+      "content": "| Asset | Invoice date | Placed in service (installation report) | Cost |\n|---|---|---|---:|\n| Computer equipment (5-year) | September 15 | September 20 | 60,000 |\n| Machine (7-year) | October 28 | November 12 | 240,000 |\n| Office furniture (7-year) | January 20 | February 2 | 40,000 |\n| Office building leased to tenants (nonresidential) | June 3 | June 10 | 900,000, including land of 150,000 |"
+    },
+    {
+      "title": "Prepared schedule (half-year convention)",
+      "content": "| Asset | Rate or life used | 2025 depreciation |\n|---|---|---:|\n| Computer equipment | 20.00% | 12,000 |\n| Machine | 14.29% | 34,296 |\n| Office furniture | 14.29% | 5,716 |\n| Building (basis 750,000) | 27.5 years, mid-month | 14,773 |\n| **Total** | | **66,785** |\n\nDiagnostic: *More than 40% of personal property was placed in service in the fourth quarter.*"
+    },
+    {
+      "title": "MACRS first-year rates",
+      "content": "| Class | Half-year | Mid-quarter Q1 | Q2 | Q3 | Q4 |\n|---|---:|---:|---:|---:|---:|\n| 5-year | 20.00% | 35.00% | 25.00% | 15.00% | 5.00% |\n| 7-year | 14.29% | 25.00% | 17.85% | 10.71% | 3.57% |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "sched",
+      "prompt": "Review the prepared depreciation schedule.",
+      "preparedLabel": "Per prepared schedule",
+      "rows": [
+        {
+          "id": "q4",
+          "label": "Percentage of personal property placed in service in Q4",
+          "prepared": 70.6,
+          "answer": 70.6,
+          "explanation": "240,000 ÷ 340,000 = **70.6%**. The preparer computed it correctly but didn't apply it. **No error.**",
+          "tolerance": 0.1
+        },
+        {
+          "id": "comp",
+          "label": "Computer equipment (5-year)",
+          "prepared": 12000,
+          "answer": 9000,
+          "explanation": "Mid-quarter applies to all 2025 personal property. Placed in service September 20 (Q3): 15% × 60,000 = **9,000**."
+        },
+        {
+          "id": "mach",
+          "label": "Machine (7-year)",
+          "prepared": 34296,
+          "answer": 8568,
+          "explanation": "Placed in service November 12 (Q4): 3.57% × 240,000 = **8,568**."
+        },
+        {
+          "id": "furn",
+          "label": "Office furniture (7-year)",
+          "prepared": 5716,
+          "answer": 10000,
+          "explanation": "Placed in service February 2 (Q1): 25% × 40,000 = **10,000**."
+        },
+        {
+          "id": "basis",
+          "label": "Depreciable basis of the building",
+          "prepared": 750000,
+          "answer": 750000,
+          "explanation": "900,000 − 150,000 land = **750,000**. **No error.**"
+        },
+        {
+          "id": "bldg",
+          "label": "Building depreciation",
+          "prepared": 14773,
+          "answer": 10417,
+          "explanation": "Nonresidential rental real property is **39-year**, not 27.5: 750,000 ÷ 39 × 6.5 ÷ 12 (June, mid-month) = **10,417**."
+        },
+        {
+          "id": "tot",
+          "label": "Total 2025 depreciation",
+          "prepared": 66785,
+          "answer": 37985,
+          "explanation": "9,000 + 8,568 + 10,000 + 10,417 = **37,985**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "Resolve the diagnostics.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "The fourth-quarter diagnostic",
+          "options": [
+            "Apply the mid-quarter convention to all 2025 personal property",
+            "Apply the mid-quarter convention only to the fourth-quarter assets",
+            "No change — the half-year convention can be elected",
+            "Include the building in the 40% test and recompute"
+          ],
+          "answer": "Apply the mid-quarter convention to all 2025 personal property",
+          "explanation": "When more than 40% of the year's depreciable personal property is placed in service in Q4, **every** personal-property asset placed in service that year uses the mid-quarter convention. Real property is excluded from the test."
+        },
+        {
+          "id": "d2",
+          "label": "Which date determines the machine's quarter?",
+          "options": [
+            "The invoice date",
+            "The date it was installed and ready for use",
+            "The date the invoice was paid"
+          ],
+          "answer": "The date it was installed and ready for use",
+          "explanation": "An asset is placed in service when it is ready and available for its specific use — here November 12."
+        },
+        {
+          "id": "d3",
+          "label": "The building's recovery period",
+          "options": [
+            "27.5 years",
+            "39 years",
+            "40 years"
+          ],
+          "answer": "39 years",
+          "explanation": "A building leased to commercial tenants is nonresidential real property: **39 years**. 27.5 years is for residential rental property; 40 years is the ADS life."
+        }
+      ]
+    }
+  ]
+}

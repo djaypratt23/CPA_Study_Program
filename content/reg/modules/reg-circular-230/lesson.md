@@ -106,3 +106,12 @@ insight: The duty is to inform the client, not to inform the IRS. Confidentialit
 ```check
 reg-c230-chk2
 ```
+
+## State boards of accountancy
+
+- Each state's **board of accountancy** licenses CPAs and sets the requirements: education (generally 150 semester hours, with alternative pathways in some states), the Uniform CPA Examination and experience.
+- Boards require **continuing professional education**, adopt rules of conduct, investigate complaints and discipline licensees, up to **suspension or revocation** of the license.
+- The **AICPA** can admonish, suspend or expel members, and the IRS can bar practice before it under Circular 230, but only a board can revoke a CPA license.
+- **Mobility:** a CPA licensed in a substantially equivalent state may practice in another state without a second license, consenting to that state board's jurisdiction.
+
+> The AICPA Statements on Standards for Tax Services are not in the 2026 REG References; items on them are marked optional.

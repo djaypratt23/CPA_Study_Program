@@ -854,77 +854,6 @@
     "difficulty": 2
   },
   {
-    "id": "tcp-x2-01",
-    "moduleId": "tcp-c-corp-compliance",
-    "pool": "exam",
-    "stem": "Which item is added to book income on Schedule M-1?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "Tax depreciation in excess of book depreciation",
-        "explanation": "It is subtracted.",
-        "trap": "reversed"
-      },
-      {
-        "id": "b",
-        "text": "Life insurance proceeds received on a key officer",
-        "explanation": "Nontaxable proceeds are subtracted.",
-        "trap": "reversed"
-      },
-      {
-        "id": "c",
-        "text": "Charitable contributions in excess of the 10% limit",
-        "explanation": "Correct. Excess charitable contributions are book expenses not deducted."
-      },
-      {
-        "id": "d",
-        "text": "Interest received on municipal bonds held",
-        "explanation": "It is subtracted.",
-        "trap": "reversed"
-      }
-    ],
-    "answer": "c",
-    "explanation": "Excess charitable contributions are book expenses not deducted.",
-    "skill": "remembering",
-    "difficulty": 2
-  },
-  {
-    "id": "tcp-x2-02",
-    "moduleId": "tcp-c-corp-compliance",
-    "pool": "exam",
-    "stem": "Book income is $300,000, including $66,000 of federal income tax expense and a $10,000 net capital loss. What is taxable income before special deductions (no other differences)?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "$376,000",
-        "explanation": "Correct. 300,000 + 66,000 + 10,000."
-      },
-      {
-        "id": "b",
-        "text": "$366,000",
-        "explanation": "Omits the capital loss add-back.",
-        "trap": "partial-computation"
-      },
-      {
-        "id": "c",
-        "text": "$310,000",
-        "explanation": "Omits the tax expense.",
-        "trap": "partial-computation"
-      },
-      {
-        "id": "d",
-        "text": "$224,000",
-        "explanation": "Subtracts the add-backs.",
-        "trap": "reversed"
-      }
-    ],
-    "answer": "a",
-    "explanation": "300,000 + 66,000 + 10,000.",
-    "skill": "application",
-    "difficulty": 2,
-    "calc": true
-  },
-  {
     "id": "tcp-x2-03",
     "moduleId": "tcp-c-corp-compliance",
     "pool": "exam",
@@ -1632,74 +1561,181 @@
     "difficulty": 2
   },
   {
-    "id": "tcp-x2-23",
-    "moduleId": "tcp-c-corp-compliance",
+    "id": "reg-x4-09",
+    "moduleId": "tcp-passive-rental",
     "pool": "exam",
-    "stem": "A corporation's Schedule M-2 shows beginning retained earnings of $400,000, net income per books of $120,000, and cash distributions of $50,000. It also recorded a $10,000 prior-period adjustment increasing retained earnings. What is ending retained earnings?",
+    "stem": "A single taxpayer with MAGI of $130,000 actively participates in a rental with a $20,000 loss and has no passive income. How much is deductible?",
     "choices": [
       {
         "id": "a",
-        "text": "$480,000",
-        "explanation": "Correct. 400,000 + 120,000 + 10,000 − 50,000."
+        "text": "$20,000",
+        "explanation": "The allowance is reduced.",
+        "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "$470,000",
-        "explanation": "Omits the adjustment.",
-        "trap": "partial-computation"
+        "text": "$15,000",
+        "explanation": "Miscomputes the phase-out.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$520,000",
-        "explanation": "Omits distributions.",
-        "trap": "partial-computation"
+        "text": "None ($0)",
+        "explanation": "The allowance isn't fully phased out.",
+        "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "$460,000",
-        "explanation": "Subtracts the adjustment.",
-        "trap": "reversed"
+        "text": "$10,000",
+        "explanation": "Correct. $25,000 − 50% × $30,000."
       }
     ],
-    "answer": "a",
-    "explanation": "400,000 + 120,000 + 10,000 − 50,000.",
+    "answer": "d",
+    "explanation": "Allowance = 25,000 − 15,000 = 10,000.",
     "skill": "application",
     "difficulty": 2,
     "calc": true
   },
   {
-    "id": "tcp-x2-24",
-    "moduleId": "tcp-partnership-operations",
+    "id": "reg-x4-20",
+    "moduleId": "tcp-individual-planning",
     "pool": "exam",
-    "stem": "A partnership's late-filing penalty for Form 1065 is computed based on:",
+    "stem": "Which item is a tax preference or adjustment for individual AMT?",
     "choices": [
       {
         "id": "a",
-        "text": "The tax owed by the partnership for the year",
-        "explanation": "Partnerships generally owe no income tax.",
-        "trap": "wrong-rule"
+        "text": "Interest on private activity bonds",
+        "explanation": "Correct. Private activity bond interest is an AMT preference."
       },
       {
         "id": "b",
-        "text": "The number of partners and the months late",
-        "explanation": "Correct. §6698: a per-partner, per-month penalty."
+        "text": "Charitable contributions",
+        "explanation": "Charity is allowed for AMT.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "The partnership's gross receipts for the year",
-        "explanation": "Receipts aren't the penalty base.",
+        "text": "Qualified residence acquisition interest",
+        "explanation": "Acquisition interest is allowed for AMT.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "The partnership's total assets at year-end",
-        "explanation": "Assets aren't the penalty base.",
+        "text": "Medical expenses above 7.5% of AGI",
+        "explanation": "Allowed at the same floor for AMT.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Private activity bond interest is an AMT preference.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x5-14",
+    "moduleId": "tcp-partnership-distributions",
+    "pool": "exam",
+    "stem": "A partner with a $15,000 basis receives a current distribution of $5,000 cash and inventory with a partnership basis of $12,000. What is her basis in the inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000",
+        "explanation": "Limited by remaining outside basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "Correct. $15,000 − $5,000 cash."
+      },
+      {
+        "id": "c",
+        "text": "None ($0)",
+        "explanation": "Outside basis remains after the cash distribution.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$17,000",
+        "explanation": "Adds instead of limiting.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Cash first reduces basis to 10,000; inventory takes the lesser of 12,000 or 10,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-19",
+    "moduleId": "tcp-gift-tax",
+    "pool": "exam",
+    "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A donor gives $30,000 to a friend in 2025 and pays $12,000 directly to a hospital for the friend's surgery. What is the taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$23,000",
+        "explanation": "Medical payments made directly are excluded.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$11,000",
+        "explanation": "Correct. $30,000 − $19,000."
+      },
+      {
+        "id": "c",
+        "text": "$42,000",
+        "explanation": "Exclusions apply.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "None ($0)",
+        "explanation": "The cash gift exceeds the exclusion.",
         "trap": "wrong-rule"
       }
     ],
     "answer": "b",
-    "explanation": "§6698: a per-partner, per-month penalty.",
-    "skill": "remembering",
+    "explanation": "Direct medical payments are excluded; the cash gift exceeds the $19,000 exclusion by $11,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-20",
+    "moduleId": "tcp-exempt-organizations",
+    "pool": "exam",
+    "stem": "Which income of a 501(c)(3) organization is most likely UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dividends on endowment investments",
+        "explanation": "Passive income is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Income from a commercial parking garage it regularly runs",
+        "explanation": "Correct. A regularly carried-on, unrelated trade or business produces UBTI."
+      },
+      {
+        "id": "c",
+        "text": "Sales of donated goods in its thrift shop",
+        "explanation": "Donated goods sales are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Proceeds of an annual volunteer-run bake sale",
+        "explanation": "The volunteer exception applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A regularly carried-on, unrelated trade or business produces UBTI.",
+    "skill": "application",
     "difficulty": 2
   }
 ]

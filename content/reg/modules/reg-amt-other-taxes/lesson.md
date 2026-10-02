@@ -38,6 +38,8 @@ citations:
   - source: IRC §55–58 (Alternative minimum tax), §1(g) (Kiddie tax), §6654 (Estimated tax)
 ---
 
+> **Scope (2026 Blueprints):** REG covers self-employment tax, NIIT, additional Medicare tax, estimated tax and the regular-tax computation. AMT and the kiddie tax are TCP topics, so those items are optional here.
+
 ## Self-employment tax
 
 ```worked
