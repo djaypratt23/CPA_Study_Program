@@ -133,7 +133,7 @@
     "answer": "c",
     "explanation": "§642(b): estates $600; simple trusts $300; other trusts $100.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-te-02",
@@ -202,7 +202,7 @@
     "answer": "c",
     "explanation": "Trusts reach the top bracket at $15,650 (2025).",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-te-04",
@@ -271,7 +271,7 @@
     "answer": "d",
     "explanation": "A revocable trust is a grantor trust (§676).",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-te-06",
@@ -305,7 +305,7 @@
     "answer": "b",
     "explanation": "15th day of the 4th month after year-end.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-te-07",
@@ -442,6 +442,177 @@
     "explanation": "Each class of income is distributed proportionately: 60% interest, 40% dividends.",
     "skill": "application",
     "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-11",
+    "pool": "practice",
+    "stem": "Which trust is a simple trust for the year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "One that must distribute all income",
+        "explanation": "Correct. And makes no charity or principal payments."
+      },
+      {
+        "id": "b",
+        "text": "One that pays principal to beneficiaries",
+        "explanation": "That makes it complex.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "One that may accumulate income",
+        "explanation": "That is complex.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "One that gives to charity",
+        "explanation": "That is complex.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A simple trust must distribute all income currently, makes no charitable contributions and distributes no principal.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-12",
+    "pool": "practice",
+    "stem": "What personal exemption does an estate get on Form 1041?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300",
+        "explanation": "That's a complex trust.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$600",
+        "explanation": "Correct. Estates get a $600 exemption."
+      },
+      {
+        "id": "c",
+        "text": "$100",
+        "explanation": "That's a simple trust.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Estates get one.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Estates have a $600 exemption; simple trusts $300; complex trusts $100.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-13",
+    "pool": "practice",
+    "stem": "A complex trust distributes $10,000 on February 20, 2026. How can the trustee treat it as a 2025 distribution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's automatic, without an election",
+        "explanation": "An election is needed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It can't be done after year-end",
+        "explanation": "The election is available.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Make the 65-day election",
+        "explanation": "Correct. Distributions within 65 days can count for the prior year."
+      },
+      {
+        "id": "d",
+        "text": "File Form 709 for the transfer",
+        "explanation": "Form 709 is for gifts.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§663(b): distributions within 65 days after year-end may be treated as paid in the prior year by election.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-14",
+    "pool": "practice",
+    "stem": "After an employee dies, her employer pays her final $8,000 salary to her son. How does he treat it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Tax-free inheritance",
+        "explanation": "IRD is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Capital gain",
+        "explanation": "IRD keeps its character.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Stepped-up basis, no tax",
+        "explanation": "IRD gets no step-up.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As IRD, ordinary income",
+        "explanation": "Correct. Income in respect of a decedent."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Income in respect of a decedent is taxed to the recipient with the same character; it gets no basis step-up.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-15",
+    "pool": "practice",
+    "stem": "A simple trust has $10,000 of interest, distributed, and a $20,000 capital gain allocated to corpus. What is the trust's taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$19,700",
+        "explanation": "Correct. $20,000 − $300 exemption."
+      },
+      {
+        "id": "b",
+        "text": "$29,700",
+        "explanation": "The interest is distributed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Corpus gains are taxed to the trust.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Subtract the $300 exemption.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Capital gains allocated to corpus are excluded from DNI and taxed to the trust: $20,000 − $300 = $19,700.",
+    "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   }
 ]

@@ -168,7 +168,7 @@
     "answer": "a",
     "explanation": "Outside basis = 150,000 − 100,000 relief + 40% × 100,000 = **$90,000**. Net relief of 60,000 < 150,000 basis, so no gain.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -203,7 +203,7 @@
     "answer": "c",
     "explanation": "Net relief = 80,000 − 50% × 80,000 = 40,000; excess over the 30,000 basis = **$10,000** gain. Outside basis = 0.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -238,7 +238,7 @@
     "answer": "b",
     "explanation": "Contributed capital and §1231 assets: both the outside interest and the inside asset include the contributor's holding period.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-pf-05",
@@ -341,7 +341,7 @@
     "answer": "a",
     "explanation": "§709: immediate 5,000 (the costs are under 50,000, so there is no phase-out) + (8,000 − 5,000) ÷ 180 × 6 = 100 → **$5,100**. The 12,000 of syndication costs is capitalized with no deduction.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -376,7 +376,7 @@
     "answer": "c",
     "explanation": "Outside basis reflects only after-tax investment: cash, adjusted basis, and liability shares — not untaxed appreciation.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-pf-09",
@@ -479,7 +479,7 @@
     "answer": "b",
     "explanation": "Partnerships and S corporations: 15th day of the 3rd month (March 15), with a 6-month extension to September 15.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-pf-12",
@@ -513,7 +513,7 @@
     "answer": "b",
     "explanation": "Apply the limits in order: basis, at-risk, passive (then excess business loss). Each suspended amount carries forward separately.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -548,7 +548,75 @@
     "answer": "c",
     "explanation": "Recourse debt follows economic risk of loss; a partner loan is recourse to the lending partner.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-pf-14",
+    "pool": "practice",
+    "stem": "A partner contributes property with a $30,000 built-in loss. When the partnership later sells it, who can be allocated that loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only the contributing partner",
+        "explanation": "Correct. Other partners get FMV basis."
+      },
+      {
+        "id": "b",
+        "text": "All partners pro rata",
+        "explanation": "§704(c)(1)(C) limits it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No one; it's disallowed",
+        "explanation": "The contributor can use it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The noncontributing partners",
+        "explanation": "This reverses the rule.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§704(c)(1)(C): built-in loss is taken into account only for the contributing partner; other partners treat the basis as FMV.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pf-15",
+    "pool": "practice",
+    "stem": "A partner contributes property, and the partnership distributes cash to her 1 year later. How are the transactions presumed treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As two separate events",
+        "explanation": "The presumption applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a disguised sale",
+        "explanation": "Correct. Transfers within 2 years are presumed a sale."
+      },
+      {
+        "id": "c",
+        "text": "As a loan",
+        "explanation": "Not without loan terms.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a gift",
+        "explanation": "No donative intent exists.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§707(a)(2)(B): a contribution and a related distribution within 2 years are presumed a sale unless facts show otherwise.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

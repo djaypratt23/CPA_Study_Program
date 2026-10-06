@@ -100,7 +100,7 @@
     "answer": "a",
     "explanation": "Interest and dividend income are sourced by the residence of the payer.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-intl-02",
@@ -202,7 +202,7 @@
     "answer": "d",
     "explanation": "FDAP income not connected with a U.S. business: 30% gross withholding (§§881, 1442), often reduced by treaty.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-intl-05",
@@ -270,7 +270,7 @@
     "answer": "b",
     "explanation": "Start-up losses favor a branch; later profits taxed at lower foreign rates may favor a subsidiary.",
     "skill": "analysis",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "tcp-intl-07",
@@ -338,7 +338,7 @@
     "answer": "d",
     "explanation": "Subpart F (and GILTI) are anti-deferral regimes: U.S. shareholders include CFC income currently.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-intl-09",
@@ -372,7 +372,7 @@
     "answer": "a",
     "explanation": "Excess credit = foreign taxes paid − FTC limit.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -407,7 +407,7 @@
     "answer": "b",
     "explanation": "Allocate definitely related expenses first, then apportion the rest on a reasonable basis.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -442,6 +442,144 @@
     "answer": "c",
     "explanation": "§245A: a 100% DRD for the foreign-source portion of dividends from specified 10%-owned foreign corporations.",
     "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-intl-12",
+    "pool": "practice",
+    "stem": "A U.S. parent sells goods to its foreign subsidiary at prices below what unrelated parties would pay. Which rule lets the IRS adjust the price?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Subpart F rules",
+        "explanation": "That taxes certain CFC income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "The §245A deduction",
+        "explanation": "That is a dividends-received deduction.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "§482 allocation",
+        "explanation": "Correct. The IRS may reallocate income between related parties."
+      },
+      {
+        "id": "d",
+        "text": "The §904 limitation",
+        "explanation": "That limits the foreign tax credit.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§482 lets the IRS allocate income among related parties to reflect arm's-length pricing.",
+    "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-13",
+    "pool": "practice",
+    "stem": "For 2025, the foreign earned income exclusion is $130,000. A U.S. citizen works in London for 340 days of the year and earns $150,000. How much may she exclude?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "The exclusion is capped.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "She meets the 330-day test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "That is the taxable part.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$130,000",
+        "explanation": "Correct. She meets the physical presence test."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A taxpayer present in foreign countries at least 330 full days in 12 months may exclude foreign earned income up to the annual limit.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-14",
+    "pool": "practice",
+    "stem": "A U.S. corporation's creditable foreign taxes exceed its FTC limitation this year. What happens to the excess?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Back 1 year, forward 10",
+        "explanation": "Correct. Excess FTCs carry back 1 and forward 10."
+      },
+      {
+        "id": "b",
+        "text": "It's lost",
+        "explanation": "It carries over.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Forward 5 years",
+        "explanation": "The period is 10 years.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Back 3 years, forward 5",
+        "explanation": "Not the FTC rule.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§904(c): excess foreign tax credits carry back 1 year and forward 10 years.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-15",
+    "pool": "practice",
+    "stem": "A foreign national was in the U.S. 120 days this year, 120 days last year and 180 days the year before. Is she a U.S. resident under the substantial presence test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, she has under 183 days this year",
+        "explanation": "Weighted days count.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Yes, she has 190 weighted days",
+        "explanation": "Correct. 120 + 40 + 30 = 190."
+      },
+      {
+        "id": "c",
+        "text": "No, she has 140 weighted days",
+        "explanation": "Check the weights.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Yes, she has 420 days in total",
+        "explanation": "Days are weighted.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Substantial presence: at least 31 days this year and 183 weighted days (all current, 1/3 prior, 1/6 second prior).",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

@@ -134,7 +134,7 @@
     "answer": "c",
     "explanation": "2025: $23,500 + $7,500 catch-up for age 50+.",
     "skill": "remembering",
-    "difficulty": 2,
+    "difficulty": 1,
     "calc": true
   },
   {
@@ -204,7 +204,7 @@
     "answer": "a",
     "explanation": "MFJ Roth phase-out $236,000–$246,000: halfway through → $3,500 each.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -273,7 +273,7 @@
     "answer": "c",
     "explanation": "SECURE 2.0: RMD age 73 for those born 1951–1959.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-re-06",
@@ -481,5 +481,144 @@
     "explanation": "The $10,000 first-time homebuyer exception removes the 10% additional tax, not the income tax.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-re-12",
+    "pool": "practice",
+    "stem": "A 45-year-old converts $50,000 from a traditional IRA with no basis to a Roth IRA. What is the tax effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No income",
+        "explanation": "The conversion is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000 of income, no penalty",
+        "explanation": "Correct. Conversions aren't subject to the 10% penalty."
+      },
+      {
+        "id": "c",
+        "text": "$50,000 of income plus a 10% penalty",
+        "explanation": "No penalty on conversion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only earnings are taxed",
+        "explanation": "The full amount is taxable.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A Roth conversion is taxable to the extent of pre-tax amounts but isn't subject to the 10% early withdrawal penalty.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-13",
+    "pool": "practice",
+    "stem": "A taxpayer's IRAs total $100,000, including $20,000 of nondeductible basis. She converts $10,000 to a Roth. How much is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Basis is spread pro rata.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The pro-rata rule applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$8,000",
+        "explanation": "Correct. The pro-rata rule: 80% is pre-tax."
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "That is the nontaxable part.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under the pro-rata rule, basis is allocated across all IRAs: $10,000 × 80% = $8,000 taxable.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-14",
+    "pool": "practice",
+    "stem": "A 40-year-old withdraws $8,000 from a traditional IRA to pay qualified college tuition. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Taxable plus a 10% penalty",
+        "explanation": "The education exception applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Tax-free and penalty-free",
+        "explanation": "It is still taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Tax-free, with a penalty",
+        "explanation": "This reverses the rule.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Taxable, but no 10% penalty",
+        "explanation": "Correct. Higher education is a penalty exception."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Qualified higher education expenses are an exception to the 10% penalty, but the distribution is still taxable.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-15",
+    "pool": "practice",
+    "stem": "Two grandparents each contribute $2,000 to the same grandchild's Coverdell ESA this year. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $2,000 excess",
+        "explanation": "Correct. The limit is $2,000 per beneficiary."
+      },
+      {
+        "id": "b",
+        "text": "No excess at all",
+        "explanation": "The limit is per beneficiary.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A $4,000 excess",
+        "explanation": "Only $2,000 is excess.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "A $1,000 excess",
+        "explanation": "The limit is $2,000.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Total Coverdell contributions for a beneficiary are limited to $2,000 a year from all contributors.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

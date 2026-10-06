@@ -236,7 +236,7 @@
     "answer": "d",
     "explanation": "An eligible entity that timely files Form 2553 is deemed to have elected to be an association.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-ec-05",
@@ -376,7 +376,7 @@
     "answer": "c",
     "explanation": "Reg. §301.7701-3(c)(1)(iv): 60-month limitation after an elective change.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-ec-09",
@@ -445,5 +445,175 @@
     "explanation": "§704(b) special allocations and §752 liability sharing are partnership features.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-11",
+    "pool": "practice",
+    "stem": "Which owner can claim the §199A QBI deduction on business income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A C corporation",
+        "explanation": "Corporations can't claim it.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A C corporation shareholder on dividends",
+        "explanation": "Dividends aren't QBI.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "An employee on wages",
+        "explanation": "Wages aren't QBI.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "An S corporation shareholder",
+        "explanation": "Correct. Pass-through income can qualify."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The QBI deduction is available to individuals, trusts and estates on qualified income from pass-throughs, not to C corporations.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-12",
+    "pool": "practice",
+    "stem": "An owner wants employer-paid health insurance excluded from her income. Which entity provides that for an owner-employee?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A C corporation",
+        "explanation": "Correct. C corporation shareholder-employees can exclude it."
+      },
+      {
+        "id": "b",
+        "text": "An S corporation, as a 50% owner",
+        "explanation": "More-than-2% shareholders include it.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A partnership, as a partner",
+        "explanation": "Partners include it.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A single-member LLC",
+        "explanation": "She's treated as self-employed.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Shareholder-employees of a C corporation can receive tax-free health benefits; partners and more-than-2% S shareholders can't.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ec-13",
+    "pool": "practice",
+    "stem": "A venture capital fund organized as a partnership plans to buy shares in a startup. Which entity should the startup be?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An S corporation",
+        "explanation": "Partnerships are ineligible shareholders.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A C corporation",
+        "explanation": "Correct. Partnerships can't hold S corporation stock."
+      },
+      {
+        "id": "c",
+        "text": "A sole proprietorship",
+        "explanation": "It can't issue shares.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Any entity; it doesn't matter",
+        "explanation": "S status would terminate.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "S corporation shareholders must be individuals, estates or certain trusts and exempt organizations; partnerships are ineligible.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-14",
+    "pool": "practice",
+    "stem": "How is a single-member LLC classified by default for federal tax purposes?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a C corporation",
+        "explanation": "That requires an election.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As an S corporation",
+        "explanation": "That requires an election.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As a disregarded entity",
+        "explanation": "Correct. It's treated like a sole proprietorship."
+      },
+      {
+        "id": "d",
+        "text": "As a partnership by default",
+        "explanation": "Partnerships need two members.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under check-the-box rules, a single-member LLC is disregarded unless it elects corporate classification.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-15",
+    "pool": "practice",
+    "stem": "An owner wants to withdraw each year's profits with only one level of federal income tax and no SE tax on distributions. Which entity fits best?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A C corporation",
+        "explanation": "Dividends face double tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A general partnership",
+        "explanation": "Shares are SE income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A sole proprietorship",
+        "explanation": "Profits are SE income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "An S corporation",
+        "explanation": "Correct. Distributions avoid SE tax, with reasonable salary."
+      }
+    ],
+    "answer": "d",
+    "explanation": "S corporation income is taxed once; distributions (beyond reasonable compensation) aren't subject to SE or payroll taxes.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]
