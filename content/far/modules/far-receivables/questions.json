@@ -614,5 +614,179 @@
     "explanation": "CECL: financial assets at amortized cost are presented at the net amount expected to be collected.",
     "skill": "remembering",
     "difficulty": 1
+  },
+  {
+    "id": "far-rec-17",
+    "pool": "practice",
+    "stem": "The allowance for credit losses has a $3,000 debit balance before adjustment. The required ending allowance is $25,000. What is credit loss expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Cover the debit balance.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$28,000",
+        "explanation": "Correct. $25,000 + $3,000."
+      },
+      {
+        "id": "c",
+        "text": "$22,000",
+        "explanation": "Add the debit balance.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$3,000",
+        "explanation": "That's the beginning balance.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Expense brings the allowance to the required balance; a debit balance adds to it.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-rec-18",
+    "pool": "practice",
+    "stem": "A company holds a $60,000, 90-day, 8% note for 30 days and then discounts it at a bank at 10%. What are the proceeds (360-day year)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$61,200",
+        "explanation": "Deduct the bank discount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$59,000",
+        "explanation": "Use the maturity value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$60,180",
+        "explanation": "Correct. $61,200 maturity − $1,020 discount."
+      },
+      {
+        "id": "d",
+        "text": "$60,400",
+        "explanation": "Use 60 remaining days.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Maturity value = $61,200; discount = $61,200 × 10% × 60/360 = $1,020.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-rec-19",
+    "pool": "practice",
+    "stem": "A company factors $100,000 of receivables without recourse as a sale. The factor charges a 3% fee and holds back 5%. What cash is received?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$97,000",
+        "explanation": "The holdback is retained.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$95,000",
+        "explanation": "The fee is deducted.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "Deduct the fee and holdback.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$92,000",
+        "explanation": "Correct. With a $3,000 loss and a $5,000 receivable."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Cash = face − fee − holdback; the fee is a loss, and the holdback is a receivable from the factor.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-rec-20",
+    "pool": "practice",
+    "stem": "Receivables are $1,000,000. The historical loss rate is 2%, adjusted up 0.5% for current conditions and forecasts. What allowance is needed under CECL?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Correct. 2.5% × $1,000,000."
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Adjust for current conditions.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "Apply the full rate.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "CECL needs an allowance.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "CECL uses historical loss information adjusted for current conditions and reasonable forecasts.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-rec-21",
+    "pool": "practice",
+    "stem": "Under the allowance method, how does writing off a specific uncollectible account affect net receivables?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It decreases them",
+        "explanation": "The allowance falls too.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No effect",
+        "explanation": "Correct. Both gross receivables and the allowance fall."
+      },
+      {
+        "id": "c",
+        "text": "It increases them",
+        "explanation": "Both fall equally.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "It creates an expense",
+        "explanation": "Expense was already recorded.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A write-off reduces both gross receivables and the allowance, leaving net receivables unchanged.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

@@ -618,5 +618,178 @@
     "skill": "application",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "far-con-16",
+    "pool": "practice",
+    "stem": "Parent pays $800,000 for 80% of Sub. The NCI's fair value is $190,000, and Sub's identifiable net assets are $850,000 at fair value. What is goodwill?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "Include the full NCI value.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$140,000",
+        "explanation": "Correct. $800,000 + $190,000 − $850,000."
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "That uses 80% of net assets.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Consideration exceeds net assets.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Goodwill = consideration + NCI fair value − fair value of identifiable net assets.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-con-17",
+    "pool": "practice",
+    "stem": "Sub (20% NCI) reports net income of $100,000. Amortization of acquisition-date fair value adjustments is $10,000. What is the NCI's share of consolidated net income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Deduct the amortization.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$22,000",
+        "explanation": "Amortization reduces income.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$18,000",
+        "explanation": "Correct. 20% × ($100,000 − $10,000)."
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "That is 20% of the amortization.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "NCI shares in the subsidiary's income after fair value adjustments.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-con-18",
+    "pool": "practice",
+    "stem": "How are acquirer legal and advisory fees in a business combination accounted for?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Added to goodwill",
+        "explanation": "Not part of consideration.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Capitalized as an intangible",
+        "explanation": "It doesn't meet asset criteria.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Charged to equity",
+        "explanation": "Only issue costs for stock.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Expensed as incurred",
+        "explanation": "Correct. They aren't part of consideration."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 805: acquisition-related costs are expensed; costs to issue debt or equity follow those standards.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-con-19",
+    "pool": "practice",
+    "stem": "Parent owns 80% of Sub and sells a 10% interest to outsiders for more than its carrying amount, keeping control. How is the excess treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As an equity adjustment",
+        "explanation": "Correct. No gain is recognized."
+      },
+      {
+        "id": "b",
+        "text": "As a gain in net income",
+        "explanation": "Control is retained.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As OCI",
+        "explanation": "Not an OCI item.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a reduction of goodwill",
+        "explanation": "Goodwill isn't changed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Changes in ownership that don't change control are equity transactions.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-con-20",
+    "pool": "practice",
+    "stem": "Parent owns 100% of Sub (net assets $600,000) and sells 60% for $500,000. The retained 40% has a fair value of $330,000. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$140,000",
+        "explanation": "Remeasure the retained interest.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$230,000",
+        "explanation": "Correct. $500,000 + $330,000 − $600,000."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Control was lost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Use total proceeds and fair value.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "On loss of control, gain = proceeds + fair value of retained interest − carrying amount of net assets.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

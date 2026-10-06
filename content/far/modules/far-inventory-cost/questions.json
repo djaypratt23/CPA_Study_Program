@@ -618,5 +618,176 @@
     "explanation": "Inventory cost includes purchase price, freight-in and other costs to get goods ready for sale.",
     "skill": "remembering",
     "difficulty": 1
+  },
+  {
+    "id": "far-inv-16",
+    "pool": "practice",
+    "stem": "Beginning inventory is 100 units at $10. Purchases: 200 at $13 and 100 at $16. Ending inventory is 150 units. What is ending inventory under periodic weighted average?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,400",
+        "explanation": "That's the FIFO result.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$1,500",
+        "explanation": "That's the LIFO result.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$2,100",
+        "explanation": "Use the weighted average.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$1,950",
+        "explanation": "Correct. $13 average × 150."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Weighted average cost = $5,200 ÷ 400 = $13 per unit.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-inv-17",
+    "pool": "practice",
+    "stem": "A company buys goods FOB shipping point. They ship December 29 and arrive January 4. Whose year-end inventory includes them?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The buyer's",
+        "explanation": "Correct. Title passed at shipment."
+      },
+      {
+        "id": "b",
+        "text": "The seller's",
+        "explanation": "Title passed at shipment.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Neither",
+        "explanation": "They're owned by the buyer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Split equally",
+        "explanation": "Title passes in full.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Under FOB shipping point, title passes to the buyer when goods are shipped.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-inv-18",
+    "pool": "practice",
+    "stem": "A factory runs at 60% of normal capacity. How is fixed overhead allocated to inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All of it, over actual output",
+        "explanation": "That inflates unit cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Based on normal capacity",
+        "explanation": "Correct. Unallocated overhead is a period cost."
+      },
+      {
+        "id": "c",
+        "text": "None of it; it's all expensed",
+        "explanation": "Fixed overhead is a product cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Deferred to the next year",
+        "explanation": "It's expensed, not deferred.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Fixed overhead is allocated based on normal capacity; unallocated overhead from low production is expensed.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-inv-19",
+    "pool": "practice",
+    "stem": "A jeweler sells unique, high-value pieces. Which cost flow method fits best?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "First-in, first-out",
+        "explanation": "Units aren't interchangeable.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Last-in, first-out",
+        "explanation": "Units aren't interchangeable.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Specific identification",
+        "explanation": "Correct. Each item's cost is tracked."
+      },
+      {
+        "id": "d",
+        "text": "Weighted-average cost",
+        "explanation": "Units aren't interchangeable.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Specific identification suits distinguishable, high-value items.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-inv-20",
+    "pool": "practice",
+    "stem": "A company uses LIFO for its tax return. What does the LIFO conformity rule require?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "FIFO for book purposes",
+        "explanation": "The rule is the reverse.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Nothing for book purposes",
+        "explanation": "The rule binds the books.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Disclosure of the LIFO reserve only",
+        "explanation": "LIFO must be used.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "LIFO in its financial statements",
+        "explanation": "Correct. Book and tax must both use LIFO."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The LIFO conformity rule requires a taxpayer using LIFO for tax to use LIFO for financial reporting.",
+    "skill": "analysis",
+    "difficulty": 2
   }
 ]

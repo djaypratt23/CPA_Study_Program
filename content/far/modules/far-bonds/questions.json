@@ -616,5 +616,179 @@
     "explanation": "ASU 2020-06: most convertible instruments are accounted for as a single liability.",
     "skill": "remembering",
     "difficulty": 1
+  },
+  {
+    "id": "far-bond-16",
+    "pool": "practice",
+    "stem": "A company issues $100,000 of 5-year, 8% bonds with annual interest for $104,100, a 7% yield. What is Year 1 interest expense under the effective interest method?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000",
+        "explanation": "That is the cash interest.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$7,000",
+        "explanation": "Apply the yield to carrying amount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$7,287",
+        "explanation": "Correct. $104,100 × 7%."
+      },
+      {
+        "id": "d",
+        "text": "$7,180",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Effective interest expense = carrying amount × market rate = $104,100 × 7% ≈ $7,287.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-bond-17",
+    "pool": "practice",
+    "stem": "Using the previous facts ($104,100 issue price, 7% yield, $8,000 annual coupon), what is the carrying amount after the first payment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$104,100",
+        "explanation": "Premium amortization reduces it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$104,813",
+        "explanation": "Premium amortization reduces it.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$103,280",
+        "explanation": "Use effective interest.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$103,387",
+        "explanation": "Correct. $104,100 − ($8,000 − $7,287)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Premium amortization = $8,000 − $7,287 = $713, reducing the carrying amount to $103,387.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-bond-18",
+    "pool": "practice",
+    "stem": "A company issues a $500,000, 5-year zero-coupon bond for $373,629 to yield 6%. What is Year 1 interest expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$22,418",
+        "explanation": "Correct. $373,629 × 6%."
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "There's no stated coupon.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$25,274",
+        "explanation": "Straight-line isn't used.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Interest accrues on the discount.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Interest on a zero-coupon bond accrues at the yield on its carrying amount: $373,629 × 6%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-bond-19",
+    "pool": "practice",
+    "stem": "A company issues $1,000,000 of 10-year, 6% annual-interest bonds when the market rate is 8%. PV of $1 (8%, 10) = 0.4632; PV of an ordinary annuity (8%, 10) = 6.7101. What is the issue price?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000,000",
+        "explanation": "The market rate exceeds the coupon.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$865,806",
+        "explanation": "Correct. $463,200 + $60,000 × 6.7101."
+      },
+      {
+        "id": "c",
+        "text": "$463,200",
+        "explanation": "Add the interest annuity.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$1,134,194",
+        "explanation": "It's a discount, not a premium.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Price = PV of face ($463,200) + PV of interest ($402,606) = $865,806.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-bond-20",
+    "pool": "practice",
+    "stem": "How is amortization of debt issuance costs reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As operating expense",
+        "explanation": "It adjusts interest.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As contra-equity",
+        "explanation": "Not an equity item.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As interest expense",
+        "explanation": "Correct. It's part of effective interest."
+      },
+      {
+        "id": "d",
+        "text": "As other comprehensive income",
+        "explanation": "Not an OCI item.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Debt issuance costs reduce the debt's carrying amount and are amortized as interest expense.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

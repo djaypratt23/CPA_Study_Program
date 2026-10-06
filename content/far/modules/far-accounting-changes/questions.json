@@ -612,5 +612,177 @@
     "explanation": "ASC 250: changes in accounting estimates are accounted for in the period of change and future periods.",
     "skill": "application",
     "difficulty": 1
+  },
+  {
+    "id": "far-chg-16",
+    "pool": "practice",
+    "stem": "A small company that kept its books on the cash basis switches to GAAP accrual accounting for its first audited statements. How is the switch treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a correction of an error",
+        "explanation": "Correct. Cash basis isn't GAAP, so the change corrects an error."
+      },
+      {
+        "id": "b",
+        "text": "As a change in accounting principle",
+        "explanation": "Moving from non-GAAP to GAAP isn't a principle change.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As a change in estimate",
+        "explanation": "Not an estimate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a change in reporting entity",
+        "explanation": "The entity is the same.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A change from a non-GAAP basis (such as cash basis) to GAAP is the correction of an error.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-chg-17",
+    "pool": "practice",
+    "stem": "A company changes from FIFO to average cost and presents 2 years of comparative statements. Where is the cumulative effect on periods before those presented reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In current-year net income",
+        "explanation": "That was the pre-2005 approach.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "In earliest opening retained earnings",
+        "explanation": "Correct. Retrospective application adjusts the earliest period presented."
+      },
+      {
+        "id": "c",
+        "text": "In other comprehensive income",
+        "explanation": "Not an OCI item.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Only in the notes, with no adjustment",
+        "explanation": "The balances are adjusted.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Retrospective application adjusts the carrying amounts at the start of the earliest period presented, with an offset to opening retained earnings.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-chg-18",
+    "pool": "practice",
+    "stem": "Year 1 accrued salaries of $8,000 were never recorded; the payment in Year 2 was charged to salary expense. The error is found before Year 2's books are closed. Ignoring taxes, what is the correcting entry?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dr Salary expense; Cr Retained earnings, $8,000",
+        "explanation": "That reverses the direction.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Dr Salary expense; Cr Salaries payable, $8,000",
+        "explanation": "The salaries have been paid.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Dr Retained earnings; Cr Salary expense, $8,000",
+        "explanation": "Correct. Year 1 was understated; Year 2 is overstated."
+      },
+      {
+        "id": "d",
+        "text": "No entry; the error has reversed",
+        "explanation": "Year 2's books are still open.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Because Year 2 expense includes Year 1's salaries, the correction debits retained earnings and credits Year 2 salary expense.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-chg-19",
+    "pool": "practice",
+    "stem": "A $100,000 asset (no salvage, 5-year life) was depreciated by DDB for 2 years. At the start of Year 3 the company switches to straight-line. What is Year 3 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Use the remaining carrying amount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$7,200",
+        "explanation": "That continues DDB at 40%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$14,400",
+        "explanation": "DDB on the carrying amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$12,000",
+        "explanation": "Correct. ($100,000 − $40,000 − $24,000) ÷ 3."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A change in depreciation method is a change in estimate effected by a change in principle, applied prospectively to the $36,000 carrying amount over 3 years.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-chg-20",
+    "pool": "practice",
+    "stem": "A company finds that Year 1 revenue of $50,000 was never recorded. The tax rate is 25%. How is opening Year 2 retained earnings adjusted?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Increased by $37,500",
+        "explanation": "Correct. A prior-period adjustment, net of tax."
+      },
+      {
+        "id": "b",
+        "text": "Increased by $50,000",
+        "explanation": "The adjustment is net of tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Decreased by $37,500",
+        "explanation": "Unrecorded revenue increases equity.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "No adjustment; record it in Year 2",
+        "explanation": "Errors are restated.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Correcting a prior-period error adjusts opening retained earnings, net of the related tax effect: $50,000 × 75%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

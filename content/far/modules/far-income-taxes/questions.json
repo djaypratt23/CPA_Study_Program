@@ -618,5 +618,179 @@
     "explanation": "Intraperiod tax allocation reports the tax effects of discontinued operations, OCI and other items with those items.",
     "skill": "application",
     "difficulty": 1
+  },
+  {
+    "id": "far-tax-16",
+    "pool": "practice",
+    "stem": "A company has a $200,000 deferred tax asset. It's more likely than not that only 60% will be realized. What valuation allowance is needed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "That's the realizable part.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "$80,000",
+        "explanation": "Correct. The 40% not expected to be realized."
+      },
+      {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "Part will be realized.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "An allowance is needed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A valuation allowance reduces the DTA to the amount more likely than not to be realized.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-tax-17",
+    "pool": "practice",
+    "stem": "A $100,000 taxable temporary difference will reverse equally in Year 2 (enacted rate 25%) and Year 3 (enacted rate 21%). What is the DTL at the end of Year 1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Use each year's enacted rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$21,000",
+        "explanation": "Use each year's enacted rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$23,000",
+        "explanation": "Correct. $12,500 + $10,500."
+      },
+      {
+        "id": "d",
+        "text": "$46,000",
+        "explanation": "Apply each rate to half.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Deferred taxes use enacted rates for the years the differences reverse.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-tax-18",
+    "pool": "practice",
+    "stem": "Current tax expense is $120,000. The DTL increased $15,000 and the DTA increased $5,000 (no allowance). What is total income tax expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$140,000",
+        "explanation": "A DTA increase is a benefit.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$120,000",
+        "explanation": "Add deferred expense.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$110,000",
+        "explanation": "A DTL increase is expense.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$130,000",
+        "explanation": "Correct. 120 + 15 − 5."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Total tax expense = current + (change in DTL − change in DTA).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-tax-19",
+    "pool": "practice",
+    "stem": "A tax position meets more-likely-than-not. Possible settlements: $100,000 (30%), $80,000 (30%), $50,000 (40%). What benefit is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Correct. The largest amount with over 50% cumulative probability."
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Only 30% likely.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "A larger amount qualifies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$74,000",
+        "explanation": "The expected value isn't used.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Measure the largest amount more than 50% likely to be realized on settlement, using cumulative probability.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-tax-20",
+    "pool": "practice",
+    "stem": "Goodwill from an acquisition isn't deductible for tax purposes. Is a deferred tax liability recognized on it at acquisition?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, at the enacted rate",
+        "explanation": "Not for nondeductible goodwill.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No",
+        "explanation": "Correct. ASC 740 prohibits it."
+      },
+      {
+        "id": "c",
+        "text": "Yes, as a DTA",
+        "explanation": "No deferred taxes on it.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Only if impaired",
+        "explanation": "None is recognized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "No deferred tax is recognized for the excess of book goodwill over tax-deductible goodwill when the goodwill isn't deductible.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

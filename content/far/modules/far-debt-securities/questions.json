@@ -617,5 +617,177 @@
     "skill": "application",
     "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "far-dsec-16",
+    "pool": "practice",
+    "stem": "An AFS debt security (amortized cost $100,000) was carried at $106,000 fair value with a $6,000 AOCI gain. It's sold for $108,000. What is recognized in net income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An $8,000 gain",
+        "explanation": "Correct. Including the $6,000 reclassified from AOCI."
+      },
+      {
+        "id": "b",
+        "text": "A $2,000 gain",
+        "explanation": "Include the AOCI reclassification.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "A $6,000 gain",
+        "explanation": "Use amortized cost.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "No gain; it goes to OCI",
+        "explanation": "Realized gains go to net income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "On sale, the realized gain (proceeds − amortized cost) goes to net income, and the AOCI balance is reclassified.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-17",
+    "pool": "practice",
+    "stem": "A company transfers a debt security from held-to-maturity to trading. How is the unrealized gain at transfer treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In OCI",
+        "explanation": "That applies to AFS.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "In earnings immediately",
+        "explanation": "Correct. Trading changes are in net income."
+      },
+      {
+        "id": "c",
+        "text": "It isn't recognized",
+        "explanation": "It's recognized at transfer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Amortized over the term",
+        "explanation": "Not for trading.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "On transfer to trading, the unrealized gain or loss is recognized in earnings at once.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-dsec-18",
+    "pool": "practice",
+    "stem": "An AFS debt security has amortized cost of $200,000 and fair value of $185,000. Expected credit losses are $20,000. What allowance is recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "The fair value floor applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "That is the excess.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Correct. It's limited to the fair value shortfall."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A credit loss exists.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 326-30: the AFS credit-loss allowance is limited to the amount by which fair value is below amortized cost.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-19",
+    "pool": "practice",
+    "stem": "An HTM bond has amortized cost of $98,000 and fair value of $102,000, with no expected credit losses. At what amount is it reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$102,000",
+        "explanation": "Fair value isn't used.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Par isn't used.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$4,000 above cost",
+        "explanation": "No fair value step-up.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$98,000",
+        "explanation": "Correct. HTM is measured at amortized cost."
+      }
+    ],
+    "answer": "d",
+    "explanation": "HTM debt securities are carried at amortized cost, net of any allowance.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-dsec-20",
+    "pool": "practice",
+    "stem": "For which classification of debt securities do unrealized holding gains bypass net income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Available-for-sale",
+        "explanation": "Correct. They go to OCI."
+      },
+      {
+        "id": "b",
+        "text": "Trading",
+        "explanation": "They go to net income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Held-to-maturity",
+        "explanation": "Unrealized gains aren't recognized.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Fair value option",
+        "explanation": "They go to net income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AFS unrealized holding gains and losses (other than credit losses) are reported in OCI.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

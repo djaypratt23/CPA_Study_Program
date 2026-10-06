@@ -713,5 +713,177 @@
     "skill": "application",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "far-gov-19",
+    "pool": "practice",
+    "stem": "A debt service fund pays $500,000 of bond principal and $100,000 of interest. What expenditures does it report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Principal is an expenditure too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "Interest is an expenditure too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$600,000",
+        "explanation": "Correct. Principal and interest are both expenditures."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "They're expenditures.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Governmental funds report principal and interest payments as expenditures under modified accrual.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-gov-20",
+    "pool": "practice",
+    "stem": "The general fund transfers $200,000 to the debt service fund for bond payments. How does the general fund report it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As an expenditure",
+        "explanation": "Interfund transfers aren't expenditures.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As a loan receivable",
+        "explanation": "No repayment is expected.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As a reduction of revenue",
+        "explanation": "It's a transfer.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a transfer out",
+        "explanation": "Correct. An other financing use."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Nonreciprocal interfund transfers are other financing sources and uses.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-gov-21",
+    "pool": "practice",
+    "stem": "Governmental funds report $5,000,000 of bond proceeds as an other financing source. How is this handled in reconciling to the government-wide change in net position?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Subtract it",
+        "explanation": "Correct. Bonds are a liability, not revenue, government-wide."
+      },
+      {
+        "id": "b",
+        "text": "Add it",
+        "explanation": "It's already in the fund figure.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "No adjustment",
+        "explanation": "Government-wide reports a liability.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Report it as revenue",
+        "explanation": "Debt proceeds aren't revenue.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Debt proceeds increase fund balance but not net position, so the reconciliation subtracts them.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-gov-22",
+    "pool": "practice",
+    "stem": "In a governmental fund, when is an expenditure for compensated absences recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "When earned by employees",
+        "explanation": "That is government-wide.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "When the amounts mature and are due",
+        "explanation": "Correct. Under modified accrual."
+      },
+      {
+        "id": "c",
+        "text": "At year-end for all balances",
+        "explanation": "Only matured amounts.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "When budgeted",
+        "explanation": "Budgets don't drive expenditures.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Under modified accrual, compensated absences are recognized as expenditures when they mature (e.g., employees leave).",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-gov-23",
+    "pool": "practice",
+    "stem": "A government has $10,000,000 of capital assets (net) and $6,000,000 of related outstanding debt. What is net investment in capital assets?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000,000",
+        "explanation": "Deduct related debt.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$6,000,000",
+        "explanation": "That is the debt.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$4,000,000",
+        "explanation": "Correct. Net capital assets less related debt."
+      },
+      {
+        "id": "d",
+        "text": "$16,000,000",
+        "explanation": "Debt is subtracted.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Net investment in capital assets = capital assets net of depreciation − related outstanding debt.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

@@ -7,7 +7,7 @@ import { loadContent } from '../scripts/load-content'
 const { bundle } = loadContent()
 
 /** Raised section by section as each expansion round lands. */
-const MIN_PRACTICE_PER_MODULE: Record<string, number> = { FAR: 15, AUD: 15, REG: 15, TCP: 15 }
+const MIN_PRACTICE_PER_MODULE: Record<string, number> = { FAR: 20, AUD: 15, REG: 15, TCP: 15 }
 /** Sections whose difficulty levels have been spread (1–3). */
 const DIFFICULTY_SPREAD = new Set(['FAR', 'AUD', 'REG', 'TCP'])
 

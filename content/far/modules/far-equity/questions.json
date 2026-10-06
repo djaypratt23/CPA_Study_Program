@@ -618,5 +618,178 @@
     "skill": "application",
     "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "far-seq-16",
+    "pool": "practice",
+    "stem": "A company bought 1,000 treasury shares at $30 (cost method) and later resold 600 at $35. What is credited to APIC–treasury stock?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Only 600 shares were sold.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$21,000",
+        "explanation": "That is the proceeds.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The excess is credited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$3,000",
+        "explanation": "Correct. 600 × $5."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Resale above cost credits APIC–treasury stock for the excess.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-seq-17",
+    "pool": "practice",
+    "stem": "Treasury shares bought at $30 (cost method) are resold: 400 shares at $25. There's no APIC–treasury stock balance. What is debited for the shortfall?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Retained earnings, $2,000",
+        "explanation": "Correct. With no APIC–treasury, retained earnings absorbs it."
+      },
+      {
+        "id": "b",
+        "text": "A loss in net income, $2,000",
+        "explanation": "No gains or losses on own shares.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "APIC–common, $2,000",
+        "explanation": "Not the source.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Treasury stock, $2,000",
+        "explanation": "Treasury stock is credited at cost.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Shortfalls on treasury resales reduce APIC–treasury stock first, then retained earnings.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-seq-18",
+    "pool": "practice",
+    "stem": "Shares originally issued at $10 ($1 par) were bought back at $15 under the cost method. The company retires 1,000 of them. There's no APIC–treasury balance. What is debited to retained earnings?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$14,000",
+        "explanation": "Remove par and APIC first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Correct. The excess over the original issue price."
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Remove par and APIC first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The excess hits retained earnings.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "On retirement, remove par ($1,000) and original APIC ($9,000); the remaining $5,000 reduces retained earnings.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-seq-19",
+    "pool": "practice",
+    "stem": "A company pays a dividend larger than its retained earnings. How is the excess treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a negative retained earnings balance",
+        "explanation": "Liquidating dividends reduce paid-in capital.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As an expense",
+        "explanation": "Dividends aren't expenses.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As a liquidating dividend reducing APIC",
+        "explanation": "Correct. It's a return of capital."
+      },
+      {
+        "id": "d",
+        "text": "As a liability",
+        "explanation": "Paid dividends aren't liabilities.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A dividend in excess of retained earnings is a liquidating dividend, a return of contributed capital.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-seq-20",
+    "pool": "practice",
+    "stem": "How does an SEC registrant present stock subscriptions receivable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a current asset",
+        "explanation": "The SEC requires contra-equity.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As a noncurrent asset",
+        "explanation": "The SEC requires contra-equity.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Not reported at all",
+        "explanation": "It is reported in equity.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As contra-equity",
+        "explanation": "Correct. A contra-equity account."
+      }
+    ],
+    "answer": "d",
+    "explanation": "SEC registrants present subscriptions receivable as a deduction from equity.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]
