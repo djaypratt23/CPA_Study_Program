@@ -1,0 +1,79 @@
+{
+  "id": "tcp-tbs-r3-ubti",
+  "section": "TCP",
+  "unitId": "tcp-u5",
+  "moduleIds": [
+    "tcp-exempt-organizations"
+  ],
+  "pool": "practice",
+  "title": "Unrelated business taxable income — Riverside Arts Center",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Riverside Arts Center, a §501(c)(3) corporation, has the activities below. Compute its UBTI and tax.",
+  "exhibits": [
+    {
+      "title": "Activities",
+      "content": "- A café open to the public, staffed by paid employees: revenue **$200,000**, directly connected expenses **$150,000**\n- An office building it rents out: rent **$100,000**, expenses **$40,000**; average acquisition debt **$300,000**; average adjusted basis **$1,000,000**\n- Royalties for licensing its logo: **$20,000**\n- A gift shop run entirely by volunteers: net income **$50,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "cafe",
+          "label": "UBTI from the café",
+          "answer": 50000,
+          "explanation": "200,000 − 150,000 = **50,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dfp",
+          "label": "UBTI from the debt-financed building",
+          "answer": 18000,
+          "explanation": "(100,000 − 40,000) × 300,000/1,000,000 = **18,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ubti",
+          "label": "UBTI after the specific deduction",
+          "answer": 67000,
+          "explanation": "50,000 + 18,000 − 1,000 = **67,000**; royalties and volunteer-run activities are excluded.",
+          "tolerance": 0
+        },
+        {
+          "id": "tax",
+          "label": "Tax on UBTI",
+          "answer": 14070,
+          "explanation": "21% × 67,000 = **14,070**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Must Riverside file Form 990-T?",
+          "answer": "Yes",
+          "explanation": "Gross UBI is $1,000 or more."
+        },
+        {
+          "id": "q2",
+          "label": "Could a loss from the café offset income from a different unrelated business?",
+          "answer": "No",
+          "explanation": "Each unrelated trade or business is computed separately."
+        }
+      ]
+    }
+  ]
+}

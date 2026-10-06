@@ -1,0 +1,82 @@
+{
+  "id": "tcp-tbs-r3-liquidation",
+  "section": "TCP",
+  "unitId": "tcp-u6",
+  "moduleIds": [
+    "tcp-formation-liquidation"
+  ],
+  "pool": "practice",
+  "title": "Liquidation tax cost — Vale Corp.",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Vale Corp. completely liquidates. It distributes land (FMV **$500,000**; basis **$200,000**) to its sole individual shareholder, whose stock basis is **$100,000**. Vale pays its corporate tax from cash before the distribution. The shareholder's capital gain rate, including NIIT, is **23.8%**.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "cg",
+          "label": "Vale's recognized gain",
+          "answer": 300000,
+          "explanation": "500,000 − 200,000 = **300,000** under §336.",
+          "tolerance": 0
+        },
+        {
+          "id": "ctx",
+          "label": "Vale's tax on the gain",
+          "answer": 63000,
+          "explanation": "21% × 300,000 = **63,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "sg",
+          "label": "Shareholder's recognized gain",
+          "answer": 400000,
+          "explanation": "500,000 − 100,000 = **400,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "stx",
+          "label": "Shareholder's tax",
+          "answer": 95200,
+          "explanation": "23.8% × 400,000 = **95,200**.",
+          "tolerance": 0
+        },
+        {
+          "id": "tot",
+          "label": "Total tax cost of the liquidation",
+          "answer": 158200,
+          "explanation": "63,000 + 95,200 = **158,200**.",
+          "tolerance": 0
+        },
+        {
+          "id": "sb",
+          "label": "Shareholder's basis in the land",
+          "answer": 500000,
+          "explanation": "FMV: **500,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "If instead Vale were an 85%-owned subsidiary liquidating into its corporate parent, what would happen?",
+      "options": [
+        "No gain to either party",
+        "Gain to both parties"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Effect of §332 and §337",
+          "answer": "No gain to either party",
+          "explanation": "A parent-subsidiary liquidation is tax-free to both."
+        }
+      ]
+    }
+  ]
+}

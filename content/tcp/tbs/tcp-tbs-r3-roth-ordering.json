@@ -1,0 +1,56 @@
+{
+  "id": "tcp-tbs-r3-roth-ordering",
+  "section": "TCP",
+  "unitId": "tcp-u2",
+  "moduleIds": [
+    "tcp-retirement-education"
+  ],
+  "pool": "practice",
+  "title": "Roth IRA distribution ordering — Celia Grant",
+  "minutes": 15,
+  "skill": "application",
+  "instructions": "Celia Grant, age 45, takes a **$60,000** nonqualified distribution from her Roth IRA (first funded 9 years ago). Compute the tax results.",
+  "exhibits": [
+    {
+      "title": "Account history",
+      "content": "Regular contributions: **$30,000**\nConversion from a traditional IRA 6 years ago (fully taxed then): **$20,000**\nEarnings: **$15,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "c",
+          "label": "Amount treated as a return of contributions",
+          "answer": 30000,
+          "explanation": "Contributions come out first, tax-free: **30,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "cv",
+          "label": "Amount treated as a return of the conversion",
+          "answer": 20000,
+          "explanation": "Conversions come out next; the 5-year period has passed, so no penalty: **20,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "e",
+          "label": "Taxable earnings distributed",
+          "answer": 10000,
+          "explanation": "60,000 − 50,000 = **10,000** of earnings.",
+          "tolerance": 0
+        },
+        {
+          "id": "pen",
+          "label": "10% early distribution penalty",
+          "answer": 1000,
+          "explanation": "10% × 10,000 = **1,000**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

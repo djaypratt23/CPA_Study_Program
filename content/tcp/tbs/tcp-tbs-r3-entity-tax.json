@@ -1,0 +1,87 @@
+{
+  "id": "tcp-tbs-r3-entity-tax",
+  "section": "TCP",
+  "unitId": "tcp-u6",
+  "moduleIds": [
+    "tcp-entity-choice"
+  ],
+  "pool": "practice",
+  "title": "C corporation vs pass-through — Lumina Studio",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Lumina Studio expects **$400,000** of business income. Its owner is in the 37% bracket. Compare the federal income tax under two structures. Assume all after-tax C corporation earnings are paid as qualified dividends taxed at **23.8%**, and that the pass-through income qualifies for the full 20% QBI deduction. Ignore payroll and state taxes.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "ct",
+          "label": "C corporation tax",
+          "answer": 84000,
+          "explanation": "400,000 × 21% = **84,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dt",
+          "label": "Shareholder tax on dividends",
+          "answer": 75208,
+          "explanation": "(400,000 − 84,000) × 23.8% = **75,208**.",
+          "tolerance": 0
+        },
+        {
+          "id": "tc",
+          "label": "Total tax — C corporation",
+          "answer": 159208,
+          "explanation": "84,000 + 75,208 = **159,208**.",
+          "tolerance": 0
+        },
+        {
+          "id": "pt",
+          "label": "Total tax — pass-through",
+          "answer": 118400,
+          "explanation": "(400,000 − 80,000 QBI deduction) × 37% = **118,400**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dif",
+          "label": "Tax saved by the pass-through",
+          "answer": 40808,
+          "explanation": "159,208 − 118,400 = **40,808**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Which structure better fits each goal?",
+      "options": [
+        "C corporation",
+        "Pass-through entity"
+      ],
+      "rows": [
+        {
+          "id": "g1",
+          "label": "Reinvesting all profits for years at a flat 21% rate",
+          "answer": "C corporation",
+          "explanation": "Retained earnings are taxed only at 21% until distributed."
+        },
+        {
+          "id": "g2",
+          "label": "Passing early-year losses through to offset other income",
+          "answer": "Pass-through entity",
+          "explanation": "Losses flow through to owners."
+        },
+        {
+          "id": "g3",
+          "label": "Raising money from a venture fund organized as a partnership",
+          "answer": "C corporation",
+          "explanation": "Partnerships can't hold S corporation stock."
+        }
+      ]
+    }
+  ]
+}

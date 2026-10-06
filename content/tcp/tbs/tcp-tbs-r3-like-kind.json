@@ -1,0 +1,63 @@
+{
+  "id": "tcp-tbs-r3-like-kind",
+  "section": "TCP",
+  "unitId": "tcp-u7",
+  "moduleIds": [
+    "tcp-deferral-transactions"
+  ],
+  "pool": "practice",
+  "title": "Like-kind exchange with boot and debt — Sloane Properties",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Sloane Properties exchanges an investment building for another investment building.",
+  "exhibits": [
+    {
+      "title": "Exchange",
+      "content": "**Given up:** building with adjusted basis **$400,000**, FMV **$700,000**, subject to a **$200,000** mortgage assumed by the other party.\n**Received:** building with FMV **$600,000**, subject to a **$150,000** mortgage Sloane assumes, plus **$50,000** cash."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "ar",
+          "label": "Amount realized",
+          "answer": 700000,
+          "explanation": "600,000 + 50,000 + 200,000 relieved − 150,000 assumed = **700,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "rg",
+          "label": "Realized gain",
+          "answer": 300000,
+          "explanation": "700,000 − 400,000 = **300,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "boot",
+          "label": "Total boot received",
+          "answer": 100000,
+          "explanation": "Cash 50,000 + net liability relief (200,000 − 150,000) = **100,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "rec",
+          "label": "Recognized gain",
+          "answer": 100000,
+          "explanation": "Lesser of realized gain or boot: **100,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "nb",
+          "label": "Basis of the new building",
+          "answer": 400000,
+          "explanation": "600,000 FMV − 200,000 deferred gain = **400,000**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

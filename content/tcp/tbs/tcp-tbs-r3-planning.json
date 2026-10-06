@@ -1,0 +1,57 @@
+{
+  "id": "tcp-tbs-r3-planning",
+  "section": "TCP",
+  "unitId": "tcp-u1",
+  "moduleIds": [
+    "tcp-individual-planning"
+  ],
+  "pool": "practice",
+  "title": "Year-end planning — four clients",
+  "minutes": 15,
+  "skill": "evaluation",
+  "instructions": "Evaluate whether each proposed strategy fits the client's situation.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Evaluate each strategy.",
+      "options": [
+        "Good fit",
+        "Poor fit"
+      ],
+      "rows": [
+        {
+          "id": "s1",
+          "label": "A retiree, 74, must take an RMD and gives $15,000 a year to her church; she takes the standard deduction. Strategy: a qualified charitable distribution from her IRA.",
+          "answer": "Good fit",
+          "explanation": "A QCD counts toward the RMD and keeps the gift out of AGI, which helps a non-itemizer."
+        },
+        {
+          "id": "s2",
+          "label": "A client in a temporary low-income year. Strategy: convert part of a traditional IRA to a Roth IRA.",
+          "answer": "Good fit",
+          "explanation": "Conversion income is taxed at low marginal rates."
+        },
+        {
+          "id": "s3",
+          "label": "A client wants to give stock that has fallen below her basis to her grandson. Strategy: give the shares directly.",
+          "answer": "Poor fit",
+          "explanation": "The donee can't use her loss; she should sell, take the loss and give cash."
+        },
+        {
+          "id": "s4",
+          "label": "A client in the 0% capital gains bracket holds appreciated stock. Strategy: sell and repurchase to raise basis.",
+          "answer": "Good fit",
+          "explanation": "Gains taxed at 0% step up basis; the wash sale rule doesn't apply to gains."
+        },
+        {
+          "id": "s5",
+          "label": "A parent wants to shift $20,000 of interest income to her 10-year-old to save tax. Strategy: transfer bonds to the child.",
+          "answer": "Poor fit",
+          "explanation": "The kiddie tax taxes the child's unearned income above the threshold at the parent's rate."
+        }
+      ]
+    }
+  ]
+}

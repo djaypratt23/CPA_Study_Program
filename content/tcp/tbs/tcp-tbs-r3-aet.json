@@ -1,0 +1,90 @@
+{
+  "id": "tcp-tbs-r3-aet",
+  "section": "TCP",
+  "unitId": "tcp-u3",
+  "moduleIds": [
+    "tcp-c-corp-compliance"
+  ],
+  "pool": "practice",
+  "title": "Accumulated earnings and PHC taxes — two corporations",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Compute the penalty taxes for two C corporations.",
+  "exhibits": [
+    {
+      "title": "Brookfield Inc. (operating company)",
+      "content": "Taxable income: **$1,000,000**; federal income tax: **$210,000**; dividends paid: **$100,000**; accumulated earnings credit (reasonable business needs): **$300,000**. Assume no other adjustments."
+    },
+    {
+      "title": "Lyle Holdings (investment company)",
+      "content": "Adjusted ordinary gross income: **$500,000**, of which **$350,000** is dividends and interest. Five individuals own 80% of the stock all year. Undistributed personal holding company income after the dividends-paid deduction: **$150,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "aeti",
+          "label": "Brookfield's accumulated taxable income",
+          "answer": 390000,
+          "explanation": "1,000,000 − 210,000 − 100,000 − 300,000 = **390,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "aet",
+          "label": "Brookfield's accumulated earnings tax",
+          "answer": 78000,
+          "explanation": "20% × 390,000 = **78,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "pct",
+          "label": "Lyle's PHC income as a percentage of AOGI",
+          "answer": 70,
+          "explanation": "350,000 ÷ 500,000 = **70%**.",
+          "tolerance": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "phc",
+          "label": "Lyle's personal holding company tax",
+          "answer": 30000,
+          "explanation": "20% × 150,000 = **30,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Does Lyle meet both PHC tests?",
+          "answer": "Yes",
+          "explanation": "70% exceeds the 60% income test, and 5 individuals own over 50%."
+        },
+        {
+          "id": "q2",
+          "label": "Can a corporation owe both the PHC tax and the accumulated earnings tax in the same year?",
+          "answer": "No",
+          "explanation": "A PHC isn't subject to the accumulated earnings tax."
+        },
+        {
+          "id": "q3",
+          "label": "Could Lyle reduce the PHC tax with consent dividends?",
+          "answer": "Yes",
+          "explanation": "Consent dividends give a dividends-paid deduction without cash."
+        }
+      ]
+    }
+  ]
+}

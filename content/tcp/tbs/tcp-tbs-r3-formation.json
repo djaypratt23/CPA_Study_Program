@@ -1,0 +1,70 @@
+{
+  "id": "tcp-tbs-r3-formation",
+  "section": "TCP",
+  "unitId": "tcp-u4",
+  "moduleIds": [
+    "tcp-partnership-formation"
+  ],
+  "pool": "practice",
+  "title": "Partnership formation with debt — Avery and Beck",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Avery and Beck form AB Partners as equal partners. The mortgage is a recourse liability shared equally.",
+  "exhibits": [
+    {
+      "title": "Contributions",
+      "content": "**Avery:** a building (adjusted basis **$300,000**; FMV **$500,000**) subject to a **$200,000** mortgage the partnership assumes.\n**Beck:** cash of **$300,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "rel",
+          "label": "Avery's net liability relief",
+          "answer": 100000,
+          "explanation": "200,000 relieved − 100,000 (her 50% share) = **100,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ga",
+          "label": "Gain Avery recognizes",
+          "answer": 0,
+          "explanation": "Net relief (100,000) doesn't exceed her basis (300,000): **0**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ba",
+          "label": "Avery's outside basis",
+          "answer": 200000,
+          "explanation": "300,000 − 200,000 + 100,000 = **200,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "bb",
+          "label": "Beck's outside basis",
+          "answer": 400000,
+          "explanation": "300,000 cash + 100,000 share of the mortgage = **400,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ib",
+          "label": "Partnership's basis in the building",
+          "answer": 300000,
+          "explanation": "Carryover basis under §723: **300,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "big",
+          "label": "Built-in gain allocated to Avery if the building is sold for $500,000",
+          "answer": 200000,
+          "explanation": "§704(c): 500,000 − 300,000 = **200,000** goes to Avery.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

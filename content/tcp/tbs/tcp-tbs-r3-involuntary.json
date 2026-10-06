@@ -1,0 +1,75 @@
+{
+  "id": "tcp-tbs-r3-involuntary",
+  "section": "TCP",
+  "unitId": "tcp-u7",
+  "moduleIds": [
+    "tcp-deferral-transactions"
+  ],
+  "pool": "practice",
+  "title": "Involuntary conversion — Kestrel Warehousing",
+  "minutes": 15,
+  "skill": "application",
+  "instructions": "A fire destroys Kestrel Warehousing's building (adjusted basis **$300,000**). Insurance pays **$650,000**. Within 2 years Kestrel buys a replacement building for **$600,000** and elects §1033.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "real",
+          "label": "Realized gain",
+          "answer": 350000,
+          "explanation": "650,000 − 300,000 = **350,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "rec",
+          "label": "Recognized gain",
+          "answer": 50000,
+          "explanation": "Proceeds not reinvested: 650,000 − 600,000 = **50,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "def",
+          "label": "Deferred gain",
+          "answer": 300000,
+          "explanation": "350,000 − 50,000 = **300,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "nb",
+          "label": "Basis of the replacement building",
+          "answer": 300000,
+          "explanation": "600,000 − 300,000 deferred = **300,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "What is the replacement period?",
+      "options": [
+        "2 years after the year of gain",
+        "3 years after the year of gain",
+        "180 days"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Fire destruction of a business building",
+          "answer": "2 years after the year of gain",
+          "explanation": "The general §1033 replacement period."
+        },
+        {
+          "id": "q2",
+          "label": "Condemnation of business real property",
+          "answer": "3 years after the year of gain",
+          "explanation": "Condemned business or investment real property gets 3 years."
+        }
+      ]
+    }
+  ]
+}

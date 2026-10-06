@@ -1,0 +1,85 @@
+{
+  "id": "tcp-tbs-r3-passive",
+  "section": "TCP",
+  "unitId": "tcp-u1",
+  "moduleIds": [
+    "tcp-passive-rental"
+  ],
+  "pool": "practice",
+  "title": "Passive activity losses — Gavin Reyes",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Gavin Reyes (MAGI **$120,000**, single) has the activities below for 2025. He isn't a real estate professional.",
+  "exhibits": [
+    {
+      "title": "Activities",
+      "content": "- Rental house he manages himself (active participation): loss **$20,000**\n- Limited partnership interest (no participation): income **$4,000**\n- Software business where he works 600 hours: income **$60,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "net",
+          "label": "Net passive loss before the special allowance",
+          "answer": 16000,
+          "explanation": "Passive items net: 20,000 loss − 4,000 LP income = **16,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "alw",
+          "label": "Maximum rental real estate special allowance",
+          "answer": 15000,
+          "explanation": "25,000 − 50% × (120,000 − 100,000) = **15,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ded",
+          "label": "Passive loss deductible against nonpassive income",
+          "answer": 15000,
+          "explanation": "Lesser of the 16,000 net loss or the 15,000 allowance = **15,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "sus",
+          "label": "Suspended passive loss carried forward",
+          "answer": 1000,
+          "explanation": "16,000 − 15,000 = **1,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Classify each activity.",
+      "options": [
+        "Passive",
+        "Nonpassive"
+      ],
+      "rows": [
+        {
+          "id": "a1",
+          "label": "Rental house",
+          "answer": "Passive",
+          "explanation": "Rentals are passive unless he's a real estate professional; active participation only unlocks the allowance."
+        },
+        {
+          "id": "a2",
+          "label": "Limited partnership interest",
+          "answer": "Passive",
+          "explanation": "Limited partners generally don't materially participate."
+        },
+        {
+          "id": "a3",
+          "label": "Software business (600 hours)",
+          "answer": "Nonpassive",
+          "explanation": "Over 500 hours is material participation."
+        }
+      ]
+    }
+  ]
+}

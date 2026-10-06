@@ -1,0 +1,82 @@
+{
+  "id": "tcp-tbs-r3-installment",
+  "section": "TCP",
+  "unitId": "tcp-u7",
+  "moduleIds": [
+    "tcp-deferral-transactions"
+  ],
+  "pool": "practice",
+  "title": "Installment sale — Teague Farms",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Teague Farms sells investment land (basis **$120,000**) for **$400,000**: **$80,000** down, the buyer assumes a **$60,000** mortgage, and the rest is a note. Principal received in Year 2 is **$52,000**. Round to the nearest dollar.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "cp",
+          "label": "Contract price",
+          "answer": 340000,
+          "explanation": "400,000 − 60,000 mortgage assumed (not over basis) = **340,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "gp",
+          "label": "Gross profit",
+          "answer": 280000,
+          "explanation": "400,000 − 120,000 = **280,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "pct",
+          "label": "Gross profit percentage",
+          "answer": 82.35,
+          "explanation": "280,000 ÷ 340,000 = **82.35%**.",
+          "tolerance": 0.01,
+          "unit": "%"
+        },
+        {
+          "id": "y1",
+          "label": "Gain recognized in Year 1",
+          "answer": 65882,
+          "explanation": "80,000 × 82.35% = **65,882**.",
+          "tolerance": 2
+        },
+        {
+          "id": "y2",
+          "label": "Gain recognized in Year 2",
+          "answer": 42824,
+          "explanation": "52,000 × 82.35% = **42,824**.",
+          "tolerance": 2
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "If Teague sold the land to its controlling shareholder's son, who resold it within 2 years, would Teague's deferred gain be accelerated?",
+          "answer": "Yes",
+          "explanation": "The related-party resale rule accelerates the gain."
+        },
+        {
+          "id": "q2",
+          "label": "Could a dealer use the installment method for inventory sales?",
+          "answer": "No",
+          "explanation": "Dealer and inventory sales are excluded."
+        }
+      ]
+    }
+  ]
+}

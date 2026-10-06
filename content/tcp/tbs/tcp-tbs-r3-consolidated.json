@@ -1,0 +1,79 @@
+{
+  "id": "tcp-tbs-r3-consolidated",
+  "section": "TCP",
+  "unitId": "tcp-u3",
+  "moduleIds": [
+    "tcp-consolidated-returns"
+  ],
+  "pool": "practice",
+  "title": "Consolidated taxable income — Granite Group",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Granite Corp. owns 100% of Sub A and Sub B; they file a consolidated return for 2025. Compute consolidated taxable income.",
+  "exhibits": [
+    {
+      "title": "Separate taxable incomes (before consolidation adjustments)",
+      "content": "- Granite: **$800,000**, including a **$100,000** dividend from Sub A\n- Sub A: **$300,000**, including a **$50,000** gain on land sold to Granite (Granite still holds the land)\n- Sub B: **$(200,000)** operating loss"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "g",
+          "label": "Granite's income after eliminating the intercompany dividend",
+          "answer": 700000,
+          "explanation": "800,000 − 100,000 = **700,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "a",
+          "label": "Sub A's income after deferring the intercompany gain",
+          "answer": 250000,
+          "explanation": "300,000 − 50,000 = **250,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "cti",
+          "label": "Consolidated taxable income",
+          "answer": 750000,
+          "explanation": "700,000 + 250,000 − 200,000 = **750,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "tax",
+          "label": "Consolidated regular tax",
+          "answer": 157500,
+          "explanation": "750,000 × 21% = **157,500**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Is the deferred land gain recognized when Granite sells the land to an outsider?",
+          "answer": "Yes",
+          "explanation": "Intercompany gain is taken into account when the property leaves the group."
+        },
+        {
+          "id": "q2",
+          "label": "Could Sub B's loss offset Granite's income without a consolidated return?",
+          "answer": "No",
+          "explanation": "Separate returns don't share losses."
+        }
+      ]
+    }
+  ]
+}

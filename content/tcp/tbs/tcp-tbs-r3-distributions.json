@@ -1,0 +1,90 @@
+{
+  "id": "tcp-tbs-r3-distributions",
+  "section": "TCP",
+  "unitId": "tcp-u4",
+  "moduleIds": [
+    "tcp-partnership-distributions"
+  ],
+  "pool": "practice",
+  "title": "Partnership distributions — Dalia and Emre",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Compute the results of two distributions from Harbor Partners (no §751 issues unless stated, no marketable securities).",
+  "exhibits": [
+    {
+      "title": "Dalia — current distribution",
+      "content": "Outside basis before the distribution: **$50,000**. She receives cash **$10,000**, inventory (partnership basis **$15,000**; FMV **$20,000**) and land (partnership basis **$40,000**; FMV **$60,000**)."
+    },
+    {
+      "title": "Emre — liquidating distribution",
+      "content": "Outside basis: **$80,000**. He receives cash **$30,000** and inventory (partnership basis **$20,000**) in complete liquidation."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following (enter losses as positive amounts).",
+      "rows": [
+        {
+          "id": "dg",
+          "label": "Dalia's recognized gain",
+          "answer": 0,
+          "explanation": "Cash (10,000) doesn't exceed basis: **0**.",
+          "tolerance": 0
+        },
+        {
+          "id": "di",
+          "label": "Dalia's basis in the inventory",
+          "answer": 15000,
+          "explanation": "Inventory takes carryover basis: **15,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dl",
+          "label": "Dalia's basis in the land",
+          "answer": 25000,
+          "explanation": "Remaining basis: 50,000 − 10,000 − 15,000 = **25,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dob",
+          "label": "Dalia's outside basis after the distribution",
+          "answer": 0,
+          "explanation": "All basis is used: **0**.",
+          "tolerance": 0
+        },
+        {
+          "id": "el",
+          "label": "Emre's recognized loss",
+          "answer": 30000,
+          "explanation": "Only cash and inventory: 80,000 − 30,000 − 20,000 = **30,000** capital loss.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "If Dalia sells the inventory within 5 years, is the gain ordinary?",
+          "answer": "Yes",
+          "explanation": "Distributed inventory keeps its ordinary character for 5 years."
+        },
+        {
+          "id": "q2",
+          "label": "Does Dalia's holding period for the land include the partnership's?",
+          "answer": "Yes",
+          "explanation": "Distributed property's holding period tacks."
+        }
+      ]
+    }
+  ]
+}

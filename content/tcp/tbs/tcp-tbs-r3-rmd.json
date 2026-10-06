@@ -1,0 +1,67 @@
+{
+  "id": "tcp-tbs-r3-rmd",
+  "section": "TCP",
+  "unitId": "tcp-u2",
+  "moduleIds": [
+    "tcp-retirement-education"
+  ],
+  "pool": "practice",
+  "title": "Required minimum distributions — Harold Beck",
+  "minutes": 15,
+  "skill": "application",
+  "instructions": "Harold Beck turns 75 in 2025. His traditional IRA balance on December 31, 2024 was **$1,000,000**. The Uniform Lifetime Table factor for age 75 is **24.6**. Round to the nearest dollar.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "rmd",
+          "label": "2025 RMD",
+          "answer": 40650,
+          "explanation": "1,000,000 ÷ 24.6 = **40,650**.",
+          "tolerance": 1
+        },
+        {
+          "id": "ex",
+          "label": "Excise tax if the RMD is missed and not corrected timely",
+          "answer": 10163,
+          "explanation": "25% × 40,650 = **10,163**.",
+          "tolerance": 2
+        },
+        {
+          "id": "cor",
+          "label": "Excise tax if the RMD is corrected within the correction window",
+          "answer": 4065,
+          "explanation": "10% × 40,650 = **4,065**.",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Would a QCD from this IRA count toward the RMD?",
+          "answer": "Yes",
+          "explanation": "QCDs satisfy RMDs."
+        },
+        {
+          "id": "q2",
+          "label": "Must Harold take lifetime RMDs from a Roth IRA he owns?",
+          "answer": "No",
+          "explanation": "Roth IRA owners have no lifetime RMDs."
+        }
+      ]
+    }
+  ]
+}

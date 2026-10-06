@@ -1,0 +1,79 @@
+{
+  "id": "tcp-tbs-r3-form4797",
+  "section": "TCP",
+  "unitId": "tcp-u7",
+  "moduleIds": [
+    "tcp-asset-dispositions"
+  ],
+  "pool": "practice",
+  "title": "Business property sales — Kiran Patel",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Kiran Patel, a sole proprietor, sold three business assets held over a year in 2025. He has no prior §1231 losses.",
+  "exhibits": [
+    {
+      "title": "Sales",
+      "content": "- Equipment: cost **$80,000**; accumulated depreciation **$50,000**; sold for **$70,000**\n- Building: cost **$500,000**; straight-line depreciation **$100,000**; sold for **$550,000**\n- Land: basis **$120,000**; sold for **$100,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "rec",
+          "label": "§1245 ordinary income on the equipment",
+          "answer": 40000,
+          "explanation": "Gain 40,000 (70,000 − 30,000) is all recapture, up to 50,000 of depreciation: **40,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "bg",
+          "label": "Gain on the building",
+          "answer": 150000,
+          "explanation": "550,000 − 400,000 = **150,000** (§1231).",
+          "tolerance": 0
+        },
+        {
+          "id": "net",
+          "label": "Net §1231 gain",
+          "answer": 130000,
+          "explanation": "150,000 − 20,000 land loss = **130,000**, treated as long-term capital gain.",
+          "tolerance": 0
+        },
+        {
+          "id": "u",
+          "label": "Unrecaptured §1250 gain (25% maximum rate)",
+          "answer": 100000,
+          "explanation": "Straight-line depreciation on the building, limited to the net §1231 gain: **100,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "If Kiran had a $30,000 unrecaptured net §1231 loss from 2022, would part of this year's net §1231 gain be ordinary?",
+          "answer": "Yes",
+          "explanation": "The 5-year lookback recaptures prior net §1231 losses as ordinary income."
+        },
+        {
+          "id": "q2",
+          "label": "Is there §1250 ordinary recapture on the building for an individual using straight-line depreciation?",
+          "answer": "No",
+          "explanation": "Only depreciation in excess of straight-line is §1250 ordinary recapture."
+        }
+      ]
+    }
+  ]
+}

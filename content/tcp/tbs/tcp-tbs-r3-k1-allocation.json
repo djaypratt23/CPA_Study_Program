@@ -1,0 +1,86 @@
+{
+  "id": "tcp-tbs-r3-k1-allocation",
+  "section": "TCP",
+  "unitId": "tcp-u4",
+  "moduleIds": [
+    "tcp-partnership-operations"
+  ],
+  "pool": "practice",
+  "title": "Allocating partnership income — Corbel LLP",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Corbel LLP has two partners: Alba (40%) and Bram (60%). Alba receives a **$60,000** guaranteed payment for services.",
+  "exhibits": [
+    {
+      "title": "2025 results (before the guaranteed payment)",
+      "content": "Revenue: **$600,000**\nOperating expenses: **$300,000**\nCharitable contributions: **$10,000**\nNet long-term capital gain: **$20,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "obi",
+          "label": "Partnership ordinary business income",
+          "answer": 240000,
+          "explanation": "600,000 − 300,000 − 60,000 = **240,000**; charitable gifts and capital gain are separately stated.",
+          "tolerance": 0
+        },
+        {
+          "id": "ao",
+          "label": "Alba's share of ordinary business income",
+          "answer": 96000,
+          "explanation": "40% × 240,000 = **96,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "at",
+          "label": "Alba's total ordinary income from Corbel",
+          "answer": 156000,
+          "explanation": "96,000 + 60,000 guaranteed payment = **156,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ac",
+          "label": "Alba's share of charitable contributions",
+          "answer": 4000,
+          "explanation": "40% × 10,000 = **4,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "bg",
+          "label": "Bram's share of net long-term capital gain",
+          "answer": 12000,
+          "explanation": "60% × 20,000 = **12,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Is Alba's guaranteed payment subject to self-employment tax?",
+          "answer": "Yes",
+          "explanation": "Guaranteed payments for services are SE income."
+        },
+        {
+          "id": "q2",
+          "label": "Does the guaranteed payment increase Alba's outside basis?",
+          "answer": "No",
+          "explanation": "It's paid to her, not retained in the partnership."
+        }
+      ]
+    }
+  ]
+}
