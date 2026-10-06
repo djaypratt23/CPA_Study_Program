@@ -792,5 +792,108 @@
     "explanation": "The separation-from-service exception at age 55 applies to employer plans but not to IRAs.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-re-21",
+    "pool": "practice",
+    "stem": "A 529 plan open 16 years has $40,000 left. The beneficiary has earned income and makes no other IRA contributions in 2025 (IRA limit $7,000). How much can roll to her Roth IRA this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,000",
+        "explanation": "Correct. Rollovers are limited by the annual Roth limit, up to $35,000 lifetime."
+      },
+      {
+        "id": "b",
+        "text": "$35,000",
+        "explanation": "The annual limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Deduction limits apply.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The account qualifies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "529-to-Roth rollovers require a 15-year account and are capped at the annual IRA limit and $35,000 lifetime.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-22",
+    "pool": "practice",
+    "stem": "A student has $20,000 of qualified expenses. Her parents claim the AOTC using $4,000 of them and take a $20,000 529 distribution. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All of it is still tax-free",
+        "explanation": "Expenses can't be double-counted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$4,000 is nonqualified",
+        "explanation": "Correct. Expenses used for the AOTC can't also justify a tax-free 529 distribution."
+      },
+      {
+        "id": "c",
+        "text": "All of it becomes taxable",
+        "explanation": "Only the excess is nonqualified.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "The AOTC is lost entirely",
+        "explanation": "The coordination affects the 529.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Qualified expenses are reduced by those used for education credits; the earnings share of the excess is taxable.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-re-23",
+    "pool": "practice",
+    "stem": "A small business owner with 5 employees wants a low-cost plan that lets employees defer their own pay, with modest required employer contributions. Which plan fits best?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A SEP-IRA",
+        "explanation": "SEPs don't allow employee deferrals.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A defined benefit plan",
+        "explanation": "Costly and complex.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A SIMPLE IRA",
+        "explanation": "Correct. It allows employee deferrals with a 2–3% employer contribution."
+      },
+      {
+        "id": "d",
+        "text": "A traditional IRA only",
+        "explanation": "Not an employer plan.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "SIMPLE IRAs permit employee salary deferrals with limited employer matching or nonelective contributions.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

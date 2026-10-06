@@ -788,5 +788,108 @@
     "explanation": "Syndication costs are neither deductible nor amortizable.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-pf-21",
+    "pool": "practice",
+    "stem": "A cash-basis partner contributes receivables (zero basis, face $40,000), and a dealer contributes inventory. The partnership collects the receivables and sells the inventory 3 years later as an investor. How is each item treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Both produce capital gain",
+        "explanation": "Character carries over.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Receivables ordinary; inventory capital",
+        "explanation": "The 5-year rule applies to inventory.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Receivables capital; inventory ordinary",
+        "explanation": "The amounts are reversed.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Both produce ordinary income",
+        "explanation": "Correct. Contributed receivables and inventory (within 5 years) keep ordinary character."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§724: contributed unrealized receivables stay ordinary, and contributed inventory stays ordinary for 5 years.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pf-22",
+    "pool": "practice",
+    "stem": "A partnership begins business in 2025 with $52,000 of organization costs and $20,000 of syndication costs. How much may it deduct in 2025, before amortization?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000",
+        "explanation": "Correct. $5,000 less the $2,000 over $50,000; syndication costs get nothing."
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "The limit is reduced.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$8,000",
+        "explanation": "Syndication costs aren't deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A reduced deduction is allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§709: up to $5,000 of organization costs, reduced dollar for dollar over $50,000; syndication costs are capitalized.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-pf-23",
+    "pool": "practice",
+    "stem": "Partners A (40%, June 30 year-end), B (30%, September 30) and C (30%, December 31) form a partnership. No majority or principal-partner year exists. Under the least aggregate deferral test, which year-end is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "September 30",
+        "explanation": "Its deferral is 4.5.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "June 30",
+        "explanation": "Correct. Its aggregate deferral (2.7) is the lowest."
+      },
+      {
+        "id": "c",
+        "text": "December 31",
+        "explanation": "Its deferral is 5.1.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Any year it chooses",
+        "explanation": "A required year applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Deferral = months from the tested year-end to each partner's year-end × interest: June 30 gives 0 + 0.9 + 1.8 = 2.7.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

@@ -964,5 +964,110 @@
     "explanation": "Current-year contributions are deducted first, then carryforwards (oldest first) up to the 10% limit.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-cc-26",
+    "pool": "practice",
+    "stem": "A corporation has taxable income of $600,000, federal tax of $126,000, a $70,000 DRD, dividends paid of $150,000 and a $250,000 accumulated earnings credit. What is the accumulated earnings tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$14,800",
+        "explanation": "The DRD is added back.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$74,800",
+        "explanation": "Deduct the credit and dividends.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "AETI is positive.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$28,800",
+        "explanation": "Correct. AETI = 600,000 − 126,000 + 70,000 − 150,000 − 250,000 = 144,000; × 20%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The DRD is added back in computing accumulated taxable income.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-27",
+    "pool": "practice",
+    "stem": "A C corporation has a $40,000 net capital loss in 2025. It had net capital gains of $25,000 in 2022, $0 in 2023 and $10,000 in 2024. How much carries forward?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Correct. Carried back 3 years, earliest first: 25,000 + 10,000 used."
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Corporations carry capital losses back first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Both prior gains are offset.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Only $35,000 can be carried back.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Corporate capital losses carry back 3 years (earliest first) and forward 5 years as short-term losses.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-28",
+    "pool": "practice",
+    "stem": "A PHC has $300,000 of UPHCI before the dividends-paid deduction. It paid $100,000 of dividends during the year and $30,000 within 2½ months after year-end. What is the PHC tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$34,000",
+        "explanation": "Late dividends are capped at $20,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$36,000",
+        "explanation": "Correct. Late dividends count only up to 20% of the year's dividends ($20,000): (300,000 − 120,000) × 20%."
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "The late dividends count in part.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "Deduct the dividends paid.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Dividends paid within 2½ months after year-end count, limited to 20% of dividends paid during the year.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

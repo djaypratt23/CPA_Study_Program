@@ -793,5 +793,110 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-ad-20",
+    "pool": "practice",
+    "stem": "An individual sells a building (cost $800,000; straight-line depreciation $200,000) for $900,000 and land at a $50,000 §1231 loss. There are no prior §1231 losses. How much gain is taxed at the 25% maximum rate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "Correct. Unrecaptured §1250 gain equals straight-line depreciation, within the $250,000 net §1231 gain."
+      },
+      {
+        "id": "b",
+        "text": "$250,000",
+        "explanation": "Only the depreciation portion is 25% gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$150,000",
+        "explanation": "The land loss doesn't reduce the 25% group here.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$300,000",
+        "explanation": "That's the building's total gain.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Net §1231 gain is $300,000 − $50,000 = $250,000; unrecaptured §1250 gain is $200,000.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-21",
+    "pool": "practice",
+    "stem": "A sole proprietor sells her business: equipment at a $30,000 gain (depreciation taken $40,000) and self-created goodwill for $200,000. How is the $230,000 characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$230,000 ordinary income",
+        "explanation": "Goodwill isn't recaptured.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$30,000 ordinary; $200,000 capital gain",
+        "explanation": "Correct. Self-created goodwill is a capital asset."
+      },
+      {
+        "id": "c",
+        "text": "$230,000 capital gain",
+        "explanation": "Equipment gain is §1245 recapture.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 capital; $200,000 ordinary",
+        "explanation": "The amounts are reversed.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Equipment gain up to depreciation is §1245 ordinary; self-created goodwill (never amortized) produces capital gain.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-22",
+    "pool": "practice",
+    "stem": "A donor gives equipment on which she took $40,000 of depreciation. The donee takes another $10,000 and sells it at a $60,000 gain. How much is ordinary income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "The donor's depreciation carries over.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "Recapture is limited to depreciation.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Correct. Recapture includes the donor's depreciation."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Gifts carry recapture potential.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§1245 recapture potential carries over to a donee with carryover basis.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

@@ -785,5 +785,108 @@
     "explanation": "Personal service corporations pay the same flat 21% rate as other C corporations.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-21",
+    "pool": "practice",
+    "stem": "A sole proprietor with $200,000 of profit forms an S corporation and pays herself a $90,000 reasonable salary. Ignoring the SE tax deduction, about how much employment tax does she save? (2025 wage base $176,100.)",
+    "choices": [
+      {
+        "id": "a",
+        "text": "About $13,400",
+        "explanation": "Correct. SE tax ≈ $27,190 versus payroll tax of $13,770 on salary."
+      },
+      {
+        "id": "b",
+        "text": "About $27,200",
+        "explanation": "Payroll tax is still due on salary.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "About $3,500",
+        "explanation": "That estimate is too low.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Nothing",
+        "explanation": "Distributions avoid payroll tax.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "SE tax: 12.4% × 176,100 + 2.9% × 184,700 ≈ 27,190; payroll tax on 90,000 × 15.3% = 13,770.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-ec-22",
+    "pool": "practice",
+    "stem": "A C corporation with large accumulated E&P and mostly rental and interest income plans to elect S status. What is the main tax risk?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Losing limited liability protection",
+        "explanation": "Not a tax issue.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "b",
+        "text": "Passive income tax and termination",
+        "explanation": "Correct. Excess passive investment income with E&P triggers tax and, after 3 years, termination."
+      },
+      {
+        "id": "c",
+        "text": "Double tax on all of its income",
+        "explanation": "S status removes that.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "No risk at all from the election",
+        "explanation": "Passive income rules apply.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "An S corporation with C-corporation E&P and passive income above 25% of gross receipts faces the ENPI tax and possible termination.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ec-23",
+    "pool": "practice",
+    "stem": "A foreign individual investor wants to own part of a U.S. operating business with pass-through taxation. Which entity works?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An S corporation",
+        "explanation": "Nonresident aliens are ineligible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A sole proprietorship",
+        "explanation": "She's one of several owners.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A partnership-taxed LLC",
+        "explanation": "Correct. Nonresident aliens can't own S corporation stock."
+      },
+      {
+        "id": "d",
+        "text": "A §501(c)(3) organization",
+        "explanation": "It's a business.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A partnership-taxed LLC allows foreign owners; S corporations don't.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

@@ -790,5 +790,110 @@
     "explanation": "Below-market gift loans of $10,000 or less (not used to buy income-producing assets) are exempt from imputed interest.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-gt-21",
+    "pool": "practice",
+    "stem": "A husband gives his son $50,000 in 2025, and his wife consents to gift splitting. The annual exclusion is $19,000. What taxable gift does each spouse report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,000 each",
+        "explanation": "Correct. Each is treated as giving $25,000."
+      },
+      {
+        "id": "b",
+        "text": "$31,000 by the husband only",
+        "explanation": "Splitting divides the gift.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$12,000 by the husband only",
+        "explanation": "Each spouse reports half.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0 for both",
+        "explanation": "$25,000 exceeds the exclusion.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "With gift splitting, each spouse reports $25,000 less a $19,000 exclusion; both must file Form 709.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-22",
+    "pool": "practice",
+    "stem": "A donor made $5,000,000 of taxable gifts before 2025 and $10,000,000 in 2025. The 2025 basic exclusion is $13,990,000, and the top rate is 40%. About how much gift tax is due for 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "About $4,000,000",
+        "explanation": "The exclusion shelters most of it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "About $404,000",
+        "explanation": "Correct. Cumulative gifts exceed the exclusion by $1,010,000, taxed at 40%."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Cumulative gifts exceed the exclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "About $2,000,000",
+        "explanation": "Prior gifts reduce remaining exclusion.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gift tax is computed on cumulative taxable gifts; the unused exclusion is $8,990,000 against $10,000,000 of current gifts.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-23",
+    "pool": "practice",
+    "stem": "A grandmother gives $60,000 to an irrevocable trust for three grandchildren. The trust gives them no withdrawal rights, and income may be accumulated. What annual exclusions are available?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$57,000",
+        "explanation": "Exclusions need present interests.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$19,000",
+        "explanation": "No present interest exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "None",
+        "explanation": "Correct. The gifts are future interests."
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "No exclusion applies.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Without Crummey withdrawal powers or mandatory income, gifts in trust are future interests that don't qualify for the annual exclusion.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

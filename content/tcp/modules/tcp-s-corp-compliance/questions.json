@@ -788,5 +788,109 @@
     "explanation": "All shareholders at the time of the election must consent.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-21",
+    "pool": "practice",
+    "stem": "A former C corporation had a $300,000 net unrealized built-in gain at conversion. In Year 2 it sells an asset with a $120,000 built-in gain; its taxable income limit is $100,000. What is the built-in gains tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,200",
+        "explanation": "The taxable income limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$63,000",
+        "explanation": "Only recognized built-in gain is taxed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The tax applies within 5 years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$21,000",
+        "explanation": "Correct. Tax on the lesser of recognized built-in gain or taxable income; $20,000 carries forward."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The BIG tax is 21% × the lesser of net recognized built-in gain or taxable income; the excess carries forward.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc2-22",
+    "pool": "practice",
+    "stem": "An S corporation has AAA of $30,000, accumulated E&P of $20,000 and OAA of $10,000. It distributes $70,000 to its sole shareholder (ample stock basis). How much is a dividend?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Correct. Distributions come from AAA, then E&P, then OAA, then basis."
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "E&P is reached.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Only E&P is a dividend.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$70,000",
+        "explanation": "AAA comes first.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ordering: AAA ($30,000) tax-free, E&P ($20,000) dividend, then OAA and basis.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc2-23",
+    "pool": "practice",
+    "stem": "An S corporation with C-corporation E&P has passive investment income above 25% of gross receipts for 2023, 2024 and 2025. What happens?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It terminates immediately in 2025",
+        "explanation": "Termination begins the next year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "The election terminates on January 1, 2026",
+        "explanation": "Correct. Termination follows 3 consecutive years."
+      },
+      {
+        "id": "c",
+        "text": "Only the ENPI tax applies",
+        "explanation": "Termination also occurs.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Nothing, if it distributes the E&P later",
+        "explanation": "That's too late to help.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "An S election terminates at the start of the year after 3 consecutive years of excess passive income with E&P.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

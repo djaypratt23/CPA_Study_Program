@@ -789,5 +789,109 @@
     "explanation": "Real property in the U.S. and real property outside the U.S. aren't like-kind.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-dt-21",
+    "pool": "practice",
+    "stem": "A taxpayer gives land (basis $200,000; FMV $300,000) plus $20,000 cash for like-kind land worth $320,000. What gain is recognized, and what is the new basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000 gain; basis $240,000",
+        "explanation": "Boot paid isn't gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No gain; basis $220,000",
+        "explanation": "Correct. Paying boot doesn't trigger gain."
+      },
+      {
+        "id": "c",
+        "text": "No gain; basis $320,000",
+        "explanation": "Basis carries over plus cash.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$100,000 gain; basis $320,000",
+        "explanation": "The exchange qualifies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Basis = 200,000 + 20,000 cash paid = 220,000.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-dt-22",
+    "pool": "practice",
+    "stem": "Land with a $100,000 basis is sold for $400,000: the buyer assumes a $150,000 mortgage, pays $30,000 down and gives a note. How much gain is recognized in the year of sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "Add the excess mortgage.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$180,000",
+        "explanation": "Only the excess is a payment.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$80,000",
+        "explanation": "Correct. The $50,000 of mortgage over basis is a deemed payment; the gross profit percentage is 100%."
+      },
+      {
+        "id": "d",
+        "text": "$22,500",
+        "explanation": "The ratio is 100%.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Contract price = 400,000 − 150,000 + 50,000 = 300,000; gross profit 300,000; ratio 100%; year-1 payments 30,000 + 50,000.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-dt-23",
+    "pool": "practice",
+    "stem": "Brothers exchange like-kind properties. One brother dies 14 months later, and his estate sells the property. Is the other brother's deferred gain triggered?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, under the 2-year rule",
+        "explanation": "Death is an exception.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, but only half",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Only if the estate sells at a gain",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No, the death exception applies",
+        "explanation": "Correct. Dispositions due to death don't accelerate gain."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The related-party 2-year rule doesn't apply to dispositions after the death of either party.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

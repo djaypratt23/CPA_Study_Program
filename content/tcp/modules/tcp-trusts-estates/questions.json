@@ -784,5 +784,109 @@
     "explanation": "Trusts owe NIIT on the lesser of undistributed NII or AGI above the threshold for the top trust bracket.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-te-21",
+    "pool": "practice",
+    "stem": "An estate executor can choose any tax year-end. Why might she choose a fiscal year ending January 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Estates must use a fiscal year",
+        "explanation": "Estates may choose.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "To defer beneficiaries' tax",
+        "explanation": "Correct. Distributions are taxed in the beneficiary year that includes the estate's year-end."
+      },
+      {
+        "id": "c",
+        "text": "To avoid the 65-day rule",
+        "explanation": "Not related to these facts.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "To lower the estate tax owed",
+        "explanation": "Not related to these facts.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Estates may adopt a fiscal year, deferring beneficiaries' inclusion of distributions.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-22",
+    "pool": "practice",
+    "stem": "A beneficiary receives $100,000 of IRD included in the decedent's estate; $40,000 of estate tax is attributable to it. How is it taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only $60,000 of income",
+        "explanation": "The income is fully included.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No income, due to a step-up",
+        "explanation": "IRD gets no step-up.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Income, with a §691(c) deduction",
+        "explanation": "Correct. The deduction relieves double taxation."
+      },
+      {
+        "id": "d",
+        "text": "$100,000, with no deduction",
+        "explanation": "§691(c) applies.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRD is income to the recipient, who deducts estate tax attributable to it.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-23",
+    "pool": "practice",
+    "stem": "A complex trust has DNI of $50,000. It must distribute $40,000 of income to A (tier 1) and makes a $30,000 discretionary distribution to B (tier 2). How much is taxable to B?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "DNI is used by tier 1 first.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "$10,000 of DNI remains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Not pro rata across tiers.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "Correct. Tier 1 absorbs $40,000 of DNI first."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Under the tier system, required income distributions absorb DNI before discretionary distributions.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]
