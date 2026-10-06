@@ -620,5 +620,177 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-re-16",
+    "pool": "practice",
+    "stem": "For 2025, the 401(k) deferral limit is $23,500 and the age 60–63 catch-up is $11,250. What is the most a 61-year-old can defer?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$31,000",
+        "explanation": "That uses the age-50 catch-up.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$34,750",
+        "explanation": "Correct. $23,500 + $11,250."
+      },
+      {
+        "id": "c",
+        "text": "$23,500",
+        "explanation": "Add the catch-up.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$46,750",
+        "explanation": "Only one catch-up applies.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "SECURE 2.0 provides a higher catch-up for participants aged 60 through 63.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-17",
+    "pool": "practice",
+    "stem": "Must the owner of a designated Roth 401(k) take RMDs during her lifetime, starting in 2024?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, at age 73",
+        "explanation": "Not for Roth accounts.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, at age 72",
+        "explanation": "Not for Roth accounts.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "No",
+        "explanation": "Correct. SECURE 2.0 removed lifetime RMDs."
+      },
+      {
+        "id": "d",
+        "text": "Only if still working",
+        "explanation": "That isn't required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Starting in 2024, designated Roth accounts in employer plans aren't subject to lifetime RMDs.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-18",
+    "pool": "practice",
+    "stem": "An adult child (not disabled or chronically ill) inherits her father's traditional IRA. Generally, when must it be fully distributed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Over her own life expectancy",
+        "explanation": "She isn't an eligible designated beneficiary.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Within 5 years after death",
+        "explanation": "That's for non-designated beneficiaries.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Never, while she lives",
+        "explanation": "Distribution is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Within 10 years after death",
+        "explanation": "Correct. The 10-year rule."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Most non-spouse designated beneficiaries must empty an inherited account by the end of the 10th year after death.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-19",
+    "pool": "practice",
+    "stem": "A participant has an $80,000 vested 401(k) balance. What is the maximum plan loan?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Correct. The lesser of $50,000 or 50% of vested balance."
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "50% of the vested balance is lower.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$80,000",
+        "explanation": "Deduction limits apply.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "That isn't what the rule says.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Plan loans are limited to the lesser of $50,000 or 50% of the vested balance (at least $10,000).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-20",
+    "pool": "practice",
+    "stem": "A 56-year-old leaves her job and takes a distribution from that employer's 401(k). She also withdraws from her IRA. Which is subject to the 10% penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only the 401(k) distribution",
+        "explanation": "The 401(k) qualifies for the exception.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Only the IRA withdrawal",
+        "explanation": "Correct. The age-55 separation rule covers plans, not IRAs."
+      },
+      {
+        "id": "c",
+        "text": "Both",
+        "explanation": "The plan exception applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Neither",
+        "explanation": "The IRA doesn't qualify.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The separation-from-service exception at age 55 applies to employer plans but not to IRAs.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

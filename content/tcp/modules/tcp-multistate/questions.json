@@ -614,5 +614,176 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-ms-16",
+    "pool": "practice",
+    "stem": "A state taxes a remote consulting firm with $600,000 of in-state receipts but no property or employees there. What nexus standard supports this?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Economic (factor presence) nexus",
+        "explanation": "Correct. Many states set receipts thresholds for income tax."
+      },
+      {
+        "id": "b",
+        "text": "P.L. 86-272 solicitation nexus",
+        "explanation": "That protects sellers of goods.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Physical presence nexus",
+        "explanation": "There's no physical presence here.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Commercial domicile nexus",
+        "explanation": "It isn't domiciled there.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Many states assert income tax nexus based on economic presence, such as in-state receipts above a threshold.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-17",
+    "pool": "practice",
+    "stem": "In a combined report under the Finnigan approach, whose sales into the state go in the sales factor numerator?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only members with nexus",
+        "explanation": "That's the Joyce approach.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "All unitary members' sales",
+        "explanation": "Correct. Even members without nexus."
+      },
+      {
+        "id": "c",
+        "text": "Only the parent's own sales",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "No members' sales at all",
+        "explanation": "Sales are included.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Finnigan includes in-state sales of all unitary group members; Joyce includes only those of members with nexus.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ms-18",
+    "pool": "practice",
+    "stem": "A company with $2,000,000 of business income has in-state sales of $500,000 out of $4,000,000 total. Under a single sales factor, how much income is apportioned to the state?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$500,000",
+        "explanation": "Apply the sales percentage.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$1,000,000",
+        "explanation": "Use in-state sales over total.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$250,000",
+        "explanation": "Correct. 12.5% × $2,000,000."
+      },
+      {
+        "id": "d",
+        "text": "$125,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Apportioned income = business income × in-state sales ÷ total sales.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ms-19",
+    "pool": "practice",
+    "stem": "An employee of a New York company works from home in New Jersey for her own convenience. Under New York's convenience-of-the-employer rule, how are her wages sourced?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "To New Jersey",
+        "explanation": "The convenience rule sources it to NY.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Split by days worked",
+        "explanation": "The rule overrides day counts.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Nowhere",
+        "explanation": "The wages are taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "To New York",
+        "explanation": "Correct. Work done at home for convenience is NY-source."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Under the convenience rule, days worked out of state for the employee's convenience are treated as days worked in New York.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ms-20",
+    "pool": "practice",
+    "stem": "An S corporation elects into its state's pass-through entity tax (PTET). What is the main federal benefit for its owners?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Entity-level deductibility",
+        "explanation": "Correct. It bypasses the SALT cap."
+      },
+      {
+        "id": "b",
+        "text": "It removes all state tax",
+        "explanation": "The entity pays it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It doubles the SALT cap",
+        "explanation": "Not the effect.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It exempts owners from tax",
+        "explanation": "Not the effect.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A PTET is deductible at the entity level, so the owners' federal SALT cap doesn't limit it.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

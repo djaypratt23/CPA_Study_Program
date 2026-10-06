@@ -618,5 +618,176 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-pa-16",
+    "pool": "practice",
+    "stem": "A taxpayer has $5,000 of passive activity credits but no tax on passive income. What happens?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They carry forward",
+        "explanation": "Correct. They offset only tax on passive income."
+      },
+      {
+        "id": "b",
+        "text": "They offset tax on wages",
+        "explanation": "That isn't allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "They're refunded in cash",
+        "explanation": "Not refundable.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "They're lost permanently",
+        "explanation": "They carry forward.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Passive activity credits can offset only the tax attributable to passive income; unused credits carry forward.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-17",
+    "pool": "practice",
+    "stem": "A taxpayer sells his passive rental to his brother at a loss. What happens to the suspended losses?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They're fully deductible",
+        "explanation": "Not for related-party sales.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "They stay suspended",
+        "explanation": "Correct. A related-party sale doesn't free them."
+      },
+      {
+        "id": "c",
+        "text": "They're lost permanently",
+        "explanation": "They remain suspended.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "They pass to the brother",
+        "explanation": "They stay with the seller.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Suspended losses are freed only on a fully taxable disposition to an unrelated party.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pa-18",
+    "pool": "practice",
+    "stem": "A taxpayer works 120 hours in an activity, more than anyone else. Does she materially participate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, she needs 500 hours",
+        "explanation": "Other tests exist.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "No, she needs 750 hours",
+        "explanation": "That's the real estate test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Yes",
+        "explanation": "Correct. Over 100 hours and not less than anyone else."
+      },
+      {
+        "id": "d",
+        "text": "Only if it's rental",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "One material participation test is more than 100 hours and not less than any other individual.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-19",
+    "pool": "practice",
+    "stem": "An owner rents a building to a C corporation in which he materially participates. How is the net rental income treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As passive income",
+        "explanation": "It's recharacterized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As portfolio income",
+        "explanation": "It's nonpassive.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As tax-exempt",
+        "explanation": "Jury pay is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As nonpassive income",
+        "explanation": "Correct. The self-rental rule recharacterizes it."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Net income from renting property to a business in which the taxpayer materially participates is nonpassive.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pa-20",
+    "pool": "practice",
+    "stem": "A taxpayer dies with $40,000 of suspended passive losses. His heirs get a $25,000 basis step-up on the activity. How much loss is deductible on the final return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000",
+        "explanation": "Correct. Losses above the step-up are deductible."
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Reduce by the step-up.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$25,000",
+        "explanation": "That's the step-up.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Part is deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "At death, suspended losses are deductible only to the extent they exceed the basis step-up.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

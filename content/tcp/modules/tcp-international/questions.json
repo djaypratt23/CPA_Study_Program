@@ -581,5 +581,175 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-intl-16",
+    "pool": "practice",
+    "stem": "A CFC buys goods from its U.S. parent and resells them to customers outside its own country. What is the income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Effectively connected income",
+        "explanation": "Not U.S. business income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Foreign base company sales income",
+        "explanation": "Correct. A type of Subpart F income."
+      },
+      {
+        "id": "c",
+        "text": "Exempt foreign income",
+        "explanation": "It's Subpart F.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Passive royalty income",
+        "explanation": "It's sales income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Foreign base company sales income arises when a CFC buys from or sells to related parties, for goods made and sold outside its country.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-17",
+    "pool": "practice",
+    "stem": "A foreign investor in a treaty country receives U.S. dividends. How can she claim the treaty rate instead of 30%?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "File Form W-9",
+        "explanation": "That's for U.S. persons.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "File Form 1040-NR first",
+        "explanation": "Withholding happens at payment.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Give the payer a Form W-8BEN",
+        "explanation": "Correct. It certifies foreign status and treaty eligibility."
+      },
+      {
+        "id": "d",
+        "text": "Nothing; 30% always applies",
+        "explanation": "Treaties reduce it.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Foreign individuals claim treaty benefits by giving Form W-8BEN to the withholding agent.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-18",
+    "pool": "practice",
+    "stem": "In applying the FTC limitation, interest from foreign bonds held for investment falls in which category?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "General category income",
+        "explanation": "Investment interest is passive.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Branch category income",
+        "explanation": "It isn't branch income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "U.S.-source income",
+        "explanation": "It's foreign-source.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Passive category income",
+        "explanation": "Correct. Separate limits apply."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The FTC limitation is computed separately for categories such as passive and general income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-intl-19",
+    "pool": "practice",
+    "stem": "A U.S. corporation owns 15% of a foreign corporation for 200 days and receives a dividend. Does the §245A DRD apply?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, held too briefly",
+        "explanation": "Correct. More than 365 days are required."
+      },
+      {
+        "id": "b",
+        "text": "Yes, ownership exceeds 10%",
+        "explanation": "The holding period isn't met.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Yes, for any foreign dividend",
+        "explanation": "Conditions apply.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Only for controlled foreign corps",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§245A requires 10% ownership and a holding period of more than 365 days in a 731-day window.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-intl-20",
+    "pool": "practice",
+    "stem": "How is a foreign corporation's effectively connected income from a U.S. branch taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At 30% of gross income",
+        "explanation": "That's for FDAP income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "At 21%, plus branch tax",
+        "explanation": "Correct. Net ECI at regular rates."
+      },
+      {
+        "id": "c",
+        "text": "Not at all in the U.S.",
+        "explanation": "ECI is taxed in the U.S.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only at the state level",
+        "explanation": "Federal tax applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Net ECI is taxed at regular corporate rates, and the branch profits tax may apply to repatriated earnings.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

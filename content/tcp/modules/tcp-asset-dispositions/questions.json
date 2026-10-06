@@ -621,5 +621,177 @@
     "explanation": "Depreciable business property held over a year is §1231 property; a net §1231 loss is ordinary. Recapture applies only to gains.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-ad-15",
+    "pool": "practice",
+    "stem": "A business sells equipment it held 8 months at a $5,000 gain. How is the gain characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ordinary income",
+        "explanation": "Correct. Business assets need a holding period over 1 year for §1231."
+      },
+      {
+        "id": "b",
+        "text": "§1231 gain",
+        "explanation": "§1231 requires a holding period over a year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Long-term capital gain",
+        "explanation": "It isn't a capital asset or long-term.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Unrecaptured §1250 gain",
+        "explanation": "It isn't real property.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Depreciable business property held one year or less produces ordinary gain or loss.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ad-16",
+    "pool": "practice",
+    "stem": "A client with no prior §1231 losses will sell one asset at a $100,000 §1231 gain and another at a $100,000 §1231 loss over the next two years. Which order is better?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The loss asset first, the gain asset next year",
+        "explanation": "The lookback turns the later gain ordinary.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "The gain asset first, the loss asset next year",
+        "explanation": "Correct. The loss year stays ordinary and the gain stays capital."
+      },
+      {
+        "id": "c",
+        "text": "Both in the same year",
+        "explanation": "Netting wastes the ordinary loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The order doesn't matter",
+        "explanation": "The lookback rule makes it matter.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A net §1231 loss is ordinary, but it causes later net §1231 gains within 5 years to be recaptured as ordinary. Recognizing gains first avoids that.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ad-17",
+    "pool": "practice",
+    "stem": "A taxpayer expensed a car under §179 when business use was 80%. In Year 3 business use drops to 40%. What happens?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing; §179 was proper",
+        "explanation": "The 50% test continues.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The car must be sold",
+        "explanation": "That isn't required.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Excess §179 is recaptured",
+        "explanation": "Correct. Listed property must stay above 50%."
+      },
+      {
+        "id": "d",
+        "text": "A capital loss is allowed",
+        "explanation": "Recapture is the result.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "If listed property's business use falls to 50% or less, the excess of §179 and accelerated depreciation over ADS straight-line is recaptured.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ad-18",
+    "pool": "practice",
+    "stem": "Equipment cost $50,000, has $30,000 of accumulated depreciation and is sold for $60,000. How is the $40,000 gain characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000 ordinary",
+        "explanation": "Recapture is limited to depreciation.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$40,000 §1231",
+        "explanation": "Depreciation is recaptured first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$10,000 ordinary; $30,000 §1231",
+        "explanation": "The amounts are reversed.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 ordinary; $10,000 §1231",
+        "explanation": "Correct. Recapture is limited to depreciation."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§1245 recapture is the lesser of gain or depreciation; gain above original cost is §1231 gain.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-19",
+    "pool": "practice",
+    "stem": "A business has a $15,000 casualty gain and a $10,000 casualty loss on long-term business property. Where does the net $5,000 go?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Into the main §1231 netting",
+        "explanation": "Correct. A net casualty gain enters §1231."
+      },
+      {
+        "id": "b",
+        "text": "It's ordinary income",
+        "explanation": "Net casualty gains enter §1231.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "It's a capital gain directly",
+        "explanation": "It goes through §1231.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "It's excluded from income",
+        "explanation": "Jury pay is taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Casualty items are netted first; a net gain goes into the main §1231 netting, while a net loss is ordinary.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]
