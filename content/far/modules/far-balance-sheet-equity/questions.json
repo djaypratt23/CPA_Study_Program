@@ -784,5 +784,283 @@
     "explanation": "Current maturities that will be paid from noncurrent assets, such as a sinking fund, are excluded from current liabilities.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "far-bse-21",
+    "pool": "practice",
+    "stem": "A $200,000 note is due 6 months after year-end. After year-end but before issuance, the company completes a long-term refinancing. How is the note classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Noncurrent",
+        "explanation": "Correct. Refinancing completed before issuance permits noncurrent classification."
+      },
+      {
+        "id": "b",
+        "text": "Current",
+        "explanation": "The refinancing was completed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Split by payment dates",
+        "explanation": "The full note qualifies.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "As equity",
+        "explanation": "It remains debt.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Short-term debt refinanced on a long-term basis before the statements are issued may be classified as noncurrent.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-bse-22",
+    "pool": "practice",
+    "stem": "Current assets are $400,000 and current liabilities are $200,000. The company pays $50,000 of accounts payable in cash. What is the new current ratio?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "2.00",
+        "explanation": "Both sides change.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "2.33",
+        "explanation": "Correct. $350,000 ÷ $150,000."
+      },
+      {
+        "id": "c",
+        "text": "1.75",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "2.50",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Paying a current liability with cash reduces both sides equally, which raises a ratio above 1.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-bse-23",
+    "pool": "practice",
+    "stem": "Beginning retained earnings is $200,000. Net income is $80,000, cash dividends are $20,000, and a 10% stock dividend on 10,000 shares ($1 par, $15 market) is declared. What is ending retained earnings?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$260,000",
+        "explanation": "Deduct the stock dividend.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$259,000",
+        "explanation": "Use market value, not par.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$245,000",
+        "explanation": "Correct. A small stock dividend is recorded at market: $15,000."
+      },
+      {
+        "id": "d",
+        "text": "$265,000",
+        "explanation": "Deduct the cash dividends.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Small stock dividends (under 20–25%) transfer the shares' market value from retained earnings.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-bse-24",
+    "pool": "practice",
+    "stem": "A company's only account at Bank X is overdrawn by $2,000, and it has $10,000 at Bank Y. How does it report these?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000 of cash, net of the overdraft",
+        "explanation": "No offset across banks.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$10,000 cash; the overdraft disclosed",
+        "explanation": "It's a liability.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$12,000 cash and no liability",
+        "explanation": "Not the treatment.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$10,000 cash; $2,000 liability",
+        "explanation": "Correct. Overdrafts at different banks aren't offset."
+      }
+    ],
+    "answer": "d",
+    "explanation": "An overdraft is offset only against other accounts at the same bank; otherwise it's a current liability.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-bse-25",
+    "pool": "practice",
+    "stem": "On January 1, 2025, a company receives $24,000 for 2 years of services provided evenly. How is the remaining liability classified at December 31, 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000 current; $0 noncurrent",
+        "explanation": "Correct. The rest is earned within 12 months."
+      },
+      {
+        "id": "b",
+        "text": "$6,000 current; $6,000 noncurrent",
+        "explanation": "All of it is earned next year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0 current; $12,000 noncurrent",
+        "explanation": "It's due within a year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$24,000 current",
+        "explanation": "Half is already earned.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Deferred revenue is current to the extent it will be earned within the next year or operating cycle.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-bse-26",
+    "pool": "practice",
+    "stem": "Beginning AOCI is $10,000. During the year there's a $4,000 unrealized loss on AFS debt securities, a $6,000 translation gain, and a $3,000 unrealized gain on equity securities. What is ending AOCI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000",
+        "explanation": "Equity securities don't go to OCI.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$12,000",
+        "explanation": "Correct. Equity securities' fair value changes go to net income."
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "Subtract the AFS loss.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$9,000",
+        "explanation": "Add the translation gain.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "AFS debt security changes and translation adjustments go to OCI; equity security changes go to net income.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-bse-27",
+    "pool": "practice",
+    "stem": "A company buys 1,000 treasury shares at $20 and later resells 600 of them at $25, using the cost method. What is the net effect on total equity?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An $8,000 decrease",
+        "explanation": "Use the resale price.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "A $3,000 increase",
+        "explanation": "That's the APIC piece.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "A $5,000 decrease",
+        "explanation": "Correct. −$20,000 + $15,000."
+      },
+      {
+        "id": "d",
+        "text": "No change",
+        "explanation": "Treasury stock reduces equity.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Treasury purchases reduce equity by cost; resales increase it by the proceeds.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-bse-28",
+    "pool": "practice",
+    "stem": "A $500,000 serial note is paid in $100,000 installments each July 1. After the July 1, 2025 payment, how is it classified at December 31, 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$400,000 current",
+        "explanation": "Only the next installment is.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$400,000 noncurrent",
+        "explanation": "Separate the current portion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$200,000 current; $200,000 noncurrent",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$100,000 current; $300,000 noncurrent",
+        "explanation": "Correct. The next installment is current."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The portion of long-term debt due within one year is a current liability.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

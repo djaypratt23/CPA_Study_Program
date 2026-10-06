@@ -791,5 +791,284 @@
     "explanation": "Refundable deposits are liabilities until refunded or forfeited.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "far-pay-21",
+    "pool": "practice",
+    "stem": "Weekly payroll of $50,000 covers a 5-day week and is paid on Fridays. Year-end falls on Wednesday. What payroll is accrued?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "Correct. 3 of 5 days."
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Only 3 days are earned.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "That's the 2 unearned days.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "That's one day.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Accrued wages are earned but unpaid at year-end.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-pay-22",
+    "pool": "practice",
+    "stem": "Gross wages are $100,000, all below the wage bases. Employer FICA is 7.65%, and state unemployment tax is $2,000. What is employer payroll tax expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,650",
+        "explanation": "Add unemployment tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$9,650",
+        "explanation": "Correct. 7,650 + 2,000."
+      },
+      {
+        "id": "c",
+        "text": "$17,300",
+        "explanation": "Employee withholding isn't employer expense.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "Add the employer FICA.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Employer payroll tax expense includes the employer's FICA and unemployment taxes, not employee withholdings.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-pay-23",
+    "pool": "practice",
+    "stem": "20 employees each earn 10 vested vacation days a year at $200 a day. 60% remains unused at year-end. What liability is accrued?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Only unused days.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$16,000",
+        "explanation": "That's the used portion.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$24,000",
+        "explanation": "Correct. 20 × 10 × $200 × 60%."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Vested vacation is accrued.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Vested compensated absences attributable to past service are accrued.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-pay-24",
+    "pool": "practice",
+    "stem": "Total register receipts are $106,000, including 6% sales tax. What is the sales tax liability?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,360",
+        "explanation": "Tax is included in receipts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,640",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Tax collected is a liability.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$6,000",
+        "explanation": "Correct. $106,000 ÷ 1.06 = $100,000 of sales."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Sales tax collected is a liability; when included in receipts, back it out by dividing by 1 + rate.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-pay-25",
+    "pool": "practice",
+    "stem": "A company sells $50,000 of gift cards and expects 10% breakage. $30,000 is redeemed. Breakage is recognized in proportion to redemptions. What is the remaining liability?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$16,667",
+        "explanation": "Correct. Breakage of $3,333 = $5,000 × 30/45."
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Recognize proportional breakage.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$18,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Expected breakage is recognized in proportion to the pattern of redemptions.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-pay-26",
+    "pool": "practice",
+    "stem": "A bonus equals 10% of net income after the bonus but before tax. Income before bonus and tax is $220,000. What is the bonus?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$22,000",
+        "explanation": "The bonus is after itself.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Correct. B = 0.10 × (220,000 − B)."
+      },
+      {
+        "id": "c",
+        "text": "$19,800",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$18,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Solve algebraically when the bonus base excludes the bonus itself.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-pay-27",
+    "pool": "practice",
+    "stem": "Using the gross method, a company buys $20,000 of goods on 2/10, n/30 terms and pays within 10 days. How much cash is paid?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "The discount is taken.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$19,800",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$19,600",
+        "explanation": "Correct. The 2% discount is taken."
+      },
+      {
+        "id": "d",
+        "text": "$18,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under the gross method, discounts taken are recorded at payment.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-pay-28",
+    "pool": "practice",
+    "stem": "A cash dividend is declared on December 15, payable January 15. How is it reported at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In equity until paid",
+        "explanation": "It's a liability on declaration.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a noncurrent liability",
+        "explanation": "It's due within a year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Disclosure only",
+        "explanation": "The dividend is recorded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a current liability",
+        "explanation": "Correct. Declared dividends are liabilities."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Cash dividends become a current liability on the declaration date.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

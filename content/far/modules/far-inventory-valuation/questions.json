@@ -790,5 +790,283 @@
     "explanation": "Freight-in increases the cost of purchases but not their retail value.",
     "skill": "analysis",
     "difficulty": 2
+  },
+  {
+    "id": "far-iv-21",
+    "pool": "practice",
+    "stem": "FIFO inventory costs $50,000. Its selling price is $55,000, with $8,000 of costs to sell. What write-down is needed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000",
+        "explanation": "Correct. NRV is $47,000."
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Cost exceeds NRV.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "Deduct costs to sell.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "FIFO and average cost inventories are measured at the lower of cost and net realizable value.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-iv-22",
+    "pool": "practice",
+    "stem": "LIFO inventory costs $50,000. Replacement cost is $44,000, NRV $47,000, and NRV less normal profit $41,000. At what amount is it reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$47,000",
+        "explanation": "Market is replacement cost here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$44,000",
+        "explanation": "Correct. Market is the middle value: $44,000."
+      },
+      {
+        "id": "c",
+        "text": "$41,000",
+        "explanation": "That's the floor.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Market is lower.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "LIFO and retail inventories use lower of cost or market, where market is the middle of replacement cost, ceiling and floor.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-iv-23",
+    "pool": "practice",
+    "stem": "LIFO inventory costs $50,000. Replacement cost is $49,000, NRV $47,000, and NRV less normal profit $41,000. At what amount is it reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$49,000",
+        "explanation": "Capped at the ceiling.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$41,000",
+        "explanation": "That's the floor.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$47,000",
+        "explanation": "Correct. Replacement cost exceeds the ceiling."
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Market is lower.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Market can't exceed NRV (ceiling) or fall below NRV less normal profit (floor).",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-iv-24",
+    "pool": "practice",
+    "stem": "A company has a noncancelable commitment to buy goods for $100,000. At year-end, the market price falls to $85,000. What is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No entry until purchase",
+        "explanation": "Losses are accrued.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $15,000 gain",
+        "explanation": "It is a loss, not a gain.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "Disclosure only",
+        "explanation": "A loss is recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A $15,000 loss",
+        "explanation": "Correct. Losses on firm commitments are recognized."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Expected losses on noncancelable purchase commitments are recognized when the market price falls.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-iv-25",
+    "pool": "practice",
+    "stem": "Retail data: beginning at cost $20,000 and retail $30,000; purchases at cost $70,000 and retail $100,000; markups $10,000; markdowns $5,000; sales $110,000. What is ending inventory under the conventional (LCM) retail method?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$16,071",
+        "explanation": "Correct. Ratio 90/140; ending retail $25,000."
+      },
+      {
+        "id": "b",
+        "text": "$16,667",
+        "explanation": "Exclude markdowns from the ratio.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$17,500",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$25,000",
+        "explanation": "That's at retail.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The conventional method excludes markdowns from the cost-to-retail ratio, approximating LCM.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-iv-26",
+    "pool": "practice",
+    "stem": "Using the same retail data (cost $90,000; retail $140,000 before $5,000 of markdowns; ending retail $25,000), what is ending inventory under the average cost retail method?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$16,071",
+        "explanation": "That's the conventional method.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$16,667",
+        "explanation": "Correct. Ratio 90/135."
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$25,000",
+        "explanation": "That's at retail.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The average cost retail method includes markups and markdowns in the ratio.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-iv-27",
+    "pool": "practice",
+    "stem": "A company wrote inventory down to NRV last year. This year, the NRV of the remaining units recovers. Under U.S. GAAP, what's permitted?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reverse up to original cost",
+        "explanation": "That is the IFRS rule.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Reverse through OCI",
+        "explanation": "That is not permitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No reversal",
+        "explanation": "Correct. The write-down becomes the new cost basis."
+      },
+      {
+        "id": "d",
+        "text": "Restate last year",
+        "explanation": "That is not permitted.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under U.S. GAAP, inventory write-downs establish a new cost basis and aren't reversed in later years.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-iv-28",
+    "pool": "practice",
+    "stem": "An $8,000 purchase in transit (FOB shipping point) was left out of both purchases and ending inventory. What is the effect on net income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Overstated by $8,000",
+        "explanation": "Both sides are omitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Understated by $8,000",
+        "explanation": "Both sides are omitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Understated by $16,000",
+        "explanation": "Not the effect.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "None",
+        "explanation": "Correct. The omissions offset in COGS."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Omitting the same goods from purchases and ending inventory leaves COGS unchanged.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

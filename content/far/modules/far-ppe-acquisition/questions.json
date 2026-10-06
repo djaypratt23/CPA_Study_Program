@@ -787,5 +787,284 @@
     "explanation": "Capitalization begins when expenditures have been made, activities are in progress and interest is being incurred.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "far-ppe-21",
+    "pool": "practice",
+    "stem": "A machine lists at $100,000, and a 2% cash discount is taken. Freight is $3,000, installation $5,000, and repairs for damage in transit $1,500. What is the machine's cost?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$106,000",
+        "explanation": "Correct. 98,000 + 3,000 + 5,000."
+      },
+      {
+        "id": "b",
+        "text": "$107,500",
+        "explanation": "Transit damage repairs are expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$108,000",
+        "explanation": "Deduct the discount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$109,500",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Asset cost includes the net price and costs to bring it to working condition, not repairs of avoidable damage.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-ppe-22",
+    "pool": "practice",
+    "stem": "A company buys land with an old building for $200,000 and demolishes the building for $15,000, recovering $3,000 of salvage. Title costs are $2,000. What is the land's cost?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$217,000",
+        "explanation": "Salvage reduces the cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$214,000",
+        "explanation": "Correct. 200 + 15 − 3 + 2."
+      },
+      {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "Include demolition and title.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$215,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Net demolition costs to prepare land for use are part of the land's cost.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-ppe-23",
+    "pool": "practice",
+    "stem": "Weighted average accumulated construction expenditures are $1,000,000. A specific $600,000 construction loan carries 8%, and other debt averages 10%. Actual interest exceeds the result. What interest is capitalized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Use the specific rate first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$88,000",
+        "explanation": "Correct. $48,000 + $400,000 × 10%."
+      },
+      {
+        "id": "d",
+        "text": "$48,000",
+        "explanation": "Include the excess at 10%.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Avoidable interest applies the specific borrowing rate first, then the weighted rate on the excess.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-ppe-24",
+    "pool": "practice",
+    "stem": "An asset with a $30,000 book value and a $40,000 fair value is exchanged, plus $10,000 cash, for a new asset. The exchange has commercial substance. What is recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "New asset $40,000; no gain",
+        "explanation": "It has commercial substance.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "New asset $50,000; no gain",
+        "explanation": "A gain is recognized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "New asset $40,000; $10,000 gain",
+        "explanation": "Add the cash paid.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "New asset $50,000; $10,000 gain",
+        "explanation": "Correct. Fair value given plus cash."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Exchanges with commercial substance are recorded at fair value, with gains and losses recognized.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-ppe-25",
+    "pool": "practice",
+    "stem": "The same exchange ($30,000 book value, $40,000 fair value, $10,000 cash paid) lacks commercial substance. At what amount is the new asset recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Correct. Book value plus cash; no gain."
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "No gain is recognized.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Add the cash paid.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Without commercial substance, gains aren't recognized when cash is paid, so the new asset is book value plus cash.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-ppe-26",
+    "pool": "practice",
+    "stem": "A company installs equipment with a legal removal obligation. The ARO's present value is $55,839. How is it recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Expense $55,839 at installation",
+        "explanation": "It's capitalized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Capitalize it with a liability",
+        "explanation": "Correct. AROs are capitalized."
+      },
+      {
+        "id": "c",
+        "text": "Disclose it only",
+        "explanation": "It's recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Record it only at removal",
+        "explanation": "Recognize it at installation.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "An ARO is recognized at fair value with an equal increase in the asset's carrying amount.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-ppe-27",
+    "pool": "practice",
+    "stem": "A company replaces a roof for $80,000, extending the building's life by 10 years. How is the cost treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Expensed as a repair",
+        "explanation": "It extends the life.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Charged to retained earnings",
+        "explanation": "Not the treatment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Capitalized",
+        "explanation": "Correct. It extends the useful life."
+      },
+      {
+        "id": "d",
+        "text": "Split evenly",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Expenditures that extend useful life or improve capacity are capitalized.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-ppe-28",
+    "pool": "practice",
+    "stem": "A company pays $450,000 for land (FV $150,000), a building (FV $300,000) and equipment (FV $50,000). What is the building's cost?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000",
+        "explanation": "Allocate the actual price.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$250,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$225,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$270,000",
+        "explanation": "Correct. $450,000 × 300/500."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A lump-sum purchase is allocated by relative fair values.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

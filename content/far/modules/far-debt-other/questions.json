@@ -790,5 +790,281 @@
     "skill": "application",
     "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "far-dbt-21",
+    "pool": "practice",
+    "stem": "In a troubled debt restructuring, debt with a $110,000 carrying amount (including accrued interest) is modified so that total future cash payments are $90,000. What does the debtor recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $20,000 gain",
+        "explanation": "Correct. Future cash flows are below the carrying amount."
+      },
+      {
+        "id": "b",
+        "text": "No gain; reduce future interest",
+        "explanation": "That applies when cash flows exceed it.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A $20,000 loss",
+        "explanation": "It's a gain to the debtor.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "A $10,000 gain",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "When undiscounted future payments are less than the carrying amount, the debtor recognizes a gain and no future interest expense.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dbt-22",
+    "pool": "practice",
+    "stem": "A debtor settles $100,000 of debt by transferring land with a $50,000 carrying amount and a $70,000 fair value. What does it recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $50,000 restructuring gain only",
+        "explanation": "Split it into two gains.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$30,000 TDR gain; $20,000 asset gain",
+        "explanation": "Correct. Both gains are recognized."
+      },
+      {
+        "id": "c",
+        "text": "A $30,000 restructuring gain only",
+        "explanation": "The asset gain also applies.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "No gain until the land is resold",
+        "explanation": "Gains are recognized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The asset is first remeasured to fair value (asset gain), and the excess debt over fair value is a restructuring gain.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dbt-23",
+    "pool": "practice",
+    "stem": "A company buys equipment with a $100,000 non-interest-bearing note due in 2 years. The market rate is 10%. At what amount is the equipment recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Impute interest.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$90,909",
+        "explanation": "That's 1 year of discount.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$82,645",
+        "explanation": "Correct. $100,000 ÷ 1.21."
+      },
+      {
+        "id": "d",
+        "text": "$80,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Notes with no stated interest are recorded at present value using an imputed market rate.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dbt-24",
+    "pool": "practice",
+    "stem": "Using the note above (recorded at $82,645 at 10%), what is first-year interest expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Use the carrying amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$17,355",
+        "explanation": "That's the total discount.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Interest is imputed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$8,264",
+        "explanation": "Correct. $82,645 × 10%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Imputed interest is recognized under the effective method on the note's carrying amount.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dbt-25",
+    "pool": "practice",
+    "stem": "At year-end, a company violates a covenant, making its long-term debt callable. The lender grants a waiver for 6 months. How is the debt classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Current",
+        "explanation": "Correct. A waiver must cover more than a year."
+      },
+      {
+        "id": "b",
+        "text": "Noncurrent",
+        "explanation": "The waiver is too short.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Split by waiver period",
+        "explanation": "That is not permitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Disclosed only",
+        "explanation": "Classification is affected.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Callable debt is current unless the lender waives the right for more than one year from the balance sheet date.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-dbt-26",
+    "pool": "practice",
+    "stem": "A debtor places risk-free securities in an irrevocable trust to service its bonds but isn't legally released from them. What is the accounting?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The bonds are derecognized",
+        "explanation": "Legal release is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The bonds stay on the books",
+        "explanation": "Correct. In-substance defeasance doesn't extinguish debt."
+      },
+      {
+        "id": "c",
+        "text": "A gain is recognized",
+        "explanation": "Not extinguished.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The trust is treated as equity",
+        "explanation": "Not the treatment.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Debt is extinguished only by paying it or by legal release; in-substance defeasance doesn't qualify.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-dbt-27",
+    "pool": "practice",
+    "stem": "A company pays $30,000 of costs to obtain a revolving line of credit with nothing drawn. How are the costs presented?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a reduction of the debt balance",
+        "explanation": "No debt is outstanding.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Expensed immediately",
+        "explanation": "They can be deferred.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As an asset, amortized",
+        "explanation": "Correct. Revolver costs may be deferred as an asset."
+      },
+      {
+        "id": "d",
+        "text": "As a reduction of equity",
+        "explanation": "Not equity costs.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Issuance costs for term debt reduce the debt; revolving credit costs may be deferred as an asset.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-dbt-28",
+    "pool": "practice",
+    "stem": "A $1,000,000 loan has a subjective acceleration clause, and acceleration is probable. How is it classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Noncurrent",
+        "explanation": "Acceleration is probable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Noncurrent, with disclosure",
+        "explanation": "Disclosure is for remote cases.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As equity",
+        "explanation": "It remains a liability.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Current",
+        "explanation": "Correct. Probable acceleration requires current classification."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Long-term debt with a subjective acceleration clause is current if acceleration is probable.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

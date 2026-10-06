@@ -789,5 +789,283 @@
     "explanation": "AFS unrealized holding gains and losses (other than credit losses) are reported in OCI.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "far-dsec-21",
+    "pool": "practice",
+    "stem": "An AFS debt security bought for $100,000 is worth $108,000 at year-end. How is the change reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An $8,000 gain in OCI",
+        "explanation": "Correct. AFS changes go to OCI."
+      },
+      {
+        "id": "b",
+        "text": "An $8,000 gain in income",
+        "explanation": "That's for trading.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "No entry; held at cost",
+        "explanation": "AFS is at fair value.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "An $8,000 credit to RE",
+        "explanation": "Not the treatment.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AFS debt securities are carried at fair value with unrealized gains in OCI.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-22",
+    "pool": "practice",
+    "stem": "A trading debt security bought for $100,000 is worth $108,000 at year-end. How is the change reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An $8,000 gain in OCI",
+        "explanation": "That is the AFS treatment.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "An $8,000 gain in income",
+        "explanation": "Correct. Trading changes go to income."
+      },
+      {
+        "id": "c",
+        "text": "No entry; held at cost",
+        "explanation": "Trading is at fair value.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A deferred gain until it is sold",
+        "explanation": "Not the treatment.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Trading securities are carried at fair value with changes in net income.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-23",
+    "pool": "practice",
+    "stem": "A company buys a $100,000 bond for $96,000 and intends and is able to hold it to maturity. At year-end its fair value is $99,000. At what amount is it carried?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$99,000",
+        "explanation": "HTM isn't at fair value.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Not face value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "At amortized cost",
+        "explanation": "Correct. HTM isn't adjusted to fair value."
+      },
+      {
+        "id": "d",
+        "text": "$96,000, unchanged",
+        "explanation": "The discount amortizes.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "HTM debt securities are carried at amortized cost, net of any credit loss allowance.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-dsec-24",
+    "pool": "practice",
+    "stem": "An AFS bond cost $50,000 and had a $5,000 unrealized gain in AOCI (fair value $55,000). It's sold for $57,000. What gain is in net income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000",
+        "explanation": "Measure from cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "That's the reclassification.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$57,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$7,000",
+        "explanation": "Correct. Proceeds less amortized cost; $5,000 is reclassified."
+      }
+    ],
+    "answer": "d",
+    "explanation": "On sale, the realized gain is proceeds less amortized cost, and prior AOCI amounts are reclassified to income.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-25",
+    "pool": "practice",
+    "stem": "A company transfers a debt security from HTM to AFS when it has an unrealized gain. Where is the gain recognized at transfer?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In OCI",
+        "explanation": "Correct. HTM to AFS gains go to OCI."
+      },
+      {
+        "id": "b",
+        "text": "In net income",
+        "explanation": "Not for transfers to AFS.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Nowhere",
+        "explanation": "It's recognized at transfer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "In retained earnings",
+        "explanation": "Not the treatment.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Unrealized gains on transfers from HTM to AFS are recognized in OCI.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-dsec-26",
+    "pool": "practice",
+    "stem": "An AFS bond's amortized cost is $100,000 and its fair value is $85,000. $6,000 of the decline is due to credit losses, and the company doesn't intend to sell. How is it reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000 in income",
+        "explanation": "Only the credit loss goes to income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$6,000 in income; $9,000 in OCI",
+        "explanation": "Correct. The credit loss goes through an allowance."
+      },
+      {
+        "id": "c",
+        "text": "$15,000 in OCI",
+        "explanation": "The credit loss goes to income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$6,000 in OCI; $9,000 in income",
+        "explanation": "That's backward.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "For AFS debt, credit losses are recognized in income through an allowance; the noncredit decline goes to OCI.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-27",
+    "pool": "practice",
+    "stem": "An AFS bond has $100,000 amortized cost and $97,000 fair value. Expected credit losses are $5,000. What allowance is recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "The fair value floor limits it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "A credit loss exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$3,000",
+        "explanation": "Correct. The allowance can't exceed the fair value shortfall."
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The AFS credit-loss allowance is limited to the amount by which fair value is below amortized cost.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-28",
+    "pool": "practice",
+    "stem": "A company buys an HTM bond with a $200,000 amortized cost and expects $4,000 of lifetime credit losses. When is the allowance recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only when a loss is probable",
+        "explanation": "That's the old incurred model.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "At maturity",
+        "explanation": "That would be too late.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Never; HTM is at cost",
+        "explanation": "CECL applies to HTM.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "At purchase, $4,000",
+        "explanation": "Correct. CECL applies at purchase."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Under CECL, HTM securities carry an allowance for expected lifetime credit losses from purchase.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

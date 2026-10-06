@@ -789,5 +789,285 @@
     "explanation": "The LIFO conformity rule requires a taxpayer using LIFO for tax to use LIFO for financial reporting.",
     "skill": "analysis",
     "difficulty": 2
+  },
+  {
+    "id": "far-inv-21",
+    "pool": "practice",
+    "stem": "Beginning inventory is 100 units at $10. Purchases are 200 at $12, then 150 at $13. 300 units are sold. What is ending inventory under periodic FIFO?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,950",
+        "explanation": "Correct. 150 units at $13."
+      },
+      {
+        "id": "b",
+        "text": "$1,600",
+        "explanation": "That is the LIFO amount.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$1,783",
+        "explanation": "That's average cost.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$1,800",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "FIFO ending inventory consists of the most recent purchases.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-inv-22",
+    "pool": "practice",
+    "stem": "Beginning inventory is 100 units at $10. Purchases are 200 at $12, then 150 at $13. 300 units are sold. What is ending inventory under periodic weighted average?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,950",
+        "explanation": "That is the FIFO amount.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$1,783",
+        "explanation": "Correct. $5,350 ÷ 450 × 150."
+      },
+      {
+        "id": "c",
+        "text": "$1,600",
+        "explanation": "That is the LIFO amount.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$1,725",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Weighted average spreads total goods available cost over total units.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-inv-23",
+    "pool": "practice",
+    "stem": "Beginning inventory is 100 units at $10. Purchases are 200 at $12, then 150 at $13. 300 units are sold. What is ending inventory under periodic LIFO?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,950",
+        "explanation": "That is the FIFO amount.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$1,783",
+        "explanation": "That's average cost.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$1,600",
+        "explanation": "Correct. 100 at $10 + 50 at $12."
+      },
+      {
+        "id": "d",
+        "text": "$1,500",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "LIFO ending inventory consists of the oldest costs.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-inv-24",
+    "pool": "practice",
+    "stem": "A warehouse count shows $80,000. $5,000 of purchases shipped FOB shipping point are in transit, and $3,000 (cost) of goods sold FOB destination are also in transit. What is ending inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$85,000",
+        "explanation": "Include the goods sold FOB destination.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$83,000",
+        "explanation": "Include the purchases.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$80,000",
+        "explanation": "Adjust for goods in transit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$88,000",
+        "explanation": "Correct. Include both in-transit items."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Title passes at shipment under FOB shipping point and at delivery under FOB destination.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-inv-25",
+    "pool": "practice",
+    "stem": "A $50,000 count includes $4,000 of goods held on consignment for others. The company also has $6,000 of its own goods out on consignment. What is ending inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$52,000",
+        "explanation": "Correct. 50,000 − 4,000 + 6,000."
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Adjust for consignments.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$56,000",
+        "explanation": "Exclude goods held for others.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$46,000",
+        "explanation": "Include goods out on consignment.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The consignor owns consigned goods; the consignee excludes them.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-inv-26",
+    "pool": "practice",
+    "stem": "Base-year dollar-value LIFO inventory is $100,000 (index 1.00). Year 1 ending inventory is $132,000 at current cost, with an index of 1.10. What is ending inventory under DV LIFO?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$132,000",
+        "explanation": "Restate to base-year cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$122,000",
+        "explanation": "Correct. $100,000 + $20,000 × 1.10."
+      },
+      {
+        "id": "c",
+        "text": "$120,000",
+        "explanation": "Price the new layer at 1.10.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$110,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "DV LIFO deflates to base-year cost, finds the new layer, and prices it at the current index.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-inv-27",
+    "pool": "practice",
+    "stem": "Using the net method, a company buys $10,000 of goods on 2/10, n/30 terms and pays after the discount period. What is recorded at payment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200 of purchase discounts taken",
+        "explanation": "It wasn't taken.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "Nothing extra",
+        "explanation": "The net method shows the loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$200 of purchase discounts lost",
+        "explanation": "Correct. The net method records lost discounts."
+      },
+      {
+        "id": "d",
+        "text": "$200 added to inventory",
+        "explanation": "It's a financing cost.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under the net method, purchases are recorded net, and missed discounts are a separate expense.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-inv-28",
+    "pool": "practice",
+    "stem": "Beginning inventory is $50,000, purchases $200,000, and sales $300,000. The gross profit rate is 30%. What is estimated ending inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$160,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$90,000",
+        "explanation": "Use COGS of 70% of sales.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$40,000",
+        "explanation": "Correct. Goods available $250,000 − COGS $210,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The gross profit method estimates COGS as sales × (1 − GP%), then subtracts from goods available.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

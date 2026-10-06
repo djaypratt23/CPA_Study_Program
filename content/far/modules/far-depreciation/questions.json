@@ -795,5 +795,284 @@
     "explanation": "Fully depreciated assets in use remain on the books at cost and accumulated depreciation, with no further expense.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "far-dep-21",
+    "pool": "practice",
+    "stem": "Equipment costs $50,000, with a $5,000 salvage value and a 5-year life. Under double-declining balance, what is year 2 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000",
+        "explanation": "Correct. Year 1 $20,000; year 2 $30,000 × 40%."
+      },
+      {
+        "id": "b",
+        "text": "$9,000",
+        "explanation": "That's straight-line.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$10,800",
+        "explanation": "DDB ignores salvage initially.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "That is the year 1 amount.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "DDB applies twice the straight-line rate to book value, ignoring salvage until the floor is reached.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dep-22",
+    "pool": "practice",
+    "stem": "Equipment costs $50,000, with a $5,000 salvage value and a 5-year life. Under sum-of-the-years'-digits, what is year 3 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Subtract salvage first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$9,000",
+        "explanation": "Correct. $45,000 × 3/15."
+      },
+      {
+        "id": "c",
+        "text": "$12,000",
+        "explanation": "That is the year 2 amount.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$15,000",
+        "explanation": "That is the year 1 amount.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "SYD multiplies the depreciable base by a declining fraction of remaining life over the sum of the digits.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dep-23",
+    "pool": "practice",
+    "stem": "A machine costs $100,000 with a $10,000 salvage value and an estimated 300,000 units of output. It produces 45,000 units in year 1. What is year 1 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000",
+        "explanation": "Subtract salvage first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$13,500",
+        "explanation": "Correct. $90,000 × 45/300."
+      },
+      {
+        "id": "d",
+        "text": "$9,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Units-of-production depreciation is the depreciable base times units produced over total estimated units.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dep-24",
+    "pool": "practice",
+    "stem": "A calendar-year company buys equipment on April 1 for $120,000 (no salvage, 10-year straight-line life). What is year 1 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000",
+        "explanation": "Prorate for 9 months.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$6,000",
+        "explanation": "That's a half-year.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$3,000",
+        "explanation": "That's 3 months.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$9,000",
+        "explanation": "Correct. $12,000 × 9/12."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Depreciation is prorated from the date the asset is placed in service.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dep-25",
+    "pool": "practice",
+    "stem": "Equipment cost $80,000 and had $50,000 of accumulated depreciation on January 1. Depreciation through the June 30 sale is $5,000. It sells for $28,000. What is the gain or loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $3,000 gain",
+        "explanation": "Correct. Book value is $25,000 after current depreciation."
+      },
+      {
+        "id": "b",
+        "text": "A $2,000 loss",
+        "explanation": "Record current-year depreciation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A $3,000 loss",
+        "explanation": "Proceeds exceed book value.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "A $28,000 gain",
+        "explanation": "Subtract book value.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Depreciation is recorded to the disposal date before computing the gain or loss.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dep-26",
+    "pool": "practice",
+    "stem": "Under the composite method, an asset costing $10,000 is retired for $2,000 cash. What is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An $8,000 loss",
+        "explanation": "Composite methods record no loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No gain or loss",
+        "explanation": "Correct. The difference goes to accumulated depreciation."
+      },
+      {
+        "id": "c",
+        "text": "A $2,000 gain",
+        "explanation": "No gain is recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A loss for the book value",
+        "explanation": "No gain or loss.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Under group and composite depreciation, retirements are charged to accumulated depreciation with no gain or loss.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-dep-27",
+    "pool": "practice",
+    "stem": "An asset costing $40,000 (salvage $4,000, 9-year straight-line life) has $12,000 of accumulated depreciation after 3 years. Salvage is revised to $1,000 with 6 years left. What is year 4 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4,000",
+        "explanation": "Revise for the new salvage.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$4,333",
+        "explanation": "Use book value.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$4,500",
+        "explanation": "Correct. ($28,000 − $1,000) ÷ 6."
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Revised estimates are applied prospectively to remaining book value less the new salvage value.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dep-28",
+    "pool": "practice",
+    "stem": "An asset costs $10,000, with a $2,000 salvage value and a 3-year life. Under double-declining balance, what is year 2 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,222",
+        "explanation": "Book value can't drop below salvage.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$2,667",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$1,111",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$1,333",
+        "explanation": "Correct. DDB stops at salvage: $3,333 − $2,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Declining-balance depreciation stops when book value reaches salvage.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]
