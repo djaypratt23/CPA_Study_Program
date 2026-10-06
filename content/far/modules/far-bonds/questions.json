@@ -131,7 +131,8 @@
     ],
     "answer": "d",
     "explanation": "Semiannual: coupon = 7,000 per period (3.5% × 200,000), discount rate 4%, 10 periods.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-bond-02",
@@ -165,6 +166,7 @@
     "answer": "d",
     "explanation": "PV face = 200,000 × 0.67556 = 135,113; PV coupons = 7,000 × 8.11090 = 56,776. Price ≈ **191,889** (a discount).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -198,7 +200,8 @@
     ],
     "answer": "a",
     "explanation": "Discount amortization increases the carrying amount each period; interest expense is a constant rate on a growing base.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-bond-04",
@@ -232,6 +235,7 @@
     "answer": "d",
     "explanation": "Interest expense = 780,000 × 7% = 54,600. Cash = 800,000 × 6% = 48,000. Discount amortization = 6,600 → carrying amount **786,600**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -266,6 +270,7 @@
     "answer": "a",
     "explanation": "Proceeds 1,010,000 (premium 10,000) less issuance costs 15,000 = net carrying amount **995,000** (ASC 835-30-45-1A).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -299,7 +304,8 @@
     ],
     "answer": "d",
     "explanation": "Premium bonds: expense = carrying amount × lower market rate < cash coupon; the difference reduces the carrying amount toward face. The amortization amount grows each period.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-bond-07",
@@ -333,6 +339,7 @@
     "answer": "d",
     "explanation": "Cash interest = 500,000 × 6% = 30,000; straight-line amortization = 40,000 ÷ 10 = 4,000; expense = **34,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -366,7 +373,8 @@
     ],
     "answer": "d",
     "explanation": "Bonds payable are reported net of unamortized discount (or plus unamortized premium).",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-bond-09",
@@ -400,6 +408,7 @@
     "answer": "d",
     "explanation": "July 1–December 31 = 6 months: 600,000 × 8% × 6/12 = **24,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -433,6 +442,179 @@
     ],
     "answer": "a",
     "explanation": "Early in a premium bond's life, effective-interest amortization is small (expense close to the coupon). Straight-line amortizes an average amount, so its first-year expense is lower.",
-    "skill": "analysis"
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-bond-11",
+    "pool": "practice",
+    "stem": "Bonds are issued at a premium when:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The market rate exceeds the stated rate",
+        "explanation": "That produces a discount.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "The bonds are callable",
+        "explanation": "Call features don't determine premium.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "The bonds are secured",
+        "explanation": "Security doesn't determine premium.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "The stated rate exceeds the market rate",
+        "explanation": "Correct. Investors pay more than face for above-market interest."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Premium: stated rate > market rate; discount: stated rate < market rate.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-bond-12",
+    "pool": "practice",
+    "stem": "On March 1, a company issues $100,000 of 6% bonds at par, dated January 1, with interest paid annually on December 31. How much cash does it receive?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$101,000",
+        "explanation": "Correct. Par plus two months' accrued interest of 1,000."
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Buyers pay accrued interest since the last interest date.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$106,000",
+        "explanation": "Only two months of interest has accrued.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$99,000",
+        "explanation": "Accrued interest is added, not deducted.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Bonds sold between interest dates are sold at the price plus accrued interest.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-bond-13",
+    "pool": "practice",
+    "stem": "How are debt issuance costs presented under ASU 2015-03?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a deferred asset",
+        "explanation": "That was the prior practice.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a reduction of the debt's carrying amount",
+        "explanation": "Correct. They are presented like a discount and amortized as interest."
+      },
+      {
+        "id": "c",
+        "text": "As an expense when the debt is issued",
+        "explanation": "They are amortized over the term.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a reduction of equity",
+        "explanation": "Debt costs don't reduce equity.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASU 2015-03: present debt issuance costs as a direct deduction from the related debt's carrying amount.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-bond-14",
+    "pool": "practice",
+    "stem": "Bonds with a face of $1,000,000 and a 10% stated rate are issued for $1,081,109 to yield 8%, with annual interest. What is the carrying amount after the first payment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,094,620",
+        "explanation": "Premium amortization reduces the carrying amount.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$1,081,109",
+        "explanation": "The premium is amortized each period.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$1,067,598",
+        "explanation": "Correct. Interest expense 86,489; cash 100,000; premium amortized 13,511."
+      },
+      {
+        "id": "d",
+        "text": "$1,073,000",
+        "explanation": "That uses straight-line amortization.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Effective interest: expense = 1,081,109 × 8% = 86,489; amortization = 100,000 − 86,489.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-bond-15",
+    "pool": "practice",
+    "stem": "After ASU 2020-06, how does an issuer generally account for convertible bonds with no derivative features?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Split between debt and equity",
+        "explanation": "Separation is no longer required in most cases.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Entirely as equity",
+        "explanation": "Convertible bonds are liabilities until converted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a derivative at fair value",
+        "explanation": "Only if the feature must be bifurcated.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Entirely as debt",
+        "explanation": "Correct. The beneficial conversion and cash conversion models were removed."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASU 2020-06: most convertible instruments are accounted for as a single liability.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

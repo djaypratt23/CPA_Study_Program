@@ -133,6 +133,7 @@
     "answer": "c",
     "explanation": "Use the more clearly determinable fair value — an active market price of 48 × 5,000 = **240,000**. Common stock 50,000; APIC 190,000.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -167,6 +168,7 @@
     "answer": "a",
     "explanation": "Only preferred has a known value (1,000 × 60 = 60,000); common gets the remainder: **90,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -200,7 +202,8 @@
     ],
     "answer": "d",
     "explanation": "Cash dividend declaration: Dr Retained earnings / Cr Dividends payable — equity down. Splits and stock dividends don't change total equity; reissuing treasury stock increases it.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-seq-04",
@@ -234,6 +237,7 @@
     "answer": "a",
     "explanation": "Remeasure the securities to fair value (gain 25,000), then Dr Retained earnings 110,000 / Cr Property dividends payable 110,000.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -268,6 +272,7 @@
     "answer": "a",
     "explanation": "Preferred annual dividend = 20,000 × 50 × 6% = 60,000. Noncumulative → no arrears. Common = 100,000 − 60,000 = **40,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -301,7 +306,8 @@
     ],
     "answer": "a",
     "explanation": "A stock split doubles shares and halves par; the common stock account total and retained earnings are unchanged (memo entry only).",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-seq-07",
@@ -335,6 +341,7 @@
     "answer": "b",
     "explanation": "A 40% dividend is large (> 20–25%) → record at par: 40,000 shares × $1 = **40,000**, credited to common stock dividend distributable (equity) until issued.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -368,7 +375,8 @@
     ],
     "answer": "c",
     "explanation": "Dividends in arrears are disclosed, not accrued; a liability arises only on declaration.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-seq-09",
@@ -401,7 +409,8 @@
     ],
     "answer": "d",
     "explanation": "Direct costs of issuing equity reduce the proceeds recorded in APIC.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-seq-10",
@@ -434,6 +443,180 @@
     ],
     "answer": "b",
     "explanation": "Declaration: liability and RE reduction. Record date: no entry. Payment date: pay the liability.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-seq-11",
+    "pool": "practice",
+    "stem": "How is a 2-for-1 stock split recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Debit retained earnings at fair value",
+        "explanation": "That is a small stock dividend.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Debit retained earnings at par",
+        "explanation": "That is a large stock dividend.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Memo entry only; par value per share halves",
+        "explanation": "Correct. Total par and equity accounts are unchanged."
+      },
+      {
+        "id": "d",
+        "text": "Debit APIC and credit common stock",
+        "explanation": "No transfer is made for a split.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A stock split changes the number of shares and par value per share without a journal entry.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-seq-12",
+    "pool": "practice",
+    "stem": "A company with 100,000 shares of $1 par common stock declares a 50% stock dividend when the market price is $20. By how much does retained earnings decrease?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000,000",
+        "explanation": "Fair value is used only for small dividends.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Only 50,000 shares are issued.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Retained earnings is capitalized at par.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Correct. Large stock dividends are recorded at par."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Stock dividends over 20–25% are recorded at par: 50,000 shares × $1.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-seq-13",
+    "pool": "practice",
+    "stem": "A company has 10,000 shares of $100 par, 5% cumulative preferred stock, with two years of dividends in arrears. It declares $200,000 of total dividends. How much goes to common shareholders?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Correct. Preferred receive three years × 50,000 = 150,000; common get the rest."
+      },
+      {
+        "id": "b",
+        "text": "$150,000",
+        "explanation": "Arrears and the current year go to preferred first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "Preferred receive arrears plus the current year.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The declared amount exceeds the preferred claim.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Cumulative preferred shareholders receive dividends in arrears and the current dividend before common shareholders.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-seq-14",
+    "pool": "practice",
+    "stem": "The board appropriates $500,000 of retained earnings for future plant expansion. What is the effect on total stockholders' equity?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $500,000 decrease",
+        "explanation": "Equity isn't reduced.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No effect",
+        "explanation": "Correct. An appropriation reclassifies retained earnings."
+      },
+      {
+        "id": "c",
+        "text": "A $500,000 increase",
+        "explanation": "Equity isn't increased.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "A liability is recorded",
+        "explanation": "No obligation arises.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Appropriations restrict retained earnings for disclosure; total equity is unchanged.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "far-seq-15",
+    "pool": "practice",
+    "stem": "A company grants 10,000 employee stock options with a grant-date fair value of $12 each, vesting after four years of service. What annual compensation cost is recognized (assuming no forfeitures)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "Cost is recognized over the service period.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "The service period is four years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Correct. 120,000 ÷ 4 years."
+      },
+      {
+        "id": "d",
+        "text": "$0 until exercise",
+        "explanation": "Cost is recognized as services are rendered.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 718: grant-date fair value is recognized as compensation over the requisite service period.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

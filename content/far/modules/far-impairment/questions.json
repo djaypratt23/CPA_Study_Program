@@ -131,7 +131,8 @@
     ],
     "answer": "a",
     "explanation": "ASC 360 indicators include a significant decrease in market price, adverse changes in use or condition, adverse legal or business factors, cost overruns, continuing losses, and expected early disposal.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-imp-02",
@@ -164,7 +165,8 @@
     ],
     "answer": "b",
     "explanation": "The impaired carrying amount becomes the new cost basis and is depreciated over the asset's remaining useful life.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-imp-03",
@@ -198,6 +200,7 @@
     "answer": "d",
     "explanation": "Indefinite-lived intangibles use a one-step test: carrying amount vs. fair value. Loss = 800,000 − 650,000 = **150,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -232,6 +235,7 @@
     "answer": "a",
     "explanation": "ASU 2017-04: loss = carrying amount − fair value = **1,500,000**, limited to goodwill (2,000,000).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true,
     "optional": true
   },
@@ -267,6 +271,7 @@
     "answer": "b",
     "explanation": "Excess = 8,000,000 − 6,800,000 = 1,200,000, capped at goodwill of **900,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true,
     "optional": true
   },
@@ -302,6 +307,7 @@
     "answer": "c",
     "explanation": "Held-for-sale assets are remeasured each period; gains are recognized up to cumulative losses previously recognized (100,000). The 60,000 recovery is within that limit.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -335,7 +341,8 @@
     ],
     "answer": "b",
     "explanation": "Test and adjust other assets (and asset groups) first, then test goodwill using the adjusted carrying amount of the reporting unit.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-imp-08",
@@ -369,6 +376,7 @@
     "answer": "a",
     "explanation": "The PCC alternative lets private companies amortize goodwill straight-line over 10 years (or less, if more appropriate) and test only upon a triggering event, at the entity or reporting-unit level.",
     "skill": "remembering",
+    "difficulty": 1,
     "optional": true
   },
   {
@@ -403,6 +411,7 @@
     "answer": "d",
     "explanation": "Recoverability fails (360,000 > 340,000). For assets held and used, measure to **fair value** (300,000) — selling costs aren't deducted: loss = **60,000**.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -436,6 +445,282 @@
     ],
     "answer": "a",
     "explanation": "ASC 360-10-45-4: impairment losses on assets held and used are included in income from continuing operations before income taxes (in operating income if presented).",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-imp-11",
+    "pool": "practice",
+    "stem": "Under U.S. GAAP, may an impairment loss on an asset held and used be reversed if its fair value later recovers?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, up to the original carrying amount",
+        "explanation": "U.S. GAAP prohibits reversals.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, in full through OCI",
+        "explanation": "Reversals aren't allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only for indefinite-lived intangibles",
+        "explanation": "Reversals are prohibited for those too.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No",
+        "explanation": "Correct. Reversal of impairment losses on assets held and used is prohibited."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 360-10-35-20: the new cost basis after an impairment can't be written back up.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-imp-12",
+    "pool": "practice",
+    "stem": "How is a long-lived asset classified as held for sale measured?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Lower of carrying amount or fair value less cost to sell",
+        "explanation": "Correct. It also stops being depreciated."
+      },
+      {
+        "id": "b",
+        "text": "Fair value, with changes in OCI",
+        "explanation": "Held-for-sale assets aren't marked to fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Carrying amount, with continued depreciation",
+        "explanation": "Depreciation stops.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Undiscounted future cash flows",
+        "explanation": "That is the recoverability test for held-and-used assets.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 360-10-35-43: assets held for sale are measured at the lower of carrying amount or fair value less cost to sell and aren't depreciated.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-imp-13",
+    "pool": "practice",
+    "stem": "A reporting unit's carrying amount is $5,000,000, including $800,000 of goodwill. Its fair value is $4,600,000. What goodwill impairment loss is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$800,000",
+        "explanation": "The loss is the excess, limited to goodwill.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$400,000",
+        "explanation": "Correct. Carrying amount exceeds fair value by 400,000, within the goodwill balance."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The unit's carrying amount exceeds fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$200,000",
+        "explanation": "There is no implied-goodwill step after ASU 2017-04.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASU 2017-04: goodwill impairment = carrying amount of the reporting unit − its fair value, not exceeding goodwill.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-imp-14",
+    "pool": "practice",
+    "stem": "A reporting unit's carrying amount is $5,000,000, including $800,000 of goodwill, and its fair value is $4,000,000. What goodwill impairment loss is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000,000",
+        "explanation": "The loss can't exceed goodwill.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "The excess over goodwill isn't the loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$800,000",
+        "explanation": "Correct. The 1,000,000 excess is limited to the goodwill balance."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The unit is impaired.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The goodwill impairment loss is limited to the goodwill allocated to the reporting unit.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-imp-15",
+    "pool": "practice",
+    "stem": "What does the optional qualitative assessment for goodwill impairment determine?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The amount of the impairment loss",
+        "explanation": "The loss comes from the quantitative test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "The fair value of the reporting unit",
+        "explanation": "Fair value is measured in the quantitative test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Whether goodwill is amortized",
+        "explanation": "Public entities don't amortize goodwill.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Whether a quantitative test is needed",
+        "explanation": "Correct. If impairment isn't more likely than not, the quantitative test is skipped."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 350-20-35-3A: an entity may first assess qualitative factors; if it is more likely than not that fair value is below carrying amount, it performs the quantitative test.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-imp-16",
+    "pool": "practice",
+    "stem": "A broadcast license with an indefinite life has a carrying amount of $900,000 and a fair value of $950,000. What impairment loss is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "None",
+        "explanation": "Correct. Fair value exceeds the carrying amount."
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Fair value above carrying amount isn't a loss.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$900,000",
+        "explanation": "The license retains its value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Amortization of $90,000",
+        "explanation": "Indefinite-lived intangibles aren't amortized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Indefinite-lived intangibles are tested by comparing fair value with the carrying amount; a loss arises only if carrying amount exceeds fair value.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-imp-17",
+    "pool": "practice",
+    "stem": "An asset group of machine A (carrying amount $300,000) and machine B ($200,000) has a $100,000 impairment loss. Neither machine's fair value is known. How is the loss allocated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $50,000; B $50,000",
+        "explanation": "Allocation is pro rata, not equal.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $60,000; B $40,000",
+        "explanation": "Correct. The loss is allocated pro rata by carrying amount."
+      },
+      {
+        "id": "c",
+        "text": "A $100,000; B $0",
+        "explanation": "The loss is shared by the group's assets.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A $40,000; B $60,000",
+        "explanation": "That reverses the proportions.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 360-10-35-28: allocate a group impairment loss pro rata by carrying amount, without reducing any asset below its fair value if determinable.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-imp-18",
+    "pool": "practice",
+    "stem": "How often must goodwill be tested for impairment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only when a triggering event occurs",
+        "explanation": "An annual test is also required.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Every three years",
+        "explanation": "The test is at least annual.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "At least annually, and between tests if triggered",
+        "explanation": "Correct. Goodwill is tested annually and when events indicate impairment."
+      },
+      {
+        "id": "d",
+        "text": "Only when the business is sold",
+        "explanation": "Impairment testing is periodic.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 350-20-35-28: test goodwill at least annually at the reporting-unit level, and between annual tests if an event indicates impairment.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

@@ -129,7 +129,8 @@
     ],
     "answer": "b",
     "explanation": "The customer's deteriorating condition existed at December 31, so the bankruptcy is a recognized subsequent event.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-se-02",
@@ -162,7 +163,8 @@
     ],
     "answer": "b",
     "explanation": "The cause arose after the balance sheet date → nonrecognized; disclose the nature and estimated effect.",
-    "skill": "analysis"
+    "skill": "analysis",
+    "difficulty": 3
   },
   {
     "id": "far-se-03",
@@ -195,7 +197,8 @@
     ],
     "answer": "c",
     "explanation": "SEC filers evaluate through the issuance date and are not required to disclose it.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-se-04",
@@ -229,6 +232,7 @@
     "answer": "a",
     "explanation": "Settlement of a lawsuit whose underlying event occurred before year-end is Type I: adjust the accrual to 350,000.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -262,7 +266,8 @@
     ],
     "answer": "b",
     "explanation": "ASC 260: stock splits and dividends after the balance sheet date but before issuance are reflected retroactively in EPS and share data (with disclosure).",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-se-06",
@@ -295,7 +300,8 @@
     ],
     "answer": "c",
     "explanation": "New financing after year-end is a nonrecognized event; disclose if material.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-se-07",
@@ -328,7 +334,8 @@
     ],
     "answer": "b",
     "explanation": "The theft occurred before the balance sheet date, so its discovery is evidence about year-end conditions — recognize it.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-se-08",
@@ -361,7 +368,8 @@
     ],
     "answer": "a",
     "explanation": "ASC 855-10-50-2: disclose the nature of the event and an estimate of its financial effect; pro forma information may be useful.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-se-09",
@@ -395,6 +403,7 @@
     "answer": "b",
     "explanation": "The underlying cause (sale of defective goods) existed at the balance sheet date; with a probable, estimable loss, accrue at year-end.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -429,6 +438,178 @@
     "answer": "b",
     "explanation": "A customer bankruptcy after year-end that results from a condition existing at the balance sheet date is a recognized (Type I) subsequent event. Loss = $90,000 × (1 − 20%) = $72,000, recorded in Year 1.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "far-se-11",
+    "pool": "practice",
+    "stem": "Through what date does a private company that is not an SEC filer evaluate subsequent events?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The balance sheet date",
+        "explanation": "Subsequent events occur after that date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The date the auditor's fieldwork began",
+        "explanation": "Fieldwork isn't the reference date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "One year after year-end",
+        "explanation": "No such period applies.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "The available-to-be-issued date",
+        "explanation": "Correct. Non-SEC filers evaluate through the available-to-be-issued date, disclosed in the notes."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 855-10-25-2: entities other than SEC filers evaluate subsequent events through the date the statements are available to be issued.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "far-se-12",
+    "pool": "practice",
+    "stem": "After year-end but before issuance, a company issues $10 million of bonds. How is this reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nonrecognized; disclosed",
+        "explanation": "Correct. The financing occurred after the balance sheet date."
+      },
+      {
+        "id": "b",
+        "text": "As a liability at year-end",
+        "explanation": "The bonds didn't exist at year-end.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Ignored entirely",
+        "explanation": "Material nonrecognized events are disclosed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a recognized event",
+        "explanation": "It doesn't relate to year-end conditions.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Events arising after the balance sheet date are nonrecognized subsequent events, disclosed if material.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "far-se-13",
+    "pool": "practice",
+    "stem": "A lawsuit from an injury in November was accrued at $200,000 at December 31. In February, before issuance, it settles for $260,000. What is reported at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A liability of $200,000, with disclosure",
+        "explanation": "The settlement amount is recognized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "A liability of $260,000",
+        "explanation": "Correct. The settlement is evidence about a condition existing at year-end."
+      },
+      {
+        "id": "c",
+        "text": "A liability of $200,000 and a February loss",
+        "explanation": "The adjustment belongs at year-end.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "No liability, only disclosure",
+        "explanation": "The obligation existed at year-end.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Recognized subsequent events provide additional evidence about conditions at the balance sheet date.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-se-14",
+    "pool": "practice",
+    "stem": "In February, before issuance, the market value of a company's investments falls sharply due to general market conditions after year-end. How is this reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "By remeasuring the investments at year-end",
+        "explanation": "The decline didn't exist at year-end.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "As a recognized event",
+        "explanation": "It isn't evidence of year-end conditions.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Nonrecognized; disclosed",
+        "explanation": "Correct. The decline reflects conditions arising after year-end."
+      },
+      {
+        "id": "d",
+        "text": "Not reported at all",
+        "explanation": "Material nonrecognized events are disclosed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Changes in market prices after the balance sheet date are nonrecognized subsequent events.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-se-15",
+    "pool": "practice",
+    "stem": "A company reissues its prior-year statements in a later registration statement. How does it treat events occurring after the original issuance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It recognizes all events up to reissuance",
+        "explanation": "Only required revisions are recognized.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "It ignores all later events, even disclosure",
+        "explanation": "Disclosure may be needed to avoid misleading statements.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It restates for every later event",
+        "explanation": "Restatement is for errors or retrospective changes.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It doesn't recognize them unless GAAP or regulation requires",
+        "explanation": "Correct. Reissued statements don't recognize later events except as required."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 855-10-25-4: an entity shall not recognize events occurring between original issuance and reissuance unless required by GAAP or regulation.",
+    "skill": "application",
+    "difficulty": 3
   }
 ]

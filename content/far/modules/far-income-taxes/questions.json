@@ -131,6 +131,7 @@
     "answer": "b",
     "explanation": "Taxable income = 600,000 − 30,000 + 12,000 − 50,000 = 532,000 × 21% = **111,720**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -165,6 +166,7 @@
     "answer": "c",
     "explanation": "Deferred tax expense = DTL of 50,000 × 21% = 10,500. Total = 111,720 + 10,500 = **122,220** (= 21% × (600,000 − 30,000 + 12,000)).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -198,7 +200,8 @@
     ],
     "answer": "b",
     "explanation": "ASC 740 measures deferred taxes using enacted tax law and rates expected to apply in the periods the temporary differences reverse.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-tax-04",
@@ -232,6 +235,7 @@
     "answer": "d",
     "explanation": "Deferred tax expense = increase in DTL (15,000) − increase in DTA (6,000) = **9,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -266,6 +270,7 @@
     "answer": "a",
     "explanation": "Unearned revenue taxed before it's book revenue creates a DTA: 120,000 × 25% = **30,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -300,6 +305,7 @@
     "answer": "b",
     "explanation": "Deferred taxes are remeasured when a rate change is enacted; the adjustment (here +32,000 DTL) is included in income from continuing operations in that period.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -333,7 +339,8 @@
     ],
     "answer": "c",
     "explanation": "ASU 2015-17 requires all deferred tax assets and liabilities to be classified as noncurrent, offset within each tax-paying component and jurisdiction.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-tax-08",
@@ -367,6 +374,7 @@
     "answer": "b",
     "explanation": "Measure at the largest amount with a cumulative probability greater than 50%: 1,000,000 (35%) → 800,000 (35% + 30% = 65%) ✓. Recognize the benefit of an 800,000 deduction.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -400,7 +408,8 @@
     ],
     "answer": "b",
     "explanation": "Premiums on officers' life insurance with the company as beneficiary are never deductible, and proceeds are never taxable — permanent.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-tax-10",
@@ -434,6 +443,180 @@
     "answer": "c",
     "explanation": "Post-2017 NOLs carry forward indefinitely (usable up to 80% of taxable income each year). If realization is more likely than not, record a DTA of 1,000,000 × 21% = **210,000** with no valuation allowance.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "far-tax-11",
+    "pool": "practice",
+    "stem": "A company accrues $50,000 of warranty expense for books; the deduction is allowed when claims are paid. What deferred tax item results (21% rate)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $10,500 deferred tax liability",
+        "explanation": "Future deductible amounts create assets.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "A $50,000 deferred tax asset",
+        "explanation": "Multiply the difference by the rate.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "A $10,500 deferred tax asset",
+        "explanation": "Correct. Future deductions create a deferred tax asset."
+      },
+      {
+        "id": "d",
+        "text": "No deferred tax",
+        "explanation": "It is a temporary difference.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Temporary differences that produce future deductible amounts create deferred tax assets.",
+    "skill": "application",
+    "difficulty": 1,
+    "calc": true
+  },
+  {
+    "id": "far-tax-12",
+    "pool": "practice",
+    "stem": "A company has a $1,000,000 taxable temporary difference and a deferred tax liability of $210,000. A law enacted in December raises the future rate to 25%. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect until the rate takes effect",
+        "explanation": "Remeasurement occurs when the law is enacted.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "A $40,000 adjustment to retained earnings",
+        "explanation": "The effect runs through income tax expense.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A $40,000 decrease in tax expense",
+        "explanation": "A higher rate increases the liability.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "A $40,000 increase in deferred tax expense this year",
+        "explanation": "Correct. The DTL is remeasured to 250,000 in the period of enactment."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 740-10-35-4: deferred taxes are remeasured for enacted rate changes, with the effect in income from continuing operations in the enactment period.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-tax-13",
+    "pool": "practice",
+    "stem": "Pretax income is $800,000, including $20,000 of nondeductible fines. Tax depreciation exceeds book depreciation by $50,000. The rate is 21%, and there were no beginning deferred taxes. What is total income tax expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$172,200",
+        "explanation": "Correct. Current 161,700 (21% × 770,000) + deferred 10,500."
+      },
+      {
+        "id": "b",
+        "text": "$168,000",
+        "explanation": "Fines are permanent differences, not deductible.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$161,700",
+        "explanation": "Deferred tax on the depreciation difference must be added.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$182,700",
+        "explanation": "The depreciation difference doesn't change total expense.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Total tax expense = 21% × (pretax income + permanent differences) = 21% × 820,000.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-tax-14",
+    "pool": "practice",
+    "stem": "How may an entity classify interest and penalties on unrecognized tax benefits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only as income tax expense",
+        "explanation": "Classification is an accounting policy choice.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Either way, by policy",
+        "explanation": "Correct. The classification is a policy election, applied consistently and disclosed."
+      },
+      {
+        "id": "c",
+        "text": "Only as operating expense",
+        "explanation": "Either classification is allowed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "As a reduction of revenue",
+        "explanation": "Interest and penalties aren't revenue reductions.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 740-10-45-25: classification of interest and penalties is an accounting policy election.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-tax-15",
+    "pool": "practice",
+    "stem": "A company reports a loss from discontinued operations. Where is its related tax benefit reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In income tax expense on continuing operations",
+        "explanation": "Intraperiod allocation separates the tax effect.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "In other comprehensive income",
+        "explanation": "The item isn't an OCI component.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "With the discontinued operations, net of tax",
+        "explanation": "Correct. Intraperiod allocation assigns tax to the item that caused it."
+      },
+      {
+        "id": "d",
+        "text": "As a direct credit to equity",
+        "explanation": "Discontinued operations are in income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Intraperiod tax allocation reports the tax effects of discontinued operations, OCI and other items with those items.",
+    "skill": "application",
+    "difficulty": 1
   }
 ]

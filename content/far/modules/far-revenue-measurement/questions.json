@@ -131,6 +131,7 @@
     "answer": "c",
     "explanation": "Two possible outcomes → most likely amount (50,000). Not constrained → transaction price = 400,000 + 50,000 = **450,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -165,6 +166,7 @@
     "answer": "b",
     "explanation": "Adjust for the significant financing component: revenue = present value = 242,000 ÷ 1.10² = **200,000**; interest income is recognized over the payment period.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -199,6 +201,7 @@
     "answer": "d",
     "explanation": "Gross sales 100,000; expected returns 4% = 4,000. Revenue **96,000**; refund liability **4,000**; asset for recovery of goods 2,400 (80 units × $30).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -233,6 +236,7 @@
     "answer": "a",
     "explanation": "Total SSP = 2,000; discount 25%. C = 400 / 2,000 × 1,500 = **300**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -266,7 +270,8 @@
     ],
     "answer": "b",
     "explanation": "Routine services consumed as performed meet the first over-time criterion.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-rev2-06",
@@ -300,6 +305,7 @@
     "answer": "a",
     "explanation": "Progress = 2,000,000 / 6,400,000 = 31.25%. Revenue = 2,500,000. Gross profit = **500,000** (= 31.25% × 1,600,000).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -334,6 +340,7 @@
     "answer": "c",
     "explanation": "An expected loss on a contract is recognized in full immediately. Cumulative loss to recognize by end of Year 2 = 200,000; Year 1 recognized +150,000 → Year 2 loss = **350,000**.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -367,7 +374,8 @@
     ],
     "answer": "b",
     "explanation": "ASC 340-40: incremental costs of obtaining a contract are capitalized if expected to be recovered and amortized systematically; the expedient to expense applies only when amortization would be ≤ 1 year.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-rev2-09",
@@ -400,7 +408,8 @@
     ],
     "answer": "c",
     "explanation": "A contract asset represents a right to consideration that is conditional on something other than the passage of time; it becomes a receivable when unconditional.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-rev2-10",
@@ -434,6 +443,181 @@
     "answer": "b",
     "explanation": "Residual approach: total price − observable SSP of other obligations = 56,000 − 10,000 = **46,000** to the license.",
     "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-rev2-11",
+    "pool": "practice",
+    "stem": "A contractor expects consideration of $100,000 (60% likely) or $120,000 (40% likely). Using the expected value method, what variable consideration is estimated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "That is the most likely amount.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$108,000",
+        "explanation": "Correct. 60% × 100,000 + 40% × 120,000 = 108,000."
+      },
+      {
+        "id": "c",
+        "text": "$110,000",
+        "explanation": "The outcomes aren't equally likely.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$120,000",
+        "explanation": "The higher outcome is less likely.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Expected value: probability-weighted sum of possible amounts.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-rev2-12",
+    "pool": "practice",
+    "stem": "A customer pays $100,000 two years before delivery of goods. The contract has a significant financing component at 5%. What revenue is recognized at delivery?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "The financing component accretes interest.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$90,703",
+        "explanation": "That discounts rather than accretes an advance payment.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$110,250",
+        "explanation": "Correct. 100,000 × 1.05² = 110,250, with 10,250 of interest expense over two years."
+      },
+      {
+        "id": "d",
+        "text": "$105,000",
+        "explanation": "Interest compounds for two years.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "When the customer pays in advance and there is a significant financing component, the seller accretes interest expense on the contract liability.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-rev2-13",
+    "pool": "practice",
+    "stem": "A manufacturer pays a retailer a $20,000 slotting fee for shelf space, receiving no distinct good or service. How is the fee accounted for?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As advertising expense",
+        "explanation": "A slotting fee isn't a distinct service.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As an intangible asset",
+        "explanation": "Shelf space isn't an asset the manufacturer controls.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As cost of goods sold",
+        "explanation": "It reduces revenue, not cost.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a reduction of revenue",
+        "explanation": "Correct. Consideration payable to a customer without a distinct good is a reduction of the transaction price."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 606-10-32-25: consideration payable to a customer reduces the transaction price unless it pays for a distinct good or service.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-rev2-14",
+    "pool": "practice",
+    "stem": "A contract to deliver 10,000 units for $500,000 is recognized over time using units delivered. At year-end, 3,000 units have been delivered. How much revenue is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "Correct. 3,000 ÷ 10,000 × 500,000."
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "Revenue is recognized as units are delivered.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "$350,000",
+        "explanation": "That is the remaining revenue.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Over-time recognition applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Output method: progress = units delivered ÷ total units.",
+    "skill": "application",
+    "difficulty": 1,
+    "calc": true
+  },
+  {
+    "id": "far-rev2-15",
+    "pool": "practice",
+    "stem": "A fixed-price contract of $1,000,000 is recognized over time. At the end of Year 1, estimated total costs are $1,100,000. What total loss is recognized on the contract by the end of Year 1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000, in proportion to progress",
+        "explanation": "Expected losses aren't spread by progress.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Correct. The full expected loss on an onerous contract is recognized immediately."
+      },
+      {
+        "id": "c",
+        "text": "$0 until the contract ends",
+        "explanation": "Losses are recognized when expected.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$1,100,000",
+        "explanation": "Only the excess of cost over price is a loss.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Under ASC 605-35, the entire anticipated loss on a contract is recognized when it becomes evident.",
+    "skill": "application",
+    "difficulty": 2,
     "calc": true
   }
 ]

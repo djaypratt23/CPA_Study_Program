@@ -132,6 +132,7 @@
     "answer": "b",
     "explanation": "Goods available = 16,850 for 750 units. FIFO leaves the newest costs: 250 × $25 + 100 × $22 = **8,450**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -166,6 +167,7 @@
     "answer": "d",
     "explanation": "LIFO ending inventory = 200 × 20 + 150 × 22 = 7,300. COGS = 16,850 − 7,300 = **9,550** (equivalently 250 × 25 + 150 × 22).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -200,6 +202,7 @@
     "answer": "a",
     "explanation": "Weighted-average cost = 16,850 ÷ 750 units = $22.4667. Ending inventory = 350 × 22.4667 = **7,863**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -234,6 +237,7 @@
     "answer": "b",
     "explanation": "Perpetual LIFO applies LIFO at each sale. Jan 15 sale of 150: 100 @ $9 + 50 @ $8. Left: 50 @ $8. Add Jan 20: 100 @ $10. Ending = 400 + 1,000 = **1,400**. (Periodic LIFO would give 1,250.)",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -267,7 +271,8 @@
     ],
     "answer": "c",
     "explanation": "Inventory includes costs to bring goods to their existing condition and location (price, freight-in, duties, handling). Freight-out is a selling expense.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-inv-06",
@@ -301,6 +306,7 @@
     "answer": "d",
     "explanation": "FOB destination: title passes on arrival (January 3) — Seller's inventory at year-end. Consigned goods remain the consignor's inventory. Total **65,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -335,6 +341,7 @@
     "answer": "c",
     "explanation": "99,000 ÷ 1.10 = 90,000 at base prices → a 10,000 layer. Value it at the Year 1 index: 10,000 × 1.10 = 11,000. DV LIFO = 80,000 + 11,000 = **91,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -368,7 +375,8 @@
     ],
     "answer": "a",
     "explanation": "A LIFO liquidation releases old, low-cost layers into COGS, inflating gross profit (and taxes). Material effects are disclosed.",
-    "skill": "analysis"
+    "skill": "analysis",
+    "difficulty": 3
   },
   {
     "id": "far-inv-09",
@@ -401,7 +409,8 @@
     ],
     "answer": "b",
     "explanation": "The LIFO conformity rule (IRC §472) requires book use of LIFO when it is used for tax. IFRS prohibits LIFO.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-inv-10",
@@ -435,6 +444,179 @@
     "answer": "c",
     "explanation": "COGS = 600,000 − ending inventory. Understating ending inventory by 15,000 overstates COGS by 15,000 and understates net income by 15,000.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "far-inv-11",
+    "pool": "practice",
+    "stem": "On December 30 a seller ships goods FOB destination; they arrive January 3. Whose December 31 inventory includes them?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The seller's",
+        "explanation": "Correct. Under FOB destination, title passes when the goods arrive."
+      },
+      {
+        "id": "b",
+        "text": "The buyer's",
+        "explanation": "The buyer gets title on arrival.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "The carrier's",
+        "explanation": "Carriers don't own goods they transport.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Neither party's",
+        "explanation": "Someone always owns the goods.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "FOB shipping point: title passes at shipment. FOB destination: title passes on delivery.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "far-inv-12",
+    "pool": "practice",
+    "stem": "A manufacturer ships goods on consignment to a retailer, which has sold none of them at year-end. The goods are included in:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The retailer's inventory",
+        "explanation": "The consignee holds but doesn't own the goods.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "The manufacturer's inventory",
+        "explanation": "Correct. The consignor keeps title until the goods are sold."
+      },
+      {
+        "id": "c",
+        "text": "Both companies' inventories",
+        "explanation": "Only the owner reports them.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Neither company's inventory",
+        "explanation": "The consignor still owns them.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Consigned goods remain in the consignor's inventory until sold to an end customer.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-inv-13",
+    "pool": "practice",
+    "stem": "A company uses a perpetual moving-average system. It had 100 units at $10, bought 100 at $12, sold 150, then bought 50 at $14. What is ending inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,300",
+        "explanation": "That uses FIFO for the remaining units.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$1,200",
+        "explanation": "That uses the periodic average of all purchases.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$1,250",
+        "explanation": "Correct. Average 11 after the purchase; 50 left × 11 = 550, plus 700 = 1,250."
+      },
+      {
+        "id": "d",
+        "text": "$1,400",
+        "explanation": "That values all 100 units at the last cost.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Moving average recomputes the unit cost after each purchase: (1,000 + 1,200) ÷ 200 = 11.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-inv-14",
+    "pool": "practice",
+    "stem": "Under dollar-value LIFO, base-year inventory is $100,000 (index 1.00). Year 1 ending inventory at current cost is $132,000, and the year-end index is 1.10. What is Year 1 ending inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$132,000",
+        "explanation": "That is current cost, not LIFO.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$120,000",
+        "explanation": "The new layer is priced at the current index.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$110,000",
+        "explanation": "Only the increment over the base is indexed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$122,000",
+        "explanation": "Correct. Base-year cost 120,000; new layer 20,000 × 1.10 = 22,000; 100,000 + 22,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Deflate ending inventory to base-year cost, find the layer, and reprice each layer at its own index.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-inv-15",
+    "pool": "practice",
+    "stem": "Which cost is included in the cost of inventory purchased for resale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Freight-in",
+        "explanation": "Correct. Costs to bring goods to their location and condition are inventory costs."
+      },
+      {
+        "id": "b",
+        "text": "Freight-out to customers",
+        "explanation": "Shipping to customers is a selling expense.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Sales staff commissions",
+        "explanation": "Commissions are selling expenses.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Interest on the purchase loan",
+        "explanation": "Interest on routine inventory isn't capitalized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Inventory cost includes purchase price, freight-in and other costs to get goods ready for sale.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

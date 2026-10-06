@@ -130,7 +130,8 @@
     ],
     "answer": "c",
     "explanation": "Special purpose frameworks include cash, modified cash, tax, regulatory, contractual, and other bases. Private-company GAAP alternatives are still GAAP.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-spf-02",
@@ -164,6 +165,7 @@
     "answer": "b",
     "explanation": "Expense = cash paid + beginning prepaid (used this year) − ending prepaid (for next year) = 36,000 + 6,000 − 9,000 = **33,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -198,6 +200,7 @@
     "answer": "c",
     "explanation": "Receivable roll-forward: beginning 70,000 + revenue − collections 620,000 − write-offs 4,000 = ending 55,000 → revenue = 55,000 + 620,000 + 4,000 − 70,000 = **609,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -231,7 +234,8 @@
     ],
     "answer": "d",
     "explanation": "Modifications with substantial support include capitalizing and depreciating long-lived assets, recording long-term debt, and accruing income taxes. Pervasive accruals would make it an accrual basis.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-spf-05",
@@ -264,7 +268,8 @@
     ],
     "answer": "b",
     "explanation": "Tax-basis statements include nontaxable revenues and nondeductible expenses, typically as separate line items or with disclosure, so the statements remain complete.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-spf-06",
@@ -297,7 +302,8 @@
     ],
     "answer": "c",
     "explanation": "Special-purpose statements describe the basis and the primary differences from GAAP (without quantifying), and include informative disclosures similar to GAAP where applicable.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-spf-07",
@@ -331,6 +337,7 @@
     "answer": "a",
     "explanation": "Some of the 24,000 paid settled last year's 3,000 bill. Expense = 24,000 + ending payable 1,000 − beginning payable 3,000 = **22,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -364,7 +371,8 @@
     ],
     "answer": "d",
     "explanation": "Titles should reflect the special purpose framework: 'Statement of assets, liabilities, and equity — income tax basis.'",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-spf-09",
@@ -398,6 +406,7 @@
     "answer": "a",
     "explanation": "Accrual: revenue earned Oct–Dec = 48,000 × 3/12 = **12,000**, with 36,000 unearned. Cash basis: all **48,000** received is revenue.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -431,6 +440,180 @@
     ],
     "answer": "c",
     "explanation": "Special purpose frameworks are appropriate when users agree to them. The tax basis leverages records the company already keeps, reducing cost.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-spf-11",
+    "pool": "practice",
+    "stem": "A business on the cash basis collected $500,000 from customers. Accounts receivable rose from $40,000 to $55,000, and unearned revenue fell from $10,000 to $6,000. What is accrual-basis revenue?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$519,000",
+        "explanation": "Correct. 500,000 + 15,000 AR increase + 4,000 unearned revenue decrease."
+      },
+      {
+        "id": "b",
+        "text": "$515,000",
+        "explanation": "The decrease in unearned revenue also adds to revenue.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$504,000",
+        "explanation": "The increase in receivables adds to revenue.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$481,000",
+        "explanation": "Both adjustments increase revenue.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Accrual revenue = cash collected + increase in receivables + decrease in unearned revenue.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-spf-12",
+    "pool": "practice",
+    "stem": "A company paid $300,000 of salaries in cash. Accrued salaries were $12,000 at the beginning of the year and $8,000 at the end. What is accrual-basis salaries expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$304,000",
+        "explanation": "A decrease in accrued salaries reduces expense.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$296,000",
+        "explanation": "Correct. 300,000 − 12,000 + 8,000 = 296,000."
+      },
+      {
+        "id": "c",
+        "text": "$300,000",
+        "explanation": "Cash paid must be adjusted for the accrual change.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$320,000",
+        "explanation": "Accruals are netted, not added.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Accrual expense = cash paid − beginning accrued liability + ending accrued liability.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-spf-13",
+    "pool": "practice",
+    "stem": "In financial statements prepared on the pure cash basis, depreciation on equipment is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Recorded using straight-line",
+        "explanation": "Depreciation is a modification of the cash basis, not pure cash basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Recorded using tax MACRS",
+        "explanation": "That would be the income tax basis.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Not recorded",
+        "explanation": "Correct. The pure cash basis records only cash receipts and disbursements; the equipment cost was a disbursement."
+      },
+      {
+        "id": "d",
+        "text": "Recorded only for assets bought on credit",
+        "explanation": "Pure cash basis ignores noncash expenses.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under the pure cash basis, the purchase is a cash disbursement; depreciation appears only if the cash basis is modified.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-spf-14",
+    "pool": "practice",
+    "stem": "A company paid $24,000 of insurance premiums. Prepaid insurance was $6,000 at the beginning of the year and $9,000 at the end. What is accrual-basis insurance expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$27,000",
+        "explanation": "An increase in prepaid insurance reduces expense.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$24,000",
+        "explanation": "Cash paid must be adjusted for prepaid changes.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Only the change (3,000) adjusts cash paid.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$21,000",
+        "explanation": "Correct. 24,000 + 6,000 − 9,000 = 21,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Accrual expense = cash paid + beginning prepaid − ending prepaid.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-spf-15",
+    "pool": "practice",
+    "stem": "Statements prepared under a special purpose framework contain items that are the same as, or similar to, items in GAAP statements. What disclosures are required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Disclosures similar to GAAP's",
+        "explanation": "Correct. Informative disclosures similar to GAAP are needed for similar items."
+      },
+      {
+        "id": "b",
+        "text": "No disclosures beyond the basis of accounting",
+        "explanation": "Similar items require similar disclosures.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "All disclosures GAAP requires, without exception",
+        "explanation": "The requirement is for similar informative disclosures.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Only disclosures required by the tax law",
+        "explanation": "The framework still needs informative disclosures.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Under special purpose frameworks, statements include a description of the basis and informative disclosures similar to GAAP for similar items.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

@@ -130,7 +130,8 @@
     ],
     "answer": "d",
     "explanation": "More than 50% of voting shares → control → consolidate 100% of the subsidiary, presenting the 40% outside interest as noncontrolling interest.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-con-02",
@@ -164,6 +165,7 @@
     "answer": "c",
     "explanation": "Consolidated sales = 1,500,000 + 700,000 − 200,000 intercompany = **2,000,000**. Whether the goods were resold affects unrealized profit, not the sales elimination.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -198,6 +200,7 @@
     "answer": "a",
     "explanation": "Combined COGS 1,100,000. Eliminate the internal sale: −120,000. Unrealized profit = (120,000 − 90,000) × 1/3 = 10,000, which increases COGS: **990,000**. Check: goods sold to outsiders cost the group 90,000 × 2/3 = 60,000; the 80,000 Sub recorded is reduced to 60,000.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -231,7 +234,8 @@
     ],
     "answer": "d",
     "explanation": "Intercompany balances are eliminated in full on the consolidation worksheet (Dr Payable to Parent / Cr Receivable from Sub).",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-con-05",
@@ -265,6 +269,7 @@
     "answer": "d",
     "explanation": "Eliminate the 60,000 gain (Dr Gain on sale 60,000 / Cr Land 60,000). Consolidated land = **150,000**. Land isn't depreciated, so the gain stays deferred until the land is sold outside the group.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -299,6 +304,7 @@
     "answer": "d",
     "explanation": "Of Sub's 50,000: 45,000 to Parent is eliminated against Parent's dividend income; 5,000 to outside shareholders reduces the NCI balance. Consolidated retained earnings reflects only Parent's own dividends.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -333,6 +339,7 @@
     "answer": "c",
     "explanation": "For upstream sales, the seller is Sub, so the unrealized profit reduces Sub's realized income: 300,000 − 25,000 = 275,000. NCI share = 20% × 275,000 = **55,000**.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -367,6 +374,7 @@
     "answer": "a",
     "explanation": "Sub's depreciation = 60,000 ÷ 4 = 15,000; group basis depreciation = 40,000 ÷ 4 = 10,000. Eliminate the 5,000 excess each year; over 4 years this realizes the 20,000 gain.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -400,7 +408,8 @@
     ],
     "answer": "c",
     "explanation": "Only transactions within the group are eliminated. Sales to outside customers remain in consolidated revenue.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-con-10",
@@ -434,6 +443,7 @@
     "answer": "d",
     "explanation": "A 25% markup on cost means transfer price = 125% of cost. Cost = 50,000 ÷ 1.25 = 40,000. Unrealized profit = 50,000 − 40,000 = **10,000** (20% of the transfer price).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -468,6 +478,7 @@
     "answer": "d",
     "explanation": "Combined 480,000 − intercompany 40,000 = **440,000**. The matching 40,000 payable in Sub's books is eliminated too.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -502,7 +513,110 @@
     "answer": "d",
     "explanation": "Only upstream deferrals are shared with the noncontrolling interest; downstream deferrals fall entirely on the parent.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-con-13",
+    "pool": "practice",
+    "stem": "A reporting entity must consolidate a variable interest entity when it:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Owns more than 50% of the VIE's voting stock",
+        "explanation": "Voting interests don't determine VIE consolidation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Is the VIE's primary beneficiary",
+        "explanation": "Correct. The primary beneficiary has power over the most significant activities and the obligation to absorb losses or right to receive benefits."
+      },
+      {
+        "id": "c",
+        "text": "Provides any financing to the VIE",
+        "explanation": "Financing alone doesn't make it the primary beneficiary.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Has a board seat at the VIE",
+        "explanation": "Influence alone isn't the test.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 810-10-25-38A: the primary beneficiary has both the power to direct the activities that most significantly affect the VIE's performance and the obligation to absorb significant losses or the right to receive significant benefits.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-con-14",
+    "pool": "practice",
+    "stem": "How is a noncontrolling interest presented in a consolidated balance sheet?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a liability",
+        "explanation": "NCI is an ownership interest, not an obligation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Between liabilities and equity",
+        "explanation": "The mezzanine presentation is no longer used for NCI generally.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "In equity, separately",
+        "explanation": "Correct. NCI is equity, shown separately."
+      },
+      {
+        "id": "d",
+        "text": "Netted against goodwill",
+        "explanation": "NCI isn't netted against assets.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 810-10-45-16: the NCI is reported in equity, separately from the parent's equity.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-con-15",
+    "pool": "practice",
+    "stem": "A company held a 20% equity-method interest (carrying amount $300,000) and buys another 40%, gaining control. The fair value of the 20% interest at that date is $380,000. How is the original interest treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Kept at $300,000 carrying amount",
+        "explanation": "The previously held interest is remeasured.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Remeasured, with the gain recognized in OCI",
+        "explanation": "The gain goes to net income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Remeasured, with the gain deferred until sale",
+        "explanation": "The gain is recognized at the acquisition date.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Remeasured, with an $80,000 gain in income",
+        "explanation": "Correct. In a step acquisition, the previously held interest is remeasured to fair value."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 805-10-25-10: in a business combination achieved in stages, the acquirer remeasures its previously held equity interest at fair value and recognizes any gain or loss in earnings.",
+    "skill": "application",
+    "difficulty": 3,
     "calc": true
   }
 ]

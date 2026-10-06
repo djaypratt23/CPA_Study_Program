@@ -131,6 +131,7 @@
     "answer": "b",
     "explanation": "Unadjusted allowance = 15,000 − 12,000 + 1,500 = 4,500 credit. Expense = 22,000 − 4,500 = **17,500**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -164,7 +165,8 @@
     ],
     "answer": "a",
     "explanation": "CECL requires recognizing expected lifetime credit losses at initial recognition, using historical experience, current conditions, and reasonable and supportable forecasts.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-rec-03",
@@ -198,6 +200,7 @@
     "answer": "c",
     "explanation": "300,000 × 2% = 6,000; 80,000 × 10% = 8,000; 20,000 × 50% = 10,000. Required allowance = **24,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -231,7 +234,8 @@
     ],
     "answer": "b",
     "explanation": "Reinstating the receivable (and allowance) documents the customer's payment history; the second entry records the collection. Net effect: cash up, allowance up.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-rec-05",
@@ -265,6 +269,7 @@
     "answer": "c",
     "explanation": "Before: 750,000 − 30,000 = 720,000. After: 746,000 − 26,000 = **720,000**. Write-offs do not change net receivables.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -298,7 +303,8 @@
     ],
     "answer": "c",
     "explanation": "The direct write-off method doesn't match expected losses to the period of sale and ignores CECL; it's acceptable only when the effect is immaterial.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-rec-08",
@@ -331,7 +337,8 @@
     ],
     "answer": "d",
     "explanation": "Pledged receivables remain the company's assets; the loan is recorded as a liability and the collateral arrangement is disclosed.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-rec-09",
@@ -365,6 +372,7 @@
     "answer": "b",
     "explanation": "Notes with no stated interest are recorded at present value using the market rate (ASC 835-30): 100,000 × 0.8573 = **85,730**. The 14,270 discount is recognized as interest income over two years.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -398,7 +406,8 @@
     ],
     "answer": "c",
     "explanation": "An agreement that entitles and obligates the transferor to repurchase before maturity means it keeps effective control — a secured borrowing under ASC 860.",
-    "skill": "analysis"
+    "skill": "analysis",
+    "difficulty": 3
   },
   {
     "id": "far-rec-11",
@@ -431,7 +440,8 @@
     ],
     "answer": "b",
     "explanation": "ASC 326-20-30: estimate expected credit losses using relevant information about past events, current conditions, and reasonable and supportable forecasts, reverting to history beyond the forecast period.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-rec-12",
@@ -465,7 +475,7 @@
     "answer": "a",
     "explanation": "Reconcile by identifying which record each item affects: both items are missing from, or duplicated in, the subledger, so the GL needs no entry.",
     "skill": "analysis",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "far-rec-13",
@@ -499,6 +509,110 @@
     "answer": "b",
     "explanation": "ASU 2025-05 simplifies the reasonable-and-supportable forecast for current receivables and contract assets; it does not eliminate the CECL allowance.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
+  },
+  {
+    "id": "far-rec-14",
+    "pool": "practice",
+    "stem": "On October 1 a company accepts a $50,000, 9%, six-month note from a customer. What interest receivable is accrued at December 31?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,250",
+        "explanation": "Only three months have elapsed by December 31.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$1,125",
+        "explanation": "Correct. 50,000 × 9% × 3/12 = 1,125."
+      },
+      {
+        "id": "c",
+        "text": "$4,500",
+        "explanation": "That is a full year of interest.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$375",
+        "explanation": "That uses one month instead of three.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Accrued interest = principal × rate × time elapsed.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-rec-15",
+    "pool": "practice",
+    "stem": "A company factors $200,000 of receivables with recourse in a transfer that qualifies as a sale. The factor charges a 4% fee and holds back 10%. The recourse obligation's fair value is $3,000. What loss on sale is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000",
+        "explanation": "The recourse obligation is also part of the loss.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$28,000",
+        "explanation": "The holdback is a receivable from the factor, not a loss.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$11,000",
+        "explanation": "Correct. The 8,000 fee plus the 3,000 recourse liability."
+      },
+      {
+        "id": "d",
+        "text": "$31,000",
+        "explanation": "The holdback isn't a loss.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Loss on sale = proceeds (cash plus receivable from factor, less recourse liability) compared with the receivables' carrying amount: 200,000 − (172,000 + 20,000 − 3,000).",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-rec-16",
+    "pool": "practice",
+    "stem": "How are trade receivables reported under ASC 326?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At fair value through net income",
+        "explanation": "Trade receivables aren't measured at fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "At the gross amount billed only",
+        "explanation": "An allowance for expected losses is required.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "At the amount collected after year-end",
+        "explanation": "Subsequent collections are evidence, not the measure.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "At amortized cost, net of an allowance",
+        "explanation": "Correct. Receivables are shown net of the allowance for expected credit losses."
+      }
+    ],
+    "answer": "d",
+    "explanation": "CECL: financial assets at amortized cost are presented at the net amount expected to be collected.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]
