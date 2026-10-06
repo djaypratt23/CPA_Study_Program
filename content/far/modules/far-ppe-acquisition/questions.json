@@ -131,6 +131,7 @@
     "answer": "a",
     "explanation": "Land = 400,000 + 3,000 title + 25,000 demolition − 5,000 salvage + 8,000 grading = **431,000**. Architect fees → building; parking lot → land improvements.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -165,6 +166,7 @@
     "answer": "b",
     "explanation": "Building share = 900,000 ÷ 1,500,000 = 60%. 60% × 1,200,000 = **720,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -198,7 +200,8 @@
     ],
     "answer": "c",
     "explanation": "Qualifying assets include those constructed for an entity's own use and discrete projects built for sale or lease.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-ppe-04",
@@ -232,6 +235,7 @@
     "answer": "d",
     "explanation": "Specific loan: 1,500,000 × 7% = 105,000. Excess WAAE 500,000 × 10% = 50,000. Avoidable = **155,000** (< actual 505,000), so capitalize 155,000.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -266,6 +270,7 @@
     "answer": "b",
     "explanation": "March 1 → 10 months outstanding: 250,000. September 1 → 4 months: 160,000. WAAE = **410,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -299,7 +304,8 @@
     ],
     "answer": "a",
     "explanation": "The capitalization period ends when the asset is substantially complete and ready for its intended use (ASC 835-20-25-5). Brief interruptions don't stop it; substantial suspensions do.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-ppe-07",
@@ -333,6 +339,7 @@
     "answer": "c",
     "explanation": "Building = contract 2,000,000 + architect 120,000 + permit 8,000 + excavation 45,000 + capitalized interest 60,000 = **2,233,000**. Limited-life landscaping is a land improvement.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -366,7 +373,8 @@
     ],
     "answer": "b",
     "explanation": "ASC 410-20: recognize the ARO at fair value when incurred and capitalize the same amount as part of the asset. Depreciate the asset; accrete the liability over time.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-ppe-09",
@@ -400,6 +408,7 @@
     "answer": "c",
     "explanation": "Substitution approach: capitalize the new component (180,000) and derecognize the old one (cost 90,000, accumulated depreciation 70,000) → loss on disposal **20,000**.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -433,6 +442,179 @@
     ],
     "answer": "a",
     "explanation": "ASC 958-605 applies to contributions received by all entities, including business entities (only transfers from governments to businesses are excluded from its scope). An unconditional contribution is recognized when received, measured at fair value, as revenue or gain: Dr Warehouse 2,500,000; Cr Contribution revenue (gain) 2,500,000.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-ppe-11",
+    "pool": "practice",
+    "stem": "Which cost is capitalized as part of new equipment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Annual maintenance",
+        "explanation": "Maintenance is expensed as incurred.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Installation costs",
+        "explanation": "Correct. Costs to get the asset ready for its intended use are capitalized."
+      },
+      {
+        "id": "c",
+        "text": "Operator training",
+        "explanation": "Training is expensed.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Insurance after it is in use",
+        "explanation": "Ongoing insurance is expensed.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Equipment cost includes the price, taxes, freight, installation and testing.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-ppe-12",
+    "pool": "practice",
+    "stem": "A company pays $900,000 for land and a building. Appraised values are land $300,000 and building $700,000. At what amount is the land recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000",
+        "explanation": "A lump-sum price is allocated by relative fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "That deducts the building's appraisal from the price.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$270,000",
+        "explanation": "Correct. 900,000 × 300 ÷ 1,000 = 270,000."
+      },
+      {
+        "id": "d",
+        "text": "$450,000",
+        "explanation": "Allocation isn't equal.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Allocate a lump-sum purchase price in proportion to relative fair values.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-ppe-13",
+    "pool": "practice",
+    "stem": "A company builds equipment for its own use: materials $200,000; direct labor $150,000; incremental overhead $40,000; avoidable interest $12,000; and $10,000 to redo work after a design error. What is the equipment's cost?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$412,000",
+        "explanation": "Abnormal rework costs are expensed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$390,000",
+        "explanation": "Avoidable interest is capitalized during construction.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$362,000",
+        "explanation": "Incremental overhead is part of cost.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$402,000",
+        "explanation": "Correct. Materials, labor, incremental overhead and avoidable interest; abnormal rework is expensed."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Self-constructed assets include direct costs, incremental overhead and capitalized interest; abnormal costs such as rework are expensed.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-ppe-14",
+    "pool": "practice",
+    "stem": "A company installs a storage tank it must remove at the end of its life. The present value of the removal obligation is $80,000. What is the initial entry?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Debit the asset; credit an ARO liability",
+        "explanation": "Correct. The ARO is added to the asset's carrying amount."
+      },
+      {
+        "id": "b",
+        "text": "Debit expense; credit an ARO liability",
+        "explanation": "The cost is capitalized, not expensed.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "No entry until removal",
+        "explanation": "AROs are recognized when incurred.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Debit the asset; credit cash",
+        "explanation": "No cash is paid at inception.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 410-20: recognize an ARO at fair value when incurred and capitalize the same amount as part of the asset.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-ppe-15",
+    "pool": "practice",
+    "stem": "A company replaces its delivery truck's engine, extending the truck's useful life by three years. The cost is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Expensed as a repair",
+        "explanation": "Ordinary repairs keep the asset in condition; this extends its life.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Capitalized",
+        "explanation": "Correct. Costs that extend useful life or improve capacity are capitalized."
+      },
+      {
+        "id": "c",
+        "text": "Expensed over three years",
+        "explanation": "Capitalized costs are depreciated, not expensed ratably.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Charged to retained earnings",
+        "explanation": "Expenditures aren't charged to equity.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Expenditures that extend useful life, increase capacity or improve efficiency are capitalized.",
+    "skill": "application",
+    "difficulty": 1
   }
 ]

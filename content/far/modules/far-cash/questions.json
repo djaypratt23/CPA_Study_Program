@@ -131,6 +131,7 @@
     "answer": "d",
     "explanation": "Unrestricted cash = 120,000 − 10,000 restricted = 110,000. Add the 90-day CD (original maturity ≤ 3 months) 50,000 → **160,000**. The 1-year CD is an investment; travel advances are receivables.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -165,6 +166,7 @@
     "answer": "c",
     "explanation": "Bank side: 62,000 + 8,500 − 11,200 + 400 (erroneous charge added back) = **59,700**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -199,6 +201,7 @@
     "answer": "a",
     "explanation": "35,000 + 4,000 + 120 − 25 − 1,300 + (650 − 560 = 90) = **37,885**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -232,7 +235,8 @@
     ],
     "answer": "d",
     "explanation": "Overdrafts are current liabilities. Netting against positive balances is permitted only for accounts at the same bank where a right of offset exists.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-cash-05",
@@ -265,7 +269,8 @@
     ],
     "answer": "d",
     "explanation": "Legally restricted compensating balances are segregated as restricted cash — current if related to short-term borrowing, noncurrent if related to long-term borrowing — with disclosure of the arrangement.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-cash-06",
@@ -298,7 +303,8 @@
     ],
     "answer": "a",
     "explanation": "Maturity is measured from the date the holder acquires the investment. A Treasury note bought within 3 months of maturity qualifies.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-cash-07",
@@ -332,6 +338,7 @@
     "answer": "a",
     "explanation": "Both sides agree at **17,110** — the proof that the reconciliation is complete.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -365,7 +372,8 @@
     ],
     "answer": "c",
     "explanation": "The deposit the company recorded did not clear, so cash is reduced and the customer's receivable is reinstated.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-cash-09",
@@ -398,7 +406,8 @@
     ],
     "answer": "d",
     "explanation": "A bond sinking fund is restricted for a noncurrent purpose and reported as a noncurrent asset (though included in restricted cash totals in the statement of cash flows).",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-cash-10",
@@ -432,6 +441,179 @@
     "answer": "d",
     "explanation": "Book error: the payment was 1,760 but recorded as 1,670 → books overstate cash by 90. Deduct 90 on the book side and record Dr Accounts payable 90 / Cr Cash 90.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "far-cash-11",
+    "pool": "practice",
+    "stem": "Under an imprest petty cash system, when are the expenses paid from the fund recorded in the accounts?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "When the fund is replenished",
+        "explanation": "Correct. The replenishment entry debits the expenses and credits cash."
+      },
+      {
+        "id": "b",
+        "text": "Each time cash is paid out",
+        "explanation": "Individual payments are recorded only on vouchers.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Only at the end of the fiscal year",
+        "explanation": "Expenses are recorded at each replenishment.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "When the fund is first established",
+        "explanation": "Establishing the fund only moves cash into petty cash.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "In an imprest system, the petty cash account stays at its fixed balance; expenses are recorded when the fund is replenished (and at period-end if unreplenished amounts are material).",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-cash-12",
+    "pool": "practice",
+    "stem": "The book balance is $20,000. The bank statement shows a $50 service charge, a $400 NSF customer check, and a $2,000 note collected by the bank. A $980 check to a supplier was recorded in the books as $890. What is the adjusted book balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$21,640",
+        "explanation": "The $90 recording error understated a payment, so it reduces cash.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$21,460",
+        "explanation": "Correct. 20,000 − 50 − 400 + 2,000 − 90 = 21,460."
+      },
+      {
+        "id": "c",
+        "text": "$21,550",
+        "explanation": "The recording error must also be corrected.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$19,460",
+        "explanation": "The note collected by the bank increases book cash.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Adjust the book side for items the bank recorded but the company didn't (service charges, NSF checks, collections) and for book errors.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-cash-13",
+    "pool": "practice",
+    "stem": "Using the previous facts, the bank statement balance is $22,300 and deposits in transit are $3,000. What are the outstanding checks?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,750",
+        "explanation": "That uses the unadjusted error amount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$2,160",
+        "explanation": "Deposits in transit are added to the bank balance.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$3,840",
+        "explanation": "Correct. 22,300 + 3,000 − outstanding checks = 21,460, so outstanding checks are 3,840."
+      },
+      {
+        "id": "d",
+        "text": "$840",
+        "explanation": "The adjusted bank balance must equal the adjusted book balance.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Adjusted bank balance = bank balance + deposits in transit − outstanding checks, which must equal the adjusted book balance.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-cash-14",
+    "pool": "practice",
+    "stem": "A company buys a Treasury bill with four months remaining to maturity. How is it classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a cash equivalent",
+        "explanation": "Four months exceeds the three-month limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As cash",
+        "explanation": "A Treasury bill isn't cash.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As a long-term investment",
+        "explanation": "It matures within a year, so it is current.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a short-term investment",
+        "explanation": "Correct. Cash equivalents have an original maturity to the holder of three months or less."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 230: cash equivalents are short-term, highly liquid investments with original maturities to the holder of three months or less.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "far-cash-15",
+    "pool": "practice",
+    "stem": "A company has a $40,000 balance in one account and a $15,000 overdraft in another account at the same bank, with a right of offset. How is cash reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cash of $25,000",
+        "explanation": "Correct. Overdrafts may be offset against positive balances at the same bank."
+      },
+      {
+        "id": "b",
+        "text": "Cash of $40,000 and a $15,000 liability",
+        "explanation": "Offsetting is appropriate at the same bank.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Cash of $55,000",
+        "explanation": "An overdraft reduces, not increases, cash.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "A $15,000 liability only",
+        "explanation": "The positive balance is still cash.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Overdrafts are offset against cash in other accounts at the same bank; overdrafts at banks with no offsetting balance are current liabilities.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

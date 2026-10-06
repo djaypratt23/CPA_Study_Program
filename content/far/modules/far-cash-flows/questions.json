@@ -130,7 +130,8 @@
     ],
     "answer": "c",
     "explanation": "Financing: issuing/repurchasing equity, paying dividends, borrowing and repaying principal. Buying treasury stock is a financing outflow.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-scf-03",
@@ -163,7 +164,8 @@
     ],
     "answer": "b",
     "explanation": "Only cash moves appear in the body: $100,000 investing outflow. Seller financing of $300,000 is a noncash investing and financing activity, disclosed separately.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-scf-04",
@@ -197,6 +199,7 @@
     "answer": "d",
     "explanation": "Purchases = COGS + ΔInventory = 600,000 + 30,000 = 630,000. Cash paid = purchases − ΔAP = 630,000 − 20,000 = **610,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -230,7 +233,8 @@
     ],
     "answer": "a",
     "explanation": "ASC 230-10-45-15 (as amended) classifies debt prepayment and extinguishment costs, including third-party costs and premiums paid, as financing outflows.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-scf-06",
@@ -263,7 +267,8 @@
     ],
     "answer": "b",
     "explanation": "ASC 230 encourages the direct method but requires the reconciliation of net income to operating cash flows either way.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-scf-07",
@@ -297,6 +302,7 @@
     "answer": "c",
     "explanation": "Financing: +500,000 stock − 80,000 dividends **paid** − 150,000 principal = **270,000**. Interest paid is operating.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -330,7 +336,8 @@
     ],
     "answer": "a",
     "explanation": "Cash flows from securities acquired specifically for resale (trading) are classified by their nature — generally operating.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-scf-09",
@@ -364,6 +371,7 @@
     "answer": "d",
     "explanation": "75,000 + 20,000 depreciation + 3,000 deferred tax (noncash expense) + 9,000 AR decrease − 4,000 unearned revenue decrease = **103,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -397,7 +405,8 @@
     ],
     "answer": "b",
     "explanation": "Under ASC 230 (ASU 2016-18), restricted cash and restricted cash equivalents are included with cash and cash equivalents when reconciling beginning and ending amounts.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-scf-11",
@@ -431,6 +440,7 @@
     "answer": "c",
     "explanation": "Carrying amount = 80,000 − 50,000 = 30,000. A 7,000 loss means proceeds were 30,000 − 7,000 = **23,000** (investing inflow). The 7,000 loss is added back in operating activities.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -464,7 +474,8 @@
     ],
     "answer": "a",
     "explanation": "Significant noncash investing and financing activities — debt-to-equity conversions, assets acquired with debt or stock, ROU assets obtained for lease liabilities — are disclosed separately.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-scf-13",
@@ -498,7 +509,110 @@
     "answer": "c",
     "explanation": "A gain is subtracted in the indirect method, and an increase in payables is added. Fixing an item reported with the wrong sign moves the total by twice the amount.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-scf-14",
+    "pool": "practice",
+    "stem": "Under U.S. GAAP, how is interest paid on a bank loan classified in the statement of cash flows?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Operating activities",
+        "explanation": "Correct. U.S. GAAP classifies interest paid as an operating cash outflow."
+      },
+      {
+        "id": "b",
+        "text": "Financing activities",
+        "explanation": "Repaying principal is financing; interest is operating.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Investing activities",
+        "explanation": "Interest paid isn't an investing flow.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Noncash activity, disclosed only",
+        "explanation": "Interest paid is a cash flow.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 230: interest paid and received, and dividends received, are operating; dividends paid are financing.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-scf-15",
+    "pool": "practice",
+    "stem": "A company sells equipment (carrying amount $25,000) for $30,000 cash. Using the indirect method, how is the sale reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Add the $5,000 gain in operating; report $25,000 in investing",
+        "explanation": "The gain is subtracted, and investing shows the full proceeds.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "Subtract the gain; $30,000 investing inflow",
+        "explanation": "Correct. The gain is removed from net income, and the full proceeds are an investing inflow."
+      },
+      {
+        "id": "c",
+        "text": "Report $30,000 in operating activities",
+        "explanation": "Proceeds from equipment sales are investing.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Report only the $5,000 gain in investing",
+        "explanation": "Investing reports the cash received.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gains on sales of noncurrent assets are subtracted in the indirect reconciliation; the cash proceeds are investing inflows.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-scf-16",
+    "pool": "practice",
+    "stem": "Net income is $120,000. Depreciation is $25,000; amortization of bond discount $2,000; equity-method income $15,000, with $5,000 of dividends received from the investee; increase in the deferred tax liability $4,000; increase in accounts receivable $10,000. What is net cash from operating activities?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$141,000",
+        "explanation": "Equity-method income in excess of dividends must be removed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$127,000",
+        "explanation": "Bond discount amortization is a noncash expense added back.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$131,000",
+        "explanation": "Correct. 120 + 25 + 2 − 15 + 5 + 4 − 10 = 131."
+      },
+      {
+        "id": "d",
+        "text": "$126,000",
+        "explanation": "The dividends received are operating cash inflows.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Add back noncash expenses (depreciation, discount amortization, deferred tax increase), subtract equity income net of dividends, and adjust for working capital changes.",
+    "skill": "application",
+    "difficulty": 3,
     "calc": true
   }
 ]

@@ -129,7 +129,8 @@
     ],
     "answer": "d",
     "explanation": "Regulation S-X = financial statements; Regulation S-K = narrative disclosures (business, MD&A, risk factors, compensation).",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-sec-02",
@@ -162,7 +163,8 @@
     ],
     "answer": "a",
     "explanation": "10-Q deadlines: 40 days (large accelerated and accelerated), 45 days (others).",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-sec-03",
@@ -195,7 +197,8 @@
     ],
     "answer": "b",
     "explanation": "Form 8-K items include entry into material agreements, completion of significant acquisitions, bankruptcy, changes in the certifying accountant, non-reliance on previously issued statements, and changes in directors or principal officers.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-sec-04",
@@ -229,6 +232,7 @@
     "answer": "c",
     "explanation": "Operating segment definition: business activities + CODM regular review + discrete financial information. The 10% thresholds apply afterward to decide reportability.",
     "skill": "remembering",
+    "difficulty": 1,
     "optional": true
   },
   {
@@ -263,6 +267,7 @@
     "answer": "b",
     "explanation": "Combined revenue = 4,000 + 1,500 + 900 + 600 + 400 = 7,400. Threshold = 740. P (4,000), Q (1,500), and R (900) pass.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true,
     "optional": true
   },
@@ -298,6 +303,7 @@
     "answer": "d",
     "explanation": "Combined profits = 600,000; combined losses = 1,100,000 (absolute). Use the greater: 1,100,000 × 10% = **110,000**. L, N, and O pass; M (100,000) fails this test.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true,
     "optional": true
   },
@@ -333,6 +339,7 @@
     "answer": "b",
     "explanation": "6.3 ÷ 9.0 = 70% < 75%. Add segments (even those below the 10% tests) until reportable segments' external revenue ≥ 75% of consolidated revenue (6.75 million).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true,
     "optional": true
   },
@@ -367,7 +374,8 @@
     ],
     "answer": "c",
     "explanation": "Accelerated filer: public float of at least $75 million but less than $700 million (and not eligible for the smaller-reporting-company revenue exception). 10-K due in 75 days; 10-Q in 40 days.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-sec-09",
@@ -401,6 +409,7 @@
     "answer": "a",
     "explanation": "ASU 2023-07 adds disclosure of significant segment expenses provided to the CODM, the CODM's title/position, interim segment disclosures, and applies the requirements to single-segment public entities.",
     "skill": "remembering",
+    "difficulty": 1,
     "optional": true
   },
   {
@@ -435,6 +444,7 @@
     "answer": "d",
     "explanation": "Combined segment assets = 50 + 22 + 9 + 8 + 11 = 100. Threshold = 10. Segment 4 (8) fails, so it is not reportable unless needed for the 75% test.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true,
     "optional": true
   },
@@ -469,6 +479,349 @@
     ],
     "answer": "b",
     "explanation": "S-K covers narrative disclosures such as description of business, risk factors, MD&A (Item 303), and executive compensation. S-X covers the financial statements and schedules.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-sec-12",
+    "pool": "practice",
+    "stem": "Within how many days after its fiscal year-end must a large accelerated filer file its Form 10-K?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "75 days",
+        "explanation": "75 days applies to accelerated filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "90 days",
+        "explanation": "90 days applies to non-accelerated filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "60 days",
+        "explanation": "Correct. Large accelerated filers have 60 days."
+      },
+      {
+        "id": "d",
+        "text": "45 days",
+        "explanation": "45 days is a 10-Q deadline for some filers.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Form 10-K deadlines: 60 days (large accelerated), 75 days (accelerated), 90 days (others).",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-sec-13",
+    "pool": "practice",
+    "stem": "For which periods does a registrant file Form 10-Q?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All four fiscal quarters",
+        "explanation": "No 10-Q is filed for the fourth quarter.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Only the second and fourth quarters",
+        "explanation": "10-Qs cover the first three quarters.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only when a material event occurs",
+        "explanation": "Current events are reported on Form 8-K.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Each of the first three fiscal quarters",
+        "explanation": "Correct. The fourth quarter is covered by the annual Form 10-K."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Form 10-Q is filed for each of the first three fiscal quarters; the annual report covers the fourth.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-sec-14",
+    "pool": "practice",
+    "stem": "What is the Form 10-Q deadline for a non-accelerated filer?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "45 days after quarter-end",
+        "explanation": "Correct. Non-accelerated filers have 45 days."
+      },
+      {
+        "id": "b",
+        "text": "40 days after quarter-end",
+        "explanation": "40 days applies to accelerated and large accelerated filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "60 days after quarter-end",
+        "explanation": "60 days is a 10-K deadline.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "90 days after quarter-end",
+        "explanation": "90 days is the non-accelerated 10-K deadline.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Form 10-Q: 40 days for large accelerated and accelerated filers; 45 days for others.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-sec-15",
+    "pool": "practice",
+    "stem": "Under ASC 280, an operating segment is a component of a public entity whose operating results are regularly reviewed by:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The external auditor",
+        "explanation": "Auditors don't define segments.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The chief decision maker",
+        "explanation": "Correct. Segments follow the management approach based on what the CODM reviews."
+      },
+      {
+        "id": "c",
+        "text": "The board's audit committee",
+        "explanation": "The CODM function, not the audit committee, is the test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "The SEC staff",
+        "explanation": "Segments are defined by internal reporting.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 280-10-50-1: an operating segment engages in business activities, has operating results regularly reviewed by the CODM, and has discrete financial information.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-sec-16",
+    "pool": "practice",
+    "stem": "Four operating segments report profit or loss: A $500, B $300, C $(200), D $50 (in thousands). Under the 10% profit or loss test, what is the threshold a segment's absolute result must meet?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$65",
+        "explanation": "Netting profits and losses (650) isn't the test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$105",
+        "explanation": "Adding losses to profits (1,050) isn't the test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$85",
+        "explanation": "Correct. 10% of the greater of combined profits (850) or combined losses (200)."
+      },
+      {
+        "id": "d",
+        "text": "$20",
+        "explanation": "That uses combined losses only.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 280-10-50-12(b): compare each segment's absolute profit or loss with 10% of the greater of combined profits of profitable segments or combined losses of loss segments.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-sec-17",
+    "pool": "practice",
+    "stem": "After applying the 10% tests, a public entity's reportable segments generate 68% of its consolidated external revenue. What must it do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing, because 68% exceeds half of revenue",
+        "explanation": "The threshold is 75%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "Combine all segments into one",
+        "explanation": "Aggregation is limited to segments with similar economics.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Report only enterprise-wide disclosures",
+        "explanation": "Segment reporting is still required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Add segments until 75% is met",
+        "explanation": "Correct. Reportable segments must account for at least 75% of external revenue."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 280-10-50-14: if reportable segments' external revenue is less than 75% of total consolidated revenue, identify additional reportable segments.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-sec-18",
+    "pool": "practice",
+    "stem": "Under ASU 2023-07, a public entity with a single reportable segment must:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Provide all segment disclosures",
+        "explanation": "Correct. The ASU requires single-segment public entities to provide the full set of segment disclosures."
+      },
+      {
+        "id": "b",
+        "text": "Provide no segment disclosures",
+        "explanation": "Single-segment entities now provide segment disclosures.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "Disclose only enterprise-wide revenue data",
+        "explanation": "The full segment disclosures apply.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Disclose expenses only if the CODM requests",
+        "explanation": "Significant expenses regularly provided to the CODM are disclosed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASU 2023-07 requires disclosure of significant segment expenses regularly provided to the CODM and extends all ASC 280 disclosures to entities with a single reportable segment.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "far-sec-19",
+    "pool": "practice",
+    "stem": "A public entity's single customer accounts for 14% of consolidated revenue. Under ASC 280's enterprise-wide disclosures, it must disclose:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The customer's name and the revenue amount",
+        "explanation": "The identity isn't required.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "That fact, the amount and the segment",
+        "explanation": "Correct. The customer's identity need not be disclosed."
+      },
+      {
+        "id": "c",
+        "text": "Nothing, unless the customer exceeds 25%",
+        "explanation": "The threshold is 10%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Only that a concentration exists",
+        "explanation": "The amount and segment are also disclosed.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 280-10-50-42: if revenue from a single external customer is 10% or more, disclose that fact, the total amount and the segments reporting it.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-sec-20",
+    "pool": "practice",
+    "stem": "Which SEC form is a registrant's annual report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Form 10-Q",
+        "explanation": "Form 10-Q is the quarterly report.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Form 8-K",
+        "explanation": "Form 8-K reports current events.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Form 10-K",
+        "explanation": "Correct. Form 10-K is the annual report."
+      },
+      {
+        "id": "d",
+        "text": "Form S-1",
+        "explanation": "Form S-1 registers securities offerings.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Form 10-K: annual report; 10-Q: quarterly; 8-K: current events; S-1: registration statement.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-sec-21",
+    "pool": "practice",
+    "stem": "Segment revenues, including intersegment sales, are: A $600 (of which $100 intersegment), B $300, C $80 and D $20 (in thousands). Which segments meet the 10% revenue test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A, B and C",
+        "explanation": "C's 80 is below the 100 threshold.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Only A",
+        "explanation": "B's 300 exceeds the threshold.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "All four segments",
+        "explanation": "C and D are below 10%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A and B only",
+        "explanation": "Correct. Combined revenue is 1,000; the threshold is 100, so only A and B qualify."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 280-10-50-12(a): a segment is reportable if its revenue, including intersegment sales, is 10% or more of the combined revenue of all operating segments.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

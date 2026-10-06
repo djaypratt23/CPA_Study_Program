@@ -132,6 +132,7 @@
     "answer": "c",
     "explanation": "PV = 200,000 × 0.85734 = **171,468**. The 28,532 discount is interest expense over two years.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -166,6 +167,7 @@
     "answer": "c",
     "explanation": "Effective interest: 171,468 × 8% = **13,717**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -199,7 +201,8 @@
     ],
     "answer": "d",
     "explanation": "If a short-term obligation is repaid with current assets after the balance sheet date and new long-term debt is issued later, the obligation was settled with current assets — it remains current.",
-    "skill": "analysis"
+    "skill": "analysis",
+    "difficulty": 3
   },
   {
     "id": "far-dbt-04",
@@ -233,6 +236,7 @@
     "answer": "d",
     "explanation": "Carrying amount = 2,040,000. Reacquisition = 1,960,000. Gain = **80,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -266,7 +270,8 @@
     ],
     "answer": "a",
     "explanation": "ASC 470-10-50-1: disclose combined aggregate maturities and sinking fund requirements for each of the five years after the balance sheet date.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-dbt-06",
@@ -299,7 +304,8 @@
     ],
     "answer": "d",
     "explanation": "Obligations callable by the creditor at the balance sheet date because of a violation are current unless waived for more than a year or curable within a grace period.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-dbt-07",
@@ -333,6 +339,7 @@
     "answer": "a",
     "explanation": "Net carrying amount = 500,000 − 12,000 − 3,000 = 485,000. Gain = 485,000 − 480,000 = **5,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -366,7 +373,8 @@
     ],
     "answer": "a",
     "explanation": "When a note carries a reasonable market rate, face equals present value; interest is accrued as time passes.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-dbt-09",
@@ -399,7 +407,8 @@
     ],
     "answer": "d",
     "explanation": "Without an actual long-term refinancing or a qualifying financing agreement before issuance, the obligation is current.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-dbt-10",
@@ -432,7 +441,8 @@
     ],
     "answer": "a",
     "explanation": "Reclassifying debt from current to noncurrent reduces current liabilities, increasing working capital and the current ratio; total liabilities are unchanged.",
-    "skill": "analysis"
+    "skill": "analysis",
+    "difficulty": 3
   },
   {
     "id": "far-dbt-11",
@@ -538,5 +548,74 @@
     "skill": "application",
     "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "far-dbt-14",
+    "pool": "practice",
+    "stem": "A company issues bonds with detachable warrants for $1,000,000. Without the warrants the bonds would be worth $990,000; the warrants alone are worth $110,000. How much is allocated to the warrants?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Correct. 1,000,000 × 110 ÷ 1,100 = 100,000."
+      },
+      {
+        "id": "b",
+        "text": "$110,000",
+        "explanation": "Allocation is by relative fair values.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "That is the residual after the bonds' fair value.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Detachable warrants receive an allocation.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Allocate proceeds between debt and detachable warrants based on relative fair values.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dbt-15",
+    "pool": "practice",
+    "stem": "How are proceeds from bonds issued with nondetachable conversion features (no derivative) recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Allocated by relative fair value",
+        "explanation": "That is the treatment for detachable warrants.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Entirely as debt",
+        "explanation": "Correct. Nondetachable conversion features aren't separated."
+      },
+      {
+        "id": "c",
+        "text": "Entirely as equity",
+        "explanation": "The instrument is a liability.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Partly as a gain",
+        "explanation": "No gain arises on issuance.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Proceeds from convertible debt without separable features are recorded as debt.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

@@ -129,7 +129,8 @@
     ],
     "answer": "d",
     "explanation": "Changes in depreciation, amortization, or depletion methods are treated as changes in estimate effected by a change in principle — prospective.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-chg-02",
@@ -163,6 +164,7 @@
     "answer": "d",
     "explanation": "Cumulative effect before the earliest period presented = 80,000 × (1 − 0.25) = **60,000** increase to opening retained earnings of Year 2.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -197,6 +199,7 @@
     "answer": "a",
     "explanation": "Overstated revenue overstated retained earnings: decrease opening RE by 100,000 × (1 − 0.21) = **79,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -230,7 +233,8 @@
     ],
     "answer": "c",
     "explanation": "Changes in reporting entity include presenting consolidated statements instead of individual statements and changing the specific subsidiaries in the consolidated group (not business combinations).",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-chg-05",
@@ -263,7 +267,8 @@
     ],
     "answer": "d",
     "explanation": "Changes in estimate affect the period of change and future periods only.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-chg-06",
@@ -296,7 +301,8 @@
     ],
     "answer": "d",
     "explanation": "Inventory errors counterbalance over two years; by the end of Year 2 retained earnings is correct. (Comparative statements presented would still be restated.)",
-    "skill": "analysis"
+    "skill": "analysis",
+    "difficulty": 3
   },
   {
     "id": "far-chg-07",
@@ -329,7 +335,8 @@
     ],
     "answer": "a",
     "explanation": "ASC 250-10-50-1: disclose the nature of and reason for the change, including why the newly adopted principle is preferable, the method of applying it, and its effects.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-chg-08",
@@ -362,7 +369,8 @@
     ],
     "answer": "d",
     "explanation": "When retrospective application is impracticable (common for a change to LIFO), apply the new principle prospectively, with the beginning inventory becoming the base LIFO layer, and disclose why.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-chg-09",
@@ -396,6 +404,7 @@
     "answer": "d",
     "explanation": "Retained earnings was understated by the 60,000 expense, offset by 24,000 of depreciation that should have been recorded: net increase **36,000**. Machine 60,000, accumulated depreciation 24,000.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -429,6 +438,179 @@
     ],
     "answer": "d",
     "explanation": "ASC 250-10-45-8: retrospective application includes only the direct effects of the change (and related tax effects). Indirect effects, such as changes in profit-sharing payments, are recognized in the period of change.",
-    "skill": "analysis"
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-chg-11",
+    "pool": "practice",
+    "stem": "A company changes its inventory method from FIFO to weighted average. How is the change reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Prospectively, as a change in estimate",
+        "explanation": "It is a change in accounting principle.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Retrospectively, as a change in principle",
+        "explanation": "Correct. Changes in inventory methods (other than to LIFO) are applied retrospectively."
+      },
+      {
+        "id": "c",
+        "text": "As a prior-period error correction",
+        "explanation": "It isn't an error.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Through a current-year cumulative effect",
+        "explanation": "Retrospective application restates prior periods.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 250: a change in accounting principle is applied retrospectively unless impracticable.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "far-chg-12",
+    "pool": "practice",
+    "stem": "In Year 2 a company discovers it omitted $20,000 of Year 1 depreciation. The tax rate is 21%. Only Year 2 statements are presented. How is the error corrected?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Increase Year 2 depreciation by $20,000",
+        "explanation": "Errors aren't corrected through current income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Reduce opening retained earnings by $20,000",
+        "explanation": "The correction is net of tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Reduce opening retained earnings by $15,800",
+        "explanation": "Correct. 20,000 × (1 − 21%), as a prior-period adjustment."
+      },
+      {
+        "id": "d",
+        "text": "Disclose the error only",
+        "explanation": "Material errors are corrected.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Prior-period adjustments are made to opening retained earnings, net of tax.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-chg-13",
+    "pool": "practice",
+    "stem": "Year 1 ending inventory was overstated by $10,000. The error wasn't discovered until after Year 2's books were closed. What is the effect on retained earnings at the end of Year 2?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Overstated by $10,000",
+        "explanation": "The error reversed in Year 2.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "Understated by $10,000",
+        "explanation": "The two effects offset.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Overstated by $20,000",
+        "explanation": "Counterbalancing errors offset.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "None",
+        "explanation": "Correct. The error counterbalances: Year 1 income was overstated and Year 2 understated."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Inventory errors self-correct over two periods, so retained earnings is correct at the end of the second year.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-chg-14",
+    "pool": "practice",
+    "stem": "Retrospective application of a new accounting principle is impracticable for all prior periods. How is the change applied?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "From the earliest date practicable",
+        "explanation": "Correct. If impracticable for all periods, apply prospectively from the earliest date practicable."
+      },
+      {
+        "id": "b",
+        "text": "It can't be made",
+        "explanation": "The change is allowed with limited application.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only in the notes, without recognition",
+        "explanation": "The principle is applied.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Retroactively using estimates",
+        "explanation": "Impracticable means it can't be done reliably.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 250-10-45-7: when retrospective application is impracticable, apply the principle to the earliest date practicable.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "far-chg-15",
+    "pool": "practice",
+    "stem": "A company revises an asset's estimated useful life from 10 to 15 years. How is the revision reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Retrospectively, restating prior years",
+        "explanation": "Changes in estimate aren't retrospective.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Prospectively, as a change in estimate",
+        "explanation": "Correct. Changes in useful life affect the current and future periods."
+      },
+      {
+        "id": "c",
+        "text": "As a prior-period adjustment",
+        "explanation": "It isn't an error.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a cumulative-effect adjustment",
+        "explanation": "Estimates change prospectively.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 250: changes in accounting estimates are accounted for in the period of change and future periods.",
+    "skill": "application",
+    "difficulty": 1
   }
 ]

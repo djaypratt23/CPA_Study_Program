@@ -132,6 +132,7 @@
     "answer": "d",
     "explanation": "Annual SL = (84,000 − 12,000) ÷ 6 = 12,000. April 1, Year 1 to Dec 31, Year 2 = 21 months → 12,000 × 21/12 = **21,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -166,6 +167,7 @@
     "answer": "a",
     "explanation": "Rate = 50%. Y1: 50,000 × 50% = 25,000 (CA 25,000). Y2: 12,500 (CA 12,500). Y3: 12,500 × 50% = **6,250** (CA 6,250 ≥ salvage 5,000). Y4 is limited to 1,250.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -200,6 +202,7 @@
     "answer": "c",
     "explanation": "Depletion base = 4,800,000 + 400,000 − 200,000 = 5,000,000 ÷ 1,000,000 tons = $5.00/ton. Extracted 150,000 × 5 = 750,000; of that, 120,000 tons sold → **600,000** in COGS; 150,000 stays in inventory.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -234,6 +237,7 @@
     "answer": "d",
     "explanation": "Accumulated depreciation after 3 years = 45,000; carrying amount 105,000. Remaining life = 8 − 3 = 5 years. Year 4 = 105,000 ÷ 5 = **21,000** (prospective).",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -268,6 +272,7 @@
     "answer": "c",
     "explanation": "Depreciation Jan–Sep = 8,000 × 9/12 = 6,000 → accumulated 48,000. Carrying amount = 22,000. Proceeds 22,000 → **no gain or loss**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -301,7 +306,8 @@
     ],
     "answer": "c",
     "explanation": "ASC 250: a change in depreciation, amortization, or depletion method is a change in estimate effected by a change in principle — applied prospectively.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-dep-07",
@@ -335,6 +341,7 @@
     "answer": "a",
     "explanation": "With commercial substance: new asset = FV given up 40,000 + cash 15,000 = **55,000**. Loss = 40,000 − (120,000 − 70,000) = **(10,000)**, recognized.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -368,7 +375,8 @@
     ],
     "answer": "a",
     "explanation": "Deferral applies only to gains in exchanges lacking commercial substance. Losses indicate the asset given up was overstated and are recognized immediately.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-dep-09",
@@ -402,6 +410,7 @@
     "answer": "a",
     "explanation": "Rate = (250,000 − 25,000) ÷ 450,000 = $0.50. Two years' output 190,000 × 0.50 = 95,000. Carrying amount = 250,000 − 95,000 = **155,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -436,6 +445,181 @@
     "answer": "c",
     "explanation": "Total gain = 50,000 − 40,000 = 10,000. Boot = 5,000 ÷ 50,000 = 10% (< 25%, so still nonmonetary). Recognized gain = 10,000 × 10% = **1,000**. New machine = 40,000 − 5,000 + 1,000 = 36,000 (= FV 45,000 − deferred gain 9,000).",
     "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dep-11",
+    "pool": "practice",
+    "stem": "Equipment costs $60,000, with a $6,000 salvage value and a nine-year life. What is annual straight-line depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,667",
+        "explanation": "Salvage value is subtracted first.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$5,400",
+        "explanation": "The life is nine years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$6,000",
+        "explanation": "Correct. (60,000 − 6,000) ÷ 9 = 6,000."
+      },
+      {
+        "id": "d",
+        "text": "$13,333",
+        "explanation": "That is double-declining balance.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Straight-line = (cost − salvage) ÷ useful life.",
+    "skill": "application",
+    "difficulty": 1,
+    "calc": true
+  },
+  {
+    "id": "far-dep-12",
+    "pool": "practice",
+    "stem": "An asset costs $33,000, with a $3,000 salvage value and a five-year life. Using sum-of-the-years'-digits, what is depreciation in year 2?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "That is year 1 (5/15).",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$8,800",
+        "explanation": "Salvage value is subtracted.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$6,000",
+        "explanation": "That is straight-line.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "Correct. 30,000 × 4/15 = 8,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "SYD: depreciable base × remaining life ÷ sum of years (15).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-dep-13",
+    "pool": "practice",
+    "stem": "Equipment cost $100,000, with a $10,000 salvage value and a 10-year straight-line life. After four years, the company revises the remaining life to four years and salvage to $6,000. What is depreciation in year 5?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$14,500",
+        "explanation": "Correct. Carrying amount 64,000 − 6,000 = 58,000 ÷ 4 = 14,500."
+      },
+      {
+        "id": "b",
+        "text": "$9,000",
+        "explanation": "The revised estimates apply prospectively.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$16,000",
+        "explanation": "The revised salvage value is subtracted.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$11,600",
+        "explanation": "The remaining life is four years.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Changes in estimates are prospective: depreciate the remaining carrying amount less new salvage over the new remaining life.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dep-14",
+    "pool": "practice",
+    "stem": "A company uses composite depreciation. It retires an asset that cost $10,000 and receives $2,000. What is recorded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An $8,000 loss",
+        "explanation": "Composite methods don't recognize gains or losses on routine retirements.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No gain or loss; debit accumulated depreciation $8,000",
+        "explanation": "Correct. Under composite methods, the difference goes to accumulated depreciation."
+      },
+      {
+        "id": "c",
+        "text": "A $2,000 gain",
+        "explanation": "Proceeds don't create a gain under composite methods.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A loss based on the asset's own depreciation",
+        "explanation": "Individual asset depreciation isn't tracked.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Composite and group methods debit accumulated depreciation for cost less proceeds; no gain or loss is recognized.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-dep-15",
+    "pool": "practice",
+    "stem": "A $40,000 asset with a five-year life is bought July 1, Year 1. The company uses double-declining balance with a half-year convention in Year 1. What is Year 2 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$9,600",
+        "explanation": "That is year 2 without the half-year in year 1.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$16,000",
+        "explanation": "That is a full year of DDB on cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$12,800",
+        "explanation": "Correct. Year 1: 40% × 40,000 × 1/2 = 8,000; Year 2: 40% × 32,000 = 12,800."
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "That is year 1 depreciation.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Apply the DDB rate to the beginning carrying amount each year.",
+    "skill": "application",
+    "difficulty": 3,
     "calc": true
   }
 ]

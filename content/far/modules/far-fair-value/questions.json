@@ -131,7 +131,8 @@
     ],
     "answer": "c",
     "explanation": "Level 2 includes quoted prices for similar items in active markets, quoted prices in inactive markets, and other observable inputs such as interest rates and yield curves.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-fv-02",
@@ -165,6 +166,7 @@
     "answer": "c",
     "explanation": "Net amounts: X = 100 − 10 − 5 = 85; Y = 97 − 4 − 6 = 87 → Y is most advantageous. Fair value = 97 − 6 = **91**.",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -198,7 +200,8 @@
     ],
     "answer": "b",
     "explanation": "For nonfinancial assets, fair value assumes the highest and best use by market participants that is physically possible, legally permissible, and financially feasible — even if the entity uses it differently.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-fv-04",
@@ -231,7 +234,8 @@
     ],
     "answer": "c",
     "explanation": "The entire measurement is classified at the lowest level of any input that is significant to it.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-fv-05",
@@ -264,7 +268,8 @@
     ],
     "answer": "c",
     "explanation": "The cost approach reflects the amount required currently to replace an asset's service capacity (current replacement cost).",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-fv-06",
@@ -297,7 +302,8 @@
     ],
     "answer": "d",
     "explanation": "ASC 825-10: the FVO may be elected for eligible items on an instrument-by-instrument basis at specified election dates; once elected, it's irrevocable.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-fv-07",
@@ -330,7 +336,8 @@
     ],
     "answer": "b",
     "explanation": "Fair value of a liability is a transfer price, and it reflects nonperformance risk (including the entity's own credit risk).",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-fv-08",
@@ -363,7 +370,8 @@
     ],
     "answer": "a",
     "explanation": "Level 3 recurring measurements require a roll-forward (reconciliation) and quantitative information about significant unobservable inputs.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-fv-09",
@@ -396,7 +404,8 @@
     ],
     "answer": "b",
     "explanation": "Fair value assumes an orderly transaction with usual marketing activities; forced liquidations or distress sales don't represent fair value.",
-    "skill": "analysis"
+    "skill": "analysis",
+    "difficulty": 3
   },
   {
     "id": "far-fv-10",
@@ -430,6 +439,181 @@
     "answer": "a",
     "explanation": "For Level 1 inputs, fair value is the quoted price times the quantity held (P × Q) — no blockage discount or premium: 10,000 × 42 = **420,000**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "far-fv-11",
+    "pool": "practice",
+    "stem": "A company bought equipment for $100,000. A market participant would pay $92,000 for it today in an orderly transaction. What is its fair value?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Entry price isn't fair value.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$96,000",
+        "explanation": "Prices aren't averaged.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Depreciated cost",
+        "explanation": "Cost isn't fair value.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$92,000",
+        "explanation": "Correct. Fair value is an exit price."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 820: fair value is the price received to sell an asset in an orderly transaction between market participants.",
+    "skill": "application",
+    "difficulty": 1,
+    "calc": true
+  },
+  {
+    "id": "far-fv-12",
+    "pool": "practice",
+    "stem": "An asset's quoted price in its principal market is $50. Transaction costs to sell are $3, and costs to transport the asset to that market are $2. What is its fair value?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$48",
+        "explanation": "Correct. Fair value is reduced for transport costs but not transaction costs."
+      },
+      {
+        "id": "b",
+        "text": "$45",
+        "explanation": "Transaction costs aren't deducted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$50",
+        "explanation": "Transport costs reduce fair value.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$47",
+        "explanation": "Transaction costs aren't deducted.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 820-10-35-9B: fair value excludes transaction costs but is adjusted for transportation costs.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-fv-13",
+    "pool": "practice",
+    "stem": "An asset's principal market price is $40 (transaction costs $4). In another market the price is $42 (transaction costs $7). What is its fair value?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$42",
+        "explanation": "The principal market takes priority.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40",
+        "explanation": "Correct. Fair value uses the principal market, without deducting transaction costs."
+      },
+      {
+        "id": "c",
+        "text": "$36",
+        "explanation": "Transaction costs aren't deducted from fair value.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$35",
+        "explanation": "The other market isn't used when there is a principal market.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 820-10-35-5: fair value is measured in the principal market if one exists, even if another market offers a better net price.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-fv-14",
+    "pool": "practice",
+    "stem": "A company holds 1,000,000 shares of a listed stock trading at $10. Selling the whole block at once would depress the price. What is the Level 1 fair value?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Less than $10,000,000, with a blockage discount",
+        "explanation": "Blockage discounts aren't allowed for Level 1.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "More than $10,000,000, with a control premium",
+        "explanation": "No premium applies to a Level 1 measurement.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$10,000,000",
+        "explanation": "Correct. Level 1 uses quoted price × quantity; blockage factors are prohibited."
+      },
+      {
+        "id": "d",
+        "text": "The cost of the shares",
+        "explanation": "Fair value isn't cost.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 820-10-35-44: a Level 1 measurement is quoted price × quantity, without adjustment for size.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-fv-15",
+    "pool": "practice",
+    "stem": "A company elects the fair value option for its own bonds payable. Part of the fair value change is caused by a change in its own credit risk. Where is that part reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In net income",
+        "explanation": "Own-credit changes are separated into OCI.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Not recognized",
+        "explanation": "The change is recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As an adjustment to retained earnings",
+        "explanation": "It goes through OCI.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "In other comprehensive income",
+        "explanation": "Correct. Instrument-specific credit risk changes on FVO liabilities go to OCI."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASC 825-10-45-5: changes in fair value from instrument-specific credit risk of FVO liabilities are presented in OCI.",
+    "skill": "application",
+    "difficulty": 3
   }
 ]

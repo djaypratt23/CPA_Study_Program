@@ -130,7 +130,8 @@
     ],
     "answer": "d",
     "explanation": "Bonds sell at a discount when the market rate > coupon rate. The discount is amortized into interest income, so income > cash each period.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-dsec-02",
@@ -164,6 +165,7 @@
     "answer": "c",
     "explanation": "Interest income = carrying amount × effective rate = 288,000 × 6% = **17,280**. Discount amortization = 17,280 − 15,000 = 2,280.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -198,6 +200,7 @@
     "answer": "a",
     "explanation": "Interest income 17,280 − cash 15,000 = 2,280 amortized. Amortized cost = 288,000 + 2,280 = **290,280**.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -232,6 +235,7 @@
     "answer": "c",
     "explanation": "Trading securities: fair value changes go to net income — 131,000 − 120,000 = **11,000** gain.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -266,6 +270,7 @@
     "answer": "d",
     "explanation": "Realized gain = proceeds − amortized cost = 87,000 − 80,000 = **7,000** in net income. The 6,000 previously in AOCI is reclassified out of OCI (a −6,000 reclassification adjustment).",
     "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -299,7 +304,8 @@
     ],
     "answer": "d",
     "explanation": "HTM is reserved for debt securities the entity has the positive intent and ability to hold to maturity.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-dsec-07",
@@ -332,7 +338,8 @@
     ],
     "answer": "a",
     "explanation": "For a premium bond, interest income = carrying amount × lower market rate; cash coupon exceeds it, and the difference reduces the carrying amount.",
-    "skill": "application"
+    "skill": "application",
+    "difficulty": 2
   },
   {
     "id": "far-dsec-08",
@@ -366,6 +373,7 @@
     "answer": "b",
     "explanation": "Required adjustment balance = 158,000 − 150,000 = 8,000 debit. Existing 3,000 debit → adjust 5,000, credited to OCI.",
     "skill": "application",
+    "difficulty": 2,
     "calc": true
   },
   {
@@ -399,7 +407,8 @@
     ],
     "answer": "a",
     "explanation": "ASC 326-20 applies CECL to HTM debt securities: an allowance for expected credit losses from day one, with changes in net income.",
-    "skill": "remembering"
+    "skill": "remembering",
+    "difficulty": 1
   },
   {
     "id": "far-dsec-10",
@@ -433,6 +442,180 @@
     "answer": "a",
     "explanation": "Interest income = 105,154 × 8% = 8,412. Cash = 10,000. Premium amortization = 10,000 − 8,412 = **1,588**. (The price is the present value of the annual cash flows at 8%: 10,000 × 2.5771 + 100,000 × 0.7938 ≈ 105,154.)",
     "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-11",
+    "pool": "practice",
+    "stem": "How is an unrealized holding gain on a trading debt security reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In other comprehensive income",
+        "explanation": "That is the treatment for AFS securities.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Not recognized until sold",
+        "explanation": "Unrealized gains are recognized each period.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a deferred credit",
+        "explanation": "Gains aren't deferred.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "In net income",
+        "explanation": "Correct. Trading securities are measured at fair value through earnings."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Trading debt securities: fair value changes go to net income.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "far-dsec-12",
+    "pool": "practice",
+    "stem": "An available-for-sale debt security has a fair value below amortized cost, and the company intends to sell it before recovery. How is the decline treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Written down to fair value through earnings",
+        "explanation": "Correct. When the entity intends to sell, the full decline is recognized in earnings."
+      },
+      {
+        "id": "b",
+        "text": "Recognized in OCI only",
+        "explanation": "Intent to sell requires recognition in earnings.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "An allowance for credit losses only",
+        "explanation": "The whole decline is recognized, not only credit losses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Ignored until the security is sold",
+        "explanation": "The decline is recognized now.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 326-30-35-10: if the entity intends to sell (or more likely than not will be required to sell), it writes the security down to fair value through earnings.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-dsec-13",
+    "pool": "practice",
+    "stem": "A company buys a $100,000, 8% bond for $96,000 to yield 9% and classifies it as held to maturity. What interest income is reported in the first year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000",
+        "explanation": "That is cash interest only.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$8,640",
+        "explanation": "Correct. 96,000 × 9% = 8,640, including 640 of discount amortization."
+      },
+      {
+        "id": "c",
+        "text": "$9,000",
+        "explanation": "Effective interest applies to the carrying amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$7,360",
+        "explanation": "Discount amortization increases income.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Effective interest method: income = carrying amount × effective rate.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-14",
+    "pool": "practice",
+    "stem": "An AFS debt security has an amortized cost of $200,000, a fair value of $170,000 and a present value of expected cash flows of $185,000. The company doesn't intend to sell. How is the decline reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000 in earnings",
+        "explanation": "Only the credit portion goes to earnings.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$30,000 in OCI",
+        "explanation": "The credit loss portion goes to earnings.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$15,000 credit loss in earnings; $15,000 in OCI",
+        "explanation": "Correct. The credit loss uses an allowance; the noncredit portion goes to OCI."
+      },
+      {
+        "id": "d",
+        "text": "$15,000 in earnings; nothing in OCI",
+        "explanation": "The remaining decline is recognized in OCI.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 326-30: recognize an allowance for credit losses (limited to the decline below amortized cost) in earnings; the noncredit decline goes to OCI.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dsec-15",
+    "pool": "practice",
+    "stem": "A trading debt security bought for $50,000 had a fair value of $55,000 at last year-end. It is sold this year for $58,000. What gain is reported this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000",
+        "explanation": "5,000 of the gain was recognized last year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "That is last year's unrealized gain.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The sale above carrying amount produces a gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$3,000",
+        "explanation": "Correct. The carrying amount at last year-end was 55,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Trading securities are carried at fair value, so only changes since the last measurement are recognized.",
+    "skill": "application",
+    "difficulty": 2,
     "calc": true
   }
 ]
