@@ -1,0 +1,78 @@
+{
+  "id": "reg-tbs-r3-itemized-review",
+  "section": "REG",
+  "unitId": "reg-u5",
+  "moduleIds": [
+    "reg-itemized-deductions"
+  ],
+  "pool": "practice",
+  "title": "Itemized deductions review — the Kaplans",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Review the Kaplans' 2025 Schedule A prepared by a junior staff member. They file jointly; AGI and MAGI are **$200,000**.",
+  "exhibits": [
+    {
+      "title": "Source documents",
+      "content": "- Unreimbursed medical expenses: **$18,000**\n- State income tax withheld: **$22,000**; real estate taxes: **$12,000**\n- Mortgage interest on a **$600,000** acquisition loan (taken in 2021): **$27,000**\n- Cash to their church: **$15,000**\n- Stock held 5 years given to a public charity: FMV **$30,000**, basis **$8,000**\n- Theft loss (not in a federally declared disaster): **$5,000**\n\n2025 SALT cap: **$40,000**, reduced only for MAGI over $500,000."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "r",
+      "prompt": "Review each line.",
+      "preparedLabel": "Per staff",
+      "rows": [
+        {
+          "id": "m",
+          "label": "Medical expenses",
+          "prepared": 18000,
+          "answer": 3000,
+          "explanation": "Only the excess over 7.5% of AGI (15,000): **3,000**."
+        },
+        {
+          "id": "s",
+          "label": "State and local taxes",
+          "prepared": 10000,
+          "answer": 34000,
+          "explanation": "34,000 is under the 2025 $40,000 cap: **34,000**; staff used the old $10,000 cap."
+        },
+        {
+          "id": "i",
+          "label": "Mortgage interest",
+          "prepared": 27000,
+          "answer": 27000,
+          "explanation": "Acquisition debt is under $750,000: correct."
+        },
+        {
+          "id": "c",
+          "label": "Charitable contributions",
+          "prepared": 23000,
+          "answer": 45000,
+          "explanation": "Long-term stock to a public charity is deducted at FMV: 15,000 + 30,000 = **45,000** (within the AGI limits)."
+        },
+        {
+          "id": "t",
+          "label": "Theft loss",
+          "prepared": 0,
+          "answer": 0,
+          "explanation": "Personal casualty and theft losses outside federally declared disasters aren't deductible: correct."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Corrected total.",
+      "rows": [
+        {
+          "id": "tot",
+          "label": "Total itemized deductions",
+          "answer": 109000,
+          "explanation": "3,000 + 34,000 + 27,000 + 45,000 = **109,000**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

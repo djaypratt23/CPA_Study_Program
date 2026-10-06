@@ -1,0 +1,98 @@
+{
+  "id": "reg-tbs-r3-gross-income",
+  "section": "REG",
+  "unitId": "reg-u4",
+  "moduleIds": [
+    "reg-gross-income"
+  ],
+  "pool": "practice",
+  "title": "Gross income — Rafael Ortiz",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Determine how much of each receipt Rafael Ortiz (single) includes in 2025 gross income.",
+  "exhibits": [
+    {
+      "title": "Receipts",
+      "content": "1. Salary: **$80,000**\n2. Interest on city bonds: **$2,000**\n3. Cash gift from his aunt: **$10,000**\n4. State income tax refund (he itemized last year and got a full benefit): **$1,200**\n5. Life insurance proceeds on his father's death: **$100,000**\n6. Alimony received under a 2020 divorce decree: **$12,000**\n7. Taxable cost of group-term life coverage above $50,000 (per W-2): **$90**\n8. State lottery winnings: **$5,000**\n9. Unemployment compensation: **$4,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Enter the amount included in gross income.",
+      "rows": [
+        {
+          "id": "i2",
+          "label": "2. City bond interest",
+          "answer": 0,
+          "explanation": "Municipal bond interest is excluded.",
+          "tolerance": 0
+        },
+        {
+          "id": "i4",
+          "label": "4. State tax refund",
+          "answer": 1200,
+          "explanation": "Included under the tax benefit rule: **1,200**.",
+          "tolerance": 0
+        },
+        {
+          "id": "i6",
+          "label": "6. Alimony under a 2020 decree",
+          "answer": 0,
+          "explanation": "Post-2018 alimony isn't income to the recipient.",
+          "tolerance": 0
+        },
+        {
+          "id": "i7",
+          "label": "7. Group-term life coverage",
+          "answer": 90,
+          "explanation": "Coverage over $50,000 is taxable: **90**.",
+          "tolerance": 0
+        },
+        {
+          "id": "tot",
+          "label": "Total gross income",
+          "answer": 90290,
+          "explanation": "80,000 + 1,200 + 90 + 5,000 + 4,000 = **90,290**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Included or excluded?",
+      "options": [
+        "Included",
+        "Excluded"
+      ],
+      "rows": [
+        {
+          "id": "d3",
+          "label": "3. Gift from aunt",
+          "answer": "Excluded",
+          "explanation": "Gifts are excluded."
+        },
+        {
+          "id": "d5",
+          "label": "5. Life insurance proceeds",
+          "answer": "Excluded",
+          "explanation": "Death benefits are excluded."
+        },
+        {
+          "id": "d8",
+          "label": "8. Lottery winnings",
+          "answer": "Included",
+          "explanation": "Gambling winnings are income."
+        },
+        {
+          "id": "d9",
+          "label": "9. Unemployment compensation",
+          "answer": "Included",
+          "explanation": "Fully taxable."
+        }
+      ]
+    }
+  ]
+}

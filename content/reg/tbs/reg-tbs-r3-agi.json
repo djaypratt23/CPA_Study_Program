@@ -1,0 +1,74 @@
+{
+  "id": "reg-tbs-r3-agi",
+  "section": "REG",
+  "unitId": "reg-u5",
+  "moduleIds": [
+    "reg-adjustments"
+  ],
+  "pool": "practice",
+  "title": "Adjusted gross income — the Brennans",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Compute the Brennans' 2025 AGI. They file jointly; neither is covered by a workplace retirement plan; both are under 50. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Income",
+      "content": "Wages: **$95,000**\nTaxable interest: **$1,500**\nSchedule C net profit (Mia): **$20,000**\nNet capital loss: **$(8,000)**"
+    },
+    {
+      "title": "Possible adjustments",
+      "content": "- Half of Mia's SE tax: **$1,413**\n- Traditional IRA contribution (Liam): **$7,000**\n- HSA contribution (family HDHP): **$4,300**\n- Student loan interest paid: **$2,800** (MAGI below the phaseout)\n- Liam's unreimbursed classroom supplies (he's a K-12 teacher): **$400**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "cap",
+          "label": "Capital loss allowed against ordinary income",
+          "answer": 3000,
+          "explanation": "Limited to **3,000** on a joint return.",
+          "tolerance": 0
+        },
+        {
+          "id": "ti",
+          "label": "Total income",
+          "answer": 113500,
+          "explanation": "95,000 + 1,500 + 20,000 − 3,000 = **113,500**.",
+          "tolerance": 0
+        },
+        {
+          "id": "sl",
+          "label": "Student loan interest deduction",
+          "answer": 2500,
+          "explanation": "Capped at **2,500**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ed",
+          "label": "Educator expense deduction",
+          "answer": 300,
+          "explanation": "Capped at **300** per educator.",
+          "tolerance": 0
+        },
+        {
+          "id": "adj",
+          "label": "Total adjustments",
+          "answer": 15513,
+          "explanation": "1,413 + 7,000 + 4,300 + 2,500 + 300 = **15,513**.",
+          "tolerance": 0
+        },
+        {
+          "id": "agi",
+          "label": "Adjusted gross income",
+          "answer": 97987,
+          "explanation": "113,500 − 15,513 = **97,987**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

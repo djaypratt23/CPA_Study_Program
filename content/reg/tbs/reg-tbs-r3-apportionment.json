@@ -1,0 +1,77 @@
+{
+  "id": "reg-tbs-r3-apportionment",
+  "section": "REG",
+  "unitId": "reg-u6",
+  "moduleIds": [
+    "reg-state-local-tax"
+  ],
+  "pool": "practice",
+  "title": "State apportionment — Corvid Corp.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Corvid Corp. has **$5,000,000** of apportionable business income and **$200,000** of nonbusiness dividends. Its commercial domicile is State H. Compute its income attributable to State X. Round percentages to two decimals.",
+  "exhibits": [
+    {
+      "title": "Factors",
+      "content": "| Factor | State X | Everywhere |\n|---|---|---|\n| Sales | 3,000,000 | 10,000,000 |\n| Property | 2,000,000 | 8,000,000 |\n| Payroll | 1,500,000 | 5,000,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "eq",
+          "label": "State X apportionment percentage — equally weighted three factors",
+          "answer": 28.33,
+          "explanation": "(30% + 25% + 30%) ÷ 3 = **28.33%**.",
+          "tolerance": 0.01,
+          "unit": "%"
+        },
+        {
+          "id": "dw",
+          "label": "State X apportionment percentage — double-weighted sales",
+          "answer": 28.75,
+          "explanation": "(2 × 30% + 25% + 30%) ÷ 4 = **28.75%**.",
+          "tolerance": 0.01,
+          "unit": "%"
+        },
+        {
+          "id": "ss",
+          "label": "State X apportionment percentage — single sales factor",
+          "answer": 30,
+          "explanation": "3,000,000 ÷ 10,000,000 = **30%**.",
+          "tolerance": 0.01,
+          "unit": "%"
+        },
+        {
+          "id": "inc",
+          "label": "Income apportioned to State X using double-weighted sales",
+          "answer": 1437500,
+          "explanation": "5,000,000 × 28.75% = **1,437,500**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Where are the nonbusiness dividends taxed?",
+      "options": [
+        "State H only",
+        "State X only",
+        "Apportioned among all states"
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Nonbusiness dividends",
+          "answer": "State H only",
+          "explanation": "Nonbusiness income is allocated to the state of commercial domicile."
+        }
+      ]
+    }
+  ]
+}

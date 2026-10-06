@@ -1,0 +1,86 @@
+{
+  "id": "reg-tbs-r3-basis",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-property-basis"
+  ],
+  "pool": "practice",
+  "title": "Basis and gain or loss — five transactions",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Compute basis and gain or loss for each transaction (individual taxpayers).",
+  "exhibits": [
+    {
+      "title": "Transactions",
+      "content": "A. Stock received as a gift: donor's basis **$30,000**, FMV at gift **$22,000**. The donee sells it for **$25,000**.\nB. The same gifted stock is instead sold for **$18,000**.\nC. Stock inherited: decedent's basis **$10,000**, FMV at death **$50,000**. Sold 3 months after death for **$55,000**.\nD. 100 shares (basis **$8,000**) are sold for **$6,000**; 100 identical shares are bought 2 weeks later for **$6,500**.\nE. Land bought for **$100,000** cash plus assumption of the seller's **$300,000** mortgage."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following (enter losses as positive amounts).",
+      "rows": [
+        {
+          "id": "a",
+          "label": "A: recognized gain or loss",
+          "answer": 0,
+          "explanation": "Gain basis 30,000 and loss basis 22,000 bracket the 25,000 price: **no gain or loss**.",
+          "tolerance": 0
+        },
+        {
+          "id": "b",
+          "label": "B: recognized loss",
+          "answer": 4000,
+          "explanation": "Loss basis is the lower FMV: 22,000 − 18,000 = **4,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "c",
+          "label": "C: recognized gain",
+          "answer": 5000,
+          "explanation": "Stepped-up basis 50,000; 55,000 − 50,000 = **5,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dbas",
+          "label": "D: basis of the new shares",
+          "answer": 8500,
+          "explanation": "Disallowed 2,000 wash-sale loss is added: 6,500 + 2,000 = **8,500**.",
+          "tolerance": 0
+        },
+        {
+          "id": "e",
+          "label": "E: basis of the land",
+          "answer": 400000,
+          "explanation": "Cost includes debt assumed: **400,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "h",
+      "prompt": "Classify each holding period.",
+      "options": [
+        "Short-term",
+        "Long-term"
+      ],
+      "rows": [
+        {
+          "id": "h1",
+          "label": "C: inherited stock sold 3 months after death",
+          "answer": "Long-term",
+          "explanation": "Inherited property is always long-term."
+        },
+        {
+          "id": "h2",
+          "label": "B: gifted stock sold at a loss 4 months after the gift, using FMV basis",
+          "answer": "Short-term",
+          "explanation": "With FMV basis, the holding period starts at the gift date."
+        }
+      ]
+    }
+  ]
+}

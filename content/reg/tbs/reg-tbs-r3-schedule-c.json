@@ -1,0 +1,106 @@
+{
+  "id": "reg-tbs-r3-schedule-c",
+  "section": "REG",
+  "unitId": "reg-u4",
+  "moduleIds": [
+    "reg-business-rental-income"
+  ],
+  "pool": "practice",
+  "title": "Schedule C and SE tax — Nora Fielding",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Nora Fielding is a self-employed graphic designer (cash basis). Compute her 2025 Schedule C results. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "2025 records",
+      "content": "- Gross receipts: **$250,000**\n- Cost of goods sold (printed materials): **$90,000**\n- Advertising: **$8,000**\n- Business meals with clients: **$6,000**\n- Tickets to sporting events for clients: **$2,000**\n- Home office: **250 sq ft** used regularly and exclusively (simplified method, $5/sq ft)\n- Business mileage: **12,000 miles** (standard rate 70¢)\n- Traffic fines: **$500**\n- Health insurance premiums for herself: **$7,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "meal",
+          "label": "Deductible business meals",
+          "answer": 3000,
+          "explanation": "50% × 6,000 = **3,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ho",
+          "label": "Home office deduction",
+          "answer": 1250,
+          "explanation": "250 × $5 = **1,250**.",
+          "tolerance": 0
+        },
+        {
+          "id": "car",
+          "label": "Vehicle deduction",
+          "answer": 8400,
+          "explanation": "12,000 × $0.70 = **8,400**.",
+          "tolerance": 0
+        },
+        {
+          "id": "np",
+          "label": "Schedule C net profit",
+          "answer": 139350,
+          "explanation": "250,000 − 90,000 − 8,000 − 3,000 − 1,250 − 8,400 = **139,350**; entertainment and fines aren't deductible, and health insurance isn't a Schedule C expense.",
+          "tolerance": 0
+        },
+        {
+          "id": "se",
+          "label": "Self-employment tax",
+          "answer": 19690,
+          "explanation": "139,350 × 92.35% × 15.3% = **19,690**.",
+          "tolerance": 2
+        },
+        {
+          "id": "half",
+          "label": "Deduction for half of SE tax",
+          "answer": 9845,
+          "explanation": "19,690 ÷ 2 = **9,845**.",
+          "tolerance": 2
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Where is each item reported?",
+      "options": [
+        "Schedule C expense",
+        "Adjustment to income",
+        "Not deductible"
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Health insurance premiums",
+          "answer": "Adjustment to income",
+          "explanation": "The self-employed health insurance deduction is above the line."
+        },
+        {
+          "id": "d2",
+          "label": "Traffic fines",
+          "answer": "Not deductible",
+          "explanation": "Fines paid to a government are nondeductible."
+        },
+        {
+          "id": "d3",
+          "label": "Sporting event tickets",
+          "answer": "Not deductible",
+          "explanation": "Entertainment isn't deductible."
+        },
+        {
+          "id": "d4",
+          "label": "Advertising",
+          "answer": "Schedule C expense",
+          "explanation": "An ordinary and necessary business expense."
+        }
+      ]
+    }
+  ]
+}

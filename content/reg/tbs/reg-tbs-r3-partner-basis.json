@@ -1,0 +1,77 @@
+{
+  "id": "reg-tbs-r3-partner-basis",
+  "section": "REG",
+  "unitId": "reg-u7",
+  "moduleIds": [
+    "reg-partnerships"
+  ],
+  "pool": "practice",
+  "title": "Partner basis and K-1 — Iris Holloway",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Iris Holloway is a general partner in Fenway Partners. Compute her 2025 outside basis and self-employment income.",
+  "exhibits": [
+    {
+      "title": "Iris's 2025 Schedule K-1",
+      "content": "- Beginning outside basis: **$40,000**\n- Guaranteed payment for services: **$20,000**\n- Ordinary business income: **$30,000**\n- Tax-exempt interest: **$2,000**\n- Net long-term capital gain: **$4,000**\n- §179 deduction: **$3,000**\n- Charitable contributions: **$1,000**\n- Cash distributions: **$25,000**\n- Increase in her share of partnership liabilities: **$10,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "end",
+          "label": "Ending outside basis",
+          "answer": 57000,
+          "explanation": "40,000 + 30,000 + 2,000 + 4,000 + 10,000 − 25,000 − 3,000 − 1,000 = **57,000**; guaranteed payments don't change basis.",
+          "tolerance": 0
+        },
+        {
+          "id": "se",
+          "label": "Net earnings from self-employment (before the 92.35% factor)",
+          "answer": 50000,
+          "explanation": "Guaranteed payment 20,000 + ordinary income 30,000 = **50,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "How is each item reported to Iris?",
+      "options": [
+        "Ordinary business income",
+        "Separately stated"
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Charitable contributions",
+          "answer": "Separately stated",
+          "explanation": "Limits apply at the partner level."
+        },
+        {
+          "id": "d2",
+          "label": "Net long-term capital gain",
+          "answer": "Separately stated",
+          "explanation": "Capital gain rates apply at the partner level."
+        },
+        {
+          "id": "d3",
+          "label": "Depreciation (other than §179)",
+          "answer": "Ordinary business income",
+          "explanation": "Included in ordinary income."
+        },
+        {
+          "id": "d4",
+          "label": "§179 deduction",
+          "answer": "Separately stated",
+          "explanation": "The §179 limits apply at the partner level."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "reg-tbs-r3-penalties",
+  "section": "REG",
+  "unitId": "reg-u1",
+  "moduleIds": [
+    "reg-preparer-penalties"
+  ],
+  "pool": "practice",
+  "title": "Taxpayer and preparer penalties — Holt family",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Compute the civil penalties for the Holt family's returns and their preparer. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Late return",
+      "content": "The Year 1 return showed **$20,000** of tax due with no withholding or estimates. It was filed **3 months late** (no extension), and the tax was paid with the return. Ignore interest and the minimum late-filing penalty."
+    },
+    {
+      "title": "Understatement",
+      "content": "On another return the correct tax was **$150,000**; the return reported **$120,000**. There is no substantial authority, disclosure or reasonable cause."
+    },
+    {
+      "title": "Preparer",
+      "content": "The preparer charged **$1,600** for the second return and took an unreasonable position (not willful). On a third client's return, the preparer willfully understated tax and charged **$1,200**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute each penalty.",
+      "rows": [
+        {
+          "id": "ftp",
+          "label": "Failure-to-pay penalty",
+          "answer": 300,
+          "explanation": "0.5% × 3 months × 20,000 = **300**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ftf",
+          "label": "Failure-to-file penalty",
+          "answer": 2700,
+          "explanation": "(5% − 0.5%) × 3 months × 20,000 = **2,700**; the FTF is reduced by the FTP for the same months.",
+          "tolerance": 0
+        },
+        {
+          "id": "acc",
+          "label": "Accuracy-related penalty on the understatement",
+          "answer": 6000,
+          "explanation": "30,000 exceeds the greater of 10% of correct tax (15,000) or 5,000, so it's substantial: 20% × 30,000 = **6,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "p1",
+          "label": "§6694(a) preparer penalty (unreasonable position)",
+          "answer": 1000,
+          "explanation": "Greater of 1,000 or 50% × 1,600 (800) = **1,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "p2",
+          "label": "§6694(b) preparer penalty (willful)",
+          "answer": 5000,
+          "explanation": "Greater of 5,000 or 75% × 1,200 (900) = **5,000**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "reg-tbs-r3-exempt-types",
+  "section": "REG",
+  "unitId": "reg-u7",
+  "moduleIds": [
+    "reg-trusts-exempt"
+  ],
+  "pool": "practice",
+  "title": "Exempt organization types and filings — six organizations",
+  "minutes": 15,
+  "skill": "application",
+  "instructions": "Classify each organization and identify its annual filing.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "t",
+      "prompt": "Select the exemption that fits best.",
+      "options": [
+        "§501(c)(3)",
+        "§501(c)(4)",
+        "§501(c)(6)",
+        "§501(c)(7)",
+        "§527"
+      ],
+      "rows": [
+        {
+          "id": "t1",
+          "label": "A food pantry serving low-income families",
+          "answer": "§501(c)(3)",
+          "explanation": "A charitable organization."
+        },
+        {
+          "id": "t2",
+          "label": "A civic league that lobbies heavily for local road safety laws",
+          "answer": "§501(c)(4)",
+          "explanation": "Social welfare groups may lobby without limit."
+        },
+        {
+          "id": "t3",
+          "label": "A regional chamber of commerce",
+          "answer": "§501(c)(6)",
+          "explanation": "A business league."
+        },
+        {
+          "id": "t4",
+          "label": "A members-only golf club",
+          "answer": "§501(c)(7)",
+          "explanation": "A social club."
+        },
+        {
+          "id": "t5",
+          "label": "A candidate's campaign committee",
+          "answer": "§527",
+          "explanation": "A political organization."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "f",
+      "prompt": "Select the annual information return.",
+      "options": [
+        "Form 990-N",
+        "Form 990-EZ",
+        "Form 990",
+        "None required"
+      ],
+      "rows": [
+        {
+          "id": "f1",
+          "label": "A charity with gross receipts normally $35,000",
+          "answer": "Form 990-N",
+          "explanation": "Receipts normally $50,000 or less."
+        },
+        {
+          "id": "f2",
+          "label": "A charity with $150,000 of gross receipts and $300,000 of assets",
+          "answer": "Form 990-EZ",
+          "explanation": "Under $200,000 receipts and $500,000 assets."
+        },
+        {
+          "id": "f3",
+          "label": "A charity with $2,000,000 of gross receipts",
+          "answer": "Form 990",
+          "explanation": "Above the 990-EZ limits."
+        },
+        {
+          "id": "f4",
+          "label": "A church",
+          "answer": "None required",
+          "explanation": "Churches are exempt from filing Form 990."
+        }
+      ]
+    }
+  ]
+}

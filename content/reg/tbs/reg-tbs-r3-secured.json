@@ -1,0 +1,57 @@
+{
+  "id": "reg-tbs-r3-secured",
+  "section": "REG",
+  "unitId": "reg-u2",
+  "moduleIds": [
+    "reg-debtor-creditor"
+  ],
+  "pool": "practice",
+  "title": "Secured transaction priorities — Atlas Fabrication",
+  "minutes": 15,
+  "skill": "analysis",
+  "instructions": "Atlas Fabrication has defaulted. For each pair, select the party with priority in the collateral.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Who has priority?",
+      "options": [
+        "First party",
+        "Second party"
+      ],
+      "rows": [
+        {
+          "id": "p1",
+          "label": "First: Bank A, which filed a financing statement January 10. Second: Bank B, whose interest attached January 5 but which filed February 1.",
+          "answer": "First party",
+          "explanation": "Priority goes to the first to file or perfect."
+        },
+        {
+          "id": "p2",
+          "label": "First: a lender with an earlier-perfected blanket lien on equipment. Second: a seller with a PMSI in new equipment, perfected within 20 days after Atlas received it.",
+          "answer": "Second party",
+          "explanation": "A properly perfected PMSI in equipment has priority over earlier liens."
+        },
+        {
+          "id": "p3",
+          "label": "First: a lender with a perfected interest in Atlas's inventory. Second: a buyer in the ordinary course who bought inventory from Atlas.",
+          "answer": "Second party",
+          "explanation": "Buyers in the ordinary course take free of security interests created by the seller."
+        },
+        {
+          "id": "p4",
+          "label": "First: a creditor with an unperfected security interest. Second: Atlas's bankruptcy trustee.",
+          "answer": "Second party",
+          "explanation": "The trustee has lien creditor status over unperfected interests."
+        },
+        {
+          "id": "p5",
+          "label": "First: a retailer with an unfiled PMSI in a consumer's TV. Second: the consumer's neighbor who bought the TV for home use without knowledge.",
+          "answer": "Second party",
+          "explanation": "A consumer buyer without knowledge takes free of an unfiled consumer-goods PMSI."
+        }
+      ]
+    }
+  ]
+}

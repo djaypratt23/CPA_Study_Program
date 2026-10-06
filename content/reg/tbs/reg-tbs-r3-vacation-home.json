@@ -1,0 +1,81 @@
+{
+  "id": "reg-tbs-r3-vacation-home",
+  "section": "REG",
+  "unitId": "reg-u4",
+  "moduleIds": [
+    "reg-business-rental-income"
+  ],
+  "pool": "practice",
+  "title": "Vacation home rental — the Ashworths",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "The Ashworths rented their lake house at fair rent for **120 days** in 2025 and used it personally for **20 days**. Use the IRS method (rental days ÷ total days used) to allocate expenses. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "2025 amounts",
+      "content": "Rental income: **$18,000**\nMortgage interest: **$8,000**\nProperty taxes: **$3,000**\nUtilities and maintenance: **$4,200**\nDepreciation (full year, if fully rental): **$7,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "c",
+      "prompt": "How is the property classified?",
+      "options": [
+        "A dwelling used as a residence (rental expenses limited)",
+        "A rental property (losses may be allowed)",
+        "Personal residence rented under 15 days"
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Classification",
+          "answer": "A dwelling used as a residence (rental expenses limited)",
+          "explanation": "Personal use of 20 days exceeds the greater of 14 days or 10% of rental days (12)."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the rental deductions.",
+      "rows": [
+        {
+          "id": "it",
+          "label": "Rental share of mortgage interest and property taxes",
+          "answer": 9429,
+          "explanation": "11,000 × 120/140 = **9,429**.",
+          "tolerance": 1
+        },
+        {
+          "id": "op",
+          "label": "Rental share of utilities and maintenance",
+          "answer": 3600,
+          "explanation": "4,200 × 120/140 = **3,600**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dep",
+          "label": "Depreciation allowed",
+          "answer": 4971,
+          "explanation": "Limited to remaining income: 18,000 − 9,429 − 3,600 = **4,971** (the rental share was 6,000).",
+          "tolerance": 1
+        },
+        {
+          "id": "cf",
+          "label": "Depreciation disallowed and carried forward",
+          "answer": 1029,
+          "explanation": "6,000 − 4,971 = **1,029**.",
+          "tolerance": 1
+        },
+        {
+          "id": "net",
+          "label": "Net rental income",
+          "answer": 0,
+          "explanation": "Expenses are limited to rental income: **0**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

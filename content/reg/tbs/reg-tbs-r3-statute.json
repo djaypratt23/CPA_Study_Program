@@ -1,0 +1,61 @@
+{
+  "id": "reg-tbs-r3-statute",
+  "section": "REG",
+  "unitId": "reg-u1",
+  "moduleIds": [
+    "reg-irs-procedures"
+  ],
+  "pool": "practice",
+  "title": "Statutes of limitations — five returns",
+  "minutes": 15,
+  "skill": "application",
+  "instructions": "Each return below is an individual Year 1 return due **April 15, Year 2**. Select the last date for the action described (assume no weekends or holidays).",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Select the deadline.",
+      "options": [
+        "April 15, Year 5",
+        "October 10, Year 5",
+        "April 15, Year 8",
+        "June 1, Year 6",
+        "February 1, Year 5",
+        "No time limit"
+      ],
+      "rows": [
+        {
+          "id": "a",
+          "label": "IRS assessment: return filed early on February 1, Year 2",
+          "answer": "April 15, Year 5",
+          "explanation": "Early returns are treated as filed on the due date; 3 years from April 15, Year 2."
+        },
+        {
+          "id": "b",
+          "label": "IRS assessment: return filed under extension on October 10, Year 2",
+          "answer": "October 10, Year 5",
+          "explanation": "3 years from the actual (timely extended) filing date."
+        },
+        {
+          "id": "c",
+          "label": "IRS assessment: return filed April 15, Year 2, omitting 30% of gross income",
+          "answer": "April 15, Year 8",
+          "explanation": "Omissions over 25% of gross income extend the period to 6 years."
+        },
+        {
+          "id": "dd",
+          "label": "IRS assessment: fraudulent return",
+          "answer": "No time limit",
+          "explanation": "Fraud keeps the assessment period open indefinitely."
+        },
+        {
+          "id": "e",
+          "label": "Taxpayer refund claim: return filed April 15, Year 2; additional tax paid June 1, Year 4",
+          "answer": "June 1, Year 6",
+          "explanation": "The later of 3 years from filing or 2 years from payment."
+        }
+      ]
+    }
+  ]
+}

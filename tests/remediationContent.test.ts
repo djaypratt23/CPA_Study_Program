@@ -165,7 +165,10 @@ describe('D1 (P0-8) REG/TCP re-scope', () => {
     expect(mod('reg-cost-recovery')?.section).toBe('REG')
     expect(mod('tcp-cost-recovery')).toBeUndefined()
     expect(mod('reg-state-local-tax')?.section).toBe('REG')
-    expect(Object.values(bundle.tbs).filter((t) => t.unitId === 'reg-u3' && t.pool === 'practice').map((t) => t.id).sort()).toEqual(['reg-tbs-u3-depreciation', 'reg-tbs-u3-depreciation-review'])
+    const regU3 = Object.values(bundle.tbs).filter((t) => t.unitId === 'reg-u3' && t.pool === 'practice').map((t) => t.id)
+    expect(regU3).toEqual(expect.arrayContaining(['reg-tbs-u3-depreciation', 'reg-tbs-u3-depreciation-review']))
+    // The property-transaction TBS moved to TCP must not reappear in REG Unit 3.
+    for (const moved of ['reg-tbs-u3-exchanges', 'reg-tbs-u3-property-sales']) expect(regU3).not.toContain(moved)
   })
 
   it('each mock holds only its own section’s in-scope items', () => {
