@@ -135,7 +135,7 @@
     "answer": "d",
     "explanation": "2025 HSA limits: $4,300 self-only, $8,550 family; +$1,000 catch-up at 55.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-adj-02",
@@ -204,7 +204,7 @@
     "answer": "a",
     "explanation": "Moving expense deductions are limited to active-duty military moving under orders.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-adj-04",
@@ -307,7 +307,7 @@
     "answer": "c",
     "explanation": "Married filing separately and dependents can't take the student loan interest deduction.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-adj-07",
@@ -341,7 +341,7 @@
     "answer": "a",
     "explanation": "The full interest is reported, and the forfeited penalty is an adjustment.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-adj-08",
@@ -444,7 +444,7 @@
     "answer": "c",
     "explanation": "Employer contributions are excluded from income but reduce the employee's remaining contribution room.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-adj-11",
@@ -478,7 +478,145 @@
     "answer": "d",
     "explanation": "Moving a deduction above the line also changes every AGI-based floor and phase-out computed afterward.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "reg-adj-12",
+    "pool": "practice",
+    "stem": "For 2025, eligible educators may deduct up to $300 of classroom expenses for AGI. A teacher spends $450. What is her adjustment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300",
+        "explanation": "Correct. The deduction is capped at $300."
+      },
+      {
+        "id": "b",
+        "text": "$450",
+        "explanation": "The cap is $300.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$150",
+        "explanation": "The excess isn't the deduction.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "An adjustment is allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Eligible educators deduct up to $300 of unreimbursed classroom expenses as an adjustment to income.",
+    "skill": "application",
+    "difficulty": 1,
+    "calc": true
+  },
+  {
+    "id": "reg-adj-13",
+    "pool": "practice",
+    "stem": "Which alimony payment is deductible by the payer?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Payments under a 2020 decree",
+        "explanation": "Post-2018 alimony isn't deductible.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "Payments under a 2017 decree, unmodified",
+        "explanation": "Correct. Pre-2019 instruments keep the old rules."
+      },
+      {
+        "id": "c",
+        "text": "Child support under any decree",
+        "explanation": "Child support is never deductible.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Voluntary payments before a decree",
+        "explanation": "They must be required by an instrument.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Alimony is deductible only under divorce or separation instruments executed before 2019 (and not modified to adopt the new rules).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-adj-14",
+    "pool": "practice",
+    "stem": "A single taxpayer below the phaseout range paid $3,200 of qualified student loan interest. What is the adjustment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,200",
+        "explanation": "The cap is $2,500.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$700",
+        "explanation": "That is the excess.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$2,500",
+        "explanation": "Correct. The deduction is capped at $2,500."
+      },
+      {
+        "id": "d",
+        "text": "$1,600",
+        "explanation": "The cap isn't half the interest.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The student loan interest deduction is limited to $2,500 per return, subject to an AGI phaseout.",
+    "skill": "application",
+    "difficulty": 1,
+    "calc": true
+  },
+  {
+    "id": "reg-adj-15",
+    "pool": "practice",
+    "stem": "A sole proprietor contributes to her own SEP-IRA. Where is the contribution deducted?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As an expense on Schedule C",
+        "explanation": "Contributions for herself aren't on Schedule C.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As an itemized deduction",
+        "explanation": "It is above the line.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "It isn't deductible",
+        "explanation": "It is deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As an adjustment on Form 1040",
+        "explanation": "Correct. It isn't a Schedule C expense."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Contributions to a self-employed person's own SEP are deducted as an adjustment to income, not on Schedule C (employee contributions are).",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]
