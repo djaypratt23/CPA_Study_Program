@@ -616,5 +616,176 @@
     "explanation": "Haphazard selection is acceptable for nonstatistical sampling but not for statistical sampling.",
     "skill": "application",
     "difficulty": 1
+  },
+  {
+    "id": "aud-sa-16",
+    "pool": "practice",
+    "stem": "In an attribute sample, the auditor raises the tolerable deviation rate. Holding everything else constant, what happens to the sample size?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It decreases",
+        "explanation": "Correct. More tolerance needs less evidence."
+      },
+      {
+        "id": "b",
+        "text": "It increases",
+        "explanation": "That happens when tolerance falls.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "It stays the same",
+        "explanation": "Tolerance affects sample size.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It doubles exactly",
+        "explanation": "There's no fixed relationship.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Sample size is inversely related to the tolerable deviation rate.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-17",
+    "pool": "practice",
+    "stem": "A sample of 100 has 2 deviations, and the computed upper deviation limit is 7.8%. What is the allowance for sampling risk?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "7.8%",
+        "explanation": "That is the upper limit itself.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "5.8%",
+        "explanation": "Correct. 7.8% − 2%."
+      },
+      {
+        "id": "c",
+        "text": "2.0%",
+        "explanation": "That is the sample rate.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "9.8%",
+        "explanation": "The rates aren't added.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Allowance for sampling risk = upper deviation limit − sample deviation rate.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "aud-sa-18",
+    "pool": "practice",
+    "stem": "The auditor selects every 50th voucher after a random start. What selection method is this?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Haphazard selection",
+        "explanation": "That has no structured technique.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Block selection",
+        "explanation": "That picks contiguous items.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Systematic selection",
+        "explanation": "Correct. A fixed interval after a random start."
+      },
+      {
+        "id": "d",
+        "text": "Monetary unit selection",
+        "explanation": "That weights items by dollars.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Systematic selection uses a uniform interval from a random starting point.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-19",
+    "pool": "practice",
+    "stem": "How does stratifying a population affect a classical variables sample?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It always increases sample size",
+        "explanation": "It usually reduces it.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "It removes sampling risk",
+        "explanation": "Some risk remains.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "It has no effect at all",
+        "explanation": "It lowers variability.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It can reduce the sample size",
+        "explanation": "Correct. Variability within strata falls."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Stratification reduces variability within each stratum, allowing a smaller overall sample for the same precision.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-sa-20",
+    "pool": "practice",
+    "stem": "Using a nonstatistical sample, the auditor finds $3,000 of misstatement in items covering 10% of the population's value. What should the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Project it to the population",
+        "explanation": "Correct. Projection is required for any sample."
+      },
+      {
+        "id": "b",
+        "text": "Treat $3,000 as the total misstatement",
+        "explanation": "The result must be projected.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Ignore it as nonstatistical",
+        "explanation": "Projection still applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Switch to a statistical sample",
+        "explanation": "That isn't required.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Misstatements found in a sample, statistical or not, are projected to the population.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]
