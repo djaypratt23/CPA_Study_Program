@@ -204,7 +204,7 @@
     "answer": "a",
     "explanation": "Tax-exempt income increases basis so it isn't taxed later.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-pt-04",
@@ -274,7 +274,7 @@
     "answer": "d",
     "explanation": "Limited partners generally include only guaranteed payments for services.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-pt-06",
@@ -345,7 +345,7 @@
     "answer": "b",
     "explanation": "§751 recharacterizes gain attributable to hot assets as ordinary.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-pt-08",
@@ -379,7 +379,7 @@
     "answer": "a",
     "explanation": "15th day of the 3rd month after year-end.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-pt-09",
@@ -447,7 +447,7 @@
     "answer": "b",
     "explanation": "§179 is applied at both the partnership and partner levels, so it's separately stated.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-pt-11",
@@ -481,7 +481,248 @@
     "answer": "d",
     "explanation": "General partners: share of ordinary income plus guaranteed payments. Limited partners: guaranteed payments for services only.",
     "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pt-12",
+    "pool": "practice",
+    "stem": "A partner contributes land (basis $40,000; FMV $70,000) to a partnership. What is her outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$70,000",
+        "explanation": "FMV isn't used.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "That is the built-in gain.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Correct. Basis carries over."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Basis carries over.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§722: a partner's outside basis equals the adjusted basis of the property contributed.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-pt-13",
+    "pool": "practice",
+    "stem": "A partner contributes property (basis $50,000) subject to a $20,000 liability that the partnership assumes. She takes a 25% interest. What is her outside basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "Add back her 25% share.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Her net liability relief reduces basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$55,000",
+        "explanation": "Liabilities relieved are subtracted.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$35,000",
+        "explanation": "Correct. $50,000 − $20,000 + 25% × $20,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Outside basis = contributed basis − liabilities assumed by others (75% × $20,000 = $15,000 net relief).",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pt-14",
+    "pool": "practice",
+    "stem": "Which partnership item is separately stated on Schedule K-1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Charitable contributions",
+        "explanation": "Correct. They are limited at the partner level."
+      },
+      {
+        "id": "b",
+        "text": "Salaries to employees",
+        "explanation": "Part of ordinary income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Rent expense for the office",
+        "explanation": "Part of ordinary income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Depreciation (non-§179)",
+        "explanation": "Part of ordinary income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Items that may be treated differently by partners, like charitable contributions, are separately stated.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-pt-15",
+    "pool": "practice",
+    "stem": "A partner's beginning basis is $20,000. Her share of ordinary income is $15,000 and of tax-exempt income $2,000, and she receives a $10,000 cash distribution. What is her ending basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Tax-exempt income increases basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$27,000",
+        "explanation": "Correct. 20 + 15 + 2 − 10."
+      },
+      {
+        "id": "c",
+        "text": "$35,000",
+        "explanation": "Distributions reduce basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$37,000",
+        "explanation": "Distributions reduce basis.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Outside basis increases for taxable and tax-exempt income and decreases for distributions.",
+    "skill": "application",
     "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "reg-pt-16",
+    "pool": "practice",
+    "stem": "A partner's basis is $10,000. She receives an $8,000 cash distribution, and her share of the ordinary loss is $5,000. How much of the loss is deductible this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Basis is limited after the distribution.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Remaining basis is $2,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$2,000",
+        "explanation": "Correct. Distributions reduce basis before losses."
+      },
+      {
+        "id": "d",
+        "text": "$3,000",
+        "explanation": "That is the suspended amount.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Distributions reduce basis before losses are applied; the $3,000 excess loss is suspended.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pt-17",
+    "pool": "practice",
+    "stem": "Partners owning 70% of a partnership's profits and capital all use a calendar year. What tax year must the partnership use?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Any year it chooses",
+        "explanation": "The required year rules apply.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A June 30 fiscal year",
+        "explanation": "Not the majority year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The year of the largest partner",
+        "explanation": "The majority interest controls.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "The calendar year",
+        "explanation": "Correct. The majority-interest year applies."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§706(b): a partnership uses the tax year of partners owning a majority interest.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pt-18",
+    "pool": "practice",
+    "stem": "Who pays federal income tax on a partnership's ordinary business income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The partners",
+        "explanation": "Correct. The partnership is a pass-through."
+      },
+      {
+        "id": "b",
+        "text": "The partnership",
+        "explanation": "It files an information return.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Both, at different rates",
+        "explanation": "There's no entity-level tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only the general partners",
+        "explanation": "All partners report their shares.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A partnership files Form 1065 but pays no income tax; partners report their distributive shares.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

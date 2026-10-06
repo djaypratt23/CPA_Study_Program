@@ -239,7 +239,7 @@
     "answer": "a",
     "explanation": "Corporate capital losses offset only capital gains; carryback 3, carryforward 5.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-cc-05",
@@ -308,7 +308,7 @@
     "answer": "d",
     "explanation": "C corporations: 15th day of the 4th month after year-end.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-cc-07",
@@ -448,7 +448,7 @@
     "answer": "d",
     "explanation": "§264: premiums are nondeductible when the corporation is the beneficiary (and the proceeds are tax-exempt).",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-cc-11",
@@ -482,7 +482,7 @@
     "answer": "b",
     "explanation": "Line 28 is before special deductions, so the DRD never appears on Schedule M-1. Government fines are nondeductible under §162(f).",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -517,6 +517,109 @@
     "answer": "c",
     "explanation": "General business credit: back 1 year, forward 20.",
     "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-cc-13",
+    "pool": "practice",
+    "stem": "A C corporation has 2025 taxable income of $500,000. What is its regular federal income tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$170,000",
+        "explanation": "That uses the old 34% rate.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$75,000",
+        "explanation": "The rate is 21%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$185,000",
+        "explanation": "The rate is 21%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$105,000",
+        "explanation": "Correct. A flat 21% rate."
+      }
+    ],
+    "answer": "d",
+    "explanation": "C corporations pay a flat 21% tax on taxable income.",
+    "skill": "application",
+    "difficulty": 1,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-14",
+    "pool": "practice",
+    "stem": "A C corporation (not a tax shelter) has average annual gross receipts of $10 million. Does the §163(j) business interest limit apply?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, the small business exemption applies",
+        "explanation": "Correct. It's under the gross receipts threshold."
+      },
+      {
+        "id": "b",
+        "text": "Yes, it caps interest at 30% of ATI",
+        "explanation": "The exemption applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, for all corporations",
+        "explanation": "Small businesses are exempt.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Only for interest on related-party loans",
+        "explanation": "That isn't the test.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§163(j) doesn't apply to taxpayers (other than tax shelters) meeting the §448(c) gross receipts test.",
+    "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "reg-cc-15",
+    "pool": "practice",
+    "stem": "A corporation had taxable income over $1 million in a prior year. May it base all estimated payments on last year's tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, for all four payments",
+        "explanation": "Large corporations can't.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No, only the first installment",
+        "explanation": "Correct. Large corporations must use current-year tax later."
+      },
+      {
+        "id": "c",
+        "text": "Yes, if last year's tax was higher",
+        "explanation": "The limit still applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No, not even the first installment",
+        "explanation": "The first may use last year's tax.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§6655(d)(2): a large corporation may use the prior-year safe harbor only for its first estimated payment.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

@@ -133,7 +133,7 @@
     "answer": "d",
     "explanation": "Attachment: value, rights, and agreement. Filing is one method of perfection.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-dc-02",
@@ -235,7 +235,7 @@
     "answer": "a",
     "explanation": "Fewer than 12 creditors: one petitioner; 12 or more: three petitioners (with aggregate unsecured claims above the statutory amount).",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-dc-05",
@@ -269,7 +269,7 @@
     "answer": "d",
     "explanation": "Nondischargeable debts include domestic support obligations, most recent taxes, most student loans, and debts from fraud or willful injury.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-dc-06",
@@ -303,7 +303,7 @@
     "answer": "b",
     "explanation": "The automatic stay arises on filing and stops most collection actions.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-dc-07",
@@ -440,6 +440,176 @@
     "answer": "b",
     "explanation": "Subrogation transfers the creditor's rights to the paying surety.",
     "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-dc-11",
+    "pool": "practice",
+    "stem": "A store sells a refrigerator on credit to a consumer and keeps a security interest. How is the interest perfected?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Automatically, on attachment",
+        "explanation": "Correct. No filing is required."
+      },
+      {
+        "id": "b",
+        "text": "By filing a financing statement",
+        "explanation": "Filing isn't required here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "By the seller taking possession",
+        "explanation": "The consumer has the goods.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It can't be perfected at all",
+        "explanation": "PMSIs in consumer goods perfect on attachment.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A purchase-money security interest in consumer goods is perfected automatically on attachment.",
+    "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "reg-dc-12",
+    "pool": "practice",
+    "stem": "Two lenders hold perfected security interests in the same equipment. Neither is a PMSI. Which has priority?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The first interest to attach",
+        "explanation": "Filing or perfection controls.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The first to file or perfect",
+        "explanation": "Correct. The general priority rule."
+      },
+      {
+        "id": "c",
+        "text": "The lender with the larger loan",
+        "explanation": "Size doesn't matter.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "They share the collateral pro rata",
+        "explanation": "The first-in-time rule applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "UCC 9-322: between perfected security interests, priority goes to the first to file or perfect.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-dc-13",
+    "pool": "practice",
+    "stem": "Which unsecured claim has the highest priority in a Chapter 7 distribution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Unpaid wages within 180 days",
+        "explanation": "Wages rank lower.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Unpaid income taxes",
+        "explanation": "Taxes rank lower.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Domestic support obligations",
+        "explanation": "Correct. They rank first among priority claims."
+      },
+      {
+        "id": "d",
+        "text": "General trade payables",
+        "explanation": "They have no priority.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under §507, domestic support obligations are first in priority among unsecured claims.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-dc-14",
+    "pool": "practice",
+    "stem": "A month before filing for bankruptcy while insolvent, a debtor transfers a $200,000 boat to a friend for $5,000. What can the trustee do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing; it was a sale",
+        "explanation": "The value was grossly inadequate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Avoid it only as a preference",
+        "explanation": "The friend isn't a creditor.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Only sue the friend for $5,000",
+        "explanation": "The transfer is voidable.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Avoid it as a fraudulent transfer",
+        "explanation": "Correct. It was for less than reasonably equivalent value."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The trustee may avoid transfers within 2 years before filing that were for less than reasonably equivalent value while the debtor was insolvent.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-dc-15",
+    "pool": "practice",
+    "stem": "A surety guaranteed a loan to a principal debtor, who is now in bankruptcy. Can the surety use the debtor's bankruptcy as a defense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, it is a personal defense",
+        "explanation": "Correct. The surety remains liable."
+      },
+      {
+        "id": "b",
+        "text": "Yes, it discharges the surety",
+        "explanation": "The surety isn't discharged.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, if the surety is a compensated one",
+        "explanation": "Compensation doesn't matter.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only for interest",
+        "explanation": "The defense isn't available at all.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The principal debtor's bankruptcy, incapacity or death are personal defenses that the surety can't use.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

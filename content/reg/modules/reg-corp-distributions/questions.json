@@ -169,7 +169,7 @@
     "answer": "c",
     "explanation": "E&P is reduced by federal income taxes and other nondeductible expenses.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-ep-03",
@@ -203,7 +203,7 @@
     "answer": "d",
     "explanation": "§301(d): shareholder's basis = FMV.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-ep-04",
@@ -272,7 +272,7 @@
     "answer": "c",
     "explanation": "When current E&P is negative, net it against accumulated E&P as of the distribution date.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -307,7 +307,7 @@
     "answer": "d",
     "explanation": "§305: pro rata stock dividends are generally nontaxable; basis is allocated.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-ep-07",
@@ -376,7 +376,7 @@
     "answer": "b",
     "explanation": "Qualified dividends use the capital gain rate structure.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-ep-09",
@@ -410,7 +410,7 @@
     "answer": "b",
     "explanation": "§312(k): E&P uses ADS, so accelerated tax depreciation is added back.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-ep-10",
@@ -444,6 +444,180 @@
     "answer": "b",
     "explanation": "§312: gain increases E&P; the distribution reduces E&P by FMV (net of liabilities).",
     "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-ep-11",
+    "pool": "practice",
+    "stem": "A corporation with accumulated E&P of $(50,000) and current E&P of $30,000 distributes $40,000. How much is a dividend?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Current E&P is positive.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Only $30,000 of E&P exists.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Correct. Current E&P makes distributions dividends."
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "That is the return of capital.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Distributions are dividends to the extent of current E&P, even with an accumulated deficit.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ep-12",
+    "pool": "practice",
+    "stem": "A shareholder with a $5,000 stock basis receives a $12,000 distribution in excess of E&P. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000 dividend income",
+        "explanation": "There's no E&P.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$12,000 basis recovery",
+        "explanation": "Basis is only $5,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$7,000 ordinary income",
+        "explanation": "The excess is capital gain.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$5,000 basis recovery; $7,000 capital gain",
+        "explanation": "Correct. The excess over basis is gain."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A nondividend distribution reduces basis to zero; the excess is capital gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ep-13",
+    "pool": "practice",
+    "stem": "A corporation pays its controlling shareholder's personal home mortgage. How is the payment treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a constructive dividend",
+        "explanation": "Correct. It's a disguised distribution."
+      },
+      {
+        "id": "b",
+        "text": "As a deductible business expense",
+        "explanation": "It is personal to the shareholder.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As a nontaxable loan",
+        "explanation": "No loan was intended.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a capital contribution",
+        "explanation": "The flow is the reverse.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Payments of a shareholder's personal expenses are constructive dividends to the extent of E&P.",
+    "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "reg-ep-14",
+    "pool": "practice",
+    "stem": "A corporation distributes land (FMV $40,000; basis $70,000) to a shareholder. It has ample E&P. What are the results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000 loss; $40,000 dividend",
+        "explanation": "Losses aren't recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No loss; $40,000 dividend",
+        "explanation": "Correct. Losses aren't recognized; the shareholder takes FMV."
+      },
+      {
+        "id": "c",
+        "text": "No loss; $70,000 dividend",
+        "explanation": "The dividend is FMV.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 loss; $70,000 dividend",
+        "explanation": "No loss; FMV dividend.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§311(a): a corporation recognizes no loss on distributing depreciated property. The shareholder's dividend and basis equal FMV.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-ep-15",
+    "pool": "practice",
+    "stem": "A corporation with E&P of $500,000 distributes property (FMV $100,000; basis $60,000). Ignoring taxes, what is E&P after the distribution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$400,000",
+        "explanation": "The gain increases E&P first.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$440,000 plus taxes",
+        "explanation": "Taxes are ignored.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "$440,000",
+        "explanation": "Correct. +$40,000 gain, then −$100,000 FMV."
+      },
+      {
+        "id": "d",
+        "text": "$460,000",
+        "explanation": "E&P falls by FMV.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "E&P increases by the recognized gain ($40,000), then decreases by the property's FMV ($100,000).",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

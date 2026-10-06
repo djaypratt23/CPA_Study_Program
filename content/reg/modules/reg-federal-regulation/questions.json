@@ -134,7 +134,7 @@
     "answer": "d",
     "explanation": "Short-term notes (≤ 9 months) for current transactions are exempt securities.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fr-02",
@@ -169,7 +169,7 @@
     "answer": "a",
     "explanation": "506(b): unlimited accredited investors plus up to 35 sophisticated nonaccredited investors.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fr-03",
@@ -239,7 +239,7 @@
     "answer": "c",
     "explanation": "Form 8-K reports current events (auditor changes, acquisitions, bankruptcy).",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fr-05",
@@ -309,7 +309,7 @@
     "answer": "d",
     "explanation": "Defined contribution plans: 3-year cliff or 2-to-6-year graded vesting.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fr-07",
@@ -379,7 +379,7 @@
     "answer": "b",
     "explanation": "COBRA applies to employers with 20+ employees; coverage generally lasts 18 months.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fr-09",
@@ -484,7 +484,7 @@
     "answer": "b",
     "explanation": "ACA §4980H applies to applicable large employers: 50 or more full-time employees (30+ hours) including FTEs, measured over the prior year.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fr-12",
@@ -518,7 +518,7 @@
     "answer": "d",
     "explanation": "The penalty applies only if a full-time employee receives a premium tax credit for exchange coverage.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fr-13",
@@ -586,6 +586,349 @@
     "answer": "c",
     "explanation": "The FCPA prohibits giving anything of value to foreign officials to obtain or retain business, directly or indirectly. Facilitating payments for routine, nondiscretionary governmental action are excepted.",
     "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-fr-15",
+    "pool": "practice",
+    "stem": "Who pays the federal unemployment (FUTA) tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The employee only",
+        "explanation": "Employees don't pay FUTA.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "The employer only",
+        "explanation": "Correct. FUTA isn't withheld from employees."
+      },
+      {
+        "id": "c",
+        "text": "Both equally",
+        "explanation": "FUTA isn't shared.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The state",
+        "explanation": "The employer pays it.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "FUTA is imposed solely on employers.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-fr-16",
+    "pool": "practice",
+    "stem": "An employee earns $50,000 in 2025. What is the employer's share of FICA tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,650",
+        "explanation": "That is the combined share.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$3,100",
+        "explanation": "Medicare tax applies too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$3,825",
+        "explanation": "Correct. 7.65% × $50,000."
+      },
+      {
+        "id": "d",
+        "text": "$725",
+        "explanation": "That is Medicare only.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The employer pays 6.2% Social Security plus 1.45% Medicare on wages up to the wage base: 7.65% × $50,000 = $3,825.",
+    "skill": "application",
+    "difficulty": 1,
+    "calc": true
+  },
+  {
+    "id": "reg-fr-17",
+    "pool": "practice",
+    "stem": "An employee earns $250,000 in 2025. What is the employer's Medicare tax on these wages?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4,075",
+        "explanation": "The employer doesn't pay the 0.9%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$7,250",
+        "explanation": "That is the combined share.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$2,900",
+        "explanation": "The employer rate is 1.45%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$3,625",
+        "explanation": "Correct. 1.45%; the employer doesn't match the 0.9% add-on."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The employer pays 1.45% on all wages; the 0.9% additional Medicare tax is the employee's alone.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-fr-18",
+    "pool": "practice",
+    "stem": "A company's CFO willfully uses withheld payroll taxes to pay suppliers instead of the IRS. What is the CFO's exposure?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A penalty of 100% of the unpaid trust fund taxes",
+        "explanation": "Correct. The §6672 trust fund recovery penalty applies."
+      },
+      {
+        "id": "b",
+        "text": "None, because the company owes the tax",
+        "explanation": "Responsible persons are personally liable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A penalty of 25% of the unpaid amount",
+        "explanation": "The penalty is 100%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Only the employer's share of FICA",
+        "explanation": "Withheld amounts are covered.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§6672: a responsible person who willfully fails to collect or pay over withheld taxes is liable for 100% of the trust fund amount.",
+    "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "reg-fr-19",
+    "pool": "practice",
+    "stem": "Which categories of evidence does the IRS use to decide whether a worker is an employee?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Hours, pay rate and location",
+        "explanation": "These are only factors.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Behavioral, financial and relationship",
+        "explanation": "Correct. The three categories of the common-law test."
+      },
+      {
+        "id": "c",
+        "text": "Contract, invoice and title",
+        "explanation": "Labels don't control.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Age, training and tenure",
+        "explanation": "Not the categories.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The IRS groups the common-law control factors into behavioral control, financial control and the relationship of the parties.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-fr-20",
+    "pool": "practice",
+    "stem": "How may a business ask the IRS for a determination of a worker's status?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "By filing Form W-9",
+        "explanation": "That provides a TIN.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "By filing Form 1099-NEC",
+        "explanation": "That reports payments.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "By filing Form SS-8",
+        "explanation": "Correct. Form SS-8 requests a status determination."
+      },
+      {
+        "id": "d",
+        "text": "By filing Form 941",
+        "explanation": "That is a payroll return.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Form SS-8 is used to request an IRS determination of worker status.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-fr-21",
+    "pool": "practice",
+    "stem": "An employer has 40 full-time employees and 20 part-time employees who each work 60 hours a month. Is it an applicable large employer under the ACA?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, it has only 40 full-time employees",
+        "explanation": "Part-time hours count as FTEs.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "No, part-time employees never count",
+        "explanation": "They count toward the threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, because it has 60 employees",
+        "explanation": "FTEs are counted, not heads.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Yes, it has 50 full-time equivalents",
+        "explanation": "Correct. 20 × 60 / 120 = 10 FTEs, plus 40."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ALE status counts full-time employees plus FTEs (part-time hours per month ÷ 120); 50 or more makes an ALE.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-fr-22",
+    "pool": "practice",
+    "stem": "Under the ACA, a full-time employee is one who averages at least:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "30 hours a week",
+        "explanation": "Correct. Or 130 hours a month."
+      },
+      {
+        "id": "b",
+        "text": "40 hours a week",
+        "explanation": "The ACA uses 30 hours.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "35 hours a week",
+        "explanation": "The ACA uses 30 hours.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "20 hours a week",
+        "explanation": "The ACA uses 30 hours.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "For the ACA, full-time means an average of at least 30 hours per week or 130 hours per month.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-fr-23",
+    "pool": "practice",
+    "stem": "Which companies are subject to the FCPA's accounting provisions?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All U.S. businesses",
+        "explanation": "The accounting provisions apply to issuers.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Issuers with SEC-registered securities",
+        "explanation": "Correct. They must keep accurate books and adequate controls."
+      },
+      {
+        "id": "c",
+        "text": "Only foreign companies",
+        "explanation": "U.S. issuers are covered.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Only government contractors",
+        "explanation": "Not the provisions' scope.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The FCPA's books-and-records and internal-control provisions apply to issuers.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fr-24",
+    "pool": "practice",
+    "stem": "A U.S. company's payment to a foreign official is lawful under that country's written laws. What is the effect under the FCPA?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's still a violation",
+        "explanation": "Written local law provides a defense.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It's a facilitating payment",
+        "explanation": "That exception is for routine acts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "It is an affirmative defense",
+        "explanation": "Correct. Payments lawful under written local law are a defense."
+      },
+      {
+        "id": "d",
+        "text": "It must be disclosed to the SEC",
+        "explanation": "No such requirement.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The FCPA provides an affirmative defense when the payment was lawful under the written laws of the foreign country.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

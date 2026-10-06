@@ -7,9 +7,9 @@ import { loadContent } from '../scripts/load-content'
 const { bundle } = loadContent()
 
 /** Raised section by section as each expansion round lands. */
-const MIN_PRACTICE_PER_MODULE: Record<string, number> = { FAR: 15, AUD: 15, REG: 2, TCP: 7 }
+const MIN_PRACTICE_PER_MODULE: Record<string, number> = { FAR: 15, AUD: 15, REG: 15, TCP: 7 }
 /** Sections whose difficulty levels have been spread (1–3) so far. */
-const DIFFICULTY_SPREAD = new Set(['FAR', 'AUD'])
+const DIFFICULTY_SPREAD = new Set(['FAR', 'AUD', 'REG'])
 
 describe.each(Object.keys(MIN_PRACTICE_PER_MODULE))('%s bank', (section) => {
   const modules = bundle.modules.filter((m) => m.section === section && !m.optional)

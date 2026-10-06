@@ -136,7 +136,7 @@
     "answer": "c",
     "explanation": "Taxes deducted for regular tax aren't allowed for AMT.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-ot-02",
@@ -347,7 +347,7 @@
     "answer": "b",
     "explanation": "Net SE earnings = 60,000 × 92.35% = 55,410; Social Security applies only to the 26,100 of wage base remaining. Medicare (2.9%) applies to all 55,410.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -382,7 +382,7 @@
     "answer": "b",
     "explanation": "Individual estimates: April 15, June 15, September 15, and January 15 of the following year.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-ot-09",
@@ -417,7 +417,7 @@
     "answer": "b",
     "explanation": "AMT from deferral items (ISOs, depreciation) generates a credit usable in later years; exclusion items (SALT) don't.",
     "skill": "analysis",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "reg-ot-10",
@@ -451,7 +451,7 @@
     "answer": "a",
     "explanation": "No SE tax is due when net SE earnings are under $400.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-ot-11",
@@ -487,5 +487,316 @@
     "skill": "application",
     "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "reg-ot-12",
+    "pool": "practice",
+    "stem": "A sole proprietor has net earnings of $50,000 from self-employment for 2025 and no wages. What is the SE tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,065",
+        "explanation": "Correct. $50,000 × 92.35% × 15.3%."
+      },
+      {
+        "id": "b",
+        "text": "$7,650",
+        "explanation": "Apply the 92.35% factor first.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$3,532",
+        "explanation": "That is half the tax.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$6,200",
+        "explanation": "Medicare tax applies too.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "SE tax = net earnings × 92.35% × 15.3% = $46,175 × 15.3% ≈ $7,065.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-13",
+    "pool": "practice",
+    "stem": "How does a self-employed individual treat the deductible half of her SE tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As an itemized deduction",
+        "explanation": "It is above the line.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As a deduction for AGI",
+        "explanation": "Correct. It is an adjustment to income."
+      },
+      {
+        "id": "c",
+        "text": "As a credit",
+        "explanation": "It is a deduction.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "On Schedule C as an expense",
+        "explanation": "It isn't a business expense.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§164(f): half of SE tax is deductible as an adjustment in arriving at AGI.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ot-14",
+    "pool": "practice",
+    "stem": "A single taxpayer's MAGI is $260,000, including $40,000 of net investment income. What is the NIIT?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,280",
+        "explanation": "Use the lesser amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$9,880",
+        "explanation": "Only part of MAGI is taxed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$1,520",
+        "explanation": "Correct. 3.8% × the lesser of $40,000 or $60,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "MAGI exceeds $200,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "NIIT = 3.8% × the lesser of NII or MAGI over $200,000 (single).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-15",
+    "pool": "practice",
+    "stem": "A single taxpayer's MAGI is $215,000, including $50,000 of net investment income. What is the NIIT?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,900",
+        "explanation": "The lesser amount is $15,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "MAGI exceeds the threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$450",
+        "explanation": "That uses the 3% rate.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$570",
+        "explanation": "Correct. 3.8% × the $15,000 excess over $200,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "NIIT = 3.8% × lesser of NII ($50,000) or excess MAGI ($15,000) = $570.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-16",
+    "pool": "practice",
+    "stem": "Which item is excluded from net investment income for the NIIT?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A traditional IRA distribution",
+        "explanation": "Correct. Qualified plan and IRA distributions are excluded."
+      },
+      {
+        "id": "b",
+        "text": "Interest on a bank account",
+        "explanation": "That is included in NII.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Rents from a passive rental",
+        "explanation": "That is included in NII.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Dividends on public stock",
+        "explanation": "That is included in NII.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "NII excludes distributions from qualified plans and IRAs, wages and active trade or business income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ot-17",
+    "pool": "practice",
+    "stem": "An employer pays $230,000 of wages to a single employee in 2025. How much additional Medicare tax must the employer withhold?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Withholding starts above $200,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$270",
+        "explanation": "Correct. 0.9% × the $30,000 over $200,000."
+      },
+      {
+        "id": "c",
+        "text": "$2,070",
+        "explanation": "Only the excess is taxed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$435",
+        "explanation": "The employer withholds 0.9%.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Employers withhold the 0.9% additional Medicare tax on wages over $200,000 paid to an employee, regardless of filing status.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-18",
+    "pool": "practice",
+    "stem": "Prior-year AGI was $200,000 and prior-year tax was $30,000. Current-year tax will be $50,000. What is the minimum timely payment to avoid the estimated-tax penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "110% applies when prior AGI exceeds $150,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$45,000",
+        "explanation": "The prior-year safe harbor is lower.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$33,000",
+        "explanation": "Correct. The lesser of 90% × $50,000 and 110% × $30,000."
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "100% of current tax isn't required.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The required annual payment is the lesser of 90% of current tax or 100% of prior tax (110% if prior AGI exceeded $150,000).",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-19",
+    "pool": "practice",
+    "stem": "No estimated-tax penalty applies if the tax due after withholding and credits is less than:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$500",
+        "explanation": "The threshold is $1,000.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "The threshold is $1,000.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$100",
+        "explanation": "The threshold is $1,000.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$1,000",
+        "explanation": "Correct. A de minimis exception applies."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§6654(e)(1): no penalty applies if the tax shown, less withholding, is under $1,000.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-ot-20",
+    "pool": "practice",
+    "stem": "Which income is taxed at the preferential capital gains rates in the regular tax computation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Qualified dividends",
+        "explanation": "Correct. They share the 0/15/20% rates."
+      },
+      {
+        "id": "b",
+        "text": "Interest on corporate bonds",
+        "explanation": "Interest is ordinary income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Short-term capital gains",
+        "explanation": "They are taxed at ordinary rates.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Nonqualified dividends",
+        "explanation": "They are taxed at ordinary rates.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Qualified dividends are taxed at the same 0%, 15% and 20% rates as net long-term capital gain.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

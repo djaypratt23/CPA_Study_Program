@@ -272,7 +272,7 @@
     "answer": "a",
     "explanation": "The qualifying-relative gross income test uses taxable gross income; the dollar limit is given on the exam.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fs-06",
@@ -341,7 +341,7 @@
     "answer": "b",
     "explanation": "Marital status is determined at the end of the tax year (or at death).",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fs-08",
@@ -412,7 +412,7 @@
     "answer": "b",
     "explanation": "Qualifying children have no gross income limit.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fs-10",
@@ -446,7 +446,7 @@
     "answer": "b",
     "explanation": "The TCJA reduced exemptions to $0, and the One Big Beautiful Bill Act made that permanent.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fs-11",
@@ -479,6 +479,142 @@
     ],
     "answer": "a",
     "explanation": "IRD is taxed to whoever receives it; the final return covers income through the date of death.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-12",
+    "pool": "practice",
+    "stem": "An unmarried parent pays all costs of the home where her 10-year-old son lived all year. What is her best filing status?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Head of household",
+        "explanation": "Correct. She has a qualifying child in her home."
+      },
+      {
+        "id": "b",
+        "text": "Single",
+        "explanation": "HOH gives better rates.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Qualifying surviving spouse",
+        "explanation": "She isn't widowed.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Married filing separately",
+        "explanation": "She isn't married.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "An unmarried taxpayer who pays more than half the cost of a home for a qualifying person who lives there over half the year qualifies as head of household.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-fs-13",
+    "pool": "practice",
+    "stem": "A taxpayer's 22-year-old daughter is a full-time student who lives at home. Can she meet the qualifying-child age test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, she's over 19",
+        "explanation": "The student rule extends the limit.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Yes, she's under 24 and a student",
+        "explanation": "Correct. The age limit is 24 for full-time students."
+      },
+      {
+        "id": "c",
+        "text": "Only if she's disabled",
+        "explanation": "Being a student suffices.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only if she earns no income",
+        "explanation": "Income isn't part of the age test.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A qualifying child must be under 19, under 24 if a full-time student, or permanently and totally disabled.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-fs-14",
+    "pool": "practice",
+    "stem": "An unrelated friend lived with the taxpayer all year as a member of the household, had $3,000 of gross income, and was fully supported by the taxpayer. Can the friend be a dependent?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, she isn't related",
+        "explanation": "Household members can qualify.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only as a qualifying child",
+        "explanation": "She doesn't meet that test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Yes, as a qualifying relative",
+        "explanation": "Correct. A household member can qualify."
+      },
+      {
+        "id": "d",
+        "text": "Only with a multiple support agreement",
+        "explanation": "The taxpayer provided all support.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A person who lives with the taxpayer all year as a household member can be a qualifying relative if the income and support tests are met.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-fs-15",
+    "pool": "practice",
+    "stem": "Divorced parents don't sign a release. Their child lived with the mother for 7 months and the father for 5. Who may claim the child as a qualifying child?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The father",
+        "explanation": "He had fewer months.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "The parent with higher AGI",
+        "explanation": "That is a tiebreaker for equal time.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Either, by choice",
+        "explanation": "The custodial parent has the right.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The mother",
+        "explanation": "Correct. The custodial parent, with more nights."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Absent a release, the custodial parent (with whom the child lived longer) claims the child.",
     "skill": "application",
     "difficulty": 2
   }

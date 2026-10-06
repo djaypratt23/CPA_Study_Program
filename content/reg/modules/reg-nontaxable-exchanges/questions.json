@@ -208,7 +208,7 @@
     "answer": "a",
     "explanation": "Identify within 45 days; receive within 180 days (or the return due date, if earlier).",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-nt-04",
@@ -457,5 +457,455 @@
     "explanation": "§1031 applies mandatorily; realized losses are deferred (built into basis).",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "reg-nt-11",
+    "pool": "practice",
+    "stem": "A single taxpayer sells the home she has owned and lived in for six years at a $300,000 gain. How much gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Correct. $300,000 − $250,000 exclusion."
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The single exclusion is limited to $250,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$300,000",
+        "explanation": "The §121 exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$150,000",
+        "explanation": "Half the gain isn't the rule.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§121 excludes up to $250,000 of gain for a single filer who owned and used the home as a principal residence for 2 of the 5 years before the sale.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-12",
+    "pool": "practice",
+    "stem": "Only the husband holds title to a home, but both spouses have lived in it for 4 years, and neither has used the exclusion recently. They file jointly and realize a $420,000 gain. How much is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$170,000",
+        "explanation": "Only one spouse needs to meet the ownership test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. The $500,000 joint limit applies: either spouse owns, both use."
+      },
+      {
+        "id": "c",
+        "text": "$420,000",
+        "explanation": "The exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$210,000",
+        "explanation": "Gain isn't split by title.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§121(b)(2): the $500,000 limit applies if either spouse meets the ownership test, both meet the use test, and neither used the exclusion in the prior 2 years.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-13",
+    "pool": "practice",
+    "stem": "For the §121 exclusion, must the 2 years of ownership and the 2 years of use be the same period?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, they must be concurrent",
+        "explanation": "The periods needn't overlap.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, and they must be the last 2 years",
+        "explanation": "Any 24 months within the 5 years count.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No, each is tested separately",
+        "explanation": "Correct. Each must total 24 months within the 5 years before the sale."
+      },
+      {
+        "id": "d",
+        "text": "No; only ownership is tested",
+        "explanation": "Both tests apply.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The ownership and use periods each total at least 2 years in the 5-year period ending on the sale date; they needn't be the same 2 years.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-nt-14",
+    "pool": "practice",
+    "stem": "How often may a taxpayer generally claim the §121 exclusion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Once in a lifetime",
+        "explanation": "The once-in-a-lifetime rule was repealed.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Once every 5 years",
+        "explanation": "The look-back is 2 years.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "Without any limit",
+        "explanation": "A 2-year limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Once every 2 years",
+        "explanation": "Correct. It isn't available if used on a sale in the prior 2 years."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§121(b)(3): the exclusion doesn't apply if the taxpayer excluded gain on another sale within the 2 years before this sale.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-nt-15",
+    "pool": "practice",
+    "stem": "A single taxpayer owned and used a home for 12 months, then sold it for health reasons (a qualifying reason) at a $150,000 gain. How much is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Correct. The limit is $250,000 × 12/24 = $125,000."
+      },
+      {
+        "id": "b",
+        "text": "$150,000",
+        "explanation": "A reduced exclusion is available.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$75,000",
+        "explanation": "The limit is prorated, not the gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The full $250,000 isn't available.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A sale due to health, employment or unforeseen circumstances qualifies for a reduced maximum exclusion: $250,000 × months of qualifying use/24.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-16",
+    "pool": "practice",
+    "stem": "A taxpayer sells her principal residence at a $30,000 loss. How is the loss treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a capital loss up to $3,000",
+        "explanation": "Personal-use losses aren't capital losses.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "It is not deductible",
+        "explanation": "Correct. Losses on personal-use property are nondeductible."
+      },
+      {
+        "id": "c",
+        "text": "As an ordinary loss",
+        "explanation": "No deduction is allowed.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a §121 carryforward",
+        "explanation": "No such carryforward exists.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A loss on the sale of a personal residence is a nondeductible personal loss.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-nt-17",
+    "pool": "practice",
+    "stem": "A single taxpayer qualifies for §121 and sells her home at a $100,000 gain. She had claimed $8,000 of depreciation on a home office inside the house after 2024. How much gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "The depreciation portion isn't excludable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "The rest of the gain is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$8,000",
+        "explanation": "Correct. Gain equal to post-May 6, 1997 depreciation can't be excluded."
+      },
+      {
+        "id": "d",
+        "text": "$92,000",
+        "explanation": "Only the depreciation is recognized.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§121(d)(6): gain up to the depreciation claimed after May 6, 1997 is recognized (as unrecaptured §1250 gain). An office within the home doesn't require allocating the rest of the gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-18",
+    "pool": "practice",
+    "stem": "A widow, still unmarried, sells the home she and her late husband used for 20 years at a $450,000 gain, 18 months after his death. How much is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "The $500,000 limit remains available.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$450,000",
+        "explanation": "The exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$225,000",
+        "explanation": "Gain isn't halved at death.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Correct. A surviving spouse may use $500,000 if selling within 2 years of death."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§121(b)(4): an unmarried surviving spouse may use the $500,000 limit for a sale within 2 years after the spouse's death if the joint requirements were met just before death.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-19",
+    "pool": "practice",
+    "stem": "A single taxpayer bought a vacation home in 2015, used it only as a second home through 2020, then lived in it as her principal residence from 2021 until selling it at the end of 2024 at a $200,000 gain. How much gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "Correct. Six of ten years were nonqualified use."
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Nonqualified use after 2008 reduces the exclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$80,000",
+        "explanation": "That is the excluded portion.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$200,000",
+        "explanation": "The 4 years of residence qualify.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§121(b)(5): gain allocated to periods of nonqualified use after 2008 isn't excludable: $200,000 × 6/10 = $120,000 recognized; the $80,000 balance is excluded.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-20",
+    "pool": "practice",
+    "stem": "A newly married couple files jointly. The wife excluded gain on her own home 1 year ago. The husband meets all §121 tests on the home they now sell at a $400,000 gain. How much is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "The wife's recent use limits the joint amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$150,000",
+        "explanation": "Correct. Only the husband's $250,000 limit applies."
+      },
+      {
+        "id": "c",
+        "text": "$400,000",
+        "explanation": "The husband still qualifies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$200,000",
+        "explanation": "The limit isn't half the gain.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§121(b)(2)(B): if the spouses don't both qualify for $500,000, the limit is the sum of the amounts each would get if unmarried: $250,000 + $0.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-21",
+    "pool": "practice",
+    "stem": "Under a divorce decree, a man's ex-wife has lived in the home he owns for the past 4 years; he moved out then. He now sells it. Does he meet the use test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, he hasn't lived there for 4 years",
+        "explanation": "Her use counts for him.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only if she also owns part of it",
+        "explanation": "Ownership isn't required for her use to count.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, through her use under the decree",
+        "explanation": "Correct. Use by an ex-spouse under a divorce instrument is attributed to the owner."
+      },
+      {
+        "id": "d",
+        "text": "Only for half of the gain",
+        "explanation": "The attribution isn't partial.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§121(d)(3)(B): an owner is treated as using the home during any period the spouse or former spouse is granted use under a divorce or separation instrument.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-nt-22",
+    "pool": "practice",
+    "stem": "A single taxpayer qualifies for §121 and sells a home held for 8 years at a $290,000 gain. How is the recognized gain characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000 ordinary income",
+        "explanation": "A residence is a capital asset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$40,000 short-term capital gain",
+        "explanation": "The home was held over a year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "$290,000 long-term capital gain",
+        "explanation": "$250,000 is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$40,000 long-term capital gain",
+        "explanation": "Correct. Gain above the exclusion is capital, and the holding period exceeds a year."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A personal residence is a capital asset; recognized gain beyond the exclusion is long-term capital gain when held more than 1 year.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-23",
+    "pool": "practice",
+    "stem": "Must a taxpayer report a home sale on her return if all the gain is excludable and no Form 1099-S was issued?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No",
+        "explanation": "Correct. A fully excluded sale without a 1099-S needn't be reported."
+      },
+      {
+        "id": "b",
+        "text": "Yes, always on Form 8949",
+        "explanation": "Reporting is needed only in certain cases.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Yes, on Schedule A",
+        "explanation": "Schedule A isn't used for sales.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Only if the gain exceeds $50,000",
+        "explanation": "No such threshold applies.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A sale whose gain is fully excluded generally isn't reported unless the taxpayer received Form 1099-S or chooses not to exclude the gain.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

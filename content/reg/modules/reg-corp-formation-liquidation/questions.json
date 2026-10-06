@@ -205,7 +205,7 @@
     "answer": "a",
     "explanation": "Stock for services is compensation, and service-only transferors don't count toward control.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -240,7 +240,7 @@
     "answer": "c",
     "explanation": "§318 attributes the son's 30 shares to Gus: before 80/100 = 80%; after 60/80 = 75% (not below 50%).",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -309,7 +309,7 @@
     "answer": "b",
     "explanation": "§332: no gain or loss to a parent owning at least 80%; carryover basis.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fl-07",
@@ -378,7 +378,7 @@
     "answer": "b",
     "explanation": "§318 family: spouse, children, grandchildren, and parents.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-fl-09",
@@ -448,6 +448,179 @@
     "explanation": "§331: loss = 50,000 − 80,000 = (30,000), capital.",
     "skill": "application",
     "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-11",
+    "pool": "practice",
+    "stem": "Three transferors contribute property for 75% of a new corporation's stock; an investor buys the rest for cash. Does §351 apply?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, because property was transferred",
+        "explanation": "Control is required.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Yes, if the investor agrees",
+        "explanation": "The investor isn't a property transferor.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only to the largest transferor",
+        "explanation": "Control is tested in total.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No, transferors lack 80% control",
+        "explanation": "Correct. Gain or loss is recognized."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§351 requires the property transferors to own at least 80% of the stock immediately after the exchange.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-fl-12",
+    "pool": "practice",
+    "stem": "In a §351 exchange, a shareholder transfers a building (basis $100,000) subject to a $130,000 mortgage that the corporation assumes. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "Correct. Liabilities exceed basis by $30,000."
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "§357(c) applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$130,000",
+        "explanation": "Only the excess is gain.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Gain is liabilities over basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§357(c): gain is recognized to the extent liabilities assumed exceed the transferor's basis.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-13",
+    "pool": "practice",
+    "stem": "In a §351 exchange, a shareholder transfers land (basis $80,000) subject to a $20,000 mortgage the corporation assumes, for stock only. What is her stock basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Liabilities reduce basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "Correct. $80,000 − $20,000 liability."
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "Liabilities are subtracted.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "That is the liability.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Stock basis = property basis + gain − boot − liabilities assumed by the corporation.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-fl-14",
+    "pool": "practice",
+    "stem": "Does a corporation recognize gain when it issues its own stock for property?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, the stock's FMV",
+        "explanation": "§1032 prevents that.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, if the property appreciated",
+        "explanation": "The corporation recognizes none.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No",
+        "explanation": "Correct. §1032 prevents recognition."
+      },
+      {
+        "id": "d",
+        "text": "Only for treasury stock",
+        "explanation": "§1032 covers treasury stock too.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§1032: a corporation recognizes no gain or loss on issuing its stock for money or property.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-fl-15",
+    "pool": "practice",
+    "stem": "An unrelated shareholder owns 60 of 100 shares. The corporation redeems 30 of her shares. How is the redemption treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a dividend",
+        "explanation": "The test is met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a dividend, because she still owns 30",
+        "explanation": "Substantially disproportionate redemptions are exchanges.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a return of capital only",
+        "explanation": "Exchange treatment applies.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a sale or exchange",
+        "explanation": "Correct. 42.9% after is under 50% and under 48%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§302(b)(2): after-ownership (30/70 = 42.9%) is under 50% and under 80% of before-ownership (48%), so it's substantially disproportionate.",
+    "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   }
 ]

@@ -273,7 +273,7 @@
     "answer": "d",
     "explanation": "Ordering: AAA → accumulated E&P → remaining basis → gain.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -309,7 +309,7 @@
     "answer": "b",
     "explanation": "§1377(a): per-share, per-day allocation.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-sc-07",
@@ -377,7 +377,7 @@
     "answer": "b",
     "explanation": "§1362(g): a 5-year wait after termination unless the IRS consents.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-sc-09",
@@ -446,7 +446,7 @@
     "answer": "a",
     "explanation": "S corporations file by the 15th day of the 3rd month.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "reg-sc-11",
@@ -480,7 +480,7 @@
     "answer": "c",
     "explanation": "Items that could affect shareholders differently (charity, §179, portfolio income) are separately stated on Schedule K.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -550,6 +550,142 @@
     "answer": "a",
     "explanation": "Separately stated items are those whose character could affect a shareholder's tax (capital and §1231 gains, portfolio income, charity, §179). Wages to a shareholder-employee are ordinary deductions.",
     "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-sc-14",
+    "pool": "practice",
+    "stem": "How many shareholders may an S corporation have?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Up to 35",
+        "explanation": "The limit is now 100.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Up to 75",
+        "explanation": "The limit is now 100.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "Up to 100",
+        "explanation": "Correct. Family members may count as one."
+      },
+      {
+        "id": "d",
+        "text": "No limit",
+        "explanation": "The limit is 100.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "An S corporation may have up to 100 shareholders; members of a family may be treated as one shareholder.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-sc-15",
+    "pool": "practice",
+    "stem": "A nonresident alien buys shares in an S corporation. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect if under 5%",
+        "explanation": "Any such shareholder terminates S status.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "The shares become nonvoting",
+        "explanation": "No such rule exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "He is taxed as a partner",
+        "explanation": "Not how it works.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "The S election terminates",
+        "explanation": "Correct. Nonresident aliens are ineligible shareholders."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Nonresident aliens can't be S shareholders; their ownership terminates the election.",
+    "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "reg-sc-16",
+    "pool": "practice",
+    "stem": "A calendar-year corporation wants S status effective for this year. By when must it file Form 2553?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 15 of this year",
+        "explanation": "Correct. By the 15th day of the 3rd month."
+      },
+      {
+        "id": "b",
+        "text": "April 15 of this year",
+        "explanation": "The deadline is March 15.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "December 31 of this year",
+        "explanation": "Too late for this year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Any time this year",
+        "explanation": "A deadline applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "An S election is effective for the current year if filed by the 15th day of the 3rd month of the tax year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-17",
+    "pool": "practice",
+    "stem": "An S corporation pays health insurance for a 10% shareholder-employee. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Tax-free fringe benefit",
+        "explanation": "More-than-2% shareholders don't get that.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "W-2 wages; she may deduct it as an adjustment",
+        "explanation": "Correct. More-than-2% shareholders are treated like partners."
+      },
+      {
+        "id": "c",
+        "text": "A nondeductible distribution",
+        "explanation": "The corporation deducts it.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Not reported anywhere",
+        "explanation": "It is reported as wages.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "For a more-than-2% shareholder, premiums are included in W-2 wages, and the shareholder may claim the self-employed health insurance deduction.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]
