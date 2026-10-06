@@ -271,7 +271,7 @@
     "answer": "d",
     "explanation": "Market-based sourcing assigns receipts to where the customer receives the benefit.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-ms-06",
@@ -305,7 +305,7 @@
     "answer": "b",
     "explanation": "Business income is apportioned; nonbusiness rent is allocated to the property's state.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -340,7 +340,7 @@
     "answer": "b",
     "explanation": "Throwback prevents 'nowhere income.'",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-ms-08",
@@ -408,7 +408,7 @@
     "answer": "b",
     "explanation": "P.L. 86-272 applies only to taxes on or measured by net income.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-ms-10",
@@ -443,5 +443,176 @@
     "explanation": "Combined reporting treats the unitary group as one business for apportionment.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-11",
+    "pool": "practice",
+    "stem": "For apportionment, where is a sale of goods shipped from State A to a customer in State B generally sourced?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "To State A",
+        "explanation": "Origin isn't the rule.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "To the state of incorporation",
+        "explanation": "Not the sourcing rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "To State B",
+        "explanation": "Correct. Tangible goods are sourced to destination."
+      },
+      {
+        "id": "d",
+        "text": "Equally to A and B",
+        "explanation": "That isn't how the rule works.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Sales of tangible personal property are sourced to the state where the goods are delivered.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-12",
+    "pool": "practice",
+    "stem": "A corporation receives dividends on an investment unrelated to its business. Under UDITPA, where are they taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Apportioned among states",
+        "explanation": "Nonbusiness income isn't apportioned.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "The payer's home state",
+        "explanation": "Not the allocation rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Nowhere; it's exempt",
+        "explanation": "Nonbusiness income is still taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Its commercial domicile",
+        "explanation": "Correct. Nonbusiness income is allocated."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Nonbusiness dividends and interest are allocated to the state of commercial domicile.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-13",
+    "pool": "practice",
+    "stem": "A company sells software licenses and lets a sales engineer work from her home in State Z, giving technical support to customers there. Does P.L. 86-272 protect it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, it isn't solicitation of goods",
+        "explanation": "Correct. Support activities and intangibles fall outside it."
+      },
+      {
+        "id": "b",
+        "text": "Yes, she works from home",
+        "explanation": "Location doesn't create protection.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, all remote workers are protected",
+        "explanation": "That isn't how the rule works.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Yes, if orders are approved elsewhere",
+        "explanation": "That applies to goods.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "P.L. 86-272 protects only solicitation of orders for tangible personal property; technical support and sales of intangibles aren't protected.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ms-14",
+    "pool": "practice",
+    "stem": "A retailer buys inventory from a wholesaler for resale. How can it avoid paying sales tax on the purchase?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Pay it, then deduct it",
+        "explanation": "Resale purchases are exempt.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Give a resale certificate",
+        "explanation": "Correct. Purchases for resale are exempt."
+      },
+      {
+        "id": "c",
+        "text": "Pay use tax instead",
+        "explanation": "No use tax is due.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "It can't avoid the tax",
+        "explanation": "An exemption applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Purchases for resale are exempt from sales tax when the buyer provides a resale exemption certificate.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ms-15",
+    "pool": "practice",
+    "stem": "Total sales are $1,000 (in thousands), including $300 to in-state customers and $200 to states where the company isn't taxable. Under a throwout rule, what is the in-state sales factor?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "30.0%",
+        "explanation": "The throwout removes $200.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "50.0%",
+        "explanation": "That's a throwback, not a throwout.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "37.5%",
+        "explanation": "Correct. $300 ÷ ($1,000 − $200)."
+      },
+      {
+        "id": "d",
+        "text": "20.0%",
+        "explanation": "That is the untaxed share.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A throwout rule removes sales to states where the taxpayer isn't taxable from the denominator.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

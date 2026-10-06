@@ -134,7 +134,7 @@
     "answer": "d",
     "explanation": "Basis → at-risk → passive → §461(l).",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-pa-02",
@@ -168,7 +168,7 @@
     "answer": "a",
     "explanation": "Basis allows $25,000, but at-risk excludes nonrecourse debt: $10,000 allowed; $15,000 suspended under §465.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -271,7 +271,7 @@
     "answer": "a",
     "explanation": "Excess business loss = 900,000 − 626,000 = 274,000, carried forward as an NOL.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -340,7 +340,7 @@
     "answer": "c",
     "explanation": "Nonrecourse debt is generally excluded, except qualified nonrecourse real estate financing.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-pa-08",
@@ -374,7 +374,7 @@
     "answer": "b",
     "explanation": "No $25,000 allowance above $150,000 MAGI; the loss offsets only the $4,000 of passive income; $6,000 is suspended.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -409,7 +409,7 @@
     "answer": "b",
     "explanation": "Rental activities are generally passive per se.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-pa-10",
@@ -443,7 +443,180 @@
     "answer": "b",
     "explanation": "Personal use of 40 days is more than 14 days → residence; the order is interest/taxes, operating, depreciation.",
     "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-11",
+    "pool": "practice",
+    "stem": "A taxpayer with MAGI of $130,000 actively participates in a rental with an $18,000 loss and has no passive income. How much is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Correct. $25,000 − 50% × $30,000."
+      },
+      {
+        "id": "b",
+        "text": "$18,000",
+        "explanation": "The allowance is reduced.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "A partial allowance remains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$15,000",
+        "explanation": "That's the reduction.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The $25,000 allowance is reduced by 50% of MAGI over $100,000: $25,000 − $15,000 = $10,000.",
+    "skill": "application",
     "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-12",
+    "pool": "practice",
+    "stem": "A taxpayer works 520 hours a year in a business he co-owns. How are its losses treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As passive",
+        "explanation": "He materially participates.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As nonpassive",
+        "explanation": "Correct. More than 500 hours is material participation."
+      },
+      {
+        "id": "c",
+        "text": "As passive unless he has 750 hours",
+        "explanation": "750 hours is for real estate professionals.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As capital losses",
+        "explanation": "They're ordinary.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Participation of more than 500 hours in the year is material participation, so the activity isn't passive.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-13",
+    "pool": "practice",
+    "stem": "A taxpayer rents a beach condo to guests whose average stay is 5 days. How is it treated under the passive rules?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's always a passive rental",
+        "explanation": "Short stays change the result.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A rental eligible for $25,000",
+        "explanation": "It isn't a rental activity.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It isn't a rental activity",
+        "explanation": "Correct. Average use of 7 days or less isn't a rental activity."
+      },
+      {
+        "id": "d",
+        "text": "It's a personal residence",
+        "explanation": "Not on these facts.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "An activity with average customer use of 7 days or less isn't a rental activity; it's passive only if the taxpayer doesn't materially participate.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pa-14",
+    "pool": "practice",
+    "stem": "A high-income taxpayer has a $20,000 passive loss and $15,000 of passive income from a limited partnership. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deduct $20,000",
+        "explanation": "The excess is suspended.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Deduct $0",
+        "explanation": "It offsets passive income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Deduct $5,000",
+        "explanation": "Losses offset income first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Deduct $15,000",
+        "explanation": "Correct. Passive losses offset passive income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Passive losses are deductible against passive income; the excess is suspended and carried forward.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-15",
+    "pool": "practice",
+    "stem": "For 2025, the excess business loss threshold for a single filer is $313,000. A single filer has a $500,000 business loss and large other income. What happens?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$187,000 becomes an NOL",
+        "explanation": "Correct. The excess loss carries forward."
+      },
+      {
+        "id": "b",
+        "text": "All $500,000 is deductible",
+        "explanation": "The limit applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$187,000 is lost",
+        "explanation": "It carries forward as an NOL.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$313,000 becomes an NOL",
+        "explanation": "That amount is allowed.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§461(l): business losses over the threshold are disallowed and carried forward as an NOL.",
+    "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   }
 ]

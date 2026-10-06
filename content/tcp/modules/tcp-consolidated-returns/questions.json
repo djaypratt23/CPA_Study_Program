@@ -133,7 +133,7 @@
     "answer": "c",
     "explanation": "Includible corporations meeting the 80% vote-and-value test join the group.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-cr-02",
@@ -167,7 +167,7 @@
     "answer": "a",
     "explanation": "Form 851 lists affiliations; Form 1122 is each subsidiary's consent.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-cr-03",
@@ -201,7 +201,7 @@
     "answer": "d",
     "explanation": "Members' separate taxable incomes are combined in full, regardless of minority interests.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -304,7 +304,7 @@
     "answer": "d",
     "explanation": "Reg. §1.1502-76: each member adopts the common parent's tax year.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-cr-07",
@@ -440,7 +440,179 @@
     "answer": "c",
     "explanation": "The 10% limit applies to consolidated taxable income; $50,000 carries forward.",
     "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr-11",
+    "pool": "practice",
+    "stem": "Parent owns 85% of Sub's voting power but only 75% of its value. Can Sub join Parent's consolidated return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, voting power is over 80%",
+        "explanation": "Value must also be 80%.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Yes, with IRS consent",
+        "explanation": "Consent doesn't waive the test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, if Sub agrees",
+        "explanation": "Agreement doesn't waive it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No, value is under 80%",
+        "explanation": "Correct. Both vote and value must be at least 80%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Affiliation requires ownership of at least 80% of both total voting power and total value.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cr-12",
+    "pool": "practice",
+    "stem": "How are dividends paid by a subsidiary to its parent treated in a consolidated return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They are eliminated",
+        "explanation": "Correct. Intercompany dividends are excluded."
+      },
+      {
+        "id": "b",
+        "text": "They get a 65% DRD",
+        "explanation": "They're eliminated entirely.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "They are fully taxed",
+        "explanation": "They're eliminated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "They get a 50% DRD",
+        "explanation": "They're eliminated entirely.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Intercompany distributions within a consolidated group are excluded from income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-13",
+    "pool": "practice",
+    "stem": "In a consolidated group, Sub A has a $50,000 capital gain and Sub B has a $30,000 capital loss. What is reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $50,000 gain; B's loss carried",
+        "explanation": "They net within the group.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $20,000 net capital gain",
+        "explanation": "Correct. Capital items net on a consolidated basis."
+      },
+      {
+        "id": "c",
+        "text": "A $30,000 capital loss",
+        "explanation": "The gain is larger.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "A $80,000 gain",
+        "explanation": "Losses reduce gains.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Consolidated capital gain net income is computed for the group, so one member's capital losses offset another's gains.",
+    "skill": "application",
     "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr-14",
+    "pool": "practice",
+    "stem": "Once a group elects to file consolidated returns, how long must it continue?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "For 5 years, then it lapses",
+        "explanation": "No fixed period applies.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "For 1 year at a time",
+        "explanation": "The election continues.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Until the IRS allows a stop",
+        "explanation": "Correct. Unless the group ceases to exist."
+      },
+      {
+        "id": "d",
+        "text": "It may stop at any time it wants",
+        "explanation": "IRS consent is needed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A consolidated election continues for later years unless the IRS consents to discontinue or the group terminates.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-15",
+    "pool": "practice",
+    "stem": "Parent's basis in Sub's stock is $500,000. Sub has $100,000 of taxable income (ignore taxes) and pays Parent a $30,000 dividend. What is Parent's basis after the year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$600,000",
+        "explanation": "Distributions reduce basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$530,000",
+        "explanation": "Income increases basis too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$500,000",
+        "explanation": "Investment adjustments apply.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$570,000",
+        "explanation": "Correct. +$100,000 income, −$30,000 distribution."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Consolidated investment adjustments increase the parent's basis for Sub's income and decrease it for distributions.",
+    "skill": "analysis",
+    "difficulty": 3,
     "calc": true
   }
 ]

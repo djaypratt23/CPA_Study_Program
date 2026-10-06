@@ -135,7 +135,7 @@
     "answer": "d",
     "explanation": "Income on books not subject to tax is subtracted.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-cc-02",
@@ -170,7 +170,7 @@
     "answer": "d",
     "explanation": "Subtract excess tax depreciation and municipal interest; add back the fine.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -206,7 +206,7 @@
     "answer": "c",
     "explanation": "Schedule M-3 is required when total assets at year-end are $10 million or more.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-cc-04",
@@ -277,7 +277,7 @@
     "answer": "d",
     "explanation": "15th day of the 4th month after year-end.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-cc-06",
@@ -380,7 +380,7 @@
     "answer": "d",
     "explanation": "§535(c)(2): $250,000 minimum credit ($150,000 for personal service corporations).",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-cc-09",
@@ -518,5 +518,280 @@
     "explanation": "C corporation net capital losses: back 3 years, forward 5, as short-term losses, against capital gains only.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-13",
+    "pool": "practice",
+    "stem": "A corporation has $500,000 of accumulated taxable income subject to the accumulated earnings tax. What is the tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$105,000",
+        "explanation": "That uses the 21% regular rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$75,000",
+        "explanation": "The rate is 20%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The tax applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Correct. The AET rate is 20%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The accumulated earnings tax is 20% of accumulated taxable income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-14",
+    "pool": "practice",
+    "stem": "A C corporation operates an accounting practice. What is its minimum accumulated earnings credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "Correct. Personal service corporations get $150,000."
+      },
+      {
+        "id": "b",
+        "text": "$250,000",
+        "explanation": "That applies to other corporations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "The amount is $150,000.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A minimum credit applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The minimum accumulated earnings credit is $250,000, or $150,000 for corporations in health, law, accounting and similar service fields.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-15",
+    "pool": "practice",
+    "stem": "After year-end, a personal holding company wants to reduce undistributed PHC income without paying cash. Which tool can it use?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A stock dividend",
+        "explanation": "It isn't a dividends-paid deduction.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Consent dividends",
+        "explanation": "Correct. Shareholders agree to be taxed as if paid."
+      },
+      {
+        "id": "c",
+        "text": "A capital contribution",
+        "explanation": "It doesn't reduce PHC income.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "An accumulated earnings credit",
+        "explanation": "That applies to the AET.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Consent dividends let shareholders treat an amount as a dividend received and reinvested, giving the corporation a dividends-paid deduction.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cc-16",
+    "pool": "practice",
+    "stem": "May a C corporation carry back an NOL arising in 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, for 2 years",
+        "explanation": "Carrybacks ended for most NOLs.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, for 5 years",
+        "explanation": "That was a temporary rule.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "No, only forward",
+        "explanation": "Correct. Post-2020 NOLs carry forward indefinitely."
+      },
+      {
+        "id": "d",
+        "text": "Yes, for 3 years",
+        "explanation": "That applies to capital losses.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "NOLs arising after 2020 (other than farming and certain insurance losses) carry forward indefinitely and can't be carried back.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-17",
+    "pool": "practice",
+    "stem": "For 2025, a corporation has taxable income of $200,000 before its charitable deduction and makes $30,000 of contributions. What happens to the contributions?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000 deducted",
+        "explanation": "The 10% limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$20,000 deducted; $10,000 lost",
+        "explanation": "The excess carries forward.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000 deducted; $10,000 carried 20 years",
+        "explanation": "The carryforward is 5 years.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$20,000 deducted; $10,000 carried 5 years",
+        "explanation": "Correct. The 10% limit applies."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Corporate charitable deductions are limited to 10% of taxable income (before certain items); excess carries forward 5 years.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-18",
+    "pool": "practice",
+    "stem": "A corporation's 3-year average adjusted financial statement income is $300 million. Does the corporate alternative minimum tax apply?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, AFSI is too low",
+        "explanation": "Correct. CAMT applies to much larger corporations."
+      },
+      {
+        "id": "b",
+        "text": "Yes, at 15% of its AFSI",
+        "explanation": "The threshold isn't met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, at 20% of its AFSI",
+        "explanation": "CAMT uses 15%, and doesn't apply.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Yes, for every C corporation",
+        "explanation": "Most aren't covered.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The 15% CAMT applies to corporations with average annual AFSI over $1 billion.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-19",
+    "pool": "practice",
+    "stem": "A corporation earns most of its income in the fourth quarter. Which method can minimize its early estimated payments?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The prior-year safe harbor for large corporations",
+        "explanation": "Large corporations can't use it after Q1.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The annualized income installment method",
+        "explanation": "Correct. Payments track income as earned."
+      },
+      {
+        "id": "c",
+        "text": "Equal 25% payments of current-year tax",
+        "explanation": "Front-loads payments.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Paying it all with the return",
+        "explanation": "Underpayment penalties apply.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The annualized income installment method bases each payment on income earned to date.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cc-20",
+    "pool": "practice",
+    "stem": "A corporation has a $20,000 operating loss and $100,000 of dividends from a 10%-owned domestic corporation. What is its dividends-received deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "The taxable income limit applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$65,000",
+        "explanation": "The 65% rate needs 20% ownership.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Correct. 50% of taxable income before the DRD."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A limited DRD is allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Taxable income before the DRD is $80,000. The 50% DRD ($50,000) is limited to 50% × $80,000 = $40,000 because the full DRD wouldn't create an NOL.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

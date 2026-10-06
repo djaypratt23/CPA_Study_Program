@@ -307,7 +307,7 @@
     "answer": "b",
     "explanation": "§332 and §334(b): no gain or loss; carryover basis and attributes.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-fl-07",
@@ -375,7 +375,7 @@
     "answer": "b",
     "explanation": "§362(e)(2): net built-in loss property takes an FMV basis unless the shareholder elects to reduce her stock basis instead.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -444,7 +444,7 @@
     "answer": "b",
     "explanation": "30% < 50% and < 36% (80% × 45%) → exchange treatment: capital gain only on the excess over the redeemed shares' basis.",
     "skill": "analysis",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "tcp-fl-11",
@@ -478,7 +478,7 @@
     "answer": "a",
     "explanation": "Liquidating a C corporation taxes the gain twice (§§336 and 331); an S corporation taxes it once.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -513,7 +513,7 @@
     "answer": "b",
     "explanation": "Below-market corporation–shareholder loans produce a deemed dividend to the shareholder and interest income to the corporation.",
     "skill": "analysis",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "tcp-fl-13",
@@ -582,7 +582,41 @@
     "answer": "d",
     "explanation": "S corporation property distributions: the gain passes through and increases basis; the distribution reduces basis by fair value.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-fl-15",
+    "pool": "practice",
+    "stem": "A transfers property for 70% of a new corporation's stock; B receives 30% solely for services. Does A get §351 nonrecognition?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, they hold 100% together",
+        "explanation": "B's stock for services doesn't count.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "No, A alone lacks 80% control",
+        "explanation": "Correct. B isn't a property transferor."
+      },
+      {
+        "id": "c",
+        "text": "Yes, if B pays tax on the stock",
+        "explanation": "Taxation doesn't count it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Yes, under the 50% rule",
+        "explanation": "Control is 80%.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Stock received solely for services isn't counted toward the 80% control test; A alone holds 70%.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

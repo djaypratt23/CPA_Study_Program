@@ -133,7 +133,7 @@
     "answer": "c",
     "explanation": "15th day of the 5th month after year-end.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-eo-02",
@@ -167,7 +167,7 @@
     "answer": "d",
     "explanation": "§6033(j): automatic revocation after 3 consecutive years of not filing.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-eo-03",
@@ -236,7 +236,7 @@
     "answer": "c",
     "explanation": "§4940: 1.39% of net investment income for private foundations.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-eo-05",
@@ -374,7 +374,7 @@
     "answer": "c",
     "explanation": "Filed within 27 months (15 months + automatic 12-month extension), exemption is retroactive to formation.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-eo-09",
@@ -443,6 +443,177 @@
     "answer": "b",
     "explanation": "§501(c)(3) organizations are absolutely prohibited from political campaign activity.",
     "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-eo-11",
+    "pool": "practice",
+    "stem": "A §501(c)(3) runs a thrift shop staffed entirely by volunteers. Is its income UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, volunteers run it",
+        "explanation": "Correct. Volunteer-run businesses are excluded."
+      },
+      {
+        "id": "b",
+        "text": "Yes, it's a regular business",
+        "explanation": "The volunteer exception applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only its profits above $1,000",
+        "explanation": "No such threshold exists.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Yes, but only 50% of it",
+        "explanation": "No partial rule applies.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A trade or business in which substantially all the work is done by unpaid volunteers isn't an unrelated trade or business.",
+    "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-12",
+    "pool": "practice",
+    "stem": "Which income of an exempt organization is generally excluded from UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Income from a public restaurant it runs",
+        "explanation": "An unrelated business is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Dividends from stock it owns",
+        "explanation": "Correct. Passive investment income is excluded."
+      },
+      {
+        "id": "c",
+        "text": "Rent from debt-financed property",
+        "explanation": "Debt-financed income is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Advertising income in its magazine",
+        "explanation": "Advertising is UBTI.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Dividends, interest, royalties and most real-property rents are excluded, unless debt-financed.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-13",
+    "pool": "practice",
+    "stem": "An exempt organization has $1,200 of gross unrelated business income. Must it file Form 990-T?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, after the $1,000 deduction",
+        "explanation": "Filing uses gross UBI.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No, only if UBTI exceeds $5,000",
+        "explanation": "The threshold is $1,000 gross.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "Yes, because of gross UBI",
+        "explanation": "Correct. Filing depends on gross UBI."
+      },
+      {
+        "id": "d",
+        "text": "Only if it owes tax on the UBTI",
+        "explanation": "Filing is still required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Form 990-T is required when gross unrelated business income is $1,000 or more.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-eo-14",
+    "pool": "practice",
+    "stem": "A private foundation's minimum distribution amount is $500,000, but it distributes only $300,000 by the deadline. What is the initial excise tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "The rate is 30%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$90,000",
+        "explanation": "Tax applies to the shortfall.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The excise tax applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "Correct. 30% × $200,000 undistributed."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§4942 imposes an initial 30% tax on a private foundation's undistributed income.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-eo-15",
+    "pool": "practice",
+    "stem": "A private foundation leases office space from its founder at fair rent. How is the lease treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As self-dealing, even at fair rent",
+        "explanation": "Correct. Leasing with a disqualified person is self-dealing."
+      },
+      {
+        "id": "b",
+        "text": "As allowed because the rent is fair",
+        "explanation": "Fairness isn't a defense.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As UBTI",
+        "explanation": "It's a self-dealing issue.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As an excess benefit only",
+        "explanation": "That applies to public charities.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§4941: leasing property between a private foundation and a disqualified person is self-dealing regardless of fairness (with narrow exceptions).",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

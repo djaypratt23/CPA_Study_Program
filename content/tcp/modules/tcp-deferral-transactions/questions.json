@@ -204,7 +204,7 @@
     "answer": "c",
     "explanation": "Casual sales of non-inventory property qualify.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-dt-04",
@@ -273,7 +273,7 @@
     "answer": "d",
     "explanation": "Net liability relief (100,000 − 70,000) is boot received.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -308,7 +308,7 @@
     "answer": "a",
     "explanation": "§1031(a)(3): 45-day identification and 180-day exchange periods.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-dt-07",
@@ -445,7 +445,7 @@
     "answer": "d",
     "explanation": "§453A imposes interest on the deferred tax when installment obligations exceed $5 million at year-end.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-dt-11",
@@ -479,7 +479,7 @@
     "answer": "d",
     "explanation": "§1033: recognize the lesser of realized gain or unreinvested proceeds; replacement basis = cost − deferred gain.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -514,7 +514,109 @@
     "answer": "a",
     "explanation": "§267(c): family (spouse, ancestors, lineal descendants, siblings) and proportionate entity attribution.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-dt-13",
+    "pool": "practice",
+    "stem": "A company's business real property is condemned. How long does it have to buy replacement property to defer gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "3 years after year-end",
+        "explanation": "Correct. Condemned business real property gets 3 years."
+      },
+      {
+        "id": "b",
+        "text": "2 years after year-end",
+        "explanation": "That is the general rule.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "180 days",
+        "explanation": "That is the §1031 limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "1 year after year-end",
+        "explanation": "The period is longer.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§1033(g)(4): the replacement period is 3 years for condemned business or investment real property (2 years otherwise).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-dt-14",
+    "pool": "practice",
+    "stem": "A business trades old equipment for new equipment of the same type. Can it defer the gain under §1031?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, the assets are like-kind",
+        "explanation": "Personal property no longer qualifies.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "No, it isn't real property",
+        "explanation": "Correct. Since 2018 personal property is excluded."
+      },
+      {
+        "id": "c",
+        "text": "Yes, if held for over a year",
+        "explanation": "Holding period doesn't save it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only for trucks and other vehicles",
+        "explanation": "No personal property qualifies.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Since 2018, §1031 applies only to exchanges of real property held for business or investment.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-dt-15",
+    "pool": "practice",
+    "stem": "A father sells land to his son on the installment method. Eight months later, the son resells it for cash. What is the effect on the father?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect on the father's sale",
+        "explanation": "The related-party rule applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only the son recognizes any gain",
+        "explanation": "Both may recognize gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "His deferred gain is triggered",
+        "explanation": "Correct. The resale within 2 years triggers recognition."
+      },
+      {
+        "id": "d",
+        "text": "The father's sale is voided",
+        "explanation": "It isn't voided.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§453(e): if a related buyer resells within 2 years, the original seller treats the resale proceeds as received.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

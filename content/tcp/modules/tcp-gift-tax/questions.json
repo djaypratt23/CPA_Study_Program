@@ -239,7 +239,7 @@
     "answer": "a",
     "explanation": "Lifetime taxable gifts reduce the basic exclusion available for later gifts and the estate. The amount is given on the exam.",
     "skill": "remembering",
-    "difficulty": 2,
+    "difficulty": 1,
     "needsReview": true,
     "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials."
   },
@@ -275,7 +275,7 @@
     "answer": "c",
     "explanation": "Form 709 is due April 15 of the following year; an income tax extension also extends it.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-gt-06",
@@ -412,7 +412,7 @@
     "answer": "b",
     "explanation": "Remainder interests begin in the future, so no annual exclusion.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "tcp-gt-10",
@@ -446,7 +446,7 @@
     "answer": "b",
     "explanation": "§529(c)(2)(B): a contribution up to 5 × the annual exclusion can be treated as made ratably over 5 years.",
     "skill": "application",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -480,6 +480,144 @@
     ],
     "answer": "b",
     "explanation": "§2523: unlimited marital deduction for gifts to a U.S.-citizen spouse.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-gt-12",
+    "pool": "practice",
+    "stem": "A donor pays a friend's $60,000 hospital bill directly to the hospital. What is the gift tax result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $41,000 taxable gift",
+        "explanation": "The medical exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $60,000 taxable gift",
+        "explanation": "The medical exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No gift; no Form 709",
+        "explanation": "Correct. Direct medical payments are excluded."
+      },
+      {
+        "id": "d",
+        "text": "No gift, but file Form 709",
+        "explanation": "No filing is needed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§2503(e) excludes unlimited direct payments of medical expenses and tuition.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-gt-13",
+    "pool": "practice",
+    "stem": "In 2025, the annual exclusion for gifts to a non-citizen spouse is $190,000. A donor gives $250,000 to her non-citizen husband. What is the taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "No marital deduction for a non-citizen.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$231,000",
+        "explanation": "The special exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$250,000",
+        "explanation": "An exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "Correct. The marital deduction isn't available."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Gifts to a non-citizen spouse don't qualify for the marital deduction but get a higher annual exclusion ($190,000 in 2025).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-14",
+    "pool": "practice",
+    "stem": "A mother buys a $400,000 house as joint tenants with right of survivorship with her adult son, paying the full price. With a $19,000 annual exclusion, what is the taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$181,000",
+        "explanation": "Correct. A gift of half, less the exclusion."
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "Subtract the annual exclusion.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$381,000",
+        "explanation": "Only half is given.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A completed gift occurs.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Creating a joint tenancy with a non-spouse gives a gift of the other tenant's share: $200,000 − $19,000.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-gt-15",
+    "pool": "practice",
+    "stem": "A donor transfers $500,000 to a revocable trust for her children. What is the gift tax result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $500,000 gift",
+        "explanation": "The gift isn't complete.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No completed gift",
+        "explanation": "Correct. She can revoke it."
+      },
+      {
+        "id": "c",
+        "text": "A gift less annual exclusions",
+        "explanation": "No gift has occurred.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A future-interest gift",
+        "explanation": "No gift has occurred.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A transfer to a revocable trust isn't a completed gift because the grantor keeps the power to revoke.",
     "skill": "application",
     "difficulty": 2
   }
