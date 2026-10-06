@@ -167,7 +167,7 @@
     "answer": "d",
     "explanation": "The schedule compares book and bank dates for both sides of each transfer.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-cash-03",
@@ -201,7 +201,7 @@
     "answer": "c",
     "explanation": "Simultaneous (or controlled) counts prevent the same assets from being counted twice.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-cash-04",
@@ -269,7 +269,7 @@
     "answer": "d",
     "explanation": "The confirmation asks the bank to confirm balances and direct liabilities (loans). Other arrangements (lines of credit, compensating balances) need separate confirmation.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-cash-06",
@@ -337,7 +337,7 @@
     "answer": "d",
     "explanation": "Outstanding checks that don't clear may be fictitious or may indicate other problems; investigate the payee and support.",
     "skill": "analysis",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "aud-cash-08",
@@ -371,7 +371,7 @@
     "answer": "c",
     "explanation": "AU-C 501: audited investee statements generally provide sufficient evidence of the investee's results.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-cash-09",
@@ -439,6 +439,176 @@
     "answer": "a",
     "explanation": "Securities held by third parties are confirmed with the custodian.",
     "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-cash-11",
+    "pool": "practice",
+    "stem": "Which procedure is designed to detect unrecorded cash receipts and disbursements?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A bank confirmation",
+        "explanation": "A confirmation verifies the balance only.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "A proof of cash",
+        "explanation": "Correct. It reconciles receipts, disbursements and balances for the period."
+      },
+      {
+        "id": "c",
+        "text": "A count of petty cash",
+        "explanation": "Petty cash is a small fund.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A review of the cash budget",
+        "explanation": "Budgets don't detect unrecorded items.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A proof of cash reconciles bank and book receipts and disbursements, revealing unrecorded transactions.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-cash-12",
+    "pool": "practice",
+    "stem": "How does the auditor best verify the existence of securities held by a broker?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Inspect the purchase invoice",
+        "explanation": "Purchase records don't show current holdings.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "Recompute investment income",
+        "explanation": "That tests income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Confirm with the custodian",
+        "explanation": "Correct. A third-party confirmation provides reliable evidence."
+      },
+      {
+        "id": "d",
+        "text": "Ask the treasurer",
+        "explanation": "Inquiry alone is insufficient.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Existence of securities held by others is verified by confirmation with the custodian.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-cash-13",
+    "pool": "practice",
+    "stem": "How does the auditor test the valuation of exchange-traded trading securities at year-end?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Recalculate cost-based amortization",
+        "explanation": "Trading securities are at fair value.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Confirm the shares with the issuer",
+        "explanation": "Confirmation addresses existence.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Rely on management's estimate",
+        "explanation": "Quoted prices are available.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Compare with quoted market prices",
+        "explanation": "Correct. Level 1 values are verified against quoted prices."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Fair value of Level 1 securities is tested by reference to quoted prices.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-cash-14",
+    "pool": "practice",
+    "stem": "Several large deposits were recorded on December 31 but didn't appear on the bank statement until January 5. What should the auditor investigate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Possible window dressing or kiting",
+        "explanation": "Correct. Long delays in deposits in transit are a red flag."
+      },
+      {
+        "id": "b",
+        "text": "Nothing; deposits in transit are normal",
+        "explanation": "Five-day delays are unusual.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only the bank's processing errors",
+        "explanation": "The client's recording is in question.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The petty cash fund",
+        "explanation": "Not related to this risk.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Delayed deposits in transit may indicate inflated year-end cash through kiting or improper cutoff.",
+    "skill": "evaluation",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-cash-15",
+    "pool": "practice",
+    "stem": "The auditor recomputes interest income from the investment portfolio and compares it with recorded income. This mainly tests:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Existence of the bank accounts",
+        "explanation": "Not related to this test.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "b",
+        "text": "Completeness of income",
+        "explanation": "Correct. Recomputation tests whether income is fully and correctly recorded."
+      },
+      {
+        "id": "c",
+        "text": "Classification of cash",
+        "explanation": "Not related to this test.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Rights to the securities",
+        "explanation": "Rights are tested by other procedures.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Analytical recomputation of investment income tests completeness and accuracy of income.",
+    "skill": "application",
     "difficulty": 2
   }
 ]

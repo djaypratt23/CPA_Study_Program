@@ -202,7 +202,7 @@
     "answer": "c",
     "explanation": "Nonsampling risk includes inappropriate procedures, misinterpreted evidence, and failure to recognize misstatements or deviations.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-sa-04",
@@ -340,7 +340,7 @@
     "answer": "a",
     "explanation": "Incorrect rejection leads to additional procedures that eventually show the balance is fairly stated — an efficiency cost.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-sa-08",
@@ -374,7 +374,7 @@
     "answer": "b",
     "explanation": "AU-C 530: investigate the nature and cause of deviations. Intentional deviations may indicate fraud and affect other areas of the audit.",
     "skill": "evaluation",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "aud-sa-09",
@@ -408,7 +408,7 @@
     "answer": "b",
     "explanation": "Ratio estimation fits misstatements proportional to book value; difference estimation fits a roughly constant difference; mean-per-unit ignores book values.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-sa-10",
@@ -444,5 +444,177 @@
     "skill": "application",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "aud-sa-11",
+    "pool": "practice",
+    "stem": "What is an advantage of statistical over nonstatistical sampling?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It eliminates nonsampling risk",
+        "explanation": "Nonsampling risk remains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It always needs smaller samples",
+        "explanation": "Sample sizes aren't always smaller.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "It removes the need for judgment",
+        "explanation": "Judgment is still required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It measures sampling risk",
+        "explanation": "Correct. Statistical sampling quantifies sampling risk."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Statistical sampling allows the auditor to measure and control sampling risk.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-sa-12",
+    "pool": "practice",
+    "stem": "The risk of incorrect acceptance in a substantive test primarily affects:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Audit effectiveness",
+        "explanation": "Correct. Wrongly accepting a misstated balance makes the audit ineffective."
+      },
+      {
+        "id": "b",
+        "text": "Audit efficiency",
+        "explanation": "The risk of incorrect rejection affects efficiency.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Only the sample size for controls",
+        "explanation": "It concerns substantive tests.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Nonsampling risk",
+        "explanation": "It is a sampling risk.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Incorrect acceptance threatens effectiveness; incorrect rejection threatens efficiency.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-sa-13",
+    "pool": "practice",
+    "stem": "Using monetary unit sampling with no expected misstatement, the book value is $1,000,000, tolerable misstatement $50,000 and the confidence factor 3.0. What is the sample size?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "20",
+        "explanation": "That divides book value by tolerable misstatement.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "60",
+        "explanation": "Correct. Interval = 50,000 ÷ 3.0 = 16,667; 1,000,000 ÷ 16,667 = 60."
+      },
+      {
+        "id": "c",
+        "text": "150",
+        "explanation": "That multiplies instead of dividing.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "17",
+        "explanation": "That confuses the interval with the size.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "MUS: sampling interval = tolerable misstatement ÷ confidence factor; sample size = book value ÷ interval.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "aud-sa-14",
+    "pool": "practice",
+    "stem": "In monetary unit sampling with a $20,000 interval, an item recorded at $25,000 is audited at $22,000. What misstatement is included for this item?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,400, using the tainting",
+        "explanation": "Tainting applies to items smaller than the interval.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "The full interval isn't used.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$3,000, without projection",
+        "explanation": "Correct. Items larger than the interval are evaluated at their actual misstatement."
+      },
+      {
+        "id": "d",
+        "text": "$0, because it exceeds the interval",
+        "explanation": "Actual misstatement is still counted.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "In MUS, misstatements in items at or above the sampling interval are added at their actual amount.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "aud-sa-15",
+    "pool": "practice",
+    "stem": "The auditor selects items without a structured technique, trying to avoid bias. This selection method is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Random, a statistical method",
+        "explanation": "Random selection uses a structured technique.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Systematic with a random start",
+        "explanation": "That uses a fixed interval.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Block selection of a single month",
+        "explanation": "Block selection chooses contiguous items.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Haphazard, a nonstatistical method",
+        "explanation": "Correct. Haphazard selection isn't statistical."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Haphazard selection is acceptable for nonstatistical sampling but not for statistical sampling.",
+    "skill": "application",
+    "difficulty": 1
   }
 ]

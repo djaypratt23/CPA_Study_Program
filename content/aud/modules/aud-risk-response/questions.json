@@ -133,7 +133,7 @@
     "answer": "a",
     "explanation": "Evidence obtained directly by the auditor from independent external sources is the most reliable.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-rr-02",
@@ -201,7 +201,7 @@
     "answer": "d",
     "explanation": "Because risk assessment is judgmental and controls have inherent limitations, substantive procedures are always required for material items.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-rr-04",
@@ -269,7 +269,7 @@
     "answer": "b",
     "explanation": "Differences above the threshold are investigated; management's explanations must be corroborated.",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -304,7 +304,7 @@
     "answer": "c",
     "explanation": "Reliability ranking: auditor-generated and external > internal (effective controls) > internal (weak controls) and oral.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-rr-07",
@@ -338,7 +338,7 @@
     "answer": "a",
     "explanation": "Reperformance independently executes procedures or controls originally performed by the entity; recalculation checks mathematical accuracy.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-rr-08",
@@ -439,6 +439,176 @@
     ],
     "answer": "c",
     "explanation": "For significant risks, relying only on substantive analytics is insufficient; tests of details are required.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-11",
+    "pool": "practice",
+    "stem": "The risk of material misstatement for receivables is high. When is confirmation most effective?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At or near year-end",
+        "explanation": "Correct. Higher risk favors procedures closer to the balance sheet date."
+      },
+      {
+        "id": "b",
+        "text": "At an early interim date",
+        "explanation": "Interim testing increases risk.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "After the report is released",
+        "explanation": "Procedures precede the report.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Any time, without rollforward",
+        "explanation": "Interim work needs rollforward.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AU-C 330: the higher the risk, the more likely procedures are performed nearer to or at the period end.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-12",
+    "pool": "practice",
+    "stem": "The auditor lowers the acceptable level of detection risk for an account. Which change is most likely?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fewer substantive procedures",
+        "explanation": "Lower detection risk needs more.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "A larger sample size",
+        "explanation": "Correct. Lower detection risk requires more extensive procedures."
+      },
+      {
+        "id": "c",
+        "text": "Testing at an earlier date",
+        "explanation": "Testing moves closer to year-end.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Reliance on inquiry alone",
+        "explanation": "Inquiry isn't persuasive enough.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Lower acceptable detection risk requires more effective substantive procedures (nature, timing, extent).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-rr-13",
+    "pool": "practice",
+    "stem": "Which data makes a substantive analytical procedure for revenue most precise?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Annual total revenue compared with last year",
+        "explanation": "Aggregated data is less precise.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Industry average revenue growth",
+        "explanation": "Industry data is less specific.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Revenue disaggregated by month and location",
+        "explanation": "Correct. Disaggregated data improves precision."
+      },
+      {
+        "id": "d",
+        "text": "Management's budget only",
+        "explanation": "Budgets are less reliable as expectations.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "AU-C 520: precision improves with disaggregated data and reliable, independent inputs.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-rr-14",
+    "pool": "practice",
+    "stem": "Which is a dual-purpose test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Confirming a balance twice",
+        "explanation": "Repeating a test isn't dual-purpose.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A walkthrough of a process",
+        "explanation": "Walkthroughs address design and implementation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "An analytical procedure on two accounts",
+        "explanation": "Covering two accounts isn't dual-purpose.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "One test of control and amount",
+        "explanation": "Correct. One procedure provides evidence about both."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A dual-purpose test simultaneously tests a control and the related amount, such as verifying approval and amount on an invoice.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-rr-15",
+    "pool": "practice",
+    "stem": "The auditor confirms receivables at October 31 for a December 31 year-end. What else is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Procedures covering November and December",
+        "explanation": "Correct. The auditor rolls forward to year-end."
+      },
+      {
+        "id": "b",
+        "text": "Nothing; interim confirmation suffices",
+        "explanation": "The remaining period must be covered.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Reconfirming every balance at year-end",
+        "explanation": "Rollforward procedures can suffice.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "A disclaimer of opinion",
+        "explanation": "Rollforward procedures address the gap.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AU-C 330.22: when substantive procedures are performed at an interim date, the auditor covers the remaining period.",
     "skill": "application",
     "difficulty": 2
   }

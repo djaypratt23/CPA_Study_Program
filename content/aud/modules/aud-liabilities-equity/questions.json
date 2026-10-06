@@ -167,7 +167,7 @@
     "answer": "c",
     "explanation": "The client (management) requests its lawyer to communicate directly with the auditor.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-le-03",
@@ -201,7 +201,7 @@
     "answer": "d",
     "explanation": "Without a waiver, a covenant violation that makes debt callable generally requires current classification, and may raise going concern questions.",
     "skill": "analysis",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "aud-le-04",
@@ -269,7 +269,7 @@
     "answer": "a",
     "explanation": "Independent transfer agents and registrars maintain shareholder records and confirm shares issued and outstanding.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-le-06",
@@ -303,7 +303,7 @@
     "answer": "b",
     "explanation": "Limitations for materiality, agreed between the lawyer and auditor, are not scope limitations.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-le-07",
@@ -405,7 +405,7 @@
     "answer": "a",
     "explanation": "Dividends are declared by the board; the minutes provide evidence of authorization and amounts.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-le-10",
@@ -440,5 +440,175 @@
     "explanation": "Purchases cut-off: goods received before year-end create a year-end liability.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "aud-le-11",
+    "pool": "practice",
+    "stem": "At year-end, a client violated a covenant, making long-term debt callable, and has no waiver. How does this affect the audit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect if payments are current",
+        "explanation": "The covenant violation matters.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Reduce the debt balance",
+        "explanation": "The balance isn't reduced.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Assess current classification",
+        "explanation": "Correct. Callable debt without a waiver is current."
+      },
+      {
+        "id": "d",
+        "text": "Ignore it until next year",
+        "explanation": "It affects this year's classification.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Debt callable due to a covenant violation is classified as current unless waived for more than a year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-le-12",
+    "pool": "practice",
+    "stem": "How does the auditor test accrued payroll at year-end?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Confirm it with employees",
+        "explanation": "Confirmations aren't used for payroll accruals.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Vouch it to the general ledger",
+        "explanation": "The ledger is the item being tested.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Inspect employee files only",
+        "explanation": "Files don't show the accrual.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Recompute it from days unpaid",
+        "explanation": "Correct. Recalculation tests the accrual."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Accrued payroll is tested by recalculating the unpaid days at current pay rates and comparing with subsequent payments.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-le-13",
+    "pool": "practice",
+    "stem": "The client's lawyer refuses to respond to the auditor's inquiry about a significant lawsuit. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A scope limitation",
+        "explanation": "Correct. Refusal to respond limits the evidence available."
+      },
+      {
+        "id": "b",
+        "text": "An adverse opinion",
+        "explanation": "An adverse opinion is for misstatements.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "No effect if management explains it",
+        "explanation": "Management's explanation doesn't substitute.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "An emphasis-of-matter paragraph only",
+        "explanation": "Emphasis paragraphs don't cure scope limitations.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AU-C 501: a lawyer's refusal to respond is a limitation on scope that may lead to a qualified opinion or a disclaimer.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-le-14",
+    "pool": "practice",
+    "stem": "How does the auditor verify that treasury stock purchases were authorized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Confirm with the stock exchange",
+        "explanation": "The exchange doesn't authorize repurchases.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Read the board minutes",
+        "explanation": "Correct. Board authorization is documented in the minutes."
+      },
+      {
+        "id": "c",
+        "text": "Recompute dividends paid",
+        "explanation": "Dividends aren't the issue.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Ask the transfer agent",
+        "explanation": "The agent records shares but doesn't authorize.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Equity transactions are authorized by the board and verified by reading the minutes.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-le-15",
+    "pool": "practice",
+    "stem": "Legal counsel says an unfavorable outcome in a lawsuit is reasonably possible. Management hasn't disclosed it. What should the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Require an accrual",
+        "explanation": "Accrual requires a probable loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Do nothing; only probable losses matter",
+        "explanation": "Reasonably possible losses are disclosed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Treat it as a misstatement",
+        "explanation": "Correct. Reasonably possible losses require disclosure."
+      },
+      {
+        "id": "d",
+        "text": "Disclaim an opinion",
+        "explanation": "A disclaimer isn't the response to a missing disclosure.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 450: reasonably possible loss contingencies require disclosure; an omission is a misstatement the auditor evaluates.",
+    "skill": "evaluation",
+    "difficulty": 3
   }
 ]
