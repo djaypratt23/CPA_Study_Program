@@ -615,5 +615,176 @@
     "explanation": "The employer deducts the amount the employee includes in income, in the same year.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-16",
+    "pool": "practice",
+    "stem": "An employee's ISOs first exercisable this year have a grant-date value of $150,000. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All of them remain ISOs",
+        "explanation": "A $100,000 limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "All of them become NQSOs",
+        "explanation": "Only the excess.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "The whole grant is void",
+        "explanation": "Not the effect.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$50,000 is NQSOs",
+        "explanation": "Correct. The ISO limit is $100,000 a year."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ISOs first exercisable in a year are limited to $100,000 of grant-date value; the excess is treated as NQSOs.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-sc-17",
+    "pool": "practice",
+    "stem": "Under a §423 ESPP, an employee buys at 85% of the $20 offering-date price ($17). After meeting the holding periods, she sells at $30. How much per share is ordinary income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3",
+        "explanation": "Correct. The lesser of the 15% discount or the actual gain."
+      },
+      {
+        "id": "b",
+        "text": "$13",
+        "explanation": "Only part is ordinary.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "A qualifying disposition still has ordinary income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$10",
+        "explanation": "That's the capital gain.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "On a qualifying disposition, ordinary income is the lesser of the offering-date discount ($3) or the actual gain ($13); the rest is LTCG.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc-18",
+    "pool": "practice",
+    "stem": "An employee exercises stock appreciation rights settled in cash. How are the proceeds taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As capital gain at exercise",
+        "explanation": "They're compensation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As ordinary income at exercise",
+        "explanation": "Correct. Like wages."
+      },
+      {
+        "id": "c",
+        "text": "Not taxed until retirement",
+        "explanation": "Taxed at exercise.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "As tax-free",
+        "explanation": "They're taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Cash-settled SARs are taxed as ordinary compensation income when exercised.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-19",
+    "pool": "practice",
+    "stem": "When does an employer deduct the value of RSUs?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At the grant date",
+        "explanation": "No income at grant.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "When the employee sells",
+        "explanation": "Deduction matches inclusion.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "When the employee has income",
+        "explanation": "Correct. Usually at settlement."
+      },
+      {
+        "id": "d",
+        "text": "Never; RSUs aren't deductible",
+        "explanation": "They're deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The employer's deduction matches the employee's income inclusion, generally at vesting or settlement.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc-20",
+    "pool": "practice",
+    "stem": "An employee holds unvested restricted stock with no §83(b) election and receives dividends. How are the dividends taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As qualified dividends",
+        "explanation": "Not before vesting without §83(b).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As tax-free",
+        "explanation": "They're taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As capital gain",
+        "explanation": "They're compensation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As compensation income",
+        "explanation": "Correct. She isn't the tax owner yet."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Without an §83(b) election, dividends on unvested restricted stock are treated as compensation.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

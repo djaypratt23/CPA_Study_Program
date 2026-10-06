@@ -614,5 +614,176 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-cr-16",
+    "pool": "practice",
+    "stem": "Parent sells land to Sub at a $100,000 gain. Two years later Sub sells it to an outsider for $30,000 more than it paid. What does the group recognize then?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "The deferred gain is also recognized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Sub's gain counts too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$130,000",
+        "explanation": "Correct. The deferred gain and Sub's gain."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The land left the group.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Intercompany gain is deferred until the property leaves the group; then both the deferred and new gain are recognized.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr-17",
+    "pool": "practice",
+    "stem": "Who acts as agent for a consolidated group in dealing with the IRS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Each subsidiary separately",
+        "explanation": "The parent acts for all.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The largest subsidiary",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A court-appointed trustee",
+        "explanation": "That isn't what the rule says.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "The common parent",
+        "explanation": "Correct. It files and communicates for the group."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The common parent is the agent for all group members on tax matters.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-18",
+    "pool": "practice",
+    "stem": "A consolidated group can't pay its tax. Who is liable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Every member, severally",
+        "explanation": "Correct. Each member is liable for the full tax."
+      },
+      {
+        "id": "b",
+        "text": "Only the common parent",
+        "explanation": "All members are liable.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Each member for its share",
+        "explanation": "Liability is joint and several.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "No one, until a court rules",
+        "explanation": "Liability exists.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Each member of a consolidated group is severally liable for the group's consolidated tax.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr-19",
+    "pool": "practice",
+    "stem": "A subsidiary with a deferred intercompany gain on assets bought from Parent leaves the consolidated group. What happens to the deferred gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It stays deferred indefinitely",
+        "explanation": "Leaving ends the deferral.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It's triggered when the sub leaves",
+        "explanation": "Correct. The deferral ends."
+      },
+      {
+        "id": "c",
+        "text": "It's eliminated permanently",
+        "explanation": "It's recognized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It shifts to the buyer",
+        "explanation": "It's the group's gain.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Deferred intercompany items are taken into account when a member leaves the group.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cr-20",
+    "pool": "practice",
+    "stem": "A parent owns 85% of a subsidiary, and they file separate returns. What DRD applies to dividends the sub pays the parent?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "65%",
+        "explanation": "That's for 20–79% ownership.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "50%",
+        "explanation": "That's for under 20%.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "100%",
+        "explanation": "Correct. Members of an affiliated group qualify."
+      },
+      {
+        "id": "d",
+        "text": "0%",
+        "explanation": "A DRD is allowed here.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Dividends between members of an affiliated group (80%+ ownership) qualify for a 100% DRD even on separate returns.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

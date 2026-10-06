@@ -793,5 +793,176 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-cc-21",
+    "pool": "practice",
+    "stem": "One test for personal holding company status looks at income. What is it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "50% of gross receipts are dividends",
+        "explanation": "That isn't the test.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "60% of AOGI is PHC income",
+        "explanation": "Correct. Adjusted ordinary gross income test."
+      },
+      {
+        "id": "c",
+        "text": "80% of income is passive",
+        "explanation": "Not the threshold.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Any interest income at all",
+        "explanation": "That isn't the test.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A PHC has at least 60% of adjusted ordinary gross income from PHC income (and meets the ownership test).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-22",
+    "pool": "practice",
+    "stem": "Which ownership condition is part of the PHC test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Over 80% owned by one corporation",
+        "explanation": "That isn't the test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Any closely held S corporation",
+        "explanation": "S corporations are excluded.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Over 50% owned by 5 or fewer individuals",
+        "explanation": "Correct. At any time in the last half of the year."
+      },
+      {
+        "id": "d",
+        "text": "Over 25% owned by foreign persons",
+        "explanation": "That isn't the test.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The PHC ownership test is met if 5 or fewer individuals own more than 50% of the stock during the last half of the year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-23",
+    "pool": "practice",
+    "stem": "A corporation has a $40,000 operating loss and $100,000 of dividends from a 20%-owned domestic corporation. What is its DRD?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$39,000",
+        "explanation": "The limit doesn't apply when an NOL results.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "The 65% rate applies.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "A DRD is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$65,000",
+        "explanation": "Correct. The full DRD creates an NOL, so no limit applies."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Taxable income before the DRD is $60,000; a $65,000 DRD creates an NOL, so the 65%-of-taxable-income limit doesn't apply.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-24",
+    "pool": "practice",
+    "stem": "A small corporation (never large) had a full 12-month prior year with positive tax. What is its required annual estimated payment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Lesser of current or prior tax",
+        "explanation": "Correct. The prior-year safe harbor is available."
+      },
+      {
+        "id": "b",
+        "text": "90% of current-year tax",
+        "explanation": "Corporations use 100%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "110% of prior-year tax",
+        "explanation": "That's for high-income individuals.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "100% of current-year tax only",
+        "explanation": "The prior-year option applies.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A corporation that isn't large may pay the lesser of 100% of current-year tax or 100% of prior-year tax.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cc-25",
+    "pool": "practice",
+    "stem": "A corporation has a charitable contribution carryforward and makes new contributions this year. Which are deducted first?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The carryforward, oldest first",
+        "explanation": "Current gifts go first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Current-year contributions",
+        "explanation": "Correct. Carryforwards use any remaining limit."
+      },
+      {
+        "id": "c",
+        "text": "Pro rata between them",
+        "explanation": "That isn't the ordering rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Whichever is larger",
+        "explanation": "That isn't the ordering rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Current-year contributions are deducted first, then carryforwards (oldest first) up to the 10% limit.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

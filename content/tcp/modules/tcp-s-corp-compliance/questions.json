@@ -618,5 +618,175 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-sc2-16",
+    "pool": "practice",
+    "stem": "An S corporation has accumulated E&P from C years, and passive investment income is 40% of gross receipts. What applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The built-in gains tax",
+        "explanation": "Not triggered by passive income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Immediate termination of S status",
+        "explanation": "Termination needs 3 consecutive years.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "The excess passive income tax",
+        "explanation": "Correct. Passive income exceeds 25%."
+      },
+      {
+        "id": "d",
+        "text": "No tax at the entity level",
+        "explanation": "The ENPI tax applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "An S corporation with C-corporation E&P and passive investment income over 25% of gross receipts pays tax on excess net passive income.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-sc2-17",
+    "pool": "practice",
+    "stem": "A calendar-year S corporation's election terminates on June 1 when a partnership buys shares. How is the year treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All S for the year",
+        "explanation": "The election terminated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "All C for the year",
+        "explanation": "The S year runs to May 31.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Retroactively C from January 1",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Split into S and C short years",
+        "explanation": "Correct. The C year starts June 1."
+      }
+    ],
+    "answer": "d",
+    "explanation": "On termination, the year splits into an S short year ending the day before and a C short year beginning on the termination date.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-sc2-18",
+    "pool": "practice",
+    "stem": "A C corporation using LIFO elects S status. What happens to its LIFO reserve?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's taxed in the final C year",
+        "explanation": "Correct. The tax is payable over 4 years."
+      },
+      {
+        "id": "b",
+        "text": "It's ignored for tax purposes",
+        "explanation": "LIFO recapture applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It's taxed under built-in gains",
+        "explanation": "LIFO recapture applies separately.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "It's deducted in the first S year",
+        "explanation": "It's income, not a deduction.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§1363(d): the LIFO reserve is included in the C corporation's final-year income, with the tax payable in 4 installments.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-sc2-19",
+    "pool": "practice",
+    "stem": "After an S election terminates, the corporation distributes cash during the post-termination transition period. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Always a taxable dividend",
+        "explanation": "AAA distributions get relief.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Tax-free, up to AAA and basis",
+        "explanation": "Correct. A special transition rule."
+      },
+      {
+        "id": "c",
+        "text": "Always a capital gain",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Ignored for tax purposes",
+        "explanation": "It's a distribution.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Cash distributions during the post-termination transition period are applied against AAA and treated as tax-free to the extent of basis.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-sc2-20",
+    "pool": "practice",
+    "stem": "Who must consent to an S election on Form 2553?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A majority of shareholders",
+        "explanation": "All must consent.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Only the board",
+        "explanation": "Shareholders consent.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "All shareholders",
+        "explanation": "Correct. On the election date."
+      },
+      {
+        "id": "d",
+        "text": "Only officers",
+        "explanation": "Shareholders consent.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "All shareholders at the time of the election must consent.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

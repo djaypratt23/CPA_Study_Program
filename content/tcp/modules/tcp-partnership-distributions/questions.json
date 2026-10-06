@@ -622,5 +622,177 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-pd-16",
+    "pool": "practice",
+    "stem": "In complete liquidation, a partner with an outside basis of $40,000 receives only land with a partnership basis of $25,000. What is her basis in the land?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Liquidations use the outside basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Correct. A substituted basis in liquidation."
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$65,000",
+        "explanation": "Basis isn't added.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "In a liquidating distribution of property other than cash, receivables or inventory, the partner's remaining basis is assigned to the property.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-17",
+    "pool": "practice",
+    "stem": "A partner contributed appreciated land 3 years ago. The partnership now distributes it to a different partner. What is the effect on the contributing partner?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect on her",
+        "explanation": "The mixing bowl rule applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The distributee recognizes it",
+        "explanation": "The contributor does.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "She recognizes her built-in gain",
+        "explanation": "Correct. The 7-year mixing bowl rule."
+      },
+      {
+        "id": "d",
+        "text": "The partnership recognizes it",
+        "explanation": "The contributor does.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§704(c)(1)(B): if contributed property is distributed to another partner within 7 years, the contributor recognizes the precontribution gain.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pd-18",
+    "pool": "practice",
+    "stem": "A partner recognizes gain on a cash distribution, and the partnership has a §754 election. What adjustment follows?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A §743(b) adjustment",
+        "explanation": "That's for transfers of interests.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A decrease to inside basis",
+        "explanation": "It's an increase.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "No adjustment at all",
+        "explanation": "The election requires one.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A §734(b) basis increase",
+        "explanation": "Correct. It reflects the gain."
+      }
+    ],
+    "answer": "d",
+    "explanation": "With a §754 election, a distribution in which the partner recognizes gain increases the basis of partnership property under §734(b).",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pd-19",
+    "pool": "practice",
+    "stem": "In liquidation, a partner (basis $50,000) receives inventory (inside basis $20,000), land A (inside basis $20,000; FMV $30,000) and land B (inside basis $40,000; FMV $10,000). What is her basis in land B?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Correct. The $30,000 decrease goes first to depreciated land B."
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Basis must be reduced.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "Allocate the decrease to depreciation first.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$15,000",
+        "explanation": "Not the method.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Inventory takes $20,000; the remaining $30,000 is less than the lands' $60,000 inside basis, so the $30,000 decrease goes first to property with unrealized depreciation.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-pd-20",
+    "pool": "practice",
+    "stem": "A partner recognizes gain because a current cash distribution exceeds her outside basis. How is the gain characterized, absent §751 assets?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ordinary income",
+        "explanation": "Not absent hot assets.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Capital gain",
+        "explanation": "Correct. It's treated as sale of the interest."
+      },
+      {
+        "id": "c",
+        "text": "Tax-exempt",
+        "explanation": "Jury pay is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "§1231 gain",
+        "explanation": "The gain is capital.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gain on a distribution in excess of basis is treated as gain from sale of the partnership interest, generally capital.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

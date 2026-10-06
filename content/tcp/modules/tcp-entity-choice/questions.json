@@ -615,5 +615,175 @@
     "explanation": "S corporation income is taxed once; distributions (beyond reasonable compensation) aren't subject to SE or payroll taxes.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-ec-16",
+    "pool": "practice",
+    "stem": "An investor holds QSBS issued in August 2025 for 4 years and sells at a gain. What exclusion applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "75%",
+        "explanation": "Correct. Post-July 4, 2025 stock uses tiers: 50%, 75%, 100%."
+      },
+      {
+        "id": "b",
+        "text": "100%",
+        "explanation": "That needs 5 years.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "50%",
+        "explanation": "That's the 3-year tier.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "0%",
+        "explanation": "A partial exclusion applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "For QSBS issued after July 4, 2025, the exclusion is 50% after 3 years, 75% after 4 and 100% after 5 years.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ec-17",
+    "pool": "practice",
+    "stem": "An owner will distribute all profits and qualifies for the full QBI deduction at the top bracket. Which structure gives the lower combined federal income tax rate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A C corporation paying dividends",
+        "explanation": "Double tax raises it to 39.8%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A pass-through entity",
+        "explanation": "Correct. About 29.6% versus 39.8%."
+      },
+      {
+        "id": "c",
+        "text": "They're equal",
+        "explanation": "The rates differ.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A C corporation with no salary",
+        "explanation": "Dividends are still taxed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A C corporation's 21% plus 23.8% on dividends is about 39.8%; 37% with a 20% QBI deduction is about 29.6%.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ec-18",
+    "pool": "practice",
+    "stem": "A C corporation converts to S status. Its assets have built-in gains. When is the built-in gains tax a risk?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only in the first S year",
+        "explanation": "The period is 5 years.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "For 10 years after converting",
+        "explanation": "The period is 5 years.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "On sales within 5 years",
+        "explanation": "Correct. The recognition period."
+      },
+      {
+        "id": "d",
+        "text": "Never, for S corporations",
+        "explanation": "It applies after conversion.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Built-in gains recognized within 5 years after conversion are taxed at the corporate level.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ec-19",
+    "pool": "practice",
+    "stem": "Investors expect large depreciation losses from a property financed with nonrecourse debt. Which entity best lets them use the losses?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An S corporation with debt",
+        "explanation": "Shareholders get no basis for entity debt.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A C corporation with debt",
+        "explanation": "Losses stay in the entity.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A sole proprietorship",
+        "explanation": "They're multiple investors.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A partnership-taxed LLC",
+        "explanation": "Correct. Partners' basis includes entity debt."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Partners include their share of partnership liabilities in basis; S shareholders don't include corporate debt.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ec-20",
+    "pool": "practice",
+    "stem": "What federal rate applies to a personal service C corporation's taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "21%",
+        "explanation": "Correct. The flat corporate rate applies."
+      },
+      {
+        "id": "b",
+        "text": "35%",
+        "explanation": "That flat PSC rate was repealed.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "37%",
+        "explanation": "That's the top individual rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "15%",
+        "explanation": "Graduated rates were repealed.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Personal service corporations pay the same flat 21% rate as other C corporations.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]
