@@ -724,5 +724,177 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "reg-bri-19",
+    "pool": "practice",
+    "stem": "A taxpayer rents a house to her brother at well below fair rent for the whole year. How are those days treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As personal-use days",
+        "explanation": "Correct. Below-market rental to a relative counts as personal use."
+      },
+      {
+        "id": "b",
+        "text": "As fair rental days",
+        "explanation": "The rent isn't fair.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As vacant days",
+        "explanation": "The house is occupied.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As business days",
+        "explanation": "Not at below-market rent.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Days rented to a relative at less than fair rental value count as personal use days.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-bri-20",
+    "pool": "practice",
+    "stem": "A sole proprietor uses the simplified home office method for 200 square feet. What is the deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,500",
+        "explanation": "That is the 300 sq ft maximum.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$1,000",
+        "explanation": "Correct. $5 per square foot."
+      },
+      {
+        "id": "c",
+        "text": "$500",
+        "explanation": "The rate is $5.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "The rate is $5.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The simplified method allows $5 per square foot, up to 300 square feet.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-bri-21",
+    "pool": "practice",
+    "stem": "A self-employed consultant drives 10,000 business miles in 2025 and uses the standard mileage rate of 70 cents. What is the deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,700",
+        "explanation": "The 2025 rate is 70 cents.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$3,500",
+        "explanation": "The rate isn't halved.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$7,000",
+        "explanation": "Correct. 10,000 × $0.70."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Business mileage is deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The 2025 business standard mileage rate is 70 cents per mile.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-bri-22",
+    "pool": "practice",
+    "stem": "A cash-basis sole proprietor can't collect a $5,000 invoice for services. How is the loss treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a business bad debt",
+        "explanation": "Cash-basis receivables have no basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a short-term capital loss",
+        "explanation": "No basis exists.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As a $3,000 deduction",
+        "explanation": "Not deductible at all.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "It isn't deductible",
+        "explanation": "Correct. The income was never included."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A cash-basis taxpayer has no basis in uncollected receivables, so there's no bad debt deduction.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-bri-23",
+    "pool": "practice",
+    "stem": "A tenant pays the landlord's $3,000 property tax bill directly to the county instead of part of the rent. How does the landlord treat it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Income, plus a tax deduction",
+        "explanation": "Correct. Both are recognized."
+      },
+      {
+        "id": "b",
+        "text": "Ignore it for tax purposes",
+        "explanation": "It's income to the landlord.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Rental income, with no deduction",
+        "explanation": "The tax is also deductible.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "A loan from the tenant",
+        "explanation": "It's rent, not a loan.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Expenses a tenant pays for the landlord are rental income, and the landlord may deduct them if otherwise deductible.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

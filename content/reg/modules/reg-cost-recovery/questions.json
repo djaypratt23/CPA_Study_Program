@@ -628,5 +628,178 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-cr2-11",
+    "pool": "practice",
+    "stem": "A business signed a binding contract for 7-year equipment ($100,000) on January 10, 2025 and placed it in service in March 2025. What bonus depreciation is available?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "100% bonus requires acquisition after January 19.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "The rate is 40%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Correct. Property acquired before January 20 gets 40%."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Bonus still applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For 2025, property acquired before January 20, 2025 qualifies for 40% bonus; property acquired after January 19 qualifies for 100%.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-12",
+    "pool": "practice",
+    "stem": "Qualified improvement property is placed in service in 2025. What is its MACRS recovery period?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "39 years",
+        "explanation": "QIP is 15-year property.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "27.5 years",
+        "explanation": "That's residential rental.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "7 years",
+        "explanation": "QIP isn't 7-year property.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "15 years",
+        "explanation": "Correct. It's also bonus-eligible."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Qualified improvement property is 15-year MACRS property eligible for bonus depreciation and §179.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr2-13",
+    "pool": "practice",
+    "stem": "Five-year equipment costing $500,000 was acquired January 5, 2025 (40% bonus). The owner elects $100,000 of §179. The half-year rate is 20%. What is total 2025 cost recovery?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$308,000",
+        "explanation": "Correct. $100,000 + $160,000 + $48,000."
+      },
+      {
+        "id": "b",
+        "text": "$260,000",
+        "explanation": "Add regular MACRS on the remainder.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$500,000",
+        "explanation": "Bonus is only 40% here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$340,000",
+        "explanation": "Apply bonus after §179.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Order: §179 ($100,000), bonus 40% of $400,000 ($160,000), then MACRS 20% of $240,000 ($48,000).",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-14",
+    "pool": "practice",
+    "stem": "A $100,000 seven-year asset (half-year convention) is sold in its third year. The full Year 3 rate is 17.49%. What is Year 3 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$17,490",
+        "explanation": "Only half a year is allowed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$8,745",
+        "explanation": "Correct. Half a year in the year of disposal."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Some depreciation is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$13,118",
+        "explanation": "Not the convention.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Under the half-year convention, an asset disposed of before the end of its recovery period gets half a year of depreciation.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-15",
+    "pool": "practice",
+    "stem": "How is an election out of bonus depreciation made?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Asset by asset",
+        "explanation": "That's how §179 works.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "For all property, permanently",
+        "explanation": "It's made yearly by class.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "By class of property",
+        "explanation": "Correct. It applies to all assets in the class."
+      },
+      {
+        "id": "d",
+        "text": "Only by corporations",
+        "explanation": "Any taxpayer may elect.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The bonus depreciation election out applies to all property in a recovery class placed in service that year.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

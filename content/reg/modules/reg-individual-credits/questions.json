@@ -623,5 +623,177 @@
     "explanation": "Advance premium tax credits are reconciled on Form 8962; excess advances are repaid (subject to any caps).",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "reg-cr-16",
+    "pool": "practice",
+    "stem": "Which income counts as earned income for the earned income credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Pension distributions",
+        "explanation": "Not earned income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Interest on savings",
+        "explanation": "Not earned income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Unemployment benefits",
+        "explanation": "Not earned income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Wages from a part-time job",
+        "explanation": "Correct. Wages are earned income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Earned income includes wages, salaries, tips and net SE earnings, not pensions or investment income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-17",
+    "pool": "practice",
+    "stem": "A student is in her fifth year of undergraduate study. Which education credit can she claim?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The lifetime learning credit",
+        "explanation": "Correct. The AOTC covers only 4 years."
+      },
+      {
+        "id": "b",
+        "text": "The American opportunity credit",
+        "explanation": "It's limited to 4 years.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Both credits",
+        "explanation": "Only the lifetime learning credit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Neither credit",
+        "explanation": "The lifetime credit applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The American opportunity credit is available only for the first 4 years of postsecondary education.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-18",
+    "pool": "practice",
+    "stem": "May a taxpayer claim both the American opportunity and lifetime learning credits for the same student in the same year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, for different expenses",
+        "explanation": "Not for the same student.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No",
+        "explanation": "Correct. Only one per student per year."
+      },
+      {
+        "id": "c",
+        "text": "Yes, if AGI is low",
+        "explanation": "That isn't allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only for graduate students",
+        "explanation": "That isn't allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Only one education credit may be claimed per student per year.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cr-19",
+    "pool": "practice",
+    "stem": "A taxpayer's tax liability is $1,000, and she has $1,500 of nonrefundable credits with no carryforward. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $500 refund",
+        "explanation": "They aren't refundable.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Tax is $0; $500 carries forward",
+        "explanation": "No carryforward here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Tax is $0; $500 is lost",
+        "explanation": "Correct. Nonrefundable credits can't create a refund."
+      },
+      {
+        "id": "d",
+        "text": "Tax of $1,000",
+        "explanation": "Credits reduce tax.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Nonrefundable credits reduce tax only to zero; any excess is lost unless a carryforward applies.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-20",
+    "pool": "practice",
+    "stem": "A couple pays $6,000 of child care for two children and excludes $5,000 through a dependent care FSA. What expenses qualify for the dependent care credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,000",
+        "explanation": "The FSA exclusion reduces it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "$1,000 remains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "That's the excluded part.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$1,000",
+        "explanation": "Correct. The $6,000 limit is reduced by the FSA exclusion."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Expenses eligible for the credit are reduced by amounts excluded under a dependent care assistance program.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

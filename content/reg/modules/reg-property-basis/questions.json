@@ -657,5 +657,177 @@
     "skill": "application",
     "difficulty": 2,
     "calc": true
+  },
+  {
+    "id": "reg-pb-17",
+    "pool": "practice",
+    "stem": "Under a divorce decree, a husband transfers stock (basis $40,000; FMV $90,000) to his ex-wife. What is her basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$90,000",
+        "explanation": "No step-up for divorce transfers.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Correct. §1041 carryover basis."
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Basis carries over.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§1041 transfers between spouses or incident to divorce are nontaxable, and the recipient takes a carryover basis.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pb-18",
+    "pool": "practice",
+    "stem": "An executor elects the alternate valuation date. What is the heir's basis in stock not sold before then?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "FMV at death",
+        "explanation": "Not with the election.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "The decedent's basis",
+        "explanation": "No carryover basis.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "FMV 6 months after death",
+        "explanation": "Correct. The alternate date value."
+      },
+      {
+        "id": "d",
+        "text": "FMV when the heir sells",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "With the alternate valuation election, inherited property not disposed of earlier takes its FMV 6 months after death.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pb-19",
+    "pool": "practice",
+    "stem": "An investor reinvests $3,000 of taxable dividends in more shares through a DRIP. What is the effect on basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect",
+        "explanation": "Reinvested dividends add basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It decreases by $3,000",
+        "explanation": "Basis increases, not decreases.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "It increases by half",
+        "explanation": "The full amount adds.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "It increases by $3,000",
+        "explanation": "Correct. The dividend was taxed."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Reinvested dividends are taxed and become part of the basis of the new shares.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-20",
+    "pool": "practice",
+    "stem": "A donee sells gifted stock at a loss using the donor's FMV at the gift date as basis (FMV was below the donor's basis). When does the holding period begin?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "On the gift date",
+        "explanation": "Correct. The donor's period doesn't tack."
+      },
+      {
+        "id": "b",
+        "text": "When the donor bought it",
+        "explanation": "Not when FMV basis is used.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "When the donee sells it",
+        "explanation": "It runs from the gift date.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "At year-end",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "a",
+    "explanation": "When the FMV at the gift date is used as basis for a loss, the holding period starts on the gift date.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pb-21",
+    "pool": "practice",
+    "stem": "A husband dies in a community property state. The couple's community property home had a $200,000 basis and is worth $600,000. What is the widow's basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$400,000",
+        "explanation": "Both halves step up.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$600,000",
+        "explanation": "Correct. Both halves are stepped up."
+      },
+      {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "Basis is stepped up.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$300,000",
+        "explanation": "That isn't what the rule says.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Community property receives a full step-up for both halves at the first spouse's death.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]
