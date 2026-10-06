@@ -1003,5 +1003,451 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "reg-cg-27",
+    "pool": "practice",
+    "stem": "A donee receives stock (FMV above the donor's basis) that the donor held 5 months, and sells it 8 months later at a gain. What is the holding period?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Long-term",
+        "explanation": "Correct. The donor's 5 months tack to the donee's 8."
+      },
+      {
+        "id": "b",
+        "text": "Short-term",
+        "explanation": "The holding periods combine.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "It depends on the FMV",
+        "explanation": "Not when FMV exceeds basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Long-term only if inherited",
+        "explanation": "Gifts also tack.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "With carryover basis, the donor's holding period is added to the donee's.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cg-28",
+    "pool": "practice",
+    "stem": "A married couple filing jointly has a $10,000 net long-term capital loss and a $2,000 net short-term gain. What are the deduction and carryforward?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000 deduction",
+        "explanation": "Limited to $3,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$3,000 deduction; $5,000 LT carryforward",
+        "explanation": "Correct. Net loss of $8,000; $3,000 deducted."
+      },
+      {
+        "id": "c",
+        "text": "$3,000 deduction; $5,000 ST carryforward",
+        "explanation": "The loss is long-term.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$3,000 deduction; $7,000 LT carryforward",
+        "explanation": "Net the gain first.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Net capital loss is $8,000 (long-term); $3,000 is deducted and $5,000 carries forward as long-term.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-29",
+    "pool": "practice",
+    "stem": "An investor buys the copyright to a novel from its author and later sells it at a gain. How is the investor's gain treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As ordinary income",
+        "explanation": "The purchaser isn't the creator.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a 28% collectibles gain",
+        "explanation": "Not a collectible.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As capital gain",
+        "explanation": "Correct. The exclusion applies only to the creator."
+      },
+      {
+        "id": "d",
+        "text": "As §1231 gain",
+        "explanation": "Not used in a business here.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Copyrights are capital assets except in the hands of their creator (or a donee with carryover basis).",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cg-30",
+    "pool": "practice",
+    "stem": "A real estate dealer sells subdivided lots from inventory at a gain. How is the gain treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As long-term capital gain",
+        "explanation": "Dealer property is inventory.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As §1231 gain",
+        "explanation": "Inventory isn't §1231 property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As tax-exempt",
+        "explanation": "Jury pay is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As ordinary income",
+        "explanation": "Correct. Property held for sale to customers isn't a capital asset."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Property held primarily for sale to customers in the ordinary course is excluded from capital assets.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cg-31",
+    "pool": "practice",
+    "stem": "A taxpayer sells a building used 60% for her business and 40% as her home, held for 10 years, at a $100,000 gain (no §121 exclusion is claimed on the business part). How is the business part characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60,000 §1231 gain",
+        "explanation": "Correct. The business portion is §1231 property."
+      },
+      {
+        "id": "b",
+        "text": "$100,000 capital gain",
+        "explanation": "Allocate between uses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$60,000 ordinary income",
+        "explanation": "It's §1231 gain, not ordinary.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$40,000 §1231 gain",
+        "explanation": "That's the personal share.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Mixed-use property is treated as two assets; the business portion is §1231 property.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-32",
+    "pool": "practice",
+    "stem": "A single filer has $600,000 of taxable income, including $100,000 of LTCG. The 20% rate starts at $533,400. How much of the LTCG is taxed at 20%?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Part falls in the 15% band.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$66,600",
+        "explanation": "Correct. Only the portion above the threshold."
+      },
+      {
+        "id": "c",
+        "text": "$33,400",
+        "explanation": "That's the 15% portion.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Part exceeds the threshold.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "LTCG stacked on top of ordinary income: $600,000 − $533,400 = $66,600 at 20%.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-33",
+    "pool": "practice",
+    "stem": "A husband dies in 2025 with a $20,000 capital loss carryforward that was his alone. How can it be used?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Indefinitely by the widow",
+        "explanation": "They expire with him.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "By his estate on Form 1041",
+        "explanation": "Not transferable to the estate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Only on the final joint return",
+        "explanation": "Correct. A decedent's capital losses don't pass to the survivor."
+      },
+      {
+        "id": "d",
+        "text": "Only by his heirs, pro rata",
+        "explanation": "Not transferable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A decedent's unused capital loss carryover can be used only on the final return.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cg-34",
+    "pool": "practice",
+    "stem": "An inventor sells all substantial rights to a patent 6 months after reducing it to practice. How is the gain treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As short-term capital gain",
+        "explanation": "§1235 overrides the holding period.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "As ordinary income",
+        "explanation": "Not for a §1235 transfer.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As tax-exempt",
+        "explanation": "Jury pay is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As long-term capital gain",
+        "explanation": "Correct. §1235 applies regardless of holding period."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§1235 treats a holder's transfer of all substantial patent rights as a long-term capital gain.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cg-35",
+    "pool": "practice",
+    "stem": "An investor holds cryptocurrency for 2 years as an investment and sells it at a gain. How is the gain treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As long-term capital gain",
+        "explanation": "Correct. Digital assets held for investment are capital assets."
+      },
+      {
+        "id": "b",
+        "text": "As ordinary income",
+        "explanation": "It's a capital asset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As a 28% collectibles gain",
+        "explanation": "Not a collectible.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As tax-exempt",
+        "explanation": "Jury pay is taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Digital assets held for investment are property; gains are capital, long-term if held over a year.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cg-36",
+    "pool": "practice",
+    "stem": "A taxpayer carries a $4,000 short-term capital loss into the year and has a $10,000 long-term capital gain. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $10,000 LT gain; $4,000 deduction",
+        "explanation": "They net together.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $6,000 net long-term gain",
+        "explanation": "Correct. The carryforward offsets the LT gain."
+      },
+      {
+        "id": "c",
+        "text": "A $6,000 net short-term gain",
+        "explanation": "The net is long-term.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A $14,000 gain",
+        "explanation": "The loss reduces gain.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Carryover losses net against current gains; the remaining net is long-term capital gain.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-37",
+    "pool": "practice",
+    "stem": "How long must a capital asset be held for gain on its sale to be long-term?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At least 1 year",
+        "explanation": "It must be more than 1 year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "More than 1 year",
+        "explanation": "Correct. Long-term requires more than 1 year."
+      },
+      {
+        "id": "c",
+        "text": "At least 6 months",
+        "explanation": "That was an old rule.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "More than 2 years",
+        "explanation": "That period is too long.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Capital assets held more than 1 year produce long-term gain or loss.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-38",
+    "pool": "practice",
+    "stem": "What is the maximum net capital loss an individual (not MFS) may deduct against ordinary income each year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,500",
+        "explanation": "That's for MFS filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "That amount is too high.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$3,000",
+        "explanation": "Correct. The annual limit is $3,000."
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "That amount is too high.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Individuals may deduct up to $3,000 of net capital loss a year ($1,500 MFS) and carry the rest forward.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-cg-39",
+    "pool": "practice",
+    "stem": "What is the maximum rate on unrecaptured §1250 gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "28%",
+        "explanation": "That's for collectibles.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "20%",
+        "explanation": "That's the top LTCG rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "15%",
+        "explanation": "That's a middle LTCG rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "25%",
+        "explanation": "Correct. Unrecaptured §1250 gain is taxed at up to 25%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Unrecaptured §1250 gain on depreciable real property is taxed at a maximum 25%.",
+    "skill": "remembering",
+    "difficulty": 2
   }
 ]

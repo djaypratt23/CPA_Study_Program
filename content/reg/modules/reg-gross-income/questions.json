@@ -786,5 +786,449 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "reg-gi-21",
+    "pool": "practice",
+    "stem": "An employer gives an employee a $1,000 \"holiday gift\" check. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As taxable compensation",
+        "explanation": "Correct. Employer transfers to employees aren't excludable gifts."
+      },
+      {
+        "id": "b",
+        "text": "As an excluded gift",
+        "explanation": "Employer gifts are compensation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a de minimis fringe",
+        "explanation": "Cash isn't de minimis.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Excluded up to $25",
+        "explanation": "That's the business gift deduction rule.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Cash transfers from an employer to an employee are compensation, not gifts.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-gi-22",
+    "pool": "practice",
+    "stem": "A debtor in a Title 11 bankruptcy has $50,000 of debt discharged. What is the tax effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fully taxable as ordinary income",
+        "explanation": "Bankruptcy discharge is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Excluded; attributes reduced",
+        "explanation": "Correct. The bankruptcy exclusion reduces NOLs, basis and other attributes."
+      },
+      {
+        "id": "c",
+        "text": "Excluded with no other effect",
+        "explanation": "Attributes are reduced.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Taxable as capital gain",
+        "explanation": "The rent is excluded.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Debt discharged in bankruptcy is excluded, but the taxpayer reduces tax attributes.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-gi-23",
+    "pool": "practice",
+    "stem": "A scientist wins a $100,000 prize for past achievement and, before receiving it, directs the payer to give it to a charity. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Taxable, with a charitable deduction",
+        "explanation": "Assignment to charity excludes it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Fully taxable as ordinary income",
+        "explanation": "The exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Excluded from income",
+        "explanation": "Correct. Qualified prizes assigned to charity are excluded."
+      },
+      {
+        "id": "d",
+        "text": "Taxable at 50%",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§74(b) excludes certain achievement awards that the recipient assigns to charity without using them.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-gi-24",
+    "pool": "practice",
+    "stem": "A taxpayer deducted $5,000 of medical expenses last year, all of which reduced her tax. This year insurance reimburses $3,000 of them. How much is income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "She benefited from the deduction.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Only $3,000 was recovered.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$2,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$3,000",
+        "explanation": "Correct. The recovery is income to the extent of the prior benefit."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Under the tax benefit rule, recovering a previously deducted amount is income to the extent the deduction reduced tax.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-gi-25",
+    "pool": "practice",
+    "stem": "A university waives undergraduate tuition for an employee's child. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Excluded",
+        "explanation": "Correct. Undergraduate tuition reductions for employees' dependents are excluded."
+      },
+      {
+        "id": "b",
+        "text": "Taxable compensation",
+        "explanation": "The rent is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Taxable above $5,250",
+        "explanation": "That's educational assistance.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Excluded for grad courses only",
+        "explanation": "Undergraduate courses qualify.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§117(d) excludes qualified tuition reductions for undergraduate education of employees and their dependents.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-gi-26",
+    "pool": "practice",
+    "stem": "A hotel requires its desk staff to eat free meals on the premises during shifts so they stay available. How are the meals treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Taxable compensation",
+        "explanation": "They're for the employer's convenience.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Excluded",
+        "explanation": "Correct. Meals on premises for the employer's convenience are excluded."
+      },
+      {
+        "id": "c",
+        "text": "Taxable at 50%",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Excluded only if under $25",
+        "explanation": "No dollar limit.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§119 excludes meals furnished on business premises for the employer's convenience.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-gi-27",
+    "pool": "practice",
+    "stem": "A retiree paid $60,000 for an annuity with an expected total return of $100,000. She receives $10,000 this year. How much is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Part is excluded.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$6,000",
+        "explanation": "That's the excluded part.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$4,000",
+        "explanation": "Correct. 60% of each payment is a return of investment."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Part is taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The exclusion ratio is investment ÷ expected return (60%); the rest is taxable.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-gi-28",
+    "pool": "practice",
+    "stem": "A bonus check is available to an employee on December 31, but she chooses to pick it up on January 2. When is it income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "When she picks it up",
+        "explanation": "She could have received it earlier.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "When she deposits it",
+        "explanation": "Constructive receipt applies.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Split between both years",
+        "explanation": "It isn't split between years.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "In the year it was available",
+        "explanation": "Correct. Constructive receipt applies."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Income is constructively received when it's credited or made available without substantial restriction.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-gi-29",
+    "pool": "practice",
+    "stem": "Under a 2016 divorce decree that was never modified, a former wife receives $24,000 of alimony in 2025. How is it treated by her?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As taxable income",
+        "explanation": "Correct. Pre-2019 alimony remains income to the recipient."
+      },
+      {
+        "id": "b",
+        "text": "As excluded",
+        "explanation": "The old rules apply.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As taxable only above $15,000",
+        "explanation": "There's no dollar threshold.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "As child support",
+        "explanation": "It's alimony, not support.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "For pre-2019 instruments not modified to adopt new rules, alimony is income to the recipient.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-gi-30",
+    "pool": "practice",
+    "stem": "A taxpayer receives $40,000 for emotional distress from workplace harassment, with no physical injury. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As excluded",
+        "explanation": "No physical injury.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As taxable income",
+        "explanation": "Correct. Emotional distress damages without physical injury are taxable."
+      },
+      {
+        "id": "c",
+        "text": "Taxable only above medical costs",
+        "explanation": "Taxable, less medical costs paid.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "As a capital gain",
+        "explanation": "It's ordinary income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§104 excludes only damages on account of personal physical injury or sickness.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-gi-31",
+    "pool": "practice",
+    "stem": "How much employer-provided group term life insurance coverage may an employee exclude?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "That amount is too low.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "That amount is too high.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Correct. Coverage up to $50,000 is excluded."
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "That amount is too low.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The cost of up to $50,000 of group term life coverage is excludable; the cost of excess coverage is taxable.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-gi-32",
+    "pool": "practice",
+    "stem": "How is child support received treated by the recipient?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's fully taxable",
+        "explanation": "It is excluded from income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It's taxable over $5,000",
+        "explanation": "No such threshold.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "Half is taxable",
+        "explanation": "It is excluded from income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "It's excluded",
+        "explanation": "Correct. Child support isn't income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Child support is neither taxable to the recipient nor deductible by the payer.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-33",
+    "pool": "practice",
+    "stem": "What is the 2025 foreign earned income exclusion limit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$130,000",
+        "explanation": "Correct. The 2025 limit is $130,000."
+      },
+      {
+        "id": "b",
+        "text": "$126,500",
+        "explanation": "That was the 2024 limit.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$120,000",
+        "explanation": "That is not the limit.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$150,000",
+        "explanation": "That is not the limit.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "For 2025, qualifying individuals may exclude up to $130,000 of foreign earned income.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

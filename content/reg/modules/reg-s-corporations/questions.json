@@ -857,5 +857,486 @@
     "explanation": "Net increases in basis first restore any reduction in debt basis before increasing stock basis.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "reg-sc-23",
+    "pool": "practice",
+    "stem": "An S shareholder's beginning stock basis is $10,000. Her shares of items: ordinary income $4,000; distribution $8,000; nondeductible expenses $1,000; ordinary loss $7,000. How much loss is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Correct. Income, then distributions, then nondeductible expenses, then losses."
+      },
+      {
+        "id": "b",
+        "text": "$7,000",
+        "explanation": "Basis limits the loss.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$6,000",
+        "explanation": "Nondeductible expenses reduce basis first.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Some basis remains.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Basis: 10,000 + 4,000 − 8,000 − 1,000 = 5,000 available for the loss; $2,000 is suspended.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-24",
+    "pool": "practice",
+    "stem": "An S shareholder with $15,000 of suspended losses sells all her stock. What happens to the losses?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They pass to the buyer",
+        "explanation": "Not transferable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "They're lost",
+        "explanation": "Correct. Suspended losses don't transfer to the buyer."
+      },
+      {
+        "id": "c",
+        "text": "They become capital losses",
+        "explanation": "Suspended losses expire.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "They're refunded",
+        "explanation": "Not refundable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Losses suspended for lack of basis are personal and are lost when the shareholder disposes of all her stock.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-sc-25",
+    "pool": "practice",
+    "stem": "An S corporation's AAA is $10,000. It has a $30,000 loss and makes a $5,000 distribution. What is its AAA at year-end?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$(25,000)",
+        "explanation": "Distributions don't create a negative AAA.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Losses can make AAA negative.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$(20,000)",
+        "explanation": "Correct. Distributions can't push AAA below zero, but losses can."
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "Recompute the ratio.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "AAA is adjusted for distributions before losses; losses may reduce AAA below zero.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-26",
+    "pool": "practice",
+    "stem": "An S corporation distributes land (FMV $80,000; basis $50,000) to its shareholder. What is the effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No gain; distributions aren't sales",
+        "explanation": "§311(b) gain applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The shareholder recognizes $80,000 of income",
+        "explanation": "It's a distribution, not income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "The corporation pays entity tax on the gain",
+        "explanation": "It passes through.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 of gain passes through to her",
+        "explanation": "Correct. The corporation recognizes gain on appreciated property."
+      }
+    ],
+    "answer": "d",
+    "explanation": "An S corporation recognizes gain on distributing appreciated property; it flows through, and the distribution reduces basis by FMV.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-27",
+    "pool": "practice",
+    "stem": "An S corporation has voting and nonvoting common shares with identical distribution and liquidation rights. Does it violate the one-class-of-stock rule?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No",
+        "explanation": "Correct. Differences only in voting rights are allowed."
+      },
+      {
+        "id": "b",
+        "text": "Yes, two classes exist",
+        "explanation": "Voting differences are allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only if nonvoting is over 50%",
+        "explanation": "That isn't what the rule says.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Only for public companies",
+        "explanation": "S corporations are private.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Shares that differ only in voting rights are treated as one class of stock.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-sc-28",
+    "pool": "practice",
+    "stem": "A shareholder wants to hold S corporation stock in her traditional IRA. Is this permitted?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, IRAs are trusts",
+        "explanation": "They aren't eligible trusts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No, an IRA is ineligible",
+        "explanation": "Correct. Generally barred (bank stock is a narrow exception)."
+      },
+      {
+        "id": "c",
+        "text": "Yes, if the IRA owns under 5%",
+        "explanation": "No such exception.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Only if it's a Roth IRA",
+        "explanation": "Both are ineligible.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRAs generally can't be S corporation shareholders; eligible trusts include QSSTs and ESBTs.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-sc-29",
+    "pool": "practice",
+    "stem": "On August 1, an S corporation's 101st shareholder is added. When does the election terminate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "On January 1 of next year",
+        "explanation": "It terminates immediately.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "Retroactively to January 1",
+        "explanation": "Not retroactive.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "On August 1",
+        "explanation": "Correct. Termination occurs on the date of the disqualifying event."
+      },
+      {
+        "id": "d",
+        "text": "Never, with 101 shareholders",
+        "explanation": "100 is the limit.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "An S election terminates on the day the corporation ceases to qualify.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-sc-30",
+    "pool": "practice",
+    "stem": "A shareholder's debt basis in a $20,000 loan was reduced to zero by losses. The corporation repays the note in full. What results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No tax effect",
+        "explanation": "Repayment exceeds basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $20,000 deduction",
+        "explanation": "It's income, not a deduction.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "Only stock basis changes",
+        "explanation": "Debt basis is involved.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$20,000 of gain",
+        "explanation": "Correct. Repaying a reduced-basis loan produces gain."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Repayment of shareholder debt with reduced basis causes gain to the extent of the excess.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-31",
+    "pool": "practice",
+    "stem": "An S corporation makes a $3,000 cash charitable contribution. How does it affect a 100% shareholder's stock basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Basis drops by $3,000",
+        "explanation": "Correct. Separately stated deductions reduce basis."
+      },
+      {
+        "id": "b",
+        "text": "No effect; it isn't an ordinary loss",
+        "explanation": "It reduces basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It increases basis",
+        "explanation": "It's a deduction.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "It reduces basis by half",
+        "explanation": "The full amount.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A shareholder's basis is reduced by her share of separately stated deductions, including charitable contributions.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-sc-32",
+    "pool": "practice",
+    "stem": "A corporation meant to elect S status for 2025 but filed Form 2553 in June 2025, late, with reasonable cause. What relief may be available?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "None; it waits until 2026",
+        "explanation": "Late-election relief exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Relief under Rev. Proc. 2013-30",
+        "explanation": "Correct. Relief is available within 3 years and 75 days."
+      },
+      {
+        "id": "c",
+        "text": "Only with a private letter ruling",
+        "explanation": "A simplified procedure exists.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Only if it had one shareholder",
+        "explanation": "That isn't required.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Rev. Proc. 2013-30 provides simplified relief for late S elections filed within 3 years and 75 days of the intended effective date.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-sc-33",
+    "pool": "practice",
+    "stem": "What is the maximum number of shareholders an S corporation may have?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "35",
+        "explanation": "That was an earlier limit.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "100",
+        "explanation": "Correct. The limit is 100."
+      },
+      {
+        "id": "c",
+        "text": "75",
+        "explanation": "That was an earlier limit.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "500",
+        "explanation": "That amount is too high.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "An S corporation may have up to 100 shareholders, with family members treated as one.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-34",
+    "pool": "practice",
+    "stem": "By when must Form 2553 be filed for an S election to take effect for the current year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The 15th day of the 4th month",
+        "explanation": "That is too late to file.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "The last day of the year",
+        "explanation": "Too late for that year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "The 15th day of the 3rd month",
+        "explanation": "Correct. It's due 2 months and 15 days into the year."
+      },
+      {
+        "id": "d",
+        "text": "With the Form 1120-S",
+        "explanation": "That is too late to file.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Form 2553 must be filed by the 15th day of the 3rd month of the tax year (or anytime in the prior year).",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-sc-35",
+    "pool": "practice",
+    "stem": "Which return does an S corporation file?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Form 1065",
+        "explanation": "That's for partnerships.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Form 1120",
+        "explanation": "That's for C corporations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Form 1041",
+        "explanation": "That's for estates and trusts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Form 1120-S",
+        "explanation": "Correct. S corporations file Form 1120-S."
+      }
+    ],
+    "answer": "d",
+    "explanation": "An S corporation files Form 1120-S and gives each shareholder a Schedule K-1.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-sc-36",
+    "pool": "practice",
+    "stem": "How long is the built-in gains recognition period after a C corporation converts to S status?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "5 years",
+        "explanation": "Correct. The recognition period is 5 years."
+      },
+      {
+        "id": "b",
+        "text": "10 years",
+        "explanation": "That was the earlier period.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "3 years",
+        "explanation": "That period is too short.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "7 years",
+        "explanation": "Not the period.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Built-in gains recognized within 5 years of the S election are taxed at the corporate level.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

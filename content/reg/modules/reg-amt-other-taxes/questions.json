@@ -971,5 +971,453 @@
     "explanation": "Withholding is treated as paid ratably through the year unless the taxpayer elects otherwise, so late-year withholding can cure earlier shortfalls.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "reg-ot-26",
+    "pool": "practice",
+    "stem": "A self-employed author earns most of her 2025 income in December. Which approach can reduce or eliminate penalties for earlier estimated tax installments?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Equal quarterly payments",
+        "explanation": "That front-loads payments.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Paying it all with the return",
+        "explanation": "Penalties would apply.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The annualized installment method",
+        "explanation": "Correct. Installments are based on income earned to date."
+      },
+      {
+        "id": "d",
+        "text": "Filing an extension of time to file",
+        "explanation": "Extensions don't affect estimates.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The annualized method matches required installments to when income is earned.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-ot-27",
+    "pool": "practice",
+    "stem": "A taxpayer's 2024 AGI was $160,000 and 2024 tax $20,000. His 2025 tax will be $40,000. What is his prior-year safe harbor amount?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "110% is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$36,000",
+        "explanation": "That's 90% of current tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "That isn't required.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$22,000",
+        "explanation": "Correct. 110% applies when prior AGI exceeds $150,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Taxpayers with prior-year AGI over $150,000 must pay 110% of prior-year tax for the safe harbor.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-28",
+    "pool": "practice",
+    "stem": "A taxpayer owns a manufacturing business in which he works full time and also has a passive rental. Which income is subject to the NIIT?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only the rental income",
+        "explanation": "Correct. Active business income isn't NII."
+      },
+      {
+        "id": "b",
+        "text": "Both incomes",
+        "explanation": "The business is nonpassive.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Only the business income",
+        "explanation": "The amounts are reversed.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Neither",
+        "explanation": "Passive rental income is NII.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "NII includes passive trade or business income and rents, not income from a business in which the taxpayer materially participates.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-ot-29",
+    "pool": "practice",
+    "stem": "Which item is included in net investment income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Wages from an employer",
+        "explanation": "That isn't NII.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Mutual fund capital gain payouts",
+        "explanation": "Correct. They're investment income."
+      },
+      {
+        "id": "c",
+        "text": "Traditional IRA distributions",
+        "explanation": "Retirement distributions are excluded.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Active self-employment income",
+        "explanation": "That isn't NII.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "NII includes interest, dividends, capital gains (including fund distributions), rents and nonqualified annuities.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-ot-30",
+    "pool": "practice",
+    "stem": "A married taxpayer filing separately earns $150,000 of wages. How much additional Medicare tax does she owe?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Her threshold is $125,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$1,350",
+        "explanation": "Only the excess is taxed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$225",
+        "explanation": "Correct. The MFS threshold is $125,000."
+      },
+      {
+        "id": "d",
+        "text": "$450",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The additional Medicare tax threshold is $125,000 for married filing separately.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-31",
+    "pool": "practice",
+    "stem": "A taxpayer runs two sole proprietorships: one earns $50,000 and the other loses $20,000. What net earnings are used for SE tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$46,175",
+        "explanation": "The loss offsets the profit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Apply the 92.35% factor.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Combine the businesses first.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$27,705",
+        "explanation": "Correct. Combine the businesses, then apply 92.35%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "SE income is figured on the combined net profit of all trades or businesses.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-32",
+    "pool": "practice",
+    "stem": "A general partner receives a $40,000 guaranteed payment and a $60,000 share of ordinary business income. What are her net earnings from self-employment before the 92.35% factor?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Correct. Both are SE income for a general partner."
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "Guaranteed payments count.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Her share counts too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "General partners have SE income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A general partner's SE income includes guaranteed payments for services and the distributive share of ordinary income.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-33",
+    "pool": "practice",
+    "stem": "A single filer has $40,000 of ordinary taxable income and $20,000 of qualified dividends (total $60,000). The 0% rate applies up to $48,350. How are the dividends taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All $20,000 at the 0% rate",
+        "explanation": "Only part fits under $48,350.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Part at 0%, part at 15%",
+        "explanation": "Correct. Ordinary income fills the brackets first."
+      },
+      {
+        "id": "c",
+        "text": "All $20,000 at the 15% rate",
+        "explanation": "Part falls in the 0% band.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "All at ordinary income rates",
+        "explanation": "Qualified dividends get preferential rates.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Qualified dividends stack on top of ordinary income for the preferential rate brackets.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-34",
+    "pool": "practice",
+    "stem": "A 64-year-old who retired this year underpaid estimated tax because of reasonable cause. Can the penalty be waived?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, penalties can't be waived",
+        "explanation": "Penalty waivers exist.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only if tax is under $1,000",
+        "explanation": "That's a separate exception.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Yes",
+        "explanation": "Correct. Waivers apply to retirees 62+ with reasonable cause."
+      },
+      {
+        "id": "d",
+        "text": "Only for disasters",
+        "explanation": "Retirement can qualify.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The IRS may waive the penalty for taxpayers who retired after age 62 or became disabled, if the underpayment was due to reasonable cause.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-ot-35",
+    "pool": "practice",
+    "stem": "A single taxpayer has $150,000 of wages and $100,000 of net SE income (after the 92.35% factor). How much additional Medicare tax applies to the SE income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$900",
+        "explanation": "The threshold is reduced only by wages.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Combined income exceeds $200,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$1,350",
+        "explanation": "Wages under $200,000 aren't taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$450",
+        "explanation": "Correct. The $200,000 threshold is reduced by wages: 0.9% × ($100,000 − $50,000)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "For SE income, the threshold is reduced (not below zero) by wages subject to the additional Medicare tax.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-ot-36",
+    "pool": "practice",
+    "stem": "What is the combined self-employment tax rate on net earnings up to the Social Security wage base?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "12.4%",
+        "explanation": "Add the Medicare portion.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "15.3%",
+        "explanation": "Correct. 12.4% Social Security plus 2.9% Medicare."
+      },
+      {
+        "id": "c",
+        "text": "2.9%",
+        "explanation": "Add the Social Security portion.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "7.65%",
+        "explanation": "That's the employee share.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Self-employment tax is 15.3% up to the wage base and 2.9% above it.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-ot-37",
+    "pool": "practice",
+    "stem": "What is the net investment income tax rate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "0.9%",
+        "explanation": "That's the additional Medicare tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "2.9%",
+        "explanation": "That's the Medicare rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "3.8%",
+        "explanation": "Correct. The NIIT rate is 3.8%."
+      },
+      {
+        "id": "d",
+        "text": "5.0%",
+        "explanation": "That is not the rate.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The net investment income tax is 3.8% of the lesser of net investment income or MAGI above the threshold.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-ot-38",
+    "pool": "practice",
+    "stem": "For a single filer, at what wage level does the 0.9% additional Medicare tax begin?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$250,000",
+        "explanation": "That's for joint filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$125,000",
+        "explanation": "That's for MFS filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$150,000",
+        "explanation": "Not a threshold.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$200,000",
+        "explanation": "Correct. The single threshold is $200,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The additional Medicare tax applies above $200,000 (single), $250,000 (joint) or $125,000 (MFS).",
+    "skill": "remembering",
+    "difficulty": 2
   }
 ]
