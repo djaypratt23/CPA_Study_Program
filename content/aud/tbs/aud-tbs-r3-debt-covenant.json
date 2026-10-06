@@ -1,0 +1,89 @@
+{
+  "id": "aud-tbs-r3-debt-covenant",
+  "section": "AUD",
+  "unitId": "aud-u7",
+  "moduleIds": [
+    "aud-liabilities-equity"
+  ],
+  "pool": "practice",
+  "title": "Debt, accrued interest and covenants — Draper Marine",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Audit **Draper Marine's** note payable at December 31.",
+  "exhibits": [
+    {
+      "title": "Note payable",
+      "content": "Principal **$2,000,000**; interest **6%**, paid semiannually on **March 1** and **September 1**. Draper accrued **$30,000** of interest at December 31."
+    },
+    {
+      "title": "Covenant",
+      "content": "Total liabilities to equity may not exceed **1.50**. Before any adjustment: total liabilities **$4,500,000**; equity **$3,000,000**. No waiver has been obtained."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "acc",
+          "label": "Correct accrued interest at December 31",
+          "answer": 40000,
+          "explanation": "2,000,000 × 6% × 4/12 = **40,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "mis",
+          "label": "Understatement of accrued interest",
+          "answer": 10000,
+          "explanation": "40,000 − 30,000 = **10,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "rat",
+          "label": "Liabilities-to-equity ratio after the adjustment",
+          "answer": 1.51,
+          "explanation": "(4,500,000 + 10,000) ÷ (3,000,000 − 10,000) = **1.51**.",
+          "tolerance": 0.01,
+          "unit": "x"
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Evaluate the consequences.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Is the covenant violated after the adjustment?",
+          "answer": "Yes",
+          "explanation": "1.51 exceeds 1.50."
+        },
+        {
+          "id": "d2",
+          "label": "Without a waiver making the debt not callable, must the note be classified as current?",
+          "answer": "Yes",
+          "explanation": "Debt callable because of a violation is current."
+        },
+        {
+          "id": "d3",
+          "label": "Should the auditor confirm the terms and balance with the lender?",
+          "answer": "Yes",
+          "explanation": "Confirmation gives external evidence of terms."
+        },
+        {
+          "id": "d4",
+          "label": "Is an immaterial interest adjustment always irrelevant?",
+          "answer": "No",
+          "explanation": "Even a small amount matters when it triggers a covenant violation."
+        }
+      ]
+    }
+  ]
+}

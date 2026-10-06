@@ -1,0 +1,87 @@
+{
+  "id": "aud-tbs-r3-bank-rec",
+  "section": "AUD",
+  "unitId": "aud-u7",
+  "moduleIds": [
+    "aud-cash-investments"
+  ],
+  "pool": "practice",
+  "title": "Bank reconciliation review — Holloway Hardware",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Review **Holloway Hardware's** December 31 bank reconciliation prepared by its bookkeeper. Flag errors and enter the corrected amounts (decreases as negative numbers).",
+  "exhibits": [
+    {
+      "title": "Reconciliation data",
+      "content": "Balance per bank: **$152,000**\nDeposit in transit (cleared January 3): **$18,000**\nOutstanding checks: **$26,500**\nBalance per general ledger: **$146,625**\n\nCheck #5021 for **$4,200** to a supplier was recorded in the books as **$2,400**.\nBank service charge not yet recorded: **$75**.\nA customer's **$1,250** check was returned NSF on December 30; not yet recorded."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "r",
+      "prompt": "Review the bookkeeper's reconciliation.",
+      "preparedLabel": "Per bookkeeper",
+      "rows": [
+        {
+          "id": "b",
+          "label": "Adjusted balance per bank",
+          "prepared": 143500,
+          "answer": 143500,
+          "explanation": "152,000 + 18,000 − 26,500 = **143,500**: correct."
+        },
+        {
+          "id": "e",
+          "label": "Adjustment for check #5021",
+          "prepared": 1800,
+          "answer": -1800,
+          "explanation": "The books understated the payment; reduce the book balance by **1,800**."
+        },
+        {
+          "id": "s",
+          "label": "Adjustment for service charge",
+          "prepared": -75,
+          "answer": -75,
+          "explanation": "Correct."
+        },
+        {
+          "id": "n",
+          "label": "Adjustment for the NSF check",
+          "prepared": 0,
+          "answer": -1250,
+          "explanation": "The NSF check reduces the book balance by **1,250**."
+        },
+        {
+          "id": "a",
+          "label": "Adjusted balance per books",
+          "prepared": 148350,
+          "answer": 143500,
+          "explanation": "146,625 − 1,800 − 75 − 1,250 = **143,500**, agreeing with the bank."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Should the auditor trace the deposit in transit to the bank cutoff statement?",
+          "answer": "Yes",
+          "explanation": "The cutoff statement confirms it cleared promptly."
+        },
+        {
+          "id": "q2",
+          "label": "Does a reconciliation that agrees prove there was no kiting?",
+          "answer": "No",
+          "explanation": "Kiting is tested with an interbank transfer schedule."
+        }
+      ]
+    }
+  ]
+}

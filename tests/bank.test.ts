@@ -9,7 +9,7 @@ const { bundle } = loadContent()
 /** Raised section by section as each expansion round lands. */
 const MIN_PRACTICE_PER_MODULE: Record<string, number> = { FAR: 20, AUD: 20, REG: 20, TCP: 20 }
 /** Task-based simulations per section (P2-8 target: 60), raised as each round lands. */
-const MIN_TBS: Record<string, number> = { FAR: 60, AUD: 40, REG: 36, TCP: 36 }
+const MIN_TBS: Record<string, number> = { FAR: 60, AUD: 60, REG: 36, TCP: 36 }
 /** Sections whose difficulty levels have been spread (1–3). */
 const DIFFICULTY_SPREAD = new Set(['FAR', 'AUD', 'REG', 'TCP'])
 

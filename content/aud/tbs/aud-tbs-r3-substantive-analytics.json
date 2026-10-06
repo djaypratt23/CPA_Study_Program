@@ -1,0 +1,99 @@
+{
+  "id": "aud-tbs-r3-substantive-analytics",
+  "section": "AUD",
+  "unitId": "aud-u3",
+  "moduleIds": [
+    "aud-planning"
+  ],
+  "pool": "practice",
+  "title": "Substantive analytical procedures — Ostrava Freight",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Develop expectations for three accounts at **Ostrava Freight** and decide whether each difference needs investigation.",
+  "exhibits": [
+    {
+      "title": "Data",
+      "content": "| Account | Driver data | Recorded | Threshold |\n|---|---|---|---|\n| Interest expense | Average debt $8,000,000 at 6% | $540,000 | $25,000 |\n| Payroll expense | Average headcount 120 at average pay $55,000 | $6,650,000 | $100,000 |\n| Depreciation expense | Average gross PP&E $12,000,000; 10-year straight-line; no salvage | $1,500,000 | $60,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute each expectation and difference (recorded − expected).",
+      "rows": [
+        {
+          "id": "ie",
+          "label": "Expected interest expense",
+          "answer": 480000,
+          "explanation": "8,000,000 × 6% = **480,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "id",
+          "label": "Interest expense difference",
+          "answer": 60000,
+          "explanation": "540,000 − 480,000 = **60,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "pe",
+          "label": "Expected payroll expense",
+          "answer": 6600000,
+          "explanation": "120 × 55,000 = **6,600,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "pd",
+          "label": "Payroll expense difference",
+          "answer": 50000,
+          "explanation": "6,650,000 − 6,600,000 = **50,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "de",
+          "label": "Expected depreciation expense",
+          "answer": 1200000,
+          "explanation": "12,000,000 ÷ 10 = **1,200,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dd2",
+          "label": "Depreciation expense difference",
+          "answer": 300000,
+          "explanation": "1,500,000 − 1,200,000 = **300,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Conclude on each account.",
+      "options": [
+        "Investigate the difference",
+        "No further work needed"
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Interest expense",
+          "answer": "Investigate the difference",
+          "explanation": "60,000 exceeds the 25,000 threshold."
+        },
+        {
+          "id": "c2",
+          "label": "Payroll expense",
+          "answer": "No further work needed",
+          "explanation": "50,000 is within the 100,000 threshold."
+        },
+        {
+          "id": "c3",
+          "label": "Depreciation expense",
+          "answer": "Investigate the difference",
+          "explanation": "300,000 exceeds the 60,000 threshold; check lives and additions."
+        }
+      ]
+    }
+  ]
+}

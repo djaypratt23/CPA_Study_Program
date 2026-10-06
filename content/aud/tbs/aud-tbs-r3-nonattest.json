@@ -1,0 +1,98 @@
+{
+  "id": "aud-tbs-r3-nonattest",
+  "section": "AUD",
+  "unitId": "aud-u1",
+  "moduleIds": [
+    "aud-code-of-conduct"
+  ],
+  "pool": "practice",
+  "title": "Nonattest services — Delgado & Price CPAs",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "Delgado & Price CPAs audits **Marrow Foods**, a private company. Management has designated a qualified controller to oversee all nonattest services, accepts responsibility for the results, and the firm documents its understanding with the client. Evaluate each requested service under the AICPA Code.",
+  "exhibits": [
+    {
+      "title": "Requested services",
+      "content": "1. Recording adjusting entries the firm proposed, after management reviews and approves them.\n2. Processing payroll from time records Marrow approves, and transmitting payments from Marrow's bank account that Marrow has authorized.\n3. Signing Marrow's payroll checks when the controller is on vacation.\n4. Preparing Marrow's federal income tax return for management's review and signature.\n5. Designing and developing a custom financial information system for Marrow.\n6. Valuing a business Marrow acquired, where the valuation is material and requires significant subjective judgment.\n7. Recommending candidates for Marrow's CFO position; Marrow makes the hiring decision."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Evaluate each service.",
+      "options": [
+        "Impairs independence",
+        "Doesn't impair (requirements met)"
+      ],
+      "rows": [
+        {
+          "id": "s1",
+          "label": "1. Recording approved adjusting entries",
+          "answer": "Doesn't impair (requirements met)",
+          "explanation": "Bookkeeping is allowed if management takes responsibility and approves the entries."
+        },
+        {
+          "id": "s2",
+          "label": "2. Processing payroll and transmitting authorized payments",
+          "answer": "Doesn't impair (requirements met)",
+          "explanation": "Allowed when management authorizes payments and the firm doesn't control the bank account."
+        },
+        {
+          "id": "s3",
+          "label": "3. Signing payroll checks",
+          "answer": "Impairs independence",
+          "explanation": "Signing checks is a management responsibility."
+        },
+        {
+          "id": "s4",
+          "label": "4. Preparing the tax return",
+          "answer": "Doesn't impair (requirements met)",
+          "explanation": "Tax preparation is allowed when management reviews and signs the return."
+        },
+        {
+          "id": "s5",
+          "label": "5. Designing a custom financial information system",
+          "answer": "Impairs independence",
+          "explanation": "Designing or developing a financial information system impairs independence."
+        },
+        {
+          "id": "s6",
+          "label": "6. Material, subjective valuation",
+          "answer": "Impairs independence",
+          "explanation": "A self-review threat: the firm would audit its own material, judgmental valuation."
+        },
+        {
+          "id": "s7",
+          "label": "7. Recommending CFO candidates",
+          "answer": "Doesn't impair (requirements met)",
+          "explanation": "Recommending is allowed; making the hiring decision would impair independence."
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "id": "r",
+      "prompt": "Which excerpt states the general requirements for performing nonattest services?",
+      "excerpts": [
+        {
+          "id": "e1",
+          "citation": "ET 1.295.040",
+          "text": "The member should not assume management responsibilities. Before performing nonattest services, the member should determine that the attest client agrees to assume all management responsibilities, oversee the service by designating an individual who possesses suitable skill, knowledge, and/or experience, evaluate the adequacy and results of the services performed, and accept responsibility for the results."
+        },
+        {
+          "id": "e2",
+          "citation": "ET 1.230.010",
+          "text": "Independence is impaired if fees for professional services rendered for more than one year are unpaid before the date of the current-year report."
+        },
+        {
+          "id": "e3",
+          "citation": "ET 1.400.200",
+          "text": "A member shall comply with a client's request for client-provided records, subject to certain conditions."
+        }
+      ],
+      "answer": "e1",
+      "explanation": "The general requirements for nonattest services appear in ET 1.295.040."
+    }
+  ]
+}

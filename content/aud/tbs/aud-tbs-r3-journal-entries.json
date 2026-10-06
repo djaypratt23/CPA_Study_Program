@@ -1,0 +1,68 @@
+{
+  "id": "aud-tbs-r3-journal-entries",
+  "section": "AUD",
+  "unitId": "aud-u6",
+  "moduleIds": [
+    "aud-data-analytics"
+  ],
+  "pool": "practice",
+  "title": "Journal entry testing — Larkin Textiles",
+  "minutes": 15,
+  "skill": "analysis",
+  "instructions": "An ADA on **Larkin Textiles'** general ledger flagged the entries below. Decide which to select for fraud-related testing.",
+  "exhibits": [
+    {
+      "title": "Flagged entries",
+      "content": "1. A $480,000 manual entry to revenue posted by the CFO on the last day of the year, with no support attached.\n2. A recurring monthly depreciation entry generated automatically.\n3. Entries posted on a Sunday by a user who isn't in accounting.\n4. Round-dollar entries of $250,000 to an intercompany suspense account.\n5. The automated monthly payroll accrual entry.\n6. An entry reversing a December sales accrual on January 2."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Select each entry for testing or not.",
+      "options": [
+        "Select for testing",
+        "Low priority"
+      ],
+      "rows": [
+        {
+          "id": "e1",
+          "label": "1",
+          "answer": "Select for testing",
+          "explanation": "Large, manual, unsupported, by senior management at period-end."
+        },
+        {
+          "id": "e2",
+          "label": "2",
+          "answer": "Low priority",
+          "explanation": "Routine automated entries have low fraud risk."
+        },
+        {
+          "id": "e3",
+          "label": "3",
+          "answer": "Select for testing",
+          "explanation": "Unusual timing and an unexpected user."
+        },
+        {
+          "id": "e4",
+          "label": "4",
+          "answer": "Select for testing",
+          "explanation": "Round amounts to seldom-used accounts are red flags."
+        },
+        {
+          "id": "e5",
+          "label": "5",
+          "answer": "Low priority",
+          "explanation": "Routine automated accrual."
+        },
+        {
+          "id": "e6",
+          "label": "6",
+          "answer": "Select for testing",
+          "explanation": "Reversals after year-end may indicate improper revenue."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "aud-tbs-r3-risk-responses",
+  "section": "AUD",
+  "unitId": "aud-u5",
+  "moduleIds": [
+    "aud-risk-response"
+  ],
+  "pool": "practice",
+  "title": "Responding to assessed risks — Talbot Hardware",
+  "minutes": 15,
+  "skill": "analysis",
+  "instructions": "For each assessed risk at **Talbot Hardware**, select the most effective change to the planned procedures.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Select the best response for each risk.",
+      "options": [
+        "Change the nature",
+        "Change the timing",
+        "Change the extent"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Possible side agreements with customers allowing returns: confirmations will be sent anyway",
+          "answer": "Change the nature",
+          "explanation": "Confirm the contract terms, not just balances."
+        },
+        {
+          "id": "r2",
+          "label": "High risk of year-end cutoff errors, with interim testing planned",
+          "answer": "Change the timing",
+          "explanation": "Move cutoff testing to year-end."
+        },
+        {
+          "id": "r3",
+          "label": "A larger population of risky expense transactions than last year",
+          "answer": "Change the extent",
+          "explanation": "Increase the sample size."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Must substantive procedures be performed for each material class of transactions, regardless of assessed risk?",
+          "answer": "Yes",
+          "explanation": "AU-C 330 requires substantive procedures for each material class, balance and disclosure."
+        },
+        {
+          "id": "q2",
+          "label": "May substantive analytics alone address a significant risk?",
+          "answer": "No",
+          "explanation": "Tests of details are required when only substantive procedures address a significant risk."
+        },
+        {
+          "id": "q3",
+          "label": "Is an overall response such as assigning more experienced staff appropriate for a financial-statement-level risk?",
+          "answer": "Yes",
+          "explanation": "Overall responses address pervasive risks."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "aud-tbs-r3-detection-risk",
+  "section": "AUD",
+  "unitId": "aud-u3",
+  "moduleIds": [
+    "aud-risk-materiality"
+  ],
+  "pool": "practice",
+  "title": "Materiality and detection risk — Corliss Paper",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Compute materiality amounts and acceptable detection risk for three assertions at **Corliss Paper** (private). Pretax income is **$4,000,000**.",
+  "exhibits": [
+    {
+      "title": "Firm policy",
+      "content": "Overall materiality: **5%** of pretax income.\nPerformance materiality: **70%** of overall.\nClearly trivial threshold: **5%** of overall."
+    },
+    {
+      "title": "Risk assessment (planned audit risk 5%)",
+      "content": "| Assertion | Inherent risk | Control risk |\n|---|---|---|\n| Receivables — existence | 80% | 50% |\n| Inventory — valuation | 100% | 100% |\n| Cash — existence | 40% | 50% |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "om",
+          "label": "Overall materiality",
+          "answer": 200000,
+          "explanation": "4,000,000 × 5% = **200,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "pm",
+          "label": "Performance materiality",
+          "answer": 140000,
+          "explanation": "200,000 × 70% = **140,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ct",
+          "label": "Clearly trivial threshold",
+          "answer": 10000,
+          "explanation": "200,000 × 5% = **10,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ar",
+          "label": "Detection risk — receivables existence",
+          "answer": 12.5,
+          "explanation": "5% ÷ (80% × 50%) = **12.5%**.",
+          "tolerance": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "inv",
+          "label": "Detection risk — inventory valuation",
+          "answer": 5,
+          "explanation": "5% ÷ (100% × 100%) = **5%**.",
+          "tolerance": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "cash",
+          "label": "Detection risk — cash existence",
+          "answer": 25,
+          "explanation": "5% ÷ (40% × 50%) = **25%**.",
+          "tolerance": 0.1,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "For inventory valuation (lowest detection risk), select the best planned response.",
+      "options": [
+        "More persuasive",
+        "Less persuasive"
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Testing at year-end rather than an interim date",
+          "answer": "More persuasive",
+          "explanation": "Year-end testing reduces the risk of misstatement in the roll-forward period."
+        },
+        {
+          "id": "d2",
+          "label": "Using larger sample sizes",
+          "answer": "More persuasive",
+          "explanation": "Lower detection risk calls for more evidence."
+        },
+        {
+          "id": "d3",
+          "label": "Relying mainly on inquiry of management",
+          "answer": "Less persuasive",
+          "explanation": "Inquiry alone is weak evidence."
+        },
+        {
+          "id": "d4",
+          "label": "Obtaining independent price data to test NRV",
+          "answer": "More persuasive",
+          "explanation": "External evidence is more reliable."
+        }
+      ]
+    }
+  ]
+}
