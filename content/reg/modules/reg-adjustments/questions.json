@@ -618,5 +618,177 @@
     "explanation": "Contributions to a self-employed person's own SEP are deducted as an adjustment to income, not on Schedule C (employee contributions are).",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "reg-adj-16",
+    "pool": "practice",
+    "stem": "Which taxpayer may contribute to an HSA for 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "One enrolled in Medicare Part A",
+        "explanation": "Medicare enrollment disqualifies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "One covered only by a high-deductible plan",
+        "explanation": "Correct. No other disqualifying coverage."
+      },
+      {
+        "id": "c",
+        "text": "One also covered by a low-deductible plan",
+        "explanation": "Other coverage disqualifies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "One claimed as another's dependent",
+        "explanation": "Dependents can't contribute.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "HSA eligibility requires HDHP coverage, no disqualifying other coverage, no Medicare enrollment and not being a dependent.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-adj-17",
+    "pool": "practice",
+    "stem": "A self-employed taxpayer could have joined his spouse's employer-subsidized health plan all year but bought his own policy instead. Can he deduct the premiums as an adjustment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, up to his SE earnings",
+        "explanation": "Eligibility for another plan bars it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, as an itemized deduction only",
+        "explanation": "Not the issue here.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "No, eligibility for the spouse's plan bars it",
+        "explanation": "Correct. Monthly eligibility for a subsidized plan disallows it."
+      },
+      {
+        "id": "d",
+        "text": "Yes, if he pays with business funds",
+        "explanation": "Payment source doesn't matter.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The self-employed health insurance deduction isn't allowed for months the taxpayer is eligible for a subsidized employer plan, including a spouse's.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-adj-18",
+    "pool": "practice",
+    "stem": "A single taxpayer with MAGI of $200,000 isn't covered by any workplace retirement plan. How much of a $7,000 traditional IRA contribution is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0, because MAGI is too high",
+        "explanation": "The phaseout applies to active participants.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$3,500, after a partial phaseout",
+        "explanation": "No phaseout applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$2,000 under the old limit",
+        "explanation": "The 2025 limit is $7,000.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "All $7,000",
+        "explanation": "Correct. No phaseout applies without plan coverage."
+      }
+    ],
+    "answer": "d",
+    "explanation": "If neither the taxpayer nor a spouse is an active participant, the traditional IRA deduction isn't phased out.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-adj-19",
+    "pool": "practice",
+    "stem": "A married couple filing jointly, both age 40, has $50,000 of wages earned by one spouse. What is their maximum combined IRA contribution for 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$14,000",
+        "explanation": "Correct. A spousal IRA allows $7,000 each."
+      },
+      {
+        "id": "b",
+        "text": "$7,000",
+        "explanation": "The nonworking spouse can contribute too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$16,000",
+        "explanation": "No catch-up below age 50.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "The limit is per person.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A spousal IRA lets a nonworking spouse contribute up to the limit if joint earned income covers both contributions.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-adj-20",
+    "pool": "practice",
+    "stem": "For 2025, who may deduct moving expenses as an adjustment to income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Any employee moving 50 miles for work",
+        "explanation": "That pre-2018 rule is suspended.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Active-duty military moving under orders",
+        "explanation": "Correct. The deduction is otherwise suspended."
+      },
+      {
+        "id": "c",
+        "text": "Self-employed workers who relocate",
+        "explanation": "Suspended for them too.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "Retirees moving to a new state",
+        "explanation": "Retirees aren't eligible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "For 2025, only members of the Armed Forces on active duty moving under military orders may deduct moving expenses.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

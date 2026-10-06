@@ -831,5 +831,177 @@
     "skill": "application",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "reg-cg-22",
+    "pool": "practice",
+    "stem": "An individual sells investment land held 11 months at a $20,000 gain. How is it taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As long-term capital gain",
+        "explanation": "The holding period is too short.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "As §1231 ordinary income",
+        "explanation": "It's investment land.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "At the 28% collectibles rate",
+        "explanation": "That's for collectibles.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As short-term capital gain",
+        "explanation": "Correct. It was held one year or less."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Assets held one year or less produce short-term capital gain, taxed at ordinary rates.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-23",
+    "pool": "practice",
+    "stem": "An individual sells her personal boat, held 4 years, at a $5,000 gain. How is the gain treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As long-term capital gain",
+        "explanation": "Correct. Gains on personal assets are taxable."
+      },
+      {
+        "id": "b",
+        "text": "As nontaxable, being personal",
+        "explanation": "Only losses are disallowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As ordinary income",
+        "explanation": "It's a capital asset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As a §1231 gain on business use",
+        "explanation": "It isn't business property.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Personal-use assets are capital assets; gains are taxable even though losses aren't deductible.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-24",
+    "pool": "practice",
+    "stem": "An individual has a $10,000 net short-term capital loss and a $15,000 net long-term capital gain. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $5,000 net short-term gain",
+        "explanation": "The net is long-term.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A $5,000 net long-term gain",
+        "explanation": "Correct. Taxed at preferential rates."
+      },
+      {
+        "id": "c",
+        "text": "A $3,000 loss deduction",
+        "explanation": "There's a net gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A $15,000 gain; loss carried",
+        "explanation": "They net first.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A net short-term loss offsets net long-term gain; the remainder is net long-term capital gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-cg-25",
+    "pool": "practice",
+    "stem": "An individual receives capital gain distributions from a mutual fund she bought 2 months ago. How are they treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As short-term capital gain",
+        "explanation": "The fund's holding period controls.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As ordinary dividends",
+        "explanation": "They're capital gains.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As long-term capital gain",
+        "explanation": "Correct. Regardless of her holding period."
+      },
+      {
+        "id": "d",
+        "text": "As a return of capital",
+        "explanation": "They're income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Capital gain distributions are long-term capital gain regardless of how long the shareholder has held the fund.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cg-26",
+    "pool": "practice",
+    "stem": "For 2025, the 0% rate applies to single filers with taxable income up to $48,350. A single filer has $60,000 of taxable income, including $20,000 of LTCG. What is the tax on the LTCG?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000",
+        "explanation": "Part falls in the 0% band.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Not all fits under $48,350.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$1,252.50",
+        "explanation": "Ordinary income fills the band first.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$1,747.50",
+        "explanation": "Correct. $8,350 at 0%; $11,650 at 15%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Ordinary income ($40,000) fills the brackets first; $8,350 of LTCG is taxed at 0% and $11,650 at 15%.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

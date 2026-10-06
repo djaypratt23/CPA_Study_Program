@@ -614,5 +614,177 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "reg-gi-16",
+    "pool": "practice",
+    "stem": "A degree candidate receives a $30,000 scholarship: $18,000 for tuition and $12,000 for room and board. How much is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Room and board is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Tuition is excluded.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$12,000",
+        "explanation": "Correct. Room and board isn't excludable."
+      },
+      {
+        "id": "d",
+        "text": "$18,000",
+        "explanation": "That's the excluded part.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§117 excludes scholarships used for tuition and required fees, not room and board.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-gi-17",
+    "pool": "practice",
+    "stem": "A beneficiary elects to receive life insurance proceeds in installments, including interest. How are they taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All installments are taxable",
+        "explanation": "The face amount is excluded.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Nothing is taxable",
+        "explanation": "Interest is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Half of each payment is taxable",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Interest is taxable; principal isn't",
+        "explanation": "Correct. Only the interest element."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Death benefits are excluded, but interest on installment payouts is taxable.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-gi-18",
+    "pool": "practice",
+    "stem": "How is jury duty pay treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As taxable income",
+        "explanation": "Correct. It's included in gross income."
+      },
+      {
+        "id": "b",
+        "text": "As excluded income",
+        "explanation": "Jury pay is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As excluded if under $500",
+        "explanation": "No such exclusion.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "As a gift",
+        "explanation": "It's compensation.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Jury duty pay is taxable; it may be deducted for AGI if remitted to an employer.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-19",
+    "pool": "practice",
+    "stem": "An employer forgives a $10,000 loan it made to an employee. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a nontaxable gift",
+        "explanation": "Employer gifts are compensation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As compensation income",
+        "explanation": "Correct. It's taxable wages."
+      },
+      {
+        "id": "c",
+        "text": "As excluded debt relief",
+        "explanation": "Not an exclusion here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a capital gain",
+        "explanation": "It's ordinary income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Forgiveness of an employee's debt by an employer is compensation income.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-20",
+    "pool": "practice",
+    "stem": "After a car accident, a taxpayer receives $200,000 of compensatory damages for physical injuries and $50,000 of punitive damages. How much is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Punitive damages are taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$250,000",
+        "explanation": "Physical injury damages are excluded.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Correct. Punitive damages are taxable."
+      },
+      {
+        "id": "d",
+        "text": "$200,000",
+        "explanation": "That's the excluded part.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§104 excludes compensatory damages for physical injury; punitive damages are taxable.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

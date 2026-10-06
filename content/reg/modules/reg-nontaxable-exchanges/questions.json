@@ -907,5 +907,177 @@
     "explanation": "A sale whose gain is fully excluded generally isn't reported unless the taxpayer received Form 1099-S or chooses not to exclude the gain.",
     "skill": "remembering",
     "difficulty": 1
+  },
+  {
+    "id": "reg-nt-24",
+    "pool": "practice",
+    "stem": "A single taxpayer owned and lived in her home for 18 months, then sold it after a divorce (a qualifying unforeseen circumstance) at a $200,000 gain. How much is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "The limit is prorated.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "A reduced exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$12,500",
+        "explanation": "Correct. Limit is $250,000 × 18/24 = $187,500."
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Prorate the limit, not the gain.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A reduced maximum exclusion applies when a sale is due to unforeseen circumstances.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-25",
+    "pool": "practice",
+    "stem": "A widow sells the home she and her late husband lived in, which he alone owned for 10 years. She inherited it 1 year ago. Does she meet the ownership test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, she owned it only 1 year",
+        "explanation": "His period is tacked.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only if she remarries",
+        "explanation": "Not a condition.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Only for half the gain",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Yes, his ownership counts as hers",
+        "explanation": "Correct. A surviving spouse tacks the deceased's periods."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§121(d)(2): an unmarried surviving spouse includes the deceased spouse's ownership and use periods.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-nt-26",
+    "pool": "practice",
+    "stem": "A taxpayer sells her home and, 6 months later, the adjacent vacant lot she used as part of the residence. Can the lot qualify for the exclusion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, within the 2-year window",
+        "explanation": "Correct. Adjacent land can qualify."
+      },
+      {
+        "id": "b",
+        "text": "No, vacant land never qualifies",
+        "explanation": "Adjacent land can qualify.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Only if the lot is sold first",
+        "explanation": "It may be sold within 2 years after.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Only for joint filers",
+        "explanation": "Not a condition.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Vacant land adjacent to and used as part of the residence can qualify if sold within 2 years before or after the home.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-nt-27",
+    "pool": "practice",
+    "stem": "Spouses file jointly and both own a home. Only the wife lived there 2 of the last 5 years; the husband moved in 1 year ago. Neither used the exclusion recently. The gain is $400,000. How much is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "Both must meet the use test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$150,000",
+        "explanation": "Correct. Only the wife's $250,000 applies."
+      },
+      {
+        "id": "c",
+        "text": "$400,000",
+        "explanation": "The wife qualifies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "If only one spouse meets the use test, the limit is the sum of each spouse's limit as if unmarried: $250,000 + $0.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-nt-28",
+    "pool": "practice",
+    "stem": "An elderly owner lived in his home 18 months, then moved to a licensed nursing home for 3 years because he became physically incapable of self-care. Does the nursing home time count as use?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, he didn't live there",
+        "explanation": "The special rule applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only for the first year",
+        "explanation": "All the time counts.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Yes",
+        "explanation": "Correct. He used the home at least 1 year first."
+      },
+      {
+        "id": "d",
+        "text": "Only if a spouse stayed",
+        "explanation": "That isn't required.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§121(d)(7): time in a licensed facility counts as use if the owner used the home at least 1 year of the 5 and became incapable of self-care.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]
