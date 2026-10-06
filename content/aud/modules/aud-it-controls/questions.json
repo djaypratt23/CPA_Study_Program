@@ -133,7 +133,7 @@
     "answer": "c",
     "explanation": "A hash total sums a non-financial field, such as employee or vendor numbers.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-itc-02",
@@ -201,7 +201,7 @@
     "answer": "d",
     "explanation": "A limit test flags values above a predetermined maximum.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-itc-04",
@@ -269,7 +269,7 @@
     "answer": "a",
     "explanation": "Separate systems development (programming) from operations and from user departments; programmers should not access production programs or live data.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-itc-06",
@@ -337,7 +337,7 @@
     "answer": "a",
     "explanation": "Output controls include reconciling output to input, reviewing exception reports, and controlling report distribution.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-itc-08",
@@ -371,7 +371,7 @@
     "answer": "b",
     "explanation": "AU-C 315 (SAS 145): understand the IT environment, identify the applications and other aspects subject to risks arising from IT, and identify the related ITGCs.",
     "skill": "remembering",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "aud-itc-09",
@@ -405,7 +405,7 @@
     "answer": "b",
     "explanation": "Matching counts with different amounts point to a keying error. A difference of 180 (divisible by 9) is typical of a transposition (e.g., 1,420 keyed as 1,240).",
     "skill": "analysis",
-    "difficulty": 2,
+    "difficulty": 3,
     "calc": true
   },
   {
@@ -475,5 +475,141 @@
     "explanation": "Cloud-hosted applications: use a SOC 1 type 2 report and test complementary user entity controls.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "aud-itc-12",
+    "pool": "practice",
+    "stem": "Accounts of terminated employees remain active in the ERP system for months. What is the main audit concern?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Overstated payroll expense only",
+        "explanation": "The concern is broader than payroll.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Slower system performance",
+        "explanation": "Performance isn't the audit concern.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Higher software license costs",
+        "explanation": "Costs aren't the audit concern.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Unauthorized access to data",
+        "explanation": "Correct. Weak access controls reduce reliance on automated controls."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Deficient logical access controls (a general IT control) can undermine the reliability of application controls and data.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-13",
+    "pool": "practice",
+    "stem": "In the prior year the auditor tested an automated control. Program change controls were effective this year, and the program hasn't changed. What may the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Use benchmarking to reduce this year's testing",
+        "explanation": "Correct. With effective ITGCs and no changes, prior testing may be relied on."
+      },
+      {
+        "id": "b",
+        "text": "Skip all testing of ITGCs",
+        "explanation": "ITGCs must still be tested.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Retest the control fully every year",
+        "explanation": "Benchmarking allows less testing.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Assume all manual controls are effective",
+        "explanation": "Benchmarking applies to automated controls.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Benchmarking: if general controls over program changes are effective and the automated control hasn't changed, the auditor may rely on previous testing.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-itc-14",
+    "pool": "practice",
+    "stem": "Which control best protects against loss of accounting data from a server failure?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Batch control totals",
+        "explanation": "Batch totals check input completeness.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Regular off-site backups",
+        "explanation": "Correct. Backups allow data to be restored."
+      },
+      {
+        "id": "c",
+        "text": "Segregation of duties",
+        "explanation": "Segregation addresses fraud and error.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Password complexity rules",
+        "explanation": "Passwords address unauthorized access.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Backup and recovery procedures are general IT controls supporting data availability.",
+    "skill": "application",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-itc-15",
+    "pool": "practice",
+    "stem": "During the audit, the client suffers a ransomware attack that encrypted parts of its accounting data before being contained. How should the auditor respond?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ignore it, because it was contained",
+        "explanation": "Its effect on data must be evaluated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Disclaim an opinion immediately",
+        "explanation": "Further procedures may provide sufficient evidence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Reassess risks to data integrity and related controls",
+        "explanation": "Correct. A cyber incident may affect the reliability of information and the risk assessment."
+      },
+      {
+        "id": "d",
+        "text": "Rely on management's assurance that data is intact",
+        "explanation": "Assurances need corroboration.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A cybersecurity incident can affect the integrity of financial data and controls, requiring the auditor to revise the risk assessment and procedures.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]
