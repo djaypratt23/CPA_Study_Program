@@ -781,5 +781,243 @@
     "explanation": "Parallel simulation reprocesses actual data using auditor-controlled software.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "aud-itc-21",
+    "pool": "practice",
+    "stem": "Which of these is an IT general control?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Change management",
+        "explanation": "Correct. It covers all applications."
+      },
+      {
+        "id": "b",
+        "text": "Edit checks on data input",
+        "explanation": "That's an application control.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Batch control totals",
+        "explanation": "That's an application control.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Automated three-way matching",
+        "explanation": "That's an application control.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ITGCs include access, change management and IT operations controls.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-itc-22",
+    "pool": "practice",
+    "stem": "What is a limit check?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A backup and recovery procedure",
+        "explanation": "Not an edit check.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "An input validation control",
+        "explanation": "Correct. It rejects values above a set amount."
+      },
+      {
+        "id": "c",
+        "text": "A physical access restriction",
+        "explanation": "Not an edit check.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A password complexity rule",
+        "explanation": "Not an edit check.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A limit check is an input control that flags values exceeding a predetermined limit.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-23",
+    "pool": "practice",
+    "stem": "What is a hash total?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The total dollar value of a batch",
+        "explanation": "That's a financial total.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A count of records in a file",
+        "explanation": "That's a record count.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A sum of a nonfinancial field",
+        "explanation": "Correct. It checks batch completeness."
+      },
+      {
+        "id": "d",
+        "text": "A password encryption method",
+        "explanation": "That is not related.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Hash totals add a meaningless field, such as account numbers, to verify completeness.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-itc-24",
+    "pool": "practice",
+    "stem": "Developers can move code into production without approval. What is the audit implication?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No implication for the audit",
+        "explanation": "It affects reliance.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only manual controls are affected",
+        "explanation": "Automated ones are affected.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "Only the backup process is affected",
+        "explanation": "That is not the issue.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Automated controls are suspect",
+        "explanation": "Correct. Change control failures affect all programs."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Weak change management undermines reliance on automated application controls.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-itc-25",
+    "pool": "practice",
+    "stem": "One user can edit the vendor master file and approve payments. What is the issue?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A segregation conflict",
+        "explanation": "Correct. It enables fictitious vendors."
+      },
+      {
+        "id": "b",
+        "text": "No issue if changes are logged",
+        "explanation": "Logging doesn't prevent it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A backup weakness",
+        "explanation": "That is not the issue.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "An input edit failure",
+        "explanation": "That is not the issue.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Combining master file maintenance with payment approval is an access-based segregation conflict.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-itc-26",
+    "pool": "practice",
+    "stem": "ITGCs are ineffective, and the auditor planned to rely on automated application controls. What should the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Rely on the controls anyway",
+        "explanation": "ITGCs support them.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Do more substantive work",
+        "explanation": "Correct. Reliance isn't supported."
+      },
+      {
+        "id": "c",
+        "text": "Disclaim an opinion",
+        "explanation": "Substantive work can compensate.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Reduce substantive testing",
+        "explanation": "It should be increased.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "When ITGCs fail, the auditor generally can't rely on automated controls and increases substantive procedures.",
+    "skill": "evaluation",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-itc-27",
+    "pool": "practice",
+    "stem": "A service organization's SOC 1 Type 2 report carves out a subservice organization with relevant controls. What should the user auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ignore the subservice controls",
+        "explanation": "They're relevant.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Rely on the carve-out report alone",
+        "explanation": "It excludes them.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Get evidence on the subservice",
+        "explanation": "Correct. For example, its own SOC 1 report."
+      },
+      {
+        "id": "d",
+        "text": "Disclaim an opinion",
+        "explanation": "Evidence may be available.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under the carve-out method, the user auditor needs evidence about relevant subservice controls from other sources.",
+    "skill": "evaluation",
+    "difficulty": 3
   }
 ]
