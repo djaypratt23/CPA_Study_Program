@@ -611,5 +611,175 @@
     "explanation": "Validate completeness and accuracy of extracted data against control totals before analysis.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "aud-da-16",
+    "pool": "practice",
+    "stem": "An auditor groups all invoices by dollar range to focus on large items. Which ADA technique is this?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Stratification",
+        "explanation": "Correct. The population is divided into groups."
+      },
+      {
+        "id": "b",
+        "text": "Regression",
+        "explanation": "That models relationships.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Benford analysis",
+        "explanation": "That tests digit frequency.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Gap detection",
+        "explanation": "That finds missing numbers.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Stratification divides a population into subgroups, often by amount.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-da-17",
+    "pool": "practice",
+    "stem": "An auditor models monthly utility expense against production hours to set an expectation. Which technique is this?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ratio analysis",
+        "explanation": "Regression models the relationship.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Regression",
+        "explanation": "Correct. It builds an expectation from a related driver."
+      },
+      {
+        "id": "c",
+        "text": "Trend analysis",
+        "explanation": "Not a model on a driver.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Stratification",
+        "explanation": "It groups data.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Regression develops a precise expectation from relationships between variables, useful in substantive analytics.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-da-18",
+    "pool": "practice",
+    "stem": "Which ADA best detects duplicate vendor payments?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Sorting all payments by date",
+        "explanation": "It doesn't match payments.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Totaling payments by month",
+        "explanation": "It hides duplicates.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Matching key payment fields",
+        "explanation": "Correct. Duplicates share these fields."
+      },
+      {
+        "id": "d",
+        "text": "Benford's first-digit test",
+        "explanation": "Not designed for duplicates.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A duplicate-payment test looks for matching vendor, amount, invoice number or date.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-da-19",
+    "pool": "practice",
+    "stem": "A full-population ADA on revenue finds no exceptions. What should the auditor still consider?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing; the test covered everything",
+        "explanation": "Data integrity still matters.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only the remaining sampling risk",
+        "explanation": "There's no sampling risk.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Only the ADA tool's vendor",
+        "explanation": "Data reliability matters more.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "The data's completeness and accuracy",
+        "explanation": "Correct. The result depends on data integrity."
+      }
+    ],
+    "answer": "d",
+    "explanation": "An ADA's conclusions are only as good as the underlying data, so the auditor evaluates its completeness and accuracy.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-da-20",
+    "pool": "practice",
+    "stem": "Process mining of the purchasing system shows some orders were paid before goods were received. What does this indicate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Possible control bypasses",
+        "explanation": "Correct. The expected sequence was skipped."
+      },
+      {
+        "id": "b",
+        "text": "Nothing, if amounts agree",
+        "explanation": "Sequence matters for controls.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A data-extraction error only",
+        "explanation": "It may reflect real bypasses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Revenue overstatement",
+        "explanation": "It's a purchasing issue.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Process mining compares actual transaction flows with expected sequences to identify control deviations.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

@@ -611,5 +611,175 @@
     "explanation": "A cybersecurity incident can affect the integrity of financial data and controls, requiring the auditor to revise the risk assessment and procedures.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "aud-itc-16",
+    "pool": "practice",
+    "stem": "Which input control detects a transposed digit in a customer account number?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A record count of the batch",
+        "explanation": "It counts records only.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A check digit",
+        "explanation": "Correct. It validates the number's arithmetic."
+      },
+      {
+        "id": "c",
+        "text": "A limit or reasonableness test",
+        "explanation": "It checks amounts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A batch control total of amounts",
+        "explanation": "It doesn't check account numbers.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A check digit is computed from the other digits and detects transpositions.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-17",
+    "pool": "practice",
+    "stem": "Which control best prevents unauthorized changes to the payroll master file?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reviewing payroll reports after each run",
+        "explanation": "That detects, not prevents.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Monthly reconciliation of payroll to GL",
+        "explanation": "That detects, not prevents.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Role-based access",
+        "explanation": "Correct. Only authorized users can change it."
+      },
+      {
+        "id": "d",
+        "text": "Daily backup of the master file",
+        "explanation": "That's for recovery.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Logical access controls restrict who can change master data.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-itc-18",
+    "pool": "practice",
+    "stem": "A database administrator can grant herself application access and approve her own access changes. What is the main risk?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Slower system performance overall",
+        "explanation": "Not the main risk.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "b",
+        "text": "Loss of backups after an outage",
+        "explanation": "Not the main risk.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Inaccurate depreciation calculations",
+        "explanation": "Not related to these facts.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "Unauthorized data changes",
+        "explanation": "Correct. Incompatible duties are combined."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Combining access administration with approval lets one person make unauthorized changes undetected.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-itc-19",
+    "pool": "practice",
+    "stem": "ITGCs over program changes were ineffective all year. How does this affect planned reliance on automated application controls?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Less reliance; more substantive work",
+        "explanation": "Correct. Controls may not have operated consistently."
+      },
+      {
+        "id": "b",
+        "text": "No effect if the controls worked at year-end",
+        "explanation": "Consistency over the year is in doubt.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Reliance on them increases",
+        "explanation": "The deficiency reduces reliance.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Only manual controls are affected",
+        "explanation": "Automated controls depend on ITGCs.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ineffective ITGCs undermine assurance that automated controls operated consistently, so the auditor increases substantive work.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-itc-20",
+    "pool": "practice",
+    "stem": "The auditor uses its own software to reprocess client payroll data and compares the results with the client's output. What is this technique?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Test data submitted to the client system",
+        "explanation": "That uses the client's program.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Parallel simulation",
+        "explanation": "Correct. Auditor software replicates processing."
+      },
+      {
+        "id": "c",
+        "text": "An integrated test facility",
+        "explanation": "That uses dummy entities.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Embedded audit modules",
+        "explanation": "Those are built into the system.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Parallel simulation reprocesses actual data using auditor-controlled software.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]
