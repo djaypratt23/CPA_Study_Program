@@ -1,0 +1,91 @@
+{
+  "id": "far-tbs-r3-contingencies",
+  "section": "FAR",
+  "unitId": "far-u12",
+  "moduleIds": [
+    "far-contingencies",
+    "far-subsequent-events"
+  ],
+  "pool": "practice",
+  "title": "Contingencies and subsequent events — Lindqvist Mfg.",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Lindqvist Mfg.'s December 31, Year 1 statements will be issued March 15, Year 2. Determine the treatment of each matter and compute the year-end liabilities.",
+  "exhibits": [
+    {
+      "title": "Matters",
+      "content": "A. A customer lawsuit: counsel says loss is probable, estimated at **$200,000–$500,000**, with **$300,000** the best estimate.\nB. A $1,000,000 patent claim: counsel says an unfavorable outcome is reasonably possible.\nC. Warranties: Year 1 sales of **$2,000,000** carry a 1-year assurance warranty; expected claims are **2%** of sales; **$15,000** of claims were paid in Year 1.\nD. A November Year 1 forklift accident: at year-end counsel said loss was probable but couldn't estimate it. On February 10, Year 2, the case settled for **$120,000**.\nE. On February 20, Year 2, a fire destroyed a warehouse (uninsured loss **$700,000**).\nF. The company self-insures its delivery fleet against collision; no accidents occurred in Year 1."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "t",
+      "prompt": "Select the treatment of each matter in the Year 1 statements.",
+      "options": [
+        "Accrue a liability",
+        "Disclose only",
+        "Neither accrue nor disclose"
+      ],
+      "rows": [
+        {
+          "id": "a",
+          "label": "A. Customer lawsuit",
+          "answer": "Accrue a liability",
+          "explanation": "Probable and estimable: accrue the best estimate."
+        },
+        {
+          "id": "b",
+          "label": "B. Patent claim",
+          "answer": "Disclose only",
+          "explanation": "Reasonably possible losses are disclosed, not accrued."
+        },
+        {
+          "id": "c",
+          "label": "C. Warranties",
+          "answer": "Accrue a liability",
+          "explanation": "Assurance warranty costs are accrued as sales occur."
+        },
+        {
+          "id": "dd",
+          "label": "D. Forklift accident",
+          "answer": "Accrue a liability",
+          "explanation": "The settlement gives evidence about a condition at year-end (recognized subsequent event)."
+        },
+        {
+          "id": "e",
+          "label": "E. Warehouse fire",
+          "answer": "Disclose only",
+          "explanation": "A condition arising after year-end is a nonrecognized event; disclose if material."
+        },
+        {
+          "id": "f",
+          "label": "F. Self-insurance",
+          "answer": "Neither accrue nor disclose",
+          "explanation": "No loss has occurred; future losses aren't accrued."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the year-end amounts.",
+      "rows": [
+        {
+          "id": "law",
+          "label": "Total accrued litigation liabilities (A and D)",
+          "answer": 420000,
+          "explanation": "300,000 + 120,000 = **420,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "war",
+          "label": "Warranty liability",
+          "answer": 25000,
+          "explanation": "2% × 2,000,000 = 40,000 − 15,000 paid = **25,000**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

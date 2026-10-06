@@ -1,0 +1,127 @@
+{
+  "id": "far-tbs-r3-equity-method",
+  "section": "FAR",
+  "unitId": "far-u7",
+  "moduleIds": [
+    "far-equity-investments"
+  ],
+  "pool": "practice",
+  "title": "Equity method investment — Halden Corp.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "On January 1, Year 1, Halden Corp. paid **$900,000** for 30% of Bryce Inc.'s voting stock and gained significant influence. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Acquisition data",
+      "content": "Bryce's book value of net assets on January 1: **$2,500,000**.\n\nBryce's building was undervalued by **$200,000** (remaining life **20 years**, straight-line). Any other excess is goodwill."
+    },
+    {
+      "title": "Bryce, Year 1",
+      "content": "Net income: **$400,000**\n\nDividends declared and paid: **$100,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following for Year 1.",
+      "rows": [
+        {
+          "id": "share",
+          "label": "Halden's share of Bryce's net income",
+          "answer": 120000,
+          "explanation": "30% × 400,000 = **120,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dep",
+          "label": "Amortization of the excess fair value of the building",
+          "answer": 3000,
+          "explanation": "30% × 200,000 = 60,000 ÷ 20 years = **3,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "inc",
+          "label": "Equity in earnings of Bryce reported by Halden",
+          "answer": 117000,
+          "explanation": "120,000 − 3,000 = **117,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "gw",
+          "label": "Goodwill embedded in the investment",
+          "answer": 90000,
+          "explanation": "900,000 − (30% × 2,500,000 = 750,000) − 60,000 = **90,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "end",
+          "label": "Investment carrying amount at December 31",
+          "answer": 987000,
+          "explanation": "900,000 + 117,000 − 30,000 dividends = **987,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "j",
+      "prompt": "Record Halden's equity in Bryce's earnings for Year 1.",
+      "accounts": [
+        "Investment in Bryce",
+        "Equity in earnings of Bryce",
+        "Dividend income",
+        "Cash",
+        "Goodwill",
+        "Unrealized gain (OCI)"
+      ],
+      "lines": [
+        {
+          "account": "Investment in Bryce",
+          "debit": 117000
+        },
+        {
+          "account": "Equity in earnings of Bryce",
+          "credit": 117000
+        }
+      ],
+      "explanation": "The share of income, net of excess amortization, increases the investment."
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "How should each investment be accounted for?",
+      "options": [
+        "Equity method",
+        "Fair value through net income",
+        "Consolidation"
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "label": "15% of a listed company, plus 2 of 7 board seats and key technology sharing",
+          "answer": "Equity method",
+          "explanation": "Board representation and technology dependence indicate significant influence."
+        },
+        {
+          "id": "d2",
+          "label": "25% of a listed company; a single investor holds the other 75% and ignores the investor",
+          "answer": "Fair value through net income",
+          "explanation": "Significant influence is lacking despite 25%."
+        },
+        {
+          "id": "d3",
+          "label": "60% of the voting stock of a private company",
+          "answer": "Consolidation",
+          "explanation": "Control requires consolidation."
+        },
+        {
+          "id": "d4",
+          "label": "5% of a listed company with no other relationship",
+          "answer": "Fair value through net income",
+          "explanation": "Equity securities with readily determinable fair values are measured at FV-NI."
+        }
+      ]
+    }
+  ]
+}

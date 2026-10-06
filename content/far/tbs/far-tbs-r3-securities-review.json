@@ -1,0 +1,97 @@
+{
+  "id": "far-tbs-r3-securities-review",
+  "section": "FAR",
+  "unitId": "far-u7",
+  "moduleIds": [
+    "far-debt-securities"
+  ],
+  "pool": "practice",
+  "title": "Debt securities schedule review — Orbis Co.",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Review Orbis Co.'s year-end schedule of debt securities. Flag each amount in error and enter the correct amount. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Holdings at December 31",
+      "content": "| Security | Classification | Amortized cost | Fair value |\n|---|---|---|---|\n| Bond A | Trading | 100,000 | 104,000 |\n| Bond B | Available-for-sale | 200,000 | 194,000 |\n| Bond C | Held-to-maturity | see below | 151,000 |\n\nNo credit losses are expected on any bond."
+    },
+    {
+      "title": "Bond C",
+      "content": "Bought January 1 for **$146,830** (face $150,000; 5% annual coupon paid December 31; effective yield **6%**). Orbis uses the effective interest method."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "c",
+      "prompt": "Bond C for the year.",
+      "rows": [
+        {
+          "id": "ir",
+          "label": "Interest revenue",
+          "answer": 8810,
+          "explanation": "146,830 × 6% = **8,810** (rounded).",
+          "tolerance": 1
+        },
+        {
+          "id": "am",
+          "label": "Discount amortization",
+          "answer": 1310,
+          "explanation": "8,810 − 7,500 coupon = **1,310**.",
+          "tolerance": 1
+        },
+        {
+          "id": "cv",
+          "label": "Amortized cost at December 31",
+          "answer": 148140,
+          "explanation": "146,830 + 1,310 = **148,140**.",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "id": "r",
+      "prompt": "Review the prepared amounts.",
+      "preparedLabel": "Per Orbis schedule",
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Bond A balance sheet amount",
+          "prepared": 104000,
+          "answer": 104000,
+          "explanation": "Trading securities are carried at fair value: correct."
+        },
+        {
+          "id": "r2",
+          "label": "Bond B balance sheet amount",
+          "prepared": 200000,
+          "answer": 194000,
+          "explanation": "AFS securities are carried at fair value, **194,000**."
+        },
+        {
+          "id": "r3",
+          "label": "Bond C balance sheet amount",
+          "prepared": 151000,
+          "answer": 148140,
+          "explanation": "HTM is carried at amortized cost, **148,140**, not fair value.",
+          "tolerance": 1
+        },
+        {
+          "id": "r4",
+          "label": "Unrealized gain on Bond A in net income",
+          "prepared": 0,
+          "answer": 4000,
+          "explanation": "Trading gains go to net income: **4,000**."
+        },
+        {
+          "id": "r5",
+          "label": "Unrealized loss on Bond B in OCI",
+          "prepared": 6000,
+          "answer": 6000,
+          "explanation": "With no credit loss, the decline goes to OCI: correct."
+        }
+      ]
+    }
+  ]
+}

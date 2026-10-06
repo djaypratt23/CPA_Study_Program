@@ -1,0 +1,105 @@
+{
+  "id": "far-tbs-r3-property-tax",
+  "section": "FAR",
+  "unitId": "far-u4",
+  "moduleIds": [
+    "far-government"
+  ],
+  "pool": "practice",
+  "title": "Property taxes and fund classification — City of Ashford",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "The City of Ashford (60-day availability period) levied property taxes for its fiscal year. Classify the transactions by fund and compute the property tax amounts.",
+  "exhibits": [
+    {
+      "title": "Property tax levy",
+      "content": "Levy for the year: **$5,000,000**; estimated uncollectible: **2%**.\nCollected during the year: **$4,600,000**.\nCollected in the first 60 days after year-end: **$150,000**; the rest is expected later."
+    },
+    {
+      "title": "Other activities",
+      "content": "1. Water utility billing residents for usage\n2. Bond proceeds restricted to building a new library\n3. Gas tax revenues legally restricted to road maintenance\n4. Accumulating resources to pay principal and interest on general obligation bonds\n5. A central motor pool that charges city departments\n6. An endowment whose earnings (but not principal) support park upkeep"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Property tax amounts for the year.",
+      "rows": [
+        {
+          "id": "fund",
+          "label": "General fund property tax revenue (modified accrual)",
+          "answer": 4750000,
+          "explanation": "Collected (4,600,000) + collected within 60 days (150,000) = **4,750,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "defi",
+          "label": "Deferred inflows of resources — property taxes",
+          "answer": 150000,
+          "explanation": "Net receivable 300,000 − 150,000 available = **150,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "gw",
+          "label": "Government-wide property tax revenue",
+          "answer": 4900000,
+          "explanation": "Accrual basis: levy net of uncollectibles, 5,000,000 × 98% = **4,900,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Select the fund for each activity.",
+      "options": [
+        "General fund",
+        "Special revenue fund",
+        "Capital projects fund",
+        "Debt service fund",
+        "Permanent fund",
+        "Enterprise fund",
+        "Internal service fund"
+      ],
+      "rows": [
+        {
+          "id": "a1",
+          "label": "1",
+          "answer": "Enterprise fund",
+          "explanation": "Fees charged to external users for services."
+        },
+        {
+          "id": "a2",
+          "label": "2",
+          "answer": "Capital projects fund",
+          "explanation": "Resources restricted to acquiring major capital facilities."
+        },
+        {
+          "id": "a3",
+          "label": "3",
+          "answer": "Special revenue fund",
+          "explanation": "Revenue restricted to a specified purpose other than debt or capital projects."
+        },
+        {
+          "id": "a4",
+          "label": "4",
+          "answer": "Debt service fund",
+          "explanation": "Accumulates resources for general long-term debt service."
+        },
+        {
+          "id": "a5",
+          "label": "5",
+          "answer": "Internal service fund",
+          "explanation": "Services provided to other departments on a cost-reimbursement basis."
+        },
+        {
+          "id": "a6",
+          "label": "6",
+          "answer": "Permanent fund",
+          "explanation": "Principal must be preserved; earnings support the government's programs."
+        }
+      ]
+    }
+  ]
+}
