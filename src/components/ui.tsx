@@ -75,3 +75,15 @@ export function StatusChip({ status }: { status: string }) {
   const s = STATUS_STYLES[status] ?? STATUS_STYLES['not-started']
   return <span className={`chip ${s.cls}`}>{s.label}</span>
 }
+
+/**
+ * Props for amount inputs. The iOS decimal keypad has no minus sign or parentheses, so amounts use the
+ * text keyboard; the pattern flags anything parseAmount would reject.
+ */
+export const amountInputProps = {
+  inputMode: 'text',
+  autoComplete: 'off',
+  autoCorrect: 'off',
+  spellCheck: false,
+  pattern: String.raw`\s*[\-−]?\s*\$?\s*\(?\s*\$?[\d,]*\.?\d+\s*%?\s*\)?\s*`,
+} as const

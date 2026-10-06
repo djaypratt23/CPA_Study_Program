@@ -13,6 +13,10 @@ objectives:
   - text: Classify control deficiencies and determine the required communications.
     skill: evaluation
     task: Evaluate the severity of control deficiencies and communicate them
+  - text: Evaluate identified control deficiencies, including the effect of misstatements on the ICFR assessment, and determine their impact on the nature, timing and extent of further procedures.
+    skill: evaluation
+  - text: Define internal control under COSO, including its objectives and inherent limitations, and relate the limitations to the risk of material misstatement.
+    skill: remembering
 bigIdea:
   what: >-
     Internal control is the set of processes that gives reasonable assurance the entity's reporting is reliable,
@@ -108,3 +112,28 @@ aud-ic-chk2
 - Timing: best by the report release date, and no later than **60 days** after it.
 - The communication states that the audit was not designed to express an opinion on internal control, and its use is restricted.
 - The auditor should **not** issue a written communication stating that no significant deficiencies were identified. (A communication that no *material weaknesses* were identified may be issued, for example for a regulator.)
+
+## From deficiency to audit response
+
+Classify the deficiency, then follow it through to the audit plan:
+
+| Severity | Typical indicators | Effect on the audit |
+|---|---|---|
+| Control deficiency | Effective compensating control, or low potential misstatement | Usually no change to planned substantive work |
+| Significant deficiency | Reasonably possible misstatement, less than material but merits governance attention | Rely less on the control: more extensive substantive procedures, performed nearer to year-end, with more reliable evidence |
+| Material weakness | Reasonable possibility of a **material** misstatement not prevented or detected — for example, a material misstatement found by the auditor that controls missed | Integrated audit: adverse opinion on ICFR; expand substantive procedures in the area |
+
+A misstatement found by substantive testing tells you about the controls too. Ask which control should have caught it. A material weakness in ICFR does not by itself change the financial statement opinion if the misstatement is corrected.
+
+## COSO objectives and inherent limitations
+
+COSO defines internal control as a process, effected by the board, management and other personnel, designed to provide **reasonable assurance** about achieving objectives in three categories: **operations**, **reporting** and **compliance**.
+
+Internal control can provide only reasonable — not absolute — assurance because of **inherent limitations**:
+
+- human **judgment** errors and simple **breakdowns** (mistakes, misunderstanding);
+- **collusion** by two or more people, which defeats segregation of duties;
+- **management override** of controls;
+- **cost–benefit** constraints on what controls are implemented.
+
+Because of these limitations, the auditor can never assess control risk so low that no substantive procedures are needed for material classes of transactions, balances and disclosures, and must always respond to the risk of management override.

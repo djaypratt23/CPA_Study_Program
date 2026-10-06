@@ -1,0 +1,107 @@
+{
+  "id": "tcp-tbs-u4-partner-basis-review",
+  "section": "TCP",
+  "unitId": "tcp-u4",
+  "moduleIds": [
+    "tcp-partnership-formation",
+    "tcp-passive-rental"
+  ],
+  "pool": "practice",
+  "title": "Review a partner's basis schedule and loss limitations — Omar Haddad",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Omar Haddad is a limited partner in Crestline Properties LP. His preparer computed his 2025 outside basis and the deductible share of the partnership's loss. Review the schedule against the source data. Apply the limits in order: basis, at-risk, then passive. Tick every amount that is wrong and enter the correct amount. Enter decreases as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Source data (2025)",
+      "content": "- Outside basis on January 1: **$40,000**. This includes Omar's **$20,000** share of recourse liabilities; that share did not change during the year. On January 1 Omar's at-risk amount equalled his basis.\n- Omar contributed **$10,000** cash and received a **$6,000** cash distribution.\n- The partnership borrowed on a **nonrecourse** loan (not qualified nonrecourse financing). Omar's share increased by **$15,000**.\n- Omar's K-1 share: ordinary loss **($70,000)**; tax-exempt income **$1,000**.\n- Omar does not materially participate. His only other passive activity produced **$12,000** of net income in 2025."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "basis",
+      "prompt": "Review the prepared schedule.",
+      "preparedLabel": "Per preparer",
+      "rows": [
+        {
+          "id": "beg",
+          "label": "Outside basis, January 1",
+          "prepared": 40000,
+          "answer": 40000,
+          "explanation": "Includes Omar's 20,000 share of recourse liabilities, unchanged during the year. **No error.**"
+        },
+        {
+          "id": "con",
+          "label": "Cash contribution",
+          "prepared": 10000,
+          "answer": 10000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "liab",
+          "label": "Increase in share of partnership liabilities",
+          "prepared": 0,
+          "answer": 15000,
+          "explanation": "An increase in a partner's share of liabilities is a deemed cash contribution (§752(a)) and **increases outside basis**, even for nonrecourse debt: **15,000**."
+        },
+        {
+          "id": "tei",
+          "label": "Tax-exempt income",
+          "prepared": 1000,
+          "answer": 1000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "dist",
+          "label": "Cash distribution",
+          "prepared": -6000,
+          "answer": -6000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "avail",
+          "label": "Basis available for losses",
+          "prepared": 45000,
+          "answer": 60000,
+          "explanation": "40,000 + 10,000 + 15,000 + 1,000 − 6,000 = **60,000**."
+        },
+        {
+          "id": "bsus",
+          "label": "Loss suspended by the basis limit (§704(d))",
+          "prepared": 25000,
+          "answer": 10000,
+          "explanation": "70,000 − 60,000 = **10,000**."
+        },
+        {
+          "id": "ar",
+          "label": "Loss allowed under the at-risk rules (§465)",
+          "prepared": 45000,
+          "answer": 45000,
+          "explanation": "At risk excludes the nonrecourse debt: 60,000 − 15,000 = **45,000**. **No error** (the preparer's figure is right, though for the wrong reason)."
+        },
+        {
+          "id": "arsus",
+          "label": "Loss suspended by the at-risk rules",
+          "prepared": 0,
+          "answer": 15000,
+          "explanation": "60,000 − 45,000 = **15,000**."
+        },
+        {
+          "id": "pal",
+          "label": "Loss deductible this year after the passive activity rules (§469)",
+          "prepared": 45000,
+          "answer": 12000,
+          "explanation": "A limited partner's loss is passive; it is deductible only against the **12,000** of passive income."
+        },
+        {
+          "id": "palsus",
+          "label": "Loss suspended by the passive activity rules",
+          "prepared": 0,
+          "answer": 33000,
+          "explanation": "45,000 − 12,000 = **33,000**."
+        }
+      ]
+    }
+  ]
+}

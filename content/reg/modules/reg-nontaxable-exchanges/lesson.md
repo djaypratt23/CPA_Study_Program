@@ -42,6 +42,8 @@ citations:
   - source: IRC §453 (Installment method), §1041 (Transfers between spouses)
 ---
 
+> **Scope (2026 Blueprints):** REG covers the §121 home-sale exclusion. Like-kind exchanges, involuntary conversions, installment sales and related-party resales are TCP topics (Area IV), so those items are optional here.
+
 ## Like-kind exchanges (§1031)
 
 ```worked

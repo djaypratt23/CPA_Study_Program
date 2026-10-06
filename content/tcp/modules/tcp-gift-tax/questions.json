@@ -36,7 +36,7 @@
   {
     "id": "tcp-gt-chk1",
     "pool": "lesson",
-    "stem": "A single donor pays $50,000 directly to a hospital for a friend's surgery and gives the friend $25,000 cash in 2025. What is the taxable gift?",
+    "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A single donor pays $50,000 directly to a hospital for a friend's surgery and gives the friend $25,000 cash in 2025. What is the taxable gift?",
     "choices": [
       {
         "id": "a",
@@ -46,7 +46,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The cash gift exceeds the exclusion.",
         "trap": "wrong-rule"
       },
@@ -106,7 +106,7 @@
   {
     "id": "tcp-gt-01",
     "pool": "practice",
-    "stem": "A married couple elects gift splitting and gives $80,000 to their son in 2025. What is each spouse's taxable gift?",
+    "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A married couple elects gift splitting and gives $80,000 to their son in 2025. What is each spouse's taxable gift?",
     "choices": [
       {
         "id": "a",
@@ -127,7 +127,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The gift exceeds $38,000.",
         "trap": "wrong-rule"
       }
@@ -185,7 +185,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The gift exceeds two exclusions.",
         "trap": "wrong-rule"
       },
@@ -210,34 +210,34 @@
   {
     "id": "tcp-gt-04",
     "pool": "practice",
-    "stem": "What is the lifetime basic exclusion amount for gifts made in 2025?",
+    "stem": "The 2025 basic exclusion amount is $13,990,000. A widow made $3,000,000 of taxable gifts in earlier years (no gift tax paid) and makes a $1,000,000 taxable gift in 2025. How much basic exclusion remains after the 2025 gift?",
     "choices": [
       {
         "id": "a",
-        "text": "$13,990,000",
-        "explanation": "Correct. 2025 basic exclusion amount: $13,990,000."
+        "text": "$9,990,000",
+        "explanation": "Correct. 13,990,000 − 3,000,000 prior − 1,000,000 current = 9,990,000."
       },
       {
         "id": "b",
-        "text": "$13,610,000",
-        "explanation": "That was the 2024 amount.",
-        "trap": "outdated-rule"
+        "text": "$12,990,000",
+        "explanation": "This ignores the prior-year taxable gifts.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "$15,000,000",
-        "explanation": "That's the 2026 amount under P.L. 119-21.",
-        "trap": "wrong-rule"
+        "text": "$10,990,000",
+        "explanation": "This ignores the 2025 gift.",
+        "trap": "partial-computation"
       },
       {
         "id": "d",
-        "text": "$5,000,000",
-        "explanation": "Pre-2018 base amount.",
-        "trap": "outdated-rule"
+        "text": "$13,990,000",
+        "explanation": "Taxable gifts use up the exclusion even when no tax is paid.",
+        "trap": "wrong-rule"
       }
     ],
     "answer": "a",
-    "explanation": "2025 basic exclusion amount: $13,990,000.",
+    "explanation": "Lifetime taxable gifts reduce the basic exclusion available for later gifts and the estate. The amount is given on the exam.",
     "skill": "remembering",
     "difficulty": 2,
     "needsReview": true,
@@ -290,7 +290,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Gains on gifted property are taxed.",
         "trap": "wrong-rule"
       },
@@ -343,7 +343,7 @@
     ],
     "answer": "a",
     "explanation": "Tuition paid directly to the institution is excluded without limit, on top of the annual exclusion.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -353,31 +353,31 @@
     "choices": [
       {
         "id": "a",
-        "text": "Give the stock to the nephew",
+        "text": "Give the stock itself to the nephew",
         "explanation": "The $20,000 loss is lost for gain purposes and limited for him.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Sell the stock, deduct the loss, and give the cash",
+        "text": "Sell, deduct the loss, then give cash",
         "explanation": "Correct. The donor can recognize the loss herself; a donee's loss basis is limited to FMV."
       },
       {
         "id": "c",
-        "text": "Hold the stock until death",
+        "text": "Hold the stock until her death",
         "explanation": "A step-down to FMV eliminates the loss.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Give the stock to a charity",
+        "text": "Give the stock to a charity instead",
         "explanation": "Not the donor's goal.",
         "trap": "irrelevant-fact"
       }
     ],
     "answer": "b",
     "explanation": "The donor can recognize the loss herself; a donee's loss basis is limited to FMV.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -398,13 +398,13 @@
       },
       {
         "id": "c",
-        "text": "A check to an adult daughter",
+        "text": "A check given outright to an adult daughter",
         "explanation": "An outright gift is a present interest.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "A contribution to a §529 plan",
+        "text": "A contribution to a §529 plan for a grandchild",
         "explanation": "§529 contributions qualify, with a 5-year election.",
         "trap": "wrong-rule"
       }
@@ -417,7 +417,7 @@
   {
     "id": "tcp-gt-10",
     "pool": "practice",
-    "stem": "A donor contributes $95,000 to a §529 plan for a grandchild in 2025 and elects to spread it over 5 years. What is the taxable gift for 2025?",
+    "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A donor contributes $95,000 to a §529 plan for a grandchild in 2025 and elects to spread it over 5 years. What is the taxable gift for 2025?",
     "choices": [
       {
         "id": "a",
@@ -427,7 +427,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. $19,000 per year × 5 = $95,000."
       },
       {
@@ -462,7 +462,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. §2523: unlimited marital deduction for gifts to a U.S.-citizen spouse."
       },
       {

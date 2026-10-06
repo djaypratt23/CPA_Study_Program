@@ -6,24 +6,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Pay them this year",
+        "text": "Pay them this year, as early as possible",
         "explanation": "Deductions are worth more in the higher-rate year.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "It makes no difference",
+        "text": "It makes no difference when they're paid",
         "explanation": "The marginal rate differs between years.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "Delay them to next year when her rate is higher",
+        "text": "Delay them to next year's higher rate",
         "explanation": "Correct. A deduction saves tax at the marginal rate, so it is worth more in the higher-rate year."
       },
       {
         "id": "d",
-        "text": "Never deduct them",
+        "text": "Never deduct them at all",
         "explanation": "That forfeits the benefit.",
         "trap": "wrong-rule"
       }
@@ -144,24 +144,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "None — the balance due is under $1,000",
+        "text": "None; the balance due is under $1,000",
         "explanation": "Correct. §6654(e)(1): no penalty if tax due after withholding is less than $1,000."
       },
       {
         "id": "b",
-        "text": "0.5% per month",
+        "text": "0.5% per month of the balance",
         "explanation": "That's the failure-to-pay rate, which applies only if the balance isn't paid by the due date.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "20% accuracy penalty",
+        "text": "The 20% accuracy-related penalty",
         "explanation": "Not related to estimated tax.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Interest only",
+        "text": "Interest only, with no penalty",
         "explanation": "No estimated-tax penalty applies below $1,000.",
         "trap": "wrong-rule"
       }
@@ -190,7 +190,7 @@
       },
       {
         "id": "c",
-        "text": "Paying the full amount on January 15",
+        "text": "Paying the full balance due on January 15",
         "explanation": "Earlier installments would still be short under the regular method.",
         "trap": "partial-computation"
       },
@@ -229,7 +229,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "MAGI exceeds $200,000.",
         "trap": "wrong-rule"
       }
@@ -281,7 +281,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Combined wages exceed the MFJ threshold.",
         "trap": "wrong-rule"
       },
@@ -312,7 +312,7 @@
   {
     "id": "tcp-ip-07",
     "pool": "practice",
-    "stem": "A 15-year-old has $6,000 of interest income and no earned income in 2025. How much of it is taxed at the parents' rate?",
+    "stem": "For 2025 the kiddie-tax threshold is $2,700. A 15-year-old has $6,000 of interest income and no earned income in 2025. How much of it is taxed at the parents' rate?",
     "choices": [
       {
         "id": "a",
@@ -333,7 +333,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The kiddie tax applies to children under 19.",
         "trap": "wrong-rule"
       }
@@ -347,7 +347,7 @@
   {
     "id": "tcp-ip-08",
     "pool": "practice",
-    "stem": "A client age 72 must take a $40,000 RMD and plans to give $40,000 to charity. She takes the standard deduction. What is the best approach?",
+    "stem": "In 2025, a client age 74 must take a $40,000 RMD and plans to give $40,000 to charity. She takes the standard deduction. What is the best approach?",
     "choices": [
       {
         "id": "a",
@@ -357,7 +357,7 @@
       },
       {
         "id": "b",
-        "text": "Make a qualified charitable distribution from the IRA directly to the charity",
+        "text": "Have the IRA pay the charity directly (a QCD)",
         "explanation": "Correct. A QCD satisfies the RMD and is excluded from income — better than a deduction she can't use."
       },
       {
@@ -368,14 +368,14 @@
       },
       {
         "id": "d",
-        "text": "Convert the IRA to a Roth",
+        "text": "Convert the IRA to a Roth IRA first",
         "explanation": "Conversion is taxable and doesn't satisfy the RMD.",
         "trap": "wrong-rule"
       }
     ],
     "answer": "b",
     "explanation": "A QCD satisfies the RMD and is excluded from income — better than a deduction she can't use.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -409,7 +409,7 @@
     ],
     "answer": "b",
     "explanation": "When rates will rise, pull income into the lower-rate year and push deductions into the higher-rate year.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -480,6 +480,74 @@
     "answer": "b",
     "explanation": "A donor-advised fund contribution is deductible when made; grants can be recommended later.",
     "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ip-12",
+    "pool": "practice",
+    "stem": "A client's will leaves everything to her children, but her IRA beneficiary designation still names her former spouse. She dies. Who receives the IRA?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The former spouse, as named",
+        "explanation": "Correct. Beneficiary designations control retirement accounts and override the will."
+      },
+      {
+        "id": "b",
+        "text": "The children, under the will",
+        "explanation": "The will does not govern assets that pass by beneficiary designation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Her estate, through probate",
+        "explanation": "A named beneficiary receives the account outside probate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It is split between them",
+        "explanation": "The designation, not a compromise, controls.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Review beneficiary designations after life events; they pass outside probate and override the will (subject to any state revocation-on-divorce statute).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-ip-13",
+    "pool": "practice",
+    "stem": "Which risk can an investor reduce by holding a diversified portfolio?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Market-wide interest rate risk",
+        "explanation": "Interest rate changes affect the whole market; diversification does not remove systematic risk.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Company-specific (unsystematic) risk",
+        "explanation": "Correct. Diversification reduces unsystematic risk; systematic (market) risk remains."
+      },
+      {
+        "id": "c",
+        "text": "Inflation risk across all assets",
+        "explanation": "Inflation is a systematic risk.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Recession risk for the economy",
+        "explanation": "A recession affects nearly all securities.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Diversification reduces unsystematic risk only.",
+    "skill": "remembering",
     "difficulty": 2
   }
 ]

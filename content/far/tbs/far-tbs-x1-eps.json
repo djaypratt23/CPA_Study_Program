@@ -1,0 +1,66 @@
+{
+  "id": "far-tbs-x1-eps",
+  "section": "FAR",
+  "unitId": "far-u2",
+  "moduleIds": [
+    "far-eps"
+  ],
+  "pool": "exam",
+  "title": "Basic and diluted EPS — Ashford Corp.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Compute Ashford Corp.'s 2025 earnings per share. Round EPS to two decimals.",
+  "exhibits": [
+    {
+      "title": "Ashford Corp. — 2025 data",
+      "content": "- Net income: **$1,250,000**. Income tax rate: 21%.\n- Common stock: 400,000 shares outstanding January 1; **60,000** shares issued April 1; **20,000** treasury shares bought October 1.\n- Preferred stock: 5% cumulative, nonconvertible, $2,000,000 par. No dividends were declared in 2025.\n- Convertible bonds: $1,000,000 of 6% bonds outstanding all year; each $1,000 bond converts into **40** common shares. No discount or premium.\n- Stock options: **30,000** options outstanding all year, exercise price **$20**; average market price of common stock **$30**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "eps",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "w",
+          "label": "Weighted-average common shares for basic EPS",
+          "answer": 440000,
+          "explanation": "400,000 + 60,000 × 9/12 − 20,000 × 3/12 = **440,000**."
+        },
+        {
+          "id": "inc",
+          "label": "Income available to common shareholders",
+          "answer": 1150000,
+          "explanation": "1,250,000 − 5% × 2,000,000 cumulative preferred dividends = **1,150,000** (deducted even though undeclared)."
+        },
+        {
+          "id": "basic",
+          "label": "Basic EPS",
+          "answer": 2.61,
+          "explanation": "1,150,000 ÷ 440,000 = **2.61**.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "opt",
+          "label": "Incremental shares from the options (treasury stock method)",
+          "answer": 10000,
+          "explanation": "Proceeds 30,000 × 20 = 600,000 buy back 20,000 shares at $30; incremental = 30,000 − 20,000 = **10,000**."
+        },
+        {
+          "id": "bond",
+          "label": "After-tax interest added back for the convertible bonds",
+          "answer": 47400,
+          "explanation": "6% × 1,000,000 × (1 − 21%) = **47,400**; 47,400 ÷ 40,000 shares = 1.185 per share, below basic EPS, so dilutive."
+        },
+        {
+          "id": "dil",
+          "label": "Diluted EPS",
+          "answer": 2.44,
+          "explanation": "(1,150,000 + 47,400) ÷ (440,000 + 10,000 + 40,000) = **2.44**.",
+          "tolerance": 0.01
+        }
+      ]
+    }
+  ]
+}

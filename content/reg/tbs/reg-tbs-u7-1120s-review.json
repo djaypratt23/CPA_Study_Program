@@ -1,0 +1,132 @@
+{
+  "id": "reg-tbs-u7-1120s-review",
+  "section": "REG",
+  "unitId": "reg-u7",
+  "moduleIds": [
+    "reg-s-corporations"
+  ],
+  "pool": "practice",
+  "title": "Review Form 1120-S Schedule K classification — Kestrel Designs",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Kestrel Designs, Inc. is an S corporation with two shareholders. The preparer drafted the 2025 Schedule K from the trial balance. Review each line, then resolve the diagnostics. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Trial balance data (2025)",
+      "content": "| Item | Amount |\n|---|---:|\n| Gross receipts | 900,000 |\n| Cost of goods sold | 400,000 |\n| Officer compensation | 150,000 |\n| Other salaries and wages | 120,000 |\n| Rent | 36,000 |\n| Depreciation (MACRS) | 40,000 |\n| Health insurance for 2% shareholders (included in their W-2 wages) | 14,000 |\n| Section 179 expense | 25,000 |\n| Charitable contributions | 8,000 |\n| Interest income (savings account) | 3,000 |\n| Qualified dividends | 2,000 |\n| Long-term capital gain (stock) | 5,000 |\n| Section 1231 gain (equipment) | 12,000 |\n| Life insurance premiums on officers (corporation is beneficiary) | 4,000 |\n| Penalty for late filing of payroll forms | 1,500 |\n| Distributions to shareholders | 80,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "k",
+      "prompt": "Review the prepared Schedule K amounts.",
+      "preparedLabel": "Per prepared return",
+      "rows": [
+        {
+          "id": "obi",
+          "label": "Ordinary business income (Schedule K line 1)",
+          "prepared": 110000,
+          "answer": 140000,
+          "explanation": "900,000 − 400,000 − 150,000 − 120,000 − 36,000 − 40,000 − 14,000 = **140,000**. The §179 deduction and charitable contributions are separately stated, and interest income is portfolio income, so none of them enter ordinary income."
+        },
+        {
+          "id": "int",
+          "label": "Interest income (line 4)",
+          "prepared": 0,
+          "answer": 3000,
+          "explanation": "Portfolio interest is separately stated: **3,000**."
+        },
+        {
+          "id": "div",
+          "label": "Ordinary dividends (line 5a)",
+          "prepared": 2000,
+          "answer": 2000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "ltcg",
+          "label": "Net long-term capital gain (line 8a)",
+          "prepared": 5000,
+          "answer": 5000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "s1231",
+          "label": "Net section 1231 gain (line 9)",
+          "prepared": 12000,
+          "answer": 12000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "s179",
+          "label": "Section 179 deduction (line 11)",
+          "prepared": 0,
+          "answer": 25000,
+          "explanation": "Separately stated because each shareholder's §179 limit applies: **25,000**."
+        },
+        {
+          "id": "char",
+          "label": "Charitable contributions (line 12a)",
+          "prepared": 0,
+          "answer": 8000,
+          "explanation": "Separately stated; shareholders deduct them subject to their own limits: **8,000**."
+        },
+        {
+          "id": "nde",
+          "label": "Nondeductible expenses (line 16c)",
+          "prepared": 4000,
+          "answer": 5500,
+          "explanation": "Officer life insurance 4,000 + penalty 1,500 = **5,500**. They reduce shareholder basis but not taxable income."
+        },
+        {
+          "id": "dist",
+          "label": "Distributions (line 16d)",
+          "prepared": 80000,
+          "answer": 80000,
+          "explanation": "**No error.**"
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "Choose the correct resolution for each diagnostic.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Health insurance for 2% shareholders (14,000) is deducted as an employee benefit.",
+          "options": [
+            "Clear the flag — it is included in the shareholders' W-2 wages",
+            "Reclassify it as a distribution",
+            "Separately state it on Schedule K"
+          ],
+          "answer": "Clear the flag — it is included in the shareholders' W-2 wages",
+          "explanation": "An S corporation deducts 2% shareholders' health premiums when they are reported as wages; the shareholders may then take the self-employed health insurance deduction."
+        },
+        {
+          "id": "d2",
+          "label": "Charitable contributions were deducted in computing ordinary business income.",
+          "options": [
+            "Keep them in ordinary income",
+            "Separately state them on Schedule K",
+            "Treat them as nondeductible expenses"
+          ],
+          "answer": "Separately state them on Schedule K",
+          "explanation": "Charitable contributions pass through separately."
+        },
+        {
+          "id": "d3",
+          "label": "The penalty expense account has no Schedule K entry.",
+          "options": [
+            "Deduct it in ordinary income",
+            "Report it as a nondeductible expense on line 16c",
+            "Report it as a distribution"
+          ],
+          "answer": "Report it as a nondeductible expense on line 16c",
+          "explanation": "Nondeductible expenses reduce basis and AAA but are never deducted."
+        }
+      ]
+    }
+  ]
+}

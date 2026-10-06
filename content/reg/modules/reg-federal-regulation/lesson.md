@@ -98,3 +98,14 @@ insight: Employees never pay FUTA. The additional 0.9% Medicare tax applies only
 ```check
 reg-fr-chk2
 ```
+
+## Health plans, worker classification and the FCPA
+
+| Law | What to know |
+|---|---|
+| ACA employer mandate (§4980H) | Applicable large employers (50+ full-time employees, including FTEs; full-time = 30+ hours a week) must offer affordable, minimum-value coverage to full-time employees and dependents. A payment is owed only when a full-time employee receives a premium tax credit. |
+| Premium tax credit (§36B) | Refundable credit for coverage bought on a marketplace exchange; not available to someone offered affordable employer coverage. |
+| Worker classification | IRS common-law test: **behavioral control**, **financial control** (own tools, profit or loss, other clients) and the **relationship** (benefits, permanence). Employees: withholding, FICA, FUTA, Form W-2. Contractors: Form 1099-NEC, no withholding. |
+| Foreign Corrupt Practices Act | Anti-bribery: no payments of value, direct or through agents, to foreign officials to obtain or retain business; facilitating payments for routine governmental action are excepted. Issuers must also keep accurate books and maintain internal accounting controls. |
+
+> Securities-law details (1933 and 1934 Acts), ERISA, COBRA, FMLA and the FLSA are outside the 2026 REG References; those items are marked optional.

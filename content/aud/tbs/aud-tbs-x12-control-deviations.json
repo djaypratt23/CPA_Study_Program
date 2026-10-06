@@ -1,0 +1,93 @@
+{
+  "id": "aud-tbs-x12-control-deviations",
+  "section": "AUD",
+  "unitId": "aud-u5",
+  "moduleIds": [
+    "aud-tests-of-controls",
+    "aud-sampling"
+  ],
+  "pool": "exam",
+  "title": "Evaluate tests of controls — Lindqvist Distributors",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "You tested three controls over Lindqvist's purchasing cycle using attribute sampling. The upper deviation rates come from the firm's evaluation tables. Evaluate each control.",
+  "exhibits": [
+    {
+      "title": "Test results",
+      "content": "| Control | Sample size | Deviations | Upper deviation rate | Tolerable rate |\n|---|---:|---:|---:|---:|\n| A. Purchase orders approved before ordering | 60 | 0 | 4.9% | 6% |\n| B. Three-way match before payment | 60 | 2 | 10.3% | 7% |\n| C. Vendor master file changes approved | 50 | 1 | 9.2% | 10% |\n\nThe deviation in control C was a change to a vendor's bank account made and approved by the CFO alone, contrary to policy."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "rates",
+      "prompt": "Compute for control B.",
+      "rows": [
+        {
+          "id": "sdr",
+          "label": "Sample deviation rate",
+          "answer": 3.33,
+          "explanation": "2 ÷ 60 = **3.33%**.",
+          "tolerance": 0.01,
+          "unit": "%"
+        },
+        {
+          "id": "asr",
+          "label": "Allowance for sampling risk",
+          "answer": 6.97,
+          "explanation": "10.3% − 3.33% = **6.97%**.",
+          "tolerance": 0.02,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "ev",
+      "prompt": "Evaluate each control.",
+      "rows": [
+        {
+          "id": "a",
+          "label": "Control A",
+          "options": [
+            "Rely as planned",
+            "Do not rely; increase substantive testing"
+          ],
+          "answer": "Rely as planned",
+          "explanation": "Upper deviation rate 4.9% ≤ tolerable 6%."
+        },
+        {
+          "id": "b",
+          "label": "Control B",
+          "options": [
+            "Rely as planned",
+            "Do not rely; increase substantive testing"
+          ],
+          "answer": "Do not rely; increase substantive testing",
+          "explanation": "Upper deviation rate 10.3% > tolerable 7%."
+        },
+        {
+          "id": "c",
+          "label": "Control C — quantitative result",
+          "options": [
+            "Within the tolerable rate",
+            "Exceeds the tolerable rate"
+          ],
+          "answer": "Within the tolerable rate",
+          "explanation": "9.2% ≤ 10%."
+        },
+        {
+          "id": "cq",
+          "label": "Control C — overall conclusion",
+          "options": [
+            "Rely as planned, because the rate is within the tolerable rate",
+            "Weigh its nature: possible override and fraud risk",
+            "Ignore it, because only a single deviation was found in the sample"
+          ],
+          "answer": "Weigh its nature: possible override and fraud risk",
+          "explanation": "A deviation involving management overriding a key control over vendor bank details has qualitative significance; evaluate fraud implications, the effect on risk assessment, and whether it is a significant deficiency or material weakness."
+        }
+      ]
+    }
+  ]
+}

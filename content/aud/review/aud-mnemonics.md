@@ -14,7 +14,7 @@ order: 3
 | **IOR** | Fraud triangle: Incentive (pressure), Opportunity, Rationalization (attitude) |
 | **"Revenue maybe, override always"** | Revenue fraud presumption can be rebutted; management override can't |
 | **"5-5, 7-2, 1"** | Issuer rotation: lead and EQR 5 on / 5 off; others 7 on / 2 off; 1-year cooling-off |
-| **"60-5 vs. 45-7"** | Documentation: AICPA 60 days / 5 years; PCAOB 45 days / 7 years |
+| **"60-5 vs. 14-7"** | Documentation: AICPA 60 days / 5 years; PCAOB 14 days / 7 years (14 days since AS 1000; formerly 45) |
 | **"In the statements → emphasis; about the audit → other matter"** | Choosing the paragraph type |
 | **"Possible = scope"** | "Except for the *possible* effects" signals a scope limitation |
 | **"P-C-R"** | SSARS: Preparation (no report) → Compilation (report, no assurance) → Review (limited assurance) |

@@ -13,6 +13,8 @@ objectives:
   - text: Evaluate the effect of ineffective IT general controls on reliance on automated controls.
     skill: analysis
     task: Evaluate risks arising from IT
+  - text: Understand and document an entity's IT infrastructure, including ERP systems, databases, networks and cloud services.
+    skill: remembering
 bigIdea:
   what: >-
     In computerized systems, two layers of controls matter. IT general controls (ITGCs) protect the whole
@@ -97,3 +99,16 @@ flowchart TD
 - **Access** failures let people change data or bypass controls.
 - **Change-management** failures mean a tested program might not be the one that ran all year.
 - **Segregation in IT**: developers shouldn't migrate their own changes or access production data.
+
+## Understanding IT infrastructure
+
+Document the layers that process and store financial data, because each layer carries its own IT risks and general controls:
+
+| Layer | Examples | Typical ITGC focus |
+|---|---|---|
+| Applications | ERP (general ledger, order-to-cash, purchasing), payroll, spreadsheets used in reporting | Program changes, application access |
+| Databases | The tables beneath the ERP | Direct database access by administrators |
+| Operating systems and networks | Servers, firewalls, remote access | Privileged access, security configuration |
+| Cloud services | SaaS (hosted ERP), PaaS, IaaS | Vendor controls — obtain a **SOC 1 type 2** report and test complementary user entity controls |
+
+End-user computing (spreadsheets that feed journal entries) is part of the infrastructure too; it often has weak change and access controls.

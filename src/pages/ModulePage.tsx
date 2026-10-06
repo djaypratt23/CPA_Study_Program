@@ -1,15 +1,17 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import InlineQuestion from '../components/InlineQuestion'
 import LessonMarkdown from '../components/LessonMarkdown'
 import { ReviewBadge, StatusChip } from '../components/ui'
-import { areaTitle, content, getModule, questionsForModule, unitTitle } from '../content'
+import { areaTitle, content, ensureAllSections, getModule, questionsForModule, unitTitle } from '../content'
 import { SKILL_LABELS } from '../content/schema'
 import { db } from '../db'
 import { addHighlight, completeLesson, setLastLocation, setModuleNotes, touchModule } from '../db/actions'
+import { useDebouncedSave } from '../hooks/useDebouncedSave'
 import { useStudyState } from '../hooks/useStore'
 import { uid } from '../lib/random'
+import { unmasteredPrerequisites } from '../lib/studyState'
 
 export default function ModulePage() {
   const { moduleId = '' } = useParams()
@@ -18,6 +20,9 @@ export default function ModulePage() {
   const meta = getModule(moduleId)
   const { state } = useStudyState()
   const progress = useLiveQuery(() => db.moduleProgress.get(moduleId).then((p) => p ?? null), [moduleId])
+  const noteSection = meta?.section
+  const saveNotes = useCallback((v: string) => noteSection && setModuleNotes(moduleId, noteSection, v), [moduleId, noteSection])
+  const notesSave = useDebouncedSave(saveNotes)
   const highlights = useLiveQuery(() => db.highlights.where('moduleId').equals(moduleId).toArray(), [moduleId]) ?? []
   const sessionId = useMemo(() => uid('lesson-'), [])
   const [selection, setSelection] = useState('')
@@ -68,6 +73,7 @@ export default function ModulePage() {
     return () => document.removeEventListener('selectionchange', onSel)
   }, [])
 
+  if (!lesson && ensureAllSections()) return <p className="muted">Loading…</p>
   if (!lesson || !meta) {
     return (
       <div className="card">
@@ -83,6 +89,7 @@ export default function ModulePage() {
   const practiceCount = questionsForModule(moduleId).length
   const cardCount = content.flashcards.filter((f) => f.moduleId === moduleId).length
   const done = !!progress?.lessonCompletedAt
+  const pending = state ? unmasteredPrerequisites(state.modules, moduleId) : []
 
   return (
     <article className="pb-8">
@@ -104,6 +111,22 @@ export default function ModulePage() {
           {lesson.needsReview && <ReviewBadge note={lesson.reviewNote} />}
         </div>
       </header>
+
+      {!done && pending.length > 0 && (
+        <aside className="mb-6 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm dark:border-amber-800 dark:bg-amber-950/30" aria-label="Before you start">
+          <p className="font-semibold">Before starting a new unit: {pending.length === 1 ? 'one module you studied is' : `${pending.length} modules you studied are`} not mastered yet.</p>
+          <p className="mt-1 muted">Passing their mastery checks first makes the new material stick better. You can still continue.</p>
+          <ul className="mt-2 space-y-1">
+            {pending.map((m) => (
+              <li key={m.id}>
+                <Link to={`/practice/start?mastery=${m.id}`} className="text-blue-700 underline dark:text-blue-400">
+                  Mastery check: {m.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
 
       <section className="card mb-6" aria-labelledby="objectives">
         <h2 id="objectives" className="mb-2 text-sm font-bold uppercase tracking-wide muted">
@@ -226,7 +249,8 @@ export default function ModulePage() {
           className="input min-h-28"
           placeholder="Summarize the big idea in your own words — the best note you can write."
           defaultValue={progress?.notes ?? ''}
-          onBlur={(e) => setModuleNotes(moduleId, meta.section, e.target.value)}
+          onChange={(e) => notesSave.schedule(e.target.value)}
+          onBlur={notesSave.flush}
           aria-label="Module notes"
         />
         {highlights.length > 0 && (

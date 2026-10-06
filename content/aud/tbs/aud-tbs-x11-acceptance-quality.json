@@ -1,0 +1,84 @@
+{
+  "id": "aud-tbs-x11-acceptance-quality",
+  "section": "AUD",
+  "unitId": "aud-u2",
+  "moduleIds": [
+    "aud-engagement-acceptance",
+    "aud-quality-management"
+  ],
+  "pool": "exam",
+  "title": "Acceptance and quality management — Ostrander & Lee CPAs",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "Ostrander & Lee is a CPA firm that audits private companies under AICPA standards and has adopted SQMS Nos. 1 and 2. Select the most appropriate response to each situation.",
+  "exhibits": [
+    {
+      "title": "Situations",
+      "content": "1. A prospective audit client's management refuses to acknowledge in the engagement letter its responsibility for internal control. No law requires the audit.\n2. Near the end of fieldwork, a client asks to change the audit to a review because its bank no longer requires an audit. The auditor has found no matters suggesting the request is improper.\n3. The partner who led last year's audit of a listed-company subsidiary is proposed as this year's engagement quality reviewer on the same engagement.\n4. The firm's monitoring process finds that several audit files lacked documentation of inventory observations.\n5. Fees from one audit client have grown to 18% of the firm's total revenue."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "sit",
+      "prompt": "Select the response.",
+      "rows": [
+        {
+          "id": "s1",
+          "label": "1. Refusal to acknowledge responsibilities",
+          "options": [
+            "Accept and note the refusal in the report",
+            "Do not accept the engagement",
+            "Accept and obtain the acknowledgment orally"
+          ],
+          "answer": "Do not accept the engagement",
+          "explanation": "AU-C 210: if management won't acknowledge its responsibilities, the auditor should not accept the engagement unless required by law."
+        },
+        {
+          "id": "s2",
+          "label": "2. Request to change to a review",
+          "options": [
+            "Agree if justified; the review report doesn't mention the audit",
+            "Refuse, because an engagement can't be changed once it has started",
+            "Agree, and describe the incomplete audit in the review report"
+          ],
+          "answer": "Agree if justified; the review report doesn't mention the audit",
+          "explanation": "A change in circumstances affecting the need for the service is a reasonable basis for changing; the new report doesn't refer to the original engagement."
+        },
+        {
+          "id": "s3",
+          "label": "3. Proposed engagement quality reviewer",
+          "options": [
+            "Acceptable, because the partner knows the client well",
+            "Not acceptable until a two-year cooling-off period has passed",
+            "Acceptable if the audit committee consents"
+          ],
+          "answer": "Not acceptable until a two-year cooling-off period has passed",
+          "explanation": "SQMS No. 2: a former engagement partner should not serve as EQ reviewer on that engagement until two years have passed."
+        },
+        {
+          "id": "s4",
+          "label": "4. Monitoring finding",
+          "options": [
+            "Evaluate severity, find the root cause and remediate",
+            "No action is needed if the audit opinions were appropriate",
+            "Report the finding to the state board of accountancy at once"
+          ],
+          "answer": "Evaluate severity, find the root cause and remediate",
+          "explanation": "SQMS No. 1 requires the firm to evaluate findings, determine whether they are deficiencies, investigate root causes and remediate."
+        },
+        {
+          "id": "s5",
+          "label": "5. Fee concentration",
+          "options": [
+            "Independence is impaired, so the firm must resign the client",
+            "A self-interest threat; evaluate it and apply safeguards",
+            "No threat exists, because the client is a private company"
+          ],
+          "answer": "A self-interest threat; evaluate it and apply safeguards",
+          "explanation": "Significant fee dependence creates a self-interest threat under the conceptual framework; the firm evaluates its significance and applies safeguards, such as a pre-issuance review."
+        }
+      ]
+    }
+  ]
+}

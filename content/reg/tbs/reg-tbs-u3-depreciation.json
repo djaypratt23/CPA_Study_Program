@@ -1,0 +1,76 @@
+{
+  "id": "reg-tbs-u3-depreciation",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-cost-recovery"
+  ],
+  "pool": "practice",
+  "title": "2025 cost recovery — Alder Fabrication",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Alder Fabrication, a calendar-year C corporation, placed the assets below in service in 2025. All were acquired after January 19, 2025. Compute each amount for Alder's 2025 Form 4562. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Assets placed in service in 2025",
+      "content": "| Asset | MACRS class | Cost | Placed in service |\n|---|---|---:|---|\n| Production machinery | 7-year | 1,800,000 | March 10 |\n| Office furniture | 7-year | 200,000 | August 4 |\n| Delivery truck (not a passenger auto) | 5-year | 90,000 | May 20 |\n| Warehouse (nonresidential real property) | 39-year | 1,040,000, including land of 260,000 | October 15 |"
+    },
+    {
+      "title": "Elections and data",
+      "content": "- Elect **§179 of $500,000** on the production machinery.\n- **Elect out of bonus** for all 7-year property; take bonus on the 5-year class.\n- Taxable income from the active business before §179: $3,000,000.\n- 2025 §179 limit $2,500,000; phase-out threshold $4,000,000.\n- First-year MACRS rates (half-year): 5-year 20.00%; 7-year 14.29%. Nonresidential real property: straight-line over 39 years, mid-month convention."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "cr",
+      "prompt": "Compute Alder's 2025 cost recovery.",
+      "rows": [
+        {
+          "id": "q4",
+          "label": "Percentage of 2025 depreciable personal property placed in service in the fourth quarter",
+          "unit": "%",
+          "answer": 0,
+          "tolerance": 0.1,
+          "explanation": "No personal property was placed in service in October–December (the warehouse is real property and is excluded), so **0%** and the half-year convention applies."
+        },
+        {
+          "id": "s179",
+          "label": "§179 deduction",
+          "answer": 500000,
+          "explanation": "Qualifying purchases 2,090,000 (the building isn't §179 property) are under the 4,000,000 threshold, and 500,000 is within the business income limit: **500,000**."
+        },
+        {
+          "id": "mach",
+          "label": "MACRS depreciation on the production machinery",
+          "answer": 185770,
+          "explanation": "(1,800,000 − 500,000 §179) × 14.29% = **185,770**. Bonus was elected out for 7-year property."
+        },
+        {
+          "id": "furn",
+          "label": "MACRS depreciation on the office furniture",
+          "answer": 28580,
+          "explanation": "200,000 × 14.29% = **28,580**."
+        },
+        {
+          "id": "truck",
+          "label": "Bonus depreciation on the delivery truck",
+          "answer": 90000,
+          "explanation": "100% bonus for property acquired after January 19, 2025: **90,000**, leaving no basis for MACRS."
+        },
+        {
+          "id": "bldg",
+          "label": "Depreciation on the warehouse",
+          "answer": 4167,
+          "explanation": "(1,040,000 − 260,000) ÷ 39 = 20,000 a year; October under mid-month is 2.5 months: 20,000 × 2.5 ÷ 12 = **4,167**."
+        },
+        {
+          "id": "tot",
+          "label": "Total 2025 cost recovery",
+          "answer": 808517,
+          "explanation": "500,000 + 185,770 + 28,580 + 90,000 + 4,167 = **808,517**."
+        }
+      ]
+    }
+  ]
+}

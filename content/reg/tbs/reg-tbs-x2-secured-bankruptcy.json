@@ -1,0 +1,97 @@
+{
+  "id": "reg-tbs-x2-secured-bankruptcy",
+  "section": "REG",
+  "unitId": "reg-u2",
+  "moduleIds": [
+    "reg-debtor-creditor"
+  ],
+  "pool": "exam",
+  "title": "Secured transactions and bankruptcy — Ridge Fabrication",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Ridge Fabrication borrowed from several creditors in 2025 and later filed a Chapter 7 petition. Answer each question.",
+  "exhibits": [
+    {
+      "title": "Credit history",
+      "content": "- **Bank A** obtained a security agreement covering all of Ridge's present and after-acquired equipment and filed a financing statement on **January 10**; it lent the money on **January 15**.\n- **Seller B** sold Ridge a new machine on credit, retaining a purchase money security interest. Ridge received the machine on **February 1**; Seller B filed on **February 15**.\n- **Lender C** took a security interest in Ridge's inventory and filed on **March 1**. A customer bought inventory from Ridge in the ordinary course of business in April.\n- On **May 20**, while insolvent, Ridge paid a trade creditor $15,000 on an invoice from January. Ridge filed its Chapter 7 petition on **June 10**."
+    },
+    {
+      "title": "Bankruptcy estate",
+      "content": "After secured creditors are paid from their collateral, **$200,000** remains. Claims: administrative expenses $30,000; employee wages within the statutory limit $20,000; priority income taxes $50,000; general unsecured claims $400,000."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "st",
+      "prompt": "Select the answer.",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "When did Bank A's security interest attach?",
+          "options": [
+            "January 10",
+            "January 15",
+            "When Ridge defaulted"
+          ],
+          "answer": "January 15",
+          "explanation": "Attachment requires value, an authenticated agreement and rights in the collateral; value was given January 15."
+        },
+        {
+          "id": "q2",
+          "label": "Who has priority in the new machine?",
+          "options": [
+            "Bank A, because it filed first",
+            "Seller B, because its PMSI was perfected within 20 days of delivery",
+            "They share pro rata"
+          ],
+          "answer": "Seller B, because its PMSI was perfected within 20 days of delivery",
+          "explanation": "UCC 9-324(a): a PMSI in equipment perfected within 20 days after the debtor receives possession has priority over an earlier-filed interest."
+        },
+        {
+          "id": "q3",
+          "label": "The customer who bought inventory in April takes it:",
+          "options": [
+            "Free of Lender C's security interest",
+            "Subject to Lender C's security interest",
+            "Subject to Lender C's interest unless it searched the filings"
+          ],
+          "answer": "Free of Lender C's security interest",
+          "explanation": "A buyer in the ordinary course takes free of a security interest created by the seller, even if perfected."
+        },
+        {
+          "id": "q4",
+          "label": "The May 20 payment to the trade creditor is:",
+          "options": [
+            "A voidable preference the trustee can recover",
+            "Protected because it paid a valid debt",
+            "Avoidable only if Ridge intended to defraud"
+          ],
+          "answer": "A voidable preference the trustee can recover",
+          "explanation": "A transfer to an unsecured creditor on an antecedent debt within 90 days before filing, while insolvent, that gives more than Chapter 7 would, is a preference."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "bk",
+      "prompt": "Compute the distribution.",
+      "rows": [
+        {
+          "id": "pri",
+          "label": "Total paid to priority claims",
+          "answer": 100000,
+          "explanation": "30,000 + 20,000 + 50,000 = **100,000**, paid in full."
+        },
+        {
+          "id": "pct",
+          "label": "Percentage paid on general unsecured claims",
+          "answer": 25,
+          "explanation": "(200,000 − 100,000) ÷ 400,000 = **25%**.",
+          "tolerance": 0.1,
+          "unit": "%"
+        }
+      ]
+    }
+  ]
+}

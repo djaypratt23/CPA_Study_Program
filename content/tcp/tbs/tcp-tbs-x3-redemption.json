@@ -1,0 +1,102 @@
+{
+  "id": "tcp-tbs-x3-redemption",
+  "section": "TCP",
+  "unitId": "tcp-u6",
+  "moduleIds": [
+    "tcp-formation-liquidation"
+  ],
+  "pool": "exam",
+  "title": "Stock redemption planning — Marsh Corp.",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Marsh Corp. has 100 shares of one class outstanding and accumulated E&P of $500,000. Ivy owns 50 shares (basis $20,000 in total) and her son owns 30 shares. An unrelated investor owns the other 20. Marsh redeems 20 of Ivy's shares for $100,000. Compute the amounts and answer the questions.",
+  "exhibits": [
+    {
+      "title": "Rules",
+      "content": "- §318 family attribution: an individual is treated as owning shares owned by her children.\n- §302(b)(2): after the redemption, the shareholder must own less than 50% of the voting stock and less than 80% of her percentage before the redemption."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "rd",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "before",
+          "label": "Ivy's ownership before the redemption, with attribution",
+          "answer": 80,
+          "explanation": "(50 + 30) ÷ 100 = **80%**.",
+          "unit": "%",
+          "tolerance": 0.1
+        },
+        {
+          "id": "after",
+          "label": "Ivy's ownership after the redemption, with attribution",
+          "answer": 75,
+          "explanation": "(30 + 30) ÷ 80 = **75%**.",
+          "unit": "%",
+          "tolerance": 0.1
+        },
+        {
+          "id": "div",
+          "label": "Dividend income to Ivy",
+          "answer": 100000,
+          "explanation": "The redemption fails §302(b)(2) (75% is not below 64% or 50%) and isn't a complete termination, so the full 100,000 is a dividend (E&P is ample)."
+        },
+        {
+          "id": "basis",
+          "label": "Ivy's basis in her remaining 30 shares",
+          "answer": 20000,
+          "explanation": "The 8,000 basis of the redeemed shares shifts to her remaining shares: **20,000**."
+        },
+        {
+          "id": "gain",
+          "label": "Ivy's gain if the son were unrelated (no attribution)",
+          "answer": 92000,
+          "explanation": "Without attribution: 30 ÷ 80 = 37.5%, below 40% (80% of 50%) and 50%, so it is an exchange: 100,000 − 8,000 = **92,000** capital gain."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer the questions.",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Treatment of the redemption with attribution",
+          "options": [
+            "Dividend",
+            "Sale or exchange",
+            "Return of capital only"
+          ],
+          "answer": "Dividend",
+          "explanation": "A redemption that fails all §302(b) tests is a §301 distribution — here a dividend."
+        },
+        {
+          "id": "q2",
+          "label": "Which change would most likely give Ivy exchange treatment?",
+          "options": [
+            "Redeem all of Ivy's shares and have her waive family attribution",
+            "Redeem 5 more of the son's shares instead",
+            "Pay Ivy in property instead of cash"
+          ],
+          "answer": "Redeem all of Ivy's shares and have her waive family attribution",
+          "explanation": "A complete termination with a family attribution waiver under §302(c)(2) qualifies for exchange treatment."
+        },
+        {
+          "id": "q3",
+          "label": "Does Marsh recognize gain on redeeming shares for cash?",
+          "options": [
+            "No",
+            "Yes, equal to the dividend",
+            "Yes, equal to Ivy's gain"
+          ],
+          "answer": "No",
+          "explanation": "A corporation recognizes no gain distributing cash; gain arises only on distributing appreciated property (§311(b))."
+        }
+      ]
+    }
+  ]
+}

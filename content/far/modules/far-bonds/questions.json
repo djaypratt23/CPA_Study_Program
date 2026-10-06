@@ -6,9 +6,8 @@
     "choices": [
       {
         "id": "a",
-        "text": "At a premium",
-        "explanation": "A premium occurs when the stated rate exceeds the market rate.",
-        "trap": "reversed"
+        "text": "At a discount",
+        "explanation": "Correct. Investors pay less to earn 7% on 6% coupons."
       },
       {
         "id": "b",
@@ -18,8 +17,9 @@
       },
       {
         "id": "c",
-        "text": "At a discount",
-        "explanation": "Correct. Investors pay less to earn 7% on 6% coupons."
+        "text": "At a premium",
+        "explanation": "A premium occurs when the stated rate exceeds the market rate.",
+        "trap": "reversed"
       },
       {
         "id": "d",
@@ -28,7 +28,7 @@
         "trap": "irrelevant-fact"
       }
     ],
-    "answer": "c",
+    "answer": "a",
     "explanation": "Market rate > stated rate → the bonds sell below face (a discount), raising the investors' yield to the market rate.",
     "skill": "application"
   },
@@ -107,8 +107,9 @@
     "choices": [
       {
         "id": "a",
-        "text": "3.5% coupon per period, 4% market rate per period, 10 periods",
-        "explanation": "Correct. Halve both rates and double the number of periods."
+        "text": "7% coupon, 4% market rate, 10 periods",
+        "explanation": "The coupon rate must also be per period.",
+        "trap": "partial-computation"
       },
       {
         "id": "b",
@@ -124,12 +125,11 @@
       },
       {
         "id": "d",
-        "text": "7% coupon, 4% market rate, 10 periods",
-        "explanation": "The coupon rate must also be per period.",
-        "trap": "partial-computation"
+        "text": "3.5% coupon per period, 4% market rate per period, 10 periods",
+        "explanation": "Correct. Halve both rates and double the number of periods."
       }
     ],
-    "answer": "a",
+    "answer": "d",
     "explanation": "Semiannual: coupon = 7,000 per period (3.5% × 200,000), discount rate 4%, 10 periods.",
     "skill": "application"
   },
@@ -146,8 +146,9 @@
       },
       {
         "id": "b",
-        "text": "$191,889",
-        "explanation": "Correct. PV of 200,000 at 4% for 10 periods plus PV of 7,000 per period."
+        "text": "$135,113",
+        "explanation": "That is only the PV of the face amount.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
@@ -157,12 +158,11 @@
       },
       {
         "id": "d",
-        "text": "$135,113",
-        "explanation": "That is only the PV of the face amount.",
-        "trap": "partial-computation"
+        "text": "$191,889",
+        "explanation": "Correct. PV of 200,000 at 4% for 10 periods plus PV of 7,000 per period."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "PV face = 200,000 × 0.67556 = 135,113; PV coupons = 7,000 × 8.11090 = 56,776. Price ≈ **191,889** (a discount).",
     "skill": "application",
     "calc": true
@@ -213,8 +213,9 @@
       },
       {
         "id": "b",
-        "text": "$786,600",
-        "explanation": "Correct. 780,000 + (54,600 − 48,000)."
+        "text": "$780,000",
+        "explanation": "Amortization changes the carrying amount.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
@@ -224,12 +225,11 @@
       },
       {
         "id": "d",
-        "text": "$780,000",
-        "explanation": "Amortization changes the carrying amount.",
-        "trap": "partial-computation"
+        "text": "$786,600",
+        "explanation": "Correct. 780,000 + (54,600 − 48,000)."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Interest expense = 780,000 × 7% = 54,600. Cash = 800,000 × 6% = 48,000. Discount amortization = 6,600 → carrying amount **786,600**.",
     "skill": "application",
     "calc": true
@@ -241,7 +241,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Bonds payable $1,000,000 net of a $5,000 net discount: carrying amount $995,000",
+        "text": "Carrying amount of $995,000 (net of a $5,000 discount)",
         "explanation": "Correct. 1,010,000 − 15,000 = 995,000."
       },
       {
@@ -258,7 +258,7 @@
       },
       {
         "id": "d",
-        "text": "Bonds payable $1,025,000",
+        "text": "Bonds payable of $1,025,000",
         "explanation": "Costs reduce, not increase, the carrying amount.",
         "trap": "wrong-sign"
       }
@@ -287,17 +287,17 @@
       },
       {
         "id": "c",
-        "text": "Interest expense is less than the cash paid, and the carrying amount decreases toward face",
-        "explanation": "Correct. Premium bonds: expense = carrying amount × lower market rate < cash coupon; the difference reduces the carrying amount toward face."
-      },
-      {
-        "id": "d",
         "text": "The carrying amount increases toward face value",
         "explanation": "Premium bonds start above face and decline.",
         "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Expense is below cash paid; carrying amount falls to face",
+        "explanation": "Correct. Premium bonds: expense = carrying amount × lower market rate < cash coupon; the difference reduces the carrying amount toward face."
       }
     ],
-    "answer": "c",
+    "answer": "d",
     "explanation": "Premium bonds: expense = carrying amount × lower market rate < cash coupon; the difference reduces the carrying amount toward face. The amortization amount grows each period.",
     "skill": "application"
   },
@@ -314,8 +314,9 @@
       },
       {
         "id": "b",
-        "text": "$34,000",
-        "explanation": "Correct. 30,000 cash + 4,000 amortization."
+        "text": "$27,600",
+        "explanation": "This applies 6% to the proceeds.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
@@ -325,12 +326,11 @@
       },
       {
         "id": "d",
-        "text": "$27,600",
-        "explanation": "This applies 6% to the proceeds.",
-        "trap": "wrong-rule"
+        "text": "$34,000",
+        "explanation": "Correct. 30,000 cash + 4,000 amortization."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Cash interest = 500,000 × 6% = 30,000; straight-line amortization = 40,000 ÷ 10 = 4,000; expense = **34,000**.",
     "skill": "application",
     "calc": true
@@ -348,8 +348,9 @@
       },
       {
         "id": "b",
-        "text": "As a reduction of bonds payable",
-        "explanation": "Correct. Bonds payable are reported net of unamortized discount (or plus unamortized premium)."
+        "text": "As a reduction of equity",
+        "explanation": "It's part of the debt's carrying amount.",
+        "trap": "wrong-classification"
       },
       {
         "id": "c",
@@ -359,12 +360,11 @@
       },
       {
         "id": "d",
-        "text": "As a reduction of equity",
-        "explanation": "It's part of the debt's carrying amount.",
-        "trap": "wrong-classification"
+        "text": "As a reduction of bonds payable",
+        "explanation": "Correct. Bonds payable are reported net of unamortized discount (or plus unamortized premium)."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Bonds payable are reported net of unamortized discount (or plus unamortized premium).",
     "skill": "remembering"
   },
@@ -381,23 +381,23 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Interest accrues with time.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$24,000",
-        "explanation": "Correct. 600,000 × 8% × 6/12."
-      },
-      {
-        "id": "d",
         "text": "$12,000",
         "explanation": "That's 3 months.",
         "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$24,000",
+        "explanation": "Correct. 600,000 × 8% × 6/12."
       }
     ],
-    "answer": "c",
+    "answer": "d",
     "explanation": "July 1–December 31 = 6 months: 600,000 × 8% × 6/12 = **24,000**.",
     "skill": "application",
     "calc": true

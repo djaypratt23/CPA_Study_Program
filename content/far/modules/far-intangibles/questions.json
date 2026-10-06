@@ -6,7 +6,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. Advertising and internal brand development are expensed."
       },
       {
@@ -56,7 +56,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Patents are finite-lived and amortized.",
         "trap": "wrong-rule"
       }
@@ -191,7 +191,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The price exceeds net identifiable assets.",
         "trap": "wrong-rule"
       }
@@ -220,12 +220,12 @@
       },
       {
         "id": "c",
-        "text": "A trade name the company intends to renew indefinitely at minimal cost",
+        "text": "A trade name it can renew indefinitely at little cost",
         "explanation": "Correct. An intangible is indefinite-lived when no legal, regulatory, contractual, competitive, or economic factor limits its useful life — e.g., a renewable trade name."
       },
       {
         "id": "d",
-        "text": "A customer list",
+        "text": "A customer list acquired in a business combination",
         "explanation": "Customer relationships erode — finite.",
         "trap": "wrong-classification"
       }
@@ -258,7 +258,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Amortization begins when the asset is available for use.",
         "trap": "wrong-period"
       }
@@ -387,7 +387,7 @@
       },
       {
         "id": "c",
-        "text": "It is not amortized but is tested for impairment at least annually at the reporting-unit level",
+        "text": "Not amortized; tested annually at the reporting unit",
         "explanation": "Correct. Public entities do not amortize goodwill; they test it for impairment at least annually at the reporting-unit level (ASC 350-20)."
       },
       {
@@ -399,7 +399,8 @@
     ],
     "answer": "c",
     "explanation": "Public entities do not amortize goodwill; they test it for impairment at least annually at the reporting-unit level (ASC 350-20).",
-    "skill": "remembering"
+    "skill": "remembering",
+    "optional": true
   },
   {
     "id": "far-int-10",
@@ -434,5 +435,73 @@
     "explanation": "Successful defense costs are capitalized: 120,000 + 30,000 = 150,000 ÷ 6 = **25,000**.",
     "skill": "application",
     "calc": true
+  },
+  {
+    "id": "far-int-11",
+    "pool": "practice",
+    "stem": "A company enters a 4-year cloud computing arrangement to use a hosted CRM system; the contract does not include a software license. It incurs $12,000 selecting the vendor, $80,000 configuring and testing the system, and $16,000 training employees. What amount should be capitalized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Correct. Configuration and testing are application-development-stage implementation costs, which are capitalized (as a prepaid) and amortized over the hosting term."
+      },
+      {
+        "id": "b",
+        "text": "$108,000",
+        "explanation": "Vendor selection (preliminary stage) and training (post-implementation) are expensed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$96,000",
+        "explanation": "Training costs are expensed as incurred.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "None ($0)",
+        "explanation": "Implementation costs of a hosting arrangement follow the internal-use software stages; application development costs are capitalized.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Implementation costs of a cloud computing service contract are capitalized using the internal-use software stages (ASC 350-40) and amortized over the term in the same line as the hosting fees.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-int-12",
+    "pool": "practice",
+    "stem": "How should capitalized implementation costs of a cloud computing arrangement that is a service contract be presented?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As an intangible asset, amortized in D&A",
+        "explanation": "That treatment applies only when the arrangement includes a software license.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As a prepaid, amortized with hosting fees",
+        "explanation": "Correct. They are not an intangible asset; the amortization is presented with the service fees."
+      },
+      {
+        "id": "c",
+        "text": "As PP&E, depreciated over the hardware's life",
+        "explanation": "The customer does not own the hosting hardware.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As an expense when the system goes live",
+        "explanation": "Application-development-stage implementation costs are capitalized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Present capitalized implementation costs like a prepayment of the service, and their amortization like the service fee.",
+    "skill": "remembering",
+    "difficulty": 2
   }
 ]

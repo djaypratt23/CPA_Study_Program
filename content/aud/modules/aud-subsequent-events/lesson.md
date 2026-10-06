@@ -13,6 +13,8 @@ objectives:
   - text: Evaluate subsequently discovered facts and omitted procedures after the report is released.
     skill: evaluation
     task: Respond to subsequently discovered facts and omitted procedures
+  - text: Determine whether subsequent events are properly reflected in the financial statements and the effect on the report date.
+    skill: analysis
 bigIdea:
   what: >-
     The auditor's duty to search for subsequent events runs from the balance sheet date to the report date. After
@@ -98,3 +100,12 @@ flowchart TD
 ```check
 aud-se-chk2
 ```
+
+## Reviewing management's treatment of subsequent events
+
+For each event, ask **when the underlying condition arose**:
+
+- **Existed at the balance sheet date** (customer already in financial difficulty, a lawsuit about a prior-year event): adjust, for only the *incremental* amount beyond what was already recorded.
+- **Arose after the balance sheet date** (a new competitor's price cut, a fire, a stock issuance): no adjustment; disclose if material.
+
+Common management errors: accruing the full settlement instead of the increase over the existing accrual, and writing down assets for post-year-end declines. When management adds a disclosure after the report date but before release, the auditor either **dual-dates** the report for that note or **re-dates** it and extends the subsequent-events procedures to the new date.

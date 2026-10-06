@@ -39,7 +39,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$65,000 investing inflow; $15,000 gain added to net income in operating activities",
+        "text": "$65,000 investing inflow; $15,000 gain added back",
         "explanation": "The gain must be subtracted, not added, or cash would be double counted.",
         "trap": "wrong-sign"
       },
@@ -51,7 +51,7 @@
       },
       {
         "id": "c",
-        "text": "$65,000 investing inflow; $15,000 gain subtracted from net income in operating activities",
+        "text": "$65,000 investing inflow; $15,000 gain subtracted",
         "explanation": "Correct. Full proceeds are investing; the gain is removed from operating to avoid double counting."
       },
       {
@@ -96,40 +96,6 @@
     ],
     "answer": "b",
     "explanation": "Cash collected = sales + beginning AR − ending AR = 500,000 + 60,000 − 85,000 = **475,000**.",
-    "skill": "application",
-    "calc": true
-  },
-  {
-    "id": "far-scf-01",
-    "pool": "practice",
-    "stem": "Net income was $200,000. Depreciation was $35,000; accounts receivable increased $18,000; inventory increased $12,000; accounts payable increased $9,000; and there was a $6,000 loss on sale of land. What is net cash provided by operating activities (indirect method)?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "$220,000",
-        "explanation": "Correct. 200,000 + 35,000 + 6,000 − 18,000 − 12,000 + 9,000 = 220,000."
-      },
-      {
-        "id": "b",
-        "text": "$208,000",
-        "explanation": "This subtracts the loss instead of adding it back.",
-        "trap": "wrong-sign"
-      },
-      {
-        "id": "c",
-        "text": "$280,000",
-        "explanation": "This adds the increases in AR and inventory instead of subtracting them (200,000 + 35,000 + 6,000 + 18,000 + 12,000 + 9,000).",
-        "trap": "wrong-sign"
-      },
-      {
-        "id": "d",
-        "text": "$214,000",
-        "explanation": "This omits the add-back of the loss on sale of land.",
-        "trap": "partial-computation"
-      }
-    ],
-    "answer": "a",
-    "explanation": "200,000 + 35,000 depreciation + 6,000 loss − 18,000 AR − 12,000 inventory + 9,000 AP = **220,000**.",
     "skill": "application",
     "calc": true
   },
@@ -179,7 +145,7 @@
       },
       {
         "id": "b",
-        "text": "Investing outflow of $100,000; $300,000 note disclosed as a noncash investing and financing activity",
+        "text": "$100,000 investing outflow; the note disclosed as noncash",
         "explanation": "Correct. Only the cash paid is a cash flow; the seller-financed portion is a noncash disclosure."
       },
       {
@@ -279,18 +245,18 @@
       },
       {
         "id": "b",
-        "text": "Present a separate reconciliation of net income to net cash from operating activities",
+        "text": "Present a reconciliation of net income to operating cash",
         "explanation": "Correct. The reconciliation is required regardless."
       },
       {
         "id": "c",
-        "text": "Omit disclosure of interest and taxes paid",
+        "text": "Omit the disclosure of interest and taxes paid",
         "explanation": "Direct-method statements show those payments; no exemption from reconciliation results.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Obtain FASB approval",
+        "text": "Obtain the FASB's approval to use it",
         "explanation": "The direct method is encouraged, not restricted.",
         "trap": "other"
       }
@@ -407,13 +373,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "Excluded from beginning and ending balances; deposits into escrow are investing outflows",
+        "text": "Excluded from the balances; escrow deposits are investing outflows",
         "explanation": "That was prior practice; ASU 2016-18 includes restricted cash in the totals.",
         "trap": "outdated-rule"
       },
       {
         "id": "b",
-        "text": "Included with cash and cash equivalents in the beginning and ending totals; transfers to/from restricted cash are not cash flows",
+        "text": "Included with cash in the totals; transfers aren't cash flows",
         "explanation": "Correct. ASU 2016-18 folds restricted cash into the reconciled totals."
       },
       {
@@ -479,7 +445,7 @@
       },
       {
         "id": "b",
-        "text": "Depreciation expense",
+        "text": "Depreciation expense for the year",
         "explanation": "Depreciation is a noncash operating adjustment, not an investing/financing disclosure.",
         "trap": "wrong-classification"
       },
@@ -491,7 +457,7 @@
       },
       {
         "id": "d",
-        "text": "Payment of accounts payable",
+        "text": "Payment of accounts payable in cash",
         "explanation": "That is a cash operating outflow.",
         "trap": "wrong-rule"
       }
@@ -499,5 +465,40 @@
     "answer": "a",
     "explanation": "Significant noncash investing and financing activities — debt-to-equity conversions, assets acquired with debt or stock, ROU assets obtained for lease liabilities — are disclosed separately.",
     "skill": "application"
+  },
+  {
+    "id": "far-scf-13",
+    "pool": "practice",
+    "stem": "A draft statement of cash flows reports net cash from operating activities of $410,000. In reviewing it, you find that the preparer added back a $25,000 gain on sale of equipment and subtracted a $40,000 increase in accounts payable. What is the correct net cash from operating activities?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$360,000",
+        "explanation": "This corrects only the gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$490,000",
+        "explanation": "This corrects only the payables change.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$440,000",
+        "explanation": "Correct. Reverse both errors: 410,000 − 2 × 25,000 + 2 × 40,000 = 440,000."
+      },
+      {
+        "id": "d",
+        "text": "$385,000",
+        "explanation": "This removes the gain once but does not subtract it, and leaves the payables error.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A gain is subtracted in the indirect method, and an increase in payables is added. Fixing an item reported with the wrong sign moves the total by twice the amount.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
   }
 ]

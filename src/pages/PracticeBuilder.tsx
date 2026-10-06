@@ -28,7 +28,9 @@ export default function PracticeBuilder() {
   const [mode, setMode] = useState<'tutor' | 'test'>('tutor')
   const [timed, setTimed] = useState(false)
 
-  const pool = useMemo(() => practiceQuestions(section.id), [section.id])
+  // Explicitly chosen modules are allowed even if optional; off-Blueprint items inside in-scope modules only when opted in (P2-2).
+  const includeOptional = !!settings.includeOptional
+  const pool = useMemo(() => practiceQuestions(section.id, true).filter((q) => includeOptional || !q.optional), [section.id, includeOptional])
   const hist = useMemo(() => historyByItem(attempts ?? []), [attempts])
   const meta = useMemo(() => new Map((metaRows ?? []).map((m) => [m.itemId, m])), [metaRows])
   const withQuestions = new Set(pool.map((q) => q.moduleId))
@@ -88,7 +90,7 @@ export default function PracticeBuilder() {
               return (
                 <div key={a.id}>
                   <label className="flex items-center gap-2 font-semibold">
-                    <input type="checkbox" className="h-5 w-5 accent-blue-700" checked={areaMods.every((m) => selected.has(m))} onChange={() => toggle(areaMods)} />
+                    <input type="checkbox" className="h-6 w-6 shrink-0 accent-blue-700" checked={areaMods.every((m) => selected.has(m))} onChange={() => toggle(areaMods)} />
                     {a.title}
                   </label>
                   <div className="mt-1 ml-7 grid gap-1 sm:grid-cols-2">
@@ -97,7 +99,7 @@ export default function PracticeBuilder() {
                         .filter((m) => withQuestions.has(m.id))
                         .map((m) => (
                           <label key={m.id} className="flex items-start gap-2 text-sm">
-                            <input type="checkbox" className="mt-0.5 h-4 w-4 accent-blue-700" checked={selected.has(m.id)} onChange={() => toggle([m.id])} />
+                            <input type="checkbox" className="h-6 w-6 shrink-0 accent-blue-700" checked={selected.has(m.id)} onChange={() => toggle([m.id])} />
                             {m.title}
                           </label>
                         )),
@@ -145,7 +147,7 @@ export default function PracticeBuilder() {
           </div>
         </fieldset>
         <label className="flex items-center gap-2 text-sm">
-          <input type="checkbox" className="h-5 w-5 accent-blue-700" checked={timed} onChange={(e) => setTimed(e.target.checked)} />
+          <input type="checkbox" className="h-6 w-6 shrink-0 accent-blue-700" checked={timed} onChange={(e) => setTimed(e.target.checked)} />
           Timed (90 seconds per question — close to exam pace)
         </label>
 

@@ -1,0 +1,83 @@
+{
+  "id": "reg-tbs-x3-basis",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-property-basis",
+    "reg-capital-gains"
+  ],
+  "pool": "exam",
+  "title": "Basis and gains — Nora Patel",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Nora Patel, a single taxpayer, had the property transactions below in 2025. Compute each amount. Enter losses as positive numbers.",
+  "exhibits": [
+    {
+      "title": "2025 transactions",
+      "content": "1. **Gifted stock.** On March 1, 2025, Nora's father gave her stock with a basis of $12,000 and a fair value of $9,000 (no gift tax). She sold it on November 1, 2025 for $7,500.\n2. **Inherited land.** Nora inherited investment land worth $110,000 at her aunt's death (the aunt's basis was $40,000) and sold it four months later for $104,000.\n3. **Purchased stock.** In February 2025 she bought 2,000 shares of Kline Corp. for $30,000 plus a $300 commission. In October she sold 1,000 shares for $18,000 less a $200 commission.\n4. **Wash sale.** On December 10 she sold 500 shares of Orris Co. (basis $10,000) for $7,000, and on December 20 bought 500 Orris shares for $7,400.\n5. **Personal car.** She sold her personal car (basis $25,000) for $12,000."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "b",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "gift",
+          "label": "Recognized loss on the gifted stock",
+          "answer": 1500,
+          "explanation": "Loss basis is the lower fair value at the gift (9,000): 9,000 − 7,500 = **1,500**. With fair-value basis the holding period starts at the gift, so it is short-term."
+        },
+        {
+          "id": "inh",
+          "label": "Recognized loss on the inherited land",
+          "answer": 6000,
+          "explanation": "Basis steps up to 110,000: 110,000 − 104,000 = **6,000**, long-term automatically."
+        },
+        {
+          "id": "kl",
+          "label": "Gain on the Kline Corp. shares sold",
+          "answer": 2650,
+          "explanation": "Amount realized 17,800 − basis 15,150 (half of 30,300) = **2,650**, short-term."
+        },
+        {
+          "id": "ws",
+          "label": "Loss disallowed under the wash sale rule",
+          "answer": 3000,
+          "explanation": "10,000 − 7,000 = **3,000**, disallowed because substantially identical shares were bought within 30 days."
+        },
+        {
+          "id": "wb",
+          "label": "Basis of the Orris shares bought December 20",
+          "answer": 10400,
+          "explanation": "7,400 + 3,000 disallowed loss = **10,400**."
+        },
+        {
+          "id": "car",
+          "label": "Deductible loss on the personal car",
+          "answer": 0,
+          "explanation": "Losses on personal-use property aren't deductible: **0**."
+        },
+        {
+          "id": "ncl",
+          "label": "Net capital loss for 2025",
+          "answer": 4850,
+          "explanation": "Short-term: 2,650 − 1,500 = 1,150 gain. Long-term: 6,000 loss. Net: **4,850** loss."
+        },
+        {
+          "id": "ded",
+          "label": "Capital loss deductible against ordinary income in 2025",
+          "answer": 3000,
+          "explanation": "Limited to **3,000**."
+        },
+        {
+          "id": "cf",
+          "label": "Capital loss carryforward to 2026",
+          "answer": 1850,
+          "explanation": "4,850 − 3,000 = **1,850**, long-term in character."
+        }
+      ]
+    }
+  ]
+}

@@ -33,7 +33,7 @@ keyTakeaways:
   - "Loans from a client lender impair independence unless permitted (car loans, leases, credit cards with balances of $10,000 or less, cash-value insurance policy loans, loans fully collateralized by cash deposits) or grandfathered. Home mortgages are not permitted unless grandfathered."
   - "Fees for services rendered more than one year before the current report date that are still unpaid impair independence."
   - "Nonattest services are allowed only if the CPA assumes no management responsibilities, and the client designates an individual with suitable skill, knowledge and experience, oversees the service, evaluates it, and accepts responsibility for the results."
-  - "Contingent fees are prohibited for attest clients; commissions and referral fees must be disclosed and are also prohibited for attest clients."
+  - "Contingent fees and commissions are prohibited for clients for which the member performs an audit, a review, a compilation whose report does not disclose a lack of independence, or an examination of prospective financial information (ET 1.510, 1.520). Contingent fees are also prohibited for preparing original or amended tax returns or refund claims. Referral fees are not prohibited; they must be disclosed to the client."
 citations:
   - source: AICPA Code of Professional Conduct, ET 0.300 (Principles)
   - source: ET 1.000.010 (Conceptual framework) and ET 1.210.010 (Conceptual framework for independence)
@@ -138,7 +138,8 @@ aud-coc-chk2
 ## Fees and other rules
 
 - **Unpaid fees:** fees for services rendered more than one year before the date of the current-year report that are still unpaid impair independence (a self-interest threat).
-- **Contingent fees:** prohibited for any client for which the member performs an audit, review, or examination of prospective financial information, or when preparing an original or amended tax return (with limited exceptions).
-- **Commissions and referral fees:** prohibited for attest clients; otherwise permitted if disclosed to the client.
+- **Contingent fees (ET 1.510):** prohibited for any client for which the member performs an audit, a review, a compilation whose report does not disclose a lack of independence, or an examination of prospective financial information, and for preparing an original or amended tax return or refund claim (with limited exceptions).
+- **Commissions (ET 1.520):** prohibited for the same audit, review, compilation (no independence disclosure), and PFI-examination clients; otherwise permitted if disclosed to the client.
+- **Referral fees (ET 1.520):** fees paid or received for recommending or referring CPA services are **not prohibited**, for any client; they must be **disclosed** to the client.
 - **Confidential information:** not disclosed without client consent, except for subpoenas and summonses, compliance with laws and standards, peer review, and AICPA or state board ethics investigations.
 - **Client records:** client-provided records must be returned on request, even if fees are unpaid.

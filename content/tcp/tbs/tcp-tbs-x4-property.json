@@ -4,13 +4,12 @@
   "unitId": "tcp-u7",
   "moduleIds": [
     "tcp-asset-dispositions",
-    "tcp-deferral-transactions",
-    "tcp-cost-recovery"
+    "tcp-deferral-transactions"
   ],
   "pool": "exam",
   "title": "Property transactions — Falcon Corp.",
   "minutes": 30,
-  "skill": "analysis",
+  "skill": "application",
   "instructions": "Falcon Corp., a calendar-year C corporation, had the 2025 property transactions below. It has no prior §1231 losses.",
   "exhibits": [
     {
@@ -72,10 +71,10 @@
         },
         {
           "id": "dep",
-          "label": "2025 depreciation on the office building",
+          "label": "2025 depreciation on the office building (compute with the mid-month formula, not the IRS tables; round to the nearest dollar)",
           "answer": 79167,
-          "tolerance": 0,
-          "explanation": "3,900,000 ÷ 39 = 100,000 × 9.5 ÷ 12 = **79,167** (mid-month; March)."
+          "tolerance": 1,
+          "explanation": "3,900,000 ÷ 39 = 100,000 × 9.5 ÷ 12 = **79,167** (mid-month; March). The IRS table percentage (2.033%) gives 79,287 because the table rounds the rate."
         }
       ]
     },

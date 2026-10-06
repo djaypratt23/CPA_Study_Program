@@ -1,0 +1,193 @@
+{
+  "id": "far-tbs-u1-cash-flow-review",
+  "section": "FAR",
+  "unitId": "far-u1",
+  "moduleIds": [
+    "far-cash-flows"
+  ],
+  "pool": "practice",
+  "title": "Review a draft statement of cash flows — Lumen Retail",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Lumen Retail's staff accountant drafted the indirect-method statement of cash flows for the year. Review it against the source data. Tick every amount that is wrong and enter the correct amount. Enter cash outflows and deductions as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Source data for the year",
+      "content": "- Net income **$180,000**, after depreciation of **$64,000** and a **$7,000** gain on sale of equipment.\n- The equipment sold had a carrying amount of **$18,000** and was sold for **$25,000** cash.\n- Accounts receivable **increased $22,000**; inventory **decreased $15,000**; accounts payable **decreased $9,000**; accrued liabilities **increased $4,000**.\n- Equipment purchases: **$140,000** paid in cash, plus equipment worth **$60,000** acquired by issuing a three-year note to the seller.\n- Borrowed **$100,000** from a bank on a five-year loan; repaid **$40,000** of long-term debt.\n- Paid dividends of **$30,000**; issued common stock for **$50,000** cash; paid interest of **$11,000**.\n- Cash: **$75,000** on January 1 and **$265,000** on December 31."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "op",
+      "prompt": "Review the operating activities section.",
+      "preparedLabel": "Per draft",
+      "rows": [
+        {
+          "id": "ni",
+          "label": "Net income",
+          "prepared": 180000,
+          "answer": 180000,
+          "explanation": "Agrees to the income statement. **No error.**"
+        },
+        {
+          "id": "dep",
+          "label": "Depreciation",
+          "prepared": 64000,
+          "answer": 64000,
+          "explanation": "A noncash expense added back. **No error.**"
+        },
+        {
+          "id": "gain",
+          "label": "Gain on sale of equipment",
+          "prepared": 7000,
+          "answer": -7000,
+          "explanation": "A gain is included in net income but the cash (proceeds) is investing, so the gain is **subtracted**: **−7,000**."
+        },
+        {
+          "id": "ar",
+          "label": "Change in accounts receivable",
+          "prepared": 22000,
+          "answer": -22000,
+          "explanation": "An **increase** in receivables means sales exceeded collections: **−22,000**."
+        },
+        {
+          "id": "inv",
+          "label": "Change in inventory",
+          "prepared": 15000,
+          "answer": 15000,
+          "explanation": "A decrease in inventory is added back. **No error.**"
+        },
+        {
+          "id": "ap",
+          "label": "Change in accounts payable",
+          "prepared": -9000,
+          "answer": -9000,
+          "explanation": "A decrease in payables means payments exceeded purchases. **No error.**"
+        },
+        {
+          "id": "acc",
+          "label": "Change in accrued liabilities",
+          "prepared": 4000,
+          "answer": 4000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "cfo",
+          "label": "Net cash provided by operating activities",
+          "prepared": 283000,
+          "answer": 225000,
+          "explanation": "180,000 + 64,000 − 7,000 − 22,000 + 15,000 − 9,000 + 4,000 = **225,000**."
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "id": "if",
+      "prompt": "Review the investing and financing sections and the net change in cash.",
+      "preparedLabel": "Per draft",
+      "rows": [
+        {
+          "id": "capex",
+          "label": "Purchases of equipment",
+          "prepared": -200000,
+          "answer": -140000,
+          "explanation": "Only the **140,000** paid in cash. The 60,000 acquired by issuing a note is a noncash transaction, disclosed separately (ASC 230-10-50-3)."
+        },
+        {
+          "id": "proc",
+          "label": "Proceeds from sale of equipment",
+          "prepared": 18000,
+          "answer": 25000,
+          "explanation": "Report the **cash received**, 25,000, not the carrying amount."
+        },
+        {
+          "id": "cfi",
+          "label": "Net cash used in investing activities",
+          "prepared": -182000,
+          "answer": -115000,
+          "explanation": "−140,000 + 25,000 = **−115,000**."
+        },
+        {
+          "id": "borrow",
+          "label": "Proceeds from long-term borrowing",
+          "prepared": 160000,
+          "answer": 100000,
+          "explanation": "Only the **100,000** borrowed in cash. The draft added the 60,000 equipment note."
+        },
+        {
+          "id": "repay",
+          "label": "Repayment of long-term debt",
+          "prepared": -40000,
+          "answer": -40000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "div",
+          "label": "Dividends paid",
+          "prepared": -30000,
+          "answer": -30000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "stock",
+          "label": "Proceeds from issuing common stock",
+          "prepared": 50000,
+          "answer": 50000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "cff",
+          "label": "Net cash provided by financing activities",
+          "prepared": 140000,
+          "answer": 80000,
+          "explanation": "100,000 − 40,000 − 30,000 + 50,000 = **80,000**."
+        },
+        {
+          "id": "chg",
+          "label": "Net increase in cash",
+          "prepared": 241000,
+          "answer": 190000,
+          "explanation": "225,000 − 115,000 + 80,000 = **190,000**; 75,000 + 190,000 = 265,000, which agrees to the balance sheet. The draft's 241,000 would give ending cash of 316,000 — it does not tie."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Indicate how each item is reported in Lumen's statement of cash flows (indirect method, US GAAP).",
+      "options": [
+        "Operating activities",
+        "Investing activities",
+        "Financing activities",
+        "Noncash disclosure only"
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Equipment acquired by issuing a $60,000 note",
+          "answer": "Noncash disclosure only",
+          "explanation": "No cash changed hands; disclose it as a noncash investing and financing activity."
+        },
+        {
+          "id": "c2",
+          "label": "Interest paid of $11,000",
+          "answer": "Operating activities",
+          "explanation": "Under US GAAP interest paid is operating (and cash paid for interest is disclosed)."
+        },
+        {
+          "id": "c3",
+          "label": "Dividends paid of $30,000",
+          "answer": "Financing activities",
+          "explanation": "Distributions to owners are financing."
+        },
+        {
+          "id": "c4",
+          "label": "Cash received from the equipment sale",
+          "answer": "Investing activities",
+          "explanation": "Proceeds from selling productive assets are investing."
+        }
+      ]
+    }
+  ]
+}

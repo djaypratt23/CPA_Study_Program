@@ -1,0 +1,115 @@
+{
+  "id": "tcp-tbs-u3-shareholder-review",
+  "section": "TCP",
+  "unitId": "tcp-u3",
+  "moduleIds": [
+    "tcp-c-corp-compliance",
+    "tcp-formation-liquidation"
+  ],
+  "pool": "practice",
+  "title": "Review shareholder–corporation transactions — Alder Corp. and Nina Vance",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Nina Vance is the sole shareholder and CEO of Alder Corp., a C corporation with ample E&P. A staff member prepared the 2025 amounts for Alder's Form 1120 and Nina's Form 1040 from the documents below. Review them, then resolve the review notes. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Documents (2025)",
+      "content": "- **Loan agreement:** on January 1, Alder lent Nina **$200,000**, interest-free and payable on demand. The loan was outstanding all year. Nina used the money to renovate her home. The blended annual rate for 2025 (given): **4%**.\n- **Lease:** Alder rents its office building from Nina for **$120,000** a year. An independent appraisal puts fair rental value at **$80,000**.\n- **Compensation:** Alder paid Nina a salary of **$300,000**. An independent compensation study found **$250,000** reasonable for her duties.\n- Alder's current and accumulated E&P exceed **$1 million**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "amts",
+      "prompt": "Review the prepared amounts.",
+      "preparedLabel": "Per staff",
+      "rows": [
+        {
+          "id": "c_int",
+          "label": "Alder — interest income on the shareholder loan",
+          "prepared": 0,
+          "answer": 8000,
+          "explanation": "An interest-free **demand** loan from a corporation to its shareholder is a below-market loan (§7872). Foregone interest, 200,000 × 4% = **8,000**, is interest income to Alder."
+        },
+        {
+          "id": "c_rent",
+          "label": "Alder — rent expense deducted",
+          "prepared": 120000,
+          "answer": 80000,
+          "explanation": "Only fair rental value, **80,000**, is an ordinary and necessary expense. The 40,000 excess is a constructive dividend."
+        },
+        {
+          "id": "c_comp",
+          "label": "Alder — compensation deducted for Nina",
+          "prepared": 300000,
+          "answer": 250000,
+          "explanation": "Only **reasonable** compensation (250,000 per the independent study) is deductible (§162(a)(1)). The 50,000 excess is a constructive dividend."
+        },
+        {
+          "id": "c_div",
+          "label": "Alder — deduction for constructive dividends",
+          "prepared": 0,
+          "answer": 0,
+          "explanation": "Dividends are never deductible by a C corporation. **No error.**"
+        },
+        {
+          "id": "n_div",
+          "label": "Nina — dividend income",
+          "prepared": 0,
+          "answer": 98000,
+          "explanation": "Deemed dividend on the loan 8,000 + excess rent 40,000 + excess compensation 50,000 = **98,000**, all within E&P."
+        },
+        {
+          "id": "n_wage",
+          "label": "Nina — wages",
+          "prepared": 300000,
+          "answer": 250000,
+          "explanation": "**250,000**; the excess is reclassified as a dividend."
+        },
+        {
+          "id": "n_rent",
+          "label": "Nina — rental income",
+          "prepared": 120000,
+          "answer": 80000,
+          "explanation": "**80,000**."
+        },
+        {
+          "id": "n_int",
+          "label": "Nina — deductible interest on the shareholder loan",
+          "prepared": 8000,
+          "answer": 0,
+          "explanation": "Nina used the money personally, so the deemed interest is nondeductible personal interest: **0**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "Resolve the review notes.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "A separate 2022 advance of $75,000 to Nina: no note, no interest, no repayments, no collateral, and Nina says she does not intend to repay.",
+          "options": [
+            "Treat it as a bona fide loan",
+            "Treat it as a constructive dividend when made",
+            "Treat it as compensation"
+          ],
+          "answer": "Treat it as a constructive dividend when made",
+          "explanation": "Without the substance of a debt (a note, interest, repayment, intent to repay), the advance is a distribution."
+        },
+        {
+          "id": "d2",
+          "label": "The $200,000 loan is below the de minimis amount for below-market loans.",
+          "options": [
+            "Correct — ignore §7872",
+            "Incorrect — the $10,000 de minimis exception does not apply",
+            "Correct only for gift loans"
+          ],
+          "answer": "Incorrect — the $10,000 de minimis exception does not apply",
+          "explanation": "The corporation–shareholder de minimis exception covers loans of 10,000 or less."
+        }
+      ]
+    }
+  ]
+}

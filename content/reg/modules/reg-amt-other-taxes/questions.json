@@ -92,7 +92,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "MAGI exceeds $200,000.",
         "trap": "wrong-rule"
       }
@@ -106,6 +106,7 @@
   {
     "id": "reg-ot-01",
     "pool": "practice",
+    "optional": true,
     "stem": "Which item is added back in computing AMTI?",
     "choices": [
       {
@@ -116,7 +117,7 @@
       },
       {
         "id": "b",
-        "text": "Charitable contributions",
+        "text": "Charitable contributions to public charities",
         "explanation": "Charity is allowed for AMT.",
         "trap": "wrong-rule"
       },
@@ -140,23 +141,24 @@
   {
     "id": "reg-ot-02",
     "pool": "practice",
+    "optional": true,
     "stem": "An employee exercises incentive stock options with a $40,000 bargain element and holds the shares. What is the tax effect in the year of exercise?",
     "choices": [
       {
         "id": "a",
-        "text": "$40,000 of ordinary income",
+        "text": "$40,000 of ordinary income for regular tax",
         "explanation": "ISOs don't create regular-tax income at exercise.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Nothing for any purpose",
+        "text": "Nothing for regular or AMT purposes",
         "explanation": "The spread is an AMT adjustment.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$40,000 capital gain",
+        "text": "$40,000 of capital gain in that year",
         "explanation": "No sale has occurred.",
         "trap": "wrong-period"
       },
@@ -174,7 +176,8 @@
   {
     "id": "reg-ot-03",
     "pool": "practice",
-    "stem": "Single taxpayer, 2025 AMTI of $700,000. What is the AMT exemption after the phase-out?",
+    "optional": true,
+    "stem": "For 2025 the single AMT exemption is $88,100, reduced by 25% of AMTI over $626,350. Single taxpayer, 2025 AMTI of $700,000. What is the AMT exemption after the phase-out?",
     "choices": [
       {
         "id": "a",
@@ -184,7 +187,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Not fully phased out.",
         "trap": "overgeneralization"
       },
@@ -209,7 +212,8 @@
   {
     "id": "reg-ot-04",
     "pool": "practice",
-    "stem": "A 12-year-old has $5,000 of interest income and no earned income in 2025. How much is taxed at the parents' rate?",
+    "optional": true,
+    "stem": "For 2025 the kiddie-tax threshold is $2,700. A 12-year-old has $5,000 of interest income and no earned income in 2025. How much is taxed at the parents' rate?",
     "choices": [
       {
         "id": "a",
@@ -219,7 +223,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The kiddie tax applies.",
         "trap": "wrong-rule"
       },
@@ -300,7 +304,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Wages exceed the threshold.",
         "trap": "wrong-rule"
       }
@@ -314,7 +318,7 @@
   {
     "id": "reg-ot-07",
     "pool": "practice",
-    "stem": "A taxpayer has $150,000 of wages and $60,000 of net self-employment income in 2025. On what amount of net SE earnings does the 12.4% Social Security portion apply?",
+    "stem": "The 2025 Social Security wage base is $176,100. A taxpayer has $150,000 of wages and $60,000 of net self-employment income in 2025. On what amount of net SE earnings does the 12.4% Social Security portion apply?",
     "choices": [
       {
         "id": "a",
@@ -329,7 +333,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Wages are below the wage base.",
         "trap": "wrong-rule"
       },
@@ -383,28 +387,29 @@
   {
     "id": "reg-ot-09",
     "pool": "practice",
+    "optional": true,
     "stem": "Why does AMT paid because of ISO exercises create a minimum tax credit?",
     "choices": [
       {
         "id": "a",
-        "text": "Because ISOs are permanently excluded",
+        "text": "Because ISO gains are permanently excluded from income",
         "explanation": "ISO gain is eventually taxed.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Because it's a timing (deferral) item — the credit prevents double taxation when regular tax later exceeds tentative minimum tax",
+        "text": "It's a timing item; the credit prevents double taxation",
         "explanation": "Correct. AMT from deferral items (ISOs, depreciation) generates a credit usable in later years; exclusion items (SALT) don't."
       },
       {
         "id": "c",
-        "text": "Because all AMT is refundable",
+        "text": "Because all AMT paid is refundable in later years",
         "explanation": "AMT isn't generally refundable.",
         "trap": "overgeneralization"
       },
       {
         "id": "d",
-        "text": "Because the credit is required for municipal bonds",
+        "text": "Because the credit is required for municipal bond interest",
         "explanation": "Private activity bond interest is an exclusion item.",
         "trap": "wrong-classification"
       }
@@ -421,24 +426,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0 — SE tax applies only if net SE earnings are $400 or more",
+        "text": "$0, below the $400 threshold",
         "explanation": "Correct. No SE tax is due when net SE earnings are under $400."
       },
       {
         "id": "b",
-        "text": "$53.55",
+        "text": "$53.55 (15.3% of $350)",
         "explanation": "The $400 threshold isn't met.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$49.45",
+        "text": "$49.45 (15.3% of 92.35%)",
         "explanation": "The $400 threshold isn't met.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "$26.78",
+        "text": "$26.78 (half of $53.55)",
         "explanation": "The $400 threshold isn't met.",
         "trap": "wrong-rule"
       }
@@ -447,5 +452,40 @@
     "explanation": "No SE tax is due when net SE earnings are under $400.",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "reg-ot-11",
+    "pool": "practice",
+    "stem": "For 2025, a single taxpayer has taxable income of $60,000, including $10,000 of qualified dividends. Use these given 2025 amounts: ordinary rates of 10% up to $11,925, 12% up to $48,475 and 22% up to $103,350; the 0% rate on qualified dividends applies only to taxable income up to $48,350, and 15% applies above that. What is the regular tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,114",
+        "explanation": "This taxes the dividends at ordinary rates.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$7,414",
+        "explanation": "Correct. Ordinary income of 50,000: 1,192.50 + 4,386 + 22% × 1,525 (335.50) = 5,914. The dividends stack from 50,000 to 60,000, all above 48,350, so 15% × 10,000 = 1,500. Total 7,414."
+      },
+      {
+        "id": "c",
+        "text": "$5,914",
+        "explanation": "This taxes the dividends at 0%; they sit above the 0% breakpoint.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$7,914",
+        "explanation": "This taxes the dividends at 20%.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Tax ordinary income on the schedule, then stack preferential income on top to find its rate.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

@@ -1,0 +1,92 @@
+{
+  "id": "far-tbs-u8-accruals-review",
+  "section": "FAR",
+  "unitId": "far-u8",
+  "moduleIds": [
+    "far-payables"
+  ],
+  "pool": "practice",
+  "title": "Review the year-end accrued liabilities schedule — Northfield Distributors",
+  "minutes": 15,
+  "skill": "analysis",
+  "instructions": "Northfield Distributors' staff accountant prepared the December 31 accrued liabilities schedule. Review each accrual against the source information. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Source information",
+      "content": "- **Payroll:** biweekly payroll is **$84,000** for 10 workdays, paid in arrears. The last payday was Friday, December 24, covering work through that date. December 27–31 are five workdays.\n- **Term note:** **$600,000**, 6%, interest paid annually each **October 1** for the preceding 12 months. The October 1 payment was made on time.\n- **Vacation:** employees have earned **$18,300** of vested, unused vacation at December 31.\n- **Warranties:** products carry a one-year warranty. Expected cost is **2%** of sales. Sales for the year were **$2,400,000**. The warranty liability was **$11,000** on January 1, and warranty claims paid during the year were **$29,500**.\n- **Utilities:** the December bill of **$6,200** arrived January 10."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "acc",
+      "prompt": "Review the accrued liabilities schedule.",
+      "preparedLabel": "Per staff schedule",
+      "rows": [
+        {
+          "id": "wage",
+          "label": "Accrued wages",
+          "prepared": 42000,
+          "answer": 42000,
+          "explanation": "Five unpaid workdays (Dec 27–31) × 84,000 / 10 = **42,000**. **No error.**"
+        },
+        {
+          "id": "int",
+          "label": "Accrued interest on the term note",
+          "prepared": 36000,
+          "answer": 9000,
+          "explanation": "Interest was last paid October 1, so only October–December is unpaid: 600,000 × 6% × 3/12 = **9,000**. The staff accrued a full year."
+        },
+        {
+          "id": "vac",
+          "label": "Accrued vacation pay",
+          "prepared": 18300,
+          "answer": 18300,
+          "explanation": "Earned, vested, unused vacation is accrued when earned (ASC 710-10-25). **No error.**"
+        },
+        {
+          "id": "war",
+          "label": "Warranty liability",
+          "prepared": 48000,
+          "answer": 29500,
+          "explanation": "The liability is a roll-forward, not the year's expense: 11,000 + 48,000 − 29,500 claims paid = **29,500**."
+        },
+        {
+          "id": "util",
+          "label": "Accrued utilities",
+          "prepared": 6200,
+          "answer": 6200,
+          "explanation": "December's usage, billed in January, is a December expense. **No error.**"
+        },
+        {
+          "id": "tot",
+          "label": "Total accrued liabilities",
+          "prepared": 150500,
+          "answer": 105000,
+          "explanation": "42,000 + 9,000 + 18,300 + 29,500 + 6,200 = **105,000**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "exp",
+      "prompt": "Compute the correct expense for the year.",
+      "rows": [
+        {
+          "id": "wexp",
+          "label": "Warranty expense for the year",
+          "answer": 48000,
+          "tolerance": 0,
+          "explanation": "2,400,000 × 2% = **48,000**. The staff's 48,000 is the right *expense* but the wrong *liability*."
+        },
+        {
+          "id": "iexp",
+          "label": "Interest expense on the term note for the year",
+          "answer": 36000,
+          "tolerance": 0,
+          "explanation": "Interest expense is always twelve months: 600,000 × 6% = **36,000**, whatever the payment dates. The October 1 payment settled the 9,000 accrued at last year-end plus 27,000 of this year's expense, and another 9,000 is accrued now."
+        }
+      ]
+    }
+  ]
+}

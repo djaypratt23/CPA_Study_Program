@@ -10,6 +10,8 @@ objectives:
   - text: Identify the headings and wording changes in modified reports.
     skill: remembering
     task: Prepare a modified auditor's report
+  - text: Identify the factors in forming an opinion on internal control over financial reporting in an integrated audit, and determine the form and content of the ICFR report.
+    skill: application
 bigIdea:
   what: >-
     An opinion is modified for one of two reasons: the statements are materially misstated, or the auditor couldn't
@@ -84,3 +86,17 @@ insight: First ask "misstatement or scope?", then ask "confined or pervasive?"
 ```check
 aud-mo-chk2
 ```
+
+## Reporting on internal control in an integrated audit
+
+In an integrated audit (AS 2201 for issuers; AU-C 940 for non-issuers), the auditor expresses an opinion on whether the entity maintained effective internal control over financial reporting **as of** the balance sheet date.
+
+| Situation | ICFR opinion |
+|---|---|
+| No material weaknesses | Unmodified |
+| One or more **material weaknesses** | **Adverse** — the report defines a material weakness and describes it |
+| Scope limitation | Disclaim (or withdraw) |
+
+- The ICFR report and the financial statement report can be **combined** or **separate**. Separate reports must be **dated the same** and each must refer to the other.
+- A material weakness does not by itself require modifying the financial statement opinion; if the related misstatement was corrected, that opinion can be unmodified. The financial statement report of an issuer then refers to the adverse ICFR report.
+- Management's report on ICFR must be complete; if management's report is inadequate or omitted, the auditor modifies the ICFR report.

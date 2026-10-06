@@ -1,0 +1,63 @@
+{
+  "id": "far-tbs-x3-operating-lease",
+  "section": "FAR",
+  "unitId": "far-u11",
+  "moduleIds": [
+    "far-leases-operating"
+  ],
+  "pool": "exam",
+  "title": "Lessee operating lease — Quill Studio",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "On January 1, 2025, Quill Studio signed a five-year lease of office space, classified as an operating lease. Compute the amounts for its 2025 financial statements. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Lease terms",
+      "content": "- Annual payments of **$50,000**, due each **December 31**, 2025–2029.\n- Quill's incremental borrowing rate: **6%** (the rate implicit in the lease is not readily determinable).\n- Initial direct costs paid by Quill: **$5,000**.\n- Present value of an ordinary annuity of 1 for 5 periods at 6%: **4.21236**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "ol",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "liab",
+          "label": "Lease liability at January 1, 2025",
+          "answer": 210618,
+          "explanation": "50,000 × 4.21236 = **210,618**.",
+          "tolerance": 2
+        },
+        {
+          "id": "rou",
+          "label": "Right-of-use asset at January 1, 2025",
+          "answer": 215618,
+          "explanation": "Lease liability 210,618 + initial direct costs 5,000 = **215,618**.",
+          "tolerance": 2
+        },
+        {
+          "id": "cost",
+          "label": "2025 single lease cost",
+          "answer": 51000,
+          "explanation": "(5 × 50,000 + 5,000) ÷ 5 = **51,000**, straight-line.",
+          "tolerance": 2
+        },
+        {
+          "id": "liab2",
+          "label": "Lease liability at December 31, 2025",
+          "answer": 173255,
+          "explanation": "210,618 + 6% interest 12,637 − 50,000 payment = **173,255**.",
+          "tolerance": 2
+        },
+        {
+          "id": "rou2",
+          "label": "Right-of-use asset at December 31, 2025",
+          "answer": 177255,
+          "explanation": "Amortization = lease cost 51,000 − interest accretion 12,637 = 38,363; 215,618 − 38,363 = **177,255** (the liability plus 4,000 of unamortized initial direct costs).",
+          "tolerance": 2
+        }
+      ]
+    }
+  ]
+}

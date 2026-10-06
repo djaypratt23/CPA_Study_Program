@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { content } from '../content'
 import type { SectionId } from '../content/schema'
 import { saveSettings } from '../db'
+import { requestPersistence } from '../lib/storage'
 import { useSettingsOrDefault } from '../hooks/useStore'
 import { WEEKDAY_NAMES, formatMinutes } from '../lib/dates'
 
@@ -28,6 +29,8 @@ export default function Onboarding() {
   const weekly = minutes.reduce((a, b) => a + b, 0)
 
   const finish = async () => {
+    // Ask the browser not to evict progress; the result is shown in Settings.
+    void requestPersistence()
     await saveSettings({
       onboarded: true,
       walkthroughSeen: true,

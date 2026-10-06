@@ -12,6 +12,8 @@ objectives:
     task: Analyze the effect of transactions on ratios
   - text: Decompose return on equity using the DuPont model.
     skill: analysis
+  - text: Calculate EBITDA and budget-to-actual variances and interpret them.
+    skill: application
 bigIdea:
   what: >-
     Ratios turn raw numbers into comparable signals: can the company pay its bills (liquidity), how fast does it
@@ -159,3 +161,15 @@ steps:
 ```check
 far-rat-chk2
 ```
+
+## EBITDA and budget-to-actual variances
+
+**EBITDA** = net income + interest expense + income tax expense + depreciation and amortization. It approximates operating cash earnings before financing and tax decisions and is widely used in loan covenants and valuation multiples. It is a non-GAAP measure.
+
+**Budget-to-actual variance** = actual − budget. For **revenue**, actual above budget is **favorable**; for **costs**, actual above budget is **unfavorable**. Compare with a **flexible budget** (budget restated for the actual activity level) to separate a volume effect from a spending effect.
+
+| Line | Budget | Actual | Variance |
+|---|---:|---:|---|
+| Revenue | 500,000 | 540,000 | 40,000 favorable |
+| Operating expenses | 320,000 | 350,000 | 30,000 unfavorable |
+| Operating income | 180,000 | 190,000 | 10,000 favorable |

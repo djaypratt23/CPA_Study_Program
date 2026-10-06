@@ -18,7 +18,10 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static splash so something paints before the app bundle and the first content section arrive (P2-1). -->
+      <p style="font-family: system-ui, sans-serif; padding: 2rem 1rem; color: #475569">Loading CPA Study Program…</p>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

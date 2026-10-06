@@ -14,6 +14,8 @@ objectives:
   - text: Apply timing rules, including constructive receipt and the tax benefit rule.
     skill: application
     task: Determine when income is recognized
+  - text: Review Form 1040 gross income against source documents and resolve related software diagnostics.
+    skill: analysis
 bigIdea:
   what: >-
     Gross income is "all income from whatever source derived" unless a specific provision excludes it. So the
@@ -103,3 +105,25 @@ Provisional income = AGI (before Social Security) + tax-exempt interest + 50% of
 ```check
 reg-gi-chk2
 ```
+
+## Reviewing gross income against source documents
+
+When you review a prepared return, tie **each** income line to its document, then ask whether anything on the documents is missing from the return:
+
+| Line | Source | Common error |
+|---|---|---|
+| Wages | W-2 **box 1** | Using box 5 (Medicare wages include elective deferrals) |
+| Taxable interest | 1099-INT box 1 | Adding box 8 tax-exempt interest (it goes on line 2a) |
+| Capital gain | 1099-B plus 1099-DIV box 2a | Forgetting capital gain distributions |
+| Alimony | Divorce decree date | Pre-2019 instruments: taxable to the recipient |
+| State refund | 1099-G plus last year's return | Taxing a refund when last year's standard deduction gave no benefit |
+
+Deposits with no income document (gifts, inheritances, loans, transfers between accounts) need an explanation, not automatic inclusion.
+
+**Resolving diagnostics.** Tax software raises a diagnostic whenever an entry looks unusual. It is a question, not an error. For each one, decide whether:
+
+1. the **input is wrong** — fix the entry;
+2. the entry is **right and the difference is expected** — clear the flag and document why; or
+3. the source documents **cannot answer it** — ask the client.
+
+Clearing a flag without understanding it is how errors reach a filed return.

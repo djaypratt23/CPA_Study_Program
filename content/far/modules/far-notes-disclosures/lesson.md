@@ -12,6 +12,8 @@ objectives:
     task: Identify and disclose related-party transactions
   - text: Determine when concentrations and significant estimates must be disclosed.
     skill: application
+  - text: Compare note disclosures with the financial statements and supporting documents, and investigate and correct inconsistencies.
+    skill: analysis
 bigIdea:
   what: >-
     The notes are the part of the financial statements that tells readers how the numbers were made and what
@@ -89,8 +91,20 @@ Four disclosure areas:
 3. **Certain significant estimates** — disclose when it is **at least reasonably possible** that an estimate will **change in the near term** (within one year of the statement date) and the effect would be **material**.
 4. **Current vulnerability due to concentrations** — concentrations in customers, suppliers, lenders, products, markets, or geographic areas, disclosed when the concentration exists at the statement date, makes the entity vulnerable to a **near-term severe impact**, and that impact is at least reasonably possible.
 
+**Customers are always "reasonably possible" to lose.** ASC 275-10-50-20 says it is always considered at least reasonably possible that any customer, grantor, or contributor will be lost in the near term (and that operations outside the home country will be disrupted). So a major-customer concentration that makes the entity vulnerable to a severe impact is disclosed even if the customer is stable and the contract is long-term.
+
 Special rule: **all** concentrations of labor subject to collective bargaining agreements, and operations located outside the entity's home country, are candidates; for labor, disclose the percentage covered and whether agreements expire within one year when the vulnerability test is met.
 
 ```check
 far-nd-chk2
 ```
+
+## Tying the notes to the statements
+
+Every number in the notes should agree to a statement line, add up to one, or come from a supporting schedule. When you review a note, check it three ways:
+
+1. **Agree.** The note total agrees to the statement (for example, the total of the debt maturity table equals current plus noncurrent debt).
+2. **Split.** A note component is the right *part* of a statement line (the PP&E note discloses depreciation only, even when the income statement combines depreciation and amortization).
+3. **Recompute.** Supplemental amounts are recomputed from source data (cash paid for interest = interest expense − the increase in interest payable, ± premium or discount amortization).
+
+A table that foots is not necessarily right. A maturity schedule can total correctly while shifting a payment between years, so agree each year to the debt agreements too.

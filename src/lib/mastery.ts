@@ -1,6 +1,8 @@
 /**
  * Mastery gating: a module is mastered only after >= 80% on mixed retrieval
- * practice on at least two different days. A correct answer the learner
+ * practice on at least two different days, each with at least three distinct
+ * questions (answering one question three times doesn't qualify). Review-queue
+ * answers and mock-exam answers don't count. A correct answer the learner
  * marked as a guess does not count as correct here.
  */
 import type { Attempt } from '../db/types'
@@ -23,12 +25,17 @@ export function isTrulyCorrect(a: Pick<Attempt, 'correct' | 'confidence'>): bool
 }
 
 export function computeMastery(attempts: Attempt[], lessonDone: boolean): MasteryInfo {
-  const practice = attempts.filter((a) => a.itemType === 'mcq' && a.mode !== 'lesson')
+  const practice = attempts.filter((a) => a.itemType === 'mcq' && (a.mode === 'tutor' || a.mode === 'test'))
   const mixed = practice.filter((a) => a.mixed)
   const byDay = new Map<string, Attempt[]>()
   for (const a of mixed) byDay.set(a.day, [...(byDay.get(a.day) ?? []), a])
+  // Per day, only each question's first answer that day counts.
   const dayStats = [...byDay.entries()]
-    .map(([day, list]) => ({ day, n: list.length, acc: list.filter(isTrulyCorrect).length / list.length }))
+    .map(([day, list]) => {
+      const seen = new Set<string>()
+      const distinct = [...list].sort((a, b) => a.at.localeCompare(b.at)).filter((a) => !seen.has(a.itemId) && !!seen.add(a.itemId))
+      return { day, n: distinct.length, acc: distinct.filter(isTrulyCorrect).length / distinct.length }
+    })
     .sort((x, y) => x.day.localeCompare(y.day))
   const qualifyingDays = dayStats.filter((d) => d.n >= MIN_ITEMS_PER_DAY && d.acc >= MASTERY_THRESHOLD).map((d) => d.day)
 

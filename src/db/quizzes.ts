@@ -10,6 +10,8 @@ export async function createQuizSession(opts: {
   mixed: boolean
   itemIds: string[]
   timeLimitMs?: number
+  purpose?: QuizSession['purpose']
+  moduleId?: string
 }): Promise<string> {
   const id = uid('quiz-')
   await db.quizSessions.put({
@@ -24,6 +26,8 @@ export async function createQuizSession(opts: {
     startedAt: new Date().toISOString(),
     elapsedMs: 0,
     timeLimitMs: opts.timeLimitMs,
+    ...(opts.purpose ? { purpose: opts.purpose } : {}),
+    ...(opts.moduleId ? { moduleId: opts.moduleId } : {}),
   })
   return id
 }

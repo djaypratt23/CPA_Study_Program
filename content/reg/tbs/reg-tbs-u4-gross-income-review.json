@@ -1,0 +1,137 @@
+{
+  "id": "reg-tbs-u4-gross-income-review",
+  "section": "REG",
+  "unitId": "reg-u4",
+  "moduleIds": [
+    "reg-gross-income",
+    "reg-capital-gains"
+  ],
+  "pool": "practice",
+  "title": "Review Form 1040 gross income against source documents — Dana Ruiz",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "A staff preparer entered Dana Ruiz's 2025 source documents into tax software. Dana is single. Review the prepared income lines against the documents, then resolve the software's diagnostic messages. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Source documents",
+      "content": "- **Form W-2:** box 1 wages **$84,500**; box 5 Medicare wages **$90,000**; box 12 code D (401(k) elective deferral) **$5,500**.\n- **Form 1099-INT:** box 1 interest (bank) **$1,240**; box 8 tax-exempt interest (municipal bonds) **$900**.\n- **Form 1099-DIV:** box 1a ordinary dividends **$2,300** (box 1b qualified **$1,800**); box 2a capital gain distributions **$600**.\n- **Form 1099-B:** stock held three years, proceeds **$12,000**, basis **$7,500**.\n- **Form 1099-G:** unemployment compensation **$3,200**; state income tax refund **$800**. Dana claimed the standard deduction on her 2024 return.\n- **Divorce decree** dated March 2017 (never modified): Dana receives alimony of **$1,000 a month**; she received **$12,000** in 2025.\n- **Other:** a **$10,000** gift from her aunt and **$50,000** of life insurance proceeds on her father's death."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "gi",
+      "prompt": "Review the prepared gross income lines.",
+      "preparedLabel": "Per prepared return",
+      "rows": [
+        {
+          "id": "w",
+          "label": "Wages (Form 1040, line 1a)",
+          "prepared": 90000,
+          "answer": 84500,
+          "explanation": "Use W-2 **box 1**, 84,500. Box 5 (Medicare wages) includes the 5,500 elective 401(k) deferral, which is excluded from income tax wages (§402(g))."
+        },
+        {
+          "id": "int",
+          "label": "Taxable interest (line 2b)",
+          "prepared": 2140,
+          "answer": 1240,
+          "explanation": "Only the bank interest, **1,240**, is taxable. The 900 of municipal bond interest is exempt (§103) and goes on line 2a."
+        },
+        {
+          "id": "div",
+          "label": "Ordinary dividends (line 3b)",
+          "prepared": 2300,
+          "answer": 2300,
+          "explanation": "Agrees to 1099-DIV box 1a. **No error.**"
+        },
+        {
+          "id": "cg",
+          "label": "Capital gain (line 7)",
+          "prepared": 4500,
+          "answer": 5100,
+          "explanation": "Stock gain 12,000 − 7,500 = 4,500 **plus** the 600 capital gain distribution (1099-DIV box 2a) = **5,100**."
+        },
+        {
+          "id": "unemp",
+          "label": "Unemployment compensation (Schedule 1)",
+          "prepared": 3200,
+          "answer": 3200,
+          "explanation": "Unemployment benefits are taxable (§85). **No error.**"
+        },
+        {
+          "id": "alim",
+          "label": "Alimony received (Schedule 1)",
+          "prepared": 0,
+          "answer": 12000,
+          "explanation": "Alimony under a divorce instrument executed **before 2019** (and not modified to adopt the new rules) remains taxable to the recipient: **12,000**."
+        },
+        {
+          "id": "refund",
+          "label": "Taxable state income tax refund (Schedule 1)",
+          "prepared": 0,
+          "answer": 0,
+          "explanation": "Dana took the standard deduction last year, so the refund produced no tax benefit and is not income (§111). **No error.**"
+        },
+        {
+          "id": "tot",
+          "label": "Total income (line 9)",
+          "prepared": 102140,
+          "answer": 108340,
+          "explanation": "84,500 + 1,240 + 2,300 + 5,100 + 3,200 + 12,000 = **108,340**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "The tax software raised these diagnostics. Choose the correct resolution for each.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "W-2 box 1 wages (84,500) differ from box 5 Medicare wages (90,000).",
+          "options": [
+            "Report box 5 wages on line 1a",
+            "Report box 1 wages; the difference is the elective deferral",
+            "Ask the employer for a corrected W-2"
+          ],
+          "answer": "Report box 1 wages; the difference is the elective deferral",
+          "explanation": "Elective deferrals are exempt from income tax but subject to FICA, so box 1 is lower than box 5. The difference is expected."
+        },
+        {
+          "id": "d2",
+          "label": "Form 1099-INT box 8 (tax-exempt interest, 900) has no matching entry.",
+          "options": [
+            "Report 900 on line 2a (not taxable)",
+            "Report 900 on line 2b",
+            "No entry needed"
+          ],
+          "answer": "Report 900 on line 2a (not taxable)",
+          "explanation": "Tax-exempt interest is reported for information on line 2a; it is not taxable."
+        },
+        {
+          "id": "d3",
+          "label": "Bank deposit of 10,000 from Dana's aunt is not matched to any income document.",
+          "options": [
+            "Report as other income",
+            "Exclude it — it is a gift",
+            "Report as a capital gain"
+          ],
+          "answer": "Exclude it — it is a gift",
+          "explanation": "Gifts are excluded from the recipient's income (§102); any gift tax filing is the donor's concern."
+        },
+        {
+          "id": "d4",
+          "label": "Form 1099-G shows a state income tax refund of 800 that is not reported.",
+          "options": [
+            "Report 800 as income",
+            "Exclude it — no tax benefit last year",
+            "Reduce this year's state tax deduction"
+          ],
+          "answer": "Exclude it — no tax benefit last year",
+          "explanation": "The tax benefit rule taxes a refund only to the extent the tax was deducted. The standard deduction was used."
+        }
+      ]
+    }
+  ]
+}

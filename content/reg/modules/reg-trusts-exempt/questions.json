@@ -2,34 +2,34 @@
   {
     "id": "reg-te-pre1",
     "pool": "lesson",
-    "stem": "Best guess: what is the 2025 gift tax annual exclusion per donee?",
+    "stem": "Best guess: the 2025 gift tax annual exclusion is $19,000 per donee. A donor gives a friend $25,000 in cash. How much is a taxable gift?",
     "choices": [
       {
         "id": "a",
-        "text": "$18,000",
-        "explanation": "That was the 2024 amount.",
-        "trap": "outdated-rule"
+        "text": "$25,000",
+        "explanation": "The annual exclusion applies first.",
+        "trap": "partial-computation"
       },
       {
         "id": "b",
-        "text": "$13,990,000",
-        "explanation": "That's the lifetime exemption.",
-        "trap": "wrong-classification"
+        "text": "None ($0)",
+        "explanation": "Only the first $19,000 is excluded.",
+        "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "$15,000",
-        "explanation": "An older amount.",
-        "trap": "outdated-rule"
+        "text": "$19,000",
+        "explanation": "That is the excluded portion, not the taxable one.",
+        "trap": "reversed"
       },
       {
         "id": "d",
-        "text": "$19,000",
-        "explanation": "Correct. 2025 annual exclusion: $19,000 per donee."
+        "text": "$6,000",
+        "explanation": "Correct. 25,000 − 19,000 = 6,000 is a taxable gift (it uses lifetime exclusion; no tax is usually due)."
       }
     ],
     "answer": "d",
-    "explanation": "2025 annual exclusion: $19,000 per donee.",
+    "explanation": "Taxable gifts are gifts in excess of the annual exclusion per donee. The exclusion amount is given on the exam.",
     "skill": "remembering",
     "difficulty": 2
   },
@@ -104,7 +104,8 @@
   {
     "id": "reg-te-01",
     "pool": "practice",
-    "stem": "A single donor gives $25,000 to each of three nephews in 2025 (no gift splitting). What are the total taxable gifts?",
+    "optional": true,
+    "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A single donor gives $25,000 to each of three nephews in 2025 (no gift splitting). What are the total taxable gifts?",
     "choices": [
       {
         "id": "a",
@@ -120,7 +121,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Each gift exceeds the exclusion.",
         "trap": "wrong-rule"
       },
@@ -139,6 +140,7 @@
   {
     "id": "reg-te-02",
     "pool": "practice",
+    "optional": true,
     "stem": "Which transfer is **not** a taxable gift?",
     "choices": [
       {
@@ -173,6 +175,7 @@
   {
     "id": "reg-te-03",
     "pool": "practice",
+    "optional": true,
     "stem": "A trust's DNI is $30,000, and it distributes $45,000 to its beneficiary. How much is taxable to the beneficiary?",
     "choices": [
       {
@@ -194,7 +197,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "DNI is taxable to the beneficiary.",
         "trap": "wrong-rule"
       }
@@ -208,6 +211,7 @@
   {
     "id": "reg-te-04",
     "pool": "practice",
+    "optional": true,
     "stem": "Who pays tax on the income of a revocable living trust?",
     "choices": [
       {
@@ -242,7 +246,8 @@
   {
     "id": "reg-te-05",
     "pool": "practice",
-    "stem": "A married couple elects gift splitting. What is the maximum they can give one donee in 2025 without making a taxable gift?",
+    "optional": true,
+    "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A married couple elects gift splitting. What is the maximum they can give one donee in 2025 without making a taxable gift?",
     "choices": [
       {
         "id": "a",
@@ -277,6 +282,7 @@
   {
     "id": "reg-te-06",
     "pool": "practice",
+    "optional": true,
     "stem": "A 501(c)(3) organization's thrift shop sells donated clothing, staffed by paid employees. Is the income UBTI?",
     "choices": [
       {
@@ -311,6 +317,7 @@
   {
     "id": "reg-te-07",
     "pool": "practice",
+    "optional": true,
     "stem": "Which activity can cause a 501(c)(3) organization to lose its exempt status?",
     "choices": [
       {
@@ -345,6 +352,7 @@
   {
     "id": "reg-te-08",
     "pool": "practice",
+    "optional": true,
     "stem": "A complex trust's personal exemption is:",
     "choices": [
       {
@@ -366,7 +374,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Complex trusts have an exemption.",
         "trap": "wrong-rule"
       }
@@ -379,6 +387,7 @@
   {
     "id": "reg-te-09",
     "pool": "practice",
+    "optional": true,
     "stem": "A museum's for-profit restaurant generates $30,000 of net income from the public. How much is taxable UBTI?",
     "choices": [
       {
@@ -394,7 +403,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The restaurant isn't substantially related.",
         "trap": "wrong-rule"
       },
@@ -414,6 +423,7 @@
   {
     "id": "reg-te-10",
     "pool": "practice",
+    "optional": true,
     "stem": "When is Form 709 for 2025 gifts due (without extension)?",
     "choices": [
       {
@@ -442,6 +452,108 @@
     ],
     "answer": "a",
     "explanation": "The gift tax return is due April 15 of the following year (extended with the income tax extension).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-11",
+    "pool": "practice",
+    "stem": "Which organization is most likely exempt under §501(c)(6)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A private school that operates exclusively for education",
+        "explanation": "Educational organizations are §501(c)(3).",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A homeowners' social club open only to its members",
+        "explanation": "Social clubs are §501(c)(7).",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A regional chamber of commerce supported by member dues",
+        "explanation": "Correct. Business leagues, trade associations and chambers of commerce are §501(c)(6) organizations."
+      },
+      {
+        "id": "d",
+        "text": "A civic league that promotes community social welfare",
+        "explanation": "Social welfare organizations are §501(c)(4).",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§501(c)(3) charitable, educational and religious; §501(c)(4) social welfare; §501(c)(6) business leagues and chambers of commerce; §501(c)(7) social clubs.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-12",
+    "pool": "practice",
+    "stem": "A donor contributes $1,000 to each organization below. For which is the gift deductible as a charitable contribution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A §501(c)(3) public charity that runs a food bank",
+        "explanation": "Correct. Contributions to §501(c)(3) organizations are deductible charitable contributions."
+      },
+      {
+        "id": "b",
+        "text": "A §501(c)(4) group that lobbies for local zoning",
+        "explanation": "Gifts to social welfare organizations generally aren't deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A §501(c)(6) trade association for local builders",
+        "explanation": "Dues may be business expenses, but gifts aren't charitable contributions.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A political action committee for a city council race",
+        "explanation": "Political contributions are not deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Charitable deductions are allowed for gifts to §170(c) organizations, chiefly §501(c)(3) entities, not to social welfare groups, trade associations or political organizations.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-te-13",
+    "pool": "practice",
+    "stem": "Which statement correctly distinguishes a private foundation from a public charity under §501(c)(3)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A private foundation can't be tax-exempt, while a public charity always is",
+        "explanation": "Both are exempt under §501(c)(3).",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A foundation has few funding sources; a public charity has broad support",
+        "explanation": "Correct. A §501(c)(3) organization is presumed a private foundation unless it meets a public-support or other public charity test."
+      },
+      {
+        "id": "c",
+        "text": "A public charity is any charity that files the short Form 990-N",
+        "explanation": "Filing form depends on size, not classification.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Gifts to a private foundation are never deductible by individuals",
+        "explanation": "Gifts to private foundations are deductible, with lower AGI limits.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A §501(c)(3) organization is a private foundation unless it qualifies as a public charity (broad public support, churches, schools, hospitals, or supporting organizations).",
     "skill": "remembering",
     "difficulty": 2
   }

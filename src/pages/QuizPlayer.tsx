@@ -2,24 +2,49 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Calculator from '../components/Calculator'
+import Spreadsheet from '../components/Spreadsheet'
 import Clock from '../components/Timer'
 import Icon from '../components/Icon'
 import KeyNav from '../components/KeyNav'
-import McqView from '../components/McqView'
+import McqView, { TRAP_LABELS } from '../components/McqView'
 import { PageHeader, pct } from '../components/ui'
-import { content, getModule } from '../content'
+import { content, getModule, getSection, isSectionLoaded, loadSection } from '../content'
 import { db } from '../db'
+import { useSettings, useStudyState } from '../hooks/useStore'
 import { recordMcqAttempt, setLastLocation } from '../db/actions'
-import type { QuizSession } from '../db/types'
+import type { Mcq } from '../content/schema'
+import type { QuizItemState, QuizSession } from '../db/types'
+import { quizDeadline, quizTimeLeftMs } from '../lib/examClock'
+import { summarizeQuiz } from '../lib/quizScoring'
+import { MCQ_TARGET_MS, formatDuration, pacing } from '../lib/pacing'
+import { MASTERY_THRESHOLD } from '../lib/mastery'
 import type { Confidence } from '../lib/srs'
 
 export default function QuizPlayer() {
   const { sessionId = '' } = useParams()
   const session = useLiveQuery(() => db.quizSessions.get(sessionId).then((s) => s ?? null), [sessionId])
   const [calc, setCalc] = useState(false)
+  const [sheet, setSheet] = useState(false)
   const [elapsed, setElapsed] = useState(0)
   const qStart = useRef(Date.now())
   const loadedElapsed = useRef(false)
+  const [now, setNow] = useState(() => Date.now())
+  const finishing = useRef(false)
+  const submitting = useRef(false)
+  const [busy, setBusy] = useState(false)
+  // Auto-advance (P2-3): after a confident correct answer in tutor mode, move on after a short pause.
+  const settings = useSettings()
+  const [autoNextFrom, setAutoNextFrom] = useState<number | null>(null)
+  const sessionKey = session?.id
+  const sessionIndex = session?.index
+  useEffect(() => {
+    if (autoNextFrom === null || sessionKey === undefined || sessionIndex !== autoNextFrom) return
+    const t = setTimeout(() => {
+      void db.quizSessions.update(sessionKey, { index: autoNextFrom + 1 })
+      setAutoNextFrom(null)
+    }, 1500)
+    return () => clearTimeout(t)
+  }, [autoNextFrom, sessionKey, sessionIndex])
 
   useEffect(() => {
     if (session && !loadedElapsed.current) {
@@ -32,8 +57,16 @@ export default function QuizPlayer() {
   const finished = !!session?.finishedAt
   useEffect(() => {
     if (!session || finished) return
-    const t = setInterval(() => setElapsed((e) => e + 1000), 1000)
+    const t = setInterval(() => {
+      setElapsed((e) => e + 1000)
+      setNow(Date.now())
+    }, 1000)
     return () => clearInterval(t)
+  }, [session, finished])
+
+  // Timed sets run on a wall-clock deadline, so leaving the page doesn't stop the clock.
+  useEffect(() => {
+    if (session && !finished && session.timeLimitMs && !session.endsAt) db.quizSessions.update(session.id, { endsAt: quizDeadline(session, Date.now()) })
   }, [session, finished])
 
   // Persist elapsed time periodically so resuming restores the clock.
@@ -46,6 +79,13 @@ export default function QuizPlayer() {
     qStart.current = Date.now()
   }, [session?.index])
 
+  // At the deadline a timed set submits itself (the finish function is bound after the early returns below).
+  const autoSubmit = useRef<(() => unknown) | undefined>(undefined)
+  const timeUp = !!session && !finished && !!session.endsAt && Date.parse(session.endsAt) <= now
+  useEffect(() => {
+    if (timeUp) autoSubmit.current?.()
+  }, [timeUp])
+
   if (session === undefined) return <p className="muted">Loading…</p>
   if (!session)
     return (
@@ -56,6 +96,10 @@ export default function QuizPlayer() {
         </Link>
       </div>
     )
+  if (!isSectionLoaded(session.section)) {
+    void loadSection(session.section)
+    return <p className="muted">Loading…</p>
+  }
   if (session.finishedAt) return <QuizResults session={session} />
 
   const q = content.questions[session.itemIds[session.index]]
@@ -66,55 +110,78 @@ export default function QuizPlayer() {
   const answeredCount = Object.values(session.items).filter((i) => (isTest ? i.choice && i.confidence : i.answeredAt)).length
   const last = session.index === session.itemIds.length - 1
   const section = getModule(q.moduleId)?.section ?? session.section
-  const timeLeft = session.timeLimitMs ? session.timeLimitMs - elapsed : null
+  const timeLeft = session.endsAt ? quizTimeLeftMs(session, now) : null
 
+  // Field-level key paths, so quick successive writes (choice, then confidence) never overwrite each other.
   const patchItem = (patch: Partial<QuizSession['items'][string]>) =>
-    db.quizSessions.update(session.id, { [`items.${q.id}`]: { ...st, ...patch } } as never)
+    db.quizSessions.update(session.id, Object.fromEntries(Object.entries(patch).map(([k, v]) => [`items.${q.id}.${k}`, v])) as never)
   const go = (i: number) => db.quizSessions.update(session.id, { index: i, elapsedMs: elapsed })
 
   const submitTutor = async (c: Confidence) => {
-    if (!st.choice) return
-    const timeMs = Date.now() - qStart.current
-    const a = await recordMcqAttempt(q, {
-      choice: st.choice,
-      confidence: c,
-      timeMs,
-      mode: session.mode === 'review' ? 'review' : 'tutor',
-      mixed: session.mixed,
-      sessionId: session.id,
-      section,
-    })
-    await patchItem({ confidence: c, correct: a.correct, timeMs, answeredAt: a.at })
+    if (submitting.current) return
+    submitting.current = true
+    try {
+      // Read the stored choice: the rendered snapshot can lag a fast click.
+      const cur = (await db.quizSessions.get(session.id))?.items[q.id]
+      if (!cur?.choice || cur.answeredAt) return
+      const timeMs = Date.now() - qStart.current
+      const a = await recordMcqAttempt(q, {
+        choice: cur.choice,
+        confidence: c,
+        timeMs,
+        mode: session.mode === 'review' ? 'review' : 'tutor',
+        mixed: session.mixed,
+        sessionId: session.id,
+        section,
+      })
+      await patchItem({ confidence: c, correct: a.correct, timeMs, answeredAt: a.at })
+      if (a.correct && c !== 'guess' && settings?.autoAdvance !== false && !last) setAutoNextFrom(session.index)
+    } finally {
+      submitting.current = false
+    }
   }
 
   const finishTest = async () => {
-    for (const id of session.itemIds) {
-      const it = session.items[id]
+    if (finishing.current) return
+    finishing.current = true
+    setBusy(true)
+    const fresh = (await db.quizSessions.get(session.id)) ?? session
+    for (const id of fresh.itemIds) {
+      const it = fresh.items[id]
       const qq = content.questions[id]
       if (!qq || !it.choice) continue
       const a = await recordMcqAttempt(qq, {
         choice: it.choice,
-        confidence: it.confidence ?? 'unsure',
+        // No confidence in test mode unless the learner gave one; don't invent 'unsure'.
+        confidence: it.confidence,
         timeMs: it.timeMs,
         mode: 'test',
         mixed: session.mixed,
         sessionId: session.id,
         section,
       })
-      session.items[id] = { ...it, correct: a.correct, answeredAt: a.at }
+      fresh.items[id] = { ...it, correct: a.correct, answeredAt: a.at }
     }
-    await db.quizSessions.update(session.id, { items: session.items, finishedAt: new Date().toISOString(), elapsedMs: elapsed })
+    await db.quizSessions.update(session.id, { items: fresh.items, finishedAt: new Date().toISOString(), elapsedMs: elapsed })
   }
 
-  const finishTutor = () => db.quizSessions.update(session.id, { finishedAt: new Date().toISOString(), elapsedMs: elapsed })
+  const finishTutor = async () => {
+    if (finishing.current) return
+    finishing.current = true
+    setBusy(true)
+    await db.quizSessions.update(session.id, { finishedAt: new Date().toISOString(), elapsedMs: elapsed })
+  }
+
+  autoSubmit.current = isTest ? finishTest : finishTutor
 
   return (
     <div>
       <div className="sticky top-[57px] z-20 -mx-4 mb-4 flex items-center justify-between gap-2 border-b border-slate-200 bg-slate-50/95 px-4 py-2 backdrop-blur md:top-0 dark:border-slate-800 dark:bg-slate-950/95">
         <div className="min-w-0">
-          <div className="truncate text-sm font-semibold">{session.title}</div>
+          <h1 className="truncate text-sm font-semibold">{session.title}</h1>
           <div className="text-xs muted">
             {isTest ? 'Test mode — feedback at the end' : session.mode === 'review' ? 'Review mode' : 'Tutor mode — instant feedback'} · {answeredCount}/{session.itemIds.length} answered
+            {getSection(section)?.taxYear && ` · ${getSection(section)!.taxYear} tax law`}
           </div>
         </div>
         <div className="flex items-center gap-2 text-sm">
@@ -122,6 +189,9 @@ export default function QuizPlayer() {
           {timeLeft !== null ? <Clock ms={timeLeft} label="Time left" warn={timeLeft < 60000} /> : <Clock ms={elapsed} label="Elapsed" />}
           <button className="btn-ghost min-h-9 px-2" onClick={() => setCalc((c) => !c)} aria-pressed={calc} aria-label="Calculator">
             <Icon name="calc" />
+          </button>
+          <button className="btn-ghost min-h-9 px-2" onClick={() => setSheet((c) => !c)} aria-pressed={sheet} aria-label="Spreadsheet">
+            <Icon name="sheet" />
           </button>
         </div>
       </div>
@@ -158,16 +228,26 @@ export default function QuizPlayer() {
         onSelect={(c) => patchItem({ choice: c })}
         onConfidence={(c) => (isTest ? patchItem({ confidence: c, timeMs: st.timeMs + (Date.now() - qStart.current) }) : submitTutor(c))}
         keyboard
+        shuffleSeed={session.id}
       />
       <KeyNav onPrev={session.index > 0 ? () => go(session.index - 1) : undefined} onNext={!last ? () => go(session.index + 1) : undefined} />
 
-      <div className="mt-6 flex flex-wrap justify-between gap-2">
+      {autoNextFrom === session.index && (
+        <p className="mt-4 flex items-center gap-2 text-sm" role="status">
+          Next question in a moment…
+          <button className="btn-ghost min-h-9 px-2 text-sm" onClick={() => setAutoNextFrom(null)}>
+            Stay here
+          </button>
+        </p>
+      )}
+      {/* On phones the controls stay in view above the bottom navigation bar (P2-3). */}
+      <div className="sticky bottom-[calc(4rem+env(safe-area-inset-bottom))] z-10 -mx-4 mt-6 flex flex-wrap justify-between gap-2 border-t border-slate-200 bg-white/95 px-4 py-2 backdrop-blur md:static md:mx-0 md:border-0 md:bg-transparent md:p-0 md:backdrop-blur-none dark:border-slate-800 dark:bg-slate-950/95 md:dark:bg-transparent">
         <button className="btn-secondary" disabled={session.index === 0} onClick={() => go(session.index - 1)}>
           ← Previous
         </button>
         {isTest ? (
           last ? (
-            <button className="btn-primary" onClick={finishTest}>
+            <button className="btn-primary" onClick={finishTest} disabled={busy}>
               Submit set ({answeredCount}/{session.itemIds.length})
             </button>
           ) : (
@@ -177,7 +257,7 @@ export default function QuizPlayer() {
           )
         ) : revealed ? (
           last ? (
-            <button className="btn-primary" onClick={finishTutor}>
+            <button className="btn-primary" onClick={finishTutor} disabled={busy}>
               See results
             </button>
           ) : (
@@ -193,6 +273,7 @@ export default function QuizPlayer() {
       </div>
       <p className="mt-3 hidden text-xs muted md:block">Keyboard: ← / → previous and next question.</p>
       {calc && <Calculator onClose={() => setCalc(false)} />}
+      {sheet && <Spreadsheet onClose={() => setSheet(false)} />}
     </div>
   )
 }
@@ -200,25 +281,42 @@ export default function QuizPlayer() {
 function QuizResults({ session }: { session: QuizSession }) {
   const [open, setOpen] = useState<string | null>(null)
   const items = session.itemIds.map((id) => ({ q: content.questions[id], st: session.items[id] })).filter((x) => x.q)
-  const answered = items.filter((x) => x.st.answeredAt)
-  const correct = answered.filter((x) => x.st.correct).length
-  const guessedRight = answered.filter((x) => x.st.correct && x.st.confidence === 'guess').length
-  const missed = answered.filter((x) => !x.st.correct).length
+  const { correct, guessedRight, missed, skipped, scoredOn, percent } = summarizeQuiz(
+    session,
+    items.map((x) => x.q.id),
+  )
+  const pace = pacing(items.map(({ st }) => ({ timeMs: st.timeMs, targetMs: MCQ_TARGET_MS })))
+  const { state } = useStudyState()
+  const nextStep = state?.next && state.next.to !== `/quiz/${session.id}` ? state.next : undefined
   return (
     <div>
       <PageHeader title="Set complete" subtitle={session.title} />
       <div className="card mb-6">
-        <div className="text-4xl font-bold">{pct(answered.length ? correct / answered.length : 0)}</div>
+        <div className="text-4xl font-bold">{pct(percent)}</div>
         <p className="muted">
-          {correct} of {answered.length} correct{guessedRight ? ` (${guessedRight} were guesses — they’ll come back for review)` : ''}.
+          {correct} of {scoredOn} correct{guessedRight ? ` (${guessedRight} were guesses — they’ll come back for review)` : ''}.
+          {skipped > 0 && ` ${skipped} question${skipped === 1 ? ' was' : 's were'} left unanswered${session.mode === 'test' ? ' and scored as wrong' : ''}.`}
         </p>
         <p className="mt-2 text-sm">
           {missed + guessedRight > 0
             ? `${missed + guessedRight} question(s) were added to your spaced review queue.`
             : 'Clean sweep. These will stay out of your review queue.'}
         </p>
+        {pace.timed > 0 && (
+          <p className="mt-2 text-sm">
+            Pacing: {formatDuration(pace.avgMs)} per question on average (target about {formatDuration(MCQ_TARGET_MS)}).{' '}
+            {pace.slow.length
+              ? `Took more than twice the target: question${pace.slow.length === 1 ? '' : 's'} ${pace.slow.map((i) => i + 1).join(', ')}.`
+              : 'No question took more than twice the target.'}
+          </p>
+        )}
         <div className="mt-4 flex flex-wrap gap-2">
-          <Link to="/" className="btn-primary">
+          {nextStep && (
+            <Link to={nextStep.to} className="btn-primary">
+              Next: {nextStep.detail} →
+            </Link>
+          )}
+          <Link to="/" className={nextStep ? 'btn-secondary' : 'btn-primary'}>
             Back to today’s plan
           </Link>
           <Link to="/practice" className="btn-secondary">
@@ -226,6 +324,12 @@ function QuizResults({ session }: { session: QuizSession }) {
           </Link>
         </div>
       </div>
+      {session.purpose === 'mastery' && session.moduleId && percent < MASTERY_THRESHOLD && <Remediation session={session} items={items} />}
+      {session.purpose === 'diagnostic' && (
+        <p className="card mb-6 text-sm">
+          Diagnostic complete. Your study plan now puts the Blueprint areas where you scored lowest — weighted by how much of the exam they cover — ahead of the others.
+        </p>
+      )}
       <h2 className="h2 mb-2">Review every question</h2>
       <ul className="space-y-2">
         {items.map(({ q, st }, i) => (
@@ -245,6 +349,7 @@ function QuizResults({ session }: { session: QuizSession }) {
                 <McqView
                   q={q}
                   section={session.section}
+                  shuffleSeed={session.id}
                   selected={st.choice}
                   confidence={st.confidence}
                   revealed
@@ -258,5 +363,58 @@ function QuizResults({ session }: { session: QuizSession }) {
         ))}
       </ul>
     </div>
+  )
+}
+
+/**
+ * After a failed mastery check (P1-13): show which traps caught the learner, point to the lesson's
+ * worked and faded examples and the module's flashcards, then offer a retest on questions not yet seen.
+ */
+function Remediation({ session, items }: { session: QuizSession; items: { q: Mcq; st: QuizItemState }[] }) {
+  const traps = new Map<string, number>()
+  for (const { q, st } of items) {
+    if (!st.answeredAt || st.correct) continue
+    const trap = q.choices.find((c) => c.id === st.choice)?.trap
+    if (trap) traps.set(trap, (traps.get(trap) ?? 0) + 1)
+  }
+  const moduleId = session.moduleId!
+  return (
+    <section className="card mb-6 border-amber-300 dark:border-amber-800" aria-labelledby="remediate">
+      <h2 id="remediate" className="h2">
+        Not mastered yet — here is the fastest way back
+      </h2>
+      {traps.size > 0 && (
+        <div className="mt-2 text-sm">
+          <p className="font-semibold">What caught you</p>
+          <ul className="mt-1 list-disc pl-5">
+            {[...traps.entries()]
+              .sort((a, b) => b[1] - a[1])
+              .map(([t, n]) => (
+                <li key={t}>
+                  {TRAP_LABELS[t] ?? t} ({n})
+                </li>
+              ))}
+          </ul>
+          <p className="mt-1 muted">Open each missed question below and read why your choice was a trap.</p>
+        </div>
+      )}
+      <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm">
+        <li>
+          <Link to={`/module/${moduleId}`} className="text-blue-700 underline dark:text-blue-400">
+            Rework the lesson's worked and faded examples
+          </Link>
+        </li>
+        <li>
+          <Link to={`/flashcards?module=${moduleId}`} className="text-blue-700 underline dark:text-blue-400">
+            Drill the module's flashcards
+          </Link>
+        </li>
+        <li>
+          <Link to={`/practice/start?mastery=${moduleId}`} className="text-blue-700 underline dark:text-blue-400">
+            Retest on questions you haven't seen
+          </Link>
+        </li>
+      </ol>
+    </section>
   )
 }

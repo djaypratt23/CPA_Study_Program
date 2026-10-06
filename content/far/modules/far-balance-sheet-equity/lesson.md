@@ -12,6 +12,8 @@ objectives:
   - text: Roll forward retained earnings and the other components of equity, including prior-period adjustments.
     skill: application
     task: Prepare a statement of changes in equity
+  - text: Agree draft financial statements to the adjusted trial balance and supporting data, detecting and correcting discrepancies.
+    skill: analysis
 bigIdea:
   what: >-
     The balance sheet is a snapshot of what the entity controls (assets), what it owes (liabilities), and the
@@ -154,3 +156,23 @@ far-bse-chk2
 - **Treasury stock** is a contra-equity account (reduces total equity); it is never an asset.
 - **Stock dividends** move amounts from retained earnings to common stock/APIC — total equity does not change.
 - **Noncontrolling interest** (in consolidated statements) is presented within equity, separately from the parent's equity.
+
+## Agreeing draft statements to source data
+
+Reviewing a draft set of statements is a checklist exercise. Start with the **cross-checks** — they tell you *that* something is wrong — then trace individual lines to find *what*:
+
+1. Does total assets equal total liabilities and equity?
+2. Does net income on the income statement equal net income in retained earnings?
+3. Does ending retained earnings and AOCI on the equity statement equal the balance sheet?
+4. Does ending cash on the cash flow statement equal the balance sheet?
+
+Then trace line by line to the trial balance. Typical discrepancies:
+
+| Discrepancy | Effect |
+|---|---|
+| Receivables shown gross instead of net of the allowance | Assets overstated; statement does not balance |
+| Current portion of long-term debt left in noncurrent | Current liabilities understated; total liabilities unchanged |
+| OCI item (for example, an unrealized gain on AFS debt securities) reported in net income | Net income and retained earnings overstated; AOCI understated; **total equity unchanged** |
+| Dividends deducted as an expense | Net income understated; ending retained earnings unchanged |
+
+Notice the last two rows: some errors leave a subtotal correct. That is why you must check the **components**, not only the totals.

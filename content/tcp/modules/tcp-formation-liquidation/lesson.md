@@ -14,6 +14,10 @@ objectives:
   - text: Determine the corporate- and shareholder-level results of complete liquidations under §331/§336 and §332/§337.
     skill: application
     task: Calculate the tax effects of a corporate liquidation
+  - text: Derive and compare liquidation results across entity types, and review shareholder–corporation transactions, including below-market loans and constructive dividends.
+    skill: analysis
+  - text: Determine the corporate gain, shareholder income and basis from nonliquidating distributions of appreciated property by C and S corporations under §311(b).
+    skill: application
 bigIdea:
   what: >-
     Getting money into and out of a corporation are both taxable events unless a specific rule says otherwise.
@@ -98,3 +102,32 @@ steps:
 ```check
 tcp-fl-chk2
 ```
+
+## Comparing liquidation results across entities
+
+| | C corporation | S corporation (no BIG tax) | Partnership |
+|---|---|---|---|
+| Entity-level gain | Yes, taxed at 21% (§336) | Yes, but passes through | Generally none on in-kind distributions (§731) |
+| Owner-level gain | Cash received − stock basis (§331) | Usually none: pass-through gain raises basis | None now; outside basis carries over to the assets (§732(b)) |
+| Net effect | Double tax | Single tax | Deferral |
+
+## Reviewing shareholder–corporation transactions
+
+In a closely held C corporation, look for payments that are really **dividends**:
+
+- **Excess compensation** over a reasonable amount, and **excess rent** over fair rental value, are nondeductible constructive dividends.
+- **Below-market loans (§7872).** An interest-free loan from the corporation to a shareholder is treated as if the corporation paid the shareholder a dividend equal to the foregone interest, and the shareholder paid it back as interest. The corporation has interest income and no deduction; the shareholder has dividend income and, for a personal-use loan, nondeductible interest. The de minimis exception covers only loans of 10,000 or less.
+- **Advances with no substance of debt** (no note, no interest, no repayment, no intent to repay) are distributions when made.
+
+## Distributing appreciated property (§311(b))
+
+When a corporation distributes property (other than its own stock) whose fair value exceeds its basis, it recognizes **gain as if it had sold the property**. It recognizes **no loss** on depreciated property in a nonliquidating distribution.
+
+| | C corporation | S corporation |
+|---|---|---|
+| Corporate gain | Taxed at 21%; increases E&P | Passes through to shareholders (increases their basis and AAA) |
+| Shareholder income | Dividend equal to the property's **fair value** (to the extent of E&P) | Distribution reduces AAA and stock basis by fair value; tax-free up to basis |
+| Shareholder basis in property | Fair value | Fair value |
+| E&P effect (C corporation) | Reduced by the greater of fair value or adjusted basis (net of any liability assumed) | — |
+
+Planning point: distributing appreciated property from a C corporation creates two layers of tax immediately. From an S corporation it creates one — but the gain is still taxed now.

@@ -42,6 +42,8 @@ citations:
   - source: Public Law 119-21 (One Big Beautiful Bill Act, 2025)
 ---
 
+> **Tax year:** 2025. Questions use 2025 law. **Looking ahead to 2026:** P.L. 119-21 lets itemizers deduct charitable gifts only to the extent they exceed 0.5% of AGI, limits the tax benefit of itemized deductions to 35% for taxpayers in the 37% bracket, and gives non-itemizers a deduction for cash gifts to public charities of up to $1,000 ($2,000 MFJ).
+
 ## Itemized deductions — the limits
 
 | Category | Rule |

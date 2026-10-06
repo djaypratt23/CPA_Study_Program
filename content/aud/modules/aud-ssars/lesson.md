@@ -32,7 +32,7 @@ keyTakeaways:
   - "Review (AR-C 90): limited assurance; independence is required; procedures are primarily inquiry and analytical procedures; a representation letter is required."
   - "All three require a written engagement letter (signed by the accountant and management)."
   - "Compilation or preparation with substantially all disclosures omitted is allowed if the omission is disclosed and not intended to mislead. Reviews generally require full disclosures."
-  - "Known departures from the framework: disclose in the compilation or review report (the accountant may withdraw if management won't correct them)."
+  - "Known departures from the framework: in a compilation, disclose the departure in the report (AR-C 80). In a review, modify the conclusion under SSARS 25 (AR-C 90): a qualified conclusion if material, an adverse conclusion if material and pervasive, with a basis paragraph describing the departure. In either engagement the accountant may withdraw if management won't correct it."
   - "Review reports: \"we are not aware of any material modifications that should be made to the accompanying financial statements for them to be in accordance with…\"."
 citations:
   - source: SSARS — AR-C 60 (General principles), AR-C 70 (Preparation), AR-C 80 (Compilation), AR-C 90 (Review)

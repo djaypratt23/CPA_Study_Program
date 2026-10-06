@@ -47,7 +47,10 @@ export function newCard(now: Date = new Date()): StoredCard {
 }
 
 export function review(card: StoredCard, grade: Grade, now: Date = new Date()): StoredCard {
-  return toStored(scheduler.next(fromStored(card), now, grade).card)
+  // A device clock set backwards must not produce a review before the last one (negative elapsed time).
+  const last = card.last_review ? Date.parse(card.last_review) : NaN
+  const at = Number.isFinite(last) && now.getTime() < last ? new Date(last) : now
+  return toStored(scheduler.next(fromStored(card), at, grade).card)
 }
 
 /** Preview the next interval for each grade (for button labels like "Good · 3d"). */

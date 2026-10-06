@@ -22,7 +22,14 @@ export default function ReviewQueue() {
   const { due, fresh } = buildCardQueue({ cards, srs, studiedModules: studied, newPerDay: settings.newCardsPerDay, today: dayKey(), now })
   const dueQuestions = srs.filter((s) => s.kind === 'question' && s.section === settings.activeSection && s.due <= now).length
 
-  if (session) return <FlashcardPlayer cards={session} onDone={() => setSession(null)} />
+  if (session)
+    return (
+      <FlashcardPlayer
+        cards={session}
+        onDone={() => setSession(null)}
+        next={dueQuestions ? { label: `Continue with ${Math.min(25, dueQuestions)} due question${dueQuestions === 1 ? '' : 's'}`, to: '/practice/start?due=1' } : undefined}
+      />
+    )
 
   return (
     <div>

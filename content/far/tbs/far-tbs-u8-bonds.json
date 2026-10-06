@@ -7,7 +7,7 @@
   "title": "Bonds payable life cycle — Harbor Freight Lines",
   "minutes": 20,
   "skill": "application",
-  "instructions": "On January 1, Year 1, Harbor Freight Lines issued **$2,000,000** of 5-year, **6%** bonds with interest paid **semiannually** on June 30 and December 31, when the market rate was **8%**. Use the effective interest method and round each amount to the nearest dollar.",
+  "instructions": "On January 1, Year 1, Harbor Freight Lines issued **$2,000,000** of 5-year, **6%** bonds with interest paid **semiannually** on June 30 and December 31, when the market rate was **8%**. Use the effective interest method and the present value factors provided, and round each amount to the nearest dollar.",
   "exhibits": [
     { "title": "Present value factors (4% per period, 10 periods)", "content": "| Factor | Value |\n|---|---:|\n| PV of $1 | 0.67556 |\n| PV of an ordinary annuity of $1 | 8.11090 |" },
     { "title": "Year 3 event", "content": "On **January 1, Year 3** (immediately after the December 31, Year 2 payment), Harbor repurchased **half** of the bonds in the open market at **97**." }
@@ -18,10 +18,10 @@
       "id": "price",
       "prompt": "Compute the issue price and the first-year amortization.",
       "rows": [
-        { "id": "p", "label": "Issue price", "answer": 1837782, "tolerance": 5, "explanation": "PV of face 2,000,000 × 0.67556 = 1,351,120; PV of coupons 60,000 × 8.11090 = 486,654; total ≈ **1,837,782** (rounding in factors may differ by a few dollars)." },
-        { "id": "i1", "label": "Interest expense, June 30, Year 1", "answer": 73511, "tolerance": 2, "explanation": "1,837,782 × 4% = **73,511**." },
-        { "id": "c1", "label": "Carrying amount, June 30, Year 1", "answer": 1851293, "tolerance": 5, "explanation": "1,837,782 + (73,511 − 60,000) = **1,851,293**." },
-        { "id": "i2", "label": "Interest expense, December 31, Year 1", "answer": 74052, "tolerance": 2, "explanation": "1,851,293 × 4% = **74,052**." }
+        { "id": "p", "label": "Issue price", "answer": 1837774, "tolerance": 5, "explanation": "PV of face 2,000,000 × 0.67556 = 1,351,120; PV of coupons 60,000 × 8.11090 = 486,654; total **1,837,774**." },
+        { "id": "i1", "label": "Interest expense, June 30, Year 1", "answer": 73511, "tolerance": 2, "explanation": "1,837,774 × 4% = **73,511**." },
+        { "id": "c1", "label": "Carrying amount, June 30, Year 1", "answer": 1851285, "tolerance": 5, "explanation": "1,837,774 + (73,511 − 60,000) = **1,851,285**." },
+        { "id": "i2", "label": "Interest expense, December 31, Year 1", "answer": 74051, "tolerance": 2, "explanation": "1,851,285 × 4% = **74,051**." }
       ]
     },
     {
@@ -41,11 +41,11 @@
     {
       "kind": "numeric",
       "id": "ext",
-      "prompt": "The January 1, Year 3 repurchase. The carrying amount of all the bonds on that date is $1,895,157.",
+      "prompt": "The January 1, Year 3 repurchase. The carrying amount of all the bonds on that date is $1,895,147.",
       "rows": [
-        { "id": "ca", "label": "Carrying amount of the bonds repurchased", "answer": 947579, "tolerance": 1, "explanation": "1,895,157 × ½ = **947,579** (rounded)." },
+        { "id": "ca", "label": "Carrying amount of the bonds repurchased", "answer": 947574, "tolerance": 1, "explanation": "1,895,147 × ½ = **947,574** (rounded)." },
         { "id": "rp", "label": "Reacquisition price", "answer": 970000, "tolerance": 0, "explanation": "1,000,000 face × 97% = **970,000**." },
-        { "id": "gl", "label": "Gain (loss) on extinguishment — enter a loss as negative", "answer": -22421, "tolerance": 1, "explanation": "947,579 − 970,000 = **(22,421)** loss, reported in income from continuing operations. Even though the price was below face, it was above the carrying amount." }
+        { "id": "gl", "label": "Gain (loss) on extinguishment — enter a loss as negative", "answer": -22426, "tolerance": 1, "explanation": "947,574 − 970,000 = **(22,426)** loss, reported in income from continuing operations. Even though the price was below face, it was above the carrying amount." }
       ]
     }
   ]

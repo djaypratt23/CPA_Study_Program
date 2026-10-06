@@ -13,6 +13,8 @@ objectives:
   - text: Interpret the degree of responsibility signaled by "must" and "should" in professional standards.
     skill: application
     task: Apply the categories of professional requirements
+  - text: Understand unconscious auditor biases, incentives and judgment shortcuts that threaten professional skepticism, and how to mitigate them.
+    skill: remembering
 bigIdea:
   what: >-
     An audit expresses an opinion on whether financial statements are presented fairly, in all material respects,
@@ -35,7 +37,7 @@ keyTakeaways:
   - "Professional skepticism: a questioning mind and critical assessment of evidence. Professional judgment: applying training, knowledge, and experience to make informed decisions."
 citations:
   - source: AU-C 200 (Overall objectives of the independent auditor)
-  - source: PCAOB AS 1001 and AS 1015 (Responsibilities and due professional care)
+  - source: PCAOB AS 1000 (General responsibilities of the auditor; supersedes AS 1001, 1005, 1010 and 1015)
   - source: AU-C 200.25 and PCAOB Rule 3101 (Categories of professional requirements)
 ---
 
@@ -98,3 +100,15 @@ insight: Explanatory material ("may", "might", "could") gives guidance but impos
 ```check
 aud-ps-chk2
 ```
+
+## Biases that undermine skepticism
+
+| Bias | What happens | Mitigation |
+|---|---|---|
+| **Anchoring** | Relying too heavily on an initial number (last year's balance, management's estimate) | Develop an independent expectation first |
+| **Confirmation** | Seeking or overweighting evidence that supports management's position | Actively look for contradictory evidence |
+| **Availability** | Judging likelihood by what comes easily to mind (a recent headline) | Use data and structured risk assessment |
+| **Overconfidence** | Overestimating one's own knowledge or accuracy | Consultation, second-partner review |
+| **Automation** | Over-trusting output from software or analytics | Understand and test the tool and its inputs |
+
+Incentives (fee pressure, time budgets, a long client relationship) and shortcuts under deadline pressure make these biases worse. Professional skepticism — a questioning mind and critical assessment of evidence — is the counterweight.

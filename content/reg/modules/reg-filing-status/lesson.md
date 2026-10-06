@@ -14,6 +14,8 @@ objectives:
   - text: Determine the standard deduction, including additional amounts and the limits for dependents.
     skill: application
     task: Calculate the standard deduction
+  - text: Determine the filing requirements and income items for a decedent's final individual return.
+    skill: application
 bigIdea:
   what: >-
     Filing status and dependents drive almost everything else on an individual return: tax brackets, the standard
@@ -99,3 +101,12 @@ For 2025–2028, individuals age 65 or older may also claim a separate deduction
 ```check
 reg-fs-chk2
 ```
+
+## The decedent's final return
+
+- The executor or administrator files the decedent's **final Form 1040** covering January 1 through the **date of death**; it is due on the normal due date (April 15 of the following year).
+- A **surviving spouse** may file a **joint** return for the year of death if he or she has not remarried before year-end.
+- The **full standard deduction** is allowed; it is not prorated.
+- Income the decedent earned but had not received at death is **income in respect of a decedent (IRD)**. It is reported by whoever receives it (the estate or a beneficiary), not on a cash-basis decedent's final return, and it gets **no step-up** in basis.
+- Medical expenses paid from the estate within one year after death may be deducted on the final return.
+- The decedent's unused capital loss and NOL carryovers **expire**; they cannot pass to the estate or heirs.

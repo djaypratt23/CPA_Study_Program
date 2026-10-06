@@ -6,29 +6,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "To save the client postage",
+        "text": "To reduce the client's reconciliation workload at year-end",
         "explanation": "Cost savings aren't the reason for direct receipt.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "b",
-        "text": "Because the client doesn't receive statements",
+        "text": "So the client can't alter it before reconciling items are verified",
+        "explanation": "Correct. Direct receipt protects the reliability of evidence used to test deposits in transit and outstanding checks."
+      },
+      {
+        "id": "c",
+        "text": "Because clients don't receive their own statements until well after year-end",
         "explanation": "Clients do receive statements.",
         "trap": "wrong-rule"
       },
       {
-        "id": "c",
-        "text": "To prevent the client from altering it, so reconciling items can be verified",
-        "explanation": "Correct. Direct receipt protects the reliability of evidence used to test deposits in transit and outstanding checks."
-      },
-      {
         "id": "d",
-        "text": "To test payroll",
+        "text": "To test the year-end payroll disbursements",
         "explanation": "The cutoff statement tests reconciling items, not payroll.",
         "trap": "irrelevant-fact"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "Direct receipt protects the reliability of evidence used to test deposits in transit and outstanding checks.",
     "skill": "application",
     "difficulty": 2
@@ -40,29 +40,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Normal timing",
+        "text": "Normal timing for a deposit made on the last day of the year",
         "explanation": "Deposits normally clear in a day or two.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "An unrecorded bank service charge",
-        "explanation": "A service charge doesn't explain a delayed deposit.",
-        "trap": "irrelevant-fact"
+        "text": "A fictitious deposit, possibly concealing a shortage or kiting",
+        "explanation": "Correct. Deposits in transit should clear within a few days; long delays suggest the deposit wasn't real at year-end."
       },
       {
         "id": "c",
-        "text": "An outstanding check error",
+        "text": "An error in the list of outstanding checks",
         "explanation": "This concerns a deposit.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "A fictitious deposit in transit, possibly concealing a cash shortage or kiting",
-        "explanation": "Correct. Deposits in transit should clear within a few days; long delays suggest the deposit wasn't real at year-end."
+        "text": "An unrecorded bank service charge for December",
+        "explanation": "A service charge doesn't explain a delayed deposit.",
+        "trap": "irrelevant-fact"
       }
     ],
-    "answer": "d",
+    "answer": "b",
     "explanation": "Deposits in transit should clear within a few days; long delays suggest the deposit wasn't real at year-end.",
     "skill": "analysis",
     "difficulty": 2
@@ -74,29 +74,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Confirming the securities with the custodian",
+        "text": "Confirming the securities held with the custodian at year-end",
         "explanation": "That supports existence.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Comparing values to quoted market prices",
+        "text": "Inquiring about intent and ability, and reviewing past HTM sales",
+        "explanation": "Correct. HTM classification depends on positive intent and ability to hold to maturity; past sales can taint that intent."
+      },
+      {
+        "id": "c",
+        "text": "Comparing the carrying values with quoted market prices at the balance-sheet date",
         "explanation": "That supports fair value disclosures.",
         "trap": "wrong-classification"
       },
       {
-        "id": "c",
-        "text": "Inquiring about intent, reading minutes, and reviewing whether HTM securities were sold in the past",
-        "explanation": "Correct. HTM classification depends on positive intent and ability to hold to maturity; past sales can taint that intent."
-      },
-      {
         "id": "d",
-        "text": "Recalculating interest income",
+        "text": "Recalculating interest income and premium amortization",
         "explanation": "That supports accuracy.",
         "trap": "wrong-classification"
       }
     ],
-    "answer": "c",
+    "answer": "b",
     "explanation": "HTM classification depends on positive intent and ability to hold to maturity; past sales can taint that intent.",
     "skill": "application",
     "difficulty": 2
@@ -114,8 +114,9 @@
       },
       {
         "id": "b",
-        "text": "Cash is overstated by $30,000",
-        "explanation": "Correct. The amount is counted in both accounts."
+        "text": "Receivables are overstated",
+        "explanation": "Receivables aren't involved.",
+        "trap": "wrong-classification"
       },
       {
         "id": "c",
@@ -125,12 +126,11 @@
       },
       {
         "id": "d",
-        "text": "Receivables are overstated",
-        "explanation": "Receivables aren't involved.",
-        "trap": "wrong-classification"
+        "text": "Cash is overstated by $30,000",
+        "explanation": "Correct. The amount is counted in both accounts."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Kiting: the receipt is recorded before year-end and the disbursement after, double-counting the cash.",
     "skill": "application",
     "difficulty": 2
@@ -142,25 +142,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Reviewing the payroll register",
+        "text": "Reviewing the payroll register for unusual payees",
         "explanation": "Payroll doesn't reveal interbank transfers.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "b",
-        "text": "Counting petty cash",
+        "text": "Counting petty cash funds at year-end",
         "explanation": "Petty cash isn't involved.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Confirming receivables",
+        "text": "Confirming receivables with major customers",
         "explanation": "Receivable confirmations don't reveal interbank transfers.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "d",
-        "text": "Preparing a bank transfer schedule",
+        "text": "Preparing a schedule of bank transfers",
         "explanation": "Correct. The schedule compares book and bank dates for both sides of each transfer."
       }
     ],
@@ -176,24 +176,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Because standards prohibit counting on different days",
+        "text": "Because auditing standards prohibit counting different locations on different days",
         "explanation": "The purpose is control, not a prohibition.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "To reduce audit fees",
+        "text": "To reduce the time and cost of the counts",
         "explanation": "Cost isn't the reason for simultaneous counts.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "To prevent the client from shifting assets between locations to cover a shortage",
+        "text": "So assets can't be shifted between locations to hide a shortage",
         "explanation": "Correct. Simultaneous (or controlled) counts prevent the same assets from being counted twice."
       },
       {
         "id": "d",
-        "text": "To test cut-off of sales",
+        "text": "To test the cutoff of sales at year-end",
         "explanation": "Simultaneous counts don't test sales cut-off.",
         "trap": "irrelevant-fact"
       }
@@ -210,29 +210,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "A proof of cash comparing bank disbursements with book disbursements for the period",
-        "explanation": "Correct. A four-column proof of cash reconciles receipts and disbursements, revealing unrecorded activity."
+        "text": "Vouching recorded disbursements to invoices and receiving reports",
+        "explanation": "Vouching recorded items can't find unrecorded ones.",
+        "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "A standard bank confirmation",
+        "text": "A standard bank confirmation sent at year-end",
         "explanation": "It confirms balances only.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "Counting cash on hand",
+        "text": "Counting cash on hand at each location",
         "explanation": "Unrelated to disbursements during the year.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Vouching recorded disbursements",
-        "explanation": "Vouching recorded items can't find unrecorded ones.",
-        "trap": "reversed"
+        "text": "A proof of cash comparing bank and book disbursements",
+        "explanation": "Correct. A four-column proof of cash reconciles receipts and disbursements, revealing unrecorded activity."
       }
     ],
-    "answer": "a",
+    "answer": "d",
     "explanation": "A four-column proof of cash reconciles receipts and disbursements, revealing unrecorded activity.",
     "skill": "application",
     "difficulty": 2
@@ -244,29 +244,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Deposit balances and loan balances with the financial institution",
-        "explanation": "Correct. The confirmation asks the bank to confirm balances and direct liabilities (loans)."
+        "text": "The fair values of investments held by the bank",
+        "explanation": "Custodian confirmations are used for investments.",
+        "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Every check written during the year",
+        "text": "Every check written and deposit made on the account during the year",
         "explanation": "It doesn't list checks.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "The client's creditworthiness",
+        "text": "The client's creditworthiness with the bank",
         "explanation": "Creditworthiness isn't confirmed.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Investment fair values",
-        "explanation": "Custodian confirmations are used for investments.",
-        "trap": "wrong-classification"
+        "text": "Deposit and loan balances with the financial institution",
+        "explanation": "Correct. The confirmation asks the bank to confirm balances and direct liabilities (loans)."
       }
     ],
-    "answer": "a",
+    "answer": "d",
     "explanation": "The confirmation asks the bank to confirm balances and direct liabilities (loans). Other arrangements (lines of credit, compensating balances) need separate confirmation.",
     "skill": "remembering",
     "difficulty": 2
@@ -278,29 +278,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Compare with a quoted price in an active market",
+        "text": "Compare the value with a quoted price in an active market",
         "explanation": "Level 3 investments have no such price.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Test the model, significant assumptions, and data, possibly using a specialist",
-        "explanation": "Correct. AU-C 540: test management's method, assumptions, and data, or develop an independent estimate."
-      },
-      {
-        "id": "c",
-        "text": "Accept management's value because it's a Level 3 input",
+        "text": "Accept management's value, because Level 3 inputs are unobservable by definition",
         "explanation": "Level 3 values need careful testing.",
         "trap": "wrong-rule"
       },
       {
+        "id": "c",
+        "text": "Test the model, key assumptions, and data, using a specialist if needed",
+        "explanation": "Correct. AU-C 540: test management's method, assumptions, and data, or develop an independent estimate."
+      },
+      {
         "id": "d",
-        "text": "Only confirm existence with the custodian",
+        "text": "Confirm existence with the custodian and stop there",
         "explanation": "Valuation also needs testing.",
         "trap": "partial-computation"
       }
     ],
-    "answer": "b",
+    "answer": "c",
     "explanation": "AU-C 540: test management's method, assumptions, and data, or develop an independent estimate.",
     "skill": "application",
     "difficulty": 2
@@ -312,29 +312,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "Ignore it",
+        "text": "No follow-up is needed, because checks often stay outstanding for several months",
         "explanation": "Unusual reconciling items require investigation.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Examine the check's details and supporting documents; consider whether it was recorded to understate the book balance or conceal a shortage",
-        "explanation": "Correct. Outstanding checks that don't clear may be fictitious or may indicate other problems; investigate the payee and support."
+        "text": "Send a second confirmation of the year-end bank balance",
+        "explanation": "The balance is already confirmed.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Record it as income",
+        "text": "Reverse the check and record the amount as other income",
         "explanation": "There is no basis for recording income.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Confirm the bank balance again",
-        "explanation": "The balance is already confirmed.",
-        "trap": "wrong-rule"
+        "text": "Examine the check and support; consider concealment of a shortage",
+        "explanation": "Correct. Outstanding checks that don't clear may be fictitious or may indicate other problems; investigate the payee and support."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Outstanding checks that don't clear may be fictitious or may indicate other problems; investigate the payee and support.",
     "skill": "analysis",
     "difficulty": 2
@@ -346,29 +346,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "The investee's audited financial statements",
-        "explanation": "Correct. AU-C 501: audited investee statements generally provide sufficient evidence of the investee's results."
+        "text": "A standard bank confirmation from the investee",
+        "explanation": "Not relevant to investee income.",
+        "trap": "irrelevant-fact"
       },
       {
         "id": "b",
-        "text": "The investor's stock price",
+        "text": "The investor's own stock price during the year",
         "explanation": "The investor's stock price doesn't measure investee income.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "A bank confirmation",
-        "explanation": "Not relevant to investee income.",
-        "trap": "irrelevant-fact"
+        "text": "The investee's audited financial statements",
+        "explanation": "Correct. AU-C 501: audited investee statements generally provide sufficient evidence of the investee's results."
       },
       {
         "id": "d",
-        "text": "The investee's press releases",
+        "text": "The investee's press releases about earnings",
         "explanation": "Less reliable than audited statements.",
         "trap": "wrong-rule"
       }
     ],
-    "answer": "a",
+    "answer": "c",
     "explanation": "AU-C 501: audited investee statements generally provide sufficient evidence of the investee's results.",
     "skill": "remembering",
     "difficulty": 2
@@ -380,29 +380,29 @@
     "choices": [
       {
         "id": "a",
-        "text": "As unrestricted cash",
+        "text": "As unrestricted cash, with a note that describes the related loan terms",
         "explanation": "Legally restricted balances are shown separately.",
         "trap": "wrong-classification"
       },
       {
         "id": "b",
-        "text": "Separately as restricted cash (current or noncurrent depending on the loan), with disclosure",
-        "explanation": "Correct. Legally restricted compensating balances are segregated and disclosed."
+        "text": "As cash, with no separate disclosure needed",
+        "explanation": "Disclosure is required.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Netted against the loan",
+        "text": "Netted against the related loan balance on the balance sheet",
         "explanation": "Offsetting is not appropriate here.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Not disclosed",
-        "explanation": "Disclosure is required.",
-        "trap": "wrong-rule"
+        "text": "As restricted cash, current or noncurrent per the loan, with disclosure",
+        "explanation": "Correct. Legally restricted compensating balances are segregated and disclosed."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Legally restricted compensating balances are segregated and disclosed.",
     "skill": "application",
     "difficulty": 2
@@ -419,19 +419,19 @@
       },
       {
         "id": "b",
-        "text": "Recalculating dividend income",
+        "text": "Recalculating dividend and interest income",
         "explanation": "That tests accuracy of income.",
         "trap": "wrong-classification"
       },
       {
         "id": "c",
-        "text": "Reading the investment policy",
+        "text": "Reading the board's investment policy",
         "explanation": "Policy isn't evidence of existence.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Reviewing management's intent",
+        "text": "Reviewing management's intent for the holdings",
         "explanation": "That concerns classification.",
         "trap": "wrong-classification"
       }

@@ -12,6 +12,8 @@ objectives:
   - text: Record disposals and nonmonetary exchanges with and without commercial substance.
     skill: analysis
     task: Calculate gains and losses on disposals and exchanges of long-lived assets
+  - text: Prepare a PP&E roll-forward from source documents and reconcile the fixed-asset register to the general ledger.
+    skill: analysis
 bigIdea:
   what: >-
     Depreciation is cost allocation, not valuation: it spreads an asset's cost (less what you expect to get back)
@@ -136,3 +138,23 @@ steps:
 ```check
 far-dep-chk2
 ```
+
+## PP&E roll-forwards and fixed-asset register reconciliations
+
+A PP&E roll-forward has two halves that must be checked separately:
+
+| Cost | Accumulated depreciation |
+|---|---|
+| Beginning balance | Beginning balance |
+| + Additions (all costs to get the asset ready for use: price, freight, installation, testing) | + Depreciation expense |
+| − Cost of assets sold **and** retired | − Accumulated depreciation on assets sold **and** retired |
+| = Ending cost | = Ending accumulated depreciation |
+
+Common errors to look for:
+
+- **Installation or freight expensed** instead of capitalized.
+- **Retirements forgotten.** A fully depreciated asset scrapped with no proceeds still leaves both cost and accumulated depreciation.
+- **Gain or loss confused with proceeds.** Gain or loss = proceeds − carrying amount (cost − accumulated depreciation to the sale date).
+- **Repairs capitalized.** Ordinary maintenance that restores an asset without extending its life or adding capacity is expensed.
+
+**Register vs. GL.** The fixed-asset register (asset-by-asset detail) should total to the GL. Disposals recorded in one and not the other, and capitalized items missing from the register, are the usual reconciling items. Decide which record is wrong before adjusting.

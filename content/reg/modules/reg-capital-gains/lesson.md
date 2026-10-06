@@ -42,6 +42,8 @@ citations:
   - source: IRC §1244 (Losses on small business stock), §1411 (Net investment income tax)
 ---
 
+> **Scope (2026 Blueprints):** REG covers capital gain netting and rates. §1231, depreciation recapture and §1244 are TCP topics (Area IV), so those sections and items are optional here.
+
 ## Netting for individuals
 
 ```worked

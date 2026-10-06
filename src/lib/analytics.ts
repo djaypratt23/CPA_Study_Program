@@ -31,9 +31,30 @@ export function groupRate<K extends string>(attempts: Attempt[], key: (a: Attemp
   return Object.fromEntries(Object.entries(groups).map(([k, v]) => [k, rate(v)]))
 }
 
-/** Attempts that measure knowledge (excludes in-lesson checks, which happen mid-learning). */
+/**
+ * Practice attempts that measure knowledge. Excludes in-lesson checks (mid-learning)
+ * and mock-exam attempts, which feed readiness only through the mock blend.
+ */
 export function scoringAttempts(attempts: Attempt[]): Attempt[] {
-  return attempts.filter((a) => a.mode !== 'lesson')
+  return attempts.filter((a) => a.mode !== 'lesson' && a.mode !== 'exam')
+}
+
+/**
+ * First-attempt evidence: the first time the learner ever saw each item, kept
+ * only if that first sighting was a practice attempt (tutor or test). Repeats,
+ * review-queue answers, and items first met in a lesson or a mock don't count,
+ * so re-answering familiar questions can't inflate readiness.
+ */
+export function firstAttempts(attempts: Attempt[]): Attempt[] {
+  const seen = new Set<string>()
+  const out: Attempt[] = []
+  for (const a of [...attempts].sort((x, y) => x.at.localeCompare(y.at))) {
+    const key = `${a.itemType}:${a.itemId}`
+    if (seen.has(key)) continue
+    seen.add(key)
+    if (a.mode === 'tutor' || a.mode === 'test') out.push(a)
+  }
+  return out
 }
 
 export interface CalibrationRow {
@@ -153,14 +174,22 @@ export interface AreaReadiness {
   weight: number // blueprint midpoint allocation (0..1, normalized)
   coverage: number // share of the area's modules studied (lesson done)
   masteredShare: number
-  accuracy: number | null // on studied material, recent, strict
-  n: number
-  estimate: number | null // expected % correct on the area
+  accuracy: number | null // first-attempt practice accuracy (MCQ and TBS blended by the exam weighting)
+  mcqAccuracy: number | null
+  tbsAccuracy: number | null
+  n: number // MCQ first attempts
+  tbsN: number
+  estimate: number | null // expected raw % on the area
 }
 
 export interface Readiness {
   areas: AreaReadiness[]
+  /** Estimate on the same approximate 0–99 scale as the mock's scaled score (65% raw ≈ 75). */
   overall: number | null
+  /** Plausible range for `overall` (about 95%), from the amount of evidence. */
+  band: [number, number] | null
+  /** Weighted raw percent (0..1) behind `overall`. */
+  raw: number | null
   label: string
   detail: string
 }
@@ -170,7 +199,9 @@ export function areaReadiness(args: {
   title: string
   weight: number
   modules: { id: string; lessonDone: boolean; status: MasteryStatus }[]
-  attempts: Attempt[] // scoring attempts for this area's modules
+  attempts: Attempt[] // first-attempt MCQ practice for this area's modules
+  tbsAttempts?: Attempt[] // first-attempt TBS practice for this area
+  weighting?: { mcq: number; tbs: number }
 }): AreaReadiness {
   const total = args.modules.length || 1
   const studied = args.modules.filter((m) => m.lessonDone || m.status !== 'not-started')
@@ -178,16 +209,22 @@ export function areaReadiness(args: {
   const masteredShare = args.modules.filter((m) => m.status === 'mastered').length / total
   const recent = [...args.attempts].sort((a, b) => a.at.localeCompare(b.at)).slice(-60)
   const r = rate(recent)
+  const tbs = [...(args.tbsAttempts ?? [])].sort((a, b) => a.at.localeCompare(b.at)).slice(-10)
+  const tbsAccuracy = tbs.length ? tbs.reduce((s, a) => s + a.score, 0) / tbs.length : null
+  const accuracy = r.pct !== null && tbsAccuracy !== null && args.weighting ? weightedPercent(r.pct, tbsAccuracy, args.weighting) : r.pct
   const estimate =
-    r.n >= 5 && r.pct !== null ? coverage * r.pct + (1 - coverage) * UNSTUDIED_ACCURACY : coverage === 0 ? UNSTUDIED_ACCURACY : null
+    r.n >= 5 && accuracy !== null ? coverage * accuracy + (1 - coverage) * UNSTUDIED_ACCURACY : coverage === 0 ? UNSTUDIED_ACCURACY : null
   return {
     areaId: args.areaId,
     title: args.title,
     weight: args.weight,
     coverage,
     masteredShare,
-    accuracy: r.pct,
+    accuracy,
+    mcqAccuracy: r.pct,
+    tbsAccuracy,
     n: r.n,
+    tbsN: tbs.length,
     estimate,
   }
 }
@@ -199,29 +236,38 @@ export function overallReadiness(areas: AreaReadiness[], mockPercent?: number | 
     return {
       areas,
       overall: null,
+      band: null,
+      raw: null,
       label: 'Not enough data yet',
-      detail: `Answer at least ${MIN_ATTEMPTS_FOR_ESTIMATE} practice questions across every area for an honest estimate. Right now any number would be a guess.`,
+      detail: `Answer at least ${MIN_ATTEMPTS_FOR_ESTIMATE} new practice questions across every area for an honest estimate. Right now any number would be a guess.`,
     }
   }
-  let overall = areas.reduce((s, a) => s + (a.estimate ?? 0) * a.weight, 0) / wsum
-  if (mockPercent !== undefined && mockPercent !== null) overall = 0.5 * overall + 0.5 * mockPercent
-  const pct = Math.round(overall * 100)
+  let raw = areas.reduce((s, a) => s + (a.estimate ?? 0) * a.weight, 0) / wsum
+  // Evidence: first-attempt items plus a full mock counted as about 60 items.
+  let n = totalN + areas.reduce((s, a) => s + a.tbsN, 0)
+  if (mockPercent !== undefined && mockPercent !== null) {
+    raw = 0.5 * raw + 0.5 * mockPercent
+    n += 60
+  }
+  const se = Math.sqrt(Math.max(raw * (1 - raw), 0.01) / n)
+  const overall = approxScaledScore(raw)
+  const band: [number, number] = [approxScaledScore(raw - 1.96 * se), approxScaledScore(raw + 1.96 * se)]
   let label: string
   let detail: string
-  if (pct >= 75) {
+  if (overall >= 75) {
     label = 'Likely ready'
-    detail = 'Your practice accuracy across the whole blueprint is strong. Keep reviewing to stay sharp and take a simulated exam if you have not.'
-  } else if (pct >= 68) {
+    detail = 'Your first-attempt accuracy across the whole blueprint is at a passing level. Keep reviewing to stay sharp and take a simulated exam if you have not.'
+  } else if (overall >= 70) {
     label = 'Borderline'
     detail = 'You are close. Work the weakest areas below; a few points in a heavily weighted area moves the needle most.'
-  } else if (pct >= 55) {
+  } else if (overall >= 60) {
     label = 'Building'
     detail = 'Real progress, but not exam-ready yet. Finish unstudied modules and fix the weakest areas first.'
   } else {
     label = 'Early stage'
     detail = 'Most of the blueprint is still ahead of you. That is normal early on — follow the daily plan.'
   }
-  return { areas, overall: pct, label, detail }
+  return { areas, overall, band, raw, label, detail }
 }
 
 /* ------------------------------------------------------------------ */

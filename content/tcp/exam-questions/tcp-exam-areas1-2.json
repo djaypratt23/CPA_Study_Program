@@ -43,7 +43,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Wages from an S corporation",
+        "text": "Wages paid to her by an S corporation",
         "explanation": "Wages aren't NII.",
         "trap": "wrong-classification"
       },
@@ -55,7 +55,7 @@
       },
       {
         "id": "c",
-        "text": "Distributions from a Roth IRA",
+        "text": "Qualified distributions from a Roth IRA",
         "explanation": "Retirement distributions are excluded.",
         "trap": "wrong-classification"
       },
@@ -84,7 +84,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "MAGI exceeds $250,000.",
         "trap": "wrong-rule"
       },
@@ -110,11 +110,11 @@
     "id": "tcp-x1-04",
     "moduleId": "tcp-individual-planning",
     "pool": "exam",
-    "stem": "A 17-year-old full-time high school student has $10,000 of dividend income in 2025 and no earned income. How much is taxed at the parents' rate?",
+    "stem": "For 2025 the kiddie-tax threshold is $2,700. A 17-year-old full-time high school student has $10,000 of dividend income in 2025 and no earned income. How much is taxed at the parents' rate?",
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The kiddie tax applies.",
         "trap": "wrong-rule"
       },
@@ -146,23 +146,23 @@
     "id": "tcp-x1-05",
     "moduleId": "tcp-individual-planning",
     "pool": "exam",
-    "stem": "Which planning step most likely reduces a client's AGI while satisfying her charitable goal and RMD (age 74)?",
+    "stem": "Which planning step most likely reduces a client's AGI while satisfying her charitable goal and her 2025 RMD (age 74)?",
     "choices": [
       {
         "id": "a",
-        "text": "Donate appreciated stock held 5 years",
+        "text": "Donate appreciated stock she has held for 5 years",
         "explanation": "Deduction, but not an AGI exclusion or an RMD.",
         "trap": "partial-computation"
       },
       {
         "id": "b",
-        "text": "Donate cash from a taxable account",
+        "text": "Donate cash from a taxable brokerage account",
         "explanation": "Itemized deduction only.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "Make a qualified charitable distribution from her IRA",
+        "text": "Make a qualified charitable distribution from the IRA",
         "explanation": "Correct. QCDs are excluded from income and count toward the RMD."
       },
       {
@@ -174,7 +174,7 @@
     ],
     "answer": "c",
     "explanation": "QCDs are excluded from income and count toward the RMD.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -221,7 +221,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$20 per share of wages",
+        "text": "$20 per share of wages in that year",
         "explanation": "ISO exercise produces no wages.",
         "trap": "wrong-classification"
       },
@@ -233,12 +233,12 @@
       },
       {
         "id": "c",
-        "text": "A $20-per-share positive AMT adjustment",
+        "text": "A $20-per-share AMT adjustment",
         "explanation": "Correct. §56(b)(3): the ISO spread at exercise is a positive AMT adjustment; regular tax is deferred until sale."
       },
       {
         "id": "d",
-        "text": "No effect for any tax",
+        "text": "No effect for regular tax or AMT",
         "explanation": "AMT is affected.",
         "trap": "wrong-rule"
       }
@@ -256,7 +256,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "It makes the shares ISOs",
+        "text": "It converts the restricted shares into ISOs",
         "explanation": "Restricted stock doesn't become an option.",
         "trap": "irrelevant-fact"
       },
@@ -268,13 +268,13 @@
       },
       {
         "id": "c",
-        "text": "It can be filed when the shares vest",
+        "text": "It can be filed when the shares finally vest",
         "explanation": "The deadline is 30 days after transfer.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "It must be filed within 30 days, and it includes $10,000 in income now",
+        "text": "Filed within 30 days; $10,000 of income now",
         "explanation": "Correct. §83(b): elect within 30 days; income = FMV − amount paid at transfer."
       }
     ],
@@ -308,7 +308,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The allowance applies.",
         "trap": "wrong-rule"
       }
@@ -327,19 +327,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "$70,000 deductible",
+        "text": "$70,000 deductible against any income",
         "explanation": "Limited to passive income.",
         "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "$0 deductible",
+        "text": "None ($0) deductible; all suspended",
         "explanation": "Passive losses offset passive income.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$25,000 deductible",
+        "text": "$25,000 deductible under the rental rule",
         "explanation": "The $25,000 allowance is for rental real estate.",
         "trap": "wrong-rule"
       },
@@ -363,19 +363,19 @@
     "choices": [
       {
         "id": "a",
-        "text": "A doctor who owns and manages two rentals",
+        "text": "A doctor who owns and actively manages two rentals",
         "explanation": "Rentals are passive unless an exception applies.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "A retiree with a rental managed by an agent",
+        "text": "A retiree with a rental managed by a property agent",
         "explanation": "Rentals managed by an agent are passive.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "A real estate professional who materially participates in her rentals",
+        "text": "A real estate pro who materially participates",
         "explanation": "Correct. §469(c)(7): a real estate professional's rentals with material participation are not passive."
       },
       {
@@ -398,25 +398,25 @@
     "choices": [
       {
         "id": "a",
-        "text": "Rental property with no personal-use limits",
+        "text": "Rental property, with no personal-use limits",
         "explanation": "25 days exceeds the greater of 14 days or 20 days.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Business property subject to §1231",
+        "text": "Business property subject to §1231 rules",
         "explanation": "Not the classification issue.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Rent excluded from income",
+        "text": "The rent is excluded from gross income",
         "explanation": "Rented more than 14 days.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Personal residence; rental deductions limited to rental income",
+        "text": "Residence; deductions limited to rental income",
         "explanation": "Correct. Personal use of 25 days > greater of 14 or 10% × 200 = 20 → residence."
       }
     ],
@@ -429,7 +429,7 @@
     "id": "tcp-x1-13",
     "moduleId": "tcp-gift-tax",
     "pool": "exam",
-    "stem": "In 2025, an unmarried donor gives $25,000 to each of her three grandchildren and pays $40,000 directly to a hospital for one of them. What are her taxable gifts?",
+    "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. In 2025, an unmarried donor gives $25,000 to each of her three grandchildren and pays $40,000 directly to a hospital for one of them. What are her taxable gifts?",
     "choices": [
       {
         "id": "a",
@@ -450,7 +450,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Each gift exceeds the exclusion.",
         "trap": "wrong-rule"
       }
@@ -540,7 +540,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Only the donor spouse files Form 709",
+        "text": "Only the donor spouse needs to file Form 709",
         "explanation": "Both generally file when splitting.",
         "trap": "wrong-rule"
       },
@@ -558,7 +558,7 @@
       },
       {
         "id": "d",
-        "text": "Splitting applies to all gifts to third parties by either spouse that year",
+        "text": "It covers all gifts to third parties that year",
         "explanation": "Correct. §2513 consent applies to all gifts to third parties during the calendar year."
       }
     ],
@@ -571,7 +571,7 @@
     "id": "tcp-x1-17",
     "moduleId": "tcp-retirement-education",
     "pool": "exam",
-    "stem": "A 62-year-old contributes to his employer's 401(k) in 2025. What is his maximum elective deferral?",
+    "stem": "For 2025 the 401(k) elective deferral limit is $23,500, the age-50 catch-up is $7,500, and the enhanced catch-up for ages 60–63 is $11,250. What is the maximum elective deferral for a 62-year-old employee?",
     "choices": [
       {
         "id": "a",
@@ -647,7 +647,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Taxable, no 10% additional tax",
+        "text": "Taxable, but no 10% additional tax",
         "explanation": "Correct. §72(t)(2)(E): higher education exception for IRAs."
       },
       {
@@ -658,13 +658,13 @@
       },
       {
         "id": "c",
-        "text": "Taxable plus 10%",
+        "text": "Taxable, plus the 10% additional tax",
         "explanation": "The education exception applies to IRAs.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Not allowed before 59½",
+        "text": "Not permitted before age 59½",
         "explanation": "Withdrawals are allowed.",
         "trap": "wrong-rule"
       }
@@ -682,7 +682,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Owners must take RMDs at 73",
+        "text": "Owners must begin RMDs at age 73",
         "explanation": "Roth IRAs have no lifetime RMDs.",
         "trap": "wrong-rule"
       },
@@ -694,13 +694,13 @@
       },
       {
         "id": "c",
-        "text": "Contributions are deductible",
+        "text": "Contributions are deductible for AGI",
         "explanation": "Roth contributions are after-tax.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Contributions can be withdrawn at any time without tax or penalty",
+        "text": "Contributions come out anytime tax-free",
         "explanation": "Correct. Ordering rules: regular contributions come out first, tax- and penalty-free."
       }
     ],
@@ -797,13 +797,13 @@
       },
       {
         "id": "b",
-        "text": "$20,000",
+        "text": "$20,000, the at-risk amount",
         "explanation": "The passive limit still applies.",
         "trap": "partial-computation"
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. After basis (30,000) and at-risk (20,000), the passive limit suspends the rest because there is no passive income."
       },
       {
@@ -815,7 +815,7 @@
     ],
     "answer": "c",
     "explanation": "After basis (30,000) and at-risk (20,000), the passive limit suspends the rest because there is no passive income.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -826,103 +826,32 @@
     "choices": [
       {
         "id": "a",
-        "text": "When the asset has a low basis and the son may sell it soon after her death",
+        "text": "Low-basis asset the son may sell soon after her death",
         "explanation": "Correct. Gifted property keeps the donor's low basis; inherited property gets a stepped-up basis (§1014)."
       },
       {
         "id": "b",
-        "text": "When the asset has a basis above FMV",
+        "text": "When the asset's basis exceeds its fair market value",
         "explanation": "A bequest would step the basis down, too.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "When the asset is cash",
+        "text": "When the asset is cash in a bank account",
         "explanation": "Cash has no built-in gain.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "d",
-        "text": "It never matters",
+        "text": "It never matters for income tax purposes",
         "explanation": "Basis rules differ.",
         "trap": "overgeneralization"
       }
     ],
     "answer": "a",
     "explanation": "Gifted property keeps the donor's low basis; inherited property gets a stepped-up basis (§1014).",
-    "skill": "analysis",
-    "difficulty": 2
-  },
-  {
-    "id": "tcp-x2-01",
-    "moduleId": "tcp-c-corp-compliance",
-    "pool": "exam",
-    "stem": "Which item is added to book income on Schedule M-1?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "Tax depreciation in excess of book depreciation",
-        "explanation": "It is subtracted.",
-        "trap": "reversed"
-      },
-      {
-        "id": "b",
-        "text": "Life insurance proceeds received on a key officer",
-        "explanation": "Nontaxable proceeds are subtracted.",
-        "trap": "reversed"
-      },
-      {
-        "id": "c",
-        "text": "Charitable contributions in excess of the 10% limit",
-        "explanation": "Correct. Excess charitable contributions are book expenses not deducted."
-      },
-      {
-        "id": "d",
-        "text": "Municipal bond interest",
-        "explanation": "It is subtracted.",
-        "trap": "reversed"
-      }
-    ],
-    "answer": "c",
-    "explanation": "Excess charitable contributions are book expenses not deducted.",
-    "skill": "remembering",
-    "difficulty": 2
-  },
-  {
-    "id": "tcp-x2-02",
-    "moduleId": "tcp-c-corp-compliance",
-    "pool": "exam",
-    "stem": "Book income is $300,000, including $66,000 of federal income tax expense and a $10,000 net capital loss. What is taxable income before special deductions (no other differences)?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "$376,000",
-        "explanation": "Correct. 300,000 + 66,000 + 10,000."
-      },
-      {
-        "id": "b",
-        "text": "$366,000",
-        "explanation": "Omits the capital loss add-back.",
-        "trap": "partial-computation"
-      },
-      {
-        "id": "c",
-        "text": "$310,000",
-        "explanation": "Omits the tax expense.",
-        "trap": "partial-computation"
-      },
-      {
-        "id": "d",
-        "text": "$224,000",
-        "explanation": "Subtracts the add-backs.",
-        "trap": "reversed"
-      }
-    ],
-    "answer": "a",
-    "explanation": "300,000 + 66,000 + 10,000.",
     "skill": "application",
-    "difficulty": 2,
-    "calc": true
+    "difficulty": 2
   },
   {
     "id": "tcp-x2-03",
@@ -932,7 +861,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "A corporation with average annual adjusted financial statement income of $1.5 billion",
+        "text": "Average adjusted financial statement income over $1 billion",
         "explanation": "Correct. CAMT applies to applicable corporations with average AFSI over $1 billion."
       },
       {
@@ -949,7 +878,7 @@
       },
       {
         "id": "d",
-        "text": "A small corporation with large NOLs",
+        "text": "A small corporation with large NOL carryforwards",
         "explanation": "Size, not NOLs, drives CAMT.",
         "trap": "wrong-rule"
       }
@@ -1002,24 +931,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "All in the year of sale",
+        "text": "All in the year of the intercompany sale",
         "explanation": "Intercompany gain is deferred.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "As the buyer claims depreciation on the stepped-up basis",
+        "text": "As the buyer depreciates the stepped-up basis",
         "explanation": "Correct. Matching rule: the seller's gain offsets the buyer's extra depreciation over time."
       },
       {
         "id": "c",
-        "text": "Never",
+        "text": "Never; intercompany gains are ignored",
         "explanation": "It's taken into account under the matching rule.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Only on liquidation of the group",
+        "text": "Only when the consolidated group liquidates",
         "explanation": "It's taken in as depreciation occurs.",
         "trap": "wrong-rule"
       }
@@ -1073,7 +1002,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "No income; basis $0",
+        "text": "No income; a $0 basis in the interest",
         "explanation": "A capital interest for services is taxable.",
         "trap": "wrong-rule"
       },
@@ -1084,13 +1013,13 @@
       },
       {
         "id": "c",
-        "text": "$50,000 capital gain",
+        "text": "$50,000 capital gain; basis $50,000",
         "explanation": "It's compensation.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Income deferred until sale",
+        "text": "Income deferred until the interest is sold",
         "explanation": "It's taxed when received.",
         "trap": "wrong-rule"
       }
@@ -1184,19 +1113,19 @@
       },
       {
         "id": "b",
-        "text": "2025, as wages on a W-2",
+        "text": "2025, as wages reported on a Form W-2",
         "explanation": "Partners don't get W-2s.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "When paid, as capital gain",
+        "text": "When paid, as long-term capital gain",
         "explanation": "Guaranteed payments are ordinary income.",
         "trap": "wrong-classification"
       },
       {
         "id": "d",
-        "text": "Never — it reduces basis",
+        "text": "Never; it reduces the partner's basis",
         "explanation": "It's income and doesn't change basis.",
         "trap": "wrong-rule"
       }
@@ -1231,7 +1160,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Remaining basis is assigned.",
         "trap": "wrong-rule"
       }
@@ -1286,7 +1215,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Recapture is a §751 hot asset.",
         "trap": "wrong-rule"
       },
@@ -1339,7 +1268,7 @@
       },
       {
         "id": "d",
-        "text": "No — spouses count as two",
+        "text": "No, because the spouses count as two shareholders",
         "explanation": "Spouses count as one, and either way it's under 100.",
         "trap": "wrong-rule"
       }
@@ -1403,7 +1332,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The recognition period is 5 years.",
         "trap": "wrong-rule"
       },
@@ -1428,31 +1357,31 @@
     "choices": [
       {
         "id": "a",
-        "text": "A second class of stock may be found if governing provisions give different distribution rights",
+        "text": "A second class of stock, if rights differ by document",
         "explanation": "Correct. Non-pro-rata distributions can raise a second-class-of-stock issue if they reflect different rights under governing provisions."
       },
       {
         "id": "b",
-        "text": "The distributions are automatically dividends",
+        "text": "The distributions are automatically taxed as dividends",
         "explanation": "Dividend status depends on E&P.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "B recognizes $30,000 of income",
+        "text": "B recognizes $30,000 of income on the shortfall",
         "explanation": "Income follows ownership, not distributions.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "None",
+        "text": "None; S corporation distributions are flexible",
         "explanation": "Disproportionate distributions raise issues.",
         "trap": "wrong-rule"
       }
     ],
     "answer": "a",
     "explanation": "Non-pro-rata distributions can raise a second-class-of-stock issue if they reflect different rights under governing provisions.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -1469,7 +1398,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. 30,000 − 30,000 distribution deduction − 300 exemption → 0."
       },
       {
@@ -1480,7 +1409,7 @@
       },
       {
         "id": "d",
-        "text": "$300",
+        "text": "$300, the exemption",
         "explanation": "The exemption reduces income; it doesn't create income.",
         "trap": "wrong-rule"
       }
@@ -1499,7 +1428,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "Calendar year 2025",
+        "text": "The calendar year 2025",
         "explanation": "Estates can choose a fiscal year.",
         "trap": "partial-computation"
       },
@@ -1510,20 +1439,20 @@
       },
       {
         "id": "c",
-        "text": "Any 18-month period",
+        "text": "Any 18-month period the executor picks",
         "explanation": "A tax year can't exceed 12 months.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "The decedent's last year",
+        "text": "The decedent's final tax year",
         "explanation": "The estate is a new taxpayer.",
         "trap": "wrong-rule"
       }
     ],
     "answer": "b",
     "explanation": "Estates may adopt a fiscal year ending on the last day of any month within 12 months after death.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -1534,24 +1463,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Taxable interest",
+        "text": "Taxable interest income",
         "explanation": "Interest is part of DNI.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Tax-exempt interest (net of expenses)",
+        "text": "Tax-exempt interest, net of related expenses",
         "explanation": "Net tax-exempt interest is added to DNI.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Capital gains allocated to corpus and not distributed",
+        "text": "Capital gains allocated to corpus, not paid out",
         "explanation": "Correct. §643(a)(3): capital gains allocated to corpus and not distributed are excluded from DNI and taxed to the trust."
       },
       {
         "id": "d",
-        "text": "Dividends",
+        "text": "Qualified dividends received",
         "explanation": "Dividends are part of DNI.",
         "trap": "wrong-rule"
       }
@@ -1569,24 +1498,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "UBTI",
+        "text": "Taxable as UBTI",
         "explanation": "The convenience exception applies.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Excluded from UBTI under the convenience exception",
+        "text": "Excluded under the convenience exception",
         "explanation": "Correct. §513(a)(2): activities carried on primarily for the convenience of members, students, or employees."
       },
       {
         "id": "c",
-        "text": "Taxed at trust rates",
+        "text": "Taxed at the trust rates",
         "explanation": "Bookstore sales to students are excluded.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Passive income",
+        "text": "Excluded as passive income",
         "explanation": "It's business income, but excluded.",
         "trap": "wrong-classification"
       }
@@ -1632,74 +1561,1635 @@
     "difficulty": 2
   },
   {
-    "id": "tcp-x2-23",
-    "moduleId": "tcp-c-corp-compliance",
+    "id": "reg-x4-09",
+    "moduleId": "tcp-passive-rental",
     "pool": "exam",
-    "stem": "A corporation's Schedule M-2 shows beginning retained earnings of $400,000, net income per books of $120,000, and cash distributions of $50,000. It also recorded a $10,000 prior-period adjustment increasing retained earnings. What is ending retained earnings?",
+    "stem": "A single taxpayer with MAGI of $130,000 actively participates in a rental with a $20,000 loss and has no passive income. How much is deductible?",
     "choices": [
       {
         "id": "a",
-        "text": "$480,000",
-        "explanation": "Correct. 400,000 + 120,000 + 10,000 − 50,000."
+        "text": "$20,000",
+        "explanation": "The allowance is reduced.",
+        "trap": "overgeneralization"
       },
       {
         "id": "b",
-        "text": "$470,000",
-        "explanation": "Omits the adjustment.",
-        "trap": "partial-computation"
+        "text": "$15,000",
+        "explanation": "Miscomputes the phase-out.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "$520,000",
-        "explanation": "Omits distributions.",
-        "trap": "partial-computation"
+        "text": "None ($0)",
+        "explanation": "The allowance isn't fully phased out.",
+        "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "$460,000",
-        "explanation": "Subtracts the adjustment.",
-        "trap": "reversed"
+        "text": "$10,000",
+        "explanation": "Correct. $25,000 − 50% × $30,000."
       }
     ],
-    "answer": "a",
-    "explanation": "400,000 + 120,000 + 10,000 − 50,000.",
+    "answer": "d",
+    "explanation": "Allowance = 25,000 − 15,000 = 10,000.",
     "skill": "application",
     "difficulty": 2,
     "calc": true
   },
   {
-    "id": "tcp-x2-24",
-    "moduleId": "tcp-partnership-operations",
+    "id": "reg-x4-20",
+    "moduleId": "tcp-individual-planning",
     "pool": "exam",
-    "stem": "A partnership's late-filing penalty for Form 1065 is computed based on:",
+    "stem": "Which item is a tax preference or adjustment for individual AMT?",
     "choices": [
       {
         "id": "a",
-        "text": "Tax owed by the partnership",
-        "explanation": "Partnerships generally owe no income tax.",
-        "trap": "wrong-rule"
+        "text": "Interest on private activity bonds",
+        "explanation": "Correct. Private activity bond interest is an AMT preference."
       },
       {
         "id": "b",
-        "text": "The number of partners and the months late (up to 12)",
-        "explanation": "Correct. §6698: a per-partner, per-month penalty."
+        "text": "Charitable contributions",
+        "explanation": "Charity is allowed for AMT.",
+        "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "Gross receipts",
-        "explanation": "Receipts aren't the penalty base.",
+        "text": "Qualified residence acquisition interest",
+        "explanation": "Acquisition interest is allowed for AMT.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Total assets",
-        "explanation": "Assets aren't the penalty base.",
+        "text": "Medical expenses above 7.5% of AGI",
+        "explanation": "Allowed at the same floor for AMT.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Private activity bond interest is an AMT preference.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-x5-14",
+    "moduleId": "tcp-partnership-distributions",
+    "pool": "exam",
+    "stem": "A partner with a $15,000 basis receives a current distribution of $5,000 cash and inventory with a partnership basis of $12,000. What is her basis in the inventory?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000",
+        "explanation": "Limited by remaining outside basis.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "Correct. $15,000 − $5,000 cash."
+      },
+      {
+        "id": "c",
+        "text": "None ($0)",
+        "explanation": "Outside basis remains after the cash distribution.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$17,000",
+        "explanation": "Adds instead of limiting.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Cash first reduces basis to 10,000; inventory takes the lesser of 12,000 or 10,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-19",
+    "moduleId": "tcp-gift-tax",
+    "pool": "exam",
+    "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A donor gives $30,000 to a friend in 2025 and pays $12,000 directly to a hospital for the friend's surgery. What is the taxable gift?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$23,000",
+        "explanation": "Medical payments made directly are excluded.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$11,000",
+        "explanation": "Correct. $30,000 − $19,000."
+      },
+      {
+        "id": "c",
+        "text": "$42,000",
+        "explanation": "Exclusions apply.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "None ($0)",
+        "explanation": "The cash gift exceeds the exclusion.",
         "trap": "wrong-rule"
       }
     ],
     "answer": "b",
-    "explanation": "§6698: a per-partner, per-month penalty.",
+    "explanation": "Direct medical payments are excluded; the cash gift exceeds the $19,000 exclusion by $11,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "reg-x5-20",
+    "moduleId": "tcp-exempt-organizations",
+    "pool": "exam",
+    "stem": "Which income of a 501(c)(3) organization is most likely UBTI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dividends on endowment investments",
+        "explanation": "Passive income is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Income from a commercial parking garage it regularly runs",
+        "explanation": "Correct. A regularly carried-on, unrelated trade or business produces UBTI."
+      },
+      {
+        "id": "c",
+        "text": "Sales of donated goods in its thrift shop",
+        "explanation": "Donated goods sales are excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Proceeds of an annual volunteer-run bake sale",
+        "explanation": "The volunteer exception applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A regularly carried-on, unrelated trade or business produces UBTI.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-25",
+    "moduleId": "tcp-individual-planning",
+    "pool": "exam",
+    "stem": "A self-employed client will realize a large capital gain in December 2025 and made no estimated payments earlier because her income was low. Which approach can reduce or eliminate an underpayment penalty for the earlier installments?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The annualized income installment method",
+        "explanation": "Correct. It matches each required installment to income actually earned through that period."
+      },
+      {
+        "id": "b",
+        "text": "Paying the full year's tax on January 15, 2026",
+        "explanation": "A late payment doesn't cure earlier underpaid installments.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Filing a six-month extension for the return",
+        "explanation": "An extension doesn't extend payment deadlines.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Electing to treat the gain as received in 2026",
+        "explanation": "Timing can't be elected after the sale.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §6654(d)(2): the annualized income installment method lets a taxpayer with uneven income base installments on income earned through each period.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-26",
+    "moduleId": "tcp-individual-planning",
+    "pool": "exam",
+    "stem": "Which item is excluded from net investment income for the 3.8% NIIT?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Rental income from a passive rental activity",
+        "explanation": "Passive rental income is NII.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Qualified retirement plan distributions",
+        "explanation": "Correct. Qualified plan and IRA distributions aren't net investment income."
+      },
+      {
+        "id": "c",
+        "text": "Dividends from a mutual fund",
+        "explanation": "Dividends are NII.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Gain on the sale of investment land",
+        "explanation": "Gains on investment property are NII.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRC §1411(c)(5): distributions from qualified plans and IRAs are excluded from net investment income; wages and active business income are also excluded.",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-27",
+    "moduleId": "tcp-individual-planning",
+    "pool": "exam",
+    "stem": "A client expects to move from the 24% bracket in 2025 to the 35% bracket in 2026. Which year-end strategy is most likely to reduce her total tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Defer income to 2026 and accelerate deductions into 2025",
+        "explanation": "That reverses the benefit when rates rise.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Accelerate both income and deductions into 2025",
+        "explanation": "Deductions are worth more in the higher-rate year.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Accelerate income into 2025 and defer deductions to 2026",
+        "explanation": "Correct. Income is taxed at the lower 2025 rate, and deductions are worth more at 35%."
+      },
+      {
+        "id": "d",
+        "text": "Defer both income and deductions to 2026",
+        "explanation": "Income would be taxed at the higher rate.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "When the marginal rate will rise, accelerate income and defer deductions; reverse when rates will fall.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-28",
+    "moduleId": "tcp-stock-compensation",
+    "pool": "exam",
+    "stem": "An employee exercises nonqualified stock options for 1,000 shares at $10 when the stock is worth $25. What does she recognize at exercise?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000 long-term capital gain",
+        "explanation": "The spread is ordinary income, not capital gain.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Nothing until she sells the shares",
+        "explanation": "NQSOs are taxed at exercise.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "An AMT adjustment only",
+        "explanation": "That is the ISO treatment.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$15,000 ordinary income",
+        "explanation": "Correct. The spread at exercise is compensation; her basis becomes $25 a share."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §83 and Reg. §1.83-7: nonqualified option spread at exercise is ordinary compensation income, and the employer gets a matching deduction.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x1-29",
+    "moduleId": "tcp-stock-compensation",
+    "pool": "exam",
+    "stem": "An employee exercised ISOs for 100 shares at $20 when the stock was worth $50 and sold them two years later for $70, more than two years after grant. What does she recognize on the sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000 long-term capital gain",
+        "explanation": "Correct. A qualifying disposition makes the whole gain (70 − 20) × 100 long-term capital gain."
+      },
+      {
+        "id": "b",
+        "text": "$3,000 ordinary income and $2,000 capital gain",
+        "explanation": "That is a disqualifying disposition.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$2,000 long-term capital gain",
+        "explanation": "Regular-tax basis is the $20 exercise price.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$7,000 long-term capital gain",
+        "explanation": "Basis is the exercise price paid.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §421-422: if ISO stock is held more than 2 years from grant and 1 year from exercise, all gain on sale is long-term capital gain; the spread at exercise is an AMT adjustment only.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x1-30",
+    "moduleId": "tcp-stock-compensation",
+    "pool": "exam",
+    "stem": "An employee receives restricted stock worth $10,000 that vests in three years and makes a timely §83(b) election. Which statement is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "She recognizes nothing until the stock vests",
+        "explanation": "That is the result without an election.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "She recognizes $10,000 of ordinary income now",
+        "explanation": "Correct. The election accelerates income to the grant date, and later appreciation is capital gain."
+      },
+      {
+        "id": "c",
+        "text": "The election may be made any time before vesting",
+        "explanation": "It must be made within 30 days of the transfer.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "All later appreciation will be ordinary income",
+        "explanation": "After the election, appreciation is capital gain.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRC §83(b): an election within 30 days includes the stock's value (less any amount paid) in income at transfer; later appreciation is capital gain when sold.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-31",
+    "moduleId": "tcp-passive-rental",
+    "pool": "exam",
+    "stem": "A taxpayer who actively participates in a rental property has a $22,000 rental loss and 2025 MAGI of $120,000, with no other passive income. How much of the loss is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$22,000",
+        "explanation": "The allowance is reduced above $100,000 of MAGI.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$25,000",
+        "explanation": "The deduction can't exceed the loss or the reduced allowance.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Correct. The $25,000 allowance is reduced by 50% × (120,000 − 100,000) = 10,000."
+      },
+      {
+        "id": "d",
+        "text": "$     0",
+        "explanation": "Active participants get the special allowance.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §469(i): up to $25,000 of rental losses for active participants, phased out by 50% of MAGI over $100,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x1-32",
+    "moduleId": "tcp-passive-rental",
+    "pool": "exam",
+    "stem": "An investor contributes $20,000 cash to an equipment-leasing activity, borrows $30,000 for which he is personally liable, and is allocated $50,000 of nonrecourse debt (not qualified real estate financing). What is his amount at risk?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Nonrecourse debt isn't at risk outside qualified real estate financing.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Recourse borrowing is at risk.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$70,000",
+        "explanation": "The nonrecourse debt doesn't count.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Correct. Cash plus recourse borrowing; nonrecourse debt isn't at risk."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §465: amounts at risk include cash and property contributed and borrowings for which the taxpayer is personally liable; nonrecourse debt (other than qualified nonrecourse real estate financing) isn't.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x1-33",
+    "moduleId": "tcp-gift-tax",
+    "pool": "exam",
+    "stem": "In 2025 a married couple elects gift splitting and gives their daughter $60,000 of cash. The annual exclusion is $19,000 per donee. What are the total taxable gifts?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$22,000",
+        "explanation": "Correct. Each spouse is treated as giving 30,000; 30,000 − 19,000 = 11,000 each."
+      },
+      {
+        "id": "b",
+        "text": "$41,000",
+        "explanation": "With splitting, each spouse gets an exclusion.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$60,000",
+        "explanation": "The exclusions reduce taxable gifts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$     0",
+        "explanation": "The gift exceeds two exclusions of $19,000.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §2513: with gift splitting, each spouse is treated as making half the gift and claims an annual exclusion.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x1-34",
+    "moduleId": "tcp-retirement-education",
+    "pool": "exam",
+    "stem": "A 45-year-old converts $50,000 from a traditional IRA, funded entirely with deductible contributions, to a Roth IRA in 2025. What are the tax consequences?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No income, because the money stays in an IRA",
+        "explanation": "Conversions of pretax amounts are taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000 ordinary income; no 10% tax",
+        "explanation": "Correct. Conversions are taxable but exempt from the 10% additional tax."
+      },
+      {
+        "id": "c",
+        "text": "$50,000 ordinary income plus a $5,000 penalty",
+        "explanation": "The 10% tax doesn't apply to conversions.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$50,000 long-term capital gain",
+        "explanation": "IRA distributions are ordinary income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A Roth conversion is a taxable distribution of pretax amounts, but the §72(t) 10% tax doesn't apply to the conversion itself.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-25",
+    "moduleId": "tcp-c-corp-compliance",
+    "pool": "exam",
+    "stem": "The accumulated earnings tax is imposed at what rate, and what minimum credit does a non-service C corporation get?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "21%; $150,000",
+        "explanation": "The rate is 20%, and $150,000 is for service corporations.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "20%; $250,000",
+        "explanation": "Correct. The AET is 20%, with a $250,000 minimum credit ($150,000 for certain service corporations)."
+      },
+      {
+        "id": "c",
+        "text": "39.6%; $250,000",
+        "explanation": "The rate is 20%.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "20%; $500,000",
+        "explanation": "The credit is $250,000.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRC §531, §535(c): 20% of accumulated taxable income beyond the reasonable needs of the business, with a $250,000 minimum credit ($150,000 for service corporations).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-26",
+    "moduleId": "tcp-c-corp-compliance",
+    "pool": "exam",
+    "stem": "A C corporation is a personal holding company if five or fewer individuals own more than 50% of its stock and at least what share of its adjusted ordinary gross income is PHC income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "50%",
+        "explanation": "The income threshold is 60%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "80%",
+        "explanation": "The threshold is 60%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "60%",
+        "explanation": "Correct. Both the ownership test and the 60% income test must be met."
+      },
+      {
+        "id": "d",
+        "text": "25%",
+        "explanation": "The threshold is 60%.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §542: a PHC meets the stock ownership test and has PHC income of at least 60% of adjusted ordinary gross income; undistributed PHC income is taxed at 20%.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-27",
+    "moduleId": "tcp-consolidated-returns",
+    "pool": "exam",
+    "stem": "To join a consolidated return, a subsidiary must be owned by the parent (or other members) at what level?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "More than 50% of voting power",
+        "explanation": "50% is the CFC or control test elsewhere.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "At least 80% of voting power only",
+        "explanation": "Value must also meet 80%.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "100% of all classes of stock",
+        "explanation": "Ownership of 80% is enough.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "80% or more of vote and value",
+        "explanation": "Correct. Affiliated group membership requires 80% of vote and value."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §1504(a)(2): an includible corporation is owned at least 80% by vote and value by other members.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-28",
+    "moduleId": "tcp-consolidated-returns",
+    "pool": "exam",
+    "stem": "In a consolidated group, Member S sells land to Member B at a $100,000 gain. B holds the land at year-end. How is the gain treated on the consolidated return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deferred until B sells outside the group",
+        "explanation": "Correct. Intercompany gains are deferred until a later event outside the group."
+      },
+      {
+        "id": "b",
+        "text": "Recognized immediately by S",
+        "explanation": "Intercompany transactions are matched to B's later activity.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Permanently excluded from consolidated income",
+        "explanation": "The gain is deferred, not excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Recognized ratably by S over five years",
+        "explanation": "There is no ratable recognition.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Reg. §1.1502-13: intercompany items are taken into account under the matching and acceleration rules, generally when the property leaves the group.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-29",
+    "moduleId": "tcp-international",
+    "pool": "exam",
+    "stem": "A U.S. corporation's pre-credit U.S. tax is $210,000 on worldwide taxable income of $1,000,000, including $200,000 of foreign-source taxable income on which it paid $50,000 of foreign tax. What is its foreign tax credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "The credit is limited.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$42,000",
+        "explanation": "Correct. Limitation = 210,000 × 200,000 ÷ 1,000,000 = 42,000, less than the 50,000 paid."
+      },
+      {
+        "id": "c",
+        "text": "$8,000",
+        "explanation": "That is the excess credit, not the credit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$10,500",
+        "explanation": "The limitation uses the foreign share of income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRC §904: the foreign tax credit is limited to U.S. tax × foreign-source taxable income ÷ worldwide taxable income; excess credits carry back 1 and forward 10 years.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-30",
+    "moduleId": "tcp-partnership-formation",
+    "pool": "exam",
+    "stem": "A partner contributes land (basis $40,000; fair value $100,000) to a partnership. When the partnership later sells the land for $100,000, how is the gain allocated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Among all partners by profit shares",
+        "explanation": "Built-in gain belongs to the contributor.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "None, because §721 made the contribution tax-free",
+        "explanation": "§721 defers, not eliminates, the gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "All $60,000 to the contributing partner",
+        "explanation": "Correct. §704(c) allocates the built-in gain to the contributor."
+      },
+      {
+        "id": "d",
+        "text": "Half to the contributor and half to the others",
+        "explanation": "§704(c) assigns the full built-in gain.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §704(c): pre-contribution gain or loss is allocated to the contributing partner when the property is sold.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-31",
+    "moduleId": "tcp-partnership-formation",
+    "pool": "exam",
+    "stem": "A person receives a 20% capital interest in a partnership, worth $30,000, solely for services. What results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No income, under §721",
+        "explanation": "§721 covers contributions of property, not services.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000 capital gain",
+        "explanation": "Compensation for services is ordinary income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Income only when the partnership is liquidated",
+        "explanation": "Income arises on receipt of a capital interest.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 ordinary income to the service partner",
+        "explanation": "Correct. A capital interest received for services is compensation."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A capital interest received in exchange for services is taxable as ordinary income at its fair value (Reg. §1.721-1(b)).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-32",
+    "moduleId": "tcp-partnership-operations",
+    "pool": "exam",
+    "stem": "A partner's outside basis is $8,000 before her $12,000 share of the partnership's ordinary loss. How much loss may she deduct for the year (ignoring at-risk and passive rules)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$8,000; $4,000 carries forward",
+        "explanation": "Correct. Losses are limited to basis, with the excess suspended."
+      },
+      {
+        "id": "b",
+        "text": "$12,000",
+        "explanation": "Losses are limited to basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$8,000; the $4,000 excess is lost",
+        "explanation": "The excess carries forward.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$     0",
+        "explanation": "She may deduct up to her basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §704(d): a partner's distributive share of loss is allowed only to the extent of outside basis; the excess carries forward.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-33",
+    "moduleId": "tcp-partnership-distributions",
+    "pool": "exam",
+    "stem": "In complete liquidation of her interest, a partner with an outside basis of $40,000 receives $30,000 cash only. The partnership has no hot assets. What results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No loss; the remaining basis carries to nothing",
+        "explanation": "The loss is recognized in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $10,000 capital loss",
+        "explanation": "Correct. A loss is recognized when only cash (and hot assets) is received in liquidation."
+      },
+      {
+        "id": "c",
+        "text": "A $10,000 ordinary loss",
+        "explanation": "The loss is capital.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A $30,000 capital gain",
+        "explanation": "Cash is less than basis.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRC §731(a)(2): a partner recognizes loss in a liquidating distribution consisting only of money, unrealized receivables and inventory.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-34",
+    "moduleId": "tcp-s-corp-compliance",
+    "pool": "exam",
+    "stem": "A C corporation converted to S status in 2022 and in 2025 sells land it held at conversion with a $50,000 built-in gain. Which statement is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No tax at the entity level for any S corporation",
+        "explanation": "The BIG tax is an exception.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "The shareholders pay a 21% penalty tax",
+        "explanation": "The BIG tax is paid by the corporation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The S corporation owes built-in gains tax at 21%",
+        "explanation": "Correct. The sale is within the five-year recognition period."
+      },
+      {
+        "id": "d",
+        "text": "Tax applies only after ten years",
+        "explanation": "The recognition period is five years.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §1374: an S corporation that was a C corporation pays tax at 21% on net recognized built-in gain within five years after conversion.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-35",
+    "moduleId": "tcp-trusts-estates",
+    "pool": "exam",
+    "stem": "A simple trust has $40,000 of taxable interest income and no other items, and must distribute all income to its beneficiary. How much is taxed to the beneficiary?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$39,700",
+        "explanation": "The $300 exemption reduces the trust's income, not the beneficiary's share.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "All income is required to be distributed.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$     0",
+        "explanation": "The beneficiary is taxed on DNI distributed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$40,000",
+        "explanation": "Correct. The distribution deduction passes DNI, and its tax, to the beneficiary."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §651-652: a simple trust deducts income required to be distributed (up to DNI); beneficiaries include that amount.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x1-35",
+    "moduleId": "tcp-individual-planning",
+    "pool": "exam",
+    "stem": "A client exercises incentive stock options with a $100,000 bargain element and holds the shares. How does the exercise affect her 2025 taxes?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000 of ordinary income for regular tax",
+        "explanation": "ISO exercises don't create regular income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$100,000 of long-term capital gain now",
+        "explanation": "There is no sale, so no gain.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "A $100,000 AMT adjustment only",
+        "explanation": "Correct. The ISO spread is an AMT preference-type adjustment only."
+      },
+      {
+        "id": "d",
+        "text": "No effect on either regular tax or AMT",
+        "explanation": "The spread affects AMT.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §56(b)(3): the ISO bargain element is an AMT adjustment in the year of exercise (if the shares are held); AMT paid can create a minimum tax credit.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-36",
+    "moduleId": "tcp-individual-planning",
+    "pool": "exam",
+    "stem": "A client who usually takes the standard deduction gives about $6,000 a year to charity. Which strategy most likely increases the tax benefit of her giving in 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Spread the gifts evenly over each month of the year",
+        "explanation": "Timing within the year doesn't change itemizing.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "b",
+        "text": "Give cash instead of appreciated stock",
+        "explanation": "Appreciated stock avoids capital gains tax.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Make the gifts to a private foundation",
+        "explanation": "Foundation gifts have lower AGI limits.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Bunch gifts into one year via a donor-advised fund",
+        "explanation": "Correct. Bunching pushes itemized deductions above the standard deduction in one year."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Bunching gifts — often through a donor-advised fund — lets the donor itemize in the bunching year and take the standard deduction in others.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-37",
+    "moduleId": "tcp-individual-planning",
+    "pool": "exam",
+    "stem": "For 2025 the kiddie-tax threshold is $2,700. A 15-year-old dependent has $5,000 of interest income and no earned income. How much is taxed at the parents' rate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,300",
+        "explanation": "Correct. 5,000 − 2,700 = 2,300."
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "The first $2,700 isn't taxed at the parents' rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$3,650",
+        "explanation": "The threshold is $2,700, not $1,350.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$     0",
+        "explanation": "Unearned income above the threshold is taxed at the parents' rate.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §1(g): a child's net unearned income above the threshold ($2,700 for 2025) is taxed at the parents' rate.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x1-38",
+    "moduleId": "tcp-stock-compensation",
+    "pool": "exam",
+    "stem": "An employee exercises ISOs for 100 shares at $20 when the stock is worth $50 and sells them six months later for $45. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000 ordinary income; $500 capital loss",
+        "explanation": "The lesser-of rule limits ordinary income to the gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$2,500 ordinary income; no capital gain",
+        "explanation": "Correct. In a disqualifying disposition, ordinary income is the lesser of the spread (3,000) or the gain (2,500)."
+      },
+      {
+        "id": "c",
+        "text": "$2,500 long-term capital gain",
+        "explanation": "The holding periods weren't met.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$2,500 short-term capital gain",
+        "explanation": "The gain is compensation income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRC §421(b), §422(c)(2): a disqualifying disposition creates ordinary income equal to the lesser of the exercise spread or the actual gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x1-39",
+    "moduleId": "tcp-stock-compensation",
+    "pool": "exam",
+    "stem": "An employee receives restricted stock units that vest in 2025 and settle in shares worth $40,000. When and how is the value taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As capital gain when the shares are later sold",
+        "explanation": "The value at settlement is compensation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "At grant, when the units were awarded",
+        "explanation": "RSUs aren't property at grant.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "As ordinary income in 2025, at settlement",
+        "explanation": "Correct. RSUs are taxed as compensation when the shares are delivered."
+      },
+      {
+        "id": "d",
+        "text": "Never, if the employee holds the shares a year",
+        "explanation": "Holding affects only later appreciation.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "RSUs are unfunded promises; the value of shares delivered at settlement is ordinary income, and it becomes the shares' basis.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-40",
+    "moduleId": "tcp-passive-rental",
+    "pool": "exam",
+    "stem": "A taxpayer qualifies as a real estate professional. Which statement about her rental real estate losses is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They are passive and limited to $25,000",
+        "explanation": "The professional exception removes per se passive treatment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "They are deductible without regard to participation",
+        "explanation": "Material participation is still required.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "They are capital losses limited to $3,000",
+        "explanation": "Rental losses are ordinary.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Materially participated rentals aren't passive",
+        "explanation": "Correct. Real estate professionals who materially participate treat rentals as nonpassive."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §469(c)(7): a taxpayer with more than 750 hours and more than half of personal services in real property trades treats rentals in which she materially participates as nonpassive.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-41",
+    "moduleId": "tcp-passive-rental",
+    "pool": "exam",
+    "stem": "A taxpayer sells her entire interest in a passive activity to an unrelated buyer in a taxable sale. What happens to $30,000 of suspended passive losses?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They are fully deductible in the year of sale",
+        "explanation": "Correct. A complete taxable disposition frees all suspended losses."
+      },
+      {
+        "id": "b",
+        "text": "They carry over to her other passive activities",
+        "explanation": "Disposition releases them now.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "They are lost permanently",
+        "explanation": "They are released, not lost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "They offset only passive income in later years",
+        "explanation": "They become fully deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §469(g): on a fully taxable disposition of the entire interest to an unrelated party, suspended losses are allowed in full.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-42",
+    "moduleId": "tcp-gift-tax",
+    "pool": "exam",
+    "stem": "In 2025 a grandparent contributes $95,000 to a §529 plan for a grandchild and elects to spread it over five years. The annual exclusion is $19,000. Which statement is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No Form 709 is ever needed for §529 gifts",
+        "explanation": "The election requires a return.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A Form 709 is required to make the election",
+        "explanation": "Correct. The five-year election is made on a timely filed gift tax return."
+      },
+      {
+        "id": "c",
+        "text": "The full $95,000 is a 2025 taxable gift",
+        "explanation": "The election spreads it over five years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The gift uses $76,000 of lifetime exemption",
+        "explanation": "No exemption is used with the election.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRC §529(c)(2)(B): a contributor may elect on Form 709 to treat a gift of up to five times the annual exclusion as made ratably over five years.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-43",
+    "moduleId": "tcp-gift-tax",
+    "pool": "exam",
+    "stem": "A grandparent pays $45,000 of a grandchild's tuition directly to the university in 2025. What taxable gift results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$26,000",
+        "explanation": "The direct-payment tuition exclusion is unlimited.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$45,000",
+        "explanation": "The tuition exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "None",
+        "explanation": "Correct. Tuition paid directly to an educational institution is excluded without limit."
+      },
+      {
+        "id": "d",
+        "text": "$45,000, less the lifetime exemption",
+        "explanation": "No taxable gift arises at all.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §2503(e): tuition paid directly to an educational institution and medical expenses paid directly to the provider are excluded from gifts without limit.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x1-44",
+    "moduleId": "tcp-retirement-education",
+    "pool": "exam",
+    "stem": "A traditional IRA owner born in 1952 reaches age 73 in 2025. By when must she take her first required minimum distribution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "December 31, 2025",
+        "explanation": "She may delay the first RMD until April 1 of the next year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "April 15, 2026",
+        "explanation": "The deadline is April 1, not the filing date.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "December 31, 2027",
+        "explanation": "No such delay applies.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "April 1, 2026",
+        "explanation": "Correct. The first RMD is due by April 1 of the year after she reaches 73."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §401(a)(9): the required beginning date is April 1 of the year after the owner reaches the applicable age (73 for those born 1951–1959).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x1-45",
+    "moduleId": "tcp-retirement-education",
+    "pool": "exam",
+    "stem": "A taxpayer has $6,000 of nondeductible basis in her traditional IRAs, whose total year-end value is $60,000. She converts $6,000 to a Roth IRA. How much of the conversion is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,400",
+        "explanation": "Correct. The pro rata rule: 6,000 × (54,000 pretax ÷ 60,000)."
+      },
+      {
+        "id": "b",
+        "text": "$     0",
+        "explanation": "The pro rata rule prevents converting only basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$6,000",
+        "explanation": "10% of each dollar converted is nontaxable basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$  600",
+        "explanation": "That is the nontaxable portion.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §408(d)(2): all traditional IRAs are aggregated; each distribution is part basis and part pretax in proportion to total basis.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-36",
+    "moduleId": "tcp-c-corp-compliance",
+    "pool": "exam",
+    "stem": "The corporate alternative minimum tax enacted in 2022 applies to:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Corporations averaging over $1 billion of book income",
+        "explanation": "Correct. CAMT is 15% of adjusted financial statement income for applicable corporations."
+      },
+      {
+        "id": "b",
+        "text": "All C corporations with any taxable income",
+        "explanation": "CAMT applies only to very large corporations.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Corporations with gross receipts over $7.5 million a year",
+        "explanation": "That was the small corporation test for the old AMT.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "S corporations with built-in gains",
+        "explanation": "S corporations aren't subject to CAMT.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §55(b)(2), §59(k): applicable corporations (average annual AFSI above $1 billion) pay a 15% minimum tax on AFSI.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-37",
+    "moduleId": "tcp-consolidated-returns",
+    "pool": "exam",
+    "stem": "Which is a principal advantage of filing a consolidated return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Each member uses its own tax year",
+        "explanation": "All members must adopt the parent's year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Members' losses offset others' income",
+        "explanation": "Correct. Consolidation combines members' income and losses."
+      },
+      {
+        "id": "c",
+        "text": "Members may elect different accounting periods",
+        "explanation": "All use the parent's period.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Intercompany gains are recognized immediately",
+        "explanation": "They are deferred.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A consolidated return combines members' taxable income, so losses of one offset income of another, and intercompany transactions are deferred.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-38",
+    "moduleId": "tcp-international",
+    "pool": "exam",
+    "stem": "A foreign corporation is a controlled foreign corporation when U.S. shareholders — each owning at least 10% — together own:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "At least 25% of its vote and value",
+        "explanation": "The test is more than 50%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "At least 80% of its vote",
+        "explanation": "The test is more than 50%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "More than 50% of its vote or value",
+        "explanation": "Correct. That is the CFC test."
+      },
+      {
+        "id": "d",
+        "text": "Any shares listed on a U.S. exchange",
+        "explanation": "Listing isn't the test.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §957(a), §951(b): a CFC is more than 50% owned (vote or value) by U.S. shareholders, each owning at least 10%.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-39",
+    "moduleId": "tcp-partnership-operations",
+    "pool": "exam",
+    "stem": "For a special allocation in a partnership agreement to be respected, it must have:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The approval of the IRS in advance",
+        "explanation": "No IRS approval is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Equal effect on every partner",
+        "explanation": "Special allocations are by nature unequal.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A business purpose only",
+        "explanation": "Business purpose alone isn't the standard.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Substantial economic effect",
+        "explanation": "Correct. §704(b) respects allocations with substantial economic effect."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §704(b): allocations are respected if they have substantial economic effect or match the partners' interests in the partnership.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-40",
+    "moduleId": "tcp-partnership-distributions",
+    "pool": "exam",
+    "stem": "Purchasing a partnership interest when the partnership's assets have appreciated, the buyer wants a basis step-up in her share of those assets. The partnership should have in effect:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A §754 election",
+        "explanation": "Correct. It enables a §743(b) adjustment for the purchaser."
+      },
+      {
+        "id": "b",
+        "text": "An S corporation election",
+        "explanation": "That is a corporate election.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A §179 election",
+        "explanation": "That concerns expensing.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "A §83(b) election",
+        "explanation": "That concerns property received for services.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "a",
+    "explanation": "With a §754 election (or a substantial built-in loss), the partnership adjusts the purchaser's share of inside basis under §743(b).",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-41",
+    "moduleId": "tcp-partnership-distributions",
+    "pool": "exam",
+    "stem": "A partner sells her interest at a $50,000 gain; her share of the partnership's unrealized receivables would produce $15,000 of ordinary income. How is the gain characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000 capital gain",
+        "explanation": "§751 carves out ordinary income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$15,000 ordinary; $35,000 capital",
+        "explanation": "Correct. §751 makes the portion tied to hot assets ordinary."
+      },
+      {
+        "id": "c",
+        "text": "$50,000 ordinary income",
+        "explanation": "Only the hot-asset portion is ordinary.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$35,000 ordinary; $15,000 capital",
+        "explanation": "That reverses the split.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IRC §751(a): gain on the sale of a partnership interest is ordinary to the extent attributable to unrealized receivables and inventory.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-42",
+    "moduleId": "tcp-s-corp-compliance",
+    "pool": "exam",
+    "stem": "An S corporation with accumulated E&P of $5,000 from C years has AAA of $10,000. It distributes $13,000 to its sole shareholder (stock basis $40,000). How is the distribution taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$13,000 tax-free from basis",
+        "explanation": "Accumulated E&P is reached after AAA.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$13,000 dividend",
+        "explanation": "AAA is distributed tax-free first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$10,000 tax-free and $3,000 dividend",
+        "explanation": "Correct. Distributions come first from AAA, then from accumulated E&P."
+      },
+      {
+        "id": "d",
+        "text": "$5,000 dividend and $8,000 tax-free return of basis",
+        "explanation": "AAA comes before E&P.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IRC §1368(c): with accumulated E&P, distributions come from AAA (tax-free to basis), then E&P (dividends), then remaining basis.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-x2-43",
+    "moduleId": "tcp-trusts-estates",
+    "pool": "exam",
+    "stem": "A complex trust's trustee distributes income on February 20, 2026. Which statement is correct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It must be treated as a 2026 distribution",
+        "explanation": "The 65-day election is available.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It is taxed to the trust in both years",
+        "explanation": "No double taxation arises.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It reduces the trust's 2026 exemption",
+        "explanation": "Distributions don't affect the exemption.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "d",
+        "text": "The trustee may elect 2025 treatment",
+        "explanation": "Correct. The 65-day rule allows that election."
+      }
+    ],
+    "answer": "d",
+    "explanation": "IRC §663(b): distributions within the first 65 days of the tax year may be elected as made on the last day of the prior year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-x2-44",
+    "moduleId": "tcp-exempt-organizations",
+    "pool": "exam",
+    "stem": "A §501(c)(3) charity has $50,000 of gross unrelated business income and $20,000 of directly connected expenses. What is its unrelated business taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$29,000",
+        "explanation": "Correct. 50,000 − 20,000 − 1,000 specific deduction."
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "The $1,000 specific deduction applies.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Directly connected expenses are deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$     0",
+        "explanation": "UBTI from unrelated business is taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IRC §512: UBTI is gross income from an unrelated trade or business less directly connected deductions and a $1,000 specific deduction; Form 990-T is required.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

@@ -40,7 +40,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Room and board are taxable.",
         "trap": "partial-computation"
       },
@@ -81,7 +81,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Only $30,000 is excluded.",
         "trap": "overgeneralization"
       },
@@ -128,7 +128,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. For divorce or separation instruments executed after 2018, alimony isn't income to the recipient or deductible by the payer; child support is never income."
       }
     ],
@@ -178,7 +178,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The prior deduction produced a tax benefit.",
         "trap": "wrong-rule"
       },
@@ -314,7 +314,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. Provisional income $21,000 is below $25,000."
       },
       {
@@ -366,7 +366,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Up to $5,250 is excluded.",
         "trap": "wrong-rule"
       }
@@ -442,6 +442,40 @@
     "answer": "c",
     "explanation": "§103 excludes interest on state and local government bonds.",
     "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-gi-11",
+    "pool": "practice",
+    "stem": "A software diagnostic flags that Lin's W-2 box 1 wages ($60,000) differ from box 5 Medicare wages ($66,000). Box 12 code D shows a $6,000 elective 401(k) deferral. The preparer entered $66,000 on Form 1040 line 1a. How should the diagnostic be resolved?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Keep $66,000 and clear the flag as expected",
+        "explanation": "Box 5 wages include the deferral, which is not taxable for income tax purposes.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Request a corrected W-2 from the employer",
+        "explanation": "The W-2 is correct; the difference is explained by box 12.",
+        "trap": "irrelevant-fact"
+      },
+      {
+        "id": "c",
+        "text": "Change line 1a to $60,000; the difference is the deferral",
+        "explanation": "Correct. Elective deferrals are excluded from income tax wages but subject to FICA, so box 1 is lower than box 5."
+      },
+      {
+        "id": "d",
+        "text": "Enter $60,000 and deduct the $6,000 on Schedule 1",
+        "explanation": "The deferral is already excluded from box 1; deducting it again double-counts.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Tie wages to W-2 box 1. Differences from boxes 3 and 5 are usually elective deferrals.",
+    "skill": "analysis",
     "difficulty": 2
   }
 ]

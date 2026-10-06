@@ -14,6 +14,8 @@ objectives:
   - text: Apply the net investment income tax, the additional Medicare tax, and the kiddie tax in planning situations.
     skill: application
     task: Calculate surtaxes that affect individual planning
+  - text: Explain basic personal financial planning considerations, including investment risk, insurance and beneficiary designations.
+    skill: remembering
 bigIdea:
   what: >-
     Individual tax planning is mostly about *when* and *how* income and deductions land. The same dollars can cost
@@ -43,7 +45,7 @@ citations:
   - source: IRC §164(b)(6) as amended by Public Law 119-21; §408(d)(8) (Qualified charitable distributions)
 ---
 
-> **Tax year:** 2025 law, including One Big Beautiful Bill Act changes (see REVIEW.md for amounts to confirm).
+> **Tax year:** 2025 law, including One Big Beautiful Bill Act changes (see REVIEW.md for amounts to confirm). **Looking ahead to 2026:** P.L. 119-21 adds a 0.5%-of-AGI floor on itemized charitable deductions, caps the benefit of itemized deductions at 35% for the 37% bracket, and allows non-itemizers up to $1,000 ($2,000 MFJ) for cash gifts to public charities. Bunching gifts into 2025, before the floor and cap apply, can be worth more than the same gifts spread over later years.
 
 ## Estimated tax: paying as you go
 
@@ -121,3 +123,14 @@ tcp-ip-chk2
 - **NIIT (3.8%)** applies to interest, dividends, capital gains, rents, royalties, and passive business income — not wages, active business income, IRA distributions, or tax-exempt interest. Base = lesser of NII or MAGI over the threshold.
 - **Additional Medicare tax (0.9%)** applies to wages and self-employment income over the threshold. Employers withhold it only on wages over $200,000, regardless of filing status.
 - **Kiddie tax:** shifting investments to a child only helps up to $2,700 of unearned income (2025); above that, the parents' rate applies.
+
+## Personal financial planning basics
+
+**Investment risk.** *Unsystematic* (company-specific) risk can be reduced by diversification; *systematic* (market) risk cannot. Higher expected return compensates for higher risk. Asset location matters for tax: hold tax-inefficient assets (taxable bonds) in tax-deferred accounts and tax-efficient assets (index equity funds) in taxable accounts.
+
+**Insurance.**
+- Life insurance death benefits are generally excluded from income (§101); cash value grows tax-deferred.
+- Premiums for personal life, disability and health insurance are generally not deductible (self-employed health insurance is the main exception). Disability benefits are taxable only if the employer paid the premiums tax-free.
+- Umbrella liability coverage protects assets beyond auto and home policy limits.
+
+**Beneficiary designations.** Retirement accounts, life insurance and transfer-on-death accounts pass by **beneficiary designation**, outside probate, and **override the will**. Keep designations current after marriage, divorce or a death. Most non-spouse beneficiaries of an inherited IRA must empty it within **10 years**; a surviving spouse can roll it over.

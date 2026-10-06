@@ -32,8 +32,8 @@ keyTakeaways:
   - "Traditional IRA deduction phase-out for active participants (2025): $79,000–$89,000 single; $126,000–$146,000 MFJ. Spouse who isn't covered but whose spouse is: $236,000–$246,000."
   - "Roth IRA contribution phase-out (2025): $150,000–$165,000 single; $236,000–$246,000 MFJ. Qualified distributions (5-year rule and age 59½, death, disability, or $10,000 first home) are tax-free. Contributions come out first, tax-free."
   - "Early distributions (before 59½): 10% additional tax, with exceptions such as death, disability, substantially equal periodic payments, medical costs over 7.5% of AGI, and — for IRAs only — higher education expenses and $10,000 first-time homebuyer. Separation from service at 55+ is an exception for employer plans only."
-  - "RMDs begin at age 73. Missing an RMD: 25% excise tax, reduced to 10% if corrected timely."
-  - "§529 plans: nondeductible federally; tax-free growth and withdrawals for qualified higher education expenses, up to $10,000/year of K-12 tuition (for 2025), and up to $35,000 lifetime rolled to the beneficiary's Roth IRA (account open 15+ years). Non-qualified earnings: income tax + 10%."
+  - "RMDs begin at age 73 for owners born 1951–1959 and at age 75 for owners born in 1960 or later. Missing an RMD: 25% excise tax, reduced to 10% if corrected timely."
+  - "§529 plans: nondeductible federally; tax-free growth and withdrawals for qualified higher education expenses, up to $10,000 of K-12 expenses for 2025 (tuition; for distributions after July 4, 2025, also curriculum materials, tutoring, testing fees and similar costs; the cap rises to $20,000 from 2026), and up to $35,000 lifetime rolled to the beneficiary's Roth IRA (account open 15+ years). Non-qualified earnings: income tax + 10%."
   - "Coverdell ESA: $2,000 per beneficiary per year; phase-out $95,000–$110,000 single, $190,000–$220,000 MFJ."
   - "Education credits (2025): AOTC up to $2,500 per student (first 4 years; 40% refundable); lifetime learning credit up to $2,000 per return. Both phase out $80,000–$90,000 single / $160,000–$180,000 MFJ. No double-dipping with §529 withdrawals."
 citations:
@@ -49,7 +49,7 @@ citations:
 | Contribution | Deductible / pre-tax (IRA deduction may phase out) | After-tax |
 | Growth | Tax-deferred | Tax-free |
 | Qualified withdrawal | Ordinary income | Tax-free |
-| RMDs during owner's life | Yes (age 73) | No for Roth IRAs or Roth 401(k)s |
+| RMDs during owner's life | Yes (age 73; 75 if born 1960 or later) | No for Roth IRAs or Roth 401(k)s |
 | Best when | Current rate > future rate | Current rate < future rate |
 
 ```worked
@@ -104,5 +104,5 @@ tcp-re-chk2
 |---|---|---|---|
 | Contribution limit | Plan-set (gift tax rules apply) | $2,000/yr | — |
 | Income limit | None | Yes | Yes |
-| K-12 | Tuition up to $10,000/yr (2025) | Tuition and other expenses | No |
+| K-12 | Up to $10,000 in 2025 (tuition; broader expenses after July 4, 2025); $20,000 from 2026 | Tuition and other expenses | No |
 | Tax benefit | Tax-free growth and qualified withdrawals | Tax-free growth and qualified withdrawals | Credit against tax |

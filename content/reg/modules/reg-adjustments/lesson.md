@@ -11,6 +11,8 @@ objectives:
   - text: Apply IRA, HSA, student loan interest, and self-employment adjustments, including phase-outs.
     skill: application
     task: Determine deductible retirement and health savings contributions
+  - text: Review Form 1040 adjustments, deductions and taxable income against source data and resolve related diagnostics.
+    skill: analysis
 bigIdea:
   what: >-
     Adjustments ("above-the-line" deductions) reduce gross income to adjusted gross income (AGI). They're valuable
@@ -92,3 +94,20 @@ steps:
 ```check
 reg-adj-chk2
 ```
+
+## Reviewing AGI and taxable income
+
+Work down the return in order, because each amount feeds the next limit:
+
+1. **Adjustments for AGI.** Check each one against its own limit: half of SE tax; SEP (20% of net SE earnings after half of SE tax); HSA (coverage and the annual limit given in the problem); self-employed health insurance (above the line, not itemized); student loan interest (2,500 cap and phase-out).
+2. **AGI.** Recompute it; AGI-based floors (medical 7.5%) and phase-outs depend on it.
+3. **Standard vs. itemized.** An item moved above the line (such as SE health premiums) cannot also be itemized.
+4. **QBI deduction.** 20% of QBI, where QBI is **reduced** by the deductible part of SE tax, SE health insurance and retirement contributions attributable to the business, **limited** to 20% of taxable income before the QBI deduction (less net capital gain).
+
+**Resolving diagnostics.** Tax software raises a diagnostic whenever an entry looks unusual. It is a question, not an error. For each one, decide whether:
+
+1. the **input is wrong** — fix the entry;
+2. the entry is **right and the difference is expected** — clear the flag and document why; or
+3. the source documents **cannot answer it** — ask the client.
+
+Clearing a flag without understanding it is how errors reach a filed return.

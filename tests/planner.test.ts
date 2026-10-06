@@ -119,3 +119,41 @@ describe('planner', () => {
     expect(check.date >= '2026-03-06').toBe(true)
   })
 })
+
+describe('planner edge cases (P2-5)', () => {
+  it('treats an exam today as exam day, not as "no date"', () => {
+    const p = generatePlan(base({ examDate: '2026-03-02' }))
+    expect(p.days).toHaveLength(1)
+    expect(p.days[0].phase).toBe('exam')
+    expect(p.status.hasExamDate).toBe(true)
+    expect(p.status.daysLeft).toBe(0)
+  })
+
+  it('says so when the exam date has passed', () => {
+    const p = generatePlan(base({ examDate: '2026-02-20' }))
+    expect(p.status.hasExamDate).toBe(false)
+    expect(p.status.message).toMatch(/has passed/)
+  })
+
+  it('ignores a malformed (five-digit-year) exam date', () => {
+    const p = generatePlan(base({ examDate: '20260-05-01' }))
+    expect(p.status.hasExamDate).toBe(false)
+    expect(p.days.length).toBeLessThanOrEqual(28)
+  })
+
+  it('caps the schedule length for far-off exams', () => {
+    const p = generatePlan(base({ examDate: '2029-12-31' }))
+    expect(p.days.length).toBeLessThanOrEqual(400)
+  })
+
+  it('gives a realistic message instead of a huge minutes-per-week figure when the exam is days away', () => {
+    const p = generatePlan(base({ examDate: '2026-03-03' }))
+    expect(p.status.message).toMatch(/tomorrow/)
+  })
+
+  it('flags a mock scheduled on a day with less than four hours', () => {
+    const p = generatePlan(base({ minutesByWeekday: [60, 60, 60, 60, 60, 60, 60] }))
+    const mock = allTasks(p).find((t) => t.kind === 'mock')!
+    expect(mock.label).toMatch(/block out 4 hours/)
+  })
+})

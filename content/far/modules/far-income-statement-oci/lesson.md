@@ -13,6 +13,8 @@ objectives:
   - text: Distinguish net income from other comprehensive income and present comprehensive income.
     skill: application
     task: Prepare a statement of comprehensive income
+  - text: Calculate foreign currency transaction gains and losses on monetary items and apply the disaggregated expense disclosures of ASU 2024-03.
+    skill: application
 bigIdea:
   what: >-
     The income statement tells the story of performance, ordered so a reader can separate what will likely recur
@@ -153,3 +155,31 @@ steps:
 ```check
 far-iso-chk2
 ```
+
+## Foreign currency transactions
+
+When an entity buys or sells on credit in a **foreign currency**, the receivable or payable is a **monetary item** that must be remeasured at each balance sheet date at the current (spot) rate. The change is a **transaction gain or loss in net income** — not OCI (ASC 830-20).
+
+```worked
+title: A euro payable
+scenario: |
+  On November 15, a U.S. company buys inventory for €100,000 on 60-day credit when €1 = $1.10. At December 31,
+  €1 = $1.15. It pays on January 14, when €1 = $1.12.
+steps:
+  - label: Inventory and payable recorded
+    work: 100,000 × 1.10
+    result: 110,000
+  - label: December 31 remeasurement — loss
+    work: 100,000 × (1.15 − 1.10)
+    result: 5,000 loss
+  - label: January 14 settlement — gain
+    work: 100,000 × (1.15 − 1.12)
+    result: 3,000 gain
+insight: Inventory stays at its historical $110,000 — only the monetary payable is remeasured. A liability in a currency that strengthens produces a loss; a receivable would produce a gain.
+```
+
+Nonmonetary items (inventory, PP&E, prepaid expenses) are not remeasured. Translation of a foreign subsidiary's statements is different: translation adjustments go to **OCI** (see above).
+
+## Disaggregation of income statement expenses (ASU 2024-03)
+
+Public business entities must disclose, in a tabular note, how each relevant income statement expense caption breaks down into these natural categories: **purchases of inventory, employee compensation, depreciation, intangible asset amortization**, and depletion (DD&A for extractive industries). They also disclose a qualitative description of amounts not separately disaggregated, the total of **selling expenses** and how the entity defines them. It is effective for annual periods beginning after December 15, 2026 (interim periods beginning after December 15, 2027).

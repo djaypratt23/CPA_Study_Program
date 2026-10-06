@@ -14,6 +14,8 @@ objectives:
   - text: Identify when the accumulated earnings tax, personal holding company tax, or corporate AMT may apply.
     skill: remembering
     task: Recall corporate penalty taxes and the corporate AMT
+  - text: Compute the tax savings from C corporation NOL and capital loss carryovers, applying the 80% limitation and the capital-loss netting rules.
+    skill: application
 bigIdea:
   what: >-
     A corporate return (Form 1120) starts from the books. Schedule M-1 (or M-3 for large corporations) explains
@@ -121,3 +123,29 @@ tcp-cc-chk2
 | Corporate AMT | Very large corporations (average AFSI > $1 billion) | 15% of AFSI |
 
 Paying dividends (including consent dividends) avoids both penalty taxes. The AET and PHC tax never apply in the same year — the PHC tax takes priority.
+
+## Using NOLs and capital losses
+
+**Net operating losses** arising after 2017 carry forward indefinitely (no carryback for most corporations) and can offset only **80% of taxable income** computed before the NOL deduction. Pre-2018 NOLs are not subject to the 80% limit and are used first.
+
+**Capital losses** of a C corporation can offset only **capital gains** — never ordinary income. A net capital loss is carried **back 3 years and forward 5**, always as a short-term capital loss.
+
+```worked
+title: Tax savings from carryovers
+scenario: |
+  A C corporation has 2025 taxable income of $500,000 before any NOL deduction, including a $40,000 net capital gain.
+  It has a $450,000 post-2017 NOL carryforward and a $60,000 capital loss carryforward from 2022.
+steps:
+  - label: Capital loss used
+    work: Limited to the 40,000 capital gain; 20,000 carries forward (expires after 2027)
+    result: 40,000
+  - label: Taxable income before the NOL
+    work: 500,000 − 40,000
+    result: 460,000
+  - label: NOL deduction (80% limit)
+    work: Lesser of 450,000 or 80% × 460,000 = 368,000
+    result: 368,000
+  - label: Tax savings from the carryovers
+    work: (40,000 + 368,000) × 21%
+    result: 85,680
+insight: The unused 82,000 of NOL carries forward indefinitely. Timing matters when rates change — a deduction is worth more in a higher-rate year.

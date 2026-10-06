@@ -1,0 +1,103 @@
+{
+  "id": "aud-tbs-x10-single-audit",
+  "section": "AUD",
+  "unitId": "aud-u10",
+  "moduleIds": [
+    "aud-government-compliance"
+  ],
+  "pool": "exam",
+  "title": "Single audit planning — Riverbend County",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Riverbend County's fiscal year began July 1, 2025. Using the federal expenditure data, determine whether a single audit is required and plan major program coverage. Riverbend does **not** qualify as a low-risk auditee.",
+  "exhibits": [
+    {
+      "title": "Schedule of expenditures of federal awards",
+      "content": "| Program | Expenditures |\n|---|---:|\n| Highway Planning and Construction | 6,000,000 |\n| Child Nutrition Cluster | 2,500,000 |\n| Head Start | 900,000 |\n| Community Development Block Grants | 400,000 |\n| Emergency Food Assistance | 200,000 |"
+    },
+    {
+      "title": "Guidance",
+      "content": "- Single audit threshold: **$1,000,000** of federal expenditures.\n- Type A threshold for this auditee: **$1,000,000**.\n- Major programs must cover at least **40%** of total federal expenditures (**20%** for a low-risk auditee)."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "sa",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "tot",
+          "label": "Total federal expenditures",
+          "answer": 10000000,
+          "explanation": "6,000,000 + 2,500,000 + 900,000 + 400,000 + 200,000 = **10,000,000**."
+        },
+        {
+          "id": "cov",
+          "label": "Minimum major program coverage",
+          "answer": 4000000,
+          "explanation": "40% × 10,000,000 = **4,000,000** (Riverbend is not low-risk)."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "ty",
+      "prompt": "Classify each program and conclude.",
+      "rows": [
+        {
+          "id": "p1",
+          "label": "Highway Planning and Construction",
+          "options": [
+            "Type A",
+            "Type B"
+          ],
+          "answer": "Type A",
+          "explanation": "6,000,000 ≥ 1,000,000: **Type A**."
+        },
+        {
+          "id": "p2",
+          "label": "Child Nutrition Cluster",
+          "options": [
+            "Type A",
+            "Type B"
+          ],
+          "answer": "Type A",
+          "explanation": "2,500,000 ≥ 1,000,000: **Type A**."
+        },
+        {
+          "id": "p3",
+          "label": "Head Start",
+          "options": [
+            "Type A",
+            "Type B"
+          ],
+          "answer": "Type B",
+          "explanation": "900,000 < 1,000,000: **Type B**."
+        },
+        {
+          "id": "req",
+          "label": "Is a single audit required?",
+          "options": [
+            "Yes",
+            "No — a program-specific audit is required instead",
+            "No — federal expenditures are below the threshold"
+          ],
+          "answer": "Yes",
+          "explanation": "Expenditures of 10,000,000 exceed the 1,000,000 threshold, and the county has several programs, so a **single audit** is required."
+        },
+        {
+          "id": "rpt",
+          "label": "Which additional report does the single audit require?",
+          "options": [
+            "An opinion on compliance for each major program",
+            "An opinion on the effectiveness of internal control over all programs",
+            "A review report on the schedule of expenditures"
+          ],
+          "answer": "An opinion on compliance for each major program",
+          "explanation": "The auditor opines on compliance for each major program, reports on internal control over compliance, and gives an in-relation-to opinion on the schedule of expenditures."
+        }
+      ]
+    }
+  ]
+}

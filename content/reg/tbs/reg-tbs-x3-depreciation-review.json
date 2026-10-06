@@ -1,0 +1,115 @@
+{
+  "id": "reg-tbs-x3-depreciation-review",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-cost-recovery"
+  ],
+  "pool": "exam",
+  "title": "Review the depreciation schedule — Delmar Bakery",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "A staff accountant prepared Delmar Bakery's 2025 depreciation schedule. Delmar elected out of bonus depreciation for all classes and took no §179. Tick each amount that is wrong and enter the correct amount, then resolve the diagnostics.",
+  "exhibits": [
+    {
+      "title": "Source documents",
+      "content": "| Asset | Placed in service | Cost |\n|---|---|---:|\n| Commercial oven (7-year) | March 3 | 120,000 |\n| Delivery van (light truck) | July 15 | 60,000 |\n| Point-of-sale computers (5-year) | November 20 | 20,000 |\n| Store building (nonresidential) | April 1 | 650,000, including land of 130,000 |"
+    },
+    {
+      "title": "Prepared schedule",
+      "content": "| Asset | Method used | 2025 depreciation |\n|---|---|---:|\n| Oven | 7-year, half-year 14.29% | 17,148 |\n| Delivery van | 7-year, half-year 14.29% | 8,574 |\n| POS computers | 5-year, mid-quarter Q4 5% | 1,000 |\n| Store building | 650,000 ÷ 39 × 9/12 | 12,500 |\n| **Total** | | **39,222** |\n\nRates: 5-year half-year 20.00%; 7-year half-year 14.29%; 5-year mid-quarter Q4 5.00%."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "sched",
+      "prompt": "Review the prepared schedule.",
+      "preparedLabel": "Per prepared schedule",
+      "rows": [
+        {
+          "id": "q4",
+          "label": "Percentage of personal property placed in service in Q4",
+          "prepared": 10,
+          "answer": 10,
+          "explanation": "20,000 ÷ 200,000 = **10%**. **No error.**"
+        },
+        {
+          "id": "oven",
+          "label": "Oven (7-year)",
+          "prepared": 17148,
+          "answer": 17148,
+          "explanation": "14.29% × 120,000 = **17,148**. **No error.**"
+        },
+        {
+          "id": "van",
+          "label": "Delivery van",
+          "prepared": 8574,
+          "answer": 12000,
+          "explanation": "A light delivery van is **5-year** property: 20% × 60,000 = **12,000**."
+        },
+        {
+          "id": "pos",
+          "label": "Point-of-sale computers",
+          "prepared": 1000,
+          "answer": 4000,
+          "explanation": "Only 10% of personal property was placed in service in Q4, so the **half-year** convention applies: 20% × 20,000 = **4,000**."
+        },
+        {
+          "id": "bldg",
+          "label": "Store building",
+          "prepared": 12500,
+          "answer": 9444,
+          "explanation": "Exclude land: (650,000 − 130,000) ÷ 39 × 8.5 ÷ 12 (April, mid-month) = **9,444**."
+        },
+        {
+          "id": "tot",
+          "label": "Total 2025 depreciation",
+          "prepared": 39222,
+          "answer": 42592,
+          "explanation": "17,148 + 12,000 + 4,000 + 9,444 = **42,592**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "Resolve the diagnostics.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Convention for 2025 personal property",
+          "options": [
+            "Half-year — Q4 property is not more than 40%",
+            "Mid-quarter for the Q4 asset only",
+            "Mid-quarter for all 2025 personal property"
+          ],
+          "answer": "Half-year — Q4 property is not more than 40%",
+          "explanation": "Q4 additions are 10% of personal property, so the half-year convention applies to every 2025 personal-property asset."
+        },
+        {
+          "id": "d2",
+          "label": "Recovery period for the delivery van",
+          "options": [
+            "5 years",
+            "7 years",
+            "39 years"
+          ],
+          "answer": "5 years",
+          "explanation": "Automobiles and light trucks are 5-year property."
+        },
+        {
+          "id": "d3",
+          "label": "Building basis and first-year months",
+          "options": [
+            "Exclude land; 8.5 months",
+            "Include land; 9 months",
+            "Exclude land; 9 months"
+          ],
+          "answer": "Exclude land; 8.5 months",
+          "explanation": "Land isn't depreciable, and the mid-month convention treats April as a half month."
+        }
+      ]
+    }
+  ]
+}

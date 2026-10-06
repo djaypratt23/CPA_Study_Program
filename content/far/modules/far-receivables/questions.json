@@ -79,19 +79,19 @@
       },
       {
         "id": "b",
-        "text": "Sale with a recourse liability",
+        "text": "Sale, with a recourse liability",
         "explanation": "Recourse doesn't cure retained control.",
         "trap": "wrong-rule"
       },
       {
         "id": "c",
-        "text": "No entry until collection",
+        "text": "No entry until the receivables are collected",
         "explanation": "Cash was received and must be accounted for.",
         "trap": "wrong-rule"
       },
       {
         "id": "d",
-        "text": "Secured borrowing; keep the receivables and record a liability",
+        "text": "Secured borrowing; keep them and record a liability",
         "explanation": "Correct. Effective control was retained."
       }
     ],
@@ -145,7 +145,7 @@
       },
       {
         "id": "b",
-        "text": "When a loss becomes probable",
+        "text": "When a credit loss becomes probable",
         "explanation": "That was the incurred-loss model CECL replaced.",
         "trap": "outdated-rule"
       },
@@ -207,24 +207,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "Dr Cash 2,400 / Cr Credit loss expense 2,400",
+        "text": "Dr Cash / Cr Credit loss expense, $2,400",
         "explanation": "Under the allowance method the recovery restores the allowance; it does not reduce expense directly.",
         "trap": "wrong-rule"
       },
       {
         "id": "b",
-        "text": "Dr Accounts receivable 2,400 / Cr Allowance 2,400; then Dr Cash 2,400 / Cr Accounts receivable 2,400",
+        "text": "Reinstate the receivable and allowance, then record collection",
         "explanation": "Correct. Reinstate, then collect."
       },
       {
         "id": "c",
-        "text": "Dr Cash 2,400 / Cr Accounts receivable 2,400 only",
+        "text": "Dr Cash / Cr Accounts receivable, $2,400 only",
         "explanation": "The receivable was already removed; it must be reinstated first.",
         "trap": "partial-computation"
       },
       {
         "id": "d",
-        "text": "Dr Cash 2,400 / Cr Retained earnings 2,400",
+        "text": "Dr Cash / Cr Retained earnings, $2,400",
         "explanation": "A recovery is not a prior-period adjustment.",
         "trap": "wrong-classification"
       }
@@ -280,13 +280,13 @@
       },
       {
         "id": "b",
-        "text": "Always, for trade receivables under one year",
+        "text": "Always, for trade receivables due within one year",
         "explanation": "CECL applies to short-term trade receivables too.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "Only when the results do not differ materially from the allowance method",
+        "text": "Only when results don't differ materially from the allowance method",
         "explanation": "Correct. It's a materiality exception only."
       },
       {
@@ -301,40 +301,6 @@
     "skill": "remembering"
   },
   {
-    "id": "far-rec-07",
-    "pool": "practice",
-    "stem": "A company factors $80,000 of receivables **without recourse**. The factor charges a 2% fee and withholds 4% for sales returns. The transfer qualifies as a sale. What loss on sale is recognized?",
-    "choices": [
-      {
-        "id": "a",
-        "text": "$1,600",
-        "explanation": "Correct. Only the 2% fee is a loss; the 4% holdback is a receivable from the factor."
-      },
-      {
-        "id": "b",
-        "text": "$4,800",
-        "explanation": "This includes the holdback, which is expected to be returned.",
-        "trap": "wrong-classification"
-      },
-      {
-        "id": "c",
-        "text": "$3,200",
-        "explanation": "That is the holdback amount.",
-        "trap": "distractor-number"
-      },
-      {
-        "id": "d",
-        "text": "$0",
-        "explanation": "The factor's fee is a loss on the sale.",
-        "trap": "wrong-rule"
-      }
-    ],
-    "answer": "a",
-    "explanation": "Fee = 80,000 × 2% = 1,600 (loss). Holdback = 80,000 × 4% = 3,200 (due from factor). Cash = 80,000 − 1,600 − 3,200 = 75,200.",
-    "skill": "application",
-    "calc": true
-  },
-  {
     "id": "far-rec-08",
     "pool": "practice",
     "stem": "A company assigns (pledges) its receivables as collateral for a bank loan. How are the receivables reported?",
@@ -347,7 +313,7 @@
       },
       {
         "id": "b",
-        "text": "Offset against the loan",
+        "text": "Offset against the related bank loan",
         "explanation": "Collateral is not netted against the debt.",
         "trap": "wrong-rule"
       },
@@ -359,7 +325,7 @@
       },
       {
         "id": "d",
-        "text": "Kept on the balance sheet, with the pledge disclosed",
+        "text": "Kept on the balance sheet; pledge disclosed",
         "explanation": "Correct. Pledged receivables remain the company's assets; the loan is recorded as a liability and the collateral arrangement is disclosed."
       }
     ],
@@ -408,24 +374,24 @@
     "choices": [
       {
         "id": "a",
-        "text": "The transferee may sell the receivables, and the transferor has no repurchase rights",
+        "text": "The transferee may sell them, and the transferor has no repurchase rights",
         "explanation": "These facts support sale accounting.",
         "trap": "reversed"
       },
       {
         "id": "b",
-        "text": "The transfer is with recourse for credit losses",
+        "text": "The transfer is made with recourse for credit losses",
         "explanation": "Recourse alone does not prevent sale accounting.",
         "trap": "overgeneralization"
       },
       {
         "id": "c",
-        "text": "The transferor has an agreement that both entitles and obligates it to repurchase the receivables before maturity",
+        "text": "The transferor is entitled and obligated to repurchase before maturity",
         "explanation": "Correct. That is effective control retained."
       },
       {
         "id": "d",
-        "text": "The factor charges a fee",
+        "text": "The factor charges a fee for the service",
         "explanation": "Fees are normal in sales of receivables.",
         "trap": "irrelevant-fact"
       }
@@ -441,13 +407,13 @@
     "choices": [
       {
         "id": "a",
-        "text": "Only historical loss experience",
+        "text": "Only the entity's historical loss experience",
         "explanation": "CECL also requires current conditions and forecasts.",
         "trap": "partial-computation"
       },
       {
         "id": "b",
-        "text": "Historical loss experience, current conditions, and reasonable and supportable forecasts",
+        "text": "History, current conditions, and supportable forecasts",
         "explanation": "Correct. ASC 326-20-30: estimate expected credit losses using relevant information about past events, current conditions, and reasonable and supportable forecasts, reverting to history beyond the forecast period."
       },
       {
@@ -466,5 +432,73 @@
     "answer": "b",
     "explanation": "ASC 326-20-30: estimate expected credit losses using relevant information about past events, current conditions, and reasonable and supportable forecasts, reverting to history beyond the forecast period.",
     "skill": "remembering"
+  },
+  {
+    "id": "far-rec-12",
+    "pool": "practice",
+    "stem": "Grove Co.'s customer subledger totals $512,300 and its general ledger control account shows $498,900. Investigation finds (1) a $6,200 customer payment posted to the general ledger but not to the customer's account and (2) a $7,200 credit sale posted to the subledger twice. The staff proposes increasing the general ledger by $13,400. What is the correct resolution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reduce the subledger by $13,400; no GL entry",
+        "explanation": "Correct. Both items are subledger errors: 512,300 − 6,200 − 7,200 = 498,900, which already agrees to the GL."
+      },
+      {
+        "id": "b",
+        "text": "Increase the GL by $13,400; no subledger entry",
+        "explanation": "This is the staff's proposal. It forces agreement by changing the record that is already right.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "Reduce the subledger by $1,000; increase the GL",
+        "explanation": "This nets the two items against each other (7,200 − 6,200) instead of correcting each one.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Increase the GL $6,200; cut the subledger $7,200",
+        "explanation": "The payment is already in the GL; only the subledger is missing it.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Reconcile by identifying which record each item affects: both items are missing from, or duplicated in, the subledger, so the GL needs no entry.",
+    "skill": "analysis",
+    "difficulty": 2
+  },
+  {
+    "id": "far-rec-13",
+    "pool": "practice",
+    "stem": "Under ASU 2025-05, which practical expedient is available to all entities for current accounts receivable arising from revenue contracts?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Skip the allowance for current receivables",
+        "explanation": "The expedient simplifies the forecast; an allowance is still required.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Assume current conditions at year-end persist",
+        "explanation": "Correct. Entities may assume conditions as of the balance sheet date do not change over the remaining life when forecasting expected credit losses."
+      },
+      {
+        "id": "c",
+        "text": "Use the direct write-off method instead",
+        "explanation": "The direct write-off method remains non-GAAP unless immaterial.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Use only historical loss rates",
+        "explanation": "Current conditions still must be considered.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASU 2025-05 simplifies the reasonable-and-supportable forecast for current receivables and contract assets; it does not eliminate the CECL allowance.",
+    "skill": "remembering",
+    "difficulty": 2
   }
 ]

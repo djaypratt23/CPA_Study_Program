@@ -18,7 +18,7 @@
       },
       {
         "id": "c",
-        "text": "Verifiability",
+        "text": "Verifiability and understandability",
         "explanation": "Verifiability is an enhancing characteristic that supports faithful representation.",
         "trap": "wrong-classification"
       },
@@ -33,7 +33,8 @@
     "explanation": "Fundamental: relevance (predictive value, confirmatory value, materiality) and faithful representation (complete, neutral, free from error). Enhancing: comparability, verifiability, timeliness, understandability.",
     "skill": "remembering",
     "difficulty": 2,
-    "calc": false
+    "calc": false,
+    "optional": true
   },
   {
     "id": "far-x1-02",
@@ -43,7 +44,7 @@
     "choices": [
       {
         "id": "a",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Only the portion actually refinanced on a long-term basis is excluded from current liabilities.",
         "trap": "overgeneralization"
       },
@@ -393,7 +394,8 @@
     "explanation": "Three 10% tests (any one qualifies): revenue (including intersegment), profit/loss (greater of absolute combined profit or combined loss), and assets. Reportable segments' external revenue must also reach 75% of consolidated revenue.",
     "skill": "remembering",
     "difficulty": 2,
-    "calc": false
+    "calc": false,
+    "optional": true
   },
   {
     "id": "far-x1-12",
@@ -456,7 +458,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Consideration plus NCI exceeds the fair value of net assets, so there is goodwill.",
         "trap": "wrong-rule"
       }
@@ -553,7 +555,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Donor-restricted contributions are reported as increases in net assets with donor restrictions.",
         "trap": "wrong-classification"
       },
@@ -645,6 +647,749 @@
     "explanation": "DB plan statements: statement of net assets available for benefits, statement of changes in net assets available for benefits, and information about the actuarial present value of accumulated plan benefits and changes in it.",
     "skill": "remembering",
     "difficulty": 2,
-    "calc": false
+    "calc": false,
+    "optional": true
+  },
+  {
+    "id": "far-scf-01",
+    "moduleId": "far-cash-flows",
+    "pool": "exam",
+    "stem": "Net income was $200,000. Depreciation was $35,000; accounts receivable increased $18,000; inventory increased $12,000; accounts payable increased $9,000; and there was a $6,000 loss on sale of land. What is net cash provided by operating activities (indirect method)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$220,000",
+        "explanation": "Correct. 200,000 + 35,000 + 6,000 − 18,000 − 12,000 + 9,000 = 220,000."
+      },
+      {
+        "id": "b",
+        "text": "$208,000",
+        "explanation": "This subtracts the loss instead of adding it back.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$280,000",
+        "explanation": "This adds the increases in AR and inventory instead of subtracting them (200,000 + 35,000 + 6,000 + 18,000 + 12,000 + 9,000).",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$214,000",
+        "explanation": "This omits the add-back of the loss on sale of land.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "200,000 + 35,000 depreciation + 6,000 loss − 18,000 AR − 12,000 inventory + 9,000 AP = **220,000**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-iso-01",
+    "moduleId": "far-income-statement-oci",
+    "pool": "exam",
+    "stem": "A company has sales $900,000; COGS $540,000; selling expenses $120,000; administrative expenses $90,000; interest expense $15,000; gain on sale of equipment $5,000. What is operating income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$140,000",
+        "explanation": "This also subtracts interest and adds the gain — those are non-operating.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$360,000",
+        "explanation": "That is gross profit, before operating expenses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$240,000",
+        "explanation": "This omits administrative expenses.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$150,000",
+        "explanation": "Correct. 900,000 − 540,000 − 120,000 − 90,000 = 150,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Gross profit 900,000 − 540,000 = 360,000. Operating income = 360,000 − 120,000 − 90,000 = **150,000**. Interest and the equipment gain are other income/expense.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-eps-03",
+    "moduleId": "far-eps",
+    "pool": "exam",
+    "stem": "Net income was $1,200,000. There are 20,000 shares of $100 par, 5% **cumulative** preferred stock; no dividends were declared this year or last year. Weighted-average common shares: 400,000. What is basic EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2.75",
+        "explanation": "Correct. (1,200,000 − 100,000) ÷ 400,000 = 2.75."
+      },
+      {
+        "id": "b",
+        "text": "$3.00",
+        "explanation": "Cumulative preferred dividends are subtracted even if not declared.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$2.50",
+        "explanation": "This subtracts two years of dividends; arrears from the prior year were already deducted last year.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$2.95",
+        "explanation": "This subtracts only 5% of the $400,000 of common shares rather than the preferred dividend.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Current-year cumulative dividend = 20,000 × $100 × 5% = 100,000, subtracted whether or not declared. Basic EPS = (1,200,000 − 100,000) ÷ 400,000 = **$2.75**.",
+    "skill": "application",
+    "calc": true
+  },
+  {
+    "id": "far-x1-19",
+    "moduleId": "far-balance-sheet-equity",
+    "pool": "exam",
+    "stem": "At December 31, 2025, Kestrel Co. violated a covenant on a long-term loan, making it callable on demand. The lender had not waived the violation when the financial statements were issued in March 2026. How is the loan classified on the December 31, 2025 balance sheet?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a current liability",
+        "explanation": "Correct. Debt callable at the balance sheet date because of a covenant violation is current unless the lender waives the right to demand repayment for more than a year before issuance."
+      },
+      {
+        "id": "b",
+        "text": "As a noncurrent liability, because its stated maturity is long term",
+        "explanation": "The covenant violation makes it callable now.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As noncurrent if management intends to negotiate a waiver later",
+        "explanation": "Intent to seek a waiver isn't enough; no waiver was obtained.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "Split between current and noncurrent by the original repayment schedule",
+        "explanation": "The whole callable balance is current.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 470-10-45-11: obligations callable by the creditor because of a violation at the balance sheet date are current unless the creditor waives or loses the right for more than a year.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-20",
+    "moduleId": "far-income-statement-oci",
+    "pool": "exam",
+    "stem": "Which item is reported in other comprehensive income rather than net income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An unrealized holding gain on trading debt securities",
+        "explanation": "Trading securities' fair value changes go to net income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "An unrealized holding gain on available-for-sale debt securities",
+        "explanation": "Correct. Unrealized gains and losses on AFS debt securities (other than credit losses) go to OCI."
+      },
+      {
+        "id": "c",
+        "text": "An unrealized gain on equity securities with a readily determinable fair value",
+        "explanation": "Equity securities' fair value changes go to net income.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "A gain on the sale of equipment used in operations",
+        "explanation": "Realized gains on disposal are in net income.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Only AFS debt securities' unrealized gains and losses are recognized in OCI; trading debt and equity securities run through net income.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-21",
+    "moduleId": "far-cash-flows",
+    "pool": "exam",
+    "stem": "Using the indirect method, Arden Co. reports net income of $200,000; depreciation $40,000; a $5,000 gain on sale of equipment; an increase in accounts receivable of $15,000; a decrease in inventory of $10,000; and a decrease in accounts payable of $8,000. What is net cash provided by operating activities?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$232,000",
+        "explanation": "That adds the gain back instead of subtracting it.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$238,000",
+        "explanation": "A decrease in accounts payable reduces operating cash flow.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$222,000",
+        "explanation": "Correct. 200,000 + 40,000 − 5,000 − 15,000 + 10,000 − 8,000 = 222,000."
+      },
+      {
+        "id": "d",
+        "text": "$227,000",
+        "explanation": "The gain on sale must also be removed from net income.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Start with net income, add depreciation, subtract the gain (its cash goes to investing), subtract the AR increase, add the inventory decrease, subtract the AP decrease.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x1-22",
+    "moduleId": "far-eps",
+    "pool": "exam",
+    "stem": "Moss Corp. had net income of $500,000 for 2025. It has cumulative preferred stock with annual dividends of $50,000, not declared in 2025. Common shares: 100,000 outstanding January 1 and 20,000 issued July 1. What is basic EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$4.55",
+        "explanation": "Cumulative preferred dividends are deducted even when not declared.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$3.75",
+        "explanation": "Shares issued July 1 are weighted for half the year.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$4.17",
+        "explanation": "That divides 500,000 by 120,000 shares.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$4.09",
+        "explanation": "Correct. (500,000 − 50,000) ÷ 110,000 weighted shares."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Weighted shares: 100,000 + 20,000 × 6/12 = 110,000. Cumulative preferred dividends reduce income available to common whether or not declared.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x1-23",
+    "moduleId": "far-consolidations",
+    "pool": "exam",
+    "stem": "Pike Co. acquires 80% of Sedge Co. for $800,000. The fair value of the noncontrolling interest is $190,000, and the fair value of Sedge's identifiable net assets is $900,000. What goodwill is recognized in consolidation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$90,000",
+        "explanation": "Correct. 800,000 + 190,000 − 900,000 = 90,000."
+      },
+      {
+        "id": "b",
+        "text": "$80,000",
+        "explanation": "That is the parent's share only (800,000 − 80% × 900,000); goodwill includes the NCI's share.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "Subtracting only the parent's share of net assets from the total misstates goodwill.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$     0",
+        "explanation": "Consideration plus NCI exceeds net assets, so goodwill arises.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Goodwill = consideration transferred + fair value of NCI − fair value of identifiable net assets (ASC 805-30-30-1).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x1-24",
+    "moduleId": "far-ratios",
+    "pool": "exam",
+    "stem": "A company's current ratio is 2.0. Which transaction would increase it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Buying inventory on account",
+        "explanation": "Equal increases in both lower a ratio above 1.",
+        "trap": "reversed"
+      },
+      {
+        "id": "b",
+        "text": "Paying an account payable with cash",
+        "explanation": "Correct. Equal decreases in current assets and current liabilities raise a ratio above 1."
+      },
+      {
+        "id": "c",
+        "text": "Declaring a cash dividend payable next month",
+        "explanation": "It adds a current liability only.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Collecting an account receivable",
+        "explanation": "It changes only the mix of current assets.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "When the current ratio exceeds 1, reducing current assets and current liabilities by the same amount increases it.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-25",
+    "moduleId": "far-government",
+    "pool": "exam",
+    "stem": "Which fund of a state or local government uses the economic resources measurement focus and full accrual basis in its fund financial statements?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The general fund, which accounts for most activities",
+        "explanation": "Governmental funds use current financial resources and modified accrual.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A special revenue fund for a restricted gasoline tax",
+        "explanation": "A governmental fund: modified accrual.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "An enterprise fund such as a water utility",
+        "explanation": "Correct. Proprietary funds (enterprise and internal service) use economic resources and accrual."
+      },
+      {
+        "id": "d",
+        "text": "A capital projects fund for building a new library",
+        "explanation": "A governmental fund: modified accrual.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Proprietary and fiduciary funds use the economic resources focus and accrual basis; governmental funds use current financial resources and modified accrual.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-26",
+    "moduleId": "far-nfp-statements",
+    "pool": "exam",
+    "stem": "A not-for-profit spends $40,000 on a program, satisfying a donor's purpose restriction from a prior-year gift. How is this reported in the statement of activities?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As contribution revenue without donor restrictions of $40,000 this year",
+        "explanation": "The revenue was recognized when the gift was received.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "As an expense in the net assets with donor restrictions column",
+        "explanation": "Expenses are always reported as decreases in net assets without donor restrictions.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No entry until the full restricted gift has been spent",
+        "explanation": "Each satisfied portion is released as it is spent.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Released from restriction: a reclassification between net asset classes",
+        "explanation": "Correct. Satisfying the restriction reclassifies 40,000 from with donor restrictions to without donor restrictions, where the expense is reported."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Expenses are reported in net assets without donor restrictions; satisfying a purpose restriction is shown as net assets released from restrictions.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-27",
+    "moduleId": "far-sec-segments",
+    "pool": "exam",
+    "stem": "Under ASC 280, an operating segment is a reportable segment if its revenue, including intersegment sales, is at least what share of the combined revenue of all operating segments?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "10%",
+        "explanation": "Correct. The 10% revenue test is one of the three quantitative thresholds (with profit or loss and assets)."
+      },
+      {
+        "id": "b",
+        "text": "5%",
+        "explanation": "The threshold is 10%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "25%",
+        "explanation": "25% isn't an ASC 280 threshold.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "75%",
+        "explanation": "75% is the test that reportable segments' external revenue must meet in total.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A segment is reportable if its revenue, absolute profit or loss, or assets are 10% or more of the combined amount; reportable segments must cover at least 75% of external revenue.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-28",
+    "moduleId": "far-balance-sheet-equity",
+    "pool": "exam",
+    "stem": "A note payable of $500,000 is due June 30, 2026. On February 10, 2026, before the December 31, 2025 statements are issued, the company refinances it with a five-year note. How is the note reported at December 31, 2025?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a current liability, because it was due within a year at year-end",
+        "explanation": "Refinancing before issuance permits noncurrent classification.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a noncurrent liability",
+        "explanation": "Correct. Short-term debt refinanced on a long-term basis after the balance sheet date but before issuance is classified as noncurrent."
+      },
+      {
+        "id": "c",
+        "text": "As current, with the refinancing disclosed only in the notes",
+        "explanation": "The completed refinancing changes the classification.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Half current and half noncurrent",
+        "explanation": "The whole refinanced amount is noncurrent.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "ASC 470-10-45-14: short-term obligations refinanced on a long-term basis (or under a qualifying agreement) before the statements are issued are excluded from current liabilities.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-29",
+    "moduleId": "far-income-statement-oci",
+    "pool": "exam",
+    "stem": "Which disposal is most likely reported as a discontinued operation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Selling one of 40 similar retail stores in a single region",
+        "explanation": "One store among many is not a strategic shift.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Retiring an outdated production machine that is fully depreciated",
+        "explanation": "Asset disposals in the normal course are not discontinued operations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Selling a major line of business, a strategic shift",
+        "explanation": "Correct. A disposal is a discontinued operation when it represents a strategic shift with a major effect on operations and results."
+      },
+      {
+        "id": "d",
+        "text": "Moving a product line's manufacturing to another plant",
+        "explanation": "Relocation is not a disposal.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASC 205-20: a component's disposal is a discontinued operation if it represents a strategic shift that has (or will have) a major effect on the entity's operations and results.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-30",
+    "moduleId": "far-cash-flows",
+    "pool": "exam",
+    "stem": "Using the direct method, a company reports cost of goods sold of $300,000. Inventory increased by $20,000 and accounts payable to suppliers increased by $15,000. What were cash payments to suppliers?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$335,000",
+        "explanation": "An increase in accounts payable reduces cash paid.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$265,000",
+        "explanation": "An increase in inventory increases purchases.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$320,000",
+        "explanation": "The increase in payables must also be subtracted.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$305,000",
+        "explanation": "Correct. 300,000 + 20,000 inventory increase − 15,000 AP increase = 305,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Purchases = COGS + inventory increase = 320,000; cash paid = purchases − AP increase = 305,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x1-31",
+    "moduleId": "far-notes-disclosures",
+    "pool": "exam",
+    "stem": "Which related party transaction must be disclosed under ASC 850?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A material loan to the company's chief executive officer",
+        "explanation": "Correct. Material transactions with management and other related parties are disclosed, with the nature, amounts and terms."
+      },
+      {
+        "id": "b",
+        "text": "A routine salary paid to a staff accountant",
+        "explanation": "Ordinary compensation in the normal course isn't a related-party disclosure.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "A sale to an unrelated customer at a normal discount",
+        "explanation": "The customer isn't a related party.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Intercompany sales eliminated in consolidated statements",
+        "explanation": "Transactions eliminated in consolidation need not be disclosed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASC 850 requires disclosure of material related party transactions other than compensation in the ordinary course and transactions eliminated in consolidation.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-32",
+    "moduleId": "far-eps",
+    "pool": "exam",
+    "stem": "Lark Co. has net income of $400,000 and preferred dividends of $40,000 on convertible preferred stock, convertible into 20,000 common shares. Weighted common shares are 100,000. What is diluted EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3.60",
+        "explanation": "That is basic EPS: (400,000 − 40,000) ÷ 100,000.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$3.33",
+        "explanation": "Correct. If-converted: add back the preferred dividends; 400,000 ÷ (100,000 + 20,000)."
+      },
+      {
+        "id": "c",
+        "text": "$3.00",
+        "explanation": "Under if-converted, preferred dividends are added back, not deducted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$4.00",
+        "explanation": "The conversion shares must be added to the denominator.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Basic EPS is $3.60. If-converted diluted EPS: $400,000 ÷ 120,000 = $3.33, which is dilutive.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x1-33",
+    "moduleId": "far-consolidations",
+    "pool": "exam",
+    "stem": "During 2025 Parent sold inventory costing $60,000 to its subsidiary for $80,000. At year-end, 25% of that inventory remains unsold by the subsidiary. What unrealized profit is eliminated in consolidation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Only the profit in inventory still held is unrealized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$15,000",
+        "explanation": "That is the profit on the portion already sold to outsiders.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "Correct. Gross profit 20,000 × 25% still in inventory = 5,000."
+      },
+      {
+        "id": "d",
+        "text": "$0, because the parent earned the profit in a sale",
+        "explanation": "Intercompany profit is unrealized until the goods are sold to outsiders.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Eliminate intercompany sales and cost of sales of $80,000, and remove the unrealized gross profit in ending inventory: $20,000 × 25% = $5,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-x1-34",
+    "moduleId": "far-nfp-revenue",
+    "pool": "exam",
+    "stem": "A donor promises $100,000 to a not-for-profit if it raises a matching $100,000 from others by year-end; otherwise the donor is released. At year-end the NFP has raised $60,000. How much of the donor's promise is recognized as contribution revenue?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "A conditional promise isn't recognized before the barrier is overcome.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "Partial progress doesn't trigger recognition of a single matching condition.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$100,000 as revenue with donor restrictions",
+        "explanation": "Donor restrictions and conditions are different; conditions delay recognition.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Correct. The promise has a barrier and a right of release, so it is conditional and recognized only when the condition is met."
+      }
+    ],
+    "answer": "d",
+    "explanation": "ASU 2018-08: a promise with a measurable barrier and a right of return or release is conditional; revenue is recognized when the barrier is overcome.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-35",
+    "moduleId": "far-government",
+    "pool": "exam",
+    "stem": "Under modified accrual, a city recognizes property tax revenue for 2025 when it is:",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Levied for 2025 and collected within 60 days",
+        "explanation": "Correct. Property taxes are 'available' if collected during the year or soon enough after (generally within 60 days) to pay current liabilities."
+      },
+      {
+        "id": "b",
+        "text": "Levied, whether or not it is ever collected",
+        "explanation": "Revenue must be measurable and available.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Collected in cash, regardless of the levy year",
+        "explanation": "Revenue relates to the year levied, if available.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "Billed and collected within one year after year-end",
+        "explanation": "The availability period is generally 60 days.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "GASB modified accrual: revenues are recognized when measurable and available; for property taxes, available means collected within 60 days after year-end.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "far-x1-36",
+    "moduleId": "far-ratios",
+    "pool": "exam",
+    "stem": "Cost of goods sold is $600,000. Inventory was $140,000 at the beginning of the year and $160,000 at the end. What is the inventory turnover?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "3.75 times",
+        "explanation": "That uses ending inventory, not the average.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "4.0 times",
+        "explanation": "Correct. 600,000 ÷ average inventory 150,000 = 4.0."
+      },
+      {
+        "id": "c",
+        "text": "4.3 times",
+        "explanation": "That uses beginning inventory, not the average.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "91 days",
+        "explanation": "That converts turnover to days (365 ÷ 4.0); turnover itself is 4.0.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Inventory turnover = cost of goods sold ÷ average inventory = $600,000 ÷ $150,000 = 4.0 times.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

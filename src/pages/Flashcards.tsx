@@ -20,13 +20,16 @@ export default function Flashcards() {
 
   if (session)
     return (
-      <FlashcardPlayer
-        cards={session}
-        onDone={() => {
-          setSession(null)
-          setParams({})
-        }}
-      />
+      <>
+        <h1 className="sr-only">Flashcard review</h1>
+        <FlashcardPlayer
+          cards={session}
+          onDone={() => {
+            setSession(null)
+            setParams({})
+          }}
+        />
+      </>
     )
 
   const decks = section.areas.flatMap((a) =>
@@ -46,9 +49,11 @@ export default function Flashcards() {
     ),
   )
   const focus = moduleParam ? decks.find((d) => d.id === moduleParam) : undefined
-  // Study what is new or due; if the whole deck is up to date, allow a full cram pass.
+  // Study what is due plus at most the daily new-card allowance; if the whole deck is up to date, allow a full cram pass.
   const pendingFor = (cards: FlashcardWithModule[]) => {
-    const pending = cards.filter((c) => !bySrs.has(c.id) || (bySrs.get(c.id)?.due ?? '') <= now)
+    const due = cards.filter((c) => bySrs.has(c.id) && (bySrs.get(c.id)?.due ?? '') <= now)
+    const fresh = cards.filter((c) => !bySrs.has(c.id)).slice(0, settings.newCardsPerDay)
+    const pending = [...due, ...fresh]
     return pending.length ? pending : cards
   }
 

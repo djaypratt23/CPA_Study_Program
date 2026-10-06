@@ -15,7 +15,7 @@ export default function InlineQuestion({ id, mode = 'lesson', label, sessionId }
   if (!q) return <p className="text-rose-600">Missing question {id}</p>
   const section = getModule(q.moduleId)?.section ?? 'FAR'
   return (
-    <aside className="my-6 rounded-xl border-2 border-dashed border-blue-300 bg-white p-4 dark:border-blue-800 dark:bg-slate-900" aria-label={label}>
+    <div role="group" className="my-6 rounded-xl border-2 border-dashed border-blue-300 bg-white p-4 dark:border-blue-800 dark:bg-slate-900" aria-label={label}>
       <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-blue-800 dark:text-blue-300">
         <span aria-hidden="true">✎</span> {label}
       </div>
@@ -35,6 +35,6 @@ export default function InlineQuestion({ id, mode = 'lesson', label, sessionId }
           await recordMcqAttempt(q, { choice, confidence: c, timeMs: Date.now() - started.current, mode, mixed: false, sessionId, section })
         }}
       />
-    </aside>
+    </div>
   )
 }

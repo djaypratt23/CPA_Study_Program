@@ -1,0 +1,121 @@
+{
+  "id": "aud-tbs-u6-analytics-evaluation",
+  "section": "AUD",
+  "unitId": "aud-u6",
+  "moduleIds": [
+    "aud-data-analytics",
+    "aud-risk-response"
+  ],
+  "pool": "practice",
+  "title": "Evaluate an analytical procedure and final analytics — Pemberton Logistics",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "The senior prepared a substantive analytical procedure over Pemberton Logistics' interest expense. The threshold for investigating differences, set at planning, is $40,000. Review the workpaper, evaluate management's explanations, then evaluate a finding from the final analytical review. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Workpaper data",
+      "content": "- Average debt outstanding (from the monthly balances, tested): **$12,400,000**. Weighted average contractual rate: **6.25%**.\n- Recorded interest expense: **$842,000**.\n- Management's explanations for the difference:\n  1. **$38,000** of loan-fee amortization is included in interest expense. The auditor agreed it to the loan agreement and the amortization schedule.\n  2. **$12,000** of penalty interest for a late payment in July. No documentation was requested.\n- The senior treated both explanations as corroborated."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "sap",
+      "prompt": "Review the analytical procedure workpaper.",
+      "preparedLabel": "Per senior",
+      "rows": [
+        {
+          "id": "exp",
+          "label": "Expected interest expense",
+          "prepared": 775000,
+          "answer": 775000,
+          "explanation": "Average debt 12,400,000 × weighted rate 6.25% = **775,000**. **No error.**"
+        },
+        {
+          "id": "rec",
+          "label": "Recorded interest expense",
+          "prepared": 842000,
+          "answer": 842000,
+          "explanation": "Agrees to the general ledger. **No error.**"
+        },
+        {
+          "id": "diff",
+          "label": "Difference",
+          "prepared": 67000,
+          "answer": 67000,
+          "explanation": "842,000 − 775,000 = **67,000**. **No error.**"
+        },
+        {
+          "id": "inv",
+          "label": "Difference requiring investigation",
+          "prepared": 27000,
+          "answer": 67000,
+          "explanation": "When the difference exceeds the threshold (40,000), the **whole** difference must be investigated (AU-C 520.07), not just the excess over the threshold: **67,000**."
+        },
+        {
+          "id": "corr",
+          "label": "Portion explained by corroborated evidence",
+          "prepared": 50000,
+          "answer": 38000,
+          "explanation": "Only the loan-fee amortization (**38,000**) is corroborated, by the loan agreement and amortization schedule. The penalty-interest explanation rests on inquiry alone."
+        },
+        {
+          "id": "unex",
+          "label": "Remaining unexplained difference",
+          "prepared": 17000,
+          "answer": 29000,
+          "explanation": "67,000 − 38,000 = **29,000**."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "ev",
+      "prompt": "Evaluate the results.",
+      "rows": [
+        {
+          "id": "e1",
+          "label": "Management's explanation: loan-fee amortization of $38,000 is included in interest expense.",
+          "options": [
+            "Accept — corroborated by documentary evidence",
+            "Do not accept until corroborated — inquiry alone is not sufficient"
+          ],
+          "answer": "Accept — corroborated by documentary evidence",
+          "explanation": "The auditor agreed it to the loan agreement and amortization schedule."
+        },
+        {
+          "id": "e2",
+          "label": "Management's explanation: $12,000 of penalty interest for a late payment.",
+          "options": [
+            "Accept — corroborated by documentary evidence",
+            "Do not accept until corroborated — inquiry alone is not sufficient"
+          ],
+          "answer": "Do not accept until corroborated — inquiry alone is not sufficient",
+          "explanation": "An explanation must be corroborated with other evidence (AU-C 520.07). Ask for the lender's notice or the payment record."
+        },
+        {
+          "id": "e3",
+          "label": "Conclusion on the interest expense procedure",
+          "options": [
+            "The procedure supports the recorded balance — the remaining unexplained difference is below the threshold",
+            "Propose an adjustment for the full 67,000 difference",
+            "Perform additional procedures — the remaining unexplained difference exceeds the threshold"
+          ],
+          "answer": "The procedure supports the recorded balance — the remaining unexplained difference is below the threshold",
+          "explanation": "The unexplained 29,000 (treating the uncorroborated 12,000 as unexplained) is below the 40,000 threshold, so the procedure supports the balance."
+        },
+        {
+          "id": "e4",
+          "label": "Final analytical procedure: revenue up 4%, receivables up 38%, days sales outstanding from 41 to 55; not previously identified",
+          "options": [
+            "Reassess the risks for revenue and receivables and perform additional procedures",
+            "No further work — final analytics are for overall reasonableness only",
+            "Modify the opinion"
+          ],
+          "answer": "Reassess the risks for revenue and receivables and perform additional procedures",
+          "explanation": "A previously unrecognized risk found during final analytics requires the auditor to revise the risk assessment and do more work (AU-C 520.06 and 315)."
+        }
+      ]
+    }
+  ]
+}

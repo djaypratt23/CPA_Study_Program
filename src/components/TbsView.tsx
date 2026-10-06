@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { useIsWide } from '../hooks/useDesktop'
 import type { Tbs, TbsPart } from '../content/schema'
-import { scoreTbs, type JournalLineResponse, type PartResponse, type TbsResponses } from '../lib/tbsScoring'
+import { fmt, scoreTbs, type JournalLineResponse, type PartResponse, type ReviewRowResponse, type TbsResponses } from '../lib/tbsScoring'
 import Markdown from './Markdown'
-import { ReviewBadge } from './ui'
+import { issueUrl } from '../lib/report'
+import { amountInputProps, ReviewBadge } from './ui'
 
 interface Props {
   tbs: Tbs
@@ -38,6 +39,13 @@ export default function TbsView({ tbs, responses, onChange, submitted, split = f
           <PartInput part={p} response={responses[p.id]} onChange={(r) => set(p.id, r)} disabled={submitted} />
         </section>
       ))}
+      {submitted && (
+        <p className="text-xs">
+          <a href={issueUrl(tbs.id, 'simulation', tbs.title)} target="_blank" rel="noopener noreferrer" className="muted underline">
+            Report an issue with this simulation (opens GitHub)
+          </a>
+        </p>
+      )}
     </div>
   )
 
@@ -57,7 +65,7 @@ export default function TbsView({ tbs, responses, onChange, submitted, split = f
               ))}
             </div>
             <div className="min-h-0 overflow-y-auto p-4" role="tabpanel">
-              <h3 className="mb-2 font-semibold">{ex.title}</h3>
+              <h2 className="mb-2 font-semibold">{ex.title}</h2>
               <Markdown>{ex.content}</Markdown>
             </div>
           </aside>
@@ -83,7 +91,7 @@ export default function TbsView({ tbs, responses, onChange, submitted, split = f
 
       {tab >= 0 ? (
         <div className="card" role="tabpanel">
-          <h3 className="mb-2 font-semibold">{tbs.exhibits[tab].title}</h3>
+          <h2 className="mb-2 font-semibold">{tbs.exhibits[tab].title}</h2>
           <Markdown>{tbs.exhibits[tab].content}</Markdown>
           <button className="btn-secondary mt-3" onClick={() => setTab(-1)}>
             Back to task
@@ -102,9 +110,9 @@ function TbsResults({ score }: { score: ReturnType<typeof scoreTbs> }) {
   return (
     <section className="space-y-3" aria-labelledby="tbs-results">
       <div className="card">
-        <h3 id="tbs-results" className="h2">
+        <h2 id="tbs-results" className="h2">
           Score: {score.earned}/{score.possible} cells ({Math.round(score.percent * 100)}%)
-        </h3>
+        </h2>
         <p className="text-sm muted">Each cell is scored separately — partial credit, just like the exam.</p>
       </div>
       <ul className="space-y-2">
@@ -161,18 +169,35 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
               <label htmlFor={`${part.id}-${r.id}`} className="text-sm sm:max-w-[60%]">
                 {r.label}
               </label>
-              <input
-                id={`${part.id}-${r.id}`}
-                className="input font-mono sm:w-44 sm:text-right"
-                inputMode="decimal"
-                disabled={disabled}
-                value={values[r.id] ?? ''}
-                placeholder="0"
-                onChange={(e) => onChange({ kind: 'numeric', values: { ...values, [r.id]: e.target.value } })}
-              />
+              <div className="flex items-center gap-1 sm:w-52 sm:justify-end">
+                {r.unit === '$' && (
+                  <span className="muted font-mono text-sm" aria-hidden="true">
+                    $
+                  </span>
+                )}
+                <input
+                  id={`${part.id}-${r.id}`}
+                  className="input font-mono sm:w-44 sm:text-right"
+                  {...amountInputProps}
+                  aria-describedby={r.unit && r.unit !== '$' ? `${part.id}-${r.id}-unit` : undefined}
+                  disabled={disabled}
+                  value={values[r.id] ?? ''}
+                  placeholder="0"
+                  onChange={(e) => onChange({ kind: 'numeric', values: { ...values, [r.id]: e.target.value } })}
+                />
+                {r.unit && r.unit !== '$' && (
+                  <span id={`${part.id}-${r.id}-unit`} className="muted font-mono text-sm">
+                    {r.unit}
+                  </span>
+                )}
+              </div>
             </div>
           ))}
-          <p className="pt-2 text-xs muted">Enter whole dollars unless told otherwise. Commas and $ are fine; use a minus sign or (parentheses) for negatives.</p>
+          <p className="pt-2 text-xs muted">
+            Enter whole dollars unless the row shows another unit.{' '}
+            {part.rows.some((r) => r.unit === '%') && 'Enter percentages as percent points (25 or 25% for 25%). '}
+            Commas and $ are fine; use a minus sign or (parentheses) for negatives.
+          </p>
         </div>
       )
     }
@@ -211,8 +236,9 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
         onChange({ kind: 'journal', lines: lines.map((l, j) => (j === i ? { ...l, ...patch } : l)) })
       return (
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[34rem] text-sm">
-            <thead>
+          {/* Below the sm breakpoint each line stacks: account on top, debit and credit side by side. */}
+          <table className="w-full text-sm sm:min-w-[34rem]">
+            <thead className="hidden sm:table-header-group">
               <tr className="text-left text-xs uppercase muted">
                 <th className="py-1 pr-2">Account</th>
                 <th className="w-32 py-1 pr-2 text-right">Debit</th>
@@ -221,8 +247,8 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
             </thead>
             <tbody>
               {lines.map((l, i) => (
-                <tr key={i}>
-                  <td className="py-1 pr-2">
+                <tr key={i} className="grid grid-cols-2 gap-x-2 gap-y-1 border-b border-slate-100 py-2 sm:table-row sm:border-0 sm:py-0 dark:border-slate-800">
+                  <td className="col-span-2 sm:table-cell sm:py-1 sm:pr-2">
                     <select className="input" aria-label={`Line ${i + 1} account`} disabled={disabled} value={l.account} onChange={(e) => update(i, { account: e.target.value })}>
                       <option value="">—</option>
                       {part.accounts.map((a) => (
@@ -232,20 +258,26 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
                       ))}
                     </select>
                   </td>
-                  <td className="py-1 pr-2">
+                  <td className="sm:table-cell sm:py-1 sm:pr-2">
+                    <span className="text-xs muted sm:hidden" aria-hidden="true">
+                      Debit
+                    </span>
                     <input
                       className="input text-right font-mono"
-                      inputMode="decimal"
+                      {...amountInputProps}
                       aria-label={`Line ${i + 1} debit`}
                       disabled={disabled}
                       value={l.debit ?? ''}
                       onChange={(e) => update(i, { debit: e.target.value === '' ? null : e.target.value })}
                     />
                   </td>
-                  <td className="py-1">
+                  <td className="sm:table-cell sm:py-1">
+                    <span className="text-xs muted sm:hidden" aria-hidden="true">
+                      Credit
+                    </span>
                     <input
                       className="input text-right font-mono"
-                      inputMode="decimal"
+                      {...amountInputProps}
                       aria-label={`Line ${i + 1} credit`}
                       disabled={disabled}
                       value={l.credit ?? ''}
@@ -288,22 +320,114 @@ function PartInput({ part, response, onChange, disabled }: { part: TbsPart; resp
         </div>
       )
     }
-    case 'research': {
-      const value = response?.kind === 'research' ? response.value : ''
+    case 'research':
+      return <ResearchPart part={part} response={response} onChange={onChange} disabled={disabled} />
+    case 'review': {
+      const values: Record<string, ReviewRowResponse> = response?.kind === 'review' ? response.values : {}
+      const update = (id: string, patch: Partial<ReviewRowResponse>) =>
+        onChange({ kind: 'review', values: { ...values, [id]: { ...(values[id] ?? { flagged: false }), ...patch } } })
       return (
-        <fieldset className="space-y-2">
-          <legend className="text-sm muted">Select the excerpt that answers the question.</legend>
-          {part.excerpts.map((e) => (
-            <label key={e.id} className={`card flex cursor-pointer gap-3 p-3 ${value === e.id ? 'border-blue-600 ring-2 ring-blue-600/30' : ''}`}>
-              <input type="radio" name={part.id} className="mt-1 accent-blue-700" disabled={disabled} checked={value === e.id} onChange={() => onChange({ kind: 'research', value: e.id })} />
-              <span>
-                <span className="block text-xs font-bold">{e.citation}</span>
-                <span className="text-sm">{e.text}</span>
-              </span>
-            </label>
-          ))}
-        </fieldset>
+        <div className="overflow-x-auto">
+          {/* Below the sm breakpoint each row stacks: label, prepared amount, then the flag and correction. */}
+          <table className="w-full text-sm sm:min-w-[36rem]">
+            <thead className="hidden sm:table-header-group">
+              <tr className="text-left text-xs uppercase muted">
+                <th className="py-1 pr-2">Item</th>
+                <th className="w-32 py-1 pr-2 text-right">{part.preparedLabel}</th>
+                <th className="w-20 py-1 pr-2 text-center">Error?</th>
+                <th className="w-36 py-1 text-right">Corrected amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              {part.rows.map((r) => {
+                const v = values[r.id]
+                const flagged = !!v?.flagged
+                return (
+                  <tr key={r.id} className="grid grid-cols-2 gap-x-2 gap-y-1 border-b border-slate-100 py-2 sm:table-row sm:py-0 dark:border-slate-800">
+                    <td id={`${part.id}-${r.id}-label`} className="col-span-2 sm:table-cell sm:py-1.5 sm:pr-2">
+                      {r.label}
+                    </td>
+                    <td className="font-mono sm:table-cell sm:py-1.5 sm:pr-2 sm:text-right">
+                      <span className="font-sans text-xs muted sm:hidden">{part.preparedLabel}: </span>
+                      {fmt(r.prepared)}
+                    </td>
+                    <td className="sm:table-cell sm:py-1.5 sm:pr-2 sm:text-center">
+                      <label className="inline-flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          className="h-4 w-4 accent-blue-700"
+                          aria-describedby={`${part.id}-${r.id}-label`}
+                          disabled={disabled}
+                          checked={flagged}
+                          onChange={(e) => update(r.id, { flagged: e.target.checked })}
+                        />
+                        <span className="text-xs sm:sr-only">Error</span>
+                      </label>
+                    </td>
+                    <td className="col-span-2 sm:table-cell sm:py-1.5">
+                      <input
+                        className="input text-right font-mono"
+                        {...amountInputProps}
+                        aria-label={`Corrected amount: ${r.label}`}
+                        placeholder={flagged ? 'Corrected amount' : ''}
+                        disabled={disabled || !flagged}
+                        value={v?.corrected ?? ''}
+                        onChange={(e) => update(r.id, { corrected: e.target.value })}
+                      />
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+          <p className="pt-2 text-xs muted">
+            Tick each amount that is wrong and enter what it should be. Leave correct amounts unticked; flagging a correct amount costs credit.
+          </p>
+        </div>
       )
     }
   }
+}
+
+/** Research part with a search box over the excerpts, like the exam's authoritative-literature search (P1-10). */
+function ResearchPart({
+  part,
+  response,
+  onChange,
+  disabled,
+}: {
+  part: Extract<TbsPart, { kind: 'research' }>
+  response: PartResponse | undefined
+  onChange: (r: PartResponse) => void
+  disabled: boolean
+}) {
+  const value = response?.kind === 'research' ? response.value : ''
+  const [query, setQuery] = useState('')
+  const terms = query.toLowerCase().split(/\s+/).filter(Boolean)
+  const shown = part.excerpts.filter((e) => e.id === value || terms.every((t) => `${e.citation} ${e.text}`.toLowerCase().includes(t)))
+  return (
+    <fieldset className="space-y-2">
+      <legend className="text-sm muted">Select the excerpt that answers the question.</legend>
+      <input
+        type="search"
+        className="input text-sm"
+        placeholder="Search the excerpts (e.g., a keyword or citation)"
+        aria-label="Search research excerpts"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      <p className="text-xs muted" aria-live="polite">
+        {terms.length ? `${shown.length} of ${part.excerpts.length} excerpts match` : `${part.excerpts.length} excerpts`}
+      </p>
+      {shown.map((e) => (
+        <label key={e.id} className={`card flex cursor-pointer gap-3 p-3 ${value === e.id ? 'border-blue-600 ring-2 ring-blue-600/30' : ''}`}>
+          <input type="radio" name={part.id} className="mt-1 accent-blue-700" disabled={disabled} checked={value === e.id} onChange={() => onChange({ kind: 'research', value: e.id })} />
+          <span>
+            <span className="block text-xs font-bold">{e.citation}</span>
+            <span className="text-sm">{e.text}</span>
+          </span>
+        </label>
+      ))}
+    </fieldset>
+  )
 }

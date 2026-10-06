@@ -1,0 +1,122 @@
+{
+  "id": "tcp-tbs-u6-liquidation-compare",
+  "section": "TCP",
+  "unitId": "tcp-u6",
+  "moduleIds": [
+    "tcp-entity-choice",
+    "tcp-formation-liquidation"
+  ],
+  "pool": "practice",
+  "title": "Compare liquidation results across entity types — Harlow Tool Works",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "The owner of Harlow Tool Works is planning to retire and asked how liquidating the business would be taxed under each entity type. The firm's intern prepared the comparison below. Review it and complete the conclusion. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Assumptions",
+      "content": "- The business's assets: fair value **$900,000**, adjusted basis **$400,000**. All gain is capital or §1231 gain (no depreciation recapture).\n- **C corporation:** sells all assets for cash, pays tax at **21%**, and distributes the remaining cash. Owner's stock basis: **$300,000**.\n- **S corporation:** never a C corporation (no built-in gains tax, no AEP). Sells all assets for cash and distributes the cash. Owner's stock basis before the sale: **$400,000**.\n- **Partnership:** distributes all assets in kind to the sole remaining partner in liquidation. Partner's outside basis: **$400,000**. There are no liabilities and no unrealized receivables or inventory.\n- Owner's capital gain rate: **20%**. Ignore the net investment income tax and state taxes."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "cmp",
+      "prompt": "Review the comparison.",
+      "preparedLabel": "Per intern",
+      "rows": [
+        {
+          "id": "c_corp",
+          "label": "C corporation — corporate tax on the asset sale",
+          "prepared": 105000,
+          "answer": 105000,
+          "explanation": "500,000 gain × 21% = **105,000**. **No error.**"
+        },
+        {
+          "id": "c_sh",
+          "label": "C corporation — shareholder gain on the liquidating distribution",
+          "prepared": 600000,
+          "answer": 495000,
+          "explanation": "Cash distributed is 900,000 − 105,000 = 795,000; less stock basis 300,000 = **495,000** (§331)."
+        },
+        {
+          "id": "c_tot",
+          "label": "C corporation — total tax",
+          "prepared": 225000,
+          "answer": 204000,
+          "explanation": "105,000 + 495,000 × 20% (99,000) = **204,000**."
+        },
+        {
+          "id": "c_net",
+          "label": "C corporation — owner's after-tax cash",
+          "prepared": 675000,
+          "answer": 696000,
+          "explanation": "795,000 − 99,000 = **696,000**."
+        },
+        {
+          "id": "s_corp",
+          "label": "S corporation — corporate-level tax",
+          "prepared": 105000,
+          "answer": 0,
+          "explanation": "No built-in gains tax applies, so the S corporation pays **0**; the gain passes through."
+        },
+        {
+          "id": "s_sh",
+          "label": "S corporation — owner's tax on the passed-through gain",
+          "prepared": 100000,
+          "answer": 100000,
+          "explanation": "500,000 × 20% = **100,000**. **No error.**"
+        },
+        {
+          "id": "s_liq",
+          "label": "S corporation — owner's gain on the liquidating distribution",
+          "prepared": 0,
+          "answer": 0,
+          "explanation": "Stock basis rises to 400,000 + 500,000 = 900,000, equal to the cash received. **No error.**"
+        },
+        {
+          "id": "p_gain",
+          "label": "Partnership — gain recognized on the in-kind distribution",
+          "prepared": 500000,
+          "answer": 0,
+          "explanation": "A distribution of property other than money generally triggers **no gain** (§731(a)); there are no hot assets here."
+        },
+        {
+          "id": "p_basis",
+          "label": "Partnership — partner's basis in the distributed assets",
+          "prepared": 900000,
+          "answer": 400000,
+          "explanation": "In a liquidating distribution the partner's outside basis carries over to the assets: **400,000** (§732(b)). The 500,000 gain is deferred, not eliminated."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "con",
+      "prompt": "Complete the conclusion.",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Lowest current tax on a liquidation",
+          "options": [
+            "C corporation",
+            "S corporation",
+            "Partnership"
+          ],
+          "answer": "Partnership",
+          "explanation": "No tax is due now; the built-in gain stays with the assets through the carryover basis."
+        },
+        {
+          "id": "c2",
+          "label": "Why the C corporation result is worst",
+          "options": [
+            "Its gain is taxed twice — at the corporate and shareholder levels",
+            "Its tax rate is higher than the individual capital gain rate",
+            "It cannot use §331"
+          ],
+          "answer": "Its gain is taxed twice — at the corporate and shareholder levels",
+          "explanation": "§336 taxes the corporation on its assets; §331 then taxes the shareholder on the net cash."
+        }
+      ]
+    }
+  ]
+}

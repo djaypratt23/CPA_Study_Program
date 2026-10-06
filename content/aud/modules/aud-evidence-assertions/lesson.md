@@ -13,6 +13,10 @@ objectives:
   - text: Apply audit documentation requirements, including assembly and retention periods.
     skill: remembering
     task: Recall audit documentation requirements
+  - text: Conclude whether sufficient appropriate audit evidence has been obtained and identify the evidence still needed.
+    skill: evaluation
+  - text: Apply the PCAOB confirmation requirements of AS 2310 (as revised).
+    skill: application
 bigIdea:
   what: >-
     Evidence must be sufficient (enough of it) and appropriate (relevant to the assertion and reliable). Assertions
@@ -32,7 +36,7 @@ keyTakeaways:
   - "Confirmations: the auditor controls the requests and responses. Positive requests ask for a reply in every case; negative requests ask for a reply only if the recipient disagrees — used only when RMM is low, there are many small, homogeneous balances, few exceptions are expected, and recipients are expected to read them."
   - "Positive nonresponse → perform alternative procedures (e.g., examine subsequent cash receipts, or shipping documents and invoices)."
   - "If management refuses to allow a confirmation: inquire about the reasons, evaluate them, perform alternative procedures; if the refusal is unreasonable, communicate with those charged with governance and consider the effect on the opinion."
-  - "Documentation (AU-C 230): enough for an experienced auditor with no connection to the audit to understand it. Assemble the final file within 60 days after the report release date; retain it at least 5 years. PCAOB: 45 days and 7 years."
+  - "Documentation (AU-C 230): enough for an experienced auditor with no connection to the audit to understand it. Assemble the final file within 60 days after the report release date; retain it at least 5 years. PCAOB: 14 days (formerly 45; AS 1215 as amended by AS 1000) and 7 years."
 citations:
   - source: AU-C 500 (Audit evidence), as amended by SAS No. 142
   - source: AU-C 315 (Assertions)
@@ -89,7 +93,7 @@ insight: A confirmation proves existence. Collectibility (valuation) is tested s
 | | AICPA (nonissuers) | PCAOB (issuers) |
 |---|---|---|
 | Report date | Date sufficient appropriate evidence obtained | Same |
-| Assembly of the final file | Within **60 days** after the report release date | Within **45 days** |
+| Assembly of the final file | Within **60 days** after the report release date | Within **14 days** (AS 1000 amendment; formerly 45) |
 | Retention | At least **5 years** from the report release date | **7 years** |
 
 After the documentation completion date, nothing may be deleted. Additions must note who made them, when, and why.
@@ -97,3 +101,21 @@ After the documentation completion date, nothing may be deleted. Additions must 
 ```check
 aud-ev-chk2
 ```
+
+## Concluding on sufficiency and appropriateness
+
+Before concluding on an area, ask two separate questions:
+
+- **Appropriate?** Is the evidence relevant to the assertion and reliable? External evidence the auditor obtains directly beats internal evidence; documents beat inquiry; evidence from a self-interested source (a sales manager vouching for their own inventory) is weak, especially when it contradicts other data.
+- **Sufficient?** Is there enough of it, given the assessed risk? A procedure performed on far fewer items than planned is the right kind of evidence, just not enough.
+
+The fix differs: insufficient evidence needs **more of the same**; inappropriate evidence needs **different** evidence. More copies of internally generated invoices will never prove that goods shipped. If the auditor cannot obtain the evidence (for example, management forbids a letter to legal counsel), the result is a scope limitation.
+
+## PCAOB AS 2310 (revised) confirmations
+
+For audits of issuers (fiscal years ending on or after June 15, 2025), AS 2310 requires the auditor to:
+
+- **confirm cash** held by third parties and **accounts receivable** arising from transactions with customers, or — for receivables — document why confirmation would not be feasible or effective and obtain other evidence from knowledgeable external sources;
+- keep **control** of the confirmation process (selecting items, sending and receiving requests);
+- not use **negative confirmations** as the only substantive procedure for a balance;
+- perform **alternative procedures** (for example, examining subsequent cash receipts and shipping documents) when no response is received.

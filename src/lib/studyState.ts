@@ -8,7 +8,7 @@ import type { ContentBundle } from '../content/build'
 import type { SectionConfig } from '../content/schema'
 import type { Attempt, ErrorLogEntry, ExamSession, ModuleProgress, QuizSession, Settings, SrsItem, TbsSession } from '../db/types'
 import type { ErrorCause } from '../db/types'
-import { areaReadiness, overallReadiness, rate, scoringAttempts, weakestModules, type ModuleStat, type Readiness, type Recommendation } from './analytics'
+import { areaReadiness, firstAttempts, overallReadiness, rate, scoringAttempts, weakestModules, type ModuleStat, type Readiness, type Recommendation } from './analytics'
 import { dayKey } from './dates'
 import { computeMastery, type MasteryInfo } from './mastery'
 import { generatePlan, type Plan, type PlanTask } from './planner'
@@ -36,6 +36,8 @@ export interface ModuleState {
   lessonDone: boolean
   mastery: MasteryInfo
   practiceCount: number
+  /** Outside the current Blueprint (P2-2). */
+  optional?: boolean
 }
 
 export interface NextAction {
@@ -98,10 +100,16 @@ export function computeStudyState(inp: StudyInputs): StudyState {
       available: !!inp.content.lessons[m.id],
       lessonDone,
       mastery: computeMastery(list, lessonDone),
-      practiceCount: list.filter((a) => a.itemType === 'mcq' && a.mode !== 'lesson').length,
+      practiceCount: list.filter((a) => a.itemType === 'mcq' && a.mode !== 'lesson' && a.mode !== 'exam').length,
+      ...(m.optional ? { optional: true } : {}),
     }
   })
-  const available = modules.filter((m) => m.available)
+  // Off-Blueprint (optional) modules stay browsable but are left out of the plan, readiness and progress
+  // unless the learner opts in (P2-2).
+  const includeOptional = !!inp.settings.includeOptional
+  const available = modules.filter((m) => m.available && (includeOptional || !m.optional))
+  const availableIds = new Set(available.map((m) => m.id))
+  const optionalItem = (itemId: string) => !includeOptional && !!inp.content.questions[itemId]?.optional
 
   // Blocked practice counts as "done" once the learner has answered >= 8 non-lesson questions in the module.
   const tbsDone = new Set(inp.tbsSessions.filter((s) => s.submittedAt).map((s) => s.id))
@@ -113,6 +121,34 @@ export function computeStudyState(inp: StudyInputs): StudyState {
 
   const dueCount = inp.srs.filter((s) => s.section === sectionId && !s.suspended && s.due <= now.toISOString()).length
   const mockTaken = inp.examSessions.some((e) => e.section === sectionId && e.finishedAt)
+  // Readiness by blueprint area.
+  const first = firstAttempts(inp.attempts.filter((a) => a.section === sectionId && availableIds.has(a.moduleId) && !optionalItem(a.itemId)))
+  const scoring = first.filter((a) => a.itemType === 'mcq')
+  const tbsFirst = first.filter((a) => a.itemType === 'tbs')
+  const modArea = new Map(mods.map((m) => [m.id, m.areaId]))
+  const areas = inp.section.areas.map((a) =>
+    areaReadiness({
+      areaId: a.id,
+      title: a.title,
+      weight: (a.allocation.min + a.allocation.max) / 2,
+      modules: available.filter((m) => m.areaId === a.id).map((m) => ({ id: m.id, lessonDone: m.lessonDone, status: m.mastery.status })),
+      attempts: scoring.filter((x) => modArea.get(x.moduleId) === a.id),
+      tbsAttempts: tbsFirst.filter((x) => modArea.get(x.moduleId) === a.id),
+      weighting: inp.section.exam.weighting,
+    }),
+  )
+  const lastMock = inp.examSessions.filter((e) => e.section === sectionId && e.result).sort((a, b) => (b.finishedAt ?? '').localeCompare(a.finishedAt ?? ''))[0]
+  const readiness = overallReadiness(areas, lastMock?.result?.weightedPercent)
+
+  // Adaptive ordering (P1-13): untouched units are planned by Blueprint area weight × weakness.
+  // Weakness is 1 − the area's estimated accuracy, or 0.5 until there is enough evidence (5+ answers).
+  const unitPriority: Record<string, number> = {}
+  for (const a of inp.section.areas) {
+    const r = areas.find((x) => x.areaId === a.id)
+    const weakness = r && r.estimate !== null && r.n >= 5 ? 1 - r.estimate : 0.5
+    for (const u of a.units) unitPriority[u.id] = ((a.allocation.min + a.allocation.max) / 2) * weakness
+  }
+
   const plan = generatePlan({
     today,
     examDate: inp.settings.examDates[sectionId],
@@ -130,22 +166,9 @@ export function computeStudyState(inp: StudyInputs): StudyState {
     units: units.filter((u) => available.some((m) => m.unitId === u.id)),
     dueReviews: dueCount,
     mockTaken,
+    unitPriority,
   })
 
-  // Readiness by blueprint area.
-  const scoring = scoringAttempts(inp.attempts.filter((a) => a.section === sectionId && a.itemType === 'mcq'))
-  const modArea = new Map(mods.map((m) => [m.id, m.areaId]))
-  const areas = inp.section.areas.map((a) =>
-    areaReadiness({
-      areaId: a.id,
-      title: a.title,
-      weight: (a.allocation.min + a.allocation.max) / 2,
-      modules: modules.filter((m) => m.areaId === a.id).map((m) => ({ id: m.id, lessonDone: m.lessonDone, status: m.mastery.status })),
-      attempts: scoring.filter((x) => modArea.get(x.moduleId) === a.id),
-    }),
-  )
-  const lastMock = inp.examSessions.filter((e) => e.section === sectionId && e.result).sort((a, b) => (b.finishedAt ?? '').localeCompare(a.finishedAt ?? ''))[0]
-  const readiness = overallReadiness(areas, lastMock?.result?.weightedPercent)
 
   // Recommendations.
   const causesByModule = new Map<string, Record<string, number>>()
@@ -195,4 +218,15 @@ export function computeStudyState(inp: StudyInputs): StudyState {
     progressPct: available.length ? mastered / available.length : 0,
     lessonsPct: available.length ? available.filter((m) => m.lessonDone).length / available.length : 0,
   }
+}
+
+/**
+ * Mastery gating (P1-13): before starting a lesson in a unit the learner hasn't begun, list modules
+ * elsewhere that are studied but not yet mastered. A warning, not a hard gate. Returns up to `limit`.
+ */
+export function unmasteredPrerequisites(modules: ModuleState[], moduleId: string, limit = 5): ModuleState[] {
+  const target = modules.find((m) => m.id === moduleId)
+  if (!target || target.lessonDone) return []
+  if (modules.some((m) => m.unitId === target.unitId && m.lessonDone)) return []
+  return modules.filter((m) => m.unitId !== target.unitId && m.lessonDone && m.mastery.status !== 'mastered').slice(0, limit)
 }

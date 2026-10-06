@@ -51,7 +51,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "A qualifying financing agreement allows noncurrent classification.",
         "trap": "wrong-rule"
       },
@@ -158,7 +158,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Imputed interest is recognized.",
         "trap": "wrong-rule"
       }
@@ -181,8 +181,9 @@
       },
       {
         "id": "b",
-        "text": "Current",
-        "explanation": "Correct. It was settled with current assets."
+        "text": "Removed from the balance sheet at December 31",
+        "explanation": "It was outstanding at December 31.",
+        "trap": "wrong-period"
       },
       {
         "id": "c",
@@ -192,12 +193,11 @@
       },
       {
         "id": "d",
-        "text": "Removed from the balance sheet at December 31",
-        "explanation": "It was outstanding at December 31.",
-        "trap": "wrong-period"
+        "text": "Current",
+        "explanation": "Correct. It was settled with current assets."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "If a short-term obligation is repaid with current assets after the balance sheet date and new long-term debt is issued later, the obligation was settled with current assets — it remains current.",
     "skill": "analysis"
   },
@@ -214,8 +214,9 @@
       },
       {
         "id": "b",
-        "text": "$80,000 gain",
-        "explanation": "Correct. 2,040,000 − 1,960,000."
+        "text": "$80,000 loss",
+        "explanation": "Paying less than carrying amount is a gain.",
+        "trap": "wrong-sign"
       },
       {
         "id": "c",
@@ -225,12 +226,11 @@
       },
       {
         "id": "d",
-        "text": "$80,000 loss",
-        "explanation": "Paying less than carrying amount is a gain.",
-        "trap": "wrong-sign"
+        "text": "$80,000 gain",
+        "explanation": "Correct. 2,040,000 − 1,960,000."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Carrying amount = 2,040,000. Reacquisition = 1,960,000. Gain = **80,000**.",
     "skill": "application",
     "calc": true
@@ -242,18 +242,18 @@
     "choices": [
       {
         "id": "a",
-        "text": "Aggregate maturities for each of the five years following the balance sheet date",
+        "text": "Aggregate maturities for each of the next five years",
         "explanation": "Correct. ASC 470-10-50-1: disclose combined aggregate maturities and sinking fund requirements for each of the five years after the balance sheet date."
       },
       {
         "id": "b",
-        "text": "Fair value of the lender's collateral",
+        "text": "The fair value of the lender's collateral",
         "explanation": "Not a debtor disclosure requirement.",
         "trap": "irrelevant-fact"
       },
       {
         "id": "c",
-        "text": "Names of all bondholders",
+        "text": "The names of all bondholders",
         "explanation": "Bondholder identities are not a required disclosure.",
         "trap": "irrelevant-fact"
       },
@@ -281,8 +281,9 @@
       },
       {
         "id": "b",
-        "text": "Current",
-        "explanation": "Correct. Obligations callable by the creditor at the balance sheet date because of a violation are current unless waived for more than a year or curable within a grace period."
+        "text": "Current only to the extent of next year's scheduled payment",
+        "explanation": "The entire callable amount is current.",
+        "trap": "partial-computation"
       },
       {
         "id": "c",
@@ -292,12 +293,11 @@
       },
       {
         "id": "d",
-        "text": "Current only to the extent of next year's scheduled payment",
-        "explanation": "The entire callable amount is current.",
-        "trap": "partial-computation"
+        "text": "Current",
+        "explanation": "Correct. Obligations callable by the creditor at the balance sheet date because of a violation are current unless waived for more than a year or curable within a grace period."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Obligations callable by the creditor at the balance sheet date because of a violation are current unless waived for more than a year or curable within a grace period.",
     "skill": "application"
   },
@@ -381,8 +381,9 @@
       },
       {
         "id": "b",
-        "text": "Current",
-        "explanation": "Correct. Without an actual long-term refinancing or a qualifying financing agreement before issuance, the obligation is current."
+        "text": "Half current, half noncurrent",
+        "explanation": "No proportional split rule exists for refinancing intent.",
+        "trap": "other"
       },
       {
         "id": "c",
@@ -392,12 +393,11 @@
       },
       {
         "id": "d",
-        "text": "Half current, half noncurrent",
-        "explanation": "No proportional split rule exists for refinancing intent.",
-        "trap": "other"
+        "text": "Current",
+        "explanation": "Correct. Without an actual long-term refinancing or a qualifying financing agreement before issuance, the obligation is current."
       }
     ],
-    "answer": "b",
+    "answer": "d",
     "explanation": "Without an actual long-term refinancing or a qualifying financing agreement before issuance, the obligation is current.",
     "skill": "application"
   },
@@ -433,5 +433,110 @@
     "answer": "a",
     "explanation": "Reclassifying debt from current to noncurrent reduces current liabilities, increasing working capital and the current ratio; total liabilities are unchanged.",
     "skill": "analysis"
+  },
+  {
+    "id": "far-dbt-11",
+    "pool": "practice",
+    "stem": "A loan agreement requires total debt to EBITDA of no more than 3.0. At year-end the borrower has debt of $9,300,000, net income of $1,200,000, interest expense of $600,000, income tax expense of $400,000, and depreciation and amortization of $800,000. No waiver has been obtained. What is the borrower's position?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In breach; the ratio is 3.1",
+        "explanation": "Correct. EBITDA = 1,200,000 + 600,000 + 400,000 + 800,000 = 3,000,000; 9,300,000 ÷ 3,000,000 = 3.1, above the 3.0 maximum."
+      },
+      {
+        "id": "b",
+        "text": "In breach; the ratio is 7.8",
+        "explanation": "This divides debt by net income instead of EBITDA.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "In breach; the ratio is 4.2",
+        "explanation": "This leaves out depreciation and amortization (EBIT, not EBITDA).",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "In compliance, as a waiver can follow",
+        "explanation": "A waiver obtained after the statements are issued does not prevent current classification.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Compute covenants as the agreement defines them. A breach that makes debt callable requires current classification unless a qualifying waiver is obtained before issuance.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-dbt-12",
+    "pool": "practice",
+    "stem": "A borrower and its existing lender modify a loan. The present value of the new cash flows, discounted at the original effective rate, is $880,000; the present value of the remaining original cash flows is $1,000,000. The borrower is not in financial difficulty. How is the change accounted for?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a modification with a new effective rate",
+        "explanation": "A modification applies only when the difference is less than 10%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As an extinguishment, recognizing a gain or loss",
+        "explanation": "Correct. The present values differ by 12% (120,000 ÷ 1,000,000), at least 10%, so the terms are substantially different (ASC 470-50)."
+      },
+      {
+        "id": "c",
+        "text": "As a troubled debt restructuring",
+        "explanation": "TDR accounting requires a concession to a debtor in financial difficulty.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "No accounting until the new terms take effect",
+        "explanation": "A substantial modification is accounted for when it occurs.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Apply the 10% cash flow test using the original effective rate: 10% or more is an extinguishment; less is a modification.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-dbt-13",
+    "pool": "practice",
+    "stem": "A debtor in financial difficulty owes $500,000 of principal plus $50,000 of accrued interest. The creditor agrees to accept $400,000 payable in two years with no interest. What gain does the debtor recognize on the restructuring?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "This compares the payments with principal only; accrued interest is part of the carrying amount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$220,000",
+        "explanation": "This discounts the new payments; the debtor test uses undiscounted amounts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$150,000",
+        "explanation": "Correct. Total undiscounted future payments (400,000) are less than the carrying amount (550,000), so the debt is reduced to 400,000 and a 150,000 gain is recognized; no interest is recognized later."
+      },
+      {
+        "id": "d",
+        "text": "None ($0)",
+        "explanation": "A gain is recognized when total future payments are less than the carrying amount.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For a debtor's TDR by modification of terms, compare undiscounted future payments with the carrying amount including accrued interest (ASC 470-60).",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

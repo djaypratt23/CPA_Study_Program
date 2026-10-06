@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { getSection } from '../content'
+import { content, getSection } from '../content'
 import { useStudyState } from '../hooks/useStore'
 import { daysUntil } from '../lib/analytics'
 import { formatDay, formatMinutes } from '../lib/dates'
@@ -22,7 +22,7 @@ const TASK_ICONS: Record<string, string> = {
 export default function Dashboard() {
   const { state, settings } = useStudyState()
   if (!state || !settings) return <p className="muted">Loading…</p>
-  const section = getSection(settings.activeSection)!
+  const section = getSection(settings.activeSection) ?? content.sections[0]
   const examDate = settings.examDates[section.id]
   const countdown = daysUntil(examDate)
   const today = state.plan.days[0]
@@ -58,10 +58,24 @@ export default function Dashboard() {
         )}
       </div>
 
+      {r.areas.every((a) => a.n === 0) && (
+        <section className="card border-blue-200 dark:border-blue-900" aria-labelledby="diag">
+          <h2 id="diag" className="h2">
+            Start with a diagnostic
+          </h2>
+          <p className="mt-1 text-sm">
+            A 40-question test spread across every Blueprint area, weighted like the exam. Your results reorder the plan so your weakest, heaviest-weighted areas come first.
+          </p>
+          <Link to={`/practice/start?diagnostic=${section.id}`} className="btn-secondary mt-3">
+            Take the diagnostic (about 60 minutes)
+          </Link>
+        </section>
+      )}
+
       {/* The one obvious next step */}
       <Link
         to={state.next.to}
-        className="block rounded-2xl bg-blue-700 p-5 text-white shadow-lg transition hover:bg-blue-800 focus-visible:outline-offset-4 dark:bg-blue-600 dark:hover:bg-blue-500"
+        className="block rounded-2xl bg-blue-700 p-5 text-white shadow-lg transition hover:bg-blue-800 focus-visible:outline-offset-4 dark:hover:bg-blue-800"
       >
         <div className="flex items-center justify-between gap-4">
           <div className="min-w-0">
@@ -71,6 +85,15 @@ export default function Dashboard() {
           <Icon name="chevron" className="h-8 w-8 shrink-0" />
         </div>
       </Link>
+
+      {settings.lastLocation && settings.lastLocation.path !== state.next.to && settings.lastLocation.path !== '/' && (
+        <p className="-mt-3 text-sm">
+          <span className="muted">Where you left off: </span>
+          <Link to={settings.lastLocation.path} className="text-blue-700 underline dark:text-blue-400">
+            {settings.lastLocation.label}
+          </Link>
+        </p>
+      )}
 
       <section className="card" aria-labelledby="today">
         <div className="mb-3 flex items-center justify-between">
@@ -104,7 +127,7 @@ export default function Dashboard() {
       </section>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <section className="card" aria-labelledby="progress">
+        <section className="card min-w-0" aria-labelledby="progress">
           <h2 id="progress" className="h2 mb-3">
             Progress
           </h2>
@@ -132,14 +155,19 @@ export default function Dashboard() {
           </div>
         </section>
 
-        <section className="card" aria-labelledby="ready">
+        <section className="card min-w-0" aria-labelledby="ready">
           <h2 id="ready" className="h2">
             Readiness
           </h2>
           <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-3xl font-bold">{r.overall !== null ? `${r.overall}%` : '—'}</span>
+            <span className="text-3xl font-bold">{r.overall !== null ? `≈ ${r.overall}` : '—'}</span>
             <span className="font-semibold">{r.label}</span>
           </div>
+          {r.band && (
+            <p className="text-xs muted">
+              Likely range {r.band[0]}–{r.band[1]} on the approximate 0–99 scale used for mock exams (75 ≈ passing).
+            </p>
+          )}
           <p className="mt-1 text-xs muted">{r.detail}</p>
           <ul className="mt-3 space-y-2 text-sm">
             {r.areas.map((a) => (

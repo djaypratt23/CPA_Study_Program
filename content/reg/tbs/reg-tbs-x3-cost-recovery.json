@@ -1,0 +1,76 @@
+{
+  "id": "reg-tbs-x3-cost-recovery",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-cost-recovery"
+  ],
+  "pool": "exam",
+  "title": "2025 cost recovery — Bayview Clinic",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Bayview Clinic, a calendar-year professional corporation, placed the assets below in service in 2025. Compute each amount for Bayview's 2025 Form 4562. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Assets placed in service in 2025",
+      "content": "| Asset | Class | Cost | Placed in service |\n|---|---|---:|---|\n| Medical equipment | 5-year | 300,000 | April 14 |\n| Computers | 5-year | 50,000 | December 1 |\n| Office furniture | 7-year | 70,000 | January 8 |\n| Clinic building (nonresidential) | 39-year | 1,200,000, including land of 300,000 | February 20 |\n| Goodwill bought with a practice acquisition | §197 | 360,000 | July 1 |"
+    },
+    {
+      "title": "Elections and rates",
+      "content": "- Elect **§179 of $100,000** on the medical equipment; Bayview has ample business income and total qualifying purchases are well under the phase-out threshold.\n- **Elect out of bonus** depreciation for all classes.\n- Half-year first-year rates: 5-year 20.00%; 7-year 14.29%. Real property: straight-line, mid-month convention."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "cr",
+      "prompt": "Compute Bayview's 2025 cost recovery.",
+      "rows": [
+        {
+          "id": "q4",
+          "label": "Percentage of 2025 depreciable personal property placed in service in the fourth quarter",
+          "unit": "%",
+          "answer": 11.9,
+          "tolerance": 0.1,
+          "explanation": "50,000 ÷ 420,000 = **11.9%**, not more than 40%, so the half-year convention applies (real property and §197 intangibles are excluded)."
+        },
+        {
+          "id": "med",
+          "label": "MACRS depreciation on the medical equipment",
+          "answer": 40000,
+          "explanation": "(300,000 − 100,000 §179) × 20% = **40,000**."
+        },
+        {
+          "id": "comp",
+          "label": "MACRS depreciation on the computers",
+          "answer": 10000,
+          "explanation": "50,000 × 20% = **10,000** (half-year convention)."
+        },
+        {
+          "id": "furn",
+          "label": "MACRS depreciation on the office furniture",
+          "answer": 10003,
+          "explanation": "70,000 × 14.29% = **10,003**."
+        },
+        {
+          "id": "bldg",
+          "label": "Depreciation on the clinic building",
+          "answer": 20192,
+          "explanation": "(1,200,000 − 300,000) ÷ 39 = 23,077 a year; February under mid-month is 10.5 months: **20,192**."
+        },
+        {
+          "id": "gw",
+          "label": "Amortization of goodwill",
+          "answer": 12000,
+          "explanation": "360,000 ÷ 180 months × 6 months (July–December) = **12,000**."
+        },
+        {
+          "id": "tot",
+          "label": "Total 2025 cost recovery, including the §179 deduction",
+          "answer": 192195,
+          "explanation": "100,000 + 40,000 + 10,000 + 10,003 + 20,192 + 12,000 = **192,195**."
+        }
+      ]
+    }
+  ]
+}

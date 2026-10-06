@@ -22,7 +22,24 @@ export interface McqAnswer {
   now?: Date
 }
 
+/** The attempt already recorded for this item in this session, if any (double submits are no-ops). */
+function existingAttempt(d: CpaDb, sessionId: string, itemId: string): Promise<Attempt | undefined> {
+  return d.attempts.where('sessionId').equals(sessionId).and((a) => a.itemId === itemId).first()
+}
+
+/**
+ * Record an answered MCQ and update its review schedule in one transaction.
+ * Idempotent per (sessionId, itemId): a repeated submit returns the first attempt.
+ */
 export async function recordMcqAttempt(q: Mcq, ans: McqAnswer, d: CpaDb = db): Promise<Attempt> {
+  return d.transaction('rw', d.attempts, d.srs, async () => {
+    const prior = await existingAttempt(d, ans.sessionId, q.id)
+    if (prior) return prior
+    return addMcqAttempt(q, ans, d)
+  })
+}
+
+async function addMcqAttempt(q: Mcq, ans: McqAnswer, d: CpaDb): Promise<Attempt> {
   const now = ans.now ?? new Date()
   const attempt: Attempt = {
     itemId: q.id,
@@ -41,8 +58,19 @@ export async function recordMcqAttempt(q: Mcq, ans: McqAnswer, d: CpaDb = db): P
     day: dayKey(now),
   }
   attempt.id = await d.attempts.add(attempt)
-  await scheduleQuestion(q.id, q.moduleId, ans.section, attempt.correct, ans.confidence ?? 'confident', now, d)
+  // D4: mock items stay out of spaced review; the learner opts in from the results page.
+  if (ans.mode !== 'exam') await scheduleQuestion(q.id, q.moduleId, ans.section, attempt.correct, ans.confidence ?? 'confident', now, d)
   return attempt
+}
+
+/**
+ * D4: after a mock, the learner may choose to add the questions they missed to spaced
+ * review. Returns how many were added (already-queued items are updated, not duplicated).
+ */
+export async function addMissedMockToReview(sessionId: string, now = new Date(), d: CpaDb = db): Promise<number> {
+  const missed = (await d.attempts.where('sessionId').equals(sessionId).toArray()).filter((a) => a.itemType === 'mcq' && a.mode === 'exam' && !a.correct)
+  for (const a of missed) await scheduleQuestion(a.itemId, a.moduleId, a.section, false, 'confident', now, d)
+  return missed.length
 }
 
 /**
@@ -76,26 +104,30 @@ export async function recordTbsAttempt(
   d: CpaDb = db,
   now = new Date(),
 ): Promise<void> {
-  await d.attempts.add({
-    itemId: tbs.id,
-    itemType: 'tbs',
-    moduleId: tbs.moduleIds[0],
-    section: tbs.section,
-    correct: score >= 0.75,
-    score,
-    timeMs,
-    mode,
-    mixed: true,
-    sessionId,
-    at: now.toISOString(),
-    day: dayKey(now),
+  // Idempotent per (sessionId, itemId), like MCQ attempts.
+  await d.transaction('rw', d.attempts, async () => {
+    if (await existingAttempt(d, sessionId, tbs.id)) return
+    await d.attempts.add({
+      itemId: tbs.id,
+      itemType: 'tbs',
+      moduleId: tbs.moduleIds[0],
+      section: tbs.section,
+      correct: score >= 0.75,
+      score,
+      timeMs,
+      mode,
+      mixed: true,
+      sessionId,
+      at: now.toISOString(),
+      day: dayKey(now),
+    })
   })
 }
 
 export async function logError(itemId: string, moduleId: string, section: SectionId, cause: ErrorCause, note?: string, d: CpaDb = db) {
   // One cause per item per day: re-tagging replaces the earlier tag.
   const today = dayKey()
-  const prior = await d.errors.where('itemId').equals(itemId).filter((e) => e.at.slice(0, 10) === today).first()
+  const prior = await d.errors.where('itemId').equals(itemId).filter((e) => dayKey(new Date(e.at)) === today).first()
   if (prior?.id) await d.errors.update(prior.id, { cause, note })
   else await d.errors.add({ itemId, moduleId, section, cause, note, at: new Date().toISOString() })
 }

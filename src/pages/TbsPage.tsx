@@ -2,12 +2,14 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Calculator from '../components/Calculator'
+import Spreadsheet from '../components/Spreadsheet'
 import Icon from '../components/Icon'
 import TbsView from '../components/TbsView'
 import Clock from '../components/Timer'
 import { PageHeader } from '../components/ui'
-import { content, unitTitle } from '../content'
+import { content, ensureAllSections, unitTitle } from '../content'
 import { db } from '../db'
+import { useStudyState } from '../hooks/useStore'
 import { recordTbsAttempt, setLastLocation } from '../db/actions'
 import { scoreTbs, type TbsResponses } from '../lib/tbsScoring'
 
@@ -19,8 +21,11 @@ export default function TbsPage() {
   const [responses, setResponses] = useState<TbsResponses>({})
   const [elapsed, setElapsed] = useState(0)
   const [calc, setCalc] = useState(false)
+  const [sheet, setSheet] = useState(false)
   const loaded = useRef(false)
   const [ready, setReady] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const { state } = useStudyState()
 
   useEffect(() => {
     if (session === undefined || loaded.current) return
@@ -40,7 +45,23 @@ export default function TbsPage() {
     return () => clearInterval(t)
   }, [submitted, ready])
 
-  if (!tbs) return <p>Simulation not found.</p>
+  // Persist the elapsed time every 15 s and on leaving, not only when an answer changes (P2-5).
+  // update() is a no-op until the learner has started (a session row exists).
+  const elapsedRef = useRef(elapsed)
+  useEffect(() => {
+    elapsedRef.current = elapsed
+  }, [elapsed])
+  useEffect(() => {
+    if (submitted || !ready) return
+    const persist = () => void db.tbsSessions.update(tbsId, { elapsedMs: elapsedRef.current })
+    const t = setInterval(persist, 15_000)
+    return () => {
+      clearInterval(t)
+      persist()
+    }
+  }, [submitted, ready, tbsId])
+
+  if (!tbs) return ensureAllSections() ? <p className="muted">Loading…</p> : <p>Simulation not found.</p>
   if (session === undefined) return <p className="muted">Loading…</p>
 
   const save = (r: TbsResponses) => {
@@ -48,10 +69,19 @@ export default function TbsPage() {
     db.tbsSessions.put({ id: tbs.id, responses: r, startedAt: session?.startedAt ?? new Date().toISOString(), elapsedMs: elapsed })
   }
   const submit = async () => {
-    const s = scoreTbs(tbs, responses)
-    await db.tbsSessions.put({ id: tbs.id, responses, startedAt: session?.startedAt ?? new Date().toISOString(), elapsedMs: elapsed, submittedAt: new Date().toISOString(), score: s.percent })
-    await recordTbsAttempt(tbs, s.percent, elapsed, 'tutor', `tbs-${tbs.id}`)
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+    if (busy) return
+    setBusy(true)
+    try {
+      const s = scoreTbs(tbs, responses)
+      const startedAt = session?.startedAt ?? new Date().toISOString()
+      await db.tbsSessions.put({ id: tbs.id, responses, startedAt, elapsedMs: elapsed, submittedAt: new Date().toISOString(), score: s.percent })
+      // One attempt per run of the simulation; a retry starts a new run (new startedAt).
+      await recordTbsAttempt(tbs, s.percent, elapsed, 'tutor', `tbs-${tbs.id}-${startedAt}`)
+    } finally {
+      setBusy(false)
+    }
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top: document.body.scrollHeight, behavior: reduce ? 'auto' : 'smooth' })
   }
   const retry = async () => {
     await db.tbsSessions.delete(tbs.id)
@@ -74,13 +104,16 @@ export default function TbsPage() {
             <button className="btn-ghost min-h-9 px-2" onClick={() => setCalc((c) => !c)} aria-label="Calculator">
               <Icon name="calc" />
             </button>
+            <button className="btn-ghost min-h-9 px-2" onClick={() => setSheet((c) => !c)} aria-pressed={sheet} aria-label="Spreadsheet">
+              <Icon name="sheet" />
+            </button>
           </div>
         }
       />
       <TbsView tbs={tbs} responses={responses} onChange={save} submitted={submitted} split />
       <div className="mt-6 flex flex-wrap gap-2">
         {!submitted ? (
-          <button className="btn-primary" onClick={submit}>
+          <button className="btn-primary" onClick={submit} disabled={busy}>
             Submit & see explanations
           </button>
         ) : (
@@ -88,13 +121,19 @@ export default function TbsPage() {
             <button className="btn-secondary" onClick={retry}>
               Try again from scratch
             </button>
-            <Link to={`/tbs?unit=${tbs.unitId}`} className="btn-primary">
+            {state?.next && state.next.to !== `/tbs/${tbs.id}` && (
+              <Link to={state.next.to} className="btn-primary">
+                Next: {state.next.detail} →
+              </Link>
+            )}
+            <Link to={`/tbs?unit=${tbs.unitId}`} className={state?.next && state.next.to !== `/tbs/${tbs.id}` ? 'btn-secondary' : 'btn-primary'}>
               More simulations
             </Link>
           </>
         )}
       </div>
       {calc && <Calculator onClose={() => setCalc(false)} />}
+      {sheet && <Spreadsheet onClose={() => setSheet(false)} />}
     </div>
   )
 }

@@ -1,0 +1,122 @@
+{
+  "id": "far-tbs-u8-ap-recon",
+  "section": "FAR",
+  "unitId": "far-u8",
+  "moduleIds": [
+    "far-payables"
+  ],
+  "pool": "practice",
+  "title": "Review the accounts payable reconciliation — Brightwater Labs",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Brightwater Labs' staff accountant reconciled the accounts payable subledger to the general ledger at December 31 and concluded it \"reconciles with no difference.\" Review the reconciliation against the exhibits. Tick every amount that is wrong and enter the correct amount. Enter decreases as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Year-end AP data",
+      "content": "- Vendor open-invoice subledger total: **$684,250**. General ledger accounts payable: **$670,800**.\n- A **$3,600** debit memo for goods returned to a vendor was recorded in the general ledger on December 30. It was not posted to the vendor's subledger account.\n- Vendor invoices of **$9,850** were entered in the subledger on December 31. The general ledger posting batch for that day did not run until January 2.\n- The receiving log shows lab supplies received **December 28** (FOB destination) with a purchase order price of **$12,400**. No vendor invoice had arrived by year-end, and nothing was recorded in either record.\n- A **$1,100** payment to Kline Supply was posted to the account of Klein Supply in the subledger."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "recon",
+      "prompt": "Review the reconciliation of the AP subledger to the general ledger.",
+      "preparedLabel": "Per staff reconciliation",
+      "rows": [
+        {
+          "id": "sub",
+          "label": "Total per vendor open-invoice subledger",
+          "prepared": 684250,
+          "answer": 684250,
+          "explanation": "Agrees to the open-invoice report. **No error.**"
+        },
+        {
+          "id": "dm",
+          "label": "Debit memo for returned goods not posted to the subledger",
+          "prepared": -3600,
+          "answer": -3600,
+          "explanation": "The debit memo is recorded in the general ledger but not in the vendor's subledger account. **−3,600. No error.**"
+        },
+        {
+          "id": "grni",
+          "label": "Goods received December 28, no invoice yet (subledger side)",
+          "prepared": 0,
+          "answer": 12400,
+          "explanation": "Brightwater owns goods it has received, so it owes for them at year-end even without an invoice. The liability must be added to **both** records: **+12,400**."
+        },
+        {
+          "id": "sadj",
+          "label": "Adjusted subledger total",
+          "prepared": 680650,
+          "answer": 693050,
+          "explanation": "684,250 − 3,600 + 12,400 = **693,050**."
+        },
+        {
+          "id": "gl",
+          "label": "Accounts payable per general ledger",
+          "prepared": 670800,
+          "answer": 670800,
+          "explanation": "Agrees to the trial balance. **No error.**"
+        },
+        {
+          "id": "inv",
+          "label": "Invoice entered in the subledger, general ledger batch not posted",
+          "prepared": 9850,
+          "answer": 9850,
+          "explanation": "The December 31 batch reached the subledger but not the general ledger. **+9,850. No error.**"
+        },
+        {
+          "id": "grnig",
+          "label": "Goods received December 28, no invoice yet (general ledger side)",
+          "prepared": 0,
+          "answer": 12400,
+          "explanation": "The same unrecorded liability is missing from the general ledger: **+12,400**."
+        },
+        {
+          "id": "gadj",
+          "label": "Adjusted general ledger balance",
+          "prepared": 680650,
+          "answer": 693050,
+          "explanation": "670,800 + 9,850 + 12,400 = **693,050**. The staff's version also \"reconciled\" at 680,650 — agreement between two records does not prove either is complete."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "src",
+      "prompt": "For each item, identify which record(s) must be corrected.",
+      "options": [
+        "General ledger only",
+        "Subledger only",
+        "Both records",
+        "Neither record"
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Debit memo for returned goods",
+          "answer": "Subledger only",
+          "explanation": "Already in the general ledger; missing only from the vendor's account."
+        },
+        {
+          "id": "d2",
+          "label": "Unposted December 31 invoice batch",
+          "answer": "General ledger only",
+          "explanation": "Already in the subledger; the ledger batch did not post."
+        },
+        {
+          "id": "d3",
+          "label": "Goods received without an invoice",
+          "answer": "Both records",
+          "explanation": "An unrecorded liability is missing from both records."
+        },
+        {
+          "id": "d4",
+          "label": "Payment to Kline Supply posted to Klein Supply's account",
+          "answer": "Subledger only",
+          "explanation": "The subledger total is unaffected, but two vendor balances are wrong; the general ledger control account is right."
+        }
+      ]
+    }
+  ]
+}

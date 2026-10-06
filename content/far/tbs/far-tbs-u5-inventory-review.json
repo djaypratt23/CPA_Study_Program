@@ -1,0 +1,140 @@
+{
+  "id": "far-tbs-u5-inventory-review",
+  "section": "FAR",
+  "unitId": "far-u5",
+  "moduleIds": [
+    "far-inventory-cost",
+    "far-inventory-valuation"
+  ],
+  "pool": "practice",
+  "title": "Review the inventory roll-forward and perpetual-record reconciliation — Brightline Hardware",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Brightline Hardware keeps a perpetual inventory subledger and counts inventory at year-end. A staff accountant prepared the inventory roll-forward and reconciled the perpetual subledger to the general ledger. Review both schedules against the exhibits. Tick every amount that is wrong and enter the correct amount. Enter decreases as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Source data for the year",
+      "content": "| Source | Amount |\n|---|---:|\n| Inventory, January 1 (audited) | 486,000 |\n| Purchases per purchases journal | 1,920,000 |\n| Freight-in on purchases (paid to carriers) | 42,500 |\n| Purchase returns (vendor debit memos) | 31,000 |\n| Cost of goods sold per perpetual system | 1,874,300 |\n| Physical count at cost, December 31 | 530,700 |\n\nThe physical count includes goods owned by Brightline that were in transit at year-end and excludes goods held on consignment."
+    },
+    {
+      "title": "Subledger reconciling items",
+      "content": "The perpetual subledger's item detail totals **$548,900** at December 31, before the count adjustment.\n\n1. Goods costing **$7,300** were shipped by a vendor **FOB shipping point** on December 29 and arrived January 3. The vendor's invoice was recorded in purchases in December; the goods were not entered in the perpetual system until they arrived.\n2. Goods costing **$9,600** held on consignment for Axle Tools were keyed into the perpetual system when they arrived.\n3. A **$3,400** receiving report was posted to the perpetual system twice."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "rf",
+      "prompt": "Review the staff's inventory roll-forward.",
+      "preparedLabel": "Per staff roll-forward",
+      "rows": [
+        {
+          "id": "beg",
+          "label": "Beginning inventory, January 1",
+          "prepared": 486000,
+          "answer": 486000,
+          "explanation": "Agrees to the prior-year audited balance. **No error.**"
+        },
+        {
+          "id": "pur",
+          "label": "Purchases",
+          "prepared": 1920000,
+          "answer": 1920000,
+          "explanation": "Agrees to the purchases journal. **No error.**"
+        },
+        {
+          "id": "frt",
+          "label": "Freight-in",
+          "prepared": 0,
+          "answer": 42500,
+          "explanation": "Freight-in is a cost of getting inventory ready for sale and is **capitalized** into inventory (ASC 330-10-30). The staff left it out. **+42,500.**"
+        },
+        {
+          "id": "ret",
+          "label": "Purchase returns",
+          "prepared": -31000,
+          "answer": -31000,
+          "explanation": "Agrees to vendor debit memos. **No error.**"
+        },
+        {
+          "id": "cogs",
+          "label": "Cost of goods sold per perpetual records",
+          "prepared": -1874300,
+          "answer": -1874300,
+          "explanation": "Agrees to the perpetual system's COGS report. **No error.**"
+        },
+        {
+          "id": "book",
+          "label": "Book balance before physical count adjustment",
+          "prepared": 500700,
+          "answer": 543200,
+          "explanation": "486,000 + 1,920,000 + 42,500 − 31,000 − 1,874,300 = **543,200**."
+        },
+        {
+          "id": "shr",
+          "label": "Physical count adjustment (shrinkage)",
+          "prepared": 30000,
+          "answer": -12500,
+          "explanation": "Count 530,700 − book 543,200 = **−12,500** shrinkage. The staff's omission of freight turned a loss into an apparent 30,000 overage — an overage that size should itself have prompted investigation."
+        },
+        {
+          "id": "end",
+          "label": "Ending inventory per physical count",
+          "prepared": 530700,
+          "answer": 530700,
+          "explanation": "Agrees to the count at cost. **No error.**"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "id": "recon",
+      "prompt": "Review the reconciliation of the perpetual subledger to the general ledger at December 31.",
+      "preparedLabel": "Per staff reconciliation",
+      "rows": [
+        {
+          "id": "sub",
+          "label": "Total per perpetual inventory subledger (item detail)",
+          "prepared": 548900,
+          "answer": 548900,
+          "explanation": "Agrees to the item listing. **No error.**"
+        },
+        {
+          "id": "git",
+          "label": "Goods in transit, FOB shipping point",
+          "prepared": 0,
+          "answer": 7300,
+          "explanation": "Title passed at shipment on December 29, so the goods are Brightline's inventory at year-end. The general ledger includes them (the invoice was recorded); the subledger does not. **+7,300.**"
+        },
+        {
+          "id": "con",
+          "label": "Consigned-in goods held for Axle Tools",
+          "prepared": -9600,
+          "answer": -9600,
+          "explanation": "Consigned goods belong to the consignor and must be removed from the subledger. **No error.**"
+        },
+        {
+          "id": "dup",
+          "label": "Receiving report posted twice",
+          "prepared": -3400,
+          "answer": -3400,
+          "explanation": "Removes the duplicate posting. **No error.**"
+        },
+        {
+          "id": "adj",
+          "label": "Adjusted subledger total",
+          "prepared": 535900,
+          "answer": 543200,
+          "explanation": "548,900 + 7,300 − 9,600 − 3,400 = **543,200**, which agrees to the general ledger."
+        },
+        {
+          "id": "gl",
+          "label": "Inventory per general ledger before count adjustment",
+          "prepared": 543200,
+          "answer": 543200,
+          "explanation": "Agrees to the book balance in Part 1. **No error.**"
+        }
+      ]
+    }
+  ]
+}

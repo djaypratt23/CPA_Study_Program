@@ -101,7 +101,13 @@ export interface QuizSession {
   startedAt: string
   finishedAt?: string
   timeLimitMs?: number
+  /** Wall-clock deadline for a timed set (ISO). */
+  endsAt?: string
   elapsedMs: number
+  /** Why the set exists (P1-13): drives the diagnostic banner and mastery remediation. */
+  purpose?: 'diagnostic' | 'mastery'
+  /** The module a mastery check is for. */
+  moduleId?: string
 }
 
 export interface TbsSession {
@@ -121,6 +127,8 @@ export interface ExamTestletState {
   flags: Record<string, boolean>
   tbsResponses: Record<string, TbsResponses>
   index: number
+  /** Time spent on each item (ms), accumulated as the candidate moves between items. */
+  itemTimeMs?: Record<string, number>
 }
 
 export interface ExamSession {
@@ -128,15 +136,29 @@ export interface ExamSession {
   examId: string
   section: SectionId
   startedAt: string
+  /** Time left when the clock last stopped (break) or was saved; the live value derives from endsAt. */
   remainingMs: number
+  /** Wall-clock deadline while the exam clock runs (ISO); cleared during the scheduled break. */
+  endsAt?: string
   testletIndex: number
   onBreak: boolean
   breakUsed: boolean
   breakOffered?: boolean
   breakRemainingMs?: number
+  breakEndsAt?: string
   testlets: ExamTestletState[]
   finishedAt?: string
   result?: ExamResult
+}
+
+export interface AreaResult {
+  /** Legacy combined tally (MCQs and TBS counted equally); kept for old results. */
+  earned: number
+  possible: number
+  mcq?: { earned: number; possible: number }
+  tbs?: { earned: number; possible: number }
+  /** Area score weighted by the section's MCQ/TBS weighting. */
+  percent?: number
 }
 
 export interface ExamResult {
@@ -144,7 +166,7 @@ export interface ExamResult {
   tbsPercent: number
   weightedPercent: number
   approxScaled: number
-  byArea: Record<string, { earned: number; possible: number }>
+  byArea: Record<string, AreaResult>
 }
 
 export interface Settings {
@@ -160,6 +182,10 @@ export interface Settings {
   minutesByWeekday: number[]
   newCardsPerDay: number
   lastLocation?: { path: string; label: string; at: string }
+  /** Include material outside the current Blueprint in the plan, readiness and mixed practice (P2-2). */
+  includeOptional?: boolean
+  /** Move to the next question after a confident correct answer in tutor mode (P2-3). Default on. */
+  autoAdvance?: boolean
 }
 
 export const DEFAULT_SETTINGS: Settings = {

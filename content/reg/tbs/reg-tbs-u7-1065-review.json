@@ -1,0 +1,125 @@
+{
+  "id": "reg-tbs-u7-1065-review",
+  "section": "REG",
+  "unitId": "reg-u7",
+  "moduleIds": [
+    "reg-partnerships"
+  ],
+  "pool": "practice",
+  "title": "Review Form 1065 classification and diagnostics — Ridgeway Partners LP",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Ridgeway Partners LP has one general partner (A, who works in the business) and one limited partner (B). The preparer drafted the 2025 Schedule K. Review each line, then resolve the diagnostics. Tick every amount that is wrong and enter the correct amount.",
+  "exhibits": [
+    {
+      "title": "Trial balance and partner data (2025)",
+      "content": "| Item | Amount |\n|---|---:|\n| Sales | 700,000 |\n| Cost of goods sold | 300,000 |\n| Guaranteed payment to A for services | 60,000 |\n| Health insurance premiums paid for A | 9,000 |\n| Employee salaries | 120,000 |\n| Rent | 30,000 |\n| Section 179 expense | 18,000 |\n| Interest income (bank) | 4,000 |\n| Section 1231 loss (equipment sold) | (6,000) |\n| Charitable contributions | 5,000 |\n| Tax-exempt municipal interest | 2,000 |\n| Cash distributions to partners | 50,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "k",
+      "prompt": "Review the prepared Schedule K amounts.",
+      "preparedLabel": "Per prepared return",
+      "rows": [
+        {
+          "id": "obi",
+          "label": "Ordinary business income (Schedule K line 1)",
+          "prepared": 232000,
+          "answer": 181000,
+          "explanation": "700,000 − 300,000 − 60,000 − 9,000 − 120,000 − 30,000 = **181,000**. Guaranteed payments (including partner A's health insurance) are deductible in computing ordinary income; the §179 deduction is separately stated."
+        },
+        {
+          "id": "gp",
+          "label": "Guaranteed payments (line 4)",
+          "prepared": 60000,
+          "answer": 69000,
+          "explanation": "Services 60,000 + health insurance 9,000 = **69,000**. Premiums paid for a partner's health insurance are guaranteed payments."
+        },
+        {
+          "id": "int",
+          "label": "Interest income (line 5)",
+          "prepared": 4000,
+          "answer": 4000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "s1231",
+          "label": "Net section 1231 gain (loss) (line 10)",
+          "prepared": -6000,
+          "answer": -6000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "s179",
+          "label": "Section 179 deduction (line 12)",
+          "prepared": 0,
+          "answer": 18000,
+          "explanation": "Separately stated: **18,000**."
+        },
+        {
+          "id": "char",
+          "label": "Charitable contributions (line 13a)",
+          "prepared": 5000,
+          "answer": 5000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "tei",
+          "label": "Tax-exempt interest income (line 18a)",
+          "prepared": 2000,
+          "answer": 2000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "dist",
+          "label": "Distributions (line 19a)",
+          "prepared": 50000,
+          "answer": 50000,
+          "explanation": "**No error.**"
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "dx",
+      "prompt": "Choose the correct resolution for each diagnostic.",
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Partner A's K-1 line 14a (self-employment earnings) excludes A's guaranteed payments.",
+          "options": [
+            "Include the guaranteed payments in A's SE earnings",
+            "Clear the flag — guaranteed payments are not SE income",
+            "Report the guaranteed payments as wages on a W-2"
+          ],
+          "answer": "Include the guaranteed payments in A's SE earnings",
+          "explanation": "A general partner's SE earnings include the distributive share of ordinary income plus guaranteed payments for services (§1402(a))."
+        },
+        {
+          "id": "d2",
+          "label": "Limited partner B's K-1 line 14a shows a share of ordinary business income.",
+          "options": [
+            "Clear the flag",
+            "Remove it — a limited partner's distributive share is excluded from SE earnings",
+            "Move it to guaranteed payments"
+          ],
+          "answer": "Remove it — a limited partner's distributive share is excluded from SE earnings",
+          "explanation": "§1402(a)(13) excludes a limited partner's distributive share (guaranteed payments for services aside)."
+        },
+        {
+          "id": "d3",
+          "label": "Health insurance paid for partner A was deducted, but no guaranteed payment was reported.",
+          "options": [
+            "Report it as a guaranteed payment to A",
+            "Treat it as a distribution to A",
+            "Remove the deduction"
+          ],
+          "answer": "Report it as a guaranteed payment to A",
+          "explanation": "Premiums paid for a partner's services are guaranteed payments: deductible by the partnership, income to the partner."
+        }
+      ]
+    }
+  ]
+}

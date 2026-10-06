@@ -127,12 +127,12 @@
       },
       {
         "id": "d",
-        "text": "March 15, 2025",
-        "explanation": "Correct. Within 2 months and 15 days after the start of the tax year."
+        "text": "March 17, 2025",
+        "explanation": "Correct. The deadline is 2 months and 15 days after the start of the tax year (March 15), but March 15, 2025 is a Saturday, so it moves to Monday, March 17 (IRC §7503)."
       }
     ],
     "answer": "d",
-    "explanation": "Within 2 months and 15 days after the start of the tax year.",
+    "explanation": "Form 2553 is due within 2 months and 15 days after the start of the tax year the election is to take effect (March 15 for a calendar year). March 15, 2025 falls on a Saturday, so under IRC §7503 the deadline is Monday, March 17, 2025.",
     "skill": "remembering",
     "difficulty": 2
   },
@@ -252,7 +252,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "The sale is within 5 years.",
         "trap": "wrong-rule"
       },
@@ -407,7 +407,7 @@
     ],
     "answer": "b",
     "explanation": "Shareholder-employees must be paid reasonable compensation.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2
   },
   {
@@ -428,7 +428,7 @@
       },
       {
         "id": "c",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Distributions above basis are taxable.",
         "trap": "wrong-rule"
       },
@@ -442,6 +442,76 @@
     "answer": "b",
     "explanation": "Without E&P: tax-free up to basis, excess is gain from sale of stock.",
     "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc2-11",
+    "pool": "practice",
+    "stem": "Kai owns an S corporation. On January 1, Kai's stock basis was $10,000 and his debt basis from a direct loan was $8,000. Kai also guarantees a $25,000 bank loan to the corporation. His share of this year's items is $3,000 of tax-exempt interest and a $20,000 ordinary loss. The preparer's schedule shows ending debt basis of $23,000. What is the correct ending debt basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000",
+        "explanation": "Correct. Stock basis 10,000 + 3,000 = 13,000 absorbs the first 13,000 of loss; the remaining 7,000 reduces the 8,000 debt basis to 1,000. The guarantee creates no basis."
+      },
+      {
+        "id": "b",
+        "text": "$23,000",
+        "explanation": "This is the preparer's figure, which counts the guarantee as debt basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "This leaves out the tax-exempt interest, which increases stock basis.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "Losses exceeding stock basis reduce debt basis.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Only direct shareholder loans create debt basis, and tax-exempt income increases stock basis before losses are applied.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc2-12",
+    "pool": "practice",
+    "stem": "An S corporation with AAA of $30,000 and accumulated E&P of $20,000 distributes $40,000 to its sole shareholder, whose stock basis is ample. If it makes the election to distribute AEP first, how does the shareholder's dividend income change?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It increases by $20,000",
+        "explanation": "The dividend without the election is 10,000, not zero.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "It does not change",
+        "explanation": "The election changes the ordering and so the amount taxed as a dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It decreases by $10,000",
+        "explanation": "Distributing AEP first increases, not decreases, dividend income.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "It increases by $10,000",
+        "explanation": "Correct. Without the election: 30,000 from AAA, then a 10,000 dividend. With it: a 20,000 dividend first, then 20,000 from AAA — 10,000 more dividend income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The §1368(e)(3) election trades higher current dividend income for eliminating AEP, which removes the passive-income tax and termination exposure.",
+    "skill": "analysis",
     "difficulty": 2,
     "calc": true
   }

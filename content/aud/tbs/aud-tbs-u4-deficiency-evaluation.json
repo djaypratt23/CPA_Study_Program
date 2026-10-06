@@ -1,0 +1,104 @@
+{
+  "id": "aud-tbs-u4-deficiency-evaluation",
+  "section": "AUD",
+  "unitId": "aud-u4",
+  "moduleIds": [
+    "aud-internal-control",
+    "aud-risk-response"
+  ],
+  "pool": "practice",
+  "title": "Evaluate control deficiencies and their effect on the audit — Tamsin Instruments",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "Tamsin Instruments is an issuer. Your firm performs an integrated audit. Overall materiality is $800,000. Evaluate each finding, classify its severity and decide how it affects the nature, timing and extent of substantive procedures.",
+  "exhibits": [
+    {
+      "title": "Findings",
+      "content": "1. **Three-way match (purchases):** the control was tested on a sample of 40 items; **4 deviations** were found (unmatched invoices paid). The potential misstatement is estimated to be well below materiality but more than inconsequential. No compensating control operates at a sufficient level of precision.\n2. **Revenue cutoff:** substantive testing found **$1,200,000** of Year 2 shipments recorded as Year 1 revenue. The company's controls did not detect it. Management has agreed to correct it.\n3. **IT access:** one developer has write access to the production environment. A monthly review of all production changes, performed by the IT director independent of development, was tested and **operates effectively**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "wp",
+      "prompt": "Review the senior's summary amounts.",
+      "preparedLabel": "Per senior",
+      "rows": [
+        {
+          "id": "exc",
+          "label": "Deviations found in the three-way-match sample (count)",
+          "prepared": 4,
+          "answer": 4,
+          "explanation": "4 of 40 items, a 10% deviation rate. **No error.**"
+        },
+        {
+          "id": "mw",
+          "label": "Revenue cutoff misstatement compared with materiality (misstatement − materiality)",
+          "prepared": -400000,
+          "answer": 400000,
+          "explanation": "1,200,000 − 800,000 = **400,000** above materiality. The senior subtracted in the wrong direction and concluded it was below materiality."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "sev",
+      "prompt": "Classify each finding.",
+      "options": [
+        "Control deficiency",
+        "Significant deficiency",
+        "Material weakness"
+      ],
+      "rows": [
+        {
+          "id": "s1",
+          "label": "Finding 1 — three-way match",
+          "answer": "Significant deficiency",
+          "explanation": "The potential misstatement is reasonably possible and more than inconsequential but less than material, and important enough to merit the audit committee's attention."
+        },
+        {
+          "id": "s2",
+          "label": "Finding 2 — revenue cutoff misstatement",
+          "answer": "Material weakness",
+          "explanation": "A material misstatement found by the auditor and not detected by the company's controls is an indicator of a material weakness (AS 2201.69)."
+        },
+        {
+          "id": "s3",
+          "label": "Finding 3 — developer access to production",
+          "answer": "Control deficiency",
+          "explanation": "The compensating monthly change review was tested and operates effectively, which reduces the severity."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "nte",
+      "prompt": "Select the effect on the financial statement audit.",
+      "options": [
+        "Rely less on the control: perform more extensive substantive procedures, closer to year-end",
+        "No change to the planned substantive procedures",
+        "Report the material weakness and expand substantive procedures in the affected area"
+      ],
+      "rows": [
+        {
+          "id": "n1",
+          "label": "Finding 1 — three-way match",
+          "answer": "Rely less on the control: perform more extensive substantive procedures, closer to year-end",
+          "explanation": "Control risk for purchases and payables is higher than planned. Increase the extent of substantive testing (for example, a larger search for unrecorded liabilities) and perform it at year-end."
+        },
+        {
+          "id": "n2",
+          "label": "Finding 2 — revenue cutoff misstatement",
+          "answer": "Report the material weakness and expand substantive procedures in the affected area",
+          "explanation": "The ICFR opinion is adverse, and revenue cutoff testing is expanded. The financial statement opinion can still be unmodified if the misstatement is corrected."
+        },
+        {
+          "id": "n3",
+          "label": "Finding 3 — developer access to production",
+          "answer": "No change to the planned substantive procedures",
+          "explanation": "With an effective compensating control, the planned reliance on automated controls holds."
+        }
+      ]
+    }
+  ]
+}

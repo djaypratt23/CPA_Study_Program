@@ -24,7 +24,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Correct. Contributions of property for a partnership interest are generally tax-free."
       }
     ],
@@ -92,7 +92,7 @@
       },
       {
         "id": "d",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Contributed property keeps its basis.",
         "trap": "wrong-rule"
       }
@@ -184,7 +184,7 @@
       },
       {
         "id": "b",
-        "text": "$0",
+        "text": "None ($0)",
         "explanation": "Net relief exceeds basis, which triggers gain.",
         "trap": "overgeneralization"
       },
@@ -202,7 +202,7 @@
     ],
     "answer": "c",
     "explanation": "Net relief = 80,000 − 50% × 80,000 = 40,000; excess over the 30,000 basis = **$10,000** gain. Outside basis = 0.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 2,
     "calc": true
   },
@@ -305,7 +305,7 @@
     ],
     "answer": "d",
     "explanation": "Total gain = 110,000 − 40,000 = 70,000. §704(c) built-in gain 60,000 → Gus; remaining 10,000 split 50/50. Gus = **$65,000**.",
-    "skill": "analysis",
+    "skill": "application",
     "difficulty": 3,
     "calc": true
   },
@@ -480,5 +480,75 @@
     "explanation": "Partnerships and S corporations: 15th day of the 3rd month (March 15), with a 6-month extension to September 15.",
     "skill": "remembering",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-pf-12",
+    "pool": "practice",
+    "stem": "A limited partner has outside basis of $50,000, which includes a $20,000 share of nonrecourse debt (not qualified nonrecourse financing). His share of the partnership's loss is $45,000, and he has $10,000 of passive income from other activities. How much of the loss can he deduct this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "This stops after the at-risk limit and skips the passive rules.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "Correct. Basis allows 45,000; at-risk (50,000 − 20,000 = 30,000) allows 30,000; the passive rules then allow only 10,000."
+      },
+      {
+        "id": "c",
+        "text": "$45,000",
+        "explanation": "This applies only the basis limit.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$20,000",
+        "explanation": "This uses the nonrecourse debt share as the limit.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Apply the limits in order: basis, at-risk, passive (then excess business loss). Each suspended amount carries forward separately.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pf-13",
+    "pool": "practice",
+    "stem": "A and B are equal general partners. The partnership borrows $100,000 from a bank on a recourse basis and $40,000 from partner A. How are the liabilities allocated for basis purposes?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $70,000; B $70,000",
+        "explanation": "A partner's loan to the partnership is allocated to that partner, not shared.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $50,000; B $50,000",
+        "explanation": "This leaves out the partner loan.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "A $90,000; B $50,000",
+        "explanation": "Correct. The bank loan is shared by loss ratio (50,000 each); A's own loan is recourse to A alone: A 50,000 + 40,000 = 90,000."
+      },
+      {
+        "id": "d",
+        "text": "A $140,000; B $0",
+        "explanation": "The bank's recourse debt is shared by the general partners' loss ratio.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Recourse debt follows economic risk of loss; a partner loan is recourse to the lending partner.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

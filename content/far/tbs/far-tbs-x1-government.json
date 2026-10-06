@@ -1,0 +1,99 @@
+{
+  "id": "far-tbs-x1-government",
+  "section": "FAR",
+  "unitId": "far-u4",
+  "moduleIds": [
+    "far-government"
+  ],
+  "pool": "exam",
+  "title": "Fund types and property taxes — City of Alder Falls",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Identify the fund the City of Alder Falls should use for each activity, then compute its 2025 property tax amounts for the general fund (modified accrual).",
+  "exhibits": [
+    {
+      "title": "Property taxes levied for 2025",
+      "content": "- Levy: **$5,000,000**; estimated uncollectible 2%.\n- Collected during 2025: **$4,500,000**.\n- Collected January 1 – February 28, 2026: **$200,000**.\n- Remaining collectible amount expected later in 2026: **$200,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "funds",
+      "prompt": "Select the fund for each activity.",
+      "options": [
+        "General fund",
+        "Special revenue fund",
+        "Capital projects fund",
+        "Debt service fund",
+        "Permanent fund",
+        "Enterprise fund",
+        "Internal service fund",
+        "Custodial fund"
+      ],
+      "rows": [
+        {
+          "id": "f1",
+          "label": "Proceeds of bonds issued to build a new city hall",
+          "answer": "Capital projects fund",
+          "explanation": "Resources for acquiring or building major capital facilities go to a **capital projects fund**."
+        },
+        {
+          "id": "f2",
+          "label": "Resources accumulated to pay principal and interest on general obligation bonds",
+          "answer": "Debt service fund",
+          "explanation": "Accumulating resources for general long-term debt service is a **debt service fund** activity."
+        },
+        {
+          "id": "f3",
+          "label": "An electric utility financed by user charges to residents",
+          "answer": "Enterprise fund",
+          "explanation": "Business-type activities charging the public are **enterprise funds**."
+        },
+        {
+          "id": "f4",
+          "label": "A motor pool that charges other city departments for vehicles",
+          "answer": "Internal service fund",
+          "explanation": "Goods or services provided to other departments on a cost-reimbursement basis: **internal service fund**."
+        },
+        {
+          "id": "f5",
+          "label": "Gasoline tax revenue legally restricted to road maintenance",
+          "answer": "Special revenue fund",
+          "explanation": "Restricted or committed revenue sources for specific purposes: **special revenue fund**."
+        },
+        {
+          "id": "f6",
+          "label": "A gift whose principal must be kept intact, with earnings used to maintain a public park",
+          "answer": "Permanent fund",
+          "explanation": "Resources legally restricted so that only earnings may be used for the government's programs: **permanent fund**."
+        },
+        {
+          "id": "f7",
+          "label": "Property taxes the city collects for an independent school district",
+          "answer": "Custodial fund",
+          "explanation": "Resources held for other governments that are not in a trust: **custodial fund**."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "pt",
+      "prompt": "Compute the general fund amounts for 2025.",
+      "rows": [
+        {
+          "id": "rev",
+          "label": "Property tax revenue",
+          "answer": 4700000,
+          "explanation": "Collected in 2025 (4,500,000) plus collected within 60 days after year-end (200,000) = **4,700,000**."
+        },
+        {
+          "id": "def",
+          "label": "Deferred inflows of resources for property taxes",
+          "answer": 200000,
+          "explanation": "Net levy 4,900,000 − revenue 4,700,000 = **200,000**, not available until later in 2026."
+        }
+      ]
+    }
+  ]
+}

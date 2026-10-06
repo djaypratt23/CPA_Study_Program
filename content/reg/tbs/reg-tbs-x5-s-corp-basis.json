@@ -1,0 +1,105 @@
+{
+  "id": "reg-tbs-x5-s-corp-basis",
+  "section": "REG",
+  "unitId": "reg-u7",
+  "moduleIds": [
+    "reg-s-corporations"
+  ],
+  "pool": "exam",
+  "title": "S corporation income and basis — Sable Inc.",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Sable Inc. is a calendar-year S corporation with no accumulated E&P, owned 50% by Ana Ruiz. Classify Sable's items and compute the amounts for Ana.",
+  "exhibits": [
+    {
+      "title": "Sable Inc. — 2025",
+      "content": "| Item | Amount |\n|---|---:|\n| Gross receipts | 900,000 |\n| Cost of goods sold | 400,000 |\n| Salaries, including $160,000 of reasonable wages to the shareholders | 300,000 |\n| MACRS depreciation | 50,000 |\n| §179 expense | 20,000 |\n| Charitable contributions | 10,000 |\n| Long-term capital gain | 16,000 |\n| Tax-exempt interest | 4,000 |\n\nAna's stock basis at January 1, 2025: **$30,000**. Sable distributed **$40,000** cash to Ana in 2025. Ana has made no loans to Sable."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify each item on Form 1120-S.",
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Salaries to shareholder-employees",
+          "options": [
+            "Ordinary business income",
+            "Separately stated"
+          ],
+          "answer": "Ordinary business income",
+          "explanation": "Reasonable compensation is deducted in computing ordinary business income."
+        },
+        {
+          "id": "c2",
+          "label": "§179 expense",
+          "options": [
+            "Ordinary business income",
+            "Separately stated"
+          ],
+          "answer": "Separately stated",
+          "explanation": "§179 is separately stated and limited at the shareholder level."
+        },
+        {
+          "id": "c3",
+          "label": "Charitable contributions",
+          "options": [
+            "Ordinary business income",
+            "Separately stated"
+          ],
+          "answer": "Separately stated",
+          "explanation": "Charitable contributions are separately stated."
+        },
+        {
+          "id": "c4",
+          "label": "Tax-exempt interest",
+          "options": [
+            "Ordinary business income",
+            "Separately stated"
+          ],
+          "answer": "Separately stated",
+          "explanation": "Tax-exempt income is separately stated; it increases basis."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "amt",
+      "prompt": "Compute the amounts.",
+      "rows": [
+        {
+          "id": "obi",
+          "label": "Sable's ordinary business income",
+          "answer": 150000,
+          "explanation": "900,000 − 400,000 − 300,000 − 50,000 = **150,000**."
+        },
+        {
+          "id": "ana",
+          "label": "Ana's share of ordinary business income",
+          "answer": 75000,
+          "explanation": "50% × 150,000 = **75,000**."
+        },
+        {
+          "id": "s179",
+          "label": "Ana's share of §179 expense",
+          "answer": 10000,
+          "explanation": "50% × 20,000 = **10,000**."
+        },
+        {
+          "id": "basis",
+          "label": "Ana's stock basis at December 31, 2025",
+          "answer": 60000,
+          "explanation": "30,000 + 75,000 + 8,000 LTCG + 2,000 tax-exempt interest = 115,000; − 40,000 distribution = 75,000; − 10,000 §179 − 5,000 charity = **60,000**."
+        },
+        {
+          "id": "tax",
+          "label": "Taxable portion of Ana's distribution",
+          "answer": 0,
+          "explanation": "The distribution (40,000) doesn't exceed her basis after income increases, so **0** is taxable."
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,16 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { Mcq, SectionId } from '../content/schema'
 import { SKILL_LABELS } from '../content/schema'
 import { db } from '../db'
 import { logError, setItemNote, toggleFlag } from '../db/actions'
 import { ERROR_CAUSES, ERROR_CAUSE_LABELS, type ErrorCause } from '../db/types'
+import { CHOICE_LETTERS, displayChoices, displayLetter } from '../lib/random'
 import type { Confidence } from '../lib/srs'
+import { useDebouncedSave } from '../hooks/useDebouncedSave'
 import { useHotkeys } from '../hooks/useDesktop'
+import { useTextHighlights } from '../hooks/useTextHighlights'
+import { issueUrl } from '../lib/report'
 import Icon from './Icon'
 import Markdown from './Markdown'
 import { ReviewBadge } from './ui'
@@ -45,19 +49,50 @@ interface Props {
   showTools?: boolean
   /** Simulated exam: no confidence prompt, like the real exam. */
   hideConfidence?: boolean
+  /** Simulated exam: no skill-level chip (it hints at the kind of reasoning needed). */
+  hideSkill?: boolean
   section: SectionId
   /** Enable keyboard shortcuts (A–D choose, 1–3 confidence). Only for the single active question on a page. */
   keyboard?: boolean
+  /** Shuffle the choices per session (pass the session id). Letters follow display order; stored ids don't change. */
+  shuffleSeed?: string
 }
 
-export default function McqView({ q, index, total, selected, confidence, revealed, confidenceSubmits, onSelect, onConfidence, showTools = true, hideConfidence = false, section, keyboard = false }: Props) {
+export default function McqView({ q, index, total, selected, confidence, revealed, confidenceSubmits, onSelect, onConfidence, showTools = true, hideConfidence = false, hideSkill = false, section, keyboard = false, shuffleSeed }: Props) {
   const meta = useLiveQuery(() => db.itemMeta.get(q.id), [q.id])
   const [noteOpen, setNoteOpen] = useState(false)
+  const saveNote = useCallback((v: string) => setItemNote(q.id, v), [q.id])
+  const noteSave = useDebouncedSave(saveNote)
   const correct = selected === q.answer
+  const choices = useMemo(() => displayChoices(q.id, q.choices, shuffleSeed), [q.id, q.choices, shuffleSeed])
+  const feedbackRef = useRef<HTMLDivElement>(null)
+  // Exam tools (P1-10): strike out choices and highlight text. Both reset for each question.
+  const questionRef = useRef<HTMLElement>(null)
+  const highlights = useTextHighlights(q.id)
+  const [strike, setStrike] = useState<{ id: string; ids: string[] }>({ id: q.id, ids: [] })
+  const struck = strike.id === q.id ? strike.ids : []
+  const toggleStrike = (id: string) => setStrike({ id: q.id, ids: struck.includes(id) ? struck.filter((x) => x !== id) : [...struck, id] })
+  const wasRevealed = useRef(revealed)
+  // When feedback appears, the choice buttons become disabled; move focus to the verdict so it isn't lost to <body>.
+  useEffect(() => {
+    if (revealed && !wasRevealed.current) feedbackRef.current?.focus()
+    wasRevealed.current = revealed
+  }, [revealed])
+  const onRadioKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    // Up/Down only: Left/Right stay the app-wide previous/next-question keys.
+    const step = e.key === 'ArrowDown' ? 1 : e.key === 'ArrowUp' ? -1 : 0
+    if (!step || revealed) return
+    e.preventDefault()
+    e.stopPropagation()
+    const idx = Math.max(0, choices.findIndex((c) => c.id === selected))
+    const next = choices[(idx + step + choices.length) % choices.length]
+    onSelect(next.id)
+    e.currentTarget.querySelector<HTMLButtonElement>(`[data-choice="${next.id}"]`)?.focus()
+  }
 
   useHotkeys((e) => {
     if (revealed) return
-    const choice = q.choices.find((c) => c.id === e.key.toLowerCase())
+    const choice = e.key.length === 1 ? choices[CHOICE_LETTERS.indexOf(e.key.toUpperCase() as (typeof CHOICE_LETTERS)[number])] : undefined
     if (choice) {
       e.preventDefault()
       onSelect(choice.id)
@@ -71,7 +106,7 @@ export default function McqView({ q, index, total, selected, confidence, reveale
   }, keyboard)
 
   return (
-    <article className="space-y-4" aria-labelledby={`stem-${q.id}`}>
+    <article ref={questionRef} className="space-y-4" aria-labelledby={`stem-${q.id}`}>
       <div className="flex flex-wrap items-center justify-between gap-2 text-xs muted">
         <div className="flex flex-wrap items-center gap-2">
           {index !== undefined && total !== undefined && (
@@ -79,7 +114,7 @@ export default function McqView({ q, index, total, selected, confidence, reveale
               Question {index + 1} of {total}
             </span>
           )}
-          <span className="chip bg-slate-100 dark:bg-slate-800">{SKILL_LABELS[q.skill]}</span>
+          {!hideSkill && <span className="chip bg-slate-100 dark:bg-slate-800">{SKILL_LABELS[q.skill]}</span>}
           {q.needsReview && <ReviewBadge note={q.reviewNote} />}
         </div>
         {showTools && (
@@ -105,7 +140,8 @@ export default function McqView({ q, index, total, selected, confidence, reveale
           className="input min-h-20 text-sm"
           placeholder="Your note on this question (saved automatically)"
           defaultValue={meta?.note ?? ''}
-          onBlur={(e) => setItemNote(q.id, e.target.value)}
+          onChange={(e) => noteSave.schedule(e.target.value)}
+          onBlur={noteSave.flush}
           aria-label="Question note"
         />
       )}
@@ -114,21 +150,43 @@ export default function McqView({ q, index, total, selected, confidence, reveale
         <Markdown>{q.stem}</Markdown>
       </div>
 
-      {revealed && (
-        <div
-        className={`rounded-lg p-3 font-semibold ${correct ? 'bg-emerald-100 text-emerald-900 dark:bg-emerald-900/40 dark:text-emerald-100' : 'bg-rose-100 text-rose-900 dark:bg-rose-900/40 dark:text-rose-100'}`}
-        role="status"
-      >
-        {correct
-          ? confidence === 'guess'
-            ? 'Correct — but you guessed, so it will come back for review like a miss.'
-            : 'Correct.'
-          : `Not quite — the answer is (${q.answer.toUpperCase()}).`}
-      </div>
+      {!revealed && highlights.supported && (
+        <div className="flex flex-wrap items-center gap-2 text-xs">
+          <button
+            type="button"
+            className="btn-ghost min-h-9 px-2 text-xs"
+            // Keep the text selection alive when the button is pressed.
+            onMouseDown={(e) => e.preventDefault()}
+            onClick={() => highlights.addSelection(questionRef.current)}
+          >
+            Highlight selection
+          </button>
+          {highlights.count > 0 && (
+            <button type="button" className="btn-ghost min-h-9 px-2 text-xs" onClick={highlights.clear}>
+              Clear highlights ({highlights.count})
+            </button>
+          )}
+          <span className="muted">Select text in the question or choices, then highlight it. Use ✕ to strike out a choice.</span>
+        </div>
       )}
 
-      <div role="radiogroup" aria-label="Answer choices" className="space-y-2">
-        {q.choices.map((c) => {
+      {/* A persistent live region, so the verdict is announced when it appears (not only when it mounts). */}
+      <div role="status" aria-live="polite" ref={feedbackRef} tabIndex={-1} className="focus:outline-none">
+        {revealed && (
+          <div
+            className={`rounded-lg p-3 font-semibold ${correct ? 'bg-emerald-100 text-emerald-900 dark:bg-emerald-900/40 dark:text-emerald-100' : 'bg-rose-100 text-rose-900 dark:bg-rose-900/40 dark:text-rose-100'}`}
+          >
+            {correct
+              ? confidence === 'guess'
+                ? 'Correct — but you guessed, so it will come back for review like a miss.'
+                : 'Correct.'
+              : `Not quite — the answer is (${displayLetter(choices, q.answer)}).`}
+          </div>
+        )}
+      </div>
+
+      <div role="radiogroup" aria-label="Answer choices" className="space-y-2" onKeyDown={onRadioKey}>
+        {choices.map((c, i) => {
           const isSel = selected === c.id
           const isAns = c.id === q.answer
           let cls = 'border-slate-300 bg-white hover:border-blue-400 dark:border-slate-700 dark:bg-slate-900'
@@ -137,22 +195,39 @@ export default function McqView({ q, index, total, selected, confidence, reveale
           if (revealed && isSel && !isAns) cls = 'border-rose-600 bg-rose-50 dark:border-rose-500 dark:bg-rose-950/50'
           return (
             <div key={c.id}>
-              <button
-                role="radio"
-                aria-checked={isSel}
-                disabled={revealed}
-                onClick={() => onSelect(c.id)}
-                className={`flex w-full items-start gap-3 rounded-lg border p-3 text-left transition-colors disabled:cursor-default ${cls}`}
-              >
-                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-current text-xs font-bold uppercase">
-                  {c.id}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <Markdown className="prose-lesson [&_p]:my-0">{c.text}</Markdown>
-                </span>
-                {revealed && isAns && <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-400">Correct</span>}
-                {revealed && isSel && !isAns && <span className="text-sm font-semibold text-rose-700 dark:text-rose-400">Your answer</span>}
-              </button>
+              <div className="flex items-start gap-1">
+                <button
+                  role="radio"
+                  aria-checked={isSel}
+                  disabled={revealed}
+                  // Roving tabindex (ARIA radio pattern): one tab stop; arrow keys move between choices.
+                  tabIndex={isSel || (!selected && i === 0) ? 0 : -1}
+                  data-choice={c.id}
+                  onClick={() => onSelect(c.id)}
+                  className={`flex w-full items-start gap-3 rounded-lg border p-3 text-left transition-colors disabled:cursor-default ${cls}`}
+                >
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-current text-xs font-bold uppercase">
+                    {CHOICE_LETTERS[i]}
+                  </span>
+                  <span className={`min-w-0 flex-1 ${struck.includes(c.id) && !revealed ? 'text-slate-500 line-through dark:text-slate-400' : ''}`}>
+                    <Markdown className="prose-lesson [&_p]:my-0">{c.text}</Markdown>
+                  </span>
+                  {revealed && isAns && <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-400">Correct</span>}
+                  {revealed && isSel && !isAns && <span className="text-sm font-semibold text-rose-700 dark:text-rose-400">Your answer</span>}
+                </button>
+                {!revealed && (
+                  <button
+                    type="button"
+                    className={`btn-ghost min-h-11 shrink-0 px-2 text-sm ${struck.includes(c.id) ? 'text-rose-700 dark:text-rose-400' : 'muted'}`}
+                    aria-pressed={struck.includes(c.id)}
+                    aria-label={`Strike out choice ${CHOICE_LETTERS[i]}`}
+                    title="Strike out"
+                    onClick={() => toggleStrike(c.id)}
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
               {revealed && (
                 <div className={`mt-1 ml-9 rounded-md px-3 py-2 text-sm ${isAns ? 'bg-emerald-50/70 dark:bg-emerald-950/30' : 'bg-slate-50 dark:bg-slate-900/60'}`}>
                   {!isAns && c.trap && (
@@ -202,6 +277,11 @@ export default function McqView({ q, index, total, selected, confidence, reveale
             <Markdown>{q.explanation}</Markdown>
           </div>
           {(!correct || confidence === 'guess') && <ErrorTagger q={q} section={section} />}
+          <p className="text-xs">
+            <a href={issueUrl(q.id, 'question', q.stem)} target="_blank" rel="noopener noreferrer" className="muted underline">
+              Report an issue with this question (opens GitHub)
+            </a>
+          </p>
         </div>
       )}
     </article>

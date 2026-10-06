@@ -1,0 +1,139 @@
+{
+  "id": "far-tbs-u5-ar-review",
+  "section": "FAR",
+  "unitId": "far-u5",
+  "moduleIds": [
+    "far-receivables"
+  ],
+  "pool": "practice",
+  "title": "Review the receivables roll-forward and subledger reconciliation — Harbor Marine Supply",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "A staff accountant prepared Harbor Marine Supply's year-end trade receivables roll-forward and the reconciliation of the customer subledger to the general ledger. Review each schedule against the source data in the exhibits. Tick every amount that is wrong and enter the correct amount. Enter decreases as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Source data for the year",
+      "content": "| Source | Amount |\n|---|---:|\n| Accounts receivable, general ledger, January 1 (audited) | 312,400 |\n| Credit sales per sales journal | 2,184,000 |\n| Cash collected on account per cash receipts journal | 2,051,300 |\n| Credit memos issued for returns and allowances | 38,600 |\n| Write-offs approved by the credit manager | 14,200 |\n\nThe cash receipts journal includes **$1,500** collected from a customer whose account had been written off in the prior year. Accounts receivable per the general ledger at December 31 is **$393,800**."
+    },
+    {
+      "title": "Subledger investigation notes",
+      "content": "The aged customer subledger totals **$401,650**. The AR clerk investigated the difference:\n\n1. A **$2,350** credit memo for goods returned by Pike Co. was recorded in the general ledger but was never posted to Pike's subledger account.\n2. A **$6,000** payment from Rowe Marine was posted to Rowe's subledger account **twice**. The general ledger recorded it once.\n3. The **$11,500** write-off of Delta Co. (part of the 14,200 above) was recorded in the general ledger, but Delta's balance is still open in the subledger."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "rf",
+      "prompt": "Review the staff's trade receivables roll-forward.",
+      "preparedLabel": "Per staff roll-forward",
+      "rows": [
+        {
+          "id": "beg",
+          "label": "Beginning balance, January 1",
+          "prepared": 312400,
+          "answer": 312400,
+          "explanation": "Agrees to the prior-year audited general ledger balance. **No error.**"
+        },
+        {
+          "id": "sales",
+          "label": "Credit sales",
+          "prepared": 2184000,
+          "answer": 2184000,
+          "explanation": "Agrees to the sales journal total. **No error.**"
+        },
+        {
+          "id": "rec",
+          "label": "Recoveries of accounts previously written off",
+          "prepared": 0,
+          "answer": 1500,
+          "explanation": "A recovery first **reinstates** the receivable (Dr AR, Cr Allowance) and then records the collection. The staff omitted the reinstatement. **+1,500.**"
+        },
+        {
+          "id": "coll",
+          "label": "Collections on account",
+          "prepared": -2049800,
+          "answer": -2051300,
+          "explanation": "Use the full cash receipts journal amount, **2,051,300**, which includes the 1,500 recovery. The staff excluded the recovery collection; because the reinstatement is shown on its own line, the collection must be too."
+        },
+        {
+          "id": "ret",
+          "label": "Sales returns and allowances",
+          "prepared": -38600,
+          "answer": -38600,
+          "explanation": "Agrees to the credit memo register. **No error.**"
+        },
+        {
+          "id": "wo",
+          "label": "Write-offs",
+          "prepared": -12700,
+          "answer": -14200,
+          "explanation": "Write-offs are **14,200** gross. The staff netted the 1,500 recovery against write-offs; recoveries are a separate roll-forward line."
+        },
+        {
+          "id": "end",
+          "label": "Ending balance, December 31",
+          "prepared": 395300,
+          "answer": 393800,
+          "explanation": "312,400 + 2,184,000 + 1,500 − 2,051,300 − 38,600 − 14,200 = **393,800**, which agrees to the general ledger."
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "id": "recon",
+      "prompt": "Review the reconciliation of the customer subledger to the general ledger at December 31.",
+      "preparedLabel": "Per staff reconciliation",
+      "rows": [
+        {
+          "id": "sub",
+          "label": "Total per aged customer subledger",
+          "prepared": 401650,
+          "answer": 401650,
+          "explanation": "Agrees to the aged trial balance. **No error.**"
+        },
+        {
+          "id": "cm",
+          "label": "Pike Co. credit memo not posted to the subledger",
+          "prepared": -2350,
+          "answer": -2350,
+          "explanation": "The credit memo is in the general ledger (via the credit memo register) but not in Pike's account, so the subledger is overstated. **−2,350. No error.**"
+        },
+        {
+          "id": "dup",
+          "label": "Rowe Marine payment posted twice in the subledger",
+          "prepared": -6000,
+          "answer": 6000,
+          "explanation": "Posting a payment twice **understates** the subledger. The correction adds the duplicate back: **+6,000**, not −6,000."
+        },
+        {
+          "id": "delta",
+          "label": "Delta Co. write-off not removed from the subledger",
+          "prepared": -11500,
+          "answer": -11500,
+          "explanation": "The approved write-off is in the general ledger but Delta's balance is still open in the subledger. **−11,500. No error.**"
+        },
+        {
+          "id": "adj",
+          "label": "Adjusted subledger total",
+          "prepared": 381800,
+          "answer": 393800,
+          "explanation": "401,650 − 2,350 + 6,000 − 11,500 = **393,800**."
+        },
+        {
+          "id": "gl",
+          "label": "Balance per general ledger",
+          "prepared": 393800,
+          "answer": 393800,
+          "explanation": "Agrees to the roll-forward in Part 1. **No error.**"
+        },
+        {
+          "id": "diff",
+          "label": "Unreconciled difference (adjusted subledger − general ledger)",
+          "prepared": -12000,
+          "answer": 0,
+          "explanation": "With the duplicate payment corrected, the adjusted subledger equals the general ledger: difference **0**. A leftover difference is a signal that a reconciling item was mishandled, not a number to write off."
+        }
+      ]
+    }
+  ]
+}

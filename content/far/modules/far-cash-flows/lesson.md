@@ -12,6 +12,8 @@ objectives:
     task: Prepare the operating section using the indirect method
   - text: Compute operating cash flows under the direct method and identify required noncash disclosures.
     skill: analysis
+  - text: Review a draft statement of cash flows against source data, and detect and correct classification and measurement errors.
+    skill: analysis
 bigIdea:
   what: >-
     The statement of cash flows explains why cash changed during the period, sorted into three buckets —
@@ -155,3 +157,17 @@ far-scf-chk2
 - **Noncash investing and financing activities** — acquiring a building by issuing a mortgage, converting debt to equity, obtaining a right-of-use asset for a lease liability — are disclosed in a narrative or schedule, **not** in the body of the statement.
 - **Interest paid (net of amounts capitalized) and income taxes paid** must be disclosed when the indirect method is used.
 - **Cash, cash equivalents, and restricted cash** are all included in the beginning and ending totals; transfers between them are not cash flows.
+
+## Reviewing a draft statement of cash flows
+
+The fastest check: **beginning cash + net change = ending cash on the balance sheet**. If that fails, go line by line. The errors examiners seed most often:
+
+| Error | Correct treatment |
+|---|---|
+| Gain on sale **added** in operating activities | **Subtract** the gain; report the full proceeds in investing |
+| Carrying amount reported as sale proceeds | Report the cash received |
+| Sign of a working-capital change reversed | Increase in a current operating asset → **subtract**; increase in a current operating liability → **add** |
+| Noncash acquisition (asset for a note or stock) included in investing and financing | Exclude it from the statement; disclose it as a noncash investing and financing activity |
+| Interest or dividends paid in the wrong section (US GAAP) | Interest paid → operating; dividends paid → financing |
+
+When you correct one line, carry the correction through the section subtotal and the net change in cash. A single noncash transaction included by mistake often shows up **twice** — once in investing and once in financing.

@@ -1,0 +1,134 @@
+{
+  "id": "tcp-tbs-u5-s-basis-review",
+  "section": "TCP",
+  "unitId": "tcp-u5",
+  "moduleIds": [
+    "tcp-s-corp-compliance"
+  ],
+  "pool": "practice",
+  "title": "Review an S corporation shareholder's basis schedule — Lena Ortiz",
+  "minutes": 25,
+  "skill": "analysis",
+  "instructions": "Lena Ortiz owns 50% of Brightpath, Inc., a calendar-year S corporation. A staff member prepared her 2025 stock and debt basis schedule (Form 7203). Review it against the source data, then evaluate the proposed loan repayment. Tick every amount that is wrong and enter the correct amount. Enter decreases as negative numbers.",
+  "exhibits": [
+    {
+      "title": "Source data (Lena's share, 2025)",
+      "content": "- Stock basis, January 1: **$20,000**. Lena contributed **$5,000** cash in 2025.\n- Lena lent Brightpath **$30,000** in 2023 under a written, interest-bearing note; her debt basis on January 1 was the full **$30,000**.\n- Lena also personally guaranteed a **$50,000** bank loan to Brightpath. She has not been asked to pay on the guarantee.\n- Schedule K-1 items: ordinary business loss **($70,000)**; long-term capital gain **$4,000**; tax-exempt interest **$2,000**; nondeductible expenses **$1,000**. No distributions."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "basis",
+      "prompt": "Review the prepared basis schedule.",
+      "preparedLabel": "Per staff schedule",
+      "rows": [
+        {
+          "id": "sb",
+          "label": "Stock basis, January 1",
+          "prepared": 20000,
+          "answer": 20000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "con",
+          "label": "Capital contribution",
+          "prepared": 5000,
+          "answer": 5000,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "inc",
+          "label": "Income items increasing basis",
+          "prepared": 4000,
+          "answer": 6000,
+          "explanation": "Tax-exempt interest **also** increases basis: 4,000 LTCG + 2,000 tax-exempt = **6,000** (§1367(a)(1)(A))."
+        },
+        {
+          "id": "nde",
+          "label": "Nondeductible expenses",
+          "prepared": -1000,
+          "answer": -1000,
+          "explanation": "Reduce basis before losses (Reg. 1.1367-1(f)). **No error.**"
+        },
+        {
+          "id": "sloss",
+          "label": "Loss applied against stock basis",
+          "prepared": -28000,
+          "answer": -30000,
+          "explanation": "Stock basis available: 20,000 + 5,000 + 6,000 − 1,000 = 30,000, so **−30,000**."
+        },
+        {
+          "id": "send",
+          "label": "Stock basis, December 31",
+          "prepared": 0,
+          "answer": 0,
+          "explanation": "**No error.**"
+        },
+        {
+          "id": "db",
+          "label": "Debt basis, January 1",
+          "prepared": 80000,
+          "answer": 30000,
+          "explanation": "Only Lena's **direct loan** to the corporation, **30,000**, creates debt basis. A guarantee of a bank loan does not, unless and until Lena pays on it (Reg. 1.1366-2(a)(2))."
+        },
+        {
+          "id": "dloss",
+          "label": "Loss applied against debt basis",
+          "prepared": -42000,
+          "answer": -30000,
+          "explanation": "Remaining loss 40,000, limited to debt basis of **30,000**."
+        },
+        {
+          "id": "dend",
+          "label": "Debt basis, December 31",
+          "prepared": 38000,
+          "answer": 0,
+          "explanation": "30,000 − 30,000 = **0**."
+        },
+        {
+          "id": "allow",
+          "label": "Loss allowed under the basis limit",
+          "prepared": 70000,
+          "answer": 60000,
+          "explanation": "30,000 stock + 30,000 debt = **60,000**."
+        },
+        {
+          "id": "susp",
+          "label": "Loss suspended and carried forward",
+          "prepared": 0,
+          "answer": 10000,
+          "explanation": "70,000 − 60,000 = **10,000**, carried forward indefinitely and treated as incurred next year (§1366(d)(2))."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "rep",
+      "prompt": "Lena proposes that the corporation repay her $30,000 loan in full in December 2026. Her projected 2026 share of ordinary income is $18,000 and there will be no distributions. Compute the projected results.",
+      "rows": [
+        {
+          "id": "rest",
+          "label": "Debt basis at the time of repayment",
+          "answer": 8000,
+          "tolerance": 0,
+          "explanation": "The 10,000 suspended loss is treated as a 2026 loss. The **net** increase of 18,000 − 10,000 = 8,000 restores **debt basis first** (Reg. 1.1367-2(c)), so debt basis is **8,000**."
+        },
+        {
+          "id": "gain",
+          "label": "Gain Lena recognizes on the repayment",
+          "answer": 22000,
+          "tolerance": 0,
+          "explanation": "Repayment 30,000 − debt basis 8,000 = **22,000**. Because the loan is a formal note held more than a year, the gain is long-term capital gain; an open-account advance would give ordinary income."
+        },
+        {
+          "id": "gain2",
+          "label": "Gain if the repayment is instead deferred until debt basis is fully restored",
+          "answer": 0,
+          "tolerance": 0,
+          "explanation": "A repayment that does not exceed debt basis produces **no gain** — the planning point of this task."
+        }
+      ]
+    }
+  ]
+}

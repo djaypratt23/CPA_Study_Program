@@ -1,0 +1,100 @@
+{
+  "id": "aud-tbs-x13-subsequent-events",
+  "section": "AUD",
+  "unitId": "aud-u8",
+  "moduleIds": [
+    "aud-subsequent-events"
+  ],
+  "pool": "exam",
+  "title": "Subsequent events — Marlowe Textiles",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "Marlowe Textiles has a December 31, 2025 year-end. The auditor's report is dated March 10, 2026, and the statements were issued March 25, 2026. Select the treatment of each event. Amounts are material unless stated otherwise.",
+  "exhibits": [
+    {
+      "title": "Events",
+      "content": "1. **January 20:** A lawsuit over a 2025 product defect is settled for $300,000 more than the amount accrued at year-end.\n2. **February 5:** A fire destroys an uninsured warehouse.\n3. **February 15:** A customer with a large year-end receivable files for bankruptcy after a steady financial decline during 2025.\n4. **February 28:** Marlowe issues $5 million of bonds.\n5. **March 2:** The fair value of Marlowe's investments falls by an immaterial amount in normal market movement.\n6. **March 18:** Marlowe signs an agreement to be acquired; management adds a note, and the auditor performs procedures limited to that event."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "ev",
+      "prompt": "Select the treatment.",
+      "rows": [
+        {
+          "id": "e1",
+          "label": "1. Lawsuit settlement",
+          "options": [
+            "Adjust the financial statements",
+            "Disclose only",
+            "Neither adjust nor disclose",
+            "Dual-date the report for this event"
+          ],
+          "answer": "Adjust the financial statements",
+          "explanation": "The settlement gives evidence about a condition (the 2025 defect) that existed at year-end: **recognized**."
+        },
+        {
+          "id": "e2",
+          "label": "2. Warehouse fire",
+          "options": [
+            "Adjust the financial statements",
+            "Disclose only",
+            "Neither adjust nor disclose",
+            "Dual-date the report for this event"
+          ],
+          "answer": "Disclose only",
+          "explanation": "The fire arose after year-end: a **nonrecognized** event, disclosed because it is material."
+        },
+        {
+          "id": "e3",
+          "label": "3. Customer bankruptcy",
+          "options": [
+            "Adjust the financial statements",
+            "Disclose only",
+            "Neither adjust nor disclose",
+            "Dual-date the report for this event"
+          ],
+          "answer": "Adjust the financial statements",
+          "explanation": "The customer's deteriorating condition existed at year-end: adjust the allowance."
+        },
+        {
+          "id": "e4",
+          "label": "4. Bond issuance",
+          "options": [
+            "Adjust the financial statements",
+            "Disclose only",
+            "Neither adjust nor disclose",
+            "Dual-date the report for this event"
+          ],
+          "answer": "Disclose only",
+          "explanation": "A material financing after year-end is disclosed, not recognized."
+        },
+        {
+          "id": "e5",
+          "label": "5. Immaterial decline in fair value",
+          "options": [
+            "Adjust the financial statements",
+            "Disclose only",
+            "Neither adjust nor disclose",
+            "Dual-date the report for this event"
+          ],
+          "answer": "Neither adjust nor disclose",
+          "explanation": "Immaterial, post-year-end market movements need neither."
+        },
+        {
+          "id": "e6",
+          "label": "6. Acquisition agreement after the report date",
+          "options": [
+            "Adjust the financial statements",
+            "Disclose only",
+            "Neither adjust nor disclose",
+            "Dual-date the report for this event"
+          ],
+          "answer": "Dual-date the report for this event",
+          "explanation": "When a note is added for an event after the report date, the auditor may dual-date the report (e.g., March 10, 2026, except for Note X, as to which the date is March 18, 2026) or redate it."
+        }
+      ]
+    }
+  ]
+}

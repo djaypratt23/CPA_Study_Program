@@ -23,7 +23,9 @@ export const SKILL_LABELS: Record<SkillLevel, string> = {
   evaluation: 'Evaluation',
 }
 
-const Range = z.object({ min: z.number().min(0).max(100), max: z.number().min(0).max(100) })
+const Range = z
+  .object({ min: z.number().min(0).max(100), max: z.number().min(0).max(100) })
+  .refine((r) => r.min <= r.max, { message: 'allocation min must not exceed max' })
 
 /* ------------------------------------------------------------------ */
 /* Section configuration (content/sections/<id>.yaml)                  */
@@ -32,6 +34,10 @@ const Range = z.object({ min: z.number().min(0).max(100), max: z.number().min(0)
 export const ModuleRef = z.object({
   id: z.string().regex(/^[a-z]{3}-[a-z0-9-]+$/, 'module ids look like far-cash-receivables'),
   title: z.string().min(3),
+  /** Optional Blueprint task references (e.g. "II.B"), for automated coverage checks. */
+  blueprint: z.array(z.string().regex(/^[IVX]+(\.[A-Z](\.\d+)?)?$/, 'blueprint refs look like II.B or III.E.6')).optional(),
+  /** Outside the current Blueprint (P2-2): browsable, but left out of the default plan, readiness and mocks. */
+  optional: z.boolean().optional(),
 })
 
 export const UnitConfig = z.object({
@@ -66,11 +72,17 @@ export const SectionConfig = z.object({
     testlets: z.array(TestletConfig).min(1),
     breakAfterTestlet: z.number().int().positive().optional(),
     breakMinutes: z.number().int().positive().optional(),
-    weighting: z.object({ mcq: z.number(), tbs: z.number() }),
+    weighting: z.object({ mcq: z.number().positive(), tbs: z.number().positive() }),
     passingScore: z.number(),
   }),
   skillAllocation: z.array(z.object({ level: SkillLevel, min: z.number(), max: z.number() })),
   areas: z.array(AreaConfig).min(1),
+}).superRefine((s, ctx) => {
+  const b = s.exam.breakAfterTestlet
+  if (b !== undefined && b >= s.exam.testlets.length)
+    ctx.addIssue({ code: 'custom', message: `${s.id}: breakAfterTestlet ${b} must come before the last testlet (${s.exam.testlets.length})` })
+  for (const a of s.skillAllocation)
+    if (a.min > a.max) ctx.addIssue({ code: 'custom', message: `${s.id}: skillAllocation ${a.level} min exceeds max` })
 })
 export type SectionConfig = z.infer<typeof SectionConfig>
 export type AreaConfig = z.infer<typeof AreaConfig>
@@ -212,6 +224,8 @@ export const Mcq = z
     calc: z.boolean().default(false),
     needsReview: z.boolean().default(false),
     reviewNote: z.string().optional(),
+    /** Outside the current Blueprint (P2-2): kept for reference, excluded from mixed sets, diagnostics and mocks. */
+    optional: z.boolean().default(false),
   })
   .superRefine((q, ctx) => {
     const ids = q.choices.map((c) => c.id)
@@ -245,19 +259,30 @@ export type FlashcardWithModule = Flashcard & { moduleId: string; section: Secti
 /* Task-based simulations                                              */
 /* ------------------------------------------------------------------ */
 
+export const NUMERIC_UNITS = ['$', '%', 'x', 'years', 'days'] as const
+
 const NumericPart = z.object({
   kind: z.literal('numeric'),
   id: z.string(),
   prompt: z.string(),
   rows: z
     .array(
-      z.object({
-        id: z.string(),
-        label: z.string(),
-        answer: z.number(),
-        tolerance: z.number().min(0).default(1),
-        explanation: z.string().min(5),
-      }),
+      z
+        .object({
+          id: z.string(),
+          label: z.string(),
+          answer: z.number(),
+          tolerance: z.number().min(0).optional(),
+          /** Unit shown beside the input. "%" rows are keyed in percent points (25 means 25%). */
+          unit: z.enum(NUMERIC_UNITS).optional(),
+          explanation: z.string().min(5),
+        })
+        .superRefine((r, ctx) => {
+          // Whole-dollar answers default to ±1; a fractional key (a ratio, a rate) must say how precise to be.
+          if (!Number.isInteger(r.answer) && r.tolerance === undefined)
+            ctx.addIssue({ code: 'custom', message: `row ${r.id}: non-integer answer ${r.answer} needs an explicit tolerance` })
+        })
+        .transform((r) => ({ ...r, tolerance: r.tolerance ?? 1 })),
     )
     .min(1),
 })
@@ -300,8 +325,9 @@ const DocReviewPart = z.object({
   segments: z
     .array(
       z.union([
-        z.object({ text: z.string() }),
-        z.object({
+        // Strict: a segment is either plain text or an editable cell, never both.
+        z.strictObject({ text: z.string() }),
+        z.strictObject({
           id: z.string(),
           original: z.string(),
           options: z.array(z.string()).min(2), // must include the original wording
@@ -322,7 +348,46 @@ const ResearchPart = z.object({
   explanation: z.string().min(5),
 })
 
-export const TbsPart = z.discriminatedUnion('kind', [NumericPart, DropdownPart, JournalPart, DocReviewPart, ResearchPart])
+/**
+ * Review a prepared schedule against the source documents in the exhibits
+ * (the Blueprint's analysis-level task: "review, identify discrepancies,
+ * correct"). Each row shows a prepared amount; the candidate flags the rows
+ * in error and enters the corrected amount. Rows whose prepared amount is
+ * right (answer === prepared) must be left unflagged.
+ */
+const ReviewPart = z
+  .object({
+    kind: z.literal('review'),
+    id: z.string(),
+    prompt: z.string(),
+    /** Header for the prepared-amount column, e.g. "Per client schedule". */
+    preparedLabel: z.string().default('Prepared amount'),
+    rows: z
+      .array(
+        z
+          .object({
+            id: z.string(),
+            label: z.string(),
+            prepared: z.number(),
+            answer: z.number(),
+            tolerance: z.number().min(0).optional(),
+            explanation: z.string().min(5),
+          })
+          .superRefine((r, ctx) => {
+            if (!Number.isInteger(r.answer) && r.tolerance === undefined)
+              ctx.addIssue({ code: 'custom', message: `row ${r.id}: non-integer answer ${r.answer} needs an explicit tolerance` })
+          })
+          .transform((r) => ({ ...r, tolerance: r.tolerance ?? 1 })),
+      )
+      .min(2),
+  })
+  .superRefine((p, ctx) => {
+    const errors = p.rows.filter((r) => Math.abs(r.prepared - r.answer) > r.tolerance).length
+    if (errors === 0) ctx.addIssue({ code: 'custom', message: `${p.id}: a review part needs at least one row in error` })
+    if (errors === p.rows.length) ctx.addIssue({ code: 'custom', message: `${p.id}: a review part needs at least one correct row` })
+  })
+
+export const TbsPart = z.discriminatedUnion('kind', [NumericPart, DropdownPart, JournalPart, DocReviewPart, ResearchPart, ReviewPart])
 export type TbsPart = z.infer<typeof TbsPart>
 
 export const Tbs = z
@@ -342,7 +407,12 @@ export const Tbs = z
     reviewNote: z.string().optional(),
   })
   .superRefine((t, ctx) => {
+    const dup = (ids: string[]) => ids.filter((id, i) => ids.indexOf(id) !== i)
+    for (const id of dup(t.parts.map((p) => p.id))) ctx.addIssue({ code: 'custom', message: `${t.id}: duplicate part id "${id}"` })
     for (const p of t.parts) {
+      const cells =
+        p.kind === 'numeric' || p.kind === 'dropdown' || p.kind === 'review' ? p.rows.map((r) => r.id) : p.kind === 'docreview' ? p.segments.flatMap((s) => ('id' in s ? [s.id] : [])) : []
+      for (const id of dup(cells)) ctx.addIssue({ code: 'custom', message: `${t.id}/${p.id}: duplicate row id "${id}"` })
       if (p.kind === 'dropdown') {
         for (const r of p.rows) {
           const opts = r.options ?? p.options
@@ -414,7 +484,7 @@ export const ReviewDocFrontmatter = z.object({
   id: z.string(),
   section: SectionId,
   title: z.string(),
-  kind: z.enum(['condensed', 'formulas', 'mnemonics', 'high-yield']),
+  kind: z.enum(['condensed', 'formulas', 'mnemonics', 'high-yield', 'orientation']),
   order: z.number().int().default(0),
 })
 export type ReviewDoc = z.infer<typeof ReviewDocFrontmatter> & { body: string }

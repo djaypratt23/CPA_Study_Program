@@ -1,0 +1,87 @@
+{
+  "id": "aud-tbs-u6-sufficiency",
+  "section": "AUD",
+  "unitId": "aud-u6",
+  "moduleIds": [
+    "aud-evidence-assertions"
+  ],
+  "pool": "practice",
+  "title": "Conclude on the sufficiency and appropriateness of evidence — Lark Outdoor",
+  "minutes": 20,
+  "skill": "evaluation",
+  "instructions": "The in-charge auditor summarized the evidence obtained so far in the audit of Lark Outdoor, a private company. For each area, conclude whether sufficient appropriate evidence has been obtained and, if not, what kind of evidence is needed.",
+  "exhibits": [
+    {
+      "title": "Evidence summary",
+      "content": "1. **Receivables:** positive confirmations sent to 40 customers covering 70% of the balance; 34 replied directly to the auditor with no exceptions. For the 6 nonresponses, the auditor examined subsequent cash receipts and shipping documents with no exceptions.\n2. **Inventory:** turnover of the outdoor-furniture line fell from 6.1 to 2.3. The auditor obtained an email from the sales manager stating the items are \"fully saleable at list price.\"\n3. **Litigation:** the auditor inquired of the CFO and CEO, who said there are no pending claims. No letter of audit inquiry has been sent to external counsel, although legal expense doubled.\n4. **PP&E additions:** the audit program called for vouching 25 of 45 additions. The staff vouched 3 before the deadline, with no exceptions.\n5. **Cash:** a bank confirmation was received directly; the auditor tested the reconciliation and traced reconciling items to the cutoff bank statement.\n6. **Revenue (fraud risk identified for December sales):** the auditor inspected 60 December invoices, printed by the client from the billing system. No shipping documents were examined."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "suf",
+      "prompt": "For each area, conclude on the evidence obtained.",
+      "options": [
+        "Sufficient appropriate evidence obtained",
+        "Not sufficient — obtain more evidence of the same kind",
+        "Not appropriate — obtain more reliable or more relevant evidence"
+      ],
+      "rows": [
+        {
+          "id": "s1",
+          "label": "Receivables — existence",
+          "answer": "Sufficient appropriate evidence obtained",
+          "explanation": "Confirmations received directly by the auditor plus alternative procedures (subsequent receipts and shipping documents) for nonresponses: reliable, relevant and adequate in extent."
+        },
+        {
+          "id": "s2",
+          "label": "Inventory — valuation of slow-moving items",
+          "answer": "Not appropriate — obtain more reliable or more relevant evidence",
+          "explanation": "An email from the sales manager is internal and self-interested, and it contradicts the turnover data. Look at subsequent sales prices and the aging."
+        },
+        {
+          "id": "s3",
+          "label": "Litigation — completeness of contingencies",
+          "answer": "Not appropriate — obtain more reliable or more relevant evidence",
+          "explanation": "Inquiry of management alone is not enough. A letter of audit inquiry to external legal counsel is required (AU-C 501.16)."
+        },
+        {
+          "id": "s4",
+          "label": "PP&E — additions",
+          "answer": "Not sufficient — obtain more evidence of the same kind",
+          "explanation": "Vouching 3 of the planned 25 items is too little; the evidence is the right kind, but not enough of it."
+        },
+        {
+          "id": "s5",
+          "label": "Cash — existence",
+          "answer": "Sufficient appropriate evidence obtained",
+          "explanation": "A bank confirmation received directly, a tested reconciliation and a cutoff statement are strong evidence."
+        },
+        {
+          "id": "s6",
+          "label": "Revenue — occurrence (fraud risk identified)",
+          "answer": "Not appropriate — obtain more reliable or more relevant evidence",
+          "explanation": "Copies of internally generated invoices do not show that goods shipped. With a fraud risk, examine shipping documents, customer acknowledgments or subsequent cash receipts."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "op",
+      "prompt": "Consider the consequence.",
+      "rows": [
+        {
+          "id": "o1",
+          "label": "If management refuses to allow the auditor to send the letter of audit inquiry to legal counsel",
+          "options": [
+            "Unmodified opinion",
+            "Qualified opinion or disclaimer of opinion, depending on pervasiveness",
+            "Adverse opinion"
+          ],
+          "answer": "Qualified opinion or disclaimer of opinion, depending on pervasiveness",
+          "explanation": "A refusal is a scope limitation (AU-C 501.25 and 705)."
+        }
+      ]
+    }
+  ]
+}

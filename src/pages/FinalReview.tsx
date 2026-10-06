@@ -9,6 +9,7 @@ const KIND_LABEL: Record<string, string> = {
   formulas: 'Formula sheet',
   mnemonics: 'Mnemonics',
   'high-yield': 'High-yield summary',
+  orientation: 'Exam-day orientation',
 }
 
 export default function FinalReview() {
