@@ -621,5 +621,179 @@
     "skill": "application",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "far-dep-16",
+    "pool": "practice",
+    "stem": "An asset costs $60,000 with $6,000 salvage and a 3-year life. What is Year 2 depreciation under sum-of-the-years'-digits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Use the depreciable base.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$18,000",
+        "explanation": "Correct. $54,000 × 2/6."
+      },
+      {
+        "id": "c",
+        "text": "$27,000",
+        "explanation": "That is Year 1.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "d",
+        "text": "$9,000",
+        "explanation": "That is Year 3.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "SYD Year 2 = (cost − salvage) × 2/6.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-dep-17",
+    "pool": "practice",
+    "stem": "An $80,000 asset (5-year life, no salvage) is bought October 1 and depreciated by DDB with a partial-year convention. What is Year 1 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$32,000",
+        "explanation": "Prorate for 3 months.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$4,000",
+        "explanation": "The DDB rate is 40%, not 20%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$8,000",
+        "explanation": "Correct. $80,000 × 40% × 3/12."
+      },
+      {
+        "id": "d",
+        "text": "$16,000",
+        "explanation": "Prorate for 3 months.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "DDB rate = 2/5 = 40%, prorated for 3 months.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-dep-18",
+    "pool": "practice",
+    "stem": "A mine cost $1,000,000 with 500,000 tons expected. Year 1 extraction was 100,000 tons. At the start of Year 2, remaining reserves are revised to 500,000 tons, and 125,000 tons are extracted. What is Year 2 depletion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$250,000, the midpoint",
+        "explanation": "Use the revised rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$156,250",
+        "explanation": "Use the remaining cost.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$100,000",
+        "explanation": "Use the tons extracted.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$200,000",
+        "explanation": "Correct. $800,000 ÷ 500,000 × 125,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A change in reserve estimates is prospective: remaining cost ÷ revised remaining reserves.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-dep-19",
+    "pool": "practice",
+    "stem": "A tenant installs $120,000 of improvements with a 10-year life. The lease has 6 years left, with no renewal option or purchase option. What is annual amortization?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Correct. Over the shorter 6-year lease term."
+      },
+      {
+        "id": "b",
+        "text": "$12,000",
+        "explanation": "Use the shorter lease term.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "Divide by the shorter period.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "They're amortized.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Leasehold improvements are amortized over the shorter of their useful life or the remaining lease term.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-dep-20",
+    "pool": "practice",
+    "stem": "Equipment is fully depreciated but still in use. How is it reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Removed from the books entirely",
+        "explanation": "It's still in use.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "At cost less full depreciation",
+        "explanation": "Correct. No further depreciation is taken."
+      },
+      {
+        "id": "c",
+        "text": "Written up to its fair value",
+        "explanation": "No write-ups under GAAP.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Depreciation continues as before",
+        "explanation": "It's fully depreciated.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Fully depreciated assets in use remain on the books at cost and accumulated depreciation, with no further expense.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

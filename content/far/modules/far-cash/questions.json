@@ -615,5 +615,177 @@
     "explanation": "Overdrafts are offset against cash in other accounts at the same bank; overdrafts at banks with no offsetting balance are current liabilities.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "far-cash-16",
+    "pool": "practice",
+    "stem": "At year-end, a company holds customer checks dated next February. How are they reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As cash on hand",
+        "explanation": "They aren't negotiable yet.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As cash equivalents",
+        "explanation": "Not short-term investments.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Not reported at all",
+        "explanation": "They're receivables.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As receivables",
+        "explanation": "Correct. Postdated checks can't be deposited yet."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Postdated checks received are receivables until they can be deposited.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "far-cash-17",
+    "pool": "practice",
+    "stem": "A $500 imprest petty cash fund has receipts of $420 and $70 of cash on hand. What amount replenishes the fund?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$430",
+        "explanation": "Correct. $500 − $70; there's a $10 shortage."
+      },
+      {
+        "id": "b",
+        "text": "$420",
+        "explanation": "Include the $10 shortage.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$490",
+        "explanation": "Replenish to $500.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$500",
+        "explanation": "Some cash remains.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Replenishment restores the fund to $500: $500 − $70 = $430, with $10 charged to cash over and short.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-cash-18",
+    "pool": "practice",
+    "stem": "Balance per bank is $45,000. Deposits in transit are $6,000; outstanding checks $9,500. The bank wrongly charged another company's $700 check to this account. What is the correct cash balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,800",
+        "explanation": "The bank error is added back.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$42,200",
+        "explanation": "Correct. $45,000 + $6,000 − $9,500 + $700."
+      },
+      {
+        "id": "c",
+        "text": "$41,500",
+        "explanation": "Include the bank error.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$51,700",
+        "explanation": "Subtract outstanding checks.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Bank errors that understate the bank balance are added to it.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-cash-19",
+    "pool": "practice",
+    "stem": "On December 30 a company wrote and recorded $15,000 of supplier checks but held them until January. How should year-end cash be reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Report cash as recorded",
+        "explanation": "Unmailed checks aren't paid.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Disclose it only",
+        "explanation": "The balances are adjusted.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Add the $15,000 back to cash",
+        "explanation": "Correct. And restore accounts payable."
+      },
+      {
+        "id": "d",
+        "text": "Show them as outstanding checks",
+        "explanation": "They weren't issued.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Checks written but not mailed at year-end are added back to cash and accounts payable.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-cash-20",
+    "pool": "practice",
+    "stem": "A U.S. company holds €10,000 in a German bank account. How is it reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As an investment, at historical rate",
+        "explanation": "Foreign currency is cash.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As cash, at the deposit-date rate",
+        "explanation": "Use the current rate.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "Excluded from the balance sheet",
+        "explanation": "It is an asset, not an expense.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As cash, at the year-end spot rate",
+        "explanation": "Correct. Foreign currency on hand is cash."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Foreign currency balances are cash, remeasured at the current exchange rate.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]

@@ -618,5 +618,180 @@
     "skill": "application",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "far-eps-17",
+    "pool": "practice",
+    "stem": "On January 1, 100,000 shares were outstanding. On April 1, 12,000 were repurchased; on October 1, 20,000 were issued. What is the weighted-average share count?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "108,000",
+        "explanation": "Weight by time.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "88,000",
+        "explanation": "Weight the repurchase by 9/12.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "96,000",
+        "explanation": "Correct. 100,000 − 9,000 + 5,000."
+      },
+      {
+        "id": "d",
+        "text": "101,000",
+        "explanation": "Weight both changes.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Weighted shares = 100,000 − 12,000 × 9/12 + 20,000 × 3/12.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-eps-18",
+    "pool": "practice",
+    "stem": "Net income is $500,000. Cumulative preferred dividends of $50,000 weren't declared. 100,000 common shares were outstanding. What is basic EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5.00",
+        "explanation": "Deduct cumulative dividends.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$4.00",
+        "explanation": "Deduct only one year.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$5.50",
+        "explanation": "Dividends are subtracted.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$4.50",
+        "explanation": "Correct. Cumulative dividends are deducted even if undeclared."
+      }
+    ],
+    "answer": "d",
+    "explanation": "For cumulative preferred, the current year's dividend is deducted whether or not declared.",
+    "skill": "analysis",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-eps-19",
+    "pool": "practice",
+    "stem": "Basic EPS is $2.00. Convertible preferred with $100,000 of dividends converts into 40,000 shares. How does it affect diluted EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's excluded as antidilutive",
+        "explanation": "Correct. Incremental EPS is $2.50."
+      },
+      {
+        "id": "b",
+        "text": "It reduces diluted EPS",
+        "explanation": "$2.50 exceeds basic EPS.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It's included regardless",
+        "explanation": "Antidilutive items are excluded.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "It increases diluted EPS",
+        "explanation": "Antidilutive items are excluded.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Incremental EPS ($100,000 ÷ 40,000 = $2.50) exceeds basic EPS, so the security is antidilutive.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-eps-20",
+    "pool": "practice",
+    "stem": "Net income is $300,000 and 100,000 shares are outstanding. Convertible bonds with $50,000 of interest (25% tax rate) convert into 20,000 shares. What is diluted EPS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3.00",
+        "explanation": "That is basic EPS.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$2.81",
+        "explanation": "Correct. $337,500 ÷ 120,000."
+      },
+      {
+        "id": "c",
+        "text": "$2.92",
+        "explanation": "Add back after-tax interest.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$2.50",
+        "explanation": "Add back the interest.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "If-converted: add back after-tax interest ($37,500) and add 20,000 shares.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-eps-21",
+    "pool": "practice",
+    "stem": "A company had 200,000 shares on January 1 and issued 60,000 shares on September 1 to acquire a business. What is the weighted-average share count?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "260,000",
+        "explanation": "Weight from the issue date.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "200,000",
+        "explanation": "Include the new shares.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "220,000",
+        "explanation": "Correct. 60,000 × 4/12 added."
+      },
+      {
+        "id": "d",
+        "text": "240,000",
+        "explanation": "They were outstanding 4 months.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Shares issued in a business combination are weighted from the acquisition date.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
   }
 ]

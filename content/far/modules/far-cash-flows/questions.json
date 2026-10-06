@@ -614,5 +614,179 @@
     "skill": "application",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "far-scf-17",
+    "pool": "practice",
+    "stem": "Net income is $200,000. Depreciation is $30,000; gain on equipment sale $10,000; receivables up $15,000; inventory down $8,000; payables down $12,000. What is operating cash flow (indirect)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$201,000",
+        "explanation": "Correct. 200 + 30 − 10 − 15 + 8 − 12."
+      },
+      {
+        "id": "b",
+        "text": "$211,000",
+        "explanation": "Subtract the gain.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "$225,000",
+        "explanation": "Payables decreased.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$185,000",
+        "explanation": "Inventory decreased.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Add noncash expenses, subtract gains, and adjust for working-capital changes.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-scf-18",
+    "pool": "practice",
+    "stem": "Dividends declared were $80,000, and dividends payable increased by $10,000. What is the financing outflow for dividends?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Some were unpaid.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$70,000",
+        "explanation": "Correct. $80,000 − $10,000 not yet paid."
+      },
+      {
+        "id": "c",
+        "text": "$90,000",
+        "explanation": "The payable increased.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "That is the payable change.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Dividends paid = dividends declared − increase in dividends payable.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "far-scf-19",
+    "pool": "practice",
+    "stem": "An equity-method investor receives a $50,000 dividend. Cumulative equity earnings are $40,000, and no prior distributions were received. Under the cumulative earnings approach, how is the dividend classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All $50,000 as operating",
+        "explanation": "Only up to cumulative earnings.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "All $50,000 as investing",
+        "explanation": "Part is a return on investment.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$40,000 op.; $10,000 investing",
+        "explanation": "Correct. The excess is a return of investment."
+      },
+      {
+        "id": "d",
+        "text": "All $50,000 as financing",
+        "explanation": "Not a financing item.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "ASU 2016-15: distributions up to cumulative equity earnings are operating; the excess is investing.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-scf-20",
+    "pool": "practice",
+    "stem": "Income tax expense is $90,000. Taxes payable decreased by $5,000, and the deferred tax liability increased by $8,000. How much cash was paid for income taxes?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$95,000",
+        "explanation": "The DTL increase is noncash.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$90,000",
+        "explanation": "Adjust for the balance changes.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$77,000",
+        "explanation": "The payable decreased.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$87,000",
+        "explanation": "Correct. $90,000 − $8,000 + $5,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Current tax = $90,000 − $8,000 deferred = $82,000; paying down payables adds $5,000.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-scf-21",
+    "pool": "practice",
+    "stem": "A company receives insurance proceeds for a warehouse destroyed by fire. How are they classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As investing inflows",
+        "explanation": "Correct. They relate to a productive asset."
+      },
+      {
+        "id": "b",
+        "text": "As operating inflows",
+        "explanation": "They aren't for inventory or operations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As financing inflows",
+        "explanation": "Not a financing item.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As noncash disclosures",
+        "explanation": "Cash was received.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ASU 2016-15: insurance proceeds are classified by the nature of the loss; for a building, investing.",
+    "skill": "application",
+    "difficulty": 2
   }
 ]
