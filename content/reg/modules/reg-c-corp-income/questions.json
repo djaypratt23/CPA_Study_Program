@@ -793,5 +793,454 @@
     "explanation": "§267(a)(2): an accrual-basis payer can't deduct amounts owed to a related cash-basis payee until the payee includes them.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "reg-cc-21",
+    "pool": "practice",
+    "stem": "A corporation has $70,000 of taxable income before the DRD, including $100,000 of dividends from a 10%-owned domestic corporation. What is the DRD?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "The taxable income limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$65,000",
+        "explanation": "The 50% rate applies.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$35,000",
+        "explanation": "Correct. The 50% DRD is limited to 50% of taxable income; no NOL results."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A DRD is allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Full DRD ($50,000) wouldn't create an NOL, so the limit of 50% × $70,000 applies.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-22",
+    "pool": "practice",
+    "stem": "A corporation donates publicly traded stock held 3 years (basis $20,000; FMV $50,000) to a public charity. Within the 10% limit, what is the deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "FMV applies to capital gain property.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "That's the appreciation.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Correct. Long-term capital gain property is deducted at FMV."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Corporate gifts of long-term capital gain property to public charities are generally deducted at FMV.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-23",
+    "pool": "practice",
+    "stem": "A C corporation carries back a net capital loss to a prior year. How is it treated there?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a short-term capital loss",
+        "explanation": "Correct. Corporate capital loss carryovers are short-term."
+      },
+      {
+        "id": "b",
+        "text": "As an ordinary loss",
+        "explanation": "Capital losses stay capital.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As a long-term capital loss",
+        "explanation": "They become short-term.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As an NOL",
+        "explanation": "They aren't NOLs.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Corporate net capital losses carried back or forward are treated as short-term capital losses.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cc-24",
+    "pool": "practice",
+    "stem": "Book net income is $300,000 after $60,000 of federal income tax expense. It includes $10,000 of municipal interest and $5,000 of fines. What is taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$295,000",
+        "explanation": "Add back the tax expense.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$355,000",
+        "explanation": "Correct. 300,000 + 60,000 − 10,000 + 5,000."
+      },
+      {
+        "id": "c",
+        "text": "$365,000",
+        "explanation": "Subtract the municipal interest.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$345,000",
+        "explanation": "Add back the fines.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Federal income tax and fines are nondeductible; municipal interest is excluded.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-25",
+    "pool": "practice",
+    "stem": "A personal service corporation wants a June 30 fiscal year without a business purpose. What applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Any fiscal year is allowed",
+        "explanation": "PSCs are restricted.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "It must use a 52–53 week year",
+        "explanation": "That isn't required.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "It generally must use a calendar year",
+        "explanation": "Correct. PSCs need a business purpose or §444 election."
+      },
+      {
+        "id": "d",
+        "text": "It must use the owners' years",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Personal service corporations must use a calendar year unless they show a business purpose or make a §444 election.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cc-26",
+    "pool": "practice",
+    "stem": "A C corporation with $40,000 of taxable income (before §179) elects $60,000 of §179 expense. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All $60,000 deducted now",
+        "explanation": "§179 can't create a loss.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Nothing deducted this year",
+        "explanation": "Part is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$40,000 now; $20,000 lost",
+        "explanation": "The excess carries forward.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$40,000 now; $20,000 later",
+        "explanation": "Correct. §179 is limited to business taxable income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The §179 deduction can't exceed taxable income from active business; the excess carries forward.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-27",
+    "pool": "practice",
+    "stem": "A corporation pays $500,000 to a government agency to settle a violation: $300,000 is identified in the order as restitution and $200,000 as a fine. What is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000",
+        "explanation": "Correct. Identified restitution may be deducted; fines can't."
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "The fine isn't deductible.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "The amounts are reversed.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Restitution may be deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§162(f) disallows fines but allows amounts identified as restitution or remediation in the order.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-28",
+    "pool": "practice",
+    "stem": "A public company pays its CEO a $1,500,000 salary. How much is nondeductible under §162(m)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "§162(m) applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$500,000",
+        "explanation": "Correct. Compensation over $1 million to a covered employee is disallowed."
+      },
+      {
+        "id": "c",
+        "text": "$1,500,000",
+        "explanation": "Only the excess is disallowed.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$1,000,000",
+        "explanation": "That's the deductible part.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§162(m) limits the deduction for a covered employee's compensation to $1 million per year.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-29",
+    "pool": "practice",
+    "stem": "A C corporation has $250,000 of 2025 taxable income before its NOL deduction and a $300,000 NOL carryforward from 2021. What is its NOL deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$250,000",
+        "explanation": "The 80% limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$300,000",
+        "explanation": "Limited by income.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "Correct. Limited to 80% of taxable income."
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Post-2017 NOLs offset only 80% of taxable income.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cc-30",
+    "pool": "practice",
+    "stem": "A new corporation incurs costs to draft its charter and costs to print and sell stock. How are the stock issuance costs treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deducted up to $5,000",
+        "explanation": "That's for organizational costs.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Amortized over 180 months",
+        "explanation": "That's for organizational costs.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Expensed as incurred",
+        "explanation": "They aren't deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Not organizational costs",
+        "explanation": "Correct. Stock issuance costs reduce paid-in capital."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Costs of issuing or selling stock aren't organizational expenditures and aren't deductible or amortizable.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cc-31",
+    "pool": "practice",
+    "stem": "What is the federal income tax rate on a C corporation's taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "35%",
+        "explanation": "That was the pre-2018 top rate.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "15%",
+        "explanation": "That is not the rate.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "21%",
+        "explanation": "Correct. The rate is a flat 21%."
+      },
+      {
+        "id": "d",
+        "text": "28%",
+        "explanation": "That is not the rate.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "C corporations pay a flat 21% federal income tax.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-cc-32",
+    "pool": "practice",
+    "stem": "What dividends received deduction applies to dividends from a corporation owned less than 20%?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "65%",
+        "explanation": "That's for 20% to under 80%.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "100%",
+        "explanation": "That's for 80% or more.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "70%",
+        "explanation": "That rate was repealed.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "50%",
+        "explanation": "Correct. Under 20% ownership, the DRD is 50%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The DRD is 50% (under 20%), 65% (20% to under 80%) and 100% (80% or more).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cc-33",
+    "pool": "practice",
+    "stem": "For 2025, what is the general limit on a C corporation's charitable contribution deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "10% of taxable income",
+        "explanation": "Correct. The 2025 limit is 10% of modified taxable income."
+      },
+      {
+        "id": "b",
+        "text": "25% of taxable income",
+        "explanation": "That's for certain food gifts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "50% of taxable income",
+        "explanation": "That's an individual limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "60% of taxable income",
+        "explanation": "That's an individual limit.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Corporate charitable deductions are generally limited to 10% of taxable income before certain items, with a 5-year carryforward.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

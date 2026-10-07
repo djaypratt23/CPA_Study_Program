@@ -801,5 +801,451 @@
     "explanation": "The bonus depreciation election out applies to all property in a recovery class placed in service that year.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-cr2-16",
+    "pool": "practice",
+    "stem": "A calendar-year business's only 2025 acquisition is $100,000 of 5-year equipment placed in service in November. It elects out of bonus and takes no §179. The mid-quarter Q4 first-year rate is 5%. What is 2025 depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Correct. Over 40% placed in Q4 triggers mid-quarter: 100,000 × 5%."
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "That's the half-year rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "That's a full DDB year.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Depreciation starts in 2025.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "When more than 40% of personal property is placed in service in Q4, the mid-quarter convention applies.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-17",
+    "pool": "practice",
+    "stem": "A residential rental building (cost $330,000, excluding land) is placed in service in July. What is first-year depreciation under the mid-month convention?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000",
+        "explanation": "Prorate for mid-month.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$5,500",
+        "explanation": "Correct. 330,000 ÷ 27.5 = 12,000 × 5.5/12."
+      },
+      {
+        "id": "c",
+        "text": "$6,000",
+        "explanation": "Use 5.5 months.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$4,231",
+        "explanation": "That uses 39 years.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Residential rental property uses 27.5-year straight-line with the mid-month convention.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-18",
+    "pool": "practice",
+    "stem": "A nonresidential building (cost $780,000, excluding land) is placed in service in October. What is first-year depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Apply the mid-month convention.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Use 2.5 months, not 3.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$4,167",
+        "explanation": "Correct. 780,000 ÷ 39 = 20,000 × 2.5/12."
+      },
+      {
+        "id": "d",
+        "text": "$7,091",
+        "explanation": "That uses 27.5 years.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Nonresidential real property uses 39-year straight-line with the mid-month convention.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-19",
+    "pool": "practice",
+    "stem": "For 2025, the §179 limit is $2,500,000, reduced dollar for dollar once qualifying purchases exceed $4,000,000. A company places $4,300,000 of equipment in service. What is its maximum §179 deduction (before the income limit)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,500,000",
+        "explanation": "The phase-down applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$4,300,000",
+        "explanation": "The limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$1,900,000",
+        "explanation": "Recompute the reduction.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$2,200,000",
+        "explanation": "Correct. Reduced by the $300,000 excess."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The §179 limit falls by the amount qualifying property exceeds the investment threshold.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr2-20",
+    "pool": "practice",
+    "stem": "A car is used 45% for business in 2025, its first year. Which depreciation method is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "ADS straight-line only",
+        "explanation": "Correct. Listed property at 50% or less business use can't use accelerated methods."
+      },
+      {
+        "id": "b",
+        "text": "MACRS 200% DB with bonus",
+        "explanation": "Business use is too low.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "§179 up to the luxury auto cap",
+        "explanation": "Not allowed at 45%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No depreciation at all",
+        "explanation": "ADS is allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Listed property used 50% or less in business must use the alternative depreciation system.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cr2-21",
+    "pool": "practice",
+    "stem": "A business buys used equipment from an unrelated seller in March 2025. Is it eligible for bonus depreciation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, only new property qualifies",
+        "explanation": "Used property can qualify.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, used property can qualify",
+        "explanation": "Correct. Used property from unrelated parties qualifies."
+      },
+      {
+        "id": "c",
+        "text": "Only if under $2,500",
+        "explanation": "That isn't what the rule says.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Only for real property",
+        "explanation": "Bonus applies to personal property.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Bonus depreciation applies to used property the taxpayer didn't previously use, acquired from an unrelated party.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cr2-22",
+    "pool": "practice",
+    "stem": "A business installs a $40,000 perimeter fence around its land. How is the cost recovered?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Not depreciated, as land",
+        "explanation": "Fencing wears out.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Over 39 years with the building",
+        "explanation": "It's separate from buildings.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "As 15-year land improvements",
+        "explanation": "Correct. Fencing is a land improvement."
+      },
+      {
+        "id": "d",
+        "text": "Expensed immediately",
+        "explanation": "It's a capital cost.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Land improvements such as fences and paving are 15-year MACRS property.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cr2-23",
+    "pool": "practice",
+    "stem": "A buyer acquires a business and pays $90,000 for the seller's 3-year covenant not to compete. How is it amortized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Over 3 years",
+        "explanation": "§197 overrides the term.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Expensed immediately",
+        "explanation": "It's capitalized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Not amortized",
+        "explanation": "It's amortizable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Over 15 years",
+        "explanation": "Correct. Covenants in a business acquisition are §197 intangibles."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A covenant not to compete entered into with an acquisition is a §197 intangible amortized over 15 years.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cr2-24",
+    "pool": "practice",
+    "stem": "In 2025 a company pays $400,000 of domestic research wages and $100,000 of foreign research costs. How are they treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Domestic deducted; foreign amortized",
+        "explanation": "Correct. §174A allows current deduction for domestic research."
+      },
+      {
+        "id": "b",
+        "text": "Both deducted in 2025",
+        "explanation": "Foreign research is amortized.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Both amortized over 5 years",
+        "explanation": "Domestic is now deductible.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "Both amortized over 15 years",
+        "explanation": "Domestic is deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "For tax years beginning after 2024, domestic research is deductible under §174A; foreign research stays amortized over 15 years.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cr2-25",
+    "pool": "practice",
+    "stem": "A company spends $500,000 to add an elevator and enlarge an existing office building. Is it qualified improvement property?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, any interior work qualifies",
+        "explanation": "Exclusions apply.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "No, enlargements and elevators are excluded",
+        "explanation": "Correct. QIP excludes these items."
+      },
+      {
+        "id": "c",
+        "text": "Yes, if placed in service after 2017",
+        "explanation": "The exclusions still apply.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only if bonus is elected",
+        "explanation": "That isn't the test.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "QIP is interior work on nonresidential buildings, excluding enlargements, elevators and escalators, and internal structural framework.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cr2-26",
+    "pool": "practice",
+    "stem": "For property placed in service in 2025, what is the maximum §179 expense deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,250,000",
+        "explanation": "That was the prior limit.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$1,160,000",
+        "explanation": "That was the 2023 limit.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$2,500,000",
+        "explanation": "Correct. The 2025 limit is $2.5 million."
+      },
+      {
+        "id": "d",
+        "text": "$4,000,000",
+        "explanation": "That's the phase-out threshold.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For 2025, the §179 limit is $2,500,000, phased out dollar-for-dollar above $4,000,000 of purchases.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-cr2-27",
+    "pool": "practice",
+    "stem": "What is the MACRS recovery period for residential rental property?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "39 years",
+        "explanation": "That's nonresidential real property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "15 years",
+        "explanation": "That's land improvements.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "40 years",
+        "explanation": "That's the ADS period.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "27.5 years",
+        "explanation": "Correct. Residential rental property uses 27.5 years."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Residential rental property is depreciated straight-line over 27.5 years.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-cr2-28",
+    "pool": "practice",
+    "stem": "Which convention applies to nonresidential real property under MACRS?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Mid-month",
+        "explanation": "Correct. Real property uses mid-month."
+      },
+      {
+        "id": "b",
+        "text": "Half-year",
+        "explanation": "That's for personal property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Mid-quarter",
+        "explanation": "That's for some personal property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Full-month",
+        "explanation": "Not a MACRS convention.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Residential and nonresidential real property use the mid-month convention.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

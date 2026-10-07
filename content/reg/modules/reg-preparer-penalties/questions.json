@@ -786,5 +786,486 @@
     "explanation": "For non-tax-shelter positions, a disclosed position with a reasonable basis avoids the §6694(a) penalty.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "reg-pen-21",
+    "pool": "practice",
+    "stem": "A return showing $10,000 of unpaid tax is filed 5 months late, with no extension, and the tax is paid with it. What are the combined failure-to-file and failure-to-pay penalties?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,500",
+        "explanation": "Correct. FTF 4.5% × 5 = $2,250 plus FTP 0.5% × 5 = $250."
+      },
+      {
+        "id": "b",
+        "text": "$2,750",
+        "explanation": "FTF is reduced by FTP in the same months.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$2,250",
+        "explanation": "Add the failure-to-pay penalty.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$500",
+        "explanation": "Add the failure-to-file penalty.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The combined rate is 5% a month; the FTF portion (4.5%) maxes out after 5 months.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pen-22",
+    "pool": "practice",
+    "stem": "A taxpayer files on time but pays $10,000 of tax 10 months after the due date. What failure-to-pay penalty applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "FTP applies to late payment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$500",
+        "explanation": "Correct. 0.5% × 10 months."
+      },
+      {
+        "id": "c",
+        "text": "$2,500",
+        "explanation": "No FTF; the return was on time.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$1,000",
+        "explanation": "The rate is 0.5% a month.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The failure-to-pay penalty is 0.5% per month, up to 25%.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pen-23",
+    "pool": "practice",
+    "stem": "A taxpayer gets an extension, pays nothing by April 15 and pays $8,000 with the return on October 15. What failure-to-pay penalty applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "The extension covers filing only.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$1,800",
+        "explanation": "No FTF; the return was timely.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$240",
+        "explanation": "Correct. An extension to file doesn't extend time to pay: 0.5% × 6."
+      },
+      {
+        "id": "d",
+        "text": "$400",
+        "explanation": "Recompute the months.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Failure-to-pay penalties run from the original due date, even with a filing extension.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pen-24",
+    "pool": "practice",
+    "stem": "An individual understates tax by $4,000; the correct tax is $30,000. Is the understatement \"substantial\" for the accuracy-related penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, it exceeds 10% of tax",
+        "explanation": "The $5,000 floor applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, any understatement counts",
+        "explanation": "A threshold applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "Only with negligence",
+        "explanation": "Substantial is a separate test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "No, it's below $5,000",
+        "explanation": "Correct. The threshold is the greater of 10% of correct tax or $5,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "For individuals, an understatement is substantial if it exceeds the greater of 10% of the correct tax or $5,000.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pen-25",
+    "pool": "practice",
+    "stem": "A taxpayer's position (not a tax shelter) lacks substantial authority but has a reasonable basis and is adequately disclosed. What is the effect on the substantial understatement penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No penalty applies to that portion",
+        "explanation": "Correct. Disclosure with reasonable basis reduces it."
+      },
+      {
+        "id": "b",
+        "text": "The full penalty still applies",
+        "explanation": "Disclosure helps.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The penalty doubles",
+        "explanation": "Not the effect.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "It converts to a fraud penalty",
+        "explanation": "There is no fraud here.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "An understatement is reduced for positions with substantial authority, or with reasonable basis and adequate disclosure.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pen-26",
+    "pool": "practice",
+    "stem": "A $40,000 underpayment is entirely due to fraud. What civil penalty applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$38,000",
+        "explanation": "Penalties don't stack on the same portion.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Correct. 75% of the fraud portion; the accuracy penalty doesn't stack."
+      },
+      {
+        "id": "c",
+        "text": "$8,000",
+        "explanation": "That's the accuracy rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$40,000",
+        "explanation": "The rate is 75%.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The civil fraud penalty is 75% of the underpayment due to fraud, and the accuracy penalty doesn't apply to that portion.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pen-27",
+    "pool": "practice",
+    "stem": "A preparer claims the earned income credit for a client without making the required eligibility inquiries. What applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing, if the credit was right",
+        "explanation": "The penalty is for failing the requirements.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only a client penalty",
+        "explanation": "Preparers are penalized.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A due diligence penalty",
+        "explanation": "Correct. §6695(g) applies to EITC, CTC, AOTC and HOH."
+      },
+      {
+        "id": "d",
+        "text": "A civil fraud penalty on the preparer",
+        "explanation": "Not on these facts.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Preparers must meet due diligence requirements for certain credits and head of household status, per return.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pen-28",
+    "pool": "practice",
+    "stem": "A preparer willfully understates a client's tax and charges a $10,000 fee. What is the §6694(b) penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "75% of the fee is greater.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "The rate is 75%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$1,000",
+        "explanation": "That's §6694(a).",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$7,500",
+        "explanation": "Correct. The greater of $5,000 or 75% of the fee."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§6694(b) imposes the greater of $5,000 or 75% of the income derived from the return.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pen-29",
+    "pool": "practice",
+    "stem": "A taxpayer willfully evades tax by hiding income through false records. Which criminal charge fits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Tax evasion, a felony",
+        "explanation": "Correct. Affirmative acts to evade are a felony."
+      },
+      {
+        "id": "b",
+        "text": "A civil penalty only",
+        "explanation": "Willful evasion is criminal.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Willful failure to file, a misdemeanor",
+        "explanation": "Evasion is more serious.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "No crime if the tax is later paid",
+        "explanation": "That isn't a defense.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "§7201 makes willful attempts to evade tax a felony; willful failure to file is a misdemeanor.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pen-30",
+    "pool": "practice",
+    "stem": "A U.S. person with foreign accounts over $10,000 in aggregate must file an FBAR. When is it due?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "June 30, with no extension allowed",
+        "explanation": "The old rule changed.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "April 15, extended to October 15",
+        "explanation": "Correct. FinCEN Form 114 has an automatic extension."
+      },
+      {
+        "id": "c",
+        "text": "Attached to Form 1040 by its due date",
+        "explanation": "It's filed separately.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "December 31 of the reporting year",
+        "explanation": "Not the deadline.",
+        "trap": "wrong-period"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The FBAR is filed electronically with FinCEN by April 15, with an automatic extension to October 15.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pen-31",
+    "pool": "practice",
+    "stem": "What is the §6694(a) preparer penalty for an unreasonable position?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The greater of $5,000 or 75% of the fee",
+        "explanation": "That's §6694(b).",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "The greater of $1,000 or 50% of the fee",
+        "explanation": "Correct. §6694(a) uses $1,000 or 50%."
+      },
+      {
+        "id": "c",
+        "text": "The greater of $500 or 25% of the fee",
+        "explanation": "Not the penalty.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "A flat $250 per return filed",
+        "explanation": "Not the penalty.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§6694(a) imposes the greater of $1,000 or 50% of the income from the return.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-32",
+    "pool": "practice",
+    "stem": "Who must obtain a preparer tax identification number?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only CPAs and enrolled agents",
+        "explanation": "Every paid preparer needs one.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Only preparers of business returns",
+        "explanation": "Every paid preparer needs one.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Anyone paid to prepare federal returns",
+        "explanation": "Correct. All paid preparers need a PTIN."
+      },
+      {
+        "id": "d",
+        "text": "Only volunteers in VITA programs",
+        "explanation": "Volunteers don't need one.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Every paid preparer of federal tax returns must have a PTIN.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-pen-33",
+    "pool": "practice",
+    "stem": "What is the maximum failure-to-pay penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "5%",
+        "explanation": "That's the monthly combined rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "47.5%",
+        "explanation": "That's the combined maximum.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "50%",
+        "explanation": "That is not the cap.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "25%",
+        "explanation": "Correct. FTP is 0.5% a month up to 25%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The failure-to-pay penalty is 0.5% a month, up to 25% of the unpaid tax.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pen-34",
+    "pool": "practice",
+    "stem": "What is the civil fraud penalty rate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "75%",
+        "explanation": "Correct. Fraud carries a 75% penalty."
+      },
+      {
+        "id": "b",
+        "text": "20%",
+        "explanation": "That's the accuracy penalty.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "40%",
+        "explanation": "That's for gross valuation misstatements.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "100%",
+        "explanation": "That is not the rate.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The civil fraud penalty is 75% of the underpayment attributable to fraud.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

@@ -829,5 +829,488 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "reg-pb-22",
+    "pool": "practice",
+    "stem": "An investor owns 100 shares with a $6,000 basis and receives a 2-for-1 stock split. What is the basis of each share afterward?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60",
+        "explanation": "Spread basis over 200 shares.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0 for the new shares",
+        "explanation": "Basis is allocated to all.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30",
+        "explanation": "Correct. $6,000 ÷ 200 shares."
+      },
+      {
+        "id": "d",
+        "text": "$15",
+        "explanation": "Recompute the ratio.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A nontaxable stock split spreads the original basis across all shares.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-23",
+    "pool": "practice",
+    "stem": "An investor sells shares at a loss and buys identical shares 10 days later, triggering the wash sale rule. What is the holding period of the new shares?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It starts on the new purchase",
+        "explanation": "The period tacks.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It's short-term regardless of dates",
+        "explanation": "The holding period tacks.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It's long-term regardless of dates",
+        "explanation": "It depends on the combined period.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "d",
+        "text": "It includes the old shares' period",
+        "explanation": "Correct. Wash sale replacement shares tack."
+      }
+    ],
+    "answer": "d",
+    "explanation": "In a wash sale, the replacement shares take the old shares' holding period and the disallowed loss is added to basis.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pb-24",
+    "pool": "practice",
+    "stem": "A son gives appreciated stock to his dying father, who dies 8 months later and leaves it back to the son. What is the son's basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The father's basis",
+        "explanation": "Correct. §1014(e) denies a step-up when property returns to the donor within 1 year."
+      },
+      {
+        "id": "b",
+        "text": "FMV at the father's death",
+        "explanation": "§1014(e) applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Zero, since he paid nothing",
+        "explanation": "Basis carries over.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "FMV at the gift date",
+        "explanation": "That isn't what the rule says.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "If appreciated property is given to a decedent within 1 year of death and passes back to the donor, the donor takes the decedent's basis.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pb-25",
+    "pool": "practice",
+    "stem": "A taxpayer trades land (basis $40,000) for a boat worth $55,000 in a taxable exchange. What is her basis in the boat?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "The exchange is taxable.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$55,000",
+        "explanation": "Correct. The FMV of property received in a taxable exchange."
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "That's the gain.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$95,000",
+        "explanation": "Basis is not additive here.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "In a taxable exchange, the basis of property received is its FMV.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-26",
+    "pool": "practice",
+    "stem": "A buyer pays $200,000 for land, plus $3,000 of title insurance, $2,000 of legal fees and $4,000 of the seller's back property taxes. What is her basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "Add the acquisition costs.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$205,000",
+        "explanation": "Include the back taxes.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$209,000",
+        "explanation": "Correct. All are part of cost."
+      },
+      {
+        "id": "d",
+        "text": "$203,000",
+        "explanation": "Include all the costs.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Basis includes the price, title and legal costs, and the seller's taxes the buyer pays.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-27",
+    "pool": "practice",
+    "stem": "A home (cost $300,000) is converted to a rental when worth $250,000. After $20,000 of depreciation, it's sold for $200,000. What is the deductible loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$80,000",
+        "explanation": "Use the lower FMV for loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Subtract depreciation from FMV.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The rental loss is deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "Correct. Loss basis is the lower FMV, less depreciation: $230,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "For converted property, basis for loss is the lower of adjusted basis or FMV at conversion, adjusted afterward.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-28",
+    "pool": "practice",
+    "stem": "A corporation distributes a dividend in property (FMV $12,000) to an individual shareholder. What is her basis in the property?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000",
+        "explanation": "Correct. Basis equals FMV."
+      },
+      {
+        "id": "b",
+        "text": "The corporation's basis",
+        "explanation": "No carryover for shareholders.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "She has a basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Half of FMV",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A shareholder's basis in property received as a distribution is its FMV.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-29",
+    "pool": "practice",
+    "stem": "A buyer pays $500,000 for land and a building. Appraised values: land $150,000; building $450,000. What is the building's basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$450,000",
+        "explanation": "Allocate the actual price.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$375,000",
+        "explanation": "Correct. Allocate by relative FMV: 450/600."
+      },
+      {
+        "id": "c",
+        "text": "$350,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$125,000",
+        "explanation": "That's the land.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A lump-sum purchase price is allocated by relative fair market values.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-30",
+    "pool": "practice",
+    "stem": "An investor sells mutual fund shares and has bought shares at different prices over time. Which basis method may she use?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only FIFO",
+        "explanation": "Average cost is permitted.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Only LIFO",
+        "explanation": "That isn't permitted.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Average cost, if elected",
+        "explanation": "Correct. Average cost is allowed for fund shares."
+      },
+      {
+        "id": "d",
+        "text": "The highest-cost shares, always",
+        "explanation": "Requires identification.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For mutual fund shares, taxpayers may use average cost, FIFO or specific identification.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-pb-31",
+    "pool": "practice",
+    "stem": "A father sells land (basis $30,000; FMV $100,000) to his daughter for $20,000. What is the daughter's basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "The donor's basis is higher.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "No FMV basis in a part-gift.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$50,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "Correct. The greater of what she paid or the father's basis."
+      }
+    ],
+    "answer": "d",
+    "explanation": "In a part-gift, part-sale, the donee's basis is the greater of the amount paid or the donor's basis (plus any gift tax adjustment).",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-pb-32",
+    "pool": "practice",
+    "stem": "What is the general basis of inherited property?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The decedent's adjusted basis",
+        "explanation": "That's for gifts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "FMV at the date of death",
+        "explanation": "Correct. Inherited property gets a stepped-up basis."
+      },
+      {
+        "id": "c",
+        "text": "Zero",
+        "explanation": "It has a basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Probate value less any debts",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Inherited property generally takes a basis equal to its fair market value at the date of death (or alternate valuation date).",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pb-33",
+    "pool": "practice",
+    "stem": "What is the holding period of inherited property?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It starts at the date of death",
+        "explanation": "It's automatically long-term.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It starts when it's distributed",
+        "explanation": "It's automatically long-term.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Always long-term",
+        "explanation": "Correct. Inherited property is always long-term."
+      },
+      {
+        "id": "d",
+        "text": "It includes the decedent's period",
+        "explanation": "Long-term regardless.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Inherited property is treated as held more than 1 year.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-pb-34",
+    "pool": "practice",
+    "stem": "Gift property is sold at a loss, and its FMV at the gift was below the donor's basis. What is the basis for loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The donor's adjusted basis",
+        "explanation": "That's for gain.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Zero",
+        "explanation": "It has a basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The amount realized on the sale",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "FMV at the gift date",
+        "explanation": "Correct. The lower FMV applies for loss."
+      }
+    ],
+    "answer": "d",
+    "explanation": "When FMV at the gift is below the donor's basis, the donee's basis for loss is that FMV.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-pb-35",
+    "pool": "practice",
+    "stem": "When is the estate tax alternate valuation date?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "6 months after death",
+        "explanation": "Correct. Alternate valuation is 6 months after death."
+      },
+      {
+        "id": "b",
+        "text": "3 months after death",
+        "explanation": "That is not the date.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "9 months after death",
+        "explanation": "That's the return due date.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "1 year after death",
+        "explanation": "That is not the date.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "An executor may elect to value the estate 6 months after death if it lowers both value and tax.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

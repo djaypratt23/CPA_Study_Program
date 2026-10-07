@@ -797,5 +797,486 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "reg-id-21",
+    "pool": "practice",
+    "stem": "On a doctor's advice, a taxpayer installs a $30,000 therapy pool that increases her home's value by $20,000. What medical expense counts (before the 7.5% floor)?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Correct. Only the cost above the value increase."
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Reduce by the value increase.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "That's the value increase.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Part qualifies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Capital expenses for medical care count to the extent they exceed the increase in the property's value.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-id-22",
+    "pool": "practice",
+    "stem": "A taxpayer travels for out-of-town medical treatment and pays $180 a night for 5 nights of lodging. How much lodging is a medical expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$900",
+        "explanation": "The $50 cap applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$250",
+        "explanation": "Correct. Lodging is limited to $50 per night per person."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Lodging can qualify.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$450",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Lodging for medical care away from home is deductible up to $50 per night per person.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-id-23",
+    "pool": "practice",
+    "stem": "A taxpayer with AGI of $100,000 gives publicly traded stock (FMV $30,000; held 5 years) to a private nonoperating foundation. What is the current deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "The 20% limit applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$8,000",
+        "explanation": "Basis isn't used for public stock.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "Correct. Limited to 20% of AGI; $10,000 carries forward."
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "That isn't the limit.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Qualified appreciated stock to a private foundation is deducted at FMV but limited to 20% of AGI.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-id-24",
+    "pool": "practice",
+    "stem": "A collector gives a painting (FMV $40,000; basis $15,000; held 6 years) to a hospital, which will sell it. What is the deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Unrelated use limits it.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$25,000",
+        "explanation": "That's the appreciation.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "A deduction is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$15,000",
+        "explanation": "Correct. Unrelated-use tangible property is limited to basis."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Tangible personal property put to an unrelated use is deducted at basis.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-id-25",
+    "pool": "practice",
+    "stem": "A taxpayer's charitable contributions exceed her AGI limit by $8,000 in 2025. What happens to the excess?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It carries forward 5 years",
+        "explanation": "Correct. Excess contributions carry forward."
+      },
+      {
+        "id": "b",
+        "text": "It's lost",
+        "explanation": "It carries forward.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "It carries back 2 years",
+        "explanation": "There's no carryback.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "It carries forward indefinitely",
+        "explanation": "The period is 5 years.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Charitable contributions above the AGI limits carry forward for 5 years.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-id-26",
+    "pool": "practice",
+    "stem": "A taxpayer's investment interest exceeds her net investment income, and she has qualified dividends. What may she elect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deduct all interest without limit",
+        "explanation": "The limit still applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Treat the dividends as investment income",
+        "explanation": "Correct. She gives up the preferential rate on them."
+      },
+      {
+        "id": "c",
+        "text": "Carry the interest back",
+        "explanation": "There's no carryback.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Treat the interest as business expense",
+        "explanation": "That isn't allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Taxpayers may elect to include qualified dividends and net capital gain in investment income, giving up preferential rates.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-id-27",
+    "pool": "practice",
+    "stem": "A homeowner borrows $80,000 on a home equity line and uses it to add a bedroom. Is the interest deductible if she itemizes?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, home equity interest isn't deductible",
+        "explanation": "Use determines treatment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only up to $10,000 of debt",
+        "explanation": "That isn't what the rule says.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "Yes, as acquisition debt",
+        "explanation": "Correct. Debt used to improve the home is acquisition debt."
+      },
+      {
+        "id": "d",
+        "text": "Only if a separate loan",
+        "explanation": "That isn't required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Interest on debt used to buy, build or substantially improve the residence is deductible, within the $750,000 limit.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-id-28",
+    "pool": "practice",
+    "stem": "A joint return has 2025 MAGI of $700,000. The SALT cap is $40,000, reduced by 30% of MAGI over $500,000, but not below $10,000. What is the cap?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "The phase-down applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The floor is $10,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "Correct. The reduction ($60,000) hits the floor."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The SALT cap phases down for high MAGI but not below $10,000.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-id-29",
+    "pool": "practice",
+    "stem": "A homeowner pays $3,000 of points to refinance her home mortgage (not for improvements). How are the points deducted?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Over the loan's term",
+        "explanation": "Correct. Refinancing points are amortized."
+      },
+      {
+        "id": "b",
+        "text": "All in the year paid",
+        "explanation": "That's for purchase loans.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "They aren't deductible at all",
+        "explanation": "They're amortized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Ratably over 5 years",
+        "explanation": "Over the loan term.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Points on a refinancing are generally deducted ratably over the loan's life.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-id-30",
+    "pool": "practice",
+    "stem": "A single doctor with taxable income well above the QBI phase-in range operates her own practice. What QBI deduction is available?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "20% of practice income",
+        "explanation": "SSTBs are excluded above the range.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "None",
+        "explanation": "Correct. SSTB income above the range gets no deduction."
+      },
+      {
+        "id": "c",
+        "text": "Limited by W-2 wages only",
+        "explanation": "Not for SSTBs above the range.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "10% of practice income",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Specified service trade or business income doesn't qualify for QBI once taxable income exceeds the phase-in range.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-id-31",
+    "pool": "practice",
+    "stem": "Medical expenses are deductible to the extent they exceed what percentage of AGI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "10%",
+        "explanation": "That was an earlier floor.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "7.5%",
+        "explanation": "Correct. The floor is 7.5% of AGI."
+      },
+      {
+        "id": "c",
+        "text": "2%",
+        "explanation": "Not the medical floor.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "5%",
+        "explanation": "That is not the floor.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Unreimbursed medical expenses are deductible above 7.5% of AGI.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-id-32",
+    "pool": "practice",
+    "stem": "For 2025, what is the SALT deduction cap for a filer with MAGI under $500,000?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "That's the floor after the phase-down.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "That's for MFS filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Correct. The 2025 cap is $40,000."
+      },
+      {
+        "id": "d",
+        "text": "$50,000",
+        "explanation": "That is not the cap.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For 2025, the SALT cap is $40,000 ($20,000 MFS), reduced by 30% of MAGI over $500,000 but not below $10,000.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-id-33",
+    "pool": "practice",
+    "stem": "What is the AGI limit for cash gifts to public charities?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "50%",
+        "explanation": "That's for other gifts to public charities.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "30%",
+        "explanation": "That's for capital gain property.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "20%",
+        "explanation": "That's for some private foundation gifts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "60%",
+        "explanation": "Correct. Cash gifts to public charities are limited to 60%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Cash contributions to public charities are deductible up to 60% of AGI.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-id-34",
+    "pool": "practice",
+    "stem": "What is the acquisition debt limit for the mortgage interest deduction on debt incurred after 2017?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$750,000",
+        "explanation": "Correct. The limit is $750,000."
+      },
+      {
+        "id": "b",
+        "text": "$1,000,000",
+        "explanation": "That's for pre-2018 debt.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$500,000",
+        "explanation": "That is not the limit.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "That was home equity debt.",
+        "trap": "outdated-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Interest is deductible on up to $750,000 of acquisition debt incurred after December 15, 2017.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]

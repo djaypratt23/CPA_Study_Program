@@ -795,5 +795,486 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "reg-cr-21",
+    "pool": "practice",
+    "stem": "A married couple filing jointly has two qualifying children and MAGI of $430,000. The 2025 credit is $2,200 per child, reduced by $50 per $1,000 of MAGI over $400,000. What is their child tax credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,900",
+        "explanation": "Correct. 4,400 − 30 × $50."
+      },
+      {
+        "id": "b",
+        "text": "$4,400",
+        "explanation": "The phaseout applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$1,500",
+        "explanation": "That's the reduction.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Only part is phased out.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The child tax credit phases out by $50 for each $1,000 (or part) of MAGI above the threshold.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-22",
+    "pool": "practice",
+    "stem": "A single parent pays $4,000 of a first-year student's tuition. Her MAGI is $85,000; the AOTC phases out between $80,000 and $90,000. What is the credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,500",
+        "explanation": "The phaseout applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$1,250",
+        "explanation": "Correct. Half of the $2,500 maximum remains."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "She's mid-range.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "Recompute the AOTC first.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The AOTC is reduced proportionally over the MAGI phaseout range.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-23",
+    "pool": "practice",
+    "stem": "A single taxpayer pays $12,000 of graduate tuition. Her MAGI is $88,000; the lifetime learning credit phases out between $80,000 and $90,000. What is the credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000",
+        "explanation": "The phaseout applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$2,400",
+        "explanation": "Expenses are capped at $10,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "$400",
+        "explanation": "Correct. 20% of the $2,000 maximum remains."
+      },
+      {
+        "id": "d",
+        "text": "$1,600",
+        "explanation": "That's the reduction.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The lifetime learning credit (20% of up to $10,000) phases out over the MAGI range.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-24",
+    "pool": "practice",
+    "stem": "One spouse works; the other is a full-time student all year with no earnings. They pay $5,000 of care for one child. The credit rate is 20%. What is the dependent care credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000",
+        "explanation": "Expenses are capped at $3,000 for one child.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Student spouses have deemed income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$1,200",
+        "explanation": "That's two children's limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$600",
+        "explanation": "Correct. The student spouse is deemed to earn $250 a month, so $3,000 of expenses count."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A spouse who is a full-time student is treated as earning $250 a month (one child) for the earned income limit.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-25",
+    "pool": "practice",
+    "stem": "A taxpayer supports her 20-year-old son, who isn't a student and earns $3,000. He is her qualifying relative. Which credit may she claim for him?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The $500 credit for other dependents",
+        "explanation": "Correct. He's too old for the child tax credit."
+      },
+      {
+        "id": "b",
+        "text": "The $2,200 child tax credit",
+        "explanation": "He's over age 16.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The American opportunity credit",
+        "explanation": "He isn't a student.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "No credit",
+        "explanation": "The other dependent credit applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Dependents who don't qualify for the child tax credit may qualify for the $500 credit for other dependents.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cr-26",
+    "pool": "practice",
+    "stem": "A married taxpayer files separately and isn't a victim of abuse or abandonment. Can she claim the premium tax credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, if income qualifies",
+        "explanation": "MFS filers are generally barred.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No",
+        "explanation": "Correct. Married filing separately is generally ineligible."
+      },
+      {
+        "id": "c",
+        "text": "Yes, for half the amount",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Only if she has children",
+        "explanation": "That isn't the test.",
+        "trap": "irrelevant-fact"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The premium tax credit generally requires married taxpayers to file jointly, with limited exceptions.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cr-27",
+    "pool": "practice",
+    "stem": "A couple pays domestic adoption expenses in 2024; the adoption becomes final in 2025. When can they claim the credit for the 2024 expenses?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In 2024",
+        "explanation": "Wait until the year after payment.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "b",
+        "text": "Only in 2026",
+        "explanation": "The year after payment is 2025.",
+        "trap": "wrong-period"
+      },
+      {
+        "id": "c",
+        "text": "In 2025",
+        "explanation": "Correct. Expenses paid before finalization are taken in the year after payment."
+      },
+      {
+        "id": "d",
+        "text": "Never; it wasn't final",
+        "explanation": "They're allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For domestic adoptions, expenses paid before the year the adoption is final are claimed in the year after they're paid.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cr-28",
+    "pool": "practice",
+    "stem": "In 2025 a homeowner installs a qualifying heat pump costing $8,000. The energy efficient home improvement credit is 30%, with a $2,000 annual cap for heat pumps. What is the credit?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,400",
+        "explanation": "The cap applies.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$1,200",
+        "explanation": "That's the general cap, not the heat pump cap.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "It qualifies in 2025.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "Correct. 30% is $2,400, capped at $2,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The §25C credit is 30% of costs, subject to annual caps, including $2,000 for heat pumps.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "reg-cr-29",
+    "pool": "practice",
+    "stem": "A college junior has a felony drug conviction from last year. Can her parents claim the American opportunity credit for her?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No",
+        "explanation": "Correct. A felony drug conviction disqualifies the student."
+      },
+      {
+        "id": "b",
+        "text": "Yes, if MAGI qualifies",
+        "explanation": "The conviction disqualifies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, for half the credit",
+        "explanation": "That isn't what the rule says.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Only for tuition, not books",
+        "explanation": "She's ineligible.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The AOTC isn't available for a student with a felony drug conviction at the end of the year.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cr-30",
+    "pool": "practice",
+    "stem": "A taxpayer's 8-year-old child has an ITIN but no Social Security number. What credit may be claimed for the child?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The $2,200 child tax credit",
+        "explanation": "An SSN is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The $500 credit for other dependents",
+        "explanation": "Correct. The child tax credit requires an SSN."
+      },
+      {
+        "id": "c",
+        "text": "No credit at all",
+        "explanation": "The other dependent credit applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The earned income credit",
+        "explanation": "It also needs an SSN.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The child tax credit requires a valid SSN for the child; dependents with ITINs may qualify for the $500 credit.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "reg-cr-31",
+    "pool": "practice",
+    "stem": "For 2025, what is the maximum child tax credit per qualifying child?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000",
+        "explanation": "That was the prior amount.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$2,200",
+        "explanation": "Correct. The 2025 CTC is $2,200."
+      },
+      {
+        "id": "c",
+        "text": "$1,700",
+        "explanation": "That's the refundable cap.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$2,500",
+        "explanation": "Not the amount.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The 2025 child tax credit is $2,200 per qualifying child, with a refundable portion of up to $1,700.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-32",
+    "pool": "practice",
+    "stem": "What is the maximum American opportunity tax credit per student per year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000",
+        "explanation": "Add 25% of the next $2,000.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$4,000",
+        "explanation": "That's the expense base.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$2,500",
+        "explanation": "Correct. 100% of the first $2,000 and 25% of the next $2,000."
+      },
+      {
+        "id": "d",
+        "text": "$1,500",
+        "explanation": "Not the amount.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The AOTC is up to $2,500 per student for the first 4 years of college, 40% refundable.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "reg-cr-33",
+    "pool": "practice",
+    "stem": "How is the lifetime learning credit computed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "25% of up to $4,000",
+        "explanation": "Not the formula.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "100% of the first $2,000",
+        "explanation": "That's part of the AOTC.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "50% of up to $5,000",
+        "explanation": "Not the formula.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "20% of up to $10,000",
+        "explanation": "Correct. The maximum is $2,000 per return."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The lifetime learning credit is 20% of up to $10,000 of qualified expenses per return.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "reg-cr-34",
+    "pool": "practice",
+    "stem": "What is the maximum qualifying expense base for the child and dependent care credit with two or more qualifying persons?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,000",
+        "explanation": "Correct. The limit is $3,000 for one, $6,000 for two or more."
+      },
+      {
+        "id": "b",
+        "text": "$3,000",
+        "explanation": "That's for one person.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "That's the FSA exclusion.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "That is not the limit.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Qualifying expenses are capped at $3,000 for one qualifying person and $6,000 for two or more.",
+    "skill": "remembering",
+    "difficulty": 1
   }
 ]
