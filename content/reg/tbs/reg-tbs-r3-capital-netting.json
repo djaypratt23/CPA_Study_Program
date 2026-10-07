@@ -1,0 +1,86 @@
+{
+  "id": "reg-tbs-r3-capital-netting",
+  "section": "REG",
+  "unitId": "reg-u3",
+  "moduleIds": [
+    "reg-capital-gains"
+  ],
+  "pool": "practice",
+  "title": "Capital gain and loss netting — Dana Price",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Dana Price, a single filer, had the following 2025 capital transactions. Complete the netting.",
+  "exhibits": [
+    {
+      "title": "Transactions",
+      "content": "- Short-term capital gain: **$6,000**\n- Short-term capital loss: **$9,000**\n- Short-term capital loss carryforward from 2024: **$2,000**\n- Long-term gain on stock: **$4,000**\n- Long-term loss on stock: **$12,000**\n- Long-term gain on gold coins (collectibles): **$5,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following (enter losses as positive amounts).",
+      "rows": [
+        {
+          "id": "st",
+          "label": "Net short-term capital loss",
+          "answer": 5000,
+          "explanation": "6,000 − 9,000 − 2,000 = **(5,000)**.",
+          "tolerance": 0
+        },
+        {
+          "id": "lt",
+          "label": "Net long-term capital loss",
+          "answer": 3000,
+          "explanation": "4,000 − 12,000 + 5,000 = **(3,000)**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ded",
+          "label": "Capital loss deduction against ordinary income",
+          "answer": 3000,
+          "explanation": "Limited to **3,000** for a single filer.",
+          "tolerance": 0
+        },
+        {
+          "id": "cst",
+          "label": "Short-term capital loss carryforward to 2026",
+          "answer": 2000,
+          "explanation": "The deduction uses short-term losses first: 5,000 − 3,000 = **2,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "clt",
+          "label": "Long-term capital loss carryforward to 2026",
+          "answer": 3000,
+          "explanation": "The **3,000** long-term loss carries forward unused.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Is any of the collectibles gain taxed at 28% this year?",
+          "answer": "No",
+          "explanation": "It was absorbed by long-term losses; there's no net gain."
+        },
+        {
+          "id": "q2",
+          "label": "Do capital loss carryforwards expire for individuals?",
+          "answer": "No",
+          "explanation": "They carry forward indefinitely."
+        }
+      ]
+    }
+  ]
+}

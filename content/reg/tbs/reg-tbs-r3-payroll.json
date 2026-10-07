@@ -1,0 +1,85 @@
+{
+  "id": "reg-tbs-r3-payroll",
+  "section": "REG",
+  "unitId": "reg-u2",
+  "moduleIds": [
+    "reg-federal-regulation"
+  ],
+  "pool": "practice",
+  "title": "Employer payroll taxes and worker status — Bramble Design",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Compute Bramble Design's 2025 employer payroll taxes and classify its workers. The Social Security wage base is **$176,100**; Bramble receives the full 5.4% FUTA credit. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Employees (2025 wages)",
+      "content": "Ana: **$50,000**\nBen: **$180,000**\nCara: **$10,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute Bramble's employer taxes.",
+      "rows": [
+        {
+          "id": "ss",
+          "label": "Employer Social Security tax",
+          "answer": 14638,
+          "explanation": "(50,000 + 176,100 + 10,000) × 6.2% = **14,638**.",
+          "tolerance": 1
+        },
+        {
+          "id": "med",
+          "label": "Employer Medicare tax",
+          "answer": 3480,
+          "explanation": "240,000 × 1.45% = **3,480**; the employer doesn't pay the 0.9% add-on.",
+          "tolerance": 0
+        },
+        {
+          "id": "futa",
+          "label": "Net FUTA tax",
+          "answer": 126,
+          "explanation": "3 × 7,000 × 0.6% = **126**.",
+          "tolerance": 0
+        },
+        {
+          "id": "tot",
+          "label": "Total employer payroll taxes",
+          "answer": 18244,
+          "explanation": "14,638 + 3,480 + 126 = **18,244**.",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "w",
+      "prompt": "Classify each worker.",
+      "options": [
+        "Employee",
+        "Independent contractor"
+      ],
+      "rows": [
+        {
+          "id": "w1",
+          "label": "A designer who works set hours at Bramble's office using Bramble's equipment, trained by Bramble",
+          "answer": "Employee",
+          "explanation": "Behavioral and financial control indicate employment."
+        },
+        {
+          "id": "w2",
+          "label": "A photographer who bids per project, uses her own equipment, serves many clients and invoices Bramble",
+          "answer": "Independent contractor",
+          "explanation": "She controls how the work is done and bears profit or loss."
+        },
+        {
+          "id": "w3",
+          "label": "A receptionist paid hourly with no other clients, supervised daily",
+          "answer": "Employee",
+          "explanation": "Bramble controls the work."
+        }
+      ]
+    }
+  ]
+}

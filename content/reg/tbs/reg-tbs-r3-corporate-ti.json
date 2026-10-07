@@ -1,0 +1,70 @@
+{
+  "id": "reg-tbs-r3-corporate-ti",
+  "section": "REG",
+  "unitId": "reg-u6",
+  "moduleIds": [
+    "reg-c-corp-income"
+  ],
+  "pool": "practice",
+  "title": "Corporate taxable income — Harrow Industries",
+  "minutes": 25,
+  "skill": "application",
+  "instructions": "Compute Harrow Industries' 2025 taxable income and tax from its book income. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Book income before federal income tax: $900,000",
+      "content": "It includes or reflects:\n- Dividends from a 25%-owned domestic corporation: **$100,000**\n- Municipal bond interest: **$20,000**\n- Fines paid to a state agency: **$10,000** (deducted)\n- Business meals: **$30,000** (deducted)\n- Client entertainment: **$8,000** (deducted)\n- Charitable contributions: **$120,000** (deducted)\n- Net capital loss: **$15,000** (deducted)"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "pre",
+          "label": "Taxable income before the charitable deduction and DRD",
+          "answer": 1048000,
+          "explanation": "900,000 − 20,000 + 10,000 + 15,000 + 8,000 + 120,000 + 15,000 = **1,048,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ch",
+          "label": "Charitable contribution deduction",
+          "answer": 104800,
+          "explanation": "Limited to 10% × 1,048,000 = **104,800**.",
+          "tolerance": 0
+        },
+        {
+          "id": "cf",
+          "label": "Charitable contribution carryforward",
+          "answer": 15200,
+          "explanation": "120,000 − 104,800 = **15,200** (5 years).",
+          "tolerance": 0
+        },
+        {
+          "id": "drd",
+          "label": "Dividends-received deduction",
+          "answer": 65000,
+          "explanation": "65% × 100,000 = **65,000**; the taxable income limit isn't binding.",
+          "tolerance": 0
+        },
+        {
+          "id": "ti",
+          "label": "Taxable income",
+          "answer": 878200,
+          "explanation": "1,048,000 − 104,800 − 65,000 = **878,200**.",
+          "tolerance": 0
+        },
+        {
+          "id": "tax",
+          "label": "Regular federal income tax",
+          "answer": 184422,
+          "explanation": "878,200 × 21% = **184,422**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

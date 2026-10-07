@@ -1,0 +1,80 @@
+{
+  "id": "reg-tbs-r3-liability",
+  "section": "REG",
+  "unitId": "reg-u1",
+  "moduleIds": [
+    "reg-accountant-liability"
+  ],
+  "pool": "practice",
+  "title": "Accountant liability to third parties — Mercer & Co.",
+  "minutes": 15,
+  "skill": "analysis",
+  "instructions": "Mercer & Co. negligently (not recklessly) audited Fulton Inc. Fulton's CFO told Mercer that the statements would be given to First Bank for a loan. Decide whether each plaintiff can recover for its losses under the approach stated.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Can the plaintiff recover?",
+      "options": [
+        "Can recover",
+        "Cannot recover"
+      ],
+      "rows": [
+        {
+          "id": "p1",
+          "label": "First Bank, under the Restatement (foreseen users) approach",
+          "answer": "Can recover",
+          "explanation": "First Bank was a known, intended user."
+        },
+        {
+          "id": "p2",
+          "label": "An unknown investor who bought Fulton stock, under the Restatement approach",
+          "answer": "Cannot recover",
+          "explanation": "Unknown investors aren't in the limited foreseen class."
+        },
+        {
+          "id": "p3",
+          "label": "The same investor, under the foreseeability (Rosenblum) approach",
+          "answer": "Can recover",
+          "explanation": "Any reasonably foreseeable user may recover."
+        },
+        {
+          "id": "p4",
+          "label": "First Bank, under strict Ultramares privity (bank not a primary beneficiary)",
+          "answer": "Cannot recover",
+          "explanation": "Without privity or primary beneficiary status, ordinary negligence claims fail."
+        },
+        {
+          "id": "p5",
+          "label": "Fulton itself, for losses its own negligence did not cause",
+          "answer": "Can recover",
+          "explanation": "The client is in privity."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "If Mercer had acted with reckless disregard, could the unknown investor recover even in an Ultramares state?",
+          "answer": "Yes",
+          "explanation": "Gross negligence (constructive fraud) extends liability to foreseeable users."
+        },
+        {
+          "id": "q2",
+          "label": "Is compliance with GAAS an absolute defense to negligence?",
+          "answer": "No",
+          "explanation": "It's strong evidence of due care, not conclusive."
+        }
+      ]
+    }
+  ]
+}

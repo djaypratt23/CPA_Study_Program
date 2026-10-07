@@ -1,0 +1,67 @@
+{
+  "id": "reg-tbs-r3-s-basis",
+  "section": "REG",
+  "unitId": "reg-u7",
+  "moduleIds": [
+    "reg-s-corporations"
+  ],
+  "pool": "practice",
+  "title": "S corporation basis and losses — Theo Marsh",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Theo Marsh owns 100% of Quill Inc., an S corporation. Compute his allowable loss and basis.",
+  "exhibits": [
+    {
+      "title": "Year 1",
+      "content": "Beginning stock basis: **$10,000**; Theo's loan to Quill (debt basis): **$15,000**.\nQuill's Year 1 items: ordinary loss **$30,000**; §1231 gain **$2,000**; tax-exempt interest **$1,000**; cash distribution to Theo **$4,000**."
+    },
+    {
+      "title": "Year 2",
+      "content": "Quill has ordinary income of **$12,000** and makes no distributions."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "stk",
+          "label": "Stock basis available for the Year 1 loss",
+          "answer": 9000,
+          "explanation": "10,000 + 2,000 + 1,000 − 4,000 distribution = **9,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "al",
+          "label": "Year 1 loss allowed",
+          "answer": 24000,
+          "explanation": "9,000 stock + 15,000 debt basis = **24,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "sus",
+          "label": "Year 1 loss suspended",
+          "answer": 6000,
+          "explanation": "30,000 − 24,000 = **6,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "db2",
+          "label": "Debt basis at the end of Year 2",
+          "answer": 6000,
+          "explanation": "Income restores debt basis first (12,000), then the 6,000 suspended loss is used: **6,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "sb2",
+          "label": "Stock basis at the end of Year 2",
+          "answer": 0,
+          "explanation": "Debt basis must be restored before stock basis: **0**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

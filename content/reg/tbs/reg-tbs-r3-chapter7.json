@@ -1,0 +1,94 @@
+{
+  "id": "reg-tbs-r3-chapter7",
+  "section": "REG",
+  "unitId": "reg-u2",
+  "moduleIds": [
+    "reg-debtor-creditor"
+  ],
+  "pool": "practice",
+  "title": "Chapter 7 distribution — Kestrel Supply",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Kestrel Supply's Chapter 7 trustee has **$500,000** of assets to distribute, including equipment worth **$120,000** that secures a bank loan. Compute the distribution. Round percentages to one decimal place.",
+  "exhibits": [
+    {
+      "title": "Claims",
+      "content": "- Bank loan secured by the equipment: **$150,000**\n- Trustee's administrative expenses: **$30,000**\n- Domestic support obligations: **$20,000**\n- Employee wages earned within 180 days (all within the statutory cap): **$18,000**\n- Federal income taxes (priority): **$40,000**\n- General unsecured trade claims: **$600,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "pool",
+          "label": "Amount available for general unsecured claims",
+          "answer": 272000,
+          "explanation": "500,000 − 120,000 (to the bank from collateral) − 20,000 − 30,000 − 18,000 − 40,000 = **272,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "gen",
+          "label": "Total general unsecured claims, including the bank's deficiency",
+          "answer": 630000,
+          "explanation": "600,000 + (150,000 − 120,000) = **630,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "pct",
+          "label": "Percentage paid on general unsecured claims",
+          "answer": 43.2,
+          "explanation": "272,000 ÷ 630,000 = **43.2%**.",
+          "tolerance": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "bank",
+          "label": "Bank's total recovery",
+          "answer": 132952,
+          "explanation": "120,000 + 30,000 × 43.17% = **132,952**.",
+          "tolerance": 5
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "o",
+      "prompt": "Rank the unsecured priority claims.",
+      "options": [
+        "1st",
+        "2nd",
+        "3rd",
+        "4th"
+      ],
+      "rows": [
+        {
+          "id": "o1",
+          "label": "Domestic support obligations",
+          "answer": "1st",
+          "explanation": "First priority under §507."
+        },
+        {
+          "id": "o2",
+          "label": "Administrative expenses",
+          "answer": "2nd",
+          "explanation": "Second priority."
+        },
+        {
+          "id": "o3",
+          "label": "Employee wages within 180 days",
+          "answer": "3rd",
+          "explanation": "Paid after administrative expenses."
+        },
+        {
+          "id": "o4",
+          "label": "Priority income taxes",
+          "answer": "4th",
+          "explanation": "Taxes come after wages."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "reg-tbs-r3-filing-status",
+  "section": "REG",
+  "unitId": "reg-u4",
+  "moduleIds": [
+    "reg-filing-status"
+  ],
+  "pool": "practice",
+  "title": "Filing status — six taxpayers",
+  "minutes": 15,
+  "skill": "analysis",
+  "instructions": "Select the most favorable filing status each taxpayer may use for 2025.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Select the filing status.",
+      "options": [
+        "Single",
+        "Married filing jointly",
+        "Married filing separately",
+        "Head of household",
+        "Qualifying surviving spouse"
+      ],
+      "rows": [
+        {
+          "id": "t1",
+          "label": "Unmarried; her 4-year-old son lives with her all year and she pays all household costs",
+          "answer": "Head of household",
+          "explanation": "A qualifying child lives with her and she pays over half the costs."
+        },
+        {
+          "id": "t2",
+          "label": "Spouse died in 2024; not remarried; maintains a home for her dependent daughter",
+          "answer": "Qualifying surviving spouse",
+          "explanation": "Available for 2 years after the year of death with a dependent child."
+        },
+        {
+          "id": "t3",
+          "label": "Married and living together all year; spouse refuses to file jointly",
+          "answer": "Married filing separately",
+          "explanation": "Without consent, a joint return isn't possible."
+        },
+        {
+          "id": "t4",
+          "label": "Divorced on December 20, 2025; no dependents",
+          "answer": "Single",
+          "explanation": "Marital status is determined at year-end."
+        },
+        {
+          "id": "t5",
+          "label": "Married; spouse moved out in March and they lived apart the rest of the year; she pays over half the cost of the home for her dependent son",
+          "answer": "Head of household",
+          "explanation": "She's considered unmarried under the abandoned-spouse rules."
+        },
+        {
+          "id": "t6",
+          "label": "Spouse died in October 2025; not remarried",
+          "answer": "Married filing jointly",
+          "explanation": "A joint return may be filed for the year of death."
+        }
+      ]
+    }
+  ]
+}

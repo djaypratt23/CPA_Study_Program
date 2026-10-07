@@ -1,0 +1,87 @@
+{
+  "id": "reg-tbs-r3-nol-estimates",
+  "section": "REG",
+  "unitId": "reg-u6",
+  "moduleIds": [
+    "reg-c-corp-income"
+  ],
+  "pool": "practice",
+  "title": "NOLs and estimated tax — Pell Robotics",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Pell Robotics (calendar year) has 2025 taxable income of **$600,000** before any NOL deduction and an NOL carryforward of **$900,000** from 2022. It isn't a large corporation. Its 2024 tax was **$100,000**.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "nol",
+          "label": "2025 NOL deduction",
+          "answer": 480000,
+          "explanation": "Post-2017 NOLs are limited to 80% of taxable income: 80% × 600,000 = **480,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ti",
+          "label": "2025 taxable income",
+          "answer": 120000,
+          "explanation": "600,000 − 480,000 = **120,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "rem",
+          "label": "NOL carried to 2026",
+          "answer": 420000,
+          "explanation": "900,000 − 480,000 = **420,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "tax",
+          "label": "2025 regular tax",
+          "answer": 25200,
+          "explanation": "120,000 × 21% = **25,200**.",
+          "tolerance": 0
+        },
+        {
+          "id": "req",
+          "label": "Minimum total 2025 estimated payments to avoid the penalty",
+          "answer": 25200,
+          "explanation": "The lesser of 100% of 2025 tax (25,200) or 100% of 2024 tax (100,000) = **25,200**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "May the 2022 NOL be carried back?",
+          "answer": "No",
+          "explanation": "Post-2020 NOLs (other than farming) carry forward only."
+        },
+        {
+          "id": "q2",
+          "label": "Is the fourth estimated payment for a calendar-year corporation due December 15?",
+          "answer": "Yes",
+          "explanation": "Corporate installments are due on the 15th of the 4th, 6th, 9th and 12th months."
+        },
+        {
+          "id": "q3",
+          "label": "Does the 2022 NOL expire after 20 years?",
+          "answer": "No",
+          "explanation": "Post-2017 NOLs carry forward indefinitely."
+        }
+      ]
+    }
+  ]
+}
