@@ -893,5 +893,729 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-pa-24",
+    "pool": "practice",
+    "stem": "How many hours of participation in an activity meets the main material participation test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "100 hours",
+        "explanation": "That's a different test.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "750 hours",
+        "explanation": "That's the REP test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "1,000 hours",
+        "explanation": "That is not the test.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "500 hours",
+        "explanation": "Correct. More than 500 hours a year."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Participating more than 500 hours in a year is material participation.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-pa-25",
+    "pool": "practice",
+    "stem": "What does the real estate professional test require?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Over 750 hours and half of work",
+        "explanation": "Correct. Both tests must be met."
+      },
+      {
+        "id": "b",
+        "text": "Over 500 hours only",
+        "explanation": "That's material participation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Holding a real estate license",
+        "explanation": "That is not required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Owning at least 10 rentals",
+        "explanation": "That is not required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A real estate professional performs more than 750 hours and more than half of personal services in real property trades.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-pa-26",
+    "pool": "practice",
+    "stem": "Rental income from a home rented for how few days can be excluded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fewer than 30 days",
+        "explanation": "That period is too long.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "Fewer than 15 days",
+        "explanation": "Correct. The 14-day rule."
+      },
+      {
+        "id": "c",
+        "text": "Fewer than 60 days",
+        "explanation": "That period is too long.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "Fewer than 7 days",
+        "explanation": "That period is too short.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Income from renting a residence for fewer than 15 days a year is excluded.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-pa-27",
+    "pool": "practice",
+    "stem": "An active participant has MAGI of $120,000. What is the maximum rental loss allowance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "The allowance phases out.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "That's the reduction.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Correct. $25,000 − 50% × $20,000."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Not fully phased out.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The $25,000 allowance is reduced by 50% of MAGI over $100,000.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-28",
+    "pool": "practice",
+    "stem": "An active participant with MAGI of $90,000 has a $30,000 rental loss and no passive income. What is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "The allowance caps it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The allowance applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "That's suspended.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$25,000",
+        "explanation": "Correct. The rest is suspended."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Losses above the allowance are suspended until passive income or a disposition.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-29",
+    "pool": "practice",
+    "stem": "A taxpayer sells a passive activity with $40,000 of suspended losses to an unrelated buyer. What happens to the losses?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "They become fully deductible",
+        "explanation": "Correct. A complete taxable disposition frees them."
+      },
+      {
+        "id": "b",
+        "text": "They stay suspended",
+        "explanation": "Disposition frees them.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "They transfer to the buyer",
+        "explanation": "Not transferable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only $25,000 is deductible",
+        "explanation": "All of the losses are freed.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A fully taxable disposition to an unrelated party frees all suspended losses of the activity.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-30",
+    "pool": "practice",
+    "stem": "A taxpayer has $10,000 of passive income and an $18,000 passive loss from another activity. What is suspended?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$18,000",
+        "explanation": "They offset passive income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$8,000",
+        "explanation": "Correct. Passive losses offset passive income."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Some is suspended.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Passive losses can offset passive income from other activities; the excess is suspended.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-31",
+    "pool": "practice",
+    "stem": "A vacation home is rented 90 days and used personally 30 days. Non-interest expenses are $12,000. How much is allocated to rental under the IRS method?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$12,000",
+        "explanation": "Allocate by use.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$3,000",
+        "explanation": "That's personal.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$9,000",
+        "explanation": "Correct. 90/120 of the expenses."
+      },
+      {
+        "id": "d",
+        "text": "$2,959",
+        "explanation": "That's the court method.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Expenses are allocated by rental days over total use days.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-32",
+    "pool": "practice",
+    "stem": "A home is used personally 30 days and rented 90 days, so it's a residence. Rental income is $8,000, and allocated expenses are $11,000. What is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$11,000, all of it",
+        "explanation": "Limited to income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0, since it's a residence",
+        "explanation": "Up to income is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$3,000, the excess only",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$8,000; the rest carries over",
+        "explanation": "Correct. Deductions are limited to rental income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "When a rental home is also a residence, rental deductions can't exceed rental income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-33",
+    "pool": "practice",
+    "stem": "A short-term rental has an average stay of 5 days, and the owner materially participates. How is the income or loss treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As nonpassive",
+        "explanation": "Correct. It isn't a rental activity under §469."
+      },
+      {
+        "id": "b",
+        "text": "As passive in all cases",
+        "explanation": "Material participation applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As portfolio income",
+        "explanation": "It is not portfolio income.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "As excluded income",
+        "explanation": "It is taxable income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Rentals with average stays of 7 days or less aren't rental activities, so material participation can make them nonpassive.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-34",
+    "pool": "practice",
+    "stem": "A taxpayer invests $20,000 cash plus a $50,000 nonrecourse loan (not qualified real estate financing) and has a $40,000 loss. How much is allowed under the at-risk rules?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Limited to the amount at risk.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Correct. Nonrecourse debt isn't at risk."
+      },
+      {
+        "id": "c",
+        "text": "$70,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Cash is at risk.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Losses are limited to the amount at risk, which excludes most nonrecourse debt.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-35",
+    "pool": "practice",
+    "stem": "A real estate investor uses qualified nonrecourse financing from a bank. Does it count as at risk?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, never",
+        "explanation": "An exception applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only if recourse",
+        "explanation": "Qualified nonrecourse counts.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes",
+        "explanation": "Correct. Qualified real estate financing is at risk."
+      },
+      {
+        "id": "d",
+        "text": "Only half",
+        "explanation": "All of it counts.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Qualified nonrecourse financing for real estate is treated as at risk.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-36",
+    "pool": "practice",
+    "stem": "A real estate professional who materially participates has a $60,000 rental loss. How much is deductible against wages?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "That's the active participation limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "It's nonpassive.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$60,000",
+        "explanation": "Correct. The loss is nonpassive."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Rental losses of a real estate professional who materially participates are nonpassive.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-37",
+    "pool": "practice",
+    "stem": "A single taxpayer has a $400,000 business loss and $50,000 of other income in 2025. The threshold is $313,000. How much is an excess business loss?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$87,000",
+        "explanation": "Correct. $400,000 − $313,000."
+      },
+      {
+        "id": "b",
+        "text": "$400,000",
+        "explanation": "Only the excess.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$37,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The limit applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Excess business losses above the threshold are disallowed and carried forward as an NOL.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-38",
+    "pool": "practice",
+    "stem": "A taxpayer gives a passive activity with $15,000 of suspended losses to her son. What happens to the losses?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The donor deducts them",
+        "explanation": "Not for gifted property.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "They add to the son's basis",
+        "explanation": "Correct. They can't be deducted by either."
+      },
+      {
+        "id": "c",
+        "text": "The son deducts them currently",
+        "explanation": "They increase basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "They disappear entirely",
+        "explanation": "They increase basis.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Suspended losses on gifted passive property are added to the donee's basis.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-pa-39",
+    "pool": "practice",
+    "stem": "An owner runs several related businesses and wants to meet material participation. What may help?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Separating them further",
+        "explanation": "Makes participation harder.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "Electing out of §469",
+        "explanation": "That is not possible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Grouping them",
+        "explanation": "Correct. An appropriate economic unit."
+      },
+      {
+        "id": "d",
+        "text": "Hiring more staff to help",
+        "explanation": "Reduces participation.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Grouping activities as an appropriate economic unit lets hours be combined.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pa-40",
+    "pool": "practice",
+    "stem": "A married couple wants rental losses treated as nonpassive. How are their hours counted?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Combined for all tests",
+        "explanation": "The REP test isn't combined.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Neither spouse's hours count",
+        "explanation": "Both may count.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only the higher earner",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "REP: one spouse alone",
+        "explanation": "Correct. Material participation combines both."
+      }
+    ],
+    "answer": "d",
+    "explanation": "One spouse must meet the REP tests alone, but spouses' hours combine for material participation.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pa-41",
+    "pool": "practice",
+    "stem": "A taxpayer with large suspended passive losses expects a high-income year. When should she sell the activity?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In the high-income year",
+        "explanation": "Correct. Freed losses offset high-rate income."
+      },
+      {
+        "id": "b",
+        "text": "In a low-income year",
+        "explanation": "Losses are worth less then.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "Never; hold until death",
+        "explanation": "Sale frees losses.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Timing doesn't matter",
+        "explanation": "Timing does matter here.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Freed suspended losses are most valuable in high-income years.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pa-42",
+    "pool": "practice",
+    "stem": "A passive activity is sold on the installment method. When are its suspended losses released?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All in the sale year",
+        "explanation": "Released proportionally.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As gain is recognized",
+        "explanation": "Correct. In proportion to gain."
+      },
+      {
+        "id": "c",
+        "text": "Only at final payment",
+        "explanation": "Released proportionally.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Never",
+        "explanation": "They're released.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Installment dispositions free suspended losses in the ratio of gain recognized to total gain.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-pa-43",
+    "pool": "practice",
+    "stem": "An owner dies with $50,000 of suspended passive losses. The property's basis steps up by $30,000. How much is deductible on the final return?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Reduced by the step-up.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The excess is deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "Correct. Losses above the step-up are deductible."
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "That's the step-up.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "At death, suspended losses are deductible to the extent they exceed the basis step-up.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-pa-44",
+    "pool": "practice",
+    "stem": "An investor has losses from a publicly traded partnership. What may they offset?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Any passive income",
+        "explanation": "That doesn't apply to PTPs.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Wages and salary",
+        "explanation": "That is not allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Interest and dividends",
+        "explanation": "That is not allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Same-PTP income only",
+        "explanation": "Correct. PTPs are siloed."
+      }
+    ],
+    "answer": "d",
+    "explanation": "PTP losses can offset only income from the same PTP.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

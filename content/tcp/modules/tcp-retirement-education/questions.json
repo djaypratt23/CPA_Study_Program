@@ -895,5 +895,765 @@
     "explanation": "SIMPLE IRAs permit employee salary deferrals with limited employer matching or nonelective contributions.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-re-24",
+    "pool": "practice",
+    "stem": "What is the 2025 elective deferral limit for a 401(k) plan, before catch-ups?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$23,000",
+        "explanation": "That was the 2024 limit.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$22,500",
+        "explanation": "That was the 2023 limit.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$7,000",
+        "explanation": "That's the IRA limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$23,500",
+        "explanation": "Correct. The 2025 limit is $23,500."
+      }
+    ],
+    "answer": "d",
+    "explanation": "For 2025, employees may defer $23,500, plus catch-up contributions if eligible.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-re-25",
+    "pool": "practice",
+    "stem": "At what age must someone born in 1955 begin required minimum distributions?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "73",
+        "explanation": "Correct. SECURE 2.0 set the age at 73."
+      },
+      {
+        "id": "b",
+        "text": "72",
+        "explanation": "That was the prior age.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "70½",
+        "explanation": "That was the original age.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "75",
+        "explanation": "That applies to later birth years.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "RMDs begin at 73 for those born 1951–1959, and at 75 for those born in 1960 or later.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-re-26",
+    "pool": "practice",
+    "stem": "What is the annual contribution limit for a Coverdell education savings account?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "That is not the limit.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$2,000",
+        "explanation": "Correct. The limit is $2,000 per beneficiary."
+      },
+      {
+        "id": "c",
+        "text": "$7,000",
+        "explanation": "That's the IRA limit.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$10,000",
+        "explanation": "That's a 529 K-12 limit.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Coverdell ESA contributions are limited to $2,000 per beneficiary per year.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-re-27",
+    "pool": "practice",
+    "stem": "A 61-year-old employee participates in a 401(k) in 2025. What is her maximum elective deferral?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$31,000",
+        "explanation": "Ages 60–63 get a larger catch-up.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$23,500",
+        "explanation": "Add the catch-up.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$34,750",
+        "explanation": "Correct. $23,500 + $11,250 super catch-up."
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For ages 60–63, the 2025 catch-up is $11,250 instead of $7,500.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-28",
+    "pool": "practice",
+    "stem": "A single active plan participant has 2025 MAGI of $84,000. The phase-out range is $79,000–$89,000. How much of a $7,000 traditional IRA contribution is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,000",
+        "explanation": "It's partly phased out.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "It's only half phased out.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$1,750",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$3,500",
+        "explanation": "Correct. Half the range is used."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The IRA deduction phases out proportionally across the range for active participants.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-29",
+    "pool": "practice",
+    "stem": "A 45-year-old withdraws $20,000 from a traditional IRA to buy a first home. What early withdrawal penalty applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000",
+        "explanation": "Correct. $10,000 is exempt; 10% of $10,000."
+      },
+      {
+        "id": "b",
+        "text": "$2,000",
+        "explanation": "$10,000 is exempt.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The exception is capped.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$500",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The first-time homebuyer exception is limited to $10,000 lifetime.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-30",
+    "pool": "practice",
+    "stem": "A 62-year-old takes earnings from a Roth IRA opened 3 years ago. How are they taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Tax-free",
+        "explanation": "The 5-year rule isn't met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Taxable, but no 10% penalty",
+        "explanation": "Correct. The 5-year rule isn't met; she's over 59½."
+      },
+      {
+        "id": "c",
+        "text": "Taxable, plus a 10% penalty",
+        "explanation": "She's over 59½.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Not allowed",
+        "explanation": "Withdrawals are allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Qualified Roth distributions require the 5-year period and a qualifying event such as age 59½.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-re-31",
+    "pool": "practice",
+    "stem": "A sole proprietor has $100,000 of Schedule C profit and deducts $7,065 of SE tax. What is the maximum SEP contribution?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$25,000",
+        "explanation": "Use the effective 20% rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Subtract the SE tax deduction.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$18,587",
+        "explanation": "Correct. 20% × $92,935."
+      },
+      {
+        "id": "d",
+        "text": "$18,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "For the self-employed, the SEP limit is effectively 20% of net SE earnings after the SE tax deduction.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-32",
+    "pool": "practice",
+    "stem": "In 2025, a 529 plan pays $15,000 of K-12 tuition. The account is 40% earnings. How much of the distribution is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "Only the earnings part is taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$6,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "$5,000 exceeds the limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "Correct. $5,000 nonqualified × 40%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "For 2025, only $10,000 a year of K-12 tuition is a qualified 529 expense; the earnings share of the excess is taxable.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-33",
+    "pool": "practice",
+    "stem": "A 529 account open 16 years has a beneficiary with $7,000 of earned income and no other IRA contributions. How much can be rolled to her Roth IRA this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,000",
+        "explanation": "Correct. Limited to the annual IRA limit."
+      },
+      {
+        "id": "b",
+        "text": "$35,000",
+        "explanation": "That's the lifetime cap.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "That is not the limit.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Rollovers are allowed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "529-to-Roth rollovers are limited to the annual IRA limit and $35,000 lifetime.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-34",
+    "pool": "practice",
+    "stem": "A student pays $4,000 of qualified tuition. How much of the American opportunity credit is refundable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,500",
+        "explanation": "Only 40% is refundable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$1,000",
+        "explanation": "Correct. 40% of the $2,500 credit."
+      },
+      {
+        "id": "c",
+        "text": "$1,500",
+        "explanation": "That's the nonrefundable part.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Part is refundable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The AOTC is up to $2,500, with 40% refundable.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-35",
+    "pool": "practice",
+    "stem": "A taxpayer pays $8,000 of qualified graduate tuition. What lifetime learning credit applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000",
+        "explanation": "That's the maximum.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$2,500",
+        "explanation": "That's the AOTC maximum.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$1,600",
+        "explanation": "Correct. 20% × $8,000."
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "It's a 20% credit.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The lifetime learning credit is 20% of up to $10,000 of expenses.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-36",
+    "pool": "practice",
+    "stem": "A 73-year-old's IRA balance was $500,000 at the end of last year. The life expectancy divisor is 26.5. What is this year's RMD?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$19,231",
+        "explanation": "Use the divisor 26.5.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$20,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$18,248",
+        "explanation": "Use the right divisor.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$18,868",
+        "explanation": "Correct. $500,000 ÷ 26.5."
+      }
+    ],
+    "answer": "d",
+    "explanation": "An RMD equals the prior year-end balance divided by the life expectancy factor.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-37",
+    "pool": "practice",
+    "stem": "A retiree fails to take a $10,000 RMD and doesn't correct it timely. What excise tax applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,500",
+        "explanation": "Correct. 25% of the shortfall."
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "The rate dropped from 50%.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$1,000",
+        "explanation": "That's if corrected timely.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A penalty applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The missed-RMD excise is 25%, reduced to 10% if corrected within the correction window.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-38",
+    "pool": "practice",
+    "stem": "An adult child inherits a traditional IRA from her father in 2025. She isn't an eligible designated beneficiary. What rule applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Lifetime stretch payouts",
+        "explanation": "Not for non-eligible beneficiaries.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Empty it within 10 years",
+        "explanation": "Correct. The 10-year rule applies."
+      },
+      {
+        "id": "c",
+        "text": "Withdraw it all within 5 years",
+        "explanation": "That's for non-designated beneficiaries.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "No distributions are required",
+        "explanation": "The 10-year rule applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Most non-spouse beneficiaries must empty inherited IRAs by the end of the 10th year after death.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-re-39",
+    "pool": "practice",
+    "stem": "A 74-year-old's RMD is $20,000. She makes a $15,000 qualified charitable distribution. How much of the RMD is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "The QCD is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$15,000",
+        "explanation": "That's the excluded part.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "Correct. The QCD counts toward the RMD."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Part is taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "QCDs count toward the RMD and are excluded from income.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-40",
+    "pool": "practice",
+    "stem": "A 25-year-old in the 12% bracket expects higher rates in retirement. Which account fits best?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A traditional account",
+        "explanation": "Deduction is worth less now.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A taxable account",
+        "explanation": "Loses tax benefits.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Either; no difference",
+        "explanation": "The rates differ over time.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A Roth account",
+        "explanation": "Correct. Pay tax now at low rates."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Roth contributions suit taxpayers whose current rate is lower than the expected retirement rate.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-re-41",
+    "pool": "practice",
+    "stem": "A taxpayer has $63,000 of pretax IRA money and makes a $7,000 nondeductible contribution. She converts $7,000 to a Roth. How much is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,300",
+        "explanation": "Correct. The pro-rata rule: 90% is pretax."
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The pro-rata rule applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$7,000",
+        "explanation": "Basis is spread across all IRAs.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$700",
+        "explanation": "That's the basis portion.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Conversions are taxed pro rata across all traditional IRA balances.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-re-42",
+    "pool": "practice",
+    "stem": "A student's tuition is $14,000, and $10,000 is paid from a 529. How should the AOTC be coordinated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Use all $14,000 for both",
+        "explanation": "Double benefits aren't allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Use $4,000 for the AOTC",
+        "explanation": "Correct. The same expenses can't be used twice."
+      },
+      {
+        "id": "c",
+        "text": "Skip the AOTC",
+        "explanation": "It's still available.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Take the AOTC on $10,000",
+        "explanation": "Those expenses are already used.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Expenses used for the AOTC can't also be qualified 529 expenses; $4,000 maximizes the AOTC.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-re-43",
+    "pool": "practice",
+    "stem": "A retiree's 401(k) holds employer stock with a $50,000 basis and a $300,000 value. She takes a lump-sum distribution in kind. What is the result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000 ordinary income",
+        "explanation": "NUA is deferred.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No tax until the shares are sold",
+        "explanation": "The basis is taxed now.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$50,000 now; the rest as LTCG",
+        "explanation": "Correct. Net unrealized appreciation rules apply."
+      },
+      {
+        "id": "d",
+        "text": "$250,000 ordinary now",
+        "explanation": "That's backward.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "With NUA, the basis is ordinary income at distribution, and the appreciation is long-term gain when sold.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-re-44",
+    "pool": "practice",
+    "stem": "A self-employed person with $60,000 of net earnings wants to maximize retirement savings. Which plan generally allows more?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A SEP IRA",
+        "explanation": "It's limited to about 20%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A traditional IRA",
+        "explanation": "Limited to $7,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A SIMPLE IRA",
+        "explanation": "Lower deferral limits.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A solo 401(k)",
+        "explanation": "Correct. Deferrals plus employer contributions."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A solo 401(k) allows the $23,500 deferral plus a 20% employer contribution.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-re-45",
+    "pool": "practice",
+    "stem": "A 50-year-old converts $50,000 to a Roth and withdraws the converted amount 2 years later. What applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The 10% penalty applies",
+        "explanation": "Correct. Each conversion has its own 5-year period."
+      },
+      {
+        "id": "b",
+        "text": "Nothing; principal is tax-free",
+        "explanation": "Converted amounts are subject to the 5-year rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Income tax again",
+        "explanation": "It was already taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A 25% penalty",
+        "explanation": "That is not the rate.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Withdrawals of converted amounts within 5 years are subject to the 10% penalty if under 59½.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

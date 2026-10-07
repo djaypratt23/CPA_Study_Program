@@ -1069,5 +1069,766 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-cc-29",
+    "pool": "practice",
+    "stem": "When is Form 1120 due for a calendar-year C corporation, without extension?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 15",
+        "explanation": "That's for S corps and partnerships.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "May 15",
+        "explanation": "That's for exempt organizations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "April 15",
+        "explanation": "Correct. The 15th day of the 4th month."
+      },
+      {
+        "id": "d",
+        "text": "October 15",
+        "explanation": "That's the extended date.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Form 1120 is due on the 15th day of the 4th month after year-end, with a 6-month extension.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-cc-30",
+    "pool": "practice",
+    "stem": "At what total asset level must a corporation file Schedule M-3?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1 million or more",
+        "explanation": "Not the threshold.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$50 million or more",
+        "explanation": "Not the threshold.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$250,000 or more",
+        "explanation": "That's the Schedule L threshold.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$10 million or more",
+        "explanation": "Correct. Smaller corporations use M-1."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Corporations with total assets of $10 million or more file Schedule M-3.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-cc-31",
+    "pool": "practice",
+    "stem": "When are calendar-year corporate estimated tax installments due?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "April, June, September, December 15",
+        "explanation": "Correct. The 4th, 6th, 9th and 12th months."
+      },
+      {
+        "id": "b",
+        "text": "April, June, September, January 15",
+        "explanation": "That's the individual schedule.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Quarterly after year-end",
+        "explanation": "Before year-end.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only with the return",
+        "explanation": "Estimates are required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Corporate estimates are due on the 15th of the 4th, 6th, 9th and 12th months.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-cc-32",
+    "pool": "practice",
+    "stem": "Book income is $500,000. Federal income tax expense is $105,000, muni interest $10,000, and nondeductible meals $4,000. Tax depreciation exceeds book by $30,000. What is taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$539,000",
+        "explanation": "Add back the tax expense.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$569,000",
+        "explanation": "Correct. 500 + 105 − 10 + 4 − 30."
+      },
+      {
+        "id": "c",
+        "text": "$599,000",
+        "explanation": "Subtract the depreciation.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$495,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Taxable income adjusts book income for permanent and temporary differences.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-33",
+    "pool": "practice",
+    "stem": "Taxable income before the charitable deduction and DRD is $400,000. Contributions are $50,000. What is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000, all of it",
+        "explanation": "The 10% limit applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000; the rest is lost",
+        "explanation": "It carries forward 5 years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$40,000; rest carried",
+        "explanation": "Correct. 10% limit."
+      },
+      {
+        "id": "d",
+        "text": "$20,000 (5% limit)",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Corporate charitable deductions are limited to 10% of taxable income, with a 5-year carryforward.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-34",
+    "pool": "practice",
+    "stem": "A corporation receives $100,000 of dividends from a 30%-owned domestic corporation. Taxable income is ample. What is the DRD?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "That's for under 20%.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "That's for 80% or more.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$70,000",
+        "explanation": "That rate was repealed.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "$65,000",
+        "explanation": "Correct. 20% to under 80% gets 65%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The DRD is 50%, 65% or 100%, depending on ownership.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-35",
+    "pool": "practice",
+    "stem": "A corporation receives $100,000 of dividends eligible for the 50% DRD. Taxable income before the DRD is $80,000. What is the DRD?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Correct. Limited to 50% of taxable income."
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "The TI limit applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$80,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "It's limited, not lost.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The DRD is limited to the percentage times taxable income unless the full DRD creates an NOL.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-36",
+    "pool": "practice",
+    "stem": "A C corporation has a $30,000 net capital loss and $200,000 of ordinary income. How much of the loss is deductible this year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$3,000",
+        "explanation": "That's the individual rule.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$0; carry back 3, forward 5",
+        "explanation": "Correct. Corporations can't offset ordinary income."
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Not against ordinary income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0; carry forward indefinitely",
+        "explanation": "Corporations get 3 back and 5 forward.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Corporate capital losses only offset capital gains, carried back 3 years and forward 5.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-37",
+    "pool": "practice",
+    "stem": "For 2025, a large corporation's adjusted taxable income (EBITDA-based) is $1,000,000, and business interest expense is $400,000. What interest is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$400,000, all of it",
+        "explanation": "The 30% limit applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$300,000; the rest is lost",
+        "explanation": "It carries forward.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$300,000; rest carried",
+        "explanation": "Correct. 30% of ATI."
+      },
+      {
+        "id": "d",
+        "text": "$250,000 (25% of ATI)",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§163(j) limits business interest to 30% of ATI, now computed before depreciation and amortization.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-38",
+    "pool": "practice",
+    "stem": "A large corporation had $100,000 of tax last year and owes $300,000 this year. What total estimated payments avoid a penalty?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Only the first installment can use prior-year tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$270,000",
+        "explanation": "100% of current tax is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$110,000",
+        "explanation": "That's an individual rule.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$300,000",
+        "explanation": "Correct. Large corporations must use current-year tax."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Large corporations ($1 million+ of taxable income in a prior 3 years) must pay 100% of current-year tax, except the first installment.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-39",
+    "pool": "practice",
+    "stem": "Taxable income is $200,000, and federal tax is $42,000. Muni interest is $10,000, and tax depreciation exceeds ADS depreciation by $20,000. What is current E&P?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$188,000",
+        "explanation": "Correct. 200 − 42 + 10 + 20."
+      },
+      {
+        "id": "b",
+        "text": "$158,000",
+        "explanation": "Add back excess depreciation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$200,000",
+        "explanation": "Subtract the tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$168,000",
+        "explanation": "Add muni interest.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "E&P adjusts taxable income for taxes paid, exempt income and ADS depreciation.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-40",
+    "pool": "practice",
+    "stem": "A corporation has $300,000 of accumulated taxable income subject to the accumulated earnings tax. What is the tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$63,000",
+        "explanation": "That applies 21%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "Correct. 20% rate."
+      },
+      {
+        "id": "c",
+        "text": "$111,000",
+        "explanation": "That is not the rate.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "It applies here.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The accumulated earnings tax is 20% of accumulated taxable income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-41",
+    "pool": "practice",
+    "stem": "A personal holding company has $100,000 of undistributed PHC income. What PHC tax applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$21,000",
+        "explanation": "That's the corporate rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$39,600",
+        "explanation": "That was an old rate.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "Correct. 20% rate."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "The tax applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The personal holding company tax is 20% of undistributed PHC income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-42",
+    "pool": "practice",
+    "stem": "A new corporation incurs $53,000 of organizational expenditures and begins business in January. What is the first-year deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$5,000",
+        "explanation": "The immediate amount phases down.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$53,000",
+        "explanation": "Most is amortized.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$3,400",
+        "explanation": "Add the immediate deduction.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$5,400",
+        "explanation": "Correct. $2,000 immediate + $51,000 ÷ 180 × 12."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Up to $5,000 is deducted immediately, reduced dollar-for-dollar above $50,000; the rest is amortized over 180 months.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-43",
+    "pool": "practice",
+    "stem": "Taxable income before the NOL is $200,000, and a $300,000 post-2017 NOL carryforward exists. What NOL deduction applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$160,000",
+        "explanation": "Correct. 80% of taxable income."
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "The 80% limit applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$300,000",
+        "explanation": "Limited to income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$140,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Post-2017 NOLs are limited to 80% of taxable income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-44",
+    "pool": "practice",
+    "stem": "A corporation files Form 1120 3 months late without an extension and pays $20,000 of tax with it. What are the combined late-filing and late-payment penalties?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,700",
+        "explanation": "Add the late-payment penalty.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$3,000",
+        "explanation": "Correct. 5% a month combined × 3."
+      },
+      {
+        "id": "c",
+        "text": "$300",
+        "explanation": "Add the late-filing penalty.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$4,500",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The combined failure-to-file and failure-to-pay rate is 5% a month.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-cc-45",
+    "pool": "practice",
+    "stem": "A corporation has large accumulated earnings and no documented business plan for them. What should it consider?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing; the AET is repealed",
+        "explanation": "It still exists.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Electing S status retroactively",
+        "explanation": "That is not possible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Documenting needs or paying dividends",
+        "explanation": "Correct. The AET is a risk."
+      },
+      {
+        "id": "d",
+        "text": "Raising officer salaries only",
+        "explanation": "Not a full fix.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Reasonable business needs must be documented, or dividends paid, to avoid the accumulated earnings tax.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cc-46",
+    "pool": "practice",
+    "stem": "An accrual-basis corporation accrues a year-end bonus for its 60% shareholder, a cash-basis individual, paid the next March. When is it deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "When accrued",
+        "explanation": "§267 defers it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Never",
+        "explanation": "It's deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Over 5 years",
+        "explanation": "That is not the rule.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "When paid",
+        "explanation": "Correct. Related-party accruals wait for payment."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§267 defers deductions for accrued amounts owed to related cash-basis persons until paid.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cc-47",
+    "pool": "practice",
+    "stem": "Goodwill is impaired for book purposes, but tax amortizes it over 15 years. How is the difference classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A temporary difference",
+        "explanation": "Correct. It reverses over time."
+      },
+      {
+        "id": "b",
+        "text": "A permanent difference",
+        "explanation": "The difference reverses.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Not a difference",
+        "explanation": "Book and tax differ.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "An error",
+        "explanation": "It's a valid difference.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Differences in timing of goodwill deductions are temporary.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cc-48",
+    "pool": "practice",
+    "stem": "A corporation pays a $25,000 fine to a state agency for a violation. How is it treated for tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deductible, a temporary difference",
+        "explanation": "Not deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Nondeductible; permanent",
+        "explanation": "Correct. Fines paid to governments aren't deductible."
+      },
+      {
+        "id": "c",
+        "text": "Deductible over 15 years",
+        "explanation": "Not deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Capitalized as an asset",
+        "explanation": "Not deductible.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Fines and penalties paid to a government are nondeductible permanent differences.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cc-49",
+    "pool": "practice",
+    "stem": "A corporation will exceed $1 million of taxable income for the first time this year. Can it use the prior-year safe harbor?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No, never",
+        "explanation": "It isn't large yet.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only for the last installment",
+        "explanation": "For all installments.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, it isn't yet large",
+        "explanation": "Correct. Large status depends on prior years."
+      },
+      {
+        "id": "d",
+        "text": "Only with IRS approval",
+        "explanation": "That is not required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A corporation is large only if it had $1 million+ of taxable income in one of the 3 prior years.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-cc-50",
+    "pool": "practice",
+    "stem": "A shareholder wants cash from a C corporation with E&P. What may get exchange treatment instead of a dividend?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A pro rata redemption",
+        "explanation": "It's a dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A salary increase for the year",
+        "explanation": "That is treated as wages.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A loan with no repayment",
+        "explanation": "It's a disguised dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A disproportionate redemption",
+        "explanation": "Correct. §302(b)(2) tests apply."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Redemptions meeting a §302(b) test are treated as exchanges, with basis recovery and capital gain.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]
