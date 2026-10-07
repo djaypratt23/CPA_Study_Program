@@ -1,0 +1,76 @@
+{
+  "id": "tcp-tbs-r3-ftc",
+  "section": "TCP",
+  "unitId": "tcp-u3",
+  "moduleIds": [
+    "tcp-international"
+  ],
+  "pool": "practice",
+  "title": "Foreign tax credit limitation — Halvard Corp.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Halvard Corp., a U.S. corporation, has **$5,000,000** of worldwide taxable income, including **$1,500,000** of foreign-source general category income. It paid **$400,000** of foreign income taxes on that income. Round to the nearest dollar.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "pre",
+          "label": "U.S. tax before credits",
+          "answer": 1050000,
+          "explanation": "5,000,000 × 21% = **1,050,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "lim",
+          "label": "FTC limitation",
+          "answer": 315000,
+          "explanation": "1,050,000 × 1,500,000 ÷ 5,000,000 = **315,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "cr",
+          "label": "Foreign tax credit allowed",
+          "answer": 315000,
+          "explanation": "Lesser of taxes paid (400,000) or the limitation: **315,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ex",
+          "label": "Excess foreign tax credit",
+          "answer": 85000,
+          "explanation": "400,000 − 315,000 = **85,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "net",
+          "label": "U.S. tax after the credit",
+          "answer": 735000,
+          "explanation": "1,050,000 − 315,000 = **735,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "How is the excess credit treated?",
+      "options": [
+        "Carried back 1 year and forward 10 years",
+        "Carried forward 5 years only",
+        "Lost"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Excess general category FTC",
+          "answer": "Carried back 1 year and forward 10 years",
+          "explanation": "§904(c) carryback and carryforward periods."
+        }
+      ]
+    }
+  ]
+}

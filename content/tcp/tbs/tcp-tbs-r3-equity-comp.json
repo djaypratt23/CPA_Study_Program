@@ -1,0 +1,100 @@
+{
+  "id": "tcp-tbs-r3-equity-comp",
+  "section": "TCP",
+  "unitId": "tcp-u1",
+  "moduleIds": [
+    "tcp-stock-compensation"
+  ],
+  "pool": "practice",
+  "title": "Comparing equity awards — Priya Nair",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Priya Nair receives options on **1,000 shares** with a **$20** strike price. She exercises when the stock is worth **$50**. Compute the results under each scenario (ignore payroll taxes).",
+  "exhibits": [
+    {
+      "title": "Scenarios",
+      "content": "**A.** The options are NQSOs. She sells the shares 2 years after exercise for **$70**.\n**B.** The options are ISOs. She sells 2 years after exercise (3 years after grant) for **$70**.\n**C.** The options are ISOs. She sells 6 months after exercise for **$45**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "a1",
+          "label": "A: ordinary income at exercise",
+          "answer": 30000,
+          "explanation": "(50 − 20) × 1,000 = **30,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "a2",
+          "label": "A: long-term capital gain on sale",
+          "answer": 20000,
+          "explanation": "Basis 50,000 (cost + income); 70,000 − 50,000 = **20,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "b1",
+          "label": "B: AMT adjustment in the exercise year",
+          "answer": 30000,
+          "explanation": "The 30,000 spread is an AMT preference item.",
+          "tolerance": 0
+        },
+        {
+          "id": "b2",
+          "label": "B: long-term capital gain on sale",
+          "answer": 50000,
+          "explanation": "Qualifying disposition: 70,000 − 20,000 = **50,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "c1",
+          "label": "C: ordinary income on the disqualifying sale",
+          "answer": 25000,
+          "explanation": "Lesser of the spread (30,000) or actual gain (45,000 − 20,000 = 25,000) = **25,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "c2",
+          "label": "C: capital gain on the sale",
+          "answer": 0,
+          "explanation": "All the gain is ordinary: **0**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "When does Priya's employer get a deduction?",
+      "options": [
+        "At exercise",
+        "At a disqualifying disposition",
+        "Never"
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Scenario A (NQSO)",
+          "answer": "At exercise",
+          "explanation": "The employer deducts when the employee recognizes income."
+        },
+        {
+          "id": "d2",
+          "label": "Scenario B (qualifying ISO)",
+          "answer": "Never",
+          "explanation": "No deduction for a qualifying ISO disposition."
+        },
+        {
+          "id": "d3",
+          "label": "Scenario C (disqualifying ISO)",
+          "answer": "At a disqualifying disposition",
+          "explanation": "The employer deducts the employee's ordinary income."
+        }
+      ]
+    }
+  ]
+}

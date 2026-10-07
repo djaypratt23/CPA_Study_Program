@@ -1,0 +1,79 @@
+{
+  "id": "tcp-tbs-r3-gift-basis",
+  "section": "TCP",
+  "unitId": "tcp-u2",
+  "moduleIds": [
+    "tcp-gift-tax"
+  ],
+  "pool": "practice",
+  "title": "Gift tax paid and donee basis — Rourke family",
+  "minutes": 15,
+  "skill": "application",
+  "instructions": "Martin Rourke gave land to his daughter in 2025. Compute the daughter's basis. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Gift facts",
+      "content": "Martin's basis: **$100,000**. FMV at the gift: **$400,000**. Annual exclusion: **$19,000**. Martin had used up his exclusion amount on earlier gifts and paid gift tax of **$60,000** on this gift."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "tg",
+          "label": "Taxable gift",
+          "answer": 381000,
+          "explanation": "400,000 − 19,000 = **381,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "app",
+          "label": "Net appreciation in the land",
+          "answer": 300000,
+          "explanation": "400,000 − 100,000 = **300,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "adj",
+          "label": "Basis increase for gift tax paid",
+          "answer": 47244,
+          "explanation": "60,000 × 300,000 ÷ 381,000 = **47,244**.",
+          "tolerance": 1
+        },
+        {
+          "id": "bas",
+          "label": "Daughter's basis",
+          "answer": 147244,
+          "explanation": "100,000 + 47,244 = **147,244**.",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Does the daughter's holding period include Martin's?",
+          "answer": "Yes",
+          "explanation": "With a carryover basis, the holding period tacks."
+        },
+        {
+          "id": "q2",
+          "label": "If Martin dies within 3 years, is the $60,000 gift tax added to his gross estate?",
+          "answer": "Yes",
+          "explanation": "The §2035(b) gross-up rule applies."
+        }
+      ]
+    }
+  ]
+}

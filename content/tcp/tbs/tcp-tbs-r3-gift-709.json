@@ -1,0 +1,86 @@
+{
+  "id": "tcp-tbs-r3-gift-709",
+  "section": "TCP",
+  "unitId": "tcp-u2",
+  "moduleIds": [
+    "tcp-gift-tax"
+  ],
+  "pool": "practice",
+  "title": "Taxable gifts — the Whitmores",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "In 2025, Lena Whitmore (a U.S. citizen) made the gifts below from her separate funds. The annual exclusion is **$19,000** per donee.",
+  "exhibits": [
+    {
+      "title": "2025 gifts",
+      "content": "- Cash to her son: **$50,000**\n- Cash to her daughter: **$30,000**\n- Contribution to her grandson's 529 plan: **$95,000** (she elects 5-year spreading)\n- Tuition paid directly to her niece's university: **$40,000**\n- Cash to her husband, a U.S. citizen: **$200,000**\n- Cash to a public charity: **$25,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute Lena's taxable gifts.",
+      "rows": [
+        {
+          "id": "son",
+          "label": "Taxable gift to her son (no gift splitting)",
+          "answer": 31000,
+          "explanation": "50,000 − 19,000 = **31,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dau",
+          "label": "Taxable gift to her daughter (no gift splitting)",
+          "answer": 11000,
+          "explanation": "30,000 − 19,000 = **11,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "529",
+          "label": "Taxable gift from the 529 contribution",
+          "answer": 0,
+          "explanation": "Spread over 5 years: 19,000 a year, fully excluded: **0**.",
+          "tolerance": 0
+        },
+        {
+          "id": "tot",
+          "label": "Total 2025 taxable gifts (no gift splitting)",
+          "answer": 42000,
+          "explanation": "Tuition paid directly, the marital gift and the charitable gift aren't taxable: **42,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "spl",
+          "label": "Lena's taxable gifts if her husband consents to gift splitting",
+          "answer": 6000,
+          "explanation": "Son: 25,000 − 19,000 = 6,000; daughter 15,000 and the 529 share (9,500 a year) are fully excluded: **6,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "Must Lena file Form 709 for 2025?",
+          "answer": "Yes",
+          "explanation": "She made taxable gifts and elected 5-year 529 spreading."
+        },
+        {
+          "id": "q2",
+          "label": "Is the tuition payment a gift requiring use of her exclusion?",
+          "answer": "No",
+          "explanation": "Direct tuition payments are excluded without limit."
+        }
+      ]
+    }
+  ]
+}

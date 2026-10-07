@@ -1,0 +1,56 @@
+{
+  "id": "tcp-tbs-r3-sale-interest",
+  "section": "TCP",
+  "unitId": "tcp-u4",
+  "moduleIds": [
+    "tcp-partnership-distributions"
+  ],
+  "pool": "practice",
+  "title": "Sale of a partnership interest — Farrah Cole",
+  "minutes": 15,
+  "skill": "analysis",
+  "instructions": "Farrah Cole sells her one-third interest in Delta Partners to an outsider for **$150,000** cash. Her share of partnership liabilities, **$30,000**, is assumed by the buyer.",
+  "exhibits": [
+    {
+      "title": "Facts",
+      "content": "Farrah's outside basis (including her share of liabilities): **$90,000**.\nHer share of appreciation in unrealized receivables and inventory (§751 hot assets): **$25,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "ar",
+          "label": "Amount realized",
+          "answer": 180000,
+          "explanation": "150,000 cash + 30,000 liability relief = **180,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "g",
+          "label": "Total gain",
+          "answer": 90000,
+          "explanation": "180,000 − 90,000 = **90,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "ord",
+          "label": "Ordinary income under §751",
+          "answer": 25000,
+          "explanation": "Her share of hot asset appreciation: **25,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "cap",
+          "label": "Capital gain",
+          "answer": 65000,
+          "explanation": "90,000 − 25,000 = **65,000**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

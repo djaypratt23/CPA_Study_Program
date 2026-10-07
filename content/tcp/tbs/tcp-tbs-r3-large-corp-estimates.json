@@ -1,0 +1,51 @@
+{
+  "id": "tcp-tbs-r3-large-corp-estimates",
+  "section": "TCP",
+  "unitId": "tcp-u3",
+  "moduleIds": [
+    "tcp-c-corp-compliance"
+  ],
+  "pool": "practice",
+  "title": "Estimated tax for a large corporation — Crestline Corp.",
+  "minutes": 15,
+  "skill": "application",
+  "instructions": "Crestline Corp. (calendar year) had taxable income over $1 million in 2024, so it is a large corporation. Its 2024 tax was **$400,000**; its 2025 tax will be **$600,000**. It doesn't use the annualized or seasonal methods.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the minimum installments to avoid the underpayment penalty.",
+      "rows": [
+        {
+          "id": "q1",
+          "label": "First installment (April 15)",
+          "answer": 100000,
+          "explanation": "A large corporation may base only the first installment on prior-year tax: 25% × 400,000 = **100,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "q2",
+          "label": "Second installment (June 15)",
+          "answer": 200000,
+          "explanation": "Catch up to 50% of current tax: 300,000 − 100,000 = **200,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "q3",
+          "label": "Third installment (September 15)",
+          "answer": 150000,
+          "explanation": "25% × 600,000 = **150,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "q4",
+          "label": "Fourth installment (December 15)",
+          "answer": 150000,
+          "explanation": "25% × 600,000 = **150,000**.",
+          "tolerance": 0
+        }
+      ]
+    }
+  ]
+}

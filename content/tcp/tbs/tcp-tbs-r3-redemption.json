@@ -1,0 +1,87 @@
+{
+  "id": "tcp-tbs-r3-redemption",
+  "section": "TCP",
+  "unitId": "tcp-u6",
+  "moduleIds": [
+    "tcp-formation-liquidation"
+  ],
+  "pool": "practice",
+  "title": "Stock redemption tests — Monroe Corp.",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Monroe Corp. has **100** shares outstanding and ample E&P: Dad owns 50, his son owns 30, and an unrelated investor owns 20. Monroe redeems **20** of Dad's shares.",
+  "exhibits": [],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute Dad's ownership, including attribution from his son.",
+      "rows": [
+        {
+          "id": "bef",
+          "label": "Before the redemption (percent)",
+          "answer": 80,
+          "explanation": "(50 + 30) ÷ 100 = **80%**.",
+          "tolerance": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "aft",
+          "label": "After the redemption (percent)",
+          "answer": 75,
+          "explanation": "(30 + 30) ÷ 80 = **75%**.",
+          "tolerance": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "thr",
+          "label": "80% of his prior ownership (percent)",
+          "answer": 64,
+          "explanation": "80% × 80% = **64%**.",
+          "tolerance": 0.1,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "Evaluate the tests.",
+      "options": [
+        "Met",
+        "Not met"
+      ],
+      "rows": [
+        {
+          "id": "t1",
+          "label": "Substantially disproportionate redemption",
+          "answer": "Not met",
+          "explanation": "He's still over 50% and above 64%."
+        },
+        {
+          "id": "t2",
+          "label": "Complete termination (if all 50 shares were redeemed and he files a valid family attribution waiver)",
+          "answer": "Met",
+          "explanation": "A waiver lets him ignore his son's shares, completing the termination."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "r",
+      "prompt": "How is the 20-share redemption treated?",
+      "options": [
+        "Dividend",
+        "Sale or exchange"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Tax treatment",
+          "answer": "Dividend",
+          "explanation": "No exchange test is met and E&P is ample."
+        }
+      ]
+    }
+  ]
+}
