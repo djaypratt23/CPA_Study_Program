@@ -785,5 +785,109 @@
     "explanation": "Dividends between members of an affiliated group (80%+ ownership) qualify for a 100% DRD even on separate returns.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-cr-21",
+    "pool": "practice",
+    "stem": "In a consolidated group, taxable income before charitable deductions is: Parent $500,000; Sub 1 $200,000; Sub 2 $(100,000). Parent gave $40,000 and Sub 1 $30,000 to charity. What is the consolidated charitable deduction?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$70,000",
+        "explanation": "The 10% limit applies to the group.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$50,000",
+        "explanation": "Sub 2's loss counts in the base.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$60,000",
+        "explanation": "Correct. 10% of consolidated taxable income of $600,000; $10,000 carries forward."
+      },
+      {
+        "id": "d",
+        "text": "$40,000",
+        "explanation": "Both members' gifts count.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The charitable limit is computed on consolidated taxable income.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr-22",
+    "pool": "practice",
+    "stem": "Parent sells equipment (basis $60,000) to Sub for $100,000. Sub depreciates it straight-line over 5 years. How much of Parent's deferred gain is taken into account in the first full year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "The gain is matched to depreciation.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Part is recognized each year.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000",
+        "explanation": "Not the matching amount.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "Correct. The $40,000 gain is recognized as Sub's extra depreciation is claimed: 40,000 ÷ 5."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Under the matching rule, intercompany gain is taken into account as the buyer's additional depreciation is deducted.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-cr-23",
+    "pool": "practice",
+    "stem": "A corporation joins a consolidated group on July 1. How is its income for the year reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Pre-joining separately; rest consolidated",
+        "explanation": "Correct. Income after joining is consolidated."
+      },
+      {
+        "id": "b",
+        "text": "All of it in the consolidated return",
+        "explanation": "Pre-joining income isn't included.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "All of it on a separate return",
+        "explanation": "Post-joining income is consolidated.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Averaged between the two returns",
+        "explanation": "Income isn't averaged.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A new member files a short separate return for the period before joining.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

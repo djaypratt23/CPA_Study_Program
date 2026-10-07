@@ -786,5 +786,108 @@
     "explanation": "Without an §83(b) election, dividends on unvested restricted stock are treated as compensation.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-sc-21",
+    "pool": "practice",
+    "stem": "An employee made an §83(b) election on restricted stock, reporting $20,000 of income, and paid nothing. She later forfeits the shares. What is the tax effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $20,000 ordinary loss",
+        "explanation": "Forfeiture doesn't reverse the income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A $20,000 capital loss",
+        "explanation": "No loss for amounts not paid.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No deduction for the $20,000",
+        "explanation": "Correct. A forfeiture loss is limited to the amount paid."
+      },
+      {
+        "id": "d",
+        "text": "Amend to remove the income",
+        "explanation": "That isn't permitted.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "After an §83(b) election, a forfeiture gives a loss only for any amount paid, not the income reported.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-sc-22",
+    "pool": "practice",
+    "stem": "An employee exercises NQSOs on 1,000 shares (strike $10; FMV $40) in a cashless exercise, selling 250 shares at $40 to cover the cost. What ordinary income results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$22,500",
+        "explanation": "Shares sold still count.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$10,000",
+        "explanation": "That's the cost.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "NQSO exercises are taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$30,000",
+        "explanation": "Correct. Income is the spread on all shares exercised."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The spread on all exercised shares is ordinary income; the shares sold at FMV produce no further gain.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-sc-23",
+    "pool": "practice",
+    "stem": "An employee paid $15,000 of AMT in the year she exercised ISOs. Years later she sells the shares in a qualifying disposition. How can she recover the AMT?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Through the minimum tax credit",
+        "explanation": "Correct. The credit offsets regular tax in later years."
+      },
+      {
+        "id": "b",
+        "text": "Through a refund in the exercise year",
+        "explanation": "AMT isn't refunded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "By deducting it as an expense",
+        "explanation": "It's a credit, not a deduction.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "It can't be recovered",
+        "explanation": "The credit is available.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "AMT from ISO deferral items generates a minimum tax credit usable when regular tax exceeds tentative minimum tax.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

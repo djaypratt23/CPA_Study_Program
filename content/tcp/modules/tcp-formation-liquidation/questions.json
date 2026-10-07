@@ -788,5 +788,109 @@
     "explanation": "Stock received for capital or §1231 assets in a §351 exchange includes the holding period of those assets.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-21",
+    "pool": "practice",
+    "stem": "In a §351 exchange, a shareholder transfers asset A (basis $20,000; FMV $60,000) and asset B (basis $80,000; FMV $40,000) for stock worth $90,000 and $10,000 cash. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "Boot is allocated among the assets.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Gain is recognized on A.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$6,000",
+        "explanation": "Correct. Boot is allocated by FMV: A gets $6,000; B's loss isn't recognized."
+      },
+      {
+        "id": "d",
+        "text": "$2,000",
+        "explanation": "Losses don't offset gains.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Boot is allocated to each asset in proportion to FMV; each asset's gain is the lesser of its realized gain or allocated boot.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-22",
+    "pool": "practice",
+    "stem": "An estate redeems stock to pay estate taxes of $300,000 and funeral and administration expenses of $100,000. It redeems $500,000 of stock. How much qualifies for §303 exchange treatment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$500,000",
+        "explanation": "The limit is $400,000.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "$300,000",
+        "explanation": "Funeral and administration expenses count too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "§303 applies here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$400,000",
+        "explanation": "Correct. §303 is limited to death taxes plus funeral and administration expenses."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§303 treats redemptions up to death taxes and funeral/administration expenses as exchanges.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-23",
+    "pool": "practice",
+    "stem": "A parent owns 70% of a subsidiary, which liquidates and distributes appreciated assets. What is the tax effect?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Taxable to both levels",
+        "explanation": "Correct. §332 requires 80% ownership."
+      },
+      {
+        "id": "b",
+        "text": "Tax-free under §332",
+        "explanation": "Ownership is below 80%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Tax-free to the sub only",
+        "explanation": "The sub recognizes gain too.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "Taxable to minority holders only",
+        "explanation": "All shareholders are taxed.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Without 80% control, the liquidation is taxable under §336 and §331.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]
