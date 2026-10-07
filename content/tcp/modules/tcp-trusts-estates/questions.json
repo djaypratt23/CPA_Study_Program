@@ -888,5 +888,727 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-te-24",
+    "pool": "practice",
+    "stem": "When is Form 1041 due for a calendar-year trust?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "March 15",
+        "explanation": "Not for trusts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "May 15",
+        "explanation": "Not for trusts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "October 15",
+        "explanation": "That's the extended date.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "April 15",
+        "explanation": "Correct. The 15th day of the 4th month."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Form 1041 is due on the 15th day of the 4th month after the tax year ends.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-te-25",
+    "pool": "practice",
+    "stem": "What personal exemption does a simple trust get?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300",
+        "explanation": "Correct. Complex trusts get $100."
+      },
+      {
+        "id": "b",
+        "text": "$100",
+        "explanation": "That's for complex trusts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$600",
+        "explanation": "That's for estates.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A simple trust gets one.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Simple trusts get $300, complex trusts $100 and estates $600.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-te-26",
+    "pool": "practice",
+    "stem": "For 2025, at what taxable income does a trust reach the 37% bracket?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,200",
+        "explanation": "That was 2024 in this case.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "$15,650",
+        "explanation": "Correct. Trust brackets are compressed."
+      },
+      {
+        "id": "c",
+        "text": "$609,350",
+        "explanation": "That's for single individuals.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Not the threshold.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Trusts reach the top bracket at very low income: $15,650 in 2025.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-te-27",
+    "pool": "practice",
+    "stem": "A trust has $20,000 of taxable interest, $5,000 of tax-exempt interest, $10,000 of capital gains allocated to corpus and $3,000 of fees. What is DNI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$32,000",
+        "explanation": "Exclude corpus gains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$17,000",
+        "explanation": "Include tax-exempt interest.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$22,000",
+        "explanation": "Correct. 20 + 5 − 3; corpus gains excluded."
+      },
+      {
+        "id": "d",
+        "text": "$25,000",
+        "explanation": "Subtract the fees.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "DNI includes tax-exempt income and excludes capital gains allocated to corpus.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-28",
+    "pool": "practice",
+    "stem": "A simple trust has $30,000 of taxable interest and no other items. It distributes all income as required. What is the trust's tax result?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Tax on $30,000",
+        "explanation": "It's distributed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Tax on $29,700",
+        "explanation": "The deduction offsets it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No deduction; tax on all",
+        "explanation": "Distributions are deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No tax owed",
+        "explanation": "Correct. All income is distributed."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A simple trust deducts required income distributions up to DNI.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-29",
+    "pool": "practice",
+    "stem": "A complex trust has $40,000 of DNI (all taxable) and distributes $25,000. What is the trust's taxable income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$14,900",
+        "explanation": "Correct. $15,000 − $100 exemption."
+      },
+      {
+        "id": "b",
+        "text": "$15,000",
+        "explanation": "Subtract the exemption.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Deduct the distribution.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Not all is distributed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The trust is taxed on undistributed income less its exemption.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-30",
+    "pool": "practice",
+    "stem": "A trust distributes $50,000 to a beneficiary, and its DNI is $40,000. How much does the beneficiary include?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Limited to DNI.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Correct. Limited to DNI."
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "DNI is carried out.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Beneficiaries include distributions in income up to DNI.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-31",
+    "pool": "practice",
+    "stem": "DNI of $40,000 consists of $30,000 of interest and $10,000 of qualified dividends, all distributed. How does the beneficiary report it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000 of ordinary income",
+        "explanation": "Character passes through.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$40,000 of dividends",
+        "explanation": "Character is kept.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Same character",
+        "explanation": "Correct. Character flows through."
+      },
+      {
+        "id": "d",
+        "text": "$40,000 of interest only",
+        "explanation": "Character is kept.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Distributions keep the character of the trust's income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-32",
+    "pool": "practice",
+    "stem": "A trustee distributes income on February 20 of the following year. What election lets it count for the prior year?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A §645 election",
+        "explanation": "That's for revocable trusts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A §754 election",
+        "explanation": "That's for partnerships.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "None; it counts next year",
+        "explanation": "An election exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The 65-day election",
+        "explanation": "Correct. For complex trusts and estates."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§663(b) lets distributions within 65 days after year-end be treated as made in the prior year.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-33",
+    "pool": "practice",
+    "stem": "A complex trust realizes a $20,000 capital gain allocated to corpus. Who generally pays tax on it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The trust",
+        "explanation": "Correct. Corpus gains stay in the trust."
+      },
+      {
+        "id": "b",
+        "text": "The income beneficiary",
+        "explanation": "Not distributed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The grantor",
+        "explanation": "Not a grantor trust.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No one",
+        "explanation": "It is taxable income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Capital gains allocated to corpus are generally excluded from DNI and taxed to the trust.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-34",
+    "pool": "practice",
+    "stem": "A trust's grantor keeps the power to revoke it. Who is taxed on its income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The trust",
+        "explanation": "It's a grantor trust.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The grantor",
+        "explanation": "Correct. It's a grantor trust."
+      },
+      {
+        "id": "c",
+        "text": "The beneficiaries",
+        "explanation": "It's a grantor trust.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No one",
+        "explanation": "It is taxable income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Income of a grantor trust is taxed to the grantor.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-te-35",
+    "pool": "practice",
+    "stem": "What does a §645 election do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Terminates the trust",
+        "explanation": "Not the effect.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Makes the trust a grantor trust",
+        "explanation": "Not the effect.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Joins the trust to the estate",
+        "explanation": "Correct. It allows estate tax-year and other benefits."
+      },
+      {
+        "id": "d",
+        "text": "Avoids estate tax",
+        "explanation": "Not the effect.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§645 lets a qualified revocable trust be treated as part of the estate for income tax.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-36",
+    "pool": "practice",
+    "stem": "A trust has $50,000 of undistributed net investment income and $50,000 of AGI in 2025. What NIIT applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,900",
+        "explanation": "Subtract the threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "The threshold is low.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$595",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$1,305",
+        "explanation": "Correct. 3.8% × ($50,000 − $15,650)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Trusts owe NIIT on the lesser of undistributed NII or AGI above the top bracket threshold.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-37",
+    "pool": "practice",
+    "stem": "A 2025 estate is worth $20,000,000, with a $3,000,000 marital deduction and no prior taxable gifts. The exclusion is $13,990,000. What estate tax is due?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,204,000",
+        "explanation": "Correct. 40% × $3,010,000."
+      },
+      {
+        "id": "b",
+        "text": "$2,404,000",
+        "explanation": "Subtract the marital deduction.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The estate exceeds the exclusion.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$8,000,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Estate tax is 40% of the taxable estate above the exclusion.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-te-38",
+    "pool": "practice",
+    "stem": "In its final year, a trust has deductions exceeding its income. What happens to the excess?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's lost",
+        "explanation": "It passes out in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It passes to the beneficiaries",
+        "explanation": "Correct. On termination."
+      },
+      {
+        "id": "c",
+        "text": "It carries forward in the trust",
+        "explanation": "The trust ends.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It's refunded",
+        "explanation": "Not refunded in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Excess deductions on termination pass to the beneficiaries succeeding to the property.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-39",
+    "pool": "practice",
+    "stem": "A trust is in the 37% bracket, and its beneficiaries are in the 12% bracket. What should the trustee consider?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accumulating income",
+        "explanation": "Taxed at 37% in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Paying more fees",
+        "explanation": "Not a plan in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "More distributions",
+        "explanation": "Correct. It shifts income to lower brackets."
+      },
+      {
+        "id": "d",
+        "text": "Nothing; it's fixed",
+        "explanation": "Distributions help.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Distributions carry DNI to lower-bracket beneficiaries.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-40",
+    "pool": "practice",
+    "stem": "After year-end, a trustee sees the trust owes tax at 37% on accumulated income. What can still reduce it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing",
+        "explanation": "A 65-day election helps.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "An amended return only",
+        "explanation": "That is not enough.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A §754 election",
+        "explanation": "That is not related.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A 65-day distribution",
+        "explanation": "Correct. Elected for the prior year."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A 65-day distribution and election shifts income to beneficiaries for the prior year.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-41",
+    "pool": "practice",
+    "stem": "A grantor wants to remove appreciation from her estate while paying the trust's income tax herself. What structure fits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A defective grantor trust",
+        "explanation": "Correct. Income tax stays with the grantor."
+      },
+      {
+        "id": "b",
+        "text": "A simple trust she funds",
+        "explanation": "The trust pays tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A revocable trust",
+        "explanation": "Stays in her estate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Outright gifts only",
+        "explanation": "No tax-burn benefit.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "An IDGT is outside the estate for estate tax but taxed to the grantor, who pays the trust's tax.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-42",
+    "pool": "practice",
+    "stem": "An estate's executor is choosing its first tax year. What flexibility does the estate have?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Calendar year only",
+        "explanation": "Not for estates.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Any fiscal year",
+        "explanation": "Correct. Estates may choose a fiscal year."
+      },
+      {
+        "id": "c",
+        "text": "The decedent's year only",
+        "explanation": "That is not required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "June 30 only",
+        "explanation": "Any month-end in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Estates may adopt any fiscal year ending within 12 months of death, which can defer income.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-43",
+    "pool": "practice",
+    "stem": "A trust has large undistributed investment income. How can NIIT be reduced?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accumulate more",
+        "explanation": "Raises NIIT in this case.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "Convert it to a C corporation",
+        "explanation": "Not appropriate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Distribute it",
+        "explanation": "Correct. They have higher thresholds."
+      },
+      {
+        "id": "d",
+        "text": "Nothing can reduce it",
+        "explanation": "Distributions help.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Individuals' NIIT thresholds are much higher than the trust threshold.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-te-44",
+    "pool": "practice",
+    "stem": "A surviving spouse wants her late husband's unused exclusion. What must the executor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing; it's automatic",
+        "explanation": "An election is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "File Form 709",
+        "explanation": "That's for gifts.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "File Form 1041",
+        "explanation": "That's income tax.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "File Form 706",
+        "explanation": "Correct. To elect portability."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Portability of the DSUE amount requires an election on a timely filed estate tax return.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

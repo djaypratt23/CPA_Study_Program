@@ -898,5 +898,800 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-ad-23",
+    "pool": "practice",
+    "stem": "What is the maximum §121 home sale exclusion for a married couple filing jointly?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$500,000",
+        "explanation": "Correct. Each spouse's $250,000 combined."
+      },
+      {
+        "id": "b",
+        "text": "$250,000",
+        "explanation": "That's for single filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$750,000",
+        "explanation": "That is not the limit.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$1,000,000",
+        "explanation": "That is not the limit.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Joint filers may exclude up to $500,000 of gain on a qualifying principal residence sale.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-ad-24",
+    "pool": "practice",
+    "stem": "What ownership and use test applies to the §121 exclusion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "1 of the last 3 years",
+        "explanation": "That period is too short.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "2 of the last 5 years",
+        "explanation": "Correct. Both ownership and use."
+      },
+      {
+        "id": "c",
+        "text": "3 of the last 5 years",
+        "explanation": "That period is too long.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "5 consecutive years",
+        "explanation": "That is not required.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The taxpayer must own and use the home as a principal residence for 2 of the 5 years before the sale.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-ad-25",
+    "pool": "practice",
+    "stem": "How many prior years does the §1231 lookback rule cover?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "3 years",
+        "explanation": "Not the period.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "7 years",
+        "explanation": "Not the period.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "5 years",
+        "explanation": "Correct. Unrecaptured net §1231 losses."
+      },
+      {
+        "id": "d",
+        "text": "10 years",
+        "explanation": "Not the period.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Net §1231 gains are ordinary to the extent of unrecaptured net §1231 losses from the prior 5 years.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-ad-26",
+    "pool": "practice",
+    "stem": "Equipment cost $100,000 and has $60,000 of accumulated depreciation. It's sold for $70,000. How is the gain characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000 §1231 gain",
+        "explanation": "Recapture comes first.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$10,000 ordinary; $20,000 §1231",
+        "explanation": "All is recapture.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000 capital gain",
+        "explanation": "It's ordinary in this case.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$30,000 ordinary",
+        "explanation": "Correct. §1245 recapture covers all of it."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§1245 recaptures gain as ordinary to the extent of prior depreciation.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-27",
+    "pool": "practice",
+    "stem": "The same equipment (cost $100,000; $60,000 of depreciation) is sold for $120,000. How is the gain characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$60,000 ordinary; $20,000 §1231",
+        "explanation": "Correct. Recapture is limited to depreciation."
+      },
+      {
+        "id": "b",
+        "text": "$80,000 ordinary",
+        "explanation": "Recapture is limited.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$80,000 §1231",
+        "explanation": "Recapture comes first.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$60,000 §1231; $20,000 ordinary",
+        "explanation": "That's backward.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gain above original cost is §1231 gain.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-28",
+    "pool": "practice",
+    "stem": "A residential rental building cost $500,000 with $150,000 of straight-line depreciation. It's sold for $600,000. How is the $250,000 gain taxed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$250,000 ordinary",
+        "explanation": "Straight-line real property isn't fully recaptured.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$150,000 at 25%; $100,000 at 20%",
+        "explanation": "Correct. Unrecaptured §1250 gain is capped at 25%."
+      },
+      {
+        "id": "c",
+        "text": "$250,000 at 20%",
+        "explanation": "Part is unrecaptured §1250.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$150,000 ordinary; $100,000 at 20%",
+        "explanation": "It's not ordinary.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Gain from straight-line depreciation on real property is unrecaptured §1250 gain, taxed at up to 25%.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-29",
+    "pool": "practice",
+    "stem": "This year's net §1231 gain is $50,000. Unrecaptured net §1231 losses from the prior 5 years total $30,000. How is the gain treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000 LTCG",
+        "explanation": "The lookback applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$50,000 ordinary",
+        "explanation": "Only $30,000 in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000 ordinary; $20,000 LTCG",
+        "explanation": "Correct. The lookback recaptures prior losses."
+      },
+      {
+        "id": "d",
+        "text": "$20,000 ordinary; $30,000 LTCG",
+        "explanation": "That's backward.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Net §1231 gain is recharacterized as ordinary to the extent of prior unrecaptured losses.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-30",
+    "pool": "practice",
+    "stem": "A taxpayer has a net §1231 loss of $40,000 for the year. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a capital loss, limited to $3,000",
+        "explanation": "It's ordinary in this case.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "As a suspended loss",
+        "explanation": "It's deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "As a 25% loss",
+        "explanation": "That is not the treatment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a $40,000 ordinary loss",
+        "explanation": "Correct. Net §1231 losses are ordinary."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Net §1231 losses are fully deductible ordinary losses.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-31",
+    "pool": "practice",
+    "stem": "Equipment (cost $150,000, depreciation $100,000) is sold for $200,000: $40,000 down, the rest later. What gain is recognized in the year of sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$110,000",
+        "explanation": "Correct. $100,000 recapture plus 25% of $40,000."
+      },
+      {
+        "id": "b",
+        "text": "$40,000",
+        "explanation": "Recapture is recognized now.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$150,000",
+        "explanation": "Only recapture plus installment gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Add the installment gain.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Depreciation recapture is recognized in the year of sale; only remaining gain uses the installment method.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-32",
+    "pool": "practice",
+    "stem": "A single taxpayer owned and lived in a home for 1 year, then sold it for a new job at a $150,000 gain. How much is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "A reduced exclusion applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$25,000",
+        "explanation": "Correct. A $125,000 reduced exclusion applies."
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "The exclusion is prorated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$100,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A job move qualifies for a reduced exclusion prorated by the time requirement met.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-33",
+    "pool": "practice",
+    "stem": "A single taxpayer owned a home 10 years: she rented it for the first 2 years (after 2008), then lived in it 8 years. Her gain is $300,000, with no depreciation taken. How much is taxable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Apply the nonqualified ratio.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Nonqualified use applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$60,000",
+        "explanation": "Correct. 2/10 of the gain is nonqualified use."
+      },
+      {
+        "id": "d",
+        "text": "$300,000",
+        "explanation": "Most is excluded.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Gain allocated to nonqualified use periods after 2008 isn't excludable.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-34",
+    "pool": "practice",
+    "stem": "A taxpayer sells stock (basis $40,000) to her brother for $30,000. He later sells it for $45,000. What gain does the brother recognize?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000",
+        "explanation": "The disallowed loss reduces it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Some gain remains.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "Correct. His $15,000 gain is reduced by the disallowed $10,000 loss."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A buyer from a related party may use the disallowed loss to reduce later gain.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-35",
+    "pool": "practice",
+    "stem": "An individual sells depreciable equipment at a $40,000 gain to a corporation she owns 60% of. How is the gain characterized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All $40,000 is ordinary",
+        "explanation": "Correct. §1239 applies."
+      },
+      {
+        "id": "b",
+        "text": "$40,000 §1231 gain",
+        "explanation": "§1239 makes it ordinary.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$40,000 capital gain",
+        "explanation": "It's ordinary in this case.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Half ordinary",
+        "explanation": "All of it in this case.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gain on sales of depreciable property to a controlled entity is ordinary under §1239.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-36",
+    "pool": "practice",
+    "stem": "A taxpayer sells shares at a $5,000 loss and buys identical shares 20 days later for $22,000. What is the new basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$22,000",
+        "explanation": "Add the disallowed loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$27,000",
+        "explanation": "Correct. The disallowed loss is added."
+      },
+      {
+        "id": "c",
+        "text": "$17,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A disallowed wash sale loss is added to the basis of the replacement shares.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-37",
+    "pool": "practice",
+    "stem": "Stock becomes worthless in August. When is the loss treated as occurring?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "In August",
+        "explanation": "Deemed at year-end.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "When written off",
+        "explanation": "Deemed at year-end.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "On December 31",
+        "explanation": "Correct. On the last day of the tax year."
+      },
+      {
+        "id": "d",
+        "text": "When the company liquidates",
+        "explanation": "Deemed at year-end.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Worthless securities are treated as sold on the last day of the tax year.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ad-38",
+    "pool": "practice",
+    "stem": "A single taxpayer has a $70,000 loss on qualifying §1244 stock. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$70,000 ordinary",
+        "explanation": "Capped at $50,000.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$70,000 capital",
+        "explanation": "§1244 allows ordinary loss.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$3,000 deductible",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$50,000 ordinary",
+        "explanation": "Correct. The single cap is $50,000."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§1244 allows up to $50,000 ($100,000 joint) of ordinary loss on qualifying small business stock.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-39",
+    "pool": "practice",
+    "stem": "QSBS issued after July 4, 2025 is sold after exactly 4 years at a $1,000,000 gain. How much gain is excluded?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$750,000",
+        "explanation": "Correct. 75% after 4 years."
+      },
+      {
+        "id": "b",
+        "text": "$1,000,000",
+        "explanation": "Full exclusion needs 5 years.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$500,000",
+        "explanation": "That's after 3 years.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A partial exclusion applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "For stock issued after July 4, 2025, §1202 excludes 50%, 75% or 100% after 3, 4 or 5 years.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-ad-40",
+    "pool": "practice",
+    "stem": "A business sale includes a building and heavily depreciated equipment. Why does the price allocation matter to the seller?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It doesn't matter",
+        "explanation": "Character differs by asset.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Equipment gain is ordinary",
+        "explanation": "Correct. §1245 recapture is ordinary."
+      },
+      {
+        "id": "c",
+        "text": "Building gain is ordinary",
+        "explanation": "It's mostly capital-type.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Only the buyer cares",
+        "explanation": "Both care in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Allocating more price to recaptured equipment increases the seller's ordinary income.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ad-41",
+    "pool": "practice",
+    "stem": "A taxpayer had net §1231 losses two years ago and expects a large §1231 gain this year. What should she anticipate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "All long-term capital gain",
+        "explanation": "The lookback applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No tax on the gain",
+        "explanation": "It is taxable income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Some is ordinary",
+        "explanation": "Correct. The lookback rule recaptures losses."
+      },
+      {
+        "id": "d",
+        "text": "A capital loss",
+        "explanation": "Not the effect.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Prior net §1231 losses within 5 years convert current §1231 gain to ordinary income.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ad-42",
+    "pool": "practice",
+    "stem": "An investor wants to harvest a loss on an index fund without breaking market exposure. What works?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Buy the same fund in 10 days",
+        "explanation": "That's a wash sale.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Buy calls on the same fund",
+        "explanation": "May be a wash sale.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Sell and rebuy the same day",
+        "explanation": "Wash sale in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Buy a different, similar fund",
+        "explanation": "Correct. Not substantially identical."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Buying a similar but not substantially identical fund avoids the wash sale rule.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ad-43",
+    "pool": "practice",
+    "stem": "A seller expects installment payments over 5 years on equipment with large recapture. What cash flow issue arises?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Recapture is taxed in year 1",
+        "explanation": "Correct. Payments come later."
+      },
+      {
+        "id": "b",
+        "text": "Nothing is taxed until paid",
+        "explanation": "Recapture is accelerated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "All gain is deferred",
+        "explanation": "Recapture isn't.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The sale is tax-free",
+        "explanation": "It is taxable income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Installment sales don't defer depreciation recapture, so tax may exceed early cash received.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ad-44",
+    "pool": "practice",
+    "stem": "A taxpayer converts a depreciated rental into her residence and plans to sell after 2 years. What limits her exclusion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing limits it",
+        "explanation": "Limits apply in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Nonqualified use",
+        "explanation": "Correct. Both reduce the exclusion."
+      },
+      {
+        "id": "c",
+        "text": "Only the 2-year test",
+        "explanation": "Other limits apply.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "The kiddie tax",
+        "explanation": "That is not related.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Post-2008 nonqualified use reduces the exclusion, and post-May 1997 depreciation is always taxable.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-ad-45",
+    "pool": "practice",
+    "stem": "An elderly taxpayer owns highly appreciated stock. Should she give it to her children now or leave it to them at death?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Give it now",
+        "explanation": "Gifts carry over basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Sell it now",
+        "explanation": "Triggers gain in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Leave it at death",
+        "explanation": "Correct. Heirs get a basis step-up."
+      },
+      {
+        "id": "d",
+        "text": "It makes no difference",
+        "explanation": "Basis rules differ.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Property received at death gets a stepped-up basis; gifts carry over the donor's basis.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

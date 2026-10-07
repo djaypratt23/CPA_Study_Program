@@ -892,5 +892,763 @@
     "explanation": "Without 80% control, the liquidation is taxable under §336 and §331.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-fl-24",
+    "pool": "practice",
+    "stem": "What control test must transferors meet under §351?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "50% of vote",
+        "explanation": "That is too low.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "80% of vote only",
+        "explanation": "Each other class too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "80% of each class",
+        "explanation": "Correct. Immediately after the exchange."
+      },
+      {
+        "id": "d",
+        "text": "100% of all stock",
+        "explanation": "That is not required.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Transferors must own at least 80% of voting power and 80% of each other class of stock.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-fl-25",
+    "pool": "practice",
+    "stem": "What ownership must a parent have for a tax-free §332 liquidation of a subsidiary?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "50% of value",
+        "explanation": "That is too low.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "100% of stock",
+        "explanation": "That is not required.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "80% of vote only",
+        "explanation": "Value too in this case.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "80% of vote and value",
+        "explanation": "Correct. Under §1504(a)(2)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§332 requires the parent to own at least 80% of the subsidiary's vote and value.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-fl-26",
+    "pool": "practice",
+    "stem": "What does the substantially disproportionate redemption test require?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Under 50% and 80% tests",
+        "explanation": "Correct. Both after the redemption."
+      },
+      {
+        "id": "b",
+        "text": "Any reduction in ownership",
+        "explanation": "Specific thresholds apply.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Under 80% vote only",
+        "explanation": "That is not the test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Full termination of interest",
+        "explanation": "That's a separate test.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "After the redemption, the shareholder must hold less than 50% of voting power and less than 80% of the prior percentage.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-fl-27",
+    "pool": "practice",
+    "stem": "Land (basis $60,000, FMV $100,000) is transferred for $90,000 of stock and $10,000 cash in a §351 exchange. What is the gain and stock basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000 gain; $90,000 basis",
+        "explanation": "Only boot is taxed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$10,000 gain; $60,000 basis",
+        "explanation": "Correct. Boot is recognized."
+      },
+      {
+        "id": "c",
+        "text": "$0 gain; $60,000 basis",
+        "explanation": "Boot is taxed in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$10,000 gain; $70,000 basis",
+        "explanation": "Subtract the boot.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Stock basis equals property basis plus gain less boot.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-28",
+    "pool": "practice",
+    "stem": "Property with a $50,000 basis and $200,000 FMV, subject to an $80,000 liability, is transferred in a §351 exchange. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$0",
+        "explanation": "§357(c) applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$80,000",
+        "explanation": "Only the excess.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Correct. Liabilities exceed basis."
+      },
+      {
+        "id": "d",
+        "text": "$150,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Liabilities in excess of basis cause gain under §357(c).",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-29",
+    "pool": "practice",
+    "stem": "In the §351 exchange above (land basis $60,000, $10,000 of gain recognized), what is the corporation's basis in the land?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Not FMV in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$60,000",
+        "explanation": "Add the gain in this case.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$90,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$70,000",
+        "explanation": "Correct. Carryover basis plus gain."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The corporation takes the transferor's basis plus any gain recognized.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-30",
+    "pool": "practice",
+    "stem": "A founder receives 10% of a new corporation's stock, worth $50,000, for services. What results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000 of ordinary income",
+        "explanation": "Correct. Services aren't property."
+      },
+      {
+        "id": "b",
+        "text": "No income under §351",
+        "explanation": "Services aren't property.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$50,000 capital gain",
+        "explanation": "It's compensation.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Deferred until sale",
+        "explanation": "Income now in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Stock received for services is compensation income.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-31",
+    "pool": "practice",
+    "stem": "A transfers property for 70% of a new corporation's stock, and B receives 30% for services only. Does §351 apply to A?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, as a transferor",
+        "explanation": "Control fails in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No; control fails",
+        "explanation": "Correct. B isn't a property transferor."
+      },
+      {
+        "id": "c",
+        "text": "Yes, if B consents",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only for half",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Stock for services doesn't count toward the 80% control test.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-32",
+    "pool": "practice",
+    "stem": "A C corporation liquidates, distributing land (FMV $500,000, basis $200,000) to its sole shareholder (stock basis $100,000). What gain arises?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$300,000 corporate only",
+        "explanation": "The shareholder also has gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$400,000 shareholder only",
+        "explanation": "The corporation also has gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$300,000 and $400,000",
+        "explanation": "Correct. Two levels of tax."
+      },
+      {
+        "id": "d",
+        "text": "No gain to either party",
+        "explanation": "Liquidations are taxable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§336 taxes the corporation on distributed appreciation; §331 taxes the shareholder on the excess over stock basis.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-33",
+    "pool": "practice",
+    "stem": "An 85%-owned subsidiary liquidates into its parent. What gain does the parent recognize, and what basis does it take?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Gain; FMV basis",
+        "explanation": "Not in §332 in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "None; FMV basis",
+        "explanation": "Basis carries over.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Gain; carryover basis",
+        "explanation": "No gain in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "None; carryover basis",
+        "explanation": "Correct. §332 and §334(b)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "In a §332 liquidation, the parent recognizes no gain and takes the subsidiary's basis.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-34",
+    "pool": "practice",
+    "stem": "In a §332 liquidation, the subsidiary distributes appreciated property to its 15% minority shareholder. What results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The subsidiary recognizes gain",
+        "explanation": "Correct. On distributions to minority holders."
+      },
+      {
+        "id": "b",
+        "text": "No gain to anyone",
+        "explanation": "Minority distributions are taxable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only the parent recognizes gain",
+        "explanation": "The subsidiary does.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "The minority shareholder is exempt",
+        "explanation": "It's taxable to them too.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A subsidiary recognizes gain (not loss) on distributions to minority shareholders.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-fl-35",
+    "pool": "practice",
+    "stem": "A shareholder owns 60 of 100 shares. The corporation redeems 30 of her shares. Is the redemption substantially disproportionate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No; it's a dividend",
+        "explanation": "Both tests are met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes; exchange treatment",
+        "explanation": "Correct. 42.9% is under 50% and 48%."
+      },
+      {
+        "id": "c",
+        "text": "Only with a waiver",
+        "explanation": "Not needed in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No; she still owns shares",
+        "explanation": "Full termination isn't required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "30/70 = 42.9%, below 50% and below 80% of 60%.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-36",
+    "pool": "practice",
+    "stem": "A mother and son each own 50 of 100 shares. The mother's 50 shares are redeemed. Without a waiver, is it a complete termination?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, she owns nothing",
+        "explanation": "Attribution applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, if she resigns",
+        "explanation": "A waiver is needed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No; attribution applies",
+        "explanation": "Correct. Family attribution applies."
+      },
+      {
+        "id": "d",
+        "text": "Only for half",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§318 family attribution treats her as owning her son's shares unless she waives it.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-37",
+    "pool": "practice",
+    "stem": "A corporation with $100,000 of E&P redeems $40,000 of a shareholder's stock, and no §302 test is met. How is it treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $40,000 capital gain",
+        "explanation": "No test is met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A return of basis",
+        "explanation": "It's a dividend.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A $100,000 dividend",
+        "explanation": "Limited to the amount.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A $40,000 dividend",
+        "explanation": "Correct. Failed redemptions are §301 distributions."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Redemptions failing §302(b) tests are distributions, taxed as dividends to the extent of E&P.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-38",
+    "pool": "practice",
+    "stem": "In a merger, a target shareholder (basis $100,000) receives acquirer stock worth $150,000 and $100,000 cash. What gain is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Correct. Gain is recognized up to the boot."
+      },
+      {
+        "id": "b",
+        "text": "$150,000",
+        "explanation": "Limited to boot.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Boot is taxed in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$250,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "In a reorganization, realized gain is recognized to the extent of boot received.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-fl-39",
+    "pool": "practice",
+    "stem": "In a Type B reorganization, what may the acquirer use to obtain 80% control of the target?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cash and stock",
+        "explanation": "Not in a Type B.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Solely voting stock",
+        "explanation": "Correct. No boot is allowed."
+      },
+      {
+        "id": "c",
+        "text": "Any property",
+        "explanation": "Not in a Type B.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Debt securities",
+        "explanation": "Not in a Type B.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A Type B reorganization requires solely voting stock for target stock, achieving 80% control.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-fl-40",
+    "pool": "practice",
+    "stem": "A founder plans to contribute built-in loss property for stock under §351. What limits loss duplication?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "§357(c)",
+        "explanation": "That's for liabilities.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "§1031 like-kind rules",
+        "explanation": "That is not related.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "§362(e)(2)",
+        "explanation": "Correct. Corporate basis is limited to FMV."
+      },
+      {
+        "id": "d",
+        "text": "§382 NOL limits",
+        "explanation": "That's for NOLs.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "§362(e)(2) limits the corporation's aggregate basis in net built-in loss property to FMV.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-fl-41",
+    "pool": "practice",
+    "stem": "A transferor's liabilities exceed the basis of the property contributed. How can she avoid §357(c) gain?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Contribute a personal note",
+        "explanation": "Its basis is usually zero.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Delay the transfer",
+        "explanation": "Doesn't fix it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Nothing can avoid it",
+        "explanation": "Adding basis helps.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Add cash or property",
+        "explanation": "Correct. Increase total basis."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Adding cash or other basis property raises total basis above the liabilities assumed.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-fl-42",
+    "pool": "practice",
+    "stem": "A buyer wants a basis step-up in a C corporation's assets, but the seller prefers a stock sale. What's the tension?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Double tax on assets",
+        "explanation": "Correct. The seller pays two levels."
+      },
+      {
+        "id": "b",
+        "text": "A stock sale gives a step-up",
+        "explanation": "It doesn't in this case.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "No tension exists",
+        "explanation": "They conflict in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Both get a step-up",
+        "explanation": "Not in a stock sale.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Asset sales give buyers a step-up but create corporate and shareholder tax for C corporation sellers.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-fl-43",
+    "pool": "practice",
+    "stem": "A buyer acquires all stock of an S corporation and wants an asset basis step-up. What can help?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A §754 election",
+        "explanation": "That's for partnerships.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "A §338(h)(10) election",
+        "explanation": "Correct. Stock sale treated as asset sale."
+      },
+      {
+        "id": "c",
+        "text": "A §332 liquidation",
+        "explanation": "Doesn't step up basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Nothing",
+        "explanation": "An election exists.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A joint §338(h)(10) or §336(e) election treats the stock purchase as an asset purchase.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-fl-44",
+    "pool": "practice",
+    "stem": "A retiring shareholder's shares are redeemed, and her children keep theirs. How can she get exchange treatment?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Keep a board seat",
+        "explanation": "That defeats the waiver.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Keep one share",
+        "explanation": "Not a full termination.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Waive family attribution",
+        "explanation": "Correct. No interest for 10 years."
+      },
+      {
+        "id": "d",
+        "text": "Nothing; it's a dividend",
+        "explanation": "A waiver can work.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A complete termination with a family attribution waiver requires no interest (other than as a creditor) for 10 years.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-fl-45",
+    "pool": "practice",
+    "stem": "A transferor contributes built-in loss property and wants the corporation to keep the full basis. What election is available?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Recognize the loss now",
+        "explanation": "Not under §351.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Elect §338 treatment",
+        "explanation": "That is not related.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "None; basis is limited",
+        "explanation": "An election exists.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Cut her stock basis",
+        "explanation": "Correct. Under §362(e)(2)(C)."
+      }
+    ],
+    "answer": "d",
+    "explanation": "The transferor and corporation may elect to reduce stock basis instead of the property's basis.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

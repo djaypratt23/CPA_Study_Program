@@ -961,5 +961,726 @@
     "explanation": "For the BBA election out, each S corporation shareholder counts as a partner.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "tcp-po-26",
+    "pool": "practice",
+    "stem": "When is Form 1065 due for a calendar-year partnership, without extension?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "April 15",
+        "explanation": "That's for C corporations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "March 15",
+        "explanation": "Correct. The 15th day of the 3rd month."
+      },
+      {
+        "id": "c",
+        "text": "May 15",
+        "explanation": "That's for exempt organizations.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "September 15",
+        "explanation": "That's the extended date.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Form 1065 is due on the 15th day of the 3rd month, with a 6-month extension.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-po-27",
+    "pool": "practice",
+    "stem": "Under the BBA audit regime, who has sole authority to act for the partnership?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The tax matters partner",
+        "explanation": "That was the old regime.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "Every partner jointly",
+        "explanation": "The representative acts alone.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The representative",
+        "explanation": "Correct. Designated each year."
+      },
+      {
+        "id": "d",
+        "text": "The largest partner",
+        "explanation": "Not necessarily required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The partnership representative has sole authority to bind the partnership in BBA audits.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-po-28",
+    "pool": "practice",
+    "stem": "How are guaranteed payments for services treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nondeductible distributions",
+        "explanation": "They're deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Capital gain to the partner",
+        "explanation": "They're ordinary.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Tax-free to the partner",
+        "explanation": "They're income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Deductible; ordinary",
+        "explanation": "Correct. They're like salary."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Guaranteed payments are generally deductible by the partnership and ordinary income to the partner.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-po-29",
+    "pool": "practice",
+    "stem": "A 30% partner receives a $40,000 guaranteed payment. Partnership ordinary income after the payment is $100,000. What total income does she report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$70,000",
+        "explanation": "Correct. $40,000 + 30% × $100,000."
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Add the guaranteed payment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$40,000",
+        "explanation": "Add her share in this case.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$42,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A partner reports guaranteed payments plus her distributive share.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-30",
+    "pool": "practice",
+    "stem": "A partnership has $300,000 of revenue, $150,000 of expenses, a $40,000 guaranteed payment and a $5,000 charitable contribution. What is ordinary business income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$105,000",
+        "explanation": "Charity is separately stated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$110,000",
+        "explanation": "Correct. Charity is separately stated."
+      },
+      {
+        "id": "c",
+        "text": "$150,000",
+        "explanation": "Deduct the guaranteed payment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$145,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Ordinary income excludes separately stated items such as charitable contributions.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-31",
+    "pool": "practice",
+    "stem": "A general partner has a $30,000 share of ordinary income and a $40,000 guaranteed payment. What are her net SE earnings before the 92.35% factor?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Include her share.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Include the guaranteed payment.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$70,000",
+        "explanation": "Correct. Both are SE income."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "General partners have SE income.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A general partner's distributive share and guaranteed payments are SE income.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-32",
+    "pool": "practice",
+    "stem": "Outside basis is $50,000. Her shares: income $30,000, tax-exempt income $2,000, distributions $20,000 and a $10,000 increase in liabilities. What is ending basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$62,000",
+        "explanation": "Add the liability increase.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$70,000",
+        "explanation": "Include tax-exempt income.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$92,000",
+        "explanation": "Subtract distributions.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$72,000",
+        "explanation": "Correct. 50 + 30 + 2 − 20 + 10."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Outside basis rises for income and liability increases and falls for distributions.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-33",
+    "pool": "practice",
+    "stem": "A partner's outside basis is $15,000, and her share of the loss is $25,000. What can she deduct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$15,000",
+        "explanation": "Correct. Basis limits the loss."
+      },
+      {
+        "id": "b",
+        "text": "$25,000",
+        "explanation": "Limited by basis.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Up to basis is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$10,000 (the excess)",
+        "explanation": "That's suspended.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Partner losses are limited to outside basis, with the excess carried forward.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-34",
+    "pool": "practice",
+    "stem": "A special allocation lacks substantial economic effect. What happens?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It's respected",
+        "explanation": "It lacks substantial economic effect.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It's reallocated",
+        "explanation": "Correct. By the partners' interests."
+      },
+      {
+        "id": "c",
+        "text": "The partnership is taxed",
+        "explanation": "Not the result.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "It's ignored entirely",
+        "explanation": "It's reallocated.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Allocations without substantial economic effect follow the partners' interests in the partnership.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-po-35",
+    "pool": "practice",
+    "stem": "After a BBA audit, the partnership doesn't elect to push out the adjustments. Who pays?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reviewed-year partners",
+        "explanation": "Only with a push-out.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Current partners individually",
+        "explanation": "The partnership pays.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The partnership",
+        "explanation": "Correct. An imputed underpayment."
+      },
+      {
+        "id": "d",
+        "text": "No one",
+        "explanation": "It's assessed in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Under BBA, the partnership pays an imputed underpayment, generally at the highest rate, unless it pushes out.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-36",
+    "pool": "practice",
+    "stem": "A 60% partner sells land to the partnership at a $10,000 loss. What is deductible?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$10,000",
+        "explanation": "§707(b) disallows it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$6,000",
+        "explanation": "All of it is disallowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$4,000",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Correct. Losses to a >50% partnership are disallowed."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Losses on sales between a partnership and a more-than-50% partner are disallowed.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-37",
+    "pool": "practice",
+    "stem": "A 60% partner sells property to the partnership at a gain. It isn't a capital asset to the partnership. How is the gain treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ordinary",
+        "explanation": "Correct. §707(b)(2) applies."
+      },
+      {
+        "id": "b",
+        "text": "Capital",
+        "explanation": "§707(b)(2) applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Tax-free",
+        "explanation": "It is taxable income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "§1231",
+        "explanation": "Not here in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Gains on sales to a controlled partnership are ordinary if the property isn't a capital asset to the buyer.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-po-38",
+    "pool": "practice",
+    "stem": "Are a partner's guaranteed payments qualified business income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, always",
+        "explanation": "Excluded in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No",
+        "explanation": "Correct. They're excluded from QBI."
+      },
+      {
+        "id": "c",
+        "text": "Only for limited partners",
+        "explanation": "Excluded for all.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Yes, up to $50,000",
+        "explanation": "Excluded in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Guaranteed payments aren't QBI.",
+    "skill": "application",
+    "difficulty": 2
+  },
+  {
+    "id": "tcp-po-39",
+    "pool": "practice",
+    "stem": "A partnership's recourse debt rises, and a partner's share increases by $20,000. What is the effect on her basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No effect",
+        "explanation": "Basis increases.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "It falls by $20,000",
+        "explanation": "It increases in this case.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "It rises by $20,000",
+        "explanation": "Correct. Liability increases are deemed contributions."
+      },
+      {
+        "id": "d",
+        "text": "It rises by $10,000",
+        "explanation": "Her full share.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "An increase in a partner's share of liabilities is treated as a cash contribution.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-po-40",
+    "pool": "practice",
+    "stem": "Which partnerships may elect out of the BBA audit regime?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Any partnership",
+        "explanation": "Limits apply in this case.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "b",
+        "text": "Only those with no debt",
+        "explanation": "That is not the test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Those with partnerships as partners",
+        "explanation": "Ineligible partners.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "100 or fewer eligible partners",
+        "explanation": "Correct. Such as individuals and C corporations."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Partnerships with 100 or fewer partners, all eligible types, may elect out annually.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-po-41",
+    "pool": "practice",
+    "stem": "A partner wants steady pay regardless of partnership results. What arrangement fits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A guaranteed payment",
+        "explanation": "Correct. Fixed regardless of income."
+      },
+      {
+        "id": "b",
+        "text": "A larger profit share",
+        "explanation": "Varies with income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A special allocation",
+        "explanation": "Varies with income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A capital account boost",
+        "explanation": "Not pay in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Guaranteed payments are determined without regard to partnership income.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-po-42",
+    "pool": "practice",
+    "stem": "A partner has suspended losses for lack of basis. What can increase her basis?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A capital loss",
+        "explanation": "Reduces basis in this case.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "More debt risk",
+        "explanation": "Correct. Or contributing capital."
+      },
+      {
+        "id": "c",
+        "text": "Taking distributions",
+        "explanation": "Reduces basis in this case.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Nothing can increase it",
+        "explanation": "Options exist in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Contributions or an increased share of liabilities increase outside basis.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-po-43",
+    "pool": "practice",
+    "stem": "A partnership pays a $40,000 guaranteed payment in a year with only $10,000 of income before it. What results?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No loss",
+        "explanation": "It's deductible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The payment is a distribution",
+        "explanation": "It's still guaranteed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A $30,000 partnership loss",
+        "explanation": "Correct. The payment is still deductible."
+      },
+      {
+        "id": "d",
+        "text": "The payment is disallowed",
+        "explanation": "It's allowed in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Guaranteed payments can create or increase a partnership loss.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-po-44",
+    "pool": "practice",
+    "stem": "After a BBA audit, partners have changed. Why might the partnership elect to push out the adjustments?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "To lower the rate to zero",
+        "explanation": "Not the effect.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "To avoid interest",
+        "explanation": "Interest is higher.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "To end the audit",
+        "explanation": "Not the effect.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Reviewed-year partners pay",
+        "explanation": "Correct. Current partners avoid the burden."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A push-out election shifts the adjustments to reviewed-year partners.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-po-45",
+    "pool": "practice",
+    "stem": "Partners want to allocate losses to a high-income partner. What must the allocation have?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Economic effect",
+        "explanation": "Correct. It must be real."
+      },
+      {
+        "id": "b",
+        "text": "Advance IRS approval",
+        "explanation": "That is not required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Equal capital accounts",
+        "explanation": "That is not required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A guaranteed payment",
+        "explanation": "That is not related.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Special allocations must have substantial economic effect to be respected.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-po-46",
+    "pool": "practice",
+    "stem": "An LLC member works full-time in the business. How is her distributive share treated for SE tax?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Never SE income",
+        "explanation": "Active members may owe SE tax.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Likely SE income",
+        "explanation": "Correct. She isn't a passive investor."
+      },
+      {
+        "id": "c",
+        "text": "Only guaranteed payments are",
+        "explanation": "Not for active members.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Exempt as a limited partner",
+        "explanation": "She's active in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Active LLC members are generally treated like general partners for SE tax.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

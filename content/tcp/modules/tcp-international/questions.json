@@ -854,5 +854,868 @@
     "skill": "analysis",
     "difficulty": 3,
     "calc": true
+  },
+  {
+    "id": "tcp-intl-24",
+    "pool": "practice",
+    "stem": "What makes a foreign corporation a controlled foreign corporation?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "U.S. shareholders own over 50%",
+        "explanation": "Correct. Each counts only at 10% or more."
+      },
+      {
+        "id": "b",
+        "text": "Any U.S. ownership",
+        "explanation": "Too broad in this case.",
+        "trap": "overgeneralization"
+      },
+      {
+        "id": "c",
+        "text": "A U.S. parent owning 25%",
+        "explanation": "Not enough alone.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "U.S. officers manage it",
+        "explanation": "Ownership controls.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A CFC is more than 50% owned, by vote or value, by U.S. shareholders who each own at least 10%.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-intl-25",
+    "pool": "practice",
+    "stem": "Which form reports a U.S. person's interest in certain foreign corporations?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Form 1118",
+        "explanation": "That's the corporate FTC form.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Form 5471",
+        "explanation": "Correct. An information return."
+      },
+      {
+        "id": "c",
+        "text": "Form 8938",
+        "explanation": "That's for specified foreign assets.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "FinCEN 114",
+        "explanation": "That's the FBAR.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Form 5471 reports ownership of and transactions with certain foreign corporations.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-intl-26",
+    "pool": "practice",
+    "stem": "Above what aggregate balance must a U.S. person file an FBAR?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "That's a Form 8938 threshold.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Not the threshold.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "Correct. At any time during the year."
+      },
+      {
+        "id": "d",
+        "text": "$1,000",
+        "explanation": "Not the threshold.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "An FBAR is required if aggregate foreign account balances exceed $10,000 at any time during the year.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "tcp-intl-27",
+    "pool": "practice",
+    "stem": "A foreign corporation is owned 30% by U.S. person A, 15% by U.S. person B, 8% by U.S. person C and 47% by foreign persons. Is it a CFC?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes; 53% is U.S.-owned",
+        "explanation": "C doesn't count.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes; A and B control it",
+        "explanation": "45% isn't over 50%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only for A",
+        "explanation": "That is not the test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No; only 45% counts",
+        "explanation": "Correct. C is under 10%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Only U.S. shareholders owning 10% or more count toward the 50% test.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-28",
+    "pool": "practice",
+    "stem": "A CFC earns $200,000 of foreign personal holding company income. A U.S. shareholder owns 60%. What is her Subpart F inclusion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$120,000",
+        "explanation": "Correct. 60% × $200,000."
+      },
+      {
+        "id": "b",
+        "text": "$200,000",
+        "explanation": "Apply her share.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Subpart F applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$80,000",
+        "explanation": "That's the other share.",
+        "trap": "reversed"
+      }
+    ],
+    "answer": "a",
+    "explanation": "U.S. shareholders include their pro rata share of a CFC's Subpart F income currently.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-29",
+    "pool": "practice",
+    "stem": "A CFC has $30,000,000 of gross income, including $800,000 of foreign base company income. What is Subpart F income?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$800,000",
+        "explanation": "De minimis applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Correct. Below the lesser of 5% or $1 million."
+      },
+      {
+        "id": "c",
+        "text": "$1,500,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$1,000,000",
+        "explanation": "That's the cap.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "If foreign base company income is below the lesser of 5% of gross income or $1 million, none is Subpart F income.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-30",
+    "pool": "practice",
+    "stem": "A CFC's income is taxed abroad at a 20% effective rate. What exception may apply?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The de minimis rule",
+        "explanation": "Not about rates.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "The same-country exception",
+        "explanation": "That is not applicable.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "The high-tax exception",
+        "explanation": "Correct. Above 18.9% (90% of 21%)."
+      },
+      {
+        "id": "d",
+        "text": "No exception",
+        "explanation": "An election exists.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Income taxed above 90% of the U.S. corporate rate may be excluded by election.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-31",
+    "pool": "practice",
+    "stem": "A U.S. corporation owning 40% of a foreign corporation for 2 years receives a $1,000,000 foreign-source dividend. What deduction applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A 65% DRD",
+        "explanation": "That's domestic.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "No deduction at all",
+        "explanation": "§245A applies in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A 50% DRD",
+        "explanation": "That's domestic.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A 100% DRD",
+        "explanation": "Correct. Participation exemption."
+      }
+    ],
+    "answer": "d",
+    "explanation": "§245A allows a 100% DRD for the foreign-source portion of dividends from 10%-owned foreign corporations.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-32",
+    "pool": "practice",
+    "stem": "Foreign-source taxable income is $300,000 of $1,000,000 worldwide. U.S. tax before credits is $210,000, and foreign taxes paid are $80,000. What credit is allowed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$63,000; $17,000 carried",
+        "explanation": "Correct. Limited by the FTC limitation."
+      },
+      {
+        "id": "b",
+        "text": "$80,000",
+        "explanation": "The limitation applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$63,000; the rest is lost",
+        "explanation": "Excess carries over.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$90,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The FTC is limited to U.S. tax × foreign-source ÷ worldwide income; excess carries back 1 and forward 10 years.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-33",
+    "pool": "practice",
+    "stem": "A qualifying expatriate earns $150,000 of foreign wages in 2025. What is the maximum foreign earned income exclusion?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "The limit applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$130,000",
+        "explanation": "Correct. The 2025 limit."
+      },
+      {
+        "id": "c",
+        "text": "$126,500",
+        "explanation": "That was 2024 in this case.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "She qualifies in this case.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "For 2025, up to $130,000 of foreign earned income may be excluded.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-34",
+    "pool": "practice",
+    "stem": "A U.S. citizen worked abroad 300 full days in a 12-month period and has no foreign residence. Does she meet the physical presence test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes",
+        "explanation": "Below 330 days.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, with a waiver",
+        "explanation": "Waivers are narrow.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No; she needs 330 days",
+        "explanation": "Correct. 330 full days are required."
+      },
+      {
+        "id": "d",
+        "text": "Only for half the income",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The physical presence test requires 330 full days in a foreign country in 12 consecutive months.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-35",
+    "pool": "practice",
+    "stem": "A U.S. corporation operates abroad through a branch. When is the branch's income taxed in the U.S.?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only when repatriated",
+        "explanation": "That's not a branch rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Never",
+        "explanation": "It's taxed in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "After 5 years",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Currently",
+        "explanation": "Correct. Branches aren't separate entities."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Foreign branch income is part of the U.S. corporation's taxable income as earned.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-intl-36",
+    "pool": "practice",
+    "stem": "In 2025, a C corporation has a $1,000,000 GILTI inclusion before the §250 deduction. What is the U.S. tax before credits?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$105,000",
+        "explanation": "Correct. $500,000 × 21%."
+      },
+      {
+        "id": "b",
+        "text": "$210,000",
+        "explanation": "Apply the 50% deduction.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$131,250",
+        "explanation": "That's the FDII rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "GILTI is taxed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "For 2025, corporations deduct 50% of GILTI, for an effective 10.5% rate before credits.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-37",
+    "pool": "practice",
+    "stem": "In 2025, a C corporation has $400,000 of FDII. What §250 deduction applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$200,000",
+        "explanation": "Not the 2025 rate.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "b",
+        "text": "$150,000 deduction",
+        "explanation": "Correct. 37.5% of FDII."
+      },
+      {
+        "id": "c",
+        "text": "$400,000",
+        "explanation": "Only a percentage.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$84,000",
+        "explanation": "That's a tax amount.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "For 2025, the FDII deduction is 37.5%, for an effective 13.125% rate.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-38",
+    "pool": "practice",
+    "stem": "A U.S. corporation pays a $100,000 dividend to a foreign shareholder with no treaty. What must it withhold?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$21,000",
+        "explanation": "Not the corporate rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$15,000",
+        "explanation": "That's a common treaty rate.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$30,000",
+        "explanation": "Correct. 30% on FDAP income."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Withholding is required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "U.S.-source FDAP income paid to foreign persons is subject to 30% withholding unless reduced by treaty.",
+    "skill": "application",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-39",
+    "pool": "practice",
+    "stem": "The same $100,000 dividend goes to a resident of a treaty country with a 15% dividend rate. What is withheld?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$30,000",
+        "explanation": "The treaty reduces it.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$0",
+        "explanation": "Some is withheld.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$5,000",
+        "explanation": "That is not the rate.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$15,000",
+        "explanation": "Correct. Treaty rate."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Treaty rates reduce statutory withholding when the recipient qualifies.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-40",
+    "pool": "practice",
+    "stem": "A foreign person sells U.S. real property for $1,000,000. What FIRPTA withholding generally applies?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$150,000",
+        "explanation": "Correct. 15% of the amount realized."
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "The rate is 15%.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$300,000",
+        "explanation": "That is not the rate.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "FIRPTA applies.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Buyers generally withhold 15% of the amount realized from foreign sellers of U.S. real property.",
+    "skill": "application",
+    "difficulty": 2,
+    "calc": true
+  },
+  {
+    "id": "tcp-intl-41",
+    "pool": "practice",
+    "stem": "A U.S. parent sells goods to its foreign subsidiary at artificially low prices. What can the IRS do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing; prices are private",
+        "explanation": "§482 applies in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Reallocate income",
+        "explanation": "Correct. Arm's length standard."
+      },
+      {
+        "id": "c",
+        "text": "Disregard the subsidiary",
+        "explanation": "Not the remedy.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Impose FBAR penalties",
+        "explanation": "That is not related.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "§482 lets the IRS reallocate income between related parties to reflect arm's-length pricing.",
+    "skill": "application",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-intl-42",
+    "pool": "practice",
+    "stem": "A U.S. company expects early losses from a new foreign operation. Which structure lets it use the losses now?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A foreign subsidiary",
+        "explanation": "Losses stay abroad.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A CFC with Subpart F",
+        "explanation": "No loss pass-through.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "A foreign branch",
+        "explanation": "Correct. Losses flow into U.S. income."
+      },
+      {
+        "id": "d",
+        "text": "A foreign trust",
+        "explanation": "That is not suitable.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Branch losses offset U.S. income currently; subsidiary losses generally don't.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-intl-43",
+    "pool": "practice",
+    "stem": "A CFC earns mostly active business income in a low-tax country. Which regime is most likely to tax it currently?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Subpart F",
+        "explanation": "Active income generally isn't.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "FIRPTA",
+        "explanation": "That is not applicable.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "No regime",
+        "explanation": "GILTI applies in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "GILTI",
+        "explanation": "Correct. Subpart F is unlikely."
+      }
+    ],
+    "answer": "d",
+    "explanation": "GILTI reaches low-taxed active CFC income that isn't Subpart F income.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-intl-44",
+    "pool": "practice",
+    "stem": "A corporation has excess foreign tax credits every year. What may help it use them?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "More foreign income",
+        "explanation": "Correct. Raises the limitation."
+      },
+      {
+        "id": "b",
+        "text": "More U.S.-source income",
+        "explanation": "Lowers the ratio.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "c",
+        "text": "Paying more foreign tax",
+        "explanation": "Increases the excess.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Nothing can help",
+        "explanation": "Planning can help.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Increasing foreign-source income within the right basket raises the FTC limitation.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-intl-45",
+    "pool": "practice",
+    "stem": "An expatriate works in a country with higher income tax rates than the U.S. Which approach usually works best?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The FEIE",
+        "explanation": "FTC often beats it here.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "The FTC",
+        "explanation": "Correct. High foreign taxes offset U.S. tax."
+      },
+      {
+        "id": "c",
+        "text": "Neither one helps",
+        "explanation": "One helps in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Paying both taxes",
+        "explanation": "Relief is available.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "In high-tax countries, the FTC can offset U.S. tax on all foreign income.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-intl-46",
+    "pool": "practice",
+    "stem": "A foreign company wants reduced U.S. withholding under a treaty. What must it show?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only that it's foreign",
+        "explanation": "That is not enough.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "U.S. citizenship of owners",
+        "explanation": "That is not relevant.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Treaty eligibility",
+        "explanation": "Correct. Form W-8BEN-E."
+      },
+      {
+        "id": "d",
+        "text": "Nothing; it's automatic",
+        "explanation": "Documentation is required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Treaty benefits require residence and meeting any limitation-on-benefits article.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-intl-47",
+    "pool": "practice",
+    "stem": "A U.S. corporation owning 30% of a foreign subsidiary wants to bring cash home. What is the federal tax effect of a dividend?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fully taxable",
+        "explanation": "§245A applies in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Taxable at 10.5%",
+        "explanation": "That's GILTI in this case.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Subject to FIRPTA withholding",
+        "explanation": "That is not related.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Generally tax-free",
+        "explanation": "Correct. Holding period must be met."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Foreign-source dividends from 10%-owned foreign corporations are generally exempt under §245A.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "tcp-intl-48",
+    "pool": "practice",
+    "stem": "A foreign investor plans to buy U.S. rental property. What should she plan for at sale?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "FIRPTA",
+        "explanation": "Correct. 15% of the amount realized."
+      },
+      {
+        "id": "b",
+        "text": "No U.S. tax",
+        "explanation": "FIRPTA applies.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Only state tax",
+        "explanation": "Federal tax applies.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "FBAR filing only",
+        "explanation": "That is not related.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Foreign sellers of U.S. real property face FIRPTA tax and withholding.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]
