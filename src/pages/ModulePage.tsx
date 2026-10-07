@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import InlineQuestion from '../components/InlineQuestion'
 import LessonMarkdown from '../components/LessonMarkdown'
 import { ReviewBadge, StatusChip } from '../components/ui'
-import { areaTitle, content, ensureAllSections, getModule, questionsForModule, unitTitle } from '../content'
+import { areaTitle, content, ensureAllSections, getModule, isLessonBodyLoaded, loadLessonBody, questionsForModule, unitTitle, useContentVersion } from '../content'
 import { SKILL_LABELS } from '../content/schema'
 import { db } from '../db'
 import { addHighlight, completeLesson, setLastLocation, setModuleNotes, touchModule } from '../db/actions'
@@ -16,8 +16,16 @@ import { unmasteredPrerequisites } from '../lib/studyState'
 export default function ModulePage() {
   const { moduleId = '' } = useParams()
   const nav = useNavigate()
+  useContentVersion()
   const lesson = content.lessons[moduleId]
   const meta = getModule(moduleId)
+  // Lesson text loads on demand, separately from the section's questions.
+  const bodyReady = isLessonBodyLoaded(moduleId)
+  const [bodyFailed, setBodyFailed] = useState(false)
+  useEffect(() => {
+    setBodyFailed(false)
+    loadLessonBody(moduleId).catch(() => setBodyFailed(true))
+  }, [moduleId])
   const { state } = useStudyState()
   const progress = useLiveQuery(() => db.moduleProgress.get(moduleId).then((p) => p ?? null), [moduleId])
   const noteSection = meta?.section
@@ -37,13 +45,13 @@ export default function ModulePage() {
   }, [moduleId, lesson, meta])
 
   useEffect(() => {
-    if (restored.current || progress === undefined) return
+    if (restored.current || progress === undefined || !bodyReady) return
     restored.current = true
     const pct = progress?.scrollPct
     if (pct && pct > 0.05 && pct < 0.98) {
       requestAnimationFrame(() => window.scrollTo(0, pct * (document.body.scrollHeight - window.innerHeight)))
     } else window.scrollTo(0, 0)
-  }, [progress])
+  }, [progress, bodyReady])
 
   useEffect(() => {
     if (!meta) return
@@ -177,7 +185,19 @@ export default function ModulePage() {
       </section>
 
       <div ref={bodyRef}>
-        <LessonMarkdown body={lesson.body} sessionId={sessionId} />
+        {bodyReady ? (
+          <LessonMarkdown body={lesson.body} sessionId={sessionId} />
+        ) : bodyFailed ? (
+          <p className="muted" role="alert">
+            The lesson text couldn't load. Check your connection and{' '}
+            <button type="button" className="underline" onClick={() => { setBodyFailed(false); loadLessonBody(moduleId).catch(() => setBodyFailed(true)) }}>
+              try again
+            </button>
+            .
+          </p>
+        ) : (
+          <p className="muted" aria-live="polite">Loading lesson…</p>
+        )}
       </div>
 
       <section className="my-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-900 dark:bg-blue-950/30" aria-labelledby="takeaways">

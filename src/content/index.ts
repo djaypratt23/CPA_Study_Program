@@ -1,11 +1,13 @@
 /**
  * App-side content access. Content is validated and indexed at build time by the `content-bundle`
  * Vite plugin (vite.config.ts) and arrives as pre-parsed JSON (P2-1): a small core (sections, module
- * list, glossary, review docs) plus one chunk per section. main.tsx loads the active section before the
- * first render and the rest in the background; `useContentVersion` re-renders the app as they arrive.
+ * list, glossary, review docs) plus, per section, a section chunk and one chunk per module, fetched in
+ * parallel. main.tsx loads the active section before the first render and the rest in the background;
+ * lesson text (`Lesson.body`) loads per lesson via `loadLessonBody`. `useContentVersion` re-renders the
+ * app as content arrives.
  */
 import { useSyncExternalStore } from 'react'
-import { core, errors, loaders } from 'virtual:content-core'
+import { bodyLoaders, core, errors, loaders } from 'virtual:content-core'
 import type { ContentBundle, ModuleMeta } from './build'
 import type { Mcq, SectionConfig, SectionId, Tbs } from './schema'
 
@@ -18,6 +20,13 @@ let version = 0
 const listeners = new Set<() => void>()
 const pending = new Map<string, Promise<void>>()
 const loaded = new Set<string>()
+const bodies = new Map<string, string>()
+const pendingBodies = new Map<string, Promise<void>>()
+
+const bump = () => {
+  version++
+  for (const l of listeners) l()
+}
 
 /** Load one section's content (idempotent). */
 export function loadSection(id: string): Promise<void> {
@@ -26,14 +35,14 @@ export function loadSection(id: string): Promise<void> {
   let p = pending.get(id)
   if (!p) {
     p = loader().then(({ default: part }) => {
-      Object.assign(content.lessons, part.lessons)
+      // Section chunks carry lessons without their text; keep any text that has already loaded.
+      for (const [id, lesson] of Object.entries(part.lessons) as [string, ContentBundle['lessons'][string]][]) content.lessons[id] = { ...lesson, body: bodies.get(id) ?? lesson.body }
       Object.assign(content.questions, part.questions)
       Object.assign(content.tbs, part.tbs)
       content.flashcards.push(...part.flashcards)
       content.exams.push(...part.exams)
       loaded.add(id)
-      version++
-      for (const l of listeners) l()
+      bump()
     })
     pending.set(id, p)
   }
@@ -57,6 +66,34 @@ export function ensureAllSections(): boolean {
   if (allSectionsLoaded()) return false
   void loadAllSections()
   return true
+}
+
+/** True once a lesson's text has loaded (see `loadLessonBody`). */
+export const isLessonBodyLoaded = (moduleId: string) => bodies.has(moduleId)
+
+/** Load one lesson's text (idempotent), loading its section first if needed. */
+export function loadLessonBody(moduleId: string): Promise<void> {
+  const loader = bodyLoaders[moduleId] as (typeof bodyLoaders)[string] | undefined
+  if (!loader || bodies.has(moduleId)) return Promise.resolve()
+  let p = pendingBodies.get(moduleId)
+  if (!p) {
+    const section = getModule(moduleId)?.section
+    p = Promise.all([loader(), section ? loadSection(section) : undefined]).then(([{ default: body }]) => {
+      bodies.set(moduleId, body)
+      const lesson = content.lessons[moduleId]
+      if (lesson) content.lessons[moduleId] = { ...lesson, body }
+      bump()
+    })
+    // Allow a retry (e.g. after coming back online) instead of caching the failure.
+    p.catch(() => pendingBodies.delete(moduleId))
+    pendingBodies.set(moduleId, p)
+  }
+  return p
+}
+
+/** Load the text of every lesson whose section is loaded (for full-text search). */
+export function loadLoadedLessonBodies(): Promise<void> {
+  return Promise.all(Object.keys(content.lessons).map(loadLessonBody)).then(() => undefined)
 }
 
 /** Re-render when more content arrives. */

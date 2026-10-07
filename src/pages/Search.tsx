@@ -1,7 +1,7 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { PageHeader } from '../components/ui'
-import { content } from '../content'
+import { content, loadLoadedLessonBodies, useContentVersion } from '../content'
 import { search } from '../lib/search'
 
 const KIND: Record<string, string> = { module: 'Lesson', question: 'Question', flashcard: 'Flashcard', glossary: 'Glossary', review: 'Final review', tbs: 'Simulation' }
@@ -9,7 +9,14 @@ const KIND: Record<string, string> = { module: 'Lesson', question: 'Question', f
 export default function Search() {
   const [params, setParams] = useSearchParams()
   const q = params.get('q') ?? ''
-  const hits = useMemo(() => search(content, q), [q])
+  const version = useContentVersion()
+  // Lesson text loads on demand; fetch it for the loaded sections so lessons are searchable.
+  useEffect(() => {
+    if (q) void loadLoadedLessonBodies().catch(() => undefined)
+  }, [q, version])
+  // `content` is mutated in place as lessons arrive; `version` is what changes.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const hits = useMemo(() => search(content, q), [q, version])
   return (
     <div>
       <PageHeader title="Search" subtitle="Lessons, glossary, flashcards, questions, simulations, and final-review notes." />

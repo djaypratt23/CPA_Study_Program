@@ -41,15 +41,20 @@ function versionStamp(): Plugin {
 
 /**
  * Validates and indexes /content at build time (P2-1) and serves it as pre-parsed JSON in virtual
- * modules: `virtual:content-core` (section configs, module list, glossary, review docs, and a loader
- * per section) and `virtual:content-section/<ID>` (that section's lessons, questions, flashcards,
- * simulations and exam forms). The app loads the active section first and the rest in the background,
- * so the browser neither parses YAML nor runs schema validation, and first load fetches one section.
+ * modules: `virtual:content-core` (section configs, module list, glossary, review docs, and loaders),
+ * `virtual:content-section/<ID>` (that section's simulations, exam forms and lesson metadata),
+ * `virtual:content-module/<ID>` (one module's questions and flashcards) and `virtual:content-body/<ID>`
+ * (one lesson's text). A section loads as its section chunk plus all of its module chunks in parallel;
+ * lesson text loads only when a lesson (or search) needs it. Small per-module chunks also mean a
+ * content update re-downloads only the modules that changed. The browser neither parses YAML nor runs
+ * schema validation.
  * Invalid content fails `vite build`; in dev it is reported in the console.
  */
 function contentBundle(): Plugin {
   const CORE = 'virtual:content-core'
   const SECTION = 'virtual:content-section/'
+  const MODULE = 'virtual:content-module/'
+  const BODY = 'virtual:content-body/'
   let isBuild = false
   let cache: ReturnType<typeof buildContent> | null = null
   const build = (ctx: { addWatchFile: (f: string) => void }) => {
@@ -65,7 +70,7 @@ function contentBundle(): Plugin {
       isBuild = config.command === 'build'
     },
     resolveId(source) {
-      return source === CORE || source.startsWith(SECTION) ? '\0' + source : undefined
+      return source === CORE || [SECTION, MODULE, BODY].some((p) => source.startsWith(p)) ? '\0' + source : undefined
     },
     load(id) {
       if (!id.startsWith('\0virtual:content-')) return
@@ -73,20 +78,41 @@ function contentBundle(): Plugin {
       if (result.errors.length && isBuild) this.error('Content validation failed:\n' + result.errors.join('\n'))
       const b = result.bundle
       if (id === '\0' + CORE) {
-        const loaders = b.sections.map((s) => `  ${JSON.stringify(s.id)}: () => import(${JSON.stringify(SECTION + s.id)}),`).join('\n')
+        const imp = (id: string) => `import(${JSON.stringify(id)})`
+        const loaders = b.sections.map((s) => {
+          const parts = [SECTION + s.id, ...b.modules.filter((m) => m.section === s.id).map((m) => MODULE + m.id)]
+          return `  ${JSON.stringify(s.id)}: () => Promise.all([${parts.map(imp).join(', ')}]).then(merge),`
+        })
+        const bodyLoaders = Object.keys(b.lessons).map((id) => `  ${JSON.stringify(id)}: () => ${imp(BODY + id)},`)
         return [
           `export const core = ${json({ sections: b.sections, modules: b.modules, glossary: b.glossary, reviewDocs: b.reviewDocs })}`,
           `export const errors = ${JSON.stringify(result.errors)}`,
-          `export const loaders = {\n${loaders}\n}`,
+          'const merge = (parts) => {',
+          '  const out = { lessons: {}, questions: {}, flashcards: [], tbs: {}, exams: [] }',
+          '  for (const { default: p } of parts) {',
+          '    Object.assign(out.lessons, p.lessons); Object.assign(out.questions, p.questions); Object.assign(out.tbs, p.tbs)',
+          '    if (p.flashcards) out.flashcards.push(...p.flashcards)',
+          '    if (p.exams) out.exams.push(...p.exams)',
+          '  }',
+          '  return { default: out }',
+          '}',
+          `export const loaders = {\n${loaders.join('\n')}\n}`,
+          `export const bodyLoaders = {\n${bodyLoaders.join('\n')}\n}`,
         ].join('\n')
       }
+      if (id.startsWith('\0' + MODULE)) {
+        const mod = id.slice(('\0' + MODULE).length)
+        const questions = Object.fromEntries(Object.entries(b.questions).filter(([, q]) => q.moduleId === mod))
+        return `export default ${json({ questions, flashcards: b.flashcards.filter((f) => f.moduleId === mod) })}`
+      }
+      if (id.startsWith('\0' + BODY)) return `export default ${JSON.stringify(b.lessons[id.slice(('\0' + BODY).length)]?.body ?? '')}`
       const sec = id.slice(('\0' + SECTION).length)
       const mods = new Set(b.modules.filter((m) => m.section === sec).map((m) => m.id))
       const pick = <T,>(rec: Record<string, T>, keep: (v: T, k: string) => boolean) => Object.fromEntries(Object.entries(rec).filter(([k, v]) => keep(v, k)))
+      // Lesson text is left out (body: ''); it loads per lesson from virtual:content-body/<ID>.
+      const lessons = Object.fromEntries(Object.entries(pick(b.lessons, (_, k) => mods.has(k))).map(([k, l]) => [k, { ...l, body: '' }]))
       return `export default ${json({
-        lessons: pick(b.lessons, (_, k) => mods.has(k)),
-        questions: pick(b.questions, (q) => mods.has(q.moduleId)),
-        flashcards: b.flashcards.filter((f) => mods.has(f.moduleId)),
+        lessons,
         tbs: pick(b.tbs, (t) => t.section === sec),
         exams: b.exams.filter((e) => e.section === sec),
       })}`
