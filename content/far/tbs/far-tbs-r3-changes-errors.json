@@ -1,0 +1,119 @@
+{
+  "id": "far-tbs-r3-changes-errors",
+  "section": "FAR",
+  "unitId": "far-u12",
+  "moduleIds": [
+    "far-accounting-changes"
+  ],
+  "pool": "practice",
+  "title": "Accounting changes and errors — Pemberton Inc.",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Pemberton Inc. is closing its Year 3 books (calendar year). Classify each item, compute the revised depreciation and record the error correction. Ignore income taxes.",
+  "exhibits": [
+    {
+      "title": "Items",
+      "content": "1. Changed inventory costing from FIFO to weighted average.\n2. Revised a machine's remaining useful life.\n3. Changed from straight-line to sum-of-the-years'-digits depreciation.\n4. Found that Year 2 depreciation of $40,000 was never recorded.\n5. Presented consolidated statements for the first time in place of the separate statements of the parent and its long-held subsidiaries.\n6. Switched from cash-basis bookkeeping to GAAP accrual accounting."
+    },
+    {
+      "title": "Machine",
+      "content": "Cost **$200,000**; salvage **$20,000**; 10-year straight-line life. At the start of Year 3 (after 2 full years), the remaining life is revised to **5 years** and salvage to **$10,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "cls",
+      "prompt": "Classify each item.",
+      "options": [
+        "Change in accounting principle",
+        "Change in accounting estimate",
+        "Change in estimate effected by a change in principle",
+        "Change in reporting entity",
+        "Correction of an error"
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Item 1",
+          "answer": "Change in accounting principle",
+          "explanation": "Moving between acceptable inventory methods is a principle change, applied retrospectively."
+        },
+        {
+          "id": "c2",
+          "label": "Item 2",
+          "answer": "Change in accounting estimate",
+          "explanation": "Revising useful life is a change in estimate, applied prospectively."
+        },
+        {
+          "id": "c3",
+          "label": "Item 3",
+          "answer": "Change in estimate effected by a change in principle",
+          "explanation": "A change in depreciation method is handled prospectively."
+        },
+        {
+          "id": "c4",
+          "label": "Item 4",
+          "answer": "Correction of an error",
+          "explanation": "An omitted entry is an error, corrected by restatement."
+        },
+        {
+          "id": "c5",
+          "label": "Item 5",
+          "answer": "Change in reporting entity",
+          "explanation": "Changing the entities in combined statements changes the reporting entity."
+        },
+        {
+          "id": "c6",
+          "label": "Item 6",
+          "answer": "Correction of an error",
+          "explanation": "Moving from a non-GAAP basis to GAAP corrects an error."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Machine depreciation.",
+      "rows": [
+        {
+          "id": "bv",
+          "label": "Carrying amount at the start of Year 3",
+          "answer": 164000,
+          "explanation": "200,000 − 2 × 18,000 = **164,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "y3",
+          "label": "Year 3 depreciation",
+          "answer": 30800,
+          "explanation": "(164,000 − 10,000) ÷ 5 = **30,800**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "j",
+      "prompt": "Record the correction of item 4 in Year 3 (Year 2's books are closed).",
+      "accounts": [
+        "Retained earnings",
+        "Depreciation expense",
+        "Accumulated depreciation",
+        "Machine",
+        "Prior-period adjustment income"
+      ],
+      "lines": [
+        {
+          "account": "Retained earnings",
+          "debit": 40000
+        },
+        {
+          "account": "Accumulated depreciation",
+          "credit": 40000
+        }
+      ],
+      "explanation": "Errors in closed periods adjust opening retained earnings, not current expense."
+    }
+  ]
+}

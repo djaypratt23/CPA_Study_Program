@@ -1,0 +1,89 @@
+{
+  "id": "far-tbs-r3-sales-type-lease",
+  "section": "FAR",
+  "unitId": "far-u11",
+  "moduleIds": [
+    "far-leases-finance"
+  ],
+  "pool": "practice",
+  "title": "Sales-type lease (lessor) — Brightline Equipment",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Brightline Equipment, a dealer, leases a machine from its inventory on January 1, Year 1. The lease is a sales-type lease. Round to the nearest dollar.",
+  "exhibits": [
+    {
+      "title": "Lease terms",
+      "content": "Fair value of the machine: **$400,000**; Brightline's cost: **$300,000**.\nFive annual payments, **in advance**, starting January 1, Year 1.\nRate implicit in the lease: **8%**. No residual value; collectibility is probable.\nPV of an annuity due of $1, 5 periods, 8%: **4.3121**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "pmt",
+          "label": "Annual lease payment",
+          "answer": 92762,
+          "explanation": "400,000 ÷ 4.3121 = **92,762**.",
+          "tolerance": 1
+        },
+        {
+          "id": "prof",
+          "label": "Selling profit recognized at commencement",
+          "answer": 100000,
+          "explanation": "400,000 − 300,000 = **100,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "int",
+          "label": "Interest income for Year 1",
+          "answer": 24579,
+          "explanation": "(400,000 − 92,762) × 8% = 307,238 × 8% = **24,579**.",
+          "tolerance": 2
+        },
+        {
+          "id": "ni",
+          "label": "Net investment in the lease at December 31, Year 1",
+          "answer": 331817,
+          "explanation": "307,238 + 24,579 = **331,817**.",
+          "tolerance": 2
+        }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "j",
+      "prompt": "Record the lease at commencement (before the first payment).",
+      "accounts": [
+        "Net investment in lease",
+        "Sales revenue",
+        "Cost of goods sold",
+        "Inventory",
+        "Cash",
+        "Lease liability",
+        "Right-of-use asset"
+      ],
+      "lines": [
+        {
+          "account": "Net investment in lease",
+          "debit": 400000
+        },
+        {
+          "account": "Sales revenue",
+          "credit": 400000
+        },
+        {
+          "account": "Cost of goods sold",
+          "debit": 300000
+        },
+        {
+          "account": "Inventory",
+          "credit": 300000
+        }
+      ],
+      "explanation": "A dealer recognizes revenue and cost of sales at commencement in a sales-type lease."
+    }
+  ]
+}

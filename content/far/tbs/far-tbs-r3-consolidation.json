@@ -1,0 +1,92 @@
+{
+  "id": "far-tbs-r3-consolidation",
+  "section": "FAR",
+  "unitId": "far-u3",
+  "moduleIds": [
+    "far-consolidations"
+  ],
+  "pool": "practice",
+  "title": "Intercompany eliminations — Parkway Holdings",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Parkway Holdings owns **80%** of Sylvan Co. Prepare the Year 1 consolidation eliminations for intercompany inventory and compute consolidated amounts.",
+  "exhibits": [
+    {
+      "title": "Year 1 results",
+      "content": "| | Parkway | Sylvan |\n|---|---|---|\n| Sales | 1,000,000 | 500,000 |\n| Cost of goods sold | 600,000 | 300,000 |\n| Net income | 220,000 | 150,000 |"
+    },
+    {
+      "title": "Intercompany sales",
+      "content": "During Year 1 Sylvan sold goods costing **$60,000** to Parkway for **$100,000** (included in Sylvan's figures). At year-end Parkway still held **25%** of these goods."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "upi",
+          "label": "Unrealized intercompany profit in ending inventory",
+          "answer": 10000,
+          "explanation": "(100,000 − 60,000) × 25% = **10,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "sales",
+          "label": "Consolidated sales",
+          "answer": 1400000,
+          "explanation": "1,000,000 + 500,000 − 100,000 = **1,400,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "cogs",
+          "label": "Consolidated cost of goods sold",
+          "answer": 810000,
+          "explanation": "600,000 + 300,000 − 100,000 + 10,000 = **810,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "nci",
+          "label": "Net income attributable to the noncontrolling interest",
+          "answer": 28000,
+          "explanation": "Upstream sale: 20% × (150,000 − 10,000) = **28,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "j",
+      "prompt": "Prepare the eliminating entries for intercompany sales and unrealized profit (combined).",
+      "accounts": [
+        "Sales",
+        "Cost of goods sold",
+        "Inventory",
+        "Noncontrolling interest",
+        "Accounts receivable",
+        "Retained earnings"
+      ],
+      "lines": [
+        {
+          "account": "Sales",
+          "debit": 100000
+        },
+        {
+          "account": "Cost of goods sold",
+          "credit": 100000
+        },
+        {
+          "account": "Cost of goods sold",
+          "debit": 10000
+        },
+        {
+          "account": "Inventory",
+          "credit": 10000
+        }
+      ],
+      "explanation": "Eliminate intercompany sales and purchases, then defer the unrealized profit in ending inventory."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "far-tbs-r3-revenue-allocation",
+  "section": "FAR",
+  "unitId": "far-u9",
+  "moduleIds": [
+    "far-revenue-measurement",
+    "far-revenue-contracts"
+  ],
+  "pool": "practice",
+  "title": "Bundled contract — Norrland Systems",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "On October 1, Year 1, Norrland Systems signed a contract to deliver equipment, install it and provide 24 months of support, for **$1,080,000** paid in full at signing. Equipment was delivered and installed on October 1; support began then.",
+  "exhibits": [
+    {
+      "title": "Standalone selling prices",
+      "content": "Equipment: **$900,000**\nInstallation: **$100,000**\nSupport (24 months): **$200,000**\n\nInstallation is routine and could be done by other firms; each item is distinct."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Allocate the transaction price and compute Year 1 amounts.",
+      "rows": [
+        {
+          "id": "eq",
+          "label": "Price allocated to equipment",
+          "answer": 810000,
+          "explanation": "1,080,000 × 900/1,200 = **810,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "in",
+          "label": "Price allocated to installation",
+          "answer": 90000,
+          "explanation": "1,080,000 × 100/1,200 = **90,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "su",
+          "label": "Price allocated to support",
+          "answer": 180000,
+          "explanation": "1,080,000 × 200/1,200 = **180,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "rev",
+          "label": "Year 1 revenue",
+          "answer": 922500,
+          "explanation": "810,000 + 90,000 + 180,000 × 3/24 = **922,500**.",
+          "tolerance": 0
+        },
+        {
+          "id": "cl",
+          "label": "Contract liability at December 31, Year 1",
+          "answer": 157500,
+          "explanation": "180,000 − 22,500 = **157,500**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "When is revenue recognized for each obligation?",
+      "options": [
+        "Point in time",
+        "Over time"
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "label": "Equipment",
+          "answer": "Point in time",
+          "explanation": "Control transfers on delivery."
+        },
+        {
+          "id": "d2",
+          "label": "Installation",
+          "answer": "Point in time",
+          "explanation": "A short, routine service completed on October 1."
+        },
+        {
+          "id": "d3",
+          "label": "Support",
+          "answer": "Over time",
+          "explanation": "The customer receives the benefit as Norrland stands ready."
+        }
+      ]
+    }
+  ]
+}

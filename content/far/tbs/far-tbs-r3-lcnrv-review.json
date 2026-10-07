@@ -1,0 +1,101 @@
+{
+  "id": "far-tbs-r3-lcnrv-review",
+  "section": "FAR",
+  "unitId": "far-u5",
+  "moduleIds": [
+    "far-inventory-valuation"
+  ],
+  "pool": "practice",
+  "title": "Inventory valuation review — Westbrook Supply",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "Westbrook Supply uses FIFO and values inventory at the lower of cost and net realizable value (NRV) item by item. Review the prepared valuation and correct any errors.",
+  "exhibits": [
+    {
+      "title": "Inventory data",
+      "content": "| Item | Cost | Selling price | Costs to complete and sell |\n|---|---|---|---|\n| A | 50,000 | 60,000 | 5,000 |\n| B | 80,000 | 75,000 | 10,000 |\n| C | 40,000 | 70,000 | 8,000 |\n| D | 30,000 | 28,000 | 2,000 |"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "r",
+      "prompt": "Review the prepared carrying amounts.",
+      "preparedLabel": "Per staff",
+      "rows": [
+        {
+          "id": "a",
+          "label": "Item A",
+          "prepared": 50000,
+          "answer": 50000,
+          "explanation": "NRV 55,000 exceeds cost: carry at cost, **50,000**."
+        },
+        {
+          "id": "b",
+          "label": "Item B",
+          "prepared": 75000,
+          "answer": 65000,
+          "explanation": "NRV = 75,000 − 10,000 = **65,000**, below cost; staff ignored selling costs."
+        },
+        {
+          "id": "c",
+          "label": "Item C",
+          "prepared": 62000,
+          "answer": 40000,
+          "explanation": "Cost 40,000 is lower than NRV 62,000: **40,000**."
+        },
+        {
+          "id": "d",
+          "label": "Item D",
+          "prepared": 26000,
+          "answer": 26000,
+          "explanation": "NRV = 28,000 − 2,000 = 26,000, below cost: correct."
+        }
+      ]
+    },
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Totals.",
+      "rows": [
+        {
+          "id": "tot",
+          "label": "Inventory carrying amount",
+          "answer": 181000,
+          "explanation": "50,000 + 65,000 + 40,000 + 26,000 = **181,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "wd",
+          "label": "Write-down recognized",
+          "answer": 19000,
+          "explanation": "B (15,000) + D (4,000) = **19,000**.",
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "q",
+      "prompt": "Answer each question.",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "label": "If Item B's NRV recovers next year, may Westbrook reverse the write-down?",
+          "answer": "No",
+          "explanation": "U.S. GAAP prohibits reversing inventory write-downs."
+        },
+        {
+          "id": "q2",
+          "label": "Would a LIFO company use lower of cost or market instead of NRV?",
+          "answer": "Yes",
+          "explanation": "LIFO and retail-method inventory still use lower of cost or market."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "far-tbs-r3-deferred-tax",
+  "section": "FAR",
+  "unitId": "far-u10",
+  "moduleIds": [
+    "far-income-taxes"
+  ],
+  "pool": "practice",
+  "title": "Income tax provision — Garrick Corp.",
+  "minutes": 20,
+  "skill": "application",
+  "instructions": "Prepare Garrick Corp.'s Year 1 income tax provision. The enacted rate is **25%** for all years. There were no deferred tax balances at the start of the year, and no valuation allowance is needed.",
+  "exhibits": [
+    {
+      "title": "Book–tax differences",
+      "content": "Pretax book income: **$500,000**\n\n- Tax depreciation exceeds book depreciation by **$60,000**.\n- Warranty expense accrued for books but not yet deductible: **$20,000**.\n- Municipal bond interest included in book income: **$10,000**.\n- Nondeductible fines included in book expenses: **$5,000**."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "numeric",
+      "id": "n",
+      "prompt": "Compute the following.",
+      "rows": [
+        {
+          "id": "ti",
+          "label": "Taxable income",
+          "answer": 455000,
+          "explanation": "500,000 − 60,000 + 20,000 − 10,000 + 5,000 = **455,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "cur",
+          "label": "Current tax expense",
+          "answer": 113750,
+          "explanation": "455,000 × 25% = **113,750**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dtl",
+          "label": "Deferred tax liability at year-end",
+          "answer": 15000,
+          "explanation": "60,000 × 25% = **15,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "dta",
+          "label": "Deferred tax asset at year-end",
+          "answer": 5000,
+          "explanation": "20,000 × 25% = **5,000**.",
+          "tolerance": 0
+        },
+        {
+          "id": "tot",
+          "label": "Total income tax expense",
+          "answer": 123750,
+          "explanation": "113,750 + 15,000 − 5,000 = **123,750**.",
+          "tolerance": 0
+        },
+        {
+          "id": "etr",
+          "label": "Effective tax rate (percent points)",
+          "answer": 24.75,
+          "explanation": "123,750 ÷ 500,000 = **24.75%**.",
+          "tolerance": 0.01,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "kind": "journal",
+      "id": "j",
+      "prompt": "Record the Year 1 income tax provision.",
+      "accounts": [
+        "Income tax expense",
+        "Deferred tax asset",
+        "Deferred tax liability",
+        "Income taxes payable",
+        "Retained earnings"
+      ],
+      "lines": [
+        {
+          "account": "Income tax expense",
+          "debit": 123750
+        },
+        {
+          "account": "Deferred tax asset",
+          "debit": 5000
+        },
+        {
+          "account": "Income taxes payable",
+          "credit": 113750
+        },
+        {
+          "account": "Deferred tax liability",
+          "credit": 15000
+        }
+      ],
+      "explanation": "Expense = current + deferred; payable is the current tax."
+    }
+  ]
+}

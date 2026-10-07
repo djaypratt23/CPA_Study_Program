@@ -1,0 +1,113 @@
+{
+  "id": "far-tbs-r3-ratio-review",
+  "section": "FAR",
+  "unitId": "far-u2",
+  "moduleIds": [
+    "far-ratios"
+  ],
+  "pool": "practice",
+  "title": "Ratio analysis review — Calder Retail",
+  "minutes": 20,
+  "skill": "analysis",
+  "instructions": "A staff accountant computed Calder Retail's Year 2 ratios for the board package. Review each prepared ratio, flag errors and enter the correct value (two decimals, or percent points where noted).",
+  "exhibits": [
+    {
+      "title": "Year 2 data",
+      "content": "Cash **$80,000**; accounts receivable **$220,000**; inventory **$260,000**; prepaid expenses **$40,000**\nCurrent liabilities **$300,000**; total liabilities **$900,000**; total equity **$1,300,000**\nNet sales **$2,400,000**; cost of goods sold **$1,560,000**; net income **$180,000**\nAverage inventory **$240,000**; average receivables **$200,000**; average equity **$1,200,000**"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "review",
+      "id": "r",
+      "prompt": "Review the prepared ratios.",
+      "preparedLabel": "Per staff",
+      "rows": [
+        {
+          "id": "cr",
+          "label": "Current ratio",
+          "prepared": 2.0,
+          "answer": 2.0,
+          "explanation": "600,000 ÷ 300,000 = **2.00**: correct.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "qr",
+          "label": "Quick ratio",
+          "prepared": 1.87,
+          "answer": 1.0,
+          "explanation": "(80,000 + 220,000) ÷ 300,000 = **1.00**; inventory and prepaids are excluded.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "it",
+          "label": "Inventory turnover",
+          "prepared": 10.0,
+          "answer": 6.5,
+          "explanation": "COGS ÷ average inventory = 1,560,000 ÷ 240,000 = **6.50**, not sales.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "rt",
+          "label": "Receivables turnover",
+          "prepared": 12.0,
+          "answer": 12.0,
+          "explanation": "2,400,000 ÷ 200,000 = **12.00**: correct.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "roe",
+          "label": "Return on equity (percent points)",
+          "prepared": 15.0,
+          "answer": 15.0,
+          "explanation": "180,000 ÷ 1,200,000 = **15%**: correct.",
+          "tolerance": 0.1
+        },
+        {
+          "id": "de",
+          "label": "Debt-to-equity ratio",
+          "prepared": 0.41,
+          "answer": 0.69,
+          "explanation": "900,000 ÷ 1,300,000 = **0.69**; staff divided by total assets.",
+          "tolerance": 0.01
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "d",
+      "prompt": "What is the effect of each transaction on the current ratio (before the transaction: 2.00)?",
+      "options": [
+        "Increase",
+        "Decrease",
+        "No effect"
+      ],
+      "rows": [
+        {
+          "id": "t1",
+          "label": "Pay $50,000 of accounts payable in cash",
+          "answer": "Increase",
+          "explanation": "Both fall equally; with a ratio above 1, the ratio rises."
+        },
+        {
+          "id": "t2",
+          "label": "Buy $30,000 of inventory on account",
+          "answer": "Decrease",
+          "explanation": "Both rise equally; with a ratio above 1, the ratio falls."
+        },
+        {
+          "id": "t3",
+          "label": "Collect $20,000 of receivables",
+          "answer": "No effect",
+          "explanation": "One current asset replaces another."
+        },
+        {
+          "id": "t4",
+          "label": "Declare a $25,000 cash dividend payable next month",
+          "answer": "Decrease",
+          "explanation": "A current liability is added."
+        }
+      ]
+    }
+  ]
+}
