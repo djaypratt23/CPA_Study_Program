@@ -1,0 +1,100 @@
+{
+  "id": "aud-tbs-r3-it-coso",
+  "section": "AUD",
+  "unitId": "aud-u4",
+  "moduleIds": [
+    "aud-it-controls",
+    "aud-internal-control"
+  ],
+  "pool": "practice",
+  "title": "Classifying controls — Varga Medical",
+  "minutes": 15,
+  "skill": "application",
+  "instructions": "Classify each control at **Varga Medical**.",
+  "exhibits": [
+    {
+      "title": "Controls",
+      "content": "1. Program changes are tested in a separate environment and approved before release.\n2. The billing system rejects invoices for customers not in the master file.\n3. The audit committee meets quarterly with internal audit without management present.\n4. User access is reviewed quarterly and terminated employees' access is removed.\n5. The system matches purchase orders, receiving reports and invoices before payment.\n6. Monthly, the controller reviews a report of manual journal entries over $50,000."
+    }
+  ],
+  "parts": [
+    {
+      "kind": "dropdown",
+      "id": "t",
+      "prompt": "Classify each control by type.",
+      "options": [
+        "IT general control",
+        "Automated application control",
+        "Manual control",
+        "Entity-level (control environment) control"
+      ],
+      "rows": [
+        {
+          "id": "t1",
+          "label": "1",
+          "answer": "IT general control",
+          "explanation": "Change management is an ITGC."
+        },
+        {
+          "id": "t2",
+          "label": "2",
+          "answer": "Automated application control",
+          "explanation": "A system edit on input."
+        },
+        {
+          "id": "t3",
+          "label": "3",
+          "answer": "Entity-level (control environment) control",
+          "explanation": "Governance oversight is part of the control environment."
+        },
+        {
+          "id": "t4",
+          "label": "4",
+          "answer": "IT general control",
+          "explanation": "Access security is an ITGC."
+        },
+        {
+          "id": "t5",
+          "label": "5",
+          "answer": "Automated application control",
+          "explanation": "An automated three-way match."
+        },
+        {
+          "id": "t6",
+          "label": "6",
+          "answer": "Manual control",
+          "explanation": "A manual review of a report."
+        }
+      ]
+    },
+    {
+      "kind": "dropdown",
+      "id": "p",
+      "prompt": "Is each control preventive or detective?",
+      "options": [
+        "Preventive",
+        "Detective"
+      ],
+      "rows": [
+        {
+          "id": "p2",
+          "label": "2",
+          "answer": "Preventive",
+          "explanation": "It stops invalid invoices from being entered."
+        },
+        {
+          "id": "p5",
+          "label": "5",
+          "answer": "Preventive",
+          "explanation": "It prevents payment of unmatched invoices."
+        },
+        {
+          "id": "p6",
+          "label": "6",
+          "answer": "Detective",
+          "explanation": "It identifies entries after they're posted."
+        }
+      ]
+    }
+  ]
+}
