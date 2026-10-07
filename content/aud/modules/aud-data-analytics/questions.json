@@ -781,5 +781,243 @@
     "explanation": "Process mining compares actual transaction flows with expected sequences to identify control deviations.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "aud-da-21",
+    "pool": "practice",
+    "stem": "Which ADA technique flags all journal entries posted on weekends or by unusual users?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Filtering all entries",
+        "explanation": "Correct. Criteria are applied to every entry."
+      },
+      {
+        "id": "b",
+        "text": "Statistical sampling",
+        "explanation": "It tests a subset.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Regression analysis",
+        "explanation": "Not for attributes.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Benford's analysis",
+        "explanation": "That tests digits.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Filtering applies criteria to an entire population to identify items for follow-up.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-da-22",
+    "pool": "practice",
+    "stem": "What does a Benford's Law analysis test?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Duplicate invoice numbers",
+        "explanation": "That's a duplicate test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "Leading-digit frequencies",
+        "explanation": "Correct. Natural data follow a predictable pattern."
+      },
+      {
+        "id": "c",
+        "text": "Gaps in check sequences",
+        "explanation": "That's a gap test.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Year-over-year trends",
+        "explanation": "That's trend analysis.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Benford's Law compares the distribution of leading digits to an expected pattern.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-da-23",
+    "pool": "practice",
+    "stem": "Before relying on client data for analytics, what must the auditor evaluate?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Only its file format",
+        "explanation": "Reliability matters.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "Only the volume of records",
+        "explanation": "Reliability matters.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "The data's reliability",
+        "explanation": "Correct. Including source, completeness and accuracy."
+      },
+      {
+        "id": "d",
+        "text": "Nothing; client data is trusted",
+        "explanation": "It must be evaluated.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The auditor evaluates the relevance and reliability of information used as evidence.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-da-24",
+    "pool": "practice",
+    "stem": "A regression of sales on store square footage shows one store far above its predicted range. What should the auditor do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Ignore it; one store",
+        "explanation": "Outliers need investigation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Accept the sales as reasonable",
+        "explanation": "It's outside expectations.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Remove it from the model",
+        "explanation": "Investigate first.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Investigate that store's sales",
+        "explanation": "Correct. It's an outlier needing follow-up."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Significant differences from an expectation must be investigated.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-da-25",
+    "pool": "practice",
+    "stem": "A Benford test of vendor payments shows a spike in amounts just under the $5,000 approval threshold. What does it suggest?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Payments split to avoid limits",
+        "explanation": "Correct. Clustering below a threshold is a red flag."
+      },
+      {
+        "id": "b",
+        "text": "Normal purchasing patterns",
+        "explanation": "It deviates from expectation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Random data entry errors only",
+        "explanation": "It suggests a pattern.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Correct application of controls",
+        "explanation": "It suggests circumvention.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Clustering just below authorization limits may indicate split transactions designed to avoid controls.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-da-26",
+    "pool": "practice",
+    "stem": "An analytics routine flags 120 exceptions in a 50,000-entry population. How should the auditor evaluate them?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Treat them all as misstatements",
+        "explanation": "They need investigation.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Investigate each one",
+        "explanation": "Correct. Exceptions aren't automatically errors."
+      },
+      {
+        "id": "c",
+        "text": "Ignore them as a small share",
+        "explanation": "They must be evaluated.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Sample 25 and stop testing",
+        "explanation": "Investigate as needed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Exceptions from analytics require follow-up to determine whether they represent misstatements or control deviations.",
+    "skill": "evaluation",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-da-27",
+    "pool": "practice",
+    "stem": "Client data for an ADA comes from a system with ineffective IT general controls. What is the auditor's best response?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Rely on the data as it is",
+        "explanation": "Reliability is in doubt.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Skip the procedure entirely",
+        "explanation": "Alternative testing is possible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Test the data directly",
+        "explanation": "Correct. Weak ITGCs undermine reliance."
+      },
+      {
+        "id": "d",
+        "text": "Disclaim an opinion on the audit",
+        "explanation": "Not necessarily required.",
+        "trap": "overgeneralization"
+      }
+    ],
+    "answer": "c",
+    "explanation": "When ITGCs are ineffective, the auditor performs additional procedures to test the completeness and accuracy of the data.",
+    "skill": "evaluation",
+    "difficulty": 3
   }
 ]

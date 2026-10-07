@@ -780,5 +780,243 @@
     "explanation": "The auditor may request representations from others with relevant knowledge, such as in-house counsel.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "aud-wr-21",
+    "pool": "practice",
+    "stem": "How is the management representation letter dated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The report date",
+        "explanation": "Correct. It matches the auditor's report."
+      },
+      {
+        "id": "b",
+        "text": "The balance sheet date",
+        "explanation": "That would be too early.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "The engagement letter date",
+        "explanation": "That would be too early.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Fieldwork start",
+        "explanation": "That would be too early.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Written representations are dated as of the date of the auditor's report.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-wr-22",
+    "pool": "practice",
+    "stem": "Who usually signs the management representation letter?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "The audit partner",
+        "explanation": "Not management.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "The CEO and CFO",
+        "explanation": "Correct. Those responsible for the statements."
+      },
+      {
+        "id": "c",
+        "text": "The board chair only",
+        "explanation": "Not in the usual case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "The external lawyer",
+        "explanation": "Not management.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Representations come from management with responsibility for the statements, usually the CEO and CFO.",
+    "skill": "remembering",
+    "difficulty": 2
+  },
+  {
+    "id": "aud-wr-23",
+    "pool": "practice",
+    "stem": "Can written representations replace other audit evidence?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, always",
+        "explanation": "They don't replace evidence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Yes, for estimates",
+        "explanation": "They don't replace evidence.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No, not on their own",
+        "explanation": "Correct. They complement other evidence."
+      },
+      {
+        "id": "d",
+        "text": "Yes, for small clients",
+        "explanation": "They don't replace evidence.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Written representations don't provide sufficient evidence on their own.",
+    "skill": "remembering",
+    "difficulty": 1
+  },
+  {
+    "id": "aud-wr-24",
+    "pool": "practice",
+    "stem": "Management refuses to sign the representation letter. What is the effect on the report?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An unmodified opinion",
+        "explanation": "They're required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A qualified opinion",
+        "explanation": "Usually a disclaimer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "An adverse opinion",
+        "explanation": "Not a misstatement.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Disclaim an opinion",
+        "explanation": "Correct. Required representations are missing."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Refusal to provide required representations generally leads to a disclaimer or withdrawal.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-wr-25",
+    "pool": "practice",
+    "stem": "The report covers 2 comparative years, and current management joined this year. Which periods must the representations cover?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Both years presented",
+        "explanation": "Correct. All periods in the report."
+      },
+      {
+        "id": "b",
+        "text": "Only the current year",
+        "explanation": "All periods must be covered.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "Only management's tenure",
+        "explanation": "All periods must be covered.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "Only the prior year",
+        "explanation": "All periods must be covered.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Representations cover all periods referred to in the report, even if management changed.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-wr-26",
+    "pool": "practice",
+    "stem": "The auditor has serious doubts about management's integrity, making representations unreliable. What follows?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A qualified opinion",
+        "explanation": "Usually a disclaimer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Disclaim an opinion",
+        "explanation": "Correct. Representations can't be relied on."
+      },
+      {
+        "id": "c",
+        "text": "An unmodified opinion",
+        "explanation": "Reliability is in doubt.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "An adverse opinion",
+        "explanation": "Not a misstatement.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "If representations are unreliable, the auditor generally disclaims an opinion or withdraws.",
+    "skill": "evaluation",
+    "difficulty": 3
+  },
+  {
+    "id": "aud-wr-27",
+    "pool": "practice",
+    "stem": "Management won't represent that it has disclosed all known fraud. What follows?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A qualified opinion",
+        "explanation": "Usually a disclaimer.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "An unmodified opinion",
+        "explanation": "It is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Disclaim an opinion",
+        "explanation": "Correct. This representation is required."
+      },
+      {
+        "id": "d",
+        "text": "Only an emphasis paragraph",
+        "explanation": "That is not enough.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Refusing a fundamental representation, such as on fraud, generally results in a disclaimer.",
+    "skill": "evaluation",
+    "difficulty": 3
   }
 ]
