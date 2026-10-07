@@ -792,5 +792,284 @@
     "explanation": "No deferred tax is recognized for the excess of book goodwill over tax-deductible goodwill when the goodwill isn't deductible.",
     "skill": "analysis",
     "difficulty": 3
+  },
+  {
+    "id": "far-tax-21",
+    "pool": "practice",
+    "stem": "Cumulative tax depreciation exceeds book depreciation by $30,000. The enacted rate is 25%. What deferred tax liability is reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,500",
+        "explanation": "Correct. $30,000 × 25%."
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "Apply the tax rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$22,500",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "It's a temporary difference.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A taxable temporary difference times the enacted rate gives the DTL.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-tax-22",
+    "pool": "practice",
+    "stem": "A $30,000 taxable temporary difference will reverse when the enacted rate is 21%; the current rate is 25%. What DTL is reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$7,500",
+        "explanation": "Use the reversal-year rate.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$6,300",
+        "explanation": "Correct. Use the enacted rate for the reversal year."
+      },
+      {
+        "id": "c",
+        "text": "$9,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A DTL does exist.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Deferred taxes are measured at the enacted rate expected to apply when the difference reverses.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-tax-23",
+    "pool": "practice",
+    "stem": "A company has a $40,000 deferred tax asset. It's more likely than not that 25% won't be realized. What valuation allowance is needed?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$40,000",
+        "explanation": "Only part is unrealizable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$30,000",
+        "explanation": "That's the realizable amount.",
+        "trap": "reversed"
+      },
+      {
+        "id": "c",
+        "text": "$10,000",
+        "explanation": "Correct. $40,000 × 25%."
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "An allowance is needed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A valuation allowance reduces DTAs to the amount more likely than not to be realized.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-tax-24",
+    "pool": "practice",
+    "stem": "Pretax book income is $200,000, including $10,000 of municipal bond interest. The rate is 25%, and there are no other differences. What is current tax expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$50,000",
+        "explanation": "Muni interest is excluded.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$52,500",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$2,500",
+        "explanation": "That's the muni effect.",
+        "trap": "reversed"
+      },
+      {
+        "id": "d",
+        "text": "$47,500",
+        "explanation": "Correct. $190,000 × 25%."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Permanent differences, such as muni interest, affect current tax and never reverse.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-tax-25",
+    "pool": "practice",
+    "stem": "Current tax expense is $47,500, and the deferred tax liability increased by $5,000. What is total income tax expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$52,500",
+        "explanation": "Correct. $47,500 + $5,000."
+      },
+      {
+        "id": "b",
+        "text": "$47,500",
+        "explanation": "Add the deferred portion.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$42,500",
+        "explanation": "A DTL increase adds expense.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "$5,000",
+        "explanation": "Add current tax.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Total tax expense equals current tax plus the change in deferred tax.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-tax-26",
+    "pool": "practice",
+    "stem": "For an uncertain tax position, possible benefits are $100,000 (30%), $80,000 (25%), $60,000 (25%) and $40,000 (20%). What benefit is recognized?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "Only 30% likely.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$80,000",
+        "explanation": "Correct. Cumulative probability exceeds 50% at $80,000."
+      },
+      {
+        "id": "c",
+        "text": "$60,000",
+        "explanation": "$80,000 already exceeds 50%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$40,000",
+        "explanation": "Not the largest amount.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Recognize the largest benefit with a cumulative probability greater than 50%.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-tax-27",
+    "pool": "practice",
+    "stem": "How are deferred tax liabilities classified on the balance sheet?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "By the related asset",
+        "explanation": "That's the old rule.",
+        "trap": "outdated-rule"
+      },
+      {
+        "id": "b",
+        "text": "All as current",
+        "explanation": "They're noncurrent.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "All as noncurrent",
+        "explanation": "Correct. DTLs and DTAs are noncurrent."
+      },
+      {
+        "id": "d",
+        "text": "By reversal date",
+        "explanation": "That is not the rule.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "All deferred tax assets and liabilities are classified as noncurrent.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-tax-28",
+    "pool": "practice",
+    "stem": "A company has a $100,000 post-2017 NOL carryforward and $90,000 of taxable income before the NOL. How much NOL can it deduct?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$90,000",
+        "explanation": "Apply the 80% limit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "Limited to income.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$80,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$72,000",
+        "explanation": "Correct. The deduction is limited to 80% of taxable income."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Post-2017 NOLs carry forward indefinitely but are limited to 80% of taxable income.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

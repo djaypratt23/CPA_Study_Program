@@ -788,5 +788,284 @@
     "explanation": "ASU 2016-15: insurance proceeds are classified by the nature of the loss; for a building, investing.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "far-scf-22",
+    "pool": "practice",
+    "stem": "Net income is $100,000. Depreciation is $20,000, AR rose $15,000, inventory fell $5,000, AP rose $8,000, and there's a $6,000 gain on an equipment sale. What is cash from operations?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$112,000",
+        "explanation": "Correct. 100 + 20 − 15 + 5 + 8 − 6."
+      },
+      {
+        "id": "b",
+        "text": "$124,000",
+        "explanation": "Subtract the gain.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$98,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$118,000",
+        "explanation": "Subtract the gain.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Under the indirect method, noncash items and gains are removed, and working capital changes are adjusted.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-scf-23",
+    "pool": "practice",
+    "stem": "Equipment costing $50,000 with $30,000 of accumulated depreciation is sold at a $6,000 gain. How is the sale reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$6,000 operating inflow",
+        "explanation": "The gain isn't cash flow.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$26,000 investing inflow",
+        "explanation": "Correct. Proceeds are $20,000 book value + $6,000 gain."
+      },
+      {
+        "id": "c",
+        "text": "$20,000 investing inflow",
+        "explanation": "Proceeds include the gain.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "d",
+        "text": "$26,000 operating inflow",
+        "explanation": "Asset sales are investing.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Proceeds from selling long-term assets are investing inflows; the gain is removed from operating cash flow.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-scf-24",
+    "pool": "practice",
+    "stem": "COGS is $300,000. Inventory rose $20,000 and accounts payable rose $15,000. How much cash was paid to suppliers?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$335,000",
+        "explanation": "Higher AP means less cash paid.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$295,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$305,000",
+        "explanation": "Correct. 300 + 20 − 15."
+      },
+      {
+        "id": "d",
+        "text": "$285,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Cash paid to suppliers is COGS plus the inventory increase less the AP increase.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-scf-25",
+    "pool": "practice",
+    "stem": "Sales are $500,000. AR went from $60,000 to $45,000, and $5,000 of accounts were written off under the allowance method. How much cash was collected from customers?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$515,000",
+        "explanation": "Write-offs aren't collections.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$495,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "$505,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$510,000",
+        "explanation": "Correct. 500 + 60 − 45 − 5."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Collections equal sales plus the AR decrease, less write-offs, which reduce AR without cash.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-scf-26",
+    "pool": "practice",
+    "stem": "A U.S. GAAP company paid $10,000 of interest and $25,000 of dividends and received $4,000 of dividends. What net amount do these add to operating cash flow?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $6,000 net outflow",
+        "explanation": "Correct. Interest paid and dividends received are operating."
+      },
+      {
+        "id": "b",
+        "text": "A $31,000 net outflow",
+        "explanation": "Dividends paid are financing.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "A $35,000 outflow",
+        "explanation": "Dividends paid are financing.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "A $10,000 outflow",
+        "explanation": "Include dividends received.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Under U.S. GAAP, interest paid and interest and dividends received are operating; dividends paid are financing.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-scf-27",
+    "pool": "practice",
+    "stem": "Bonds are converted into common stock with no cash changing hands. How is this shown in the statement of cash flows?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As a financing outflow and inflow",
+        "explanation": "No cash changed hands.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As a noncash activity",
+        "explanation": "Correct. It's disclosed, not reported as a cash flow."
+      },
+      {
+        "id": "c",
+        "text": "As an operating item",
+        "explanation": "It isn't operating.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Not at all",
+        "explanation": "Significant noncash activity is disclosed.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Significant noncash investing and financing activities are disclosed separately.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-scf-28",
+    "pool": "practice",
+    "stem": "A company issues $50,000 of stock, repays $30,000 of long-term debt, pays $12,000 of dividends, and buys $8,000 of treasury stock. What is net financing cash flow?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "A $50,000 inflow",
+        "explanation": "Subtract the outflows.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "A $20,000 inflow",
+        "explanation": "Include dividends and treasury stock.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$0",
+        "explanation": "Correct. 50 − 30 − 12 − 8."
+      },
+      {
+        "id": "d",
+        "text": "An $8,000 outflow",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Stock issues, debt repayments, dividends paid and treasury purchases are all financing flows.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-scf-29",
+    "pool": "practice",
+    "stem": "A company buys land for $100,000, paying $20,000 in cash and signing an $80,000 note. How is the purchase reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000 investing outflow",
+        "explanation": "Only $20,000 was paid.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$80,000 financing inflow",
+        "explanation": "No cash was borrowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$20,000 financing outflow",
+        "explanation": "Land purchases are investing.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$20,000 investing outflow",
+        "explanation": "Correct. The note portion is a noncash disclosure."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Only the cash paid is an investing outflow; the note is disclosed as noncash financing.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
   }
 ]

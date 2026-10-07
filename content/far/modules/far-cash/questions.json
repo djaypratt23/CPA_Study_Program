@@ -787,5 +787,283 @@
     "explanation": "Foreign currency balances are cash, remeasured at the current exchange rate.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "far-cash-21",
+    "pool": "practice",
+    "stem": "The bank shows $25,000. Deposits in transit are $4,000 and outstanding checks are $6,000. A $50 service charge and a $500 NSF check aren't yet recorded on the books. What is the correct cash balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$23,000",
+        "explanation": "Correct. Bank side: 25,000 + 4,000 − 6,000."
+      },
+      {
+        "id": "b",
+        "text": "$23,550",
+        "explanation": "That's the unadjusted book balance.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$22,450",
+        "explanation": "Don't adjust the bank side for book items.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$25,000",
+        "explanation": "Adjust for timing items.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The bank side is adjusted for deposits in transit and outstanding checks to reach the true balance.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-cash-22",
+    "pool": "practice",
+    "stem": "Using the facts above (correct cash $23,000, unrecorded $50 service charge and $500 NSF check), what was the unadjusted book balance?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$22,450",
+        "explanation": "The book items reduce book cash.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "b",
+        "text": "$23,550",
+        "explanation": "Correct. 23,000 + 50 + 500."
+      },
+      {
+        "id": "c",
+        "text": "$23,000",
+        "explanation": "Books lack the adjustments.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$24,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Book-side reconciling items, such as service charges and NSF checks, reduce the unadjusted book balance.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-cash-23",
+    "pool": "practice",
+    "stem": "A company has $10,000 in checking, a T-bill bought 2 months before maturity ($5,000), a 6-month CD ($8,000), a customer's postdated check ($1,000), and $200 of petty cash. What is cash and cash equivalents?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$23,200",
+        "explanation": "A 6-month CD isn't an equivalent.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$16,200",
+        "explanation": "A postdated check is a receivable.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$15,200",
+        "explanation": "Correct. Checking, the T-bill and petty cash."
+      },
+      {
+        "id": "d",
+        "text": "$10,200",
+        "explanation": "The T-bill is an equivalent.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Cash equivalents are bought within 3 months of maturity; postdated checks are receivables.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-cash-24",
+    "pool": "practice",
+    "stem": "A company must keep a $50,000 compensating balance under a 5-year loan agreement, and the balance is legally restricted. How is it reported?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "As unrestricted cash",
+        "explanation": "It's legally restricted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "As current restricted cash",
+        "explanation": "The loan is long-term.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Offset against the loan balance",
+        "explanation": "Restricted cash is not offset.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "As a noncurrent asset",
+        "explanation": "Correct. It's restricted for more than a year."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Legally restricted compensating balances tied to long-term debt are classified as noncurrent.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-cash-25",
+    "pool": "practice",
+    "stem": "A $500 petty cash fund has $420 of receipts and $70 of cash on hand. How much cash is needed to replenish it?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$430",
+        "explanation": "Correct. $500 − $70 on hand."
+      },
+      {
+        "id": "b",
+        "text": "$420",
+        "explanation": "There's a $10 shortage too.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$500",
+        "explanation": "Cash remains in the fund.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "$70",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Replenishment restores the fund to its imprest amount; any difference from receipts is cash short or over.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-cash-26",
+    "pool": "practice",
+    "stem": "Outstanding checks were $3,000 at the start of the month. The company wrote $50,000 of checks, and the bank cleared $48,000. What are outstanding checks at month-end?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$2,000",
+        "explanation": "Add the beginning amount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Correct. 3,000 + 50,000 − 48,000."
+      },
+      {
+        "id": "c",
+        "text": "$1,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$8,000",
+        "explanation": "Subtract the checks cleared.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Ending outstanding checks equal the beginning balance plus checks written less checks cleared.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-cash-27",
+    "pool": "practice",
+    "stem": "Deposits in transit were $2,000 at the start of the month. Book deposits were $60,000 and bank deposits were $59,000. What are deposits in transit at month-end?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$1,000",
+        "explanation": "Add the beginning amount.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "b",
+        "text": "$2,000",
+        "explanation": "The balance changed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$3,000",
+        "explanation": "Correct. 2,000 + 60,000 − 59,000."
+      },
+      {
+        "id": "d",
+        "text": "$4,000",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Ending deposits in transit equal the beginning balance plus book deposits less bank deposits.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-cash-28",
+    "pool": "practice",
+    "stem": "A $1,500 customer check, recorded as a deposit, is returned NSF. How does the company adjust its records?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Debit bad debt expense; credit cash",
+        "explanation": "Collection is still possible.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "No entry; the bank fixes it",
+        "explanation": "Books need adjusting.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Debit cash; credit AR",
+        "explanation": "That's backward.",
+        "trap": "wrong-sign"
+      },
+      {
+        "id": "d",
+        "text": "Debit AR; credit cash, $1,500",
+        "explanation": "Correct. The amount is again receivable."
+      }
+    ],
+    "answer": "d",
+    "explanation": "An NSF check reduces book cash and reinstates the customer's receivable.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

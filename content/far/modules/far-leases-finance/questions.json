@@ -786,5 +786,283 @@
     "explanation": "A lease of a specialized asset with no alternative use to the lessor is a finance lease.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "far-lsf-21",
+    "pool": "practice",
+    "stem": "A lessee's finance lease has 5 annual payments of $100,000 in arrears, with a present value of $379,079 at 10%. What is year 1 interest expense?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$37,908",
+        "explanation": "Correct. $379,079 × 10%."
+      },
+      {
+        "id": "b",
+        "text": "$100,000",
+        "explanation": "That's the payment.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "$75,816",
+        "explanation": "That's amortization.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$62,092",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Finance lease interest is the liability balance times the discount rate.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-lsf-22",
+    "pool": "practice",
+    "stem": "Using the finance lease above ($379,079 liability, $37,908 interest, $100,000 payment), what is the liability at the end of year 1?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$279,079",
+        "explanation": "Add the interest accrued.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$316,987",
+        "explanation": "Correct. 379,079 + 37,908 − 100,000."
+      },
+      {
+        "id": "c",
+        "text": "$303,263",
+        "explanation": "Not the computation.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$379,079",
+        "explanation": "The payment reduces it.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The liability grows by interest and falls by payments.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-lsf-23",
+    "pool": "practice",
+    "stem": "The finance lease ROU asset of $379,079 is amortized straight-line over the 5-year term. What is total year 1 lease expense, including $37,908 of interest?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$100,000",
+        "explanation": "That's operating lease cost.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$75,816",
+        "explanation": "Add the interest accrued.",
+        "trap": "partial-computation"
+      },
+      {
+        "id": "c",
+        "text": "$113,724",
+        "explanation": "Correct. $75,816 amortization + $37,908 interest."
+      },
+      {
+        "id": "d",
+        "text": "$37,908",
+        "explanation": "Add amortization.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Finance leases report amortization and interest separately, front-loading total expense.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-lsf-24",
+    "pool": "practice",
+    "stem": "A lease runs 6 years on an asset with an 8-year economic life. There's no purchase option or transfer of title. How is it classified?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Operating lease",
+        "explanation": "The term is a major part of life.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Short-term lease",
+        "explanation": "It's longer than 12 months.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "Not a lease",
+        "explanation": "It conveys control.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Finance lease",
+        "explanation": "Correct. 75% of the life is a major part."
+      }
+    ],
+    "answer": "d",
+    "explanation": "A lease is a finance lease if its term is a major part (often 75% or more) of the asset's economic life.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-lsf-25",
+    "pool": "practice",
+    "stem": "A finance lease has 5 annual payments of $100,000, with the first at commencement. The PV at 10% is $416,987. What is year 1 interest?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$31,699",
+        "explanation": "Correct. ($416,987 − $100,000) × 10%."
+      },
+      {
+        "id": "b",
+        "text": "$41,699",
+        "explanation": "Deduct the first payment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$37,908",
+        "explanation": "That's an arrears lease.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "Interest accrues.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "With payments in advance, the first payment immediately reduces the liability before interest accrues.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-lsf-26",
+    "pool": "practice",
+    "stem": "A lessee guarantees a $20,000 residual value but expects the asset to be worth $15,000. What is included in lease payments?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "$20,000",
+        "explanation": "Only the expected shortfall.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "$5,000",
+        "explanation": "Correct. Only the amount probable of being owed."
+      },
+      {
+        "id": "c",
+        "text": "$15,000",
+        "explanation": "Not the amount.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "d",
+        "text": "$0",
+        "explanation": "A shortfall is expected.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Lessees include amounts probable of being owed under residual value guarantees.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-lsf-27",
+    "pool": "practice",
+    "stem": "A lessor's sales-type lease has a fair value and PV of payments of $400,000. The asset's carrying amount is $300,000. What is recognized at commencement?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No profit until collected",
+        "explanation": "Not for a sales-type lease.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "$100,000 deferred",
+        "explanation": "It's recognized now.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "$100,000 selling profit",
+        "explanation": "Correct. Profit is recognized at commencement."
+      },
+      {
+        "id": "d",
+        "text": "$400,000 of revenue only",
+        "explanation": "Profit is $100,000.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Sales-type leases recognize selling profit at commencement.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-lsf-28",
+    "pool": "practice",
+    "stem": "In a sales-type lease where fair value differs from carrying amount, how are the lessor's initial direct costs treated?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Deferred over the term",
+        "explanation": "Not for sales-type with profit.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Added to the receivable",
+        "explanation": "Not in this case.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Charged to equity",
+        "explanation": "Not the treatment.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Expensed at the start",
+        "explanation": "Correct. They're expensed when there's selling profit."
+      }
+    ],
+    "answer": "d",
+    "explanation": "When fair value differs from carrying amount, a sales-type lessor expenses initial direct costs at commencement.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]

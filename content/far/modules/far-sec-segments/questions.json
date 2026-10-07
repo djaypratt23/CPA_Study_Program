@@ -993,5 +993,278 @@
     "explanation": "Form S-1 is the general registration statement under the Securities Act of 1933.",
     "skill": "application",
     "difficulty": 2
+  },
+  {
+    "id": "far-sec-27",
+    "pool": "practice",
+    "stem": "Segment A has $90,000 of revenue (total $1,000,000) and $50,000 of profit. Total profits are $400,000 and total losses $100,000. Is A reportable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Yes, under the profit test",
+        "explanation": "Correct. $50,000 ≥ 10% of $400,000."
+      },
+      {
+        "id": "b",
+        "text": "No, revenue is under 10%",
+        "explanation": "It passes another test.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes, under the revenue test",
+        "explanation": "Revenue is under 10%.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "No, it fails all tests",
+        "explanation": "It passes the profit test.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A segment is reportable if it meets any 10% test: revenue, absolute profit or loss, or assets.",
+    "skill": "analysis",
+    "difficulty": 3,
+    "calc": true
+  },
+  {
+    "id": "far-sec-28",
+    "pool": "practice",
+    "stem": "Reportable segments' external revenue is $700,000 of $1,000,000 total external revenue. What must the company do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing more is required",
+        "explanation": "75% is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Add segments to reach 75%",
+        "explanation": "Correct. The 75% test isn't met."
+      },
+      {
+        "id": "c",
+        "text": "Combine all segments",
+        "explanation": "That is not required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Drop the smallest segment",
+        "explanation": "That's backward.",
+        "trap": "wrong-sign"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Reportable segments must account for at least 75% of consolidated external revenue.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-sec-29",
+    "pool": "practice",
+    "stem": "A company's public float is $800 million. What is its Form 10-K deadline?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "75 days",
+        "explanation": "That's for accelerated filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "90 days",
+        "explanation": "That's for non-accelerated filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "c",
+        "text": "60 days",
+        "explanation": "Correct. Large accelerated filers have 60 days."
+      },
+      {
+        "id": "d",
+        "text": "45 days",
+        "explanation": "That's a 10-Q deadline.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Large accelerated filers ($700 million or more of float) file the 10-K within 60 days.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-sec-30",
+    "pool": "practice",
+    "stem": "An accelerated filer has a $300 million public float. What is its Form 10-Q deadline?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "45 days",
+        "explanation": "That's for non-accelerated filers.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "b",
+        "text": "35 days",
+        "explanation": "Not a deadline.",
+        "trap": "distractor-number"
+      },
+      {
+        "id": "c",
+        "text": "60 days",
+        "explanation": "That's a 10-K deadline.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "40 days",
+        "explanation": "Correct. Accelerated filers have 40 days."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Large accelerated and accelerated filers file 10-Qs within 40 days; others within 45 days.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-sec-31",
+    "pool": "practice",
+    "stem": "Under ASU 2023-07, which segment expenses must a public company disclose?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Significant CODM expenses",
+        "explanation": "Correct. Regularly provided significant expenses."
+      },
+      {
+        "id": "b",
+        "text": "All expenses by nature",
+        "explanation": "Only significant ones.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "No expense detail is needed",
+        "explanation": "Disclosure is required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "Only depreciation",
+        "explanation": "More is required.",
+        "trap": "partial-computation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Public companies disclose significant segment expenses regularly provided to the chief operating decision maker.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-sec-32",
+    "pool": "practice",
+    "stem": "A customer provides $120,000 of a company's $1,000,000 revenue. What disclosure is required?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nothing",
+        "explanation": "It meets the threshold.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "A major customer note",
+        "explanation": "Correct. 10% or more triggers it."
+      },
+      {
+        "id": "c",
+        "text": "The customer's name only",
+        "explanation": "The name isn't required.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "d",
+        "text": "A going concern note",
+        "explanation": "That is not required.",
+        "trap": "wrong-classification"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Revenue from a single customer of 10% or more is disclosed, with the segment, but not the customer's name.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-sec-33",
+    "pool": "practice",
+    "stem": "A segment's assets are 11% of combined segment assets, though it fails the revenue and profit tests. Is it reportable?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "No",
+        "explanation": "The asset test is met.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Only if profitable",
+        "explanation": "Any test suffices.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Yes",
+        "explanation": "Correct. It passes the asset test."
+      },
+      {
+        "id": "d",
+        "text": "Only with CODM approval",
+        "explanation": "That is not required.",
+        "trap": "wrong-rule"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A segment meeting any one 10% test is reportable.",
+    "skill": "analysis",
+    "difficulty": 3
+  },
+  {
+    "id": "far-sec-34",
+    "pool": "practice",
+    "stem": "Two operating segments have similar economics, products and customers. What may the company do?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "It must report them separately",
+        "explanation": "Aggregation is allowed.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "b",
+        "text": "Drop both from disclosure",
+        "explanation": "That is not permitted.",
+        "trap": "wrong-rule"
+      },
+      {
+        "id": "c",
+        "text": "Report them as discontinued",
+        "explanation": "That is not the case here.",
+        "trap": "wrong-classification"
+      },
+      {
+        "id": "d",
+        "text": "Aggregate them",
+        "explanation": "Correct. The aggregation criteria allow combining."
+      }
+    ],
+    "answer": "d",
+    "explanation": "Operating segments with similar economic characteristics and qualitative factors may be aggregated.",
+    "skill": "analysis",
+    "difficulty": 3
   }
 ]
