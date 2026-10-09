@@ -43,3 +43,24 @@ async function onboard(page, { section = 'FAR', date = '', minutes = null } = {}
 }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 module.exports = { chromium, devices, launch, newPage, shot, text, saveLogs, onboard, BASE, DESKTOP, PHONE, ROOT, SHOTS, LOGS, allLogs, sleep, attach };
+// ---- content helpers ----
+function loadQuestions() {
+  const glob = require('fs');
+  const out = {};
+  for (const sec of ['far', 'aud', 'reg', 'tcp']) {
+    const base = path.join(ROOT, 'content', sec);
+    for (const m of fs.existsSync(path.join(base, 'modules')) ? fs.readdirSync(path.join(base, 'modules')) : []) {
+      const f = path.join(base, 'modules', m, 'questions.json');
+      if (fs.existsSync(f)) for (const q of JSON.parse(fs.readFileSync(f, 'utf8'))) out[q.id] = q;
+    }
+    const eq = path.join(base, 'exam-questions');
+    if (fs.existsSync(eq)) for (const f of fs.readdirSync(eq)) { const d = JSON.parse(fs.readFileSync(path.join(eq, f), 'utf8')); for (const q of (Array.isArray(d) ? d : d.questions || [])) out[q.id] = q; }
+  }
+  return out;
+}
+async function currentQid(page) {
+  const id = await page.locator('article[aria-labelledby^="stem-"]').first().getAttribute('aria-labelledby');
+  return id && id.replace(/^stem-/, '');
+}
+module.exports.loadQuestions = loadQuestions;
+module.exports.currentQid = currentQid;

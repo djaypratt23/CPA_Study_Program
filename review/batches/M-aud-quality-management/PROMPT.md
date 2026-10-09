@@ -14,7 +14,7 @@ You are one reviewer in an exhaustive review of a CPA exam study platform (repo 
   - Manifest (every item id you must cover): `review/batches/M-aud-quality-management/manifest.json`
   - Section config (module order, Blueprint weights, skill allocation): `content/sections/aud.yaml`
   - Schema and validator rules: `src/content/schema.ts`, `src/content/build.ts`
-  - Verified reference sheets (use them; they were researched for this review): `(none available yet — rely on web search)`
+  - Verified reference sheets (use them; they were researched for this review): `review/reference/aud-standards.md`
   - Prior decisions and known trade-offs: `REVIEW.md`, `docs/BLUEPRINT_NOTES.md` (read the parts relevant to your module; prior "confirmed" decisions are claims to verify, not facts)
 
 ## Network and web search
