@@ -1,0 +1,1252 @@
+{
+ "mcqs": [
+  {
+   "id": "far-lso-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a lessee has an operating lease with level annual payments of $60,000. What expense does it report each year?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Interest plus amortization, declining over time",
+     "explanation": "That's the finance lease pattern.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "A single straight-line lease cost of $60,000",
+     "explanation": "Correct. Operating leases produce a single straight-line lease cost equal to total payments ÷ term (here 60,000 per year)."
+    },
+    {
+     "id": "c",
+     "text": "Nothing; operating leases are off the balance sheet",
+     "explanation": "Operating leases are recognized and expensed.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "Only the interest on the lease liability",
+     "explanation": "The full lease cost is expensed.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Operating leases produce a single straight-line lease cost equal to total payments ÷ term (here 60,000 per year).",
+   "skill": "application",
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-chk1",
+   "pool": "lesson",
+   "stem": "Year 1 of an operating lease: straight-line lease cost $40,000; interest accretion on the lease liability $9,000. What is Year 1 amortization of the ROU asset?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "The lease cost includes the interest component.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$9,000",
+     "explanation": "That's the interest accretion.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$49,000",
+     "explanation": "The components aren't added.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$31,000",
+     "explanation": "Correct. 40,000 − 9,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Operating lease ROU amortization is the plug: straight-line cost − interest accretion = **31,000**.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-chk2",
+   "pool": "lesson",
+   "stem": "A seller-lessee sells a building and leases it back under a lease that meets the finance lease criteria. How is the transaction accounted for?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a sale with a gain, followed by a finance lease",
+     "explanation": "A finance leaseback prevents sale accounting.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "As a failed sale: the asset stays and proceeds are a liability",
+     "explanation": "Correct. If the leaseback would be a finance lease, control hasn't transferred to the buyer-lessor — the seller accounts for a failed sale (financing)."
+    },
+    {
+     "id": "c",
+     "text": "As a sale, with the gain deferred over the lease term",
+     "explanation": "Gain deferral was the old model.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "As a sale followed by an operating lease",
+     "explanation": "Classification as finance was given.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "If the leaseback would be a finance lease, control hasn't transferred to the buyer-lessor — the seller accounts for a failed sale (financing).",
+   "skill": "application",
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-01",
+   "pool": "practice",
+   "stem": "A 4-year operating lease has payments of $30,000 at the end of each year; the liability is initially $104,000 (at 6%). What is the Year 1 lease cost?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "Correct. Straight-line: 120,000 ÷ 4."
+    },
+    {
+     "id": "b",
+     "text": "$32,240",
+     "explanation": "This adds a year of interest (6,240) to the cash payment — mixing in finance-lease thinking.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$26,000",
+     "explanation": "That's the initial liability ÷ 4.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$6,240",
+     "explanation": "That's only the interest component.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Operating lease cost = total payments 120,000 ÷ 4 years = **30,000** per year (interest 6,240 + ROU amortization 23,760).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-02",
+   "pool": "practice",
+   "stem": "Compared with a finance lease with identical terms, an operating lease in its **first** year reports:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A larger lease liability at year-end",
+     "explanation": "The liability is measured identically.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Higher total expense for the year",
+     "explanation": "Finance leases front-load expense.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Lower total expense and a larger ROU asset",
+     "explanation": "Correct. In early years, finance lease expense (interest + straight-line amortization) exceeds the straight-line operating cost; the operating ROU asset is amortized more slowly early, so it's larger."
+    },
+    {
+     "id": "d",
+     "text": "No lease liability on the balance sheet",
+     "explanation": "Operating leases are recognized.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "In early years, finance lease expense (interest + straight-line amortization) exceeds the straight-line operating cost; the operating ROU asset is amortized more slowly early, so it's larger.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-03",
+   "pool": "practice",
+   "stem": "Where do operating lease payments appear in the lessee's statement of cash flows?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Operating activities",
+     "explanation": "Correct. ASC 842-20-45-5: operating lease payments are operating cash outflows (except amounts to bring the asset to condition, which are investing)."
+    },
+    {
+     "id": "b",
+     "text": "Financing activities",
+     "explanation": "That's where finance lease principal goes.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Split between operating and financing",
+     "explanation": "Splitting applies to finance leases.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Investing activities",
+     "explanation": "Lease payments aren't investing.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 842-20-45-5: operating lease payments are operating cash outflows (except amounts to bring the asset to condition, which are investing).",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-04",
+   "pool": "practice",
+   "stem": "An operating lease has payments of $50,000 in Year 1, $60,000 in Year 2, and $70,000 in Year 3. What lease cost is recognized in Year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Cost is straight-line, not the cash paid.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$60,000",
+     "explanation": "Correct. 180,000 ÷ 3."
+    },
+    {
+     "id": "c",
+     "text": "$70,000",
+     "explanation": "That's Year 3's payment.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$55,000",
+     "explanation": "This averages only the first two years' payments.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Straight-line: (50,000 + 60,000 + 70,000) ÷ 3 = **60,000** each year.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-05",
+   "pool": "practice",
+   "stem": "A seller-lessee sells equipment with a carrying amount of $400,000 for $450,000 when its fair value is $500,000, and leases it back under an operating lease. How is the $50,000 below-fair-value price treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A loss on sale of $50,000",
+     "explanation": "The sale is measured at fair value; the gain is 100,000 with a prepaid rent adjustment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Ignored; the gain is $50,000",
+     "explanation": "Off-market terms must be adjusted.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "As additional financing from the buyer",
+     "explanation": "That applies when the price exceeds fair value.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "Prepaid rent in the ROU asset; $100,000 gain",
+     "explanation": "Correct. Below-market sale price → treat the 50,000 shortfall as prepaid rent (add to ROU asset); gain measured at fair value: 500,000 − 400,000 = 100,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Below-market sale price → treat the 50,000 shortfall as prepaid rent (add to ROU asset); gain measured at fair value: 500,000 − 400,000 = **100,000**.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-06",
+   "pool": "practice",
+   "stem": "Which disclosure is required for a lessee's operating leases?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The lessor's cost of the leased asset",
+     "explanation": "Not a lessee disclosure.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "b",
+     "text": "A maturity analysis of undiscounted payments",
+     "explanation": "Correct. Lessees disclose a maturity analysis of undiscounted cash flows (each of the next 5 years and thereafter) reconciled to the liability, plus weighted-average remaining term and discount rate, and cost components."
+    },
+    {
+     "id": "c",
+     "text": "The fair value of the ROU asset each year",
+     "explanation": "Fair value of the ROU asset is not a required lessee disclosure.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Nothing, because the lease is on the balance sheet",
+     "explanation": "Extensive disclosures are required.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Lessees disclose a maturity analysis of undiscounted cash flows (each of the next 5 years and thereafter) reconciled to the liability, plus weighted-average remaining term and discount rate, and cost components.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-07",
+   "pool": "practice",
+   "stem": "A lessee signs a 3-year operating lease whose first three months are rent-free; payments then escalate each year. There were no initial direct costs, prepaid rent, or lease incentives, and no impairment has been recognized. At the end of Year 1, the lease liability is $195,000 and the ROU asset is $185,000. What explains the $10,000 difference?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An error, because the two must always be equal at year-end",
+     "explanation": "They differ when payments are uneven or there are IDC/incentives.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Accumulated straight-line lease cost in excess of cash paid (accrued rent)",
+     "explanation": "Correct. With rent-free months and escalating payments, straight-line lease cost exceeds cash paid early in the term, and the difference accumulates as accrued rent, reducing the ROU asset relative to the liability."
+    },
+    {
+     "id": "c",
+     "text": "Impairment of the ROU asset recognized during the year",
+     "explanation": "The stem says no impairment has been recognized; the gap comes from the rent-free and escalating payment pattern.",
+     "trap": "other"
+    },
+    {
+     "id": "d",
+     "text": "Interest accretion recorded only on the ROU asset balance",
+     "explanation": "Interest accretes on the liability.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "When lease cost (straight-line) exceeds cash paid early, the difference accumulates as accrued rent, reducing the ROU asset relative to the liability.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-08",
+   "pool": "practice",
+   "stem": "An operating-lease ROU asset is impaired and written down. How is lease cost recognized afterward?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Continue recognizing the original straight-line lease cost",
+     "explanation": "After impairment the single-cost pattern no longer applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Amortize the ROU asset straight-line, plus liability interest",
+     "explanation": "Correct. After an operating ROU impairment, the lessee amortizes the remaining ROU asset (generally straight-line) and separately accretes interest — similar to a finance lease pattern."
+    },
+    {
+     "id": "c",
+     "text": "Stop recognizing any lease expense for the remaining term",
+     "explanation": "Costs continue.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Reclassify the lease as a finance lease going forward",
+     "explanation": "Classification doesn't change; only the expense pattern does.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "After an operating ROU impairment, the lessee amortizes the remaining ROU asset (generally straight-line) and separately accretes interest — similar to a finance lease pattern.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-09",
+   "pool": "practice",
+   "stem": "A lessee pays $5,000 of initial direct costs and receives a $6,000 incentive for a 3-year operating lease with total payments of $150,000. What is the annual straight-line lease cost?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "IDC and incentives adjust total lease cost.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$49,667",
+     "explanation": "Correct. (150,000 + 5,000 − 6,000) ÷ 3."
+    },
+    {
+     "id": "c",
+     "text": "$51,667",
+     "explanation": "This adds IDC but ignores the incentive.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$53,667",
+     "explanation": "This adds the incentive instead of subtracting it.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Total lease cost = payments 150,000 + IDC 5,000 − incentives 6,000 = 149,000 ÷ 3 = **49,667**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-10",
+   "pool": "practice",
+   "stem": "Which feature of a sale-leaseback prevents sale accounting for the seller-lessee?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The leaseback is an operating lease at market rates",
+     "explanation": "That supports sale accounting.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "The sale price equals the asset's fair value",
+     "explanation": "That supports sale accounting.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "A fixed-price repurchase option on a specialized asset",
+     "explanation": "Correct. Such a repurchase option precludes sale accounting."
+    },
+    {
+     "id": "d",
+     "text": "The lease term is only 3 years",
+     "explanation": "Term length alone doesn't determine sale accounting.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A repurchase option generally precludes sale accounting unless the exercise price is the asset's fair value at exercise and alternative assets are readily available (ASC 842-40-25-3).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-11",
+   "pool": "practice",
+   "stem": "A lessee's operating lease has a liability of $183,650 and an ROU asset of $183,650 at December 31. Payments are level and there are no IDC or incentives. What will happen to the two balances over the remaining term?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "They stay equal each year, declining to zero at the end",
+     "explanation": "Correct. With level payments and no adjustments, the ROU asset equals the liability."
+    },
+    {
+     "id": "b",
+     "text": "The ROU asset declines straight-line while the liability declines more slowly",
+     "explanation": "That describes a finance lease pattern.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "The liability stays constant until the final payment",
+     "explanation": "Each payment reduces the liability.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The ROU asset increases with interest accretion",
+     "explanation": "Interest accretes on the liability, and the ROU plug offsets it.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "a",
+   "explanation": "For an operating lease with level payments (and no IDC, incentives, prepaid or accrued rent), the plug amortization keeps the ROU asset equal to the lease liability throughout the term.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-12",
+   "pool": "practice",
+   "stem": "A three-year operating lease requires payments of $0, $60,000 and $60,000. What lease cost does the lessee recognize in Year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$0",
+     "explanation": "Lease cost is straight-lined, not based on payments.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "Correct. 120,000 ÷ 3 years, straight-line."
+    },
+    {
+     "id": "c",
+     "text": "$60,000",
+     "explanation": "Total payments are spread over three years.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$120,000",
+     "explanation": "Cost is recognized over the term.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Operating lease cost is recognized straight-line over the lease term.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-13",
+   "pool": "practice",
+   "stem": "How does a lessor account for an operating lease?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Derecognizes the asset and records a receivable",
+     "explanation": "That is a sales-type or direct financing lease.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Records a right-of-use liability",
+     "explanation": "Lessors don't record ROU liabilities.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Keeps the asset, depreciates it and recognizes lease income",
+     "explanation": "Correct. The underlying asset stays on the lessor's books."
+    },
+    {
+     "id": "d",
+     "text": "Recognizes all income at commencement",
+     "explanation": "Operating lease income is recognized over the term.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ASC 842-30: a lessor in an operating lease keeps the underlying asset, depreciates it and recognizes lease income, generally straight-line.",
+   "skill": "application",
+   "difficulty": 1,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-14",
+   "pool": "practice",
+   "stem": "A lessee's operating lease cost for the year is $40,000, and interest accretion on the lease liability is $6,000. How much is the ROU asset amortized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "Accretion on the liability is part of the single cost.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$46,000",
+     "explanation": "Accretion is subtracted, not added.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$6,000",
+     "explanation": "That is the accretion, not the amortization.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$34,000",
+     "explanation": "Correct. The ROU amortization is the plug: 40,000 − 6,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "For operating leases, ROU amortization = straight-line cost − accretion of the liability.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-15",
+   "pool": "practice",
+   "stem": "Lease payments rise each year with the CPI. How are these variable payments treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Measured at the commencement index; later changes expensed",
+     "explanation": "Correct. Index-based payments use the index at commencement; changes are variable lease cost."
+    },
+    {
+     "id": "b",
+     "text": "Estimated for future CPI and capitalized",
+     "explanation": "Future index changes aren't forecast.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Excluded from the lease liability entirely",
+     "explanation": "Index-based payments are included at the commencement rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Remeasured each year with the liability",
+     "explanation": "The liability isn't remeasured for index changes alone.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 842-10-30-5: variable payments based on an index are measured using the index at commencement; subsequent changes are recognized when incurred.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-16",
+   "pool": "practice",
+   "stem": "An operating lease liability starts at $100,000 (6% rate) with a $20,000 year-end payment. There are no initial direct costs or incentives. What is the ROU asset at year-end?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$80,000",
+     "explanation": "ROU amortization isn't straight-line here.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "It's amortized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$86,000",
+     "explanation": "Correct. Amortization = $20,000 − $6,000 accretion."
+    },
+    {
+     "id": "d",
+     "text": "$94,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Operating lease ROU amortization is the plug: straight-line cost minus interest accretion.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-17",
+   "pool": "practice",
+   "stem": "A seller-lessee sells a building (carrying amount $400,000; fair value $450,000) for $480,000 and leases it back. What gain is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$80,000",
+     "explanation": "The excess over FV is financing.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Use fair value for the gain.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "Sale accounting applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$50,000",
+     "explanation": "Correct. The $30,000 above fair value is financing."
+    }
+   ],
+   "answer": "d",
+   "explanation": "In a sale-leaseback at an above-market price, the excess over fair value is additional financing.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-18",
+   "pool": "practice",
+   "stem": "A lessor's operating lease collectibility isn't probable. How is lease income recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Limited to cash received",
+     "explanation": "Correct. Until collectibility becomes probable."
+    },
+    {
+     "id": "b",
+     "text": "Straight-line regardless",
+     "explanation": "Collectibility matters.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Not at all",
+     "explanation": "Cash received is income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "As deferred revenue",
+     "explanation": "It's limited, not deferred.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "If collectibility isn't probable, operating lease income is limited to the lesser of straight-line income or cash received.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-19",
+   "pool": "practice",
+   "stem": "A lessee extends an operating lease by 3 years through a modification. How is the liability updated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Remeasured at the original rate",
+     "explanation": "Use the updated rate.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "Remeasured at a current rate",
+     "explanation": "Correct. A modification uses current rates."
+    },
+    {
+     "id": "c",
+     "text": "Not changed until the extension",
+     "explanation": "It's remeasured.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Recorded as a new lease only",
+     "explanation": "The existing lease is remeasured.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A modification not accounted for as a separate contract remeasures the liability using an updated discount rate.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-20",
+   "pool": "practice",
+   "stem": "How does a lessor account for initial direct costs of an operating lease?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Expense them as incurred",
+     "explanation": "They're deferred.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Add them to the asset's cost",
+     "explanation": "They aren't depreciated.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Defer over the lease term",
+     "explanation": "Correct. On the same basis as income."
+    },
+    {
+     "id": "d",
+     "text": "Net them against the first rent",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Lessors defer initial direct costs of an operating lease and expense them over the lease term.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-21",
+   "pool": "practice",
+   "stem": "A lessee's operating lease has 4 annual payments of $50,000 in arrears, with a PV of $158,493. What is year 1 lease cost?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Correct. A single straight-line lease cost."
+    },
+    {
+     "id": "b",
+     "text": "$15,849",
+     "explanation": "That's the interest component.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$55,472",
+     "explanation": "That's finance lease expense.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$39,623",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Operating leases report a single straight-line lease cost.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-22",
+   "pool": "practice",
+   "stem": "An operating lease requires payments of $40,000, $44,000 and $48,000 over 3 years. What lease cost is recognized each year?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000 in year 1",
+     "explanation": "Use straight-line.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$44,000",
+     "explanation": "Correct. $132,000 ÷ 3."
+    },
+    {
+     "id": "c",
+     "text": "$48,000",
+     "explanation": "Use straight-line.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$46,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Operating lease cost is recognized straight-line over the term.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-23",
+   "pool": "practice",
+   "stem": "Using the operating lease above ($158,493 liability at 10%, $50,000 payments, no other adjustments), what is the ROU asset at the end of year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$118,870",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "$158,493",
+     "explanation": "The asset is reduced.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$124,342",
+     "explanation": "Correct. It equals the liability: 158,493 + 15,849 − 50,000."
+    },
+    {
+     "id": "d",
+     "text": "$108,493",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Without initial costs, incentives or prepaid rent, an operating ROU asset equals the lease liability.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-24",
+   "pool": "practice",
+   "stem": "A lessee signs a 10-month lease with no purchase option and elects the short-term lease exemption. How is it accounted for?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An ROU asset and lease liability",
+     "explanation": "The lease is exempt.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Expensed when each payment is made",
+     "explanation": "Straight-line is used.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As a finance lease",
+     "explanation": "It's short-term.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Straight-line expense only",
+     "explanation": "Correct. The exemption avoids the balance sheet."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Short-term leases (12 months or less) may be expensed straight-line without recognizing an ROU asset.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-25",
+   "pool": "practice",
+   "stem": "A lessor gives 3 months free rent on a 24-month operating lease at $10,000 a month for the other 21 months. What monthly revenue is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$8,750",
+     "explanation": "Correct. $210,000 ÷ 24."
+    },
+    {
+     "id": "b",
+     "text": "$10,000",
+     "explanation": "Spread the free rent.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$0 for 3 months",
+     "explanation": "Use straight-line.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$9,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Lessors recognize operating lease income straight-line over the term.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-26",
+   "pool": "practice",
+   "stem": "In an operating lease, which party continues to depreciate the underlying asset?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The lessee",
+     "explanation": "It records an ROU asset.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "The lessor",
+     "explanation": "Correct. The lessor keeps the asset on its books."
+    },
+    {
+     "id": "c",
+     "text": "Neither party",
+     "explanation": "The lessor depreciates it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Both parties",
+     "explanation": "Only the lessor.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "In an operating lease, the lessor keeps the asset and depreciates it.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-27",
+   "pool": "practice",
+   "stem": "A lessor pays the lessee a $12,000 incentive at commencement of an operating lease. How does the lessee account for it?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As income when received",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "As a lease liability increase",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As a cut in the ROU asset",
+     "explanation": "Correct. Incentives reduce the ROU asset."
+    },
+    {
+     "id": "d",
+     "text": "As deferred revenue over the term",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Lease incentives received reduce the ROU asset.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-lso-28",
+   "pool": "practice",
+   "stem": "A retail lease includes variable rent of 2% of sales above a threshold. How is the variable rent treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Included in the lease liability",
+     "explanation": "Variable payments not tied to an index are excluded.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Capitalized to the ROU asset",
+     "explanation": "Variable rent is excluded.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Estimated and accrued upfront",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Expensed as incurred",
+     "explanation": "Correct. It's excluded from the liability."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Variable payments based on performance are excluded from lease payments and expensed when incurred.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/questions.json"
+  },
+  {
+   "id": "far-x3-11",
+   "moduleId": "far-leases-operating",
+   "pool": "exam",
+   "stem": "A lessee's 3-year operating lease requires payments of $30,000, $36,000, and $42,000 at the end of Years 1–3. There are no initial direct costs or incentives. What lease cost is recognized in Year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "Uses the cash payment; operating lease cost is straight-lined.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$36,000",
+     "explanation": "Correct. $108,000 total ÷ 3 years."
+    },
+    {
+     "id": "c",
+     "text": "$42,000",
+     "explanation": "Uses the final payment.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "Interest on the liability plus straight-line ROU amortization",
+     "explanation": "That front-loaded pattern is finance-lease accounting.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Operating leases: a single lease cost recognized straight-line over the lease term: (30,000 + 36,000 + 42,000) ÷ 3 = **$36,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-20",
+   "moduleId": "far-leases-operating",
+   "pool": "exam",
+   "stem": "A lessee signs a two-year operating lease with payments of $10,000 in year 1 and $12,000 in year 2. What lease cost does it recognize in year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$11,000",
+     "explanation": "Correct. Operating lease cost is recognized straight-line: 22,000 ÷ 2."
+    },
+    {
+     "id": "b",
+     "text": "$10,000",
+     "explanation": "Operating lease cost is straight-lined, not based on cash paid.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$12,000",
+     "explanation": "Year 2's payment isn't the year 1 cost.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$22,000",
+     "explanation": "The total is spread over the lease term.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 842: lessees recognize a single operating lease cost on a straight-line basis over the lease term.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-lso-fc1",
+   "front": "Operating lease expense",
+   "back": "Single **straight-line lease cost** = (total payments + IDC − incentives) ÷ term.",
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/flashcards.json"
+  },
+  {
+   "id": "far-lso-fc2",
+   "front": "Operating lease ROU amortization",
+   "back": "**Plug**: straight-line cost − interest accretion on the liability.",
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/flashcards.json"
+  },
+  {
+   "id": "far-lso-fc3",
+   "front": "Lease cash flows",
+   "back": "Operating: all **operating**. Finance: principal **financing**, interest **operating**.",
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/flashcards.json"
+  },
+  {
+   "id": "far-lso-fc4",
+   "front": "Sale-leaseback — when is it a sale?",
+   "back": "Transfer is a sale under ASC 606 AND leaseback is **not a finance lease** (and no disqualifying repurchase option). Otherwise **failed sale** → financing.",
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/flashcards.json"
+  },
+  {
+   "id": "far-lso-fc5",
+   "front": "Sale-leaseback off-market price",
+   "back": "Below FV → **prepaid rent** (↑ ROU). Above FV → **additional financing**.",
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/flashcards.json"
+  },
+  {
+   "id": "far-lso-fc6",
+   "front": "Operating vs. finance: first-year comparison",
+   "back": "Same liability; operating has **lower expense** and a **larger ROU asset** early.",
+   "moduleId": "far-leases-operating",
+   "_file": "content/far/modules/far-leases-operating/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-u11-operating-lease.json",
+  "content/far/tbs/far-tbs-x3-operating-lease.json"
+ ]
+}

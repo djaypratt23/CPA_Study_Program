@@ -1,0 +1,1273 @@
+{
+ "mcqs": [
+  {
+   "id": "far-inv-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: prices have risen steadily all year. Which cost flow method reports the **highest** net income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "FIFO",
+     "explanation": "Correct. The oldest, cheapest costs go to COGS."
+    },
+    {
+     "id": "b",
+     "text": "LIFO",
+     "explanation": "LIFO puts the newest, most expensive costs in COGS — the lowest income.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Weighted average",
+     "explanation": "Average falls between FIFO and LIFO.",
+     "trap": "other"
+    },
+    {
+     "id": "d",
+     "text": "All methods report the same income",
+     "explanation": "They report the same only when prices are stable.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "a",
+   "explanation": "With rising prices, FIFO charges older, lower costs to COGS, producing the highest gross profit and net income (and the highest ending inventory).",
+   "skill": "application",
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-chk1",
+   "pool": "lesson",
+   "stem": "A company's year-end physical count is $500,000. Not included: $30,000 of goods purchased FOB shipping point, in transit; $20,000 of goods sold FOB destination, in transit to a customer; $15,000 of goods held on consignment **from** a supplier (included in the count). What is correct inventory?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$535,000",
+     "explanation": "Correct. 500,000 + 30,000 + 20,000 − 15,000."
+    },
+    {
+     "id": "b",
+     "text": "$550,000",
+     "explanation": "This fails to remove the consigned goods, which belong to the supplier.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$515,000",
+     "explanation": "This omits the goods sold FOB destination, still owned until delivered.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$505,000",
+     "explanation": "This excludes the purchased goods in transit FOB shipping point, which the buyer owns.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Add goods the company owns but didn't count (30,000 purchased FOB shipping point; 20,000 sold FOB destination, still in transit) and remove goods it counted but doesn't own (15,000 consigned in): 500,000 + 30,000 + 20,000 − 15,000 = **535,000**.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-chk2",
+   "pool": "lesson",
+   "stem": "A company's FIFO inventory is $840,000 and its LIFO inventory is $710,000. What is the LIFO reserve?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,550,000",
+     "explanation": "The reserve is a difference, not a sum.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$(130,000)",
+     "explanation": "By convention the reserve is FIFO minus LIFO — positive when prices have risen.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$130,000",
+     "explanation": "Correct. 840,000 − 710,000."
+    },
+    {
+     "id": "d",
+     "text": "$710,000",
+     "explanation": "That is the LIFO inventory itself.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "LIFO reserve = FIFO − LIFO = **130,000**. Adding the reserve to LIFO inventory approximates FIFO for comparisons.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-01",
+   "pool": "practice",
+   "stem": "Beginning inventory 200 units at $20; purchases of 300 units at $22 and then 250 units at $25. At year-end 350 units remain (periodic system). What is ending inventory under FIFO?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,300",
+     "explanation": "This is LIFO ending inventory (200 × 20 + 150 × 22 = 7,300).",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "$8,450",
+     "explanation": "Correct. 250 × 25 + 100 × 22 = 6,250 + 2,200."
+    },
+    {
+     "id": "c",
+     "text": "$7,863",
+     "explanation": "This is weighted average (16,850 ÷ 750 = 22.4667 × 350).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$8,750",
+     "explanation": "This values all 350 units at the latest $25 cost, but only 250 units were bought at $25.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Goods available = 16,850 for 750 units. FIFO leaves the newest costs: 250 × $25 + 100 × $22 = **8,450**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-02",
+   "pool": "practice",
+   "stem": "Beginning inventory 200 units at $20; purchases of 300 units at $22 and then 250 units at $25. At year-end 350 units remain (periodic system). What is cost of goods sold under LIFO?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$8,400",
+     "explanation": "This is FIFO COGS (16,850 − 8,450).",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "$7,300",
+     "explanation": "That is LIFO ending inventory, not COGS.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$8,987",
+     "explanation": "This is weighted-average COGS.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$9,550",
+     "explanation": "Correct. 16,850 − 7,300."
+    }
+   ],
+   "answer": "d",
+   "explanation": "LIFO ending inventory = 200 × 20 + 150 × 22 = 7,300. COGS = 16,850 − 7,300 = **9,550** (equivalently 250 × 25 + 150 × 22).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-03",
+   "pool": "practice",
+   "stem": "Beginning inventory 200 units at $20; purchases of 300 units at $22 and then 250 units at $25. At year-end 350 units remain (periodic system). What is ending inventory under the weighted-average method (rounded to the nearest dollar)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,863",
+     "explanation": "Correct. 16,850 ÷ 750 = 22.4667; × 350 = 7,863.33."
+    },
+    {
+     "id": "b",
+     "text": "$7,817",
+     "explanation": "This uses a simple average of the three unit costs ($22.33) instead of weighting by units.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$8,450",
+     "explanation": "This is FIFO ending inventory, not weighted average.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$7,300",
+     "explanation": "This is LIFO ending inventory, not weighted average.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Weighted-average cost = 16,850 ÷ 750 units = $22.4667. Ending inventory = 350 × 22.4667 = **7,863**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-04",
+   "pool": "practice",
+   "stem": "Beginning inventory: 100 units at $8. Jan 10: bought 100 units at $9. Jan 15: sold 150 units. Jan 20: bought 100 units at $10. What is ending inventory under **perpetual** LIFO?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,250",
+     "explanation": "This is periodic LIFO (100 × 8 + 50 × 9), which ignores when the sale occurred.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$1,400",
+     "explanation": "Correct. The Jan 15 sale used 100 @ 9 and 50 @ 8; remaining 50 @ 8 plus 100 @ 10."
+    },
+    {
+     "id": "c",
+     "text": "$1,500",
+     "explanation": "This values all ending units at the latest cost.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$1,450",
+     "explanation": "This is FIFO: the sale uses 100 @ 8 and 50 @ 9, leaving 50 @ 9 + 100 @ 10.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Perpetual LIFO applies LIFO at each sale. Jan 15 sale of 150: 100 @ $9 + 50 @ $8. Left: 50 @ $8. Add Jan 20: 100 @ $10. Ending = 400 + 1,000 = **1,400**. (Periodic LIFO would give 1,250.)",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-05",
+   "pool": "practice",
+   "stem": "Which cost is **excluded** from the cost of inventory purchased by a retailer?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Freight-in on merchandise purchases",
+     "explanation": "Freight-in is a cost of getting goods to their saleable location.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "Import duties on merchandise",
+     "explanation": "Duties are part of acquisition cost.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Freight-out to deliver goods to customers",
+     "explanation": "Correct. Delivery to customers is a selling expense."
+    },
+    {
+     "id": "d",
+     "text": "Purchase price net of cash discounts taken",
+     "explanation": "The net purchase price is the core inventory cost.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Inventory includes costs to bring goods to their existing condition and location (price, freight-in, duties, handling). Freight-out is a selling expense.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-06",
+   "pool": "practice",
+   "stem": "On December 28, Seller shipped goods costing $40,000 to Buyer, FOB destination; they arrived January 3. On December 30, Buyer also received goods it holds on consignment from Seller worth $25,000. Which amounts should Seller include in its December 31 inventory?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "None ($0)",
+     "explanation": "Seller still owns both shipments.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "The consigned goods also still belong to Seller.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$25,000",
+     "explanation": "FOB destination goods in transit also still belong to Seller.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$65,000",
+     "explanation": "Correct. Title hadn't passed on the FOB destination shipment, and consignors own consigned goods."
+    }
+   ],
+   "answer": "d",
+   "explanation": "FOB destination: title passes on arrival (January 3) — Seller's inventory at year-end. Consigned goods remain the consignor's inventory. Total **65,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-07",
+   "pool": "practice",
+   "stem": "A company adopted dollar-value LIFO at the start of Year 1, when inventory was $80,000 (index 1.00). At the end of Year 1, inventory at year-end prices was $99,000 and the price index was 1.10. What is ending inventory under dollar-value LIFO?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$99,000",
+     "explanation": "That is inventory at current prices, not LIFO.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$90,000",
+     "explanation": "That is inventory at base-year prices, before pricing the new layer.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$91,000",
+     "explanation": "Correct. Base 80,000 + layer 10,000 × 1.10 = 11,000."
+    },
+    {
+     "id": "d",
+     "text": "$88,000",
+     "explanation": "This applies the index to the base layer (80,000 × 1.10).",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "99,000 ÷ 1.10 = 90,000 at base prices → a 10,000 layer. Value it at the Year 1 index: 10,000 × 1.10 = 11,000. DV LIFO = 80,000 + 11,000 = **91,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-08",
+   "pool": "practice",
+   "stem": "During a year of rising prices, a LIFO company sold more units than it purchased, dipping into layers acquired years ago. What is the effect?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "COGS is lower and gross profit higher than otherwise",
+     "explanation": "Correct. Old, low costs flow into COGS — a LIFO liquidation."
+    },
+    {
+     "id": "b",
+     "text": "Cost of goods sold is higher than normal",
+     "explanation": "Old layers carry lower costs, reducing COGS.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "There is no effect because LIFO always matches current costs",
+     "explanation": "A liquidation breaks that matching.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "The company must switch to FIFO",
+     "explanation": "No such requirement exists.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "A LIFO liquidation releases old, low-cost layers into COGS, inflating gross profit (and taxes). Material effects are disclosed.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-09",
+   "pool": "practice",
+   "stem": "Which statement about LIFO is correct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "IFRS permits LIFO for companies in inflationary economies",
+     "explanation": "IFRS prohibits LIFO entirely.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A company using LIFO for federal income taxes must also use LIFO for financial reporting",
+     "explanation": "Correct. The LIFO conformity rule."
+    },
+    {
+     "id": "c",
+     "text": "LIFO periodic and LIFO perpetual always produce the same ending inventory",
+     "explanation": "They can differ because perpetual applies LIFO at each sale.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "LIFO reports the most current costs on the balance sheet",
+     "explanation": "LIFO leaves the oldest costs on the balance sheet.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The LIFO conformity rule (IRC §472) requires book use of LIFO when it is used for tax. IFRS prohibits LIFO.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-10",
+   "pool": "practice",
+   "stem": "Goods available for sale were $600,000. Ending inventory was understated by $15,000 because goods in a remote warehouse were not counted. What is the effect on current-year cost of goods sold and net income (ignore taxes)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "COGS understated; net income overstated",
+     "explanation": "Reversed — understating ending inventory overstates COGS.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "No effect on either",
+     "explanation": "Ending inventory directly determines COGS.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "COGS overstated by $15,000; net income understated by $15,000",
+     "explanation": "Correct. COGS = goods available − ending inventory."
+    },
+    {
+     "id": "d",
+     "text": "COGS overstated by $30,000; net income understated by $30,000",
+     "explanation": "The error doubles only across two years' cumulative misstatement if uncorrected — not in one year.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "COGS = 600,000 − ending inventory. Understating ending inventory by 15,000 overstates COGS by 15,000 and understates net income by 15,000.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-11",
+   "pool": "practice",
+   "stem": "On December 30 a seller ships goods FOB destination; they arrive January 3. Whose December 31 inventory includes them?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The seller's",
+     "explanation": "Correct. Under FOB destination, title passes when the goods arrive."
+    },
+    {
+     "id": "b",
+     "text": "The buyer's",
+     "explanation": "The buyer gets title on arrival.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "The carrier's",
+     "explanation": "Carriers don't own goods they transport.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Neither party's",
+     "explanation": "Someone always owns the goods.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "FOB shipping point: title passes at shipment. FOB destination: title passes on delivery.",
+   "skill": "application",
+   "difficulty": 1,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-12",
+   "pool": "practice",
+   "stem": "A manufacturer ships goods on consignment to a retailer, which has sold none of them at year-end. The goods are included in:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The retailer's inventory",
+     "explanation": "The consignee holds but doesn't own the goods.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "The manufacturer's inventory",
+     "explanation": "Correct. The consignor keeps title until the goods are sold."
+    },
+    {
+     "id": "c",
+     "text": "Both companies' inventories",
+     "explanation": "Only the owner reports them.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Neither company's inventory",
+     "explanation": "The consignor still owns them.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Consigned goods remain in the consignor's inventory until sold to an end customer.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-13",
+   "pool": "practice",
+   "stem": "A company uses a perpetual moving-average system. It had 100 units at $10, bought 100 at $12, sold 150, then bought 50 at $14. What is ending inventory?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,300",
+     "explanation": "That uses FIFO for the remaining units.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$1,200",
+     "explanation": "That uses the periodic average of all purchases.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$1,250",
+     "explanation": "Correct. Average 11 after the purchase; 50 left × 11 = 550, plus 700 = 1,250."
+    },
+    {
+     "id": "d",
+     "text": "$1,400",
+     "explanation": "That values all 100 units at the last cost.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Moving average recomputes the unit cost after each purchase: (1,000 + 1,200) ÷ 200 = 11.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-14",
+   "pool": "practice",
+   "stem": "Under dollar-value LIFO, base-year inventory is $100,000 (index 1.00). Year 1 ending inventory at current cost is $132,000, and the year-end index is 1.10. What is Year 1 ending inventory?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$132,000",
+     "explanation": "That is current cost, not LIFO.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$120,000",
+     "explanation": "The new layer is priced at the current index.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$110,000",
+     "explanation": "Only the increment over the base is indexed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$122,000",
+     "explanation": "Correct. Base-year cost 120,000; new layer 20,000 × 1.10 = 22,000; 100,000 + 22,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Deflate ending inventory to base-year cost, find the layer, and reprice each layer at its own index.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-15",
+   "pool": "practice",
+   "stem": "Which cost is included in the cost of inventory purchased for resale?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Freight-in",
+     "explanation": "Correct. Costs to bring goods to their location and condition are inventory costs."
+    },
+    {
+     "id": "b",
+     "text": "Freight-out to customers",
+     "explanation": "Shipping to customers is a selling expense.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Sales staff commissions",
+     "explanation": "Commissions are selling expenses.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Interest on the purchase loan",
+     "explanation": "Interest on routine inventory isn't capitalized.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Inventory cost includes purchase price, freight-in and other costs to get goods ready for sale.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-16",
+   "pool": "practice",
+   "stem": "Beginning inventory is 100 units at $10. Purchases: 200 at $13 and 100 at $16. Ending inventory is 150 units. What is ending inventory under periodic weighted average?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,400",
+     "explanation": "That's the FIFO result.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$1,500",
+     "explanation": "That's the LIFO result.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$2,100",
+     "explanation": "Use the weighted average.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$1,950",
+     "explanation": "Correct. $13 average × 150."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Weighted average cost = $5,200 ÷ 400 = $13 per unit.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-17",
+   "pool": "practice",
+   "stem": "A company buys goods FOB shipping point. They ship December 29 and arrive January 4. Whose year-end inventory includes them?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The buyer's",
+     "explanation": "Correct. Title passed at shipment."
+    },
+    {
+     "id": "b",
+     "text": "The seller's",
+     "explanation": "Title passed at shipment.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Neither",
+     "explanation": "They're owned by the buyer.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Split equally",
+     "explanation": "Title passes in full.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Under FOB shipping point, title passes to the buyer when goods are shipped.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-18",
+   "pool": "practice",
+   "stem": "A factory runs at 60% of normal capacity. How is fixed overhead allocated to inventory?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "All of it, over actual output",
+     "explanation": "That inflates unit cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Based on normal capacity",
+     "explanation": "Correct. Unallocated overhead is a period cost."
+    },
+    {
+     "id": "c",
+     "text": "None of it; it's all expensed",
+     "explanation": "Fixed overhead is a product cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Deferred to the next year",
+     "explanation": "It's expensed, not deferred.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Fixed overhead is allocated based on normal capacity; unallocated overhead from low production is expensed.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-19",
+   "pool": "practice",
+   "stem": "A jeweler sells unique, high-value pieces. Which cost flow method fits best?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "First-in, first-out",
+     "explanation": "Units aren't interchangeable.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Last-in, first-out",
+     "explanation": "Units aren't interchangeable.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Specific identification",
+     "explanation": "Correct. Each item's cost is tracked."
+    },
+    {
+     "id": "d",
+     "text": "Weighted-average cost",
+     "explanation": "Units aren't interchangeable.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Specific identification suits distinguishable, high-value items.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-20",
+   "pool": "practice",
+   "stem": "A company uses LIFO for its tax return. What does the LIFO conformity rule require?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "FIFO for book purposes",
+     "explanation": "The rule is the reverse.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "Nothing for book purposes",
+     "explanation": "The rule binds the books.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Disclosure of the LIFO reserve only",
+     "explanation": "LIFO must be used.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "LIFO in its financial statements",
+     "explanation": "Correct. Book and tax must both use LIFO."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The LIFO conformity rule requires a taxpayer using LIFO for tax to use LIFO for financial reporting.",
+   "skill": "analysis",
+   "difficulty": 2,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-21",
+   "pool": "practice",
+   "stem": "Beginning inventory is 100 units at $10. Purchases are 200 at $12, then 150 at $13. 300 units are sold. What is ending inventory under periodic FIFO?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,950",
+     "explanation": "Correct. 150 units at $13."
+    },
+    {
+     "id": "b",
+     "text": "$1,600",
+     "explanation": "That is the LIFO amount.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$1,783",
+     "explanation": "That's average cost.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$1,800",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "FIFO ending inventory consists of the most recent purchases.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-22",
+   "pool": "practice",
+   "stem": "Beginning inventory is 100 units at $10. Purchases are 200 at $12, then 150 at $13. 300 units are sold. What is ending inventory under periodic weighted average?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,950",
+     "explanation": "That is the FIFO amount.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$1,783",
+     "explanation": "Correct. $5,350 ÷ 450 × 150."
+    },
+    {
+     "id": "c",
+     "text": "$1,600",
+     "explanation": "That is the LIFO amount.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$1,725",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Weighted average spreads total goods available cost over total units.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-23",
+   "pool": "practice",
+   "stem": "Beginning inventory is 100 units at $10. Purchases are 200 at $12, then 150 at $13. 300 units are sold. What is ending inventory under periodic LIFO?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,950",
+     "explanation": "That is the FIFO amount.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$1,783",
+     "explanation": "That's average cost.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$1,600",
+     "explanation": "Correct. 100 at $10 + 50 at $12."
+    },
+    {
+     "id": "d",
+     "text": "$1,500",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "LIFO ending inventory consists of the oldest costs.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-24",
+   "pool": "practice",
+   "stem": "A warehouse count shows $80,000. $5,000 of purchases shipped FOB shipping point are in transit, and $3,000 (cost) of goods sold FOB destination are also in transit. What is ending inventory?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$85,000",
+     "explanation": "Include the goods sold FOB destination.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$83,000",
+     "explanation": "Include the purchases.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$80,000",
+     "explanation": "Adjust for goods in transit.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$88,000",
+     "explanation": "Correct. Include both in-transit items."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Title passes at shipment under FOB shipping point and at delivery under FOB destination.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-25",
+   "pool": "practice",
+   "stem": "A $50,000 count includes $4,000 of goods held on consignment for others. The company also has $6,000 of its own goods out on consignment. What is ending inventory?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$52,000",
+     "explanation": "Correct. 50,000 − 4,000 + 6,000."
+    },
+    {
+     "id": "b",
+     "text": "$50,000",
+     "explanation": "Adjust for consignments.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$56,000",
+     "explanation": "Exclude goods held for others.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$46,000",
+     "explanation": "Include goods out on consignment.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "The consignor owns consigned goods; the consignee excludes them.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-26",
+   "pool": "practice",
+   "stem": "Base-year dollar-value LIFO inventory is $100,000 (index 1.00). Year 1 ending inventory is $132,000 at current cost, with an index of 1.10. What is ending inventory under DV LIFO?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$132,000",
+     "explanation": "Restate to base-year cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$122,000",
+     "explanation": "Correct. $100,000 + $20,000 × 1.10."
+    },
+    {
+     "id": "c",
+     "text": "$120,000",
+     "explanation": "Price the new layer at 1.10.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$110,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "DV LIFO deflates to base-year cost, finds the new layer, and prices it at the current index.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-27",
+   "pool": "practice",
+   "stem": "Using the net method, a company buys $10,000 of goods on 2/10, n/30 terms and pays after the discount period. What is recorded at payment?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$200 of purchase discounts taken",
+     "explanation": "It wasn't taken.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "Nothing extra",
+     "explanation": "The net method shows the loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$200 of purchase discounts lost",
+     "explanation": "Correct. The net method records lost discounts."
+    },
+    {
+     "id": "d",
+     "text": "$200 added to inventory",
+     "explanation": "It's a financing cost.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Under the net method, purchases are recorded net, and missed discounts are a separate expense.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-inv-28",
+   "pool": "practice",
+   "stem": "Beginning inventory is $50,000, purchases $200,000, and sales $300,000. The gross profit rate is 30%. What is estimated ending inventory?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$160,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "$90,000",
+     "explanation": "Use COGS of 70% of sales.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$40,000",
+     "explanation": "Correct. Goods available $250,000 − COGS $210,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The gross profit method estimates COGS as sales × (1 − GP%), then subtracts from goods available.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/questions.json"
+  },
+  {
+   "id": "far-x2-03",
+   "moduleId": "far-inventory-cost",
+   "pool": "exam",
+   "stem": "Beginning inventory is 100 units at $10. Purchases are 200 units at $12, then 100 units at $15. 250 units were sold. What is ending inventory under **periodic FIFO**?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,600",
+     "explanation": "That is periodic LIFO (oldest costs remain).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$1,838",
+     "explanation": "That is weighted average ($12.25 × 150).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$2,100",
+     "explanation": "Correct. 100 × $15 + 50 × $12 = $2,100."
+    },
+    {
+     "id": "d",
+     "text": "$1,800",
+     "explanation": "Prices all 150 units at the $12 middle layer.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "FIFO leaves the most recent costs in ending inventory: 150 units = 100 @ 15 + 50 @ 12 = **$2,100**. LIFO: 100 @ 10 + 50 @ 12 = 1,600. Average: 4,900 ÷ 400 = 12.25 × 150 = 1,837.50.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-27",
+   "moduleId": "far-inventory-cost",
+   "pool": "exam",
+   "stem": "Beginning inventory is 100 units at $10. Purchases: 200 units at $12, then 100 units at $13. The company sold 300 units. Under periodic FIFO, what is cost of goods sold?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$3,700",
+     "explanation": "That is LIFO: 100 × 13 + 200 × 12.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$3,525",
+     "explanation": "That is the weighted average (4,700 ÷ 400 × 300).",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$3,900",
+     "explanation": "That prices all 300 units at the last cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$3,400",
+     "explanation": "Correct. 100 × 10 + 200 × 12 = 3,400."
+    }
+   ],
+   "answer": "d",
+   "explanation": "FIFO charges the oldest costs to cost of goods sold first: beginning inventory, then the earliest purchase.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-inv-fc1",
+   "front": "FOB shipping point vs. FOB destination — who owns goods in transit?",
+   "back": "**Shipping point**: buyer. **Destination**: seller.",
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/flashcards.json"
+  },
+  {
+   "id": "far-inv-fc2",
+   "front": "Consigned goods belong to…",
+   "back": "The **consignor** (the shipper), not the consignee holding them.",
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/flashcards.json"
+  },
+  {
+   "id": "far-inv-fc3",
+   "front": "Costs included in inventory",
+   "back": "Purchase price (net of discounts), **freight-in**, duties, handling to make goods saleable. **Freight-out** is a selling expense.",
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/flashcards.json"
+  },
+  {
+   "id": "far-inv-fc4",
+   "front": "Rising prices: FIFO vs. LIFO",
+   "back": "FIFO → lower COGS, higher income & ending inventory. LIFO → higher COGS, lower income & taxes.",
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/flashcards.json"
+  },
+  {
+   "id": "far-inv-fc5",
+   "front": "Periodic vs. perpetual — which methods differ?",
+   "back": "FIFO: **same**. LIFO and average: can **differ** (perpetual applies at each sale; moving vs. weighted average).",
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/flashcards.json"
+  },
+  {
+   "id": "far-inv-fc6",
+   "front": "Dollar-value LIFO steps",
+   "back": "1) Ending ÷ current index = base-year dollars. 2) Compare to prior base total → layer. 3) Price each layer at the index **of the year it was added**; decreases come out of the newest layers.",
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/flashcards.json"
+  },
+  {
+   "id": "far-inv-fc7",
+   "front": "LIFO reserve",
+   "back": "**FIFO inventory − LIFO inventory.**",
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/flashcards.json"
+  },
+  {
+   "id": "far-inv-fc8",
+   "front": "LIFO conformity rule",
+   "back": "Use LIFO for tax → must use LIFO for **financial reporting**. (IFRS bans LIFO.)",
+   "moduleId": "far-inventory-cost",
+   "_file": "content/far/modules/far-inventory-cost/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-u5-inventory-review.json",
+  "content/far/tbs/far-tbs-u5-inventory.json"
+ ]
+}

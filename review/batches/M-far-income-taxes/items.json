@@ -1,0 +1,1386 @@
+{
+ "mcqs": [
+  {
+   "id": "far-tax-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a company earns $50,000 of municipal bond interest that is exempt from federal tax. What deferred tax does it record?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A deferred tax liability",
+     "explanation": "The interest will never be taxed; nothing reverses.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "A deferred tax asset",
+     "explanation": "Nothing reverses.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "None — it's a permanent difference",
+     "explanation": "Correct. Tax-exempt income is a permanent difference: it lowers the effective rate but never creates deferred taxes."
+    },
+    {
+     "id": "d",
+     "text": "A liability for unrecognized tax benefits",
+     "explanation": "There's no uncertain position here.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Tax-exempt income is a permanent difference: it lowers the effective rate but never creates deferred taxes.",
+   "skill": "application",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-chk1",
+   "pool": "lesson",
+   "stem": "Which item creates a deferred tax **asset**?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Accelerated depreciation for tax purposes",
+     "explanation": "Future taxable amounts → DTL.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "Equity-method income not yet taxed",
+     "explanation": "Future taxable amounts → DTL.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Life insurance proceeds on an officer",
+     "explanation": "Permanent difference.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Warranty expense accrued for books but deductible when paid",
+     "explanation": "Correct. Future deductible amounts → DTA."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Expenses recognized for books before they're deductible create future deductions — a deferred tax asset.",
+   "skill": "application",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-chk2",
+   "pool": "lesson",
+   "stem": "A company's DTA is $500,000. Evidence indicates a 60% likelihood that $200,000 of it will NOT be realized. What valuation allowance is required?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "None ($0)",
+     "explanation": "It is more likely than not that $200,000 won't be realized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$120,000",
+     "explanation": "This multiplies by the probability.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$200,000",
+     "explanation": "Correct. More likely than not (> 50%) that 200,000 won't be realized → valuation allowance of 200,000; net DTA 300,000."
+    },
+    {
+     "id": "d",
+     "text": "$500,000",
+     "explanation": "Only the portion not expected to be realized is reserved.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "More likely than not (> 50%) that 200,000 won't be realized → valuation allowance of **200,000**; net DTA 300,000.",
+   "skill": "analysis",
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-01",
+   "pool": "practice",
+   "stem": "Pretax book income is $600,000. Included: $30,000 of tax-exempt interest and $12,000 of nondeductible fines. Tax depreciation exceeds book depreciation by $50,000. The rate is 21%. What is current income tax expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$126,000",
+     "explanation": "This applies the rate to book income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$111,720",
+     "explanation": "Correct. Taxable income 532,000 × 21%."
+    },
+    {
+     "id": "c",
+     "text": "$122,220",
+     "explanation": "This ignores the depreciation difference.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$106,680",
+     "explanation": "This subtracts the fines instead of adding them back (they're nondeductible).",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Taxable income = 600,000 − 30,000 + 12,000 − 50,000 = 532,000 × 21% = **111,720**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-02",
+   "pool": "practice",
+   "stem": "Using the previous item (depreciation difference of $50,000 arising this year, 21%, no beginning deferred balances), what is total income tax expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$111,720",
+     "explanation": "That's only current tax.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$101,220",
+     "explanation": "This subtracts the deferred amount.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$122,220",
+     "explanation": "Correct. 111,720 current + 10,500 deferred."
+    },
+    {
+     "id": "d",
+     "text": "$126,000",
+     "explanation": "This applies 21% to book income including permanent items.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Deferred tax expense = DTL of 50,000 × 21% = 10,500. Total = 111,720 + 10,500 = **122,220** (= 21% × (600,000 − 30,000 + 12,000)).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-03",
+   "pool": "practice",
+   "stem": "At what rate are deferred tax assets and liabilities measured?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The current year's statutory rate, always",
+     "explanation": "Future enacted rates apply if different.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "The enacted rate expected to apply when the differences reverse",
+     "explanation": "Correct. ASC 740 measures deferred taxes using enacted tax law and rates expected to apply in the periods the temporary differences reverse."
+    },
+    {
+     "id": "c",
+     "text": "The rate management expects Congress to enact",
+     "explanation": "Only enacted law is used.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The company's effective rate",
+     "explanation": "Deferred taxes use statutory enacted rates.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "ASC 740 measures deferred taxes using enacted tax law and rates expected to apply in the periods the temporary differences reverse.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-04",
+   "pool": "practice",
+   "stem": "At the beginning of the year a company had a DTL of $30,000 and a DTA of $8,000. At year-end the DTL is $45,000 and the DTA is $14,000. What is deferred tax expense (benefit)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$15,000",
+     "explanation": "This ignores the DTA change.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$21,000",
+     "explanation": "This adds the DTA increase instead of subtracting it.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$(6,000)",
+     "explanation": "This counts only the DTA change as a benefit.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$9,000",
+     "explanation": "Correct. +15,000 DTL − 6,000 DTA."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Deferred tax expense = increase in DTL (15,000) − increase in DTA (6,000) = **9,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-05",
+   "pool": "practice",
+   "stem": "A company collected $120,000 of rent in advance in December for next year; it's taxable when received. The rate is 25%. What deferred tax item arises?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "DTA of $30,000",
+     "explanation": "Correct. Taxed now, recognized as book revenue later → future deductible amount."
+    },
+    {
+     "id": "b",
+     "text": "DTL of $30,000",
+     "explanation": "Book income will be higher later with no tax — that's a future deductible amount, not taxable.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "None; it's a permanent difference",
+     "explanation": "It reverses next year.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "DTA of $120,000",
+     "explanation": "Deferred taxes are the tax effect, not the gross difference.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Unearned revenue taxed before it's book revenue creates a DTA: 120,000 × 25% = **30,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-06",
+   "pool": "practice",
+   "stem": "In December of Year 1, a new law is enacted increasing the corporate rate from 21% to 25% beginning in Year 2. The company has taxable temporary differences of $800,000 that will reverse in Year 2 and later. Where is the effect of the rate change recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a prior-period adjustment to retained earnings",
+     "explanation": "Rate changes are recognized in the enactment period's income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "In income tax expense from continuing operations in Year 1",
+     "explanation": "Correct. The DTL increases by 800,000 × 4% = 32,000."
+    },
+    {
+     "id": "c",
+     "text": "In Year 2, when the rate takes effect",
+     "explanation": "Remeasure in the period of enactment.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "In other comprehensive income",
+     "explanation": "The effect goes to continuing operations.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Deferred taxes are remeasured when a rate change is enacted; the adjustment (here +32,000 DTL) is included in income from continuing operations in that period.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-07",
+   "pool": "practice",
+   "stem": "How are deferred tax assets and liabilities classified on a classified balance sheet?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Based on the classification of the related asset or liability",
+     "explanation": "That was the rule before ASU 2015-17.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "All as current",
+     "explanation": "They are all noncurrent.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "All as noncurrent, netted by jurisdiction",
+     "explanation": "Correct. ASU 2015-17 requires all deferred tax assets and liabilities to be classified as noncurrent, offset within each tax-paying component and jurisdiction."
+    },
+    {
+     "id": "d",
+     "text": "Based on when they are expected to reverse",
+     "explanation": "Reversal timing no longer drives classification.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ASU 2015-17 requires all deferred tax assets and liabilities to be classified as noncurrent, offset within each tax-paying component and jurisdiction.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-08",
+   "pool": "practice",
+   "stem": "A company takes a $1,000,000 deduction it believes is more likely than not to be sustained. Possible settlement outcomes: $1,000,000 (35% likely), $800,000 (30%), $500,000 (25%), $0 (10%). What tax benefit (deduction amount) is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,000,000",
+     "explanation": "Only 35% likely — not more than 50%.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$800,000",
+     "explanation": "Correct. Cumulative probability reaches 65% at 800,000."
+    },
+    {
+     "id": "c",
+     "text": "$500,000",
+     "explanation": "That's where cumulative probability reaches 90%, not the largest amount above 50%.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "The position passes the recognition step.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Measure at the largest amount with a cumulative probability greater than 50%: 1,000,000 (35%) → 800,000 (35% + 30% = 65%) ✓. Recognize the benefit of an 800,000 deduction.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-09",
+   "pool": "practice",
+   "stem": "Which is a permanent difference?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Warranty expense accrued but not yet paid",
+     "explanation": "Temporary — deductible when paid.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Premiums on life insurance where the company is the beneficiary",
+     "explanation": "Correct. Premiums on officers' life insurance with the company as beneficiary are never deductible, and proceeds are never taxable — permanent."
+    },
+    {
+     "id": "c",
+     "text": "Bad debts under the allowance method vs. direct write-off for tax",
+     "explanation": "Temporary — the difference reverses when accounts are written off.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Accelerated tax depreciation",
+     "explanation": "Temporary — book depreciation catches up in later years.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Premiums on officers' life insurance with the company as beneficiary are never deductible, and proceeds are never taxable — permanent.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-10",
+   "pool": "practice",
+   "stem": "A company has an NOL of $1,000,000 arising in the current year (federal, post-2017). The rate is 21%. Management concludes future taxable income is more likely than not to absorb it. What is recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A tax refund receivable of $210,000 from carryback",
+     "explanation": "Post-2017 federal NOLs generally can't be carried back.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "No tax benefit until the NOL is used",
+     "explanation": "A DTA is recognized now if realization is more likely than not.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "A DTA of $210,000 and a deferred tax benefit of $210,000",
+     "explanation": "Correct. Post-2017 NOLs carry forward indefinitely (usable up to 80% of taxable income each year)."
+    },
+    {
+     "id": "d",
+     "text": "A DTA of $168,000, reflecting the 80% limitation",
+     "explanation": "The 80% limit affects timing of use, not the total DTA if fully realizable over time.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Post-2017 NOLs carry forward indefinitely (usable up to 80% of taxable income each year). If realization is more likely than not, record a DTA of 1,000,000 × 21% = **210,000** with no valuation allowance.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-11",
+   "pool": "practice",
+   "stem": "A company accrues $50,000 of warranty expense for books; the deduction is allowed when claims are paid. What deferred tax item results (21% rate)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A $10,500 deferred tax liability",
+     "explanation": "Future deductible amounts create assets.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "A $50,000 deferred tax asset",
+     "explanation": "Multiply the difference by the rate.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "A $10,500 deferred tax asset",
+     "explanation": "Correct. Future deductions create a deferred tax asset."
+    },
+    {
+     "id": "d",
+     "text": "No deferred tax",
+     "explanation": "It is a temporary difference.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Temporary differences that produce future deductible amounts create deferred tax assets.",
+   "skill": "application",
+   "difficulty": 1,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-12",
+   "pool": "practice",
+   "stem": "A company has a $1,000,000 taxable temporary difference and a deferred tax liability of $210,000. A law enacted in December raises the future rate to 25%. What is the effect?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No effect until the rate takes effect",
+     "explanation": "Remeasurement occurs when the law is enacted.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "A $40,000 adjustment to retained earnings",
+     "explanation": "The effect runs through income tax expense.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A $40,000 decrease in tax expense",
+     "explanation": "A higher rate increases the liability.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "A $40,000 increase in deferred tax expense this year",
+     "explanation": "Correct. The DTL is remeasured to 250,000 in the period of enactment."
+    }
+   ],
+   "answer": "d",
+   "explanation": "ASC 740-10-35-4: deferred taxes are remeasured for enacted rate changes, with the effect in income from continuing operations in the enactment period.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-13",
+   "pool": "practice",
+   "stem": "Pretax income is $800,000, including $20,000 of nondeductible fines. Tax depreciation exceeds book depreciation by $50,000. The rate is 21%, and there were no beginning deferred taxes. What is total income tax expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$172,200",
+     "explanation": "Correct. Current 161,700 (21% × 770,000) + deferred 10,500."
+    },
+    {
+     "id": "b",
+     "text": "$168,000",
+     "explanation": "Fines are permanent differences, not deductible.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$161,700",
+     "explanation": "Deferred tax on the depreciation difference must be added.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$182,700",
+     "explanation": "The depreciation difference doesn't change total expense.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Total tax expense = 21% × (pretax income + permanent differences) = 21% × 820,000.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-14",
+   "pool": "practice",
+   "stem": "How may an entity classify interest and penalties on unrecognized tax benefits?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only as income tax expense",
+     "explanation": "Classification is an accounting policy choice.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Either way, by policy",
+     "explanation": "Correct. The classification is a policy election, applied consistently and disclosed."
+    },
+    {
+     "id": "c",
+     "text": "Only as operating expense",
+     "explanation": "Either classification is allowed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "As a reduction of revenue",
+     "explanation": "Interest and penalties aren't revenue reductions.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "ASC 740-10-45-25: classification of interest and penalties is an accounting policy election.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-15",
+   "pool": "practice",
+   "stem": "A company reports a loss from discontinued operations. Where is its related tax benefit reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "In income tax expense on continuing operations",
+     "explanation": "Intraperiod allocation separates the tax effect.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "In other comprehensive income",
+     "explanation": "The item isn't an OCI component.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "With the discontinued operations, net of tax",
+     "explanation": "Correct. Intraperiod allocation assigns tax to the item that caused it."
+    },
+    {
+     "id": "d",
+     "text": "As a direct credit to equity",
+     "explanation": "Discontinued operations are in income.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Intraperiod tax allocation reports the tax effects of discontinued operations, OCI and other items with those items.",
+   "skill": "application",
+   "difficulty": 1,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-16",
+   "pool": "practice",
+   "stem": "A company has a $200,000 deferred tax asset. It's more likely than not that only 60% will be realized. What valuation allowance is needed?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$120,000",
+     "explanation": "That's the realizable part.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "$80,000",
+     "explanation": "Correct. The 40% not expected to be realized."
+    },
+    {
+     "id": "c",
+     "text": "$200,000",
+     "explanation": "Part will be realized.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "An allowance is needed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A valuation allowance reduces the DTA to the amount more likely than not to be realized.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-17",
+   "pool": "practice",
+   "stem": "A $100,000 taxable temporary difference will reverse equally in Year 2 (enacted rate 25%) and Year 3 (enacted rate 21%). What is the DTL at the end of Year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000",
+     "explanation": "Use each year's enacted rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$21,000",
+     "explanation": "Use each year's enacted rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$23,000",
+     "explanation": "Correct. $12,500 + $10,500."
+    },
+    {
+     "id": "d",
+     "text": "$46,000",
+     "explanation": "Apply each rate to half.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Deferred taxes use enacted rates for the years the differences reverse.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-18",
+   "pool": "practice",
+   "stem": "Current tax expense is $120,000. The DTL increased $15,000 and the DTA increased $5,000 (no allowance). What is total income tax expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$140,000",
+     "explanation": "A DTA increase is a benefit.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$120,000",
+     "explanation": "Add deferred expense.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$110,000",
+     "explanation": "A DTL increase is expense.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$130,000",
+     "explanation": "Correct. 120 + 15 − 5."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Total tax expense = current + (change in DTL − change in DTA).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-19",
+   "pool": "practice",
+   "stem": "A tax position meets more-likely-than-not. Possible settlements: $100,000 (30%), $80,000 (30%), $50,000 (40%). What benefit is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$80,000",
+     "explanation": "Correct. The largest amount with over 50% cumulative probability."
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "Only 30% likely.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$50,000",
+     "explanation": "A larger amount qualifies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$74,000",
+     "explanation": "The expected value isn't used.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Measure the largest amount more than 50% likely to be realized on settlement, using cumulative probability.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-20",
+   "pool": "practice",
+   "stem": "Goodwill from an acquisition isn't deductible for tax purposes. Is a deferred tax liability recognized on it at acquisition?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, at the enacted rate",
+     "explanation": "Not for nondeductible goodwill.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No",
+     "explanation": "Correct. ASC 740 prohibits it."
+    },
+    {
+     "id": "c",
+     "text": "Yes, as a DTA",
+     "explanation": "No deferred taxes on it.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Only if impaired",
+     "explanation": "None is recognized.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "No deferred tax is recognized for the excess of book goodwill over tax-deductible goodwill when the goodwill isn't deductible.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-21",
+   "pool": "practice",
+   "stem": "Cumulative tax depreciation exceeds book depreciation by $30,000. The enacted rate is 25%. What deferred tax liability is reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,500",
+     "explanation": "Correct. $30,000 × 25%."
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Apply the tax rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$22,500",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "It's a temporary difference.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "A taxable temporary difference times the enacted rate gives the DTL.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-22",
+   "pool": "practice",
+   "stem": "A $30,000 taxable temporary difference will reverse when the enacted rate is 21%; the current rate is 25%. What DTL is reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,500",
+     "explanation": "Use the reversal-year rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$6,300",
+     "explanation": "Correct. Use the enacted rate for the reversal year."
+    },
+    {
+     "id": "c",
+     "text": "$9,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "A DTL does exist.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Deferred taxes are measured at the enacted rate expected to apply when the difference reverses.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-23",
+   "pool": "practice",
+   "stem": "A company has a $40,000 deferred tax asset. It's more likely than not that 25% won't be realized. What valuation allowance is needed?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "Only part is unrealizable.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "That's the realizable amount.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "Correct. $40,000 × 25%."
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "An allowance is needed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A valuation allowance reduces DTAs to the amount more likely than not to be realized.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-24",
+   "pool": "practice",
+   "stem": "Pretax book income is $200,000, including $10,000 of municipal bond interest. The rate is 25%, and there are no other differences. What is current tax expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Muni interest is excluded.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$52,500",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$2,500",
+     "explanation": "That's the muni effect.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$47,500",
+     "explanation": "Correct. $190,000 × 25%."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Permanent differences, such as muni interest, affect current tax and never reverse.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-25",
+   "pool": "practice",
+   "stem": "Current tax expense is $47,500, and the deferred tax liability increased by $5,000. What is total income tax expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$52,500",
+     "explanation": "Correct. $47,500 + $5,000."
+    },
+    {
+     "id": "b",
+     "text": "$47,500",
+     "explanation": "Add the deferred portion.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$42,500",
+     "explanation": "A DTL increase adds expense.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "Add current tax.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Total tax expense equals current tax plus the change in deferred tax.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-26",
+   "pool": "practice",
+   "stem": "For an uncertain tax position, possible benefits are $100,000 (30%), $80,000 (25%), $60,000 (25%) and $40,000 (20%). What benefit is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "Only 30% likely.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$80,000",
+     "explanation": "Correct. Cumulative probability exceeds 50% at $80,000."
+    },
+    {
+     "id": "c",
+     "text": "$60,000",
+     "explanation": "$80,000 already exceeds 50%.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$40,000",
+     "explanation": "Not the largest amount.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Recognize the largest benefit with a cumulative probability greater than 50%.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-27",
+   "pool": "practice",
+   "stem": "How are deferred tax liabilities classified on the balance sheet?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "By the related asset",
+     "explanation": "That's the old rule.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "All as current",
+     "explanation": "They're noncurrent.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "All as noncurrent",
+     "explanation": "Correct. DTLs and DTAs are noncurrent."
+    },
+    {
+     "id": "d",
+     "text": "By reversal date",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "All deferred tax assets and liabilities are classified as noncurrent.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-tax-28",
+   "pool": "practice",
+   "stem": "A company has a $100,000 post-2017 NOL carryforward and $90,000 of taxable income before the NOL. How much NOL can it deduct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$90,000",
+     "explanation": "Apply the 80% limit.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "Limited to income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$80,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$72,000",
+     "explanation": "Correct. The deduction is limited to 80% of taxable income."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Post-2017 NOLs carry forward indefinitely but are limited to 80% of taxable income.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/questions.json"
+  },
+  {
+   "id": "far-x3-06",
+   "moduleId": "far-income-taxes",
+   "pool": "exam",
+   "stem": "At December 31, Year 1, a company has a $300,000 taxable temporary difference that will reverse $100,000 in Year 2 and $200,000 in Year 3. Enacted rates are 21% for Year 2 and 25% for Year 3. What is the deferred tax liability?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$63,000",
+     "explanation": "Applies the current 21% rate to everything; enacted future rates are used.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "$75,000",
+     "explanation": "Applies 25% to the whole difference.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$71,000",
+     "explanation": "Correct. 100,000 × 21% + 200,000 × 25%."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Taxable temporary differences create a deferred tax liability.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Use enacted rates for the years of reversal: 21,000 + 50,000 = **$71,000**.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-07",
+   "moduleId": "far-income-taxes",
+   "pool": "exam",
+   "stem": "A company has a gross deferred tax asset of $100,000. It concludes it is **more likely than not** that $30,000 of the benefit will not be realized. What net deferred tax asset is reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "A valuation allowance is required for the portion unlikely to be realized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Reports the valuation allowance as the asset.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$70,000",
+     "explanation": "Correct. $100,000 − $30,000 valuation allowance."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Only the unrealizable portion is reserved.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Valuation allowance = portion more likely than not (>50%) not to be realized: 30,000. Net DTA = **$70,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-08",
+   "moduleId": "far-income-taxes",
+   "pool": "exam",
+   "stem": "Pretax book income is $1,000,000, including $50,000 of municipal bond interest. There are no other differences, and the tax rate is 21%. What is total income tax expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$210,000",
+     "explanation": "Taxes the municipal interest, which is permanently exempt.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$220,500",
+     "explanation": "Adds the permanent difference instead of subtracting it.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$199,500",
+     "explanation": "Correct. ($1,000,000 − $50,000) × 21%."
+    },
+    {
+     "id": "d",
+     "text": "$10,500",
+     "explanation": "That is only the tax effect of the municipal interest.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Permanent differences never reverse, so they change both current tax and total expense: 950,000 × 21% = **$199,500** (effective rate 19.95%).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-18",
+   "moduleId": "far-income-taxes",
+   "pool": "exam",
+   "stem": "At year-end, equipment's carrying amount for financial reporting exceeds its tax basis by $50,000 because of accelerated tax depreciation. The enacted tax rate for future years is 21%. What deferred tax amount results?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A deferred tax asset of $10,500",
+     "explanation": "Book basis above tax basis creates future taxable amounts, a liability.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "A deferred tax liability of $50,000",
+     "explanation": "The temporary difference is multiplied by the enacted rate.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "A deferred tax liability of $10,500",
+     "explanation": "Correct. A future taxable amount × 21% = 10,500 liability."
+    },
+    {
+     "id": "d",
+     "text": "No deferred tax, because depreciation is permanent",
+     "explanation": "Depreciation timing differences reverse; they are temporary.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Temporary difference × enacted future rate: $50,000 × 21% = $10,500 deferred tax liability.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-26",
+   "moduleId": "far-income-taxes",
+   "pool": "exam",
+   "stem": "When is a valuation allowance recorded against a deferred tax asset?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Whenever the company reported a loss in the current year",
+     "explanation": "A loss is evidence to weigh, not an automatic trigger.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Only when realization of the asset is remote",
+     "explanation": "The threshold is more likely than not, not remote.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "When realization is not more likely than not",
+     "explanation": "Correct. ASC 740 requires an allowance when realization is not more likely than not."
+    },
+    {
+     "id": "d",
+     "text": "Never; deferred tax assets are always recognized in full",
+     "explanation": "A valuation allowance is required if realization is unlikely.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A valuation allowance reduces a DTA to the amount more likely than not (over 50%) to be realized.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-tax-fc1",
+   "front": "DTL vs. DTA — the one question",
+   "back": "Will future tax returns show **more** income (→ **DTL**) or **less** income/more deductions (→ **DTA**)?",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/flashcards.json"
+  },
+  {
+   "id": "far-tax-fc2",
+   "front": "Common permanent differences",
+   "back": "Muni bond interest, life insurance proceeds/premiums (company beneficiary), fines & penalties, nondeductible meals.",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/flashcards.json"
+  },
+  {
+   "id": "far-tax-fc3",
+   "front": "Total income tax expense",
+   "back": "Current (taxable income × rate) + deferred (Δ DTL − Δ DTA).",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/flashcards.json"
+  },
+  {
+   "id": "far-tax-fc4",
+   "front": "Rate used for deferred taxes",
+   "back": "**Enacted** rate for the reversal years; remeasure when a change is **enacted** — effect in continuing operations.",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/flashcards.json"
+  },
+  {
+   "id": "far-tax-fc5",
+   "front": "Valuation allowance threshold",
+   "back": "**More likely than not** (> 50%) that some DTA won't be realized.",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/flashcards.json"
+  },
+  {
+   "id": "far-tax-fc6",
+   "front": "Uncertain tax positions — 2 steps",
+   "back": "1) Recognize if **more likely than not** sustained on technical merits. 2) Measure at the **largest amount > 50% likely** on settlement.",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/flashcards.json"
+  },
+  {
+   "id": "far-tax-fc7",
+   "front": "Balance sheet classification of deferred taxes",
+   "back": "All **noncurrent**, netted by jurisdiction (ASU 2015-17).",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/flashcards.json"
+  },
+  {
+   "id": "far-tax-fc8",
+   "front": "Post-2017 federal NOLs",
+   "back": "Carry forward **indefinitely**; deduction limited to **80%** of taxable income; generally **no carryback**.",
+   "moduleId": "far-income-taxes",
+   "_file": "content/far/modules/far-income-taxes/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-r3-deferred-tax.json",
+  "content/far/tbs/far-tbs-u10-income-taxes.json",
+  "content/far/tbs/far-tbs-x3-income-taxes.json"
+ ]
+}

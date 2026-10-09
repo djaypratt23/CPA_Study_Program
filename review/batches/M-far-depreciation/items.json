@@ -1,0 +1,1305 @@
+{
+ "mcqs": [
+  {
+   "id": "far-dep-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a machine costs $100,000 with a $10,000 salvage value and a 5-year life. What is Year 1 depreciation under double-declining balance?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$36,000",
+     "explanation": "This applies 40% to cost minus salvage; DDB ignores salvage in the base.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "Correct. 100,000 × (2 ÷ 5)."
+    },
+    {
+     "id": "c",
+     "text": "$18,000",
+     "explanation": "That is straight-line.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$20,000",
+     "explanation": "This uses the straight-line rate (20%) on cost.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "DDB rate = 2 ÷ 5 = 40%, applied to the beginning carrying amount (100,000): **40,000**. Salvage limits only the final years.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-chk1",
+   "pool": "lesson",
+   "stem": "Equipment costing $60,000 with a $6,000 salvage value and a 3-year life is depreciated by sum-of-the-years'-digits. What is Year 2 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$27,000",
+     "explanation": "That is Year 1 (54,000 × 3/6).",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "This uses cost rather than depreciable base (60,000 × 2/6).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$9,000",
+     "explanation": "That is Year 3 (54,000 × 1/6).",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$18,000",
+     "explanation": "Correct. 54,000 × 2/6."
+    }
+   ],
+   "answer": "d",
+   "explanation": "SYD = 3 + 2 + 1 = 6. Depreciable base = 54,000. Year 2 = 54,000 × 2/6 = **18,000**.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-chk2",
+   "pool": "lesson",
+   "stem": "A company exchanges land (carrying amount $200,000, fair value $260,000) for similar land with a fair value of $260,000. The exchange **lacks** commercial substance and no cash changes hands. What gain is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$60,000",
+     "explanation": "Gains are deferred when an exchange lacks commercial substance (and no boot is received).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "Correct. The new land is recorded at 200,000; the gain is deferred."
+    },
+    {
+     "id": "c",
+     "text": "$30,000",
+     "explanation": "There is no proportional recognition without boot.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$(60,000) loss",
+     "explanation": "Fair value exceeds carrying amount — there's no loss.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Without commercial substance and without boot, the new asset takes the carrying amount of the asset given up (200,000), and the 60,000 gain is deferred.",
+   "skill": "application",
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-01",
+   "pool": "practice",
+   "stem": "A machine was purchased on April 1, Year 1, for $84,000. Salvage value is $12,000 and useful life is 6 years. Using straight-line depreciation, what is accumulated depreciation at December 31, Year 2 (calendar year)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$24,000",
+     "explanation": "This takes two full years.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "$12,000",
+     "explanation": "That is only one full year.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "$24,500",
+     "explanation": "This ignores salvage value (84,000 ÷ 6 × 21/12).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$21,000",
+     "explanation": "Correct. 12,000 × 21/12."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Annual SL = (84,000 − 12,000) ÷ 6 = 12,000. April 1, Year 1 to Dec 31, Year 2 = 21 months → 12,000 × 21/12 = **21,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-02",
+   "pool": "practice",
+   "stem": "A truck costing $50,000 (salvage $5,000, 4-year life) is depreciated by double-declining balance. What is depreciation in Year 3?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$6,250",
+     "explanation": "Correct. Year 1 25,000; Year 2 12,500; Year 3 12,500 × 50% = 6,250 (carrying amount 6,250 stays above salvage 5,000)."
+    },
+    {
+     "id": "b",
+     "text": "$5,625",
+     "explanation": "This applies 50% to (cost − salvage) each year.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$11,250",
+     "explanation": "This is straight-line on the depreciable base.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$1,250",
+     "explanation": "This forces the asset to salvage in Year 3.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Rate = 50%. Y1: 50,000 × 50% = 25,000 (CA 25,000). Y2: 12,500 (CA 12,500). Y3: 12,500 × 50% = **6,250** (CA 6,250 ≥ salvage 5,000). Y4 is limited to 1,250.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-03",
+   "pool": "practice",
+   "stem": "A mine was acquired for $4,800,000 with estimated restoration costs of $400,000 and residual land value of $200,000. Estimated recoverable ore is 1,000,000 tons. In Year 1, 150,000 tons were extracted and 120,000 tons sold. What depletion is charged to cost of goods sold in Year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$750,000",
+     "explanation": "That is depletion on tons extracted; unsold tons remain in inventory.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$576,000",
+     "explanation": "This ignores restoration and residual value (4.80 × 120,000).",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$600,000",
+     "explanation": "Correct. Rate $5.00/ton × 120,000 tons sold."
+    },
+    {
+     "id": "d",
+     "text": "$648,000",
+     "explanation": "This adds residual value instead of subtracting it (5,400,000 ÷ 1,000,000 × 120,000).",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Depletion base = 4,800,000 + 400,000 − 200,000 = 5,000,000 ÷ 1,000,000 tons = $5.00/ton. Extracted 150,000 × 5 = 750,000; of that, 120,000 tons sold → **600,000** in COGS; 150,000 stays in inventory.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-04",
+   "pool": "practice",
+   "stem": "After 3 years of straight-line depreciation on equipment costing $150,000 (no salvage, 10-year life), management revises the total useful life to 8 years with no salvage. What is Year 4 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$18,750",
+     "explanation": "This applies the new total life to the original cost (150,000 ÷ 8).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$15,000",
+     "explanation": "This ignores the change in estimate.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$30,000",
+     "explanation": "This adds a catch-up for prior years (150,000 ÷ 8 = 18,750 plus 3 × 3,750 shortfall); changes in estimate are never retroactive.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$21,000",
+     "explanation": "Correct. Carrying amount 105,000 ÷ 5 remaining years."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Accumulated depreciation after 3 years = 45,000; carrying amount 105,000. Remaining life = 8 − 3 = 5 years. Year 4 = 105,000 ÷ 5 = **21,000** (prospective).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-05",
+   "pool": "practice",
+   "stem": "On October 1, a company sold equipment for $22,000. The equipment cost $70,000, had accumulated depreciation of $42,000 at the previous December 31, and is depreciated $8,000 per year straight-line. What is the gain or loss on the sale?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Loss of $6,000",
+     "explanation": "This omits depreciation for January–September.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "Gain of $2,000",
+     "explanation": "This takes a full year of depreciation (8,000) instead of 9 months, giving a 20,000 carrying amount.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "Gain of $0",
+     "explanation": "Correct. Carrying amount at Oct 1 = 70,000 − 48,000 = 22,000; proceeds 22,000."
+    },
+    {
+     "id": "d",
+     "text": "Loss of $48,000",
+     "explanation": "That confuses proceeds with accumulated depreciation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Depreciation Jan–Sep = 8,000 × 9/12 = 6,000 → accumulated 48,000. Carrying amount = 22,000. Proceeds 22,000 → **no gain or loss**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-06",
+   "pool": "practice",
+   "stem": "Which change is accounted for prospectively as a change in accounting estimate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A change from FIFO to weighted-average inventory",
+     "explanation": "That is a change in accounting principle, applied retrospectively.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Correcting depreciation that was computed with the wrong cost basis",
+     "explanation": "That is an error correction.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A change from double-declining balance to straight-line depreciation",
+     "explanation": "Correct. A change in depreciation method is a change in estimate effected by a change in principle."
+    },
+    {
+     "id": "d",
+     "text": "A change from the completed-contract to the percentage-of-completion method for all contracts",
+     "explanation": "That is a change in principle.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ASC 250: a change in depreciation, amortization, or depletion method is a change in estimate effected by a change in principle — applied prospectively.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-07",
+   "pool": "practice",
+   "stem": "A company exchanges equipment (cost $120,000, accumulated depreciation $70,000, fair value $40,000) plus $15,000 cash for a new machine. The exchange has commercial substance. At what amount is the new machine recorded, and what gain or loss results?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$55,000; loss of $10,000",
+     "explanation": "Correct. FV 40,000 + cash 15,000; FV 40,000 − CA 50,000 = (10,000)."
+    },
+    {
+     "id": "b",
+     "text": "$65,000; no gain or loss",
+     "explanation": "This uses carrying amount plus cash, which applies only when a gain is deferred.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$55,000; gain of $10,000",
+     "explanation": "Fair value is below carrying amount — a loss.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$40,000; loss of $10,000",
+     "explanation": "The cash paid is part of the new asset's cost.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "With commercial substance: new asset = FV given up 40,000 + cash 15,000 = **55,000**. Loss = 40,000 − (120,000 − 70,000) = **(10,000)**, recognized.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-08",
+   "pool": "practice",
+   "stem": "In a nonmonetary exchange that lacks commercial substance, the fair value of the asset given up is less than its carrying amount. Which statement is correct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Losses are always recognized, whether or not the exchange has commercial substance",
+     "explanation": "Correct. Deferral applies only to gains in exchanges lacking commercial substance."
+    },
+    {
+     "id": "b",
+     "text": "Losses are deferred when the exchange lacks commercial substance",
+     "explanation": "Only gains are deferred.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Losses are recognized only if cash is received",
+     "explanation": "Losses are recognized regardless of boot.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Losses are recorded in other comprehensive income",
+     "explanation": "Losses go to earnings.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Deferral applies only to gains in exchanges lacking commercial substance. Losses indicate the asset given up was overstated and are recognized immediately.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-09",
+   "pool": "practice",
+   "stem": "A company uses units-of-production depreciation. Machine cost $250,000, salvage $25,000, estimated output 450,000 units. Output was 80,000 units in Year 1 and 110,000 units in Year 2. What is the carrying amount at the end of Year 2?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$155,000",
+     "explanation": "Correct. Rate $0.50/unit; depreciation 95,000; 250,000 − 95,000."
+    },
+    {
+     "id": "b",
+     "text": "$130,000",
+     "explanation": "This subtracts salvage from the carrying amount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$144,444",
+     "explanation": "This ignores salvage in the rate (250,000 ÷ 450,000 × 190,000 = 105,556).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$195,000",
+     "explanation": "This includes only Year 2 depreciation.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Rate = (250,000 − 25,000) ÷ 450,000 = $0.50. Two years' output 190,000 × 0.50 = 95,000. Carrying amount = 250,000 − 95,000 = **155,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-10",
+   "pool": "practice",
+   "stem": "A company exchanges a machine (carrying amount $40,000, fair value $50,000) for a similar machine with a fair value of $45,000 plus $5,000 cash received. The exchange lacks commercial substance. What gain is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "Recognizing the full gain requires commercial substance.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "When boot is received in an exchange lacking commercial substance, a proportional gain is recognized.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$1,000",
+     "explanation": "Correct. 10,000 × (5,000 ÷ 50,000)."
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "This recognizes gain equal to the cash received.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Total gain = 50,000 − 40,000 = 10,000. Boot = 5,000 ÷ 50,000 = 10% (< 25%, so still nonmonetary). Recognized gain = 10,000 × 10% = **1,000**. New machine = 40,000 − 5,000 + 1,000 = 36,000 (= FV 45,000 − deferred gain 9,000).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-11",
+   "pool": "practice",
+   "stem": "Equipment costs $60,000, with a $6,000 salvage value and a nine-year life. What is annual straight-line depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$6,667",
+     "explanation": "Salvage value is subtracted first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$5,400",
+     "explanation": "The life is nine years.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$6,000",
+     "explanation": "Correct. (60,000 − 6,000) ÷ 9 = 6,000."
+    },
+    {
+     "id": "d",
+     "text": "$13,333",
+     "explanation": "That is double-declining balance.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Straight-line = (cost − salvage) ÷ useful life.",
+   "skill": "application",
+   "difficulty": 1,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-12",
+   "pool": "practice",
+   "stem": "An asset costs $33,000, with a $3,000 salvage value and a five-year life. Using sum-of-the-years'-digits, what is depreciation in year 2?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "That is year 1 (5/15).",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "$8,800",
+     "explanation": "Salvage value is subtracted.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$6,000",
+     "explanation": "That is straight-line.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$8,000",
+     "explanation": "Correct. 30,000 × 4/15 = 8,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "SYD: depreciable base × remaining life ÷ sum of years (15).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-13",
+   "pool": "practice",
+   "stem": "Equipment cost $100,000, with a $10,000 salvage value and a 10-year straight-line life. After four years, the company revises the remaining life to four years and salvage to $6,000. What is depreciation in year 5?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$14,500",
+     "explanation": "Correct. Carrying amount 64,000 − 6,000 = 58,000 ÷ 4 = 14,500."
+    },
+    {
+     "id": "b",
+     "text": "$9,000",
+     "explanation": "The revised estimates apply prospectively.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "$16,000",
+     "explanation": "The revised salvage value is subtracted.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$11,600",
+     "explanation": "The remaining life is four years.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Changes in estimates are prospective: depreciate the remaining carrying amount less new salvage over the new remaining life.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-14",
+   "pool": "practice",
+   "stem": "A company uses composite depreciation. It retires an asset that cost $10,000 and receives $2,000. What is recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An $8,000 loss",
+     "explanation": "Composite methods don't recognize gains or losses on routine retirements.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No gain or loss; debit accumulated depreciation $8,000",
+     "explanation": "Correct. Under composite methods, the difference goes to accumulated depreciation."
+    },
+    {
+     "id": "c",
+     "text": "A $2,000 gain",
+     "explanation": "Proceeds don't create a gain under composite methods.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A loss based on the asset's own depreciation",
+     "explanation": "Individual asset depreciation isn't tracked.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Composite and group methods debit accumulated depreciation for cost less proceeds; no gain or loss is recognized.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-15",
+   "pool": "practice",
+   "stem": "A $40,000 asset with a five-year life is bought July 1, Year 1. The company uses double-declining balance with a half-year convention in Year 1. What is Year 2 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$9,600",
+     "explanation": "That is year 2 without the half-year in year 1.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$16,000",
+     "explanation": "That is a full year of DDB on cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$12,800",
+     "explanation": "Correct. Year 1: 40% × 40,000 × 1/2 = 8,000; Year 2: 40% × 32,000 = 12,800."
+    },
+    {
+     "id": "d",
+     "text": "$8,000",
+     "explanation": "That is year 1 depreciation.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Apply the DDB rate to the beginning carrying amount each year.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-16",
+   "pool": "practice",
+   "stem": "An asset costs $60,000 with $6,000 salvage and a 3-year life. What is Year 2 depreciation under sum-of-the-years'-digits?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Use the depreciable base.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$18,000",
+     "explanation": "Correct. $54,000 × 2/6."
+    },
+    {
+     "id": "c",
+     "text": "$27,000",
+     "explanation": "That is Year 1.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$9,000",
+     "explanation": "That is Year 3.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "SYD Year 2 = (cost − salvage) × 2/6.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-17",
+   "pool": "practice",
+   "stem": "An $80,000 asset (5-year life, no salvage) is bought October 1 and depreciated by DDB with a partial-year convention. What is Year 1 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$32,000",
+     "explanation": "Prorate for 3 months.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$4,000",
+     "explanation": "The DDB rate is 40%, not 20%.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$8,000",
+     "explanation": "Correct. $80,000 × 40% × 3/12."
+    },
+    {
+     "id": "d",
+     "text": "$16,000",
+     "explanation": "Prorate for 3 months.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "DDB rate = 2/5 = 40%, prorated for 3 months.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-18",
+   "pool": "practice",
+   "stem": "A mine cost $1,000,000 with 500,000 tons expected. Year 1 extraction was 100,000 tons. At the start of Year 2, remaining reserves are revised to 500,000 tons, and 125,000 tons are extracted. What is Year 2 depletion?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$250,000, the midpoint",
+     "explanation": "Use the revised rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$156,250",
+     "explanation": "Use the remaining cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$100,000",
+     "explanation": "Use the tons extracted.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$200,000",
+     "explanation": "Correct. $800,000 ÷ 500,000 × 125,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "A change in reserve estimates is prospective: remaining cost ÷ revised remaining reserves.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-19",
+   "pool": "practice",
+   "stem": "A tenant installs $120,000 of improvements with a 10-year life. The lease has 6 years left, with no renewal option or purchase option. What is annual amortization?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Correct. Over the shorter 6-year lease term."
+    },
+    {
+     "id": "b",
+     "text": "$12,000",
+     "explanation": "Use the shorter lease term.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "Divide by the shorter period.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "They're amortized.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Leasehold improvements are amortized over the shorter of their useful life or the remaining lease term.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-20",
+   "pool": "practice",
+   "stem": "Equipment is fully depreciated but still in use. How is it reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Removed from the books entirely",
+     "explanation": "It's still in use.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "At cost less full depreciation",
+     "explanation": "Correct. No further depreciation is taken."
+    },
+    {
+     "id": "c",
+     "text": "Written up to its fair value",
+     "explanation": "No write-ups under GAAP.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Depreciation continues as before",
+     "explanation": "It's fully depreciated.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Fully depreciated assets in use remain on the books at cost and accumulated depreciation, with no further expense.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-21",
+   "pool": "practice",
+   "stem": "Equipment costs $50,000, with a $5,000 salvage value and a 5-year life. Under double-declining balance, what is year 2 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$12,000",
+     "explanation": "Correct. Year 1 $20,000; year 2 $30,000 × 40%."
+    },
+    {
+     "id": "b",
+     "text": "$9,000",
+     "explanation": "That's straight-line.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$10,800",
+     "explanation": "DDB ignores salvage initially.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$20,000",
+     "explanation": "That is the year 1 amount.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "a",
+   "explanation": "DDB applies twice the straight-line rate to book value, ignoring salvage until the floor is reached.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-22",
+   "pool": "practice",
+   "stem": "Equipment costs $50,000, with a $5,000 salvage value and a 5-year life. Under sum-of-the-years'-digits, what is year 3 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "Subtract salvage first.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$9,000",
+     "explanation": "Correct. $45,000 × 3/15."
+    },
+    {
+     "id": "c",
+     "text": "$12,000",
+     "explanation": "That is the year 2 amount.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$15,000",
+     "explanation": "That is the year 1 amount.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "SYD multiplies the depreciable base by a declining fraction of remaining life over the sum of the digits.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-23",
+   "pool": "practice",
+   "stem": "A machine costs $100,000 with a $10,000 salvage value and an estimated 300,000 units of output. It produces 45,000 units in year 1. What is year 1 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$15,000",
+     "explanation": "Subtract salvage first.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$13,500",
+     "explanation": "Correct. $90,000 × 45/300."
+    },
+    {
+     "id": "d",
+     "text": "$9,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Units-of-production depreciation is the depreciable base times units produced over total estimated units.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-24",
+   "pool": "practice",
+   "stem": "A calendar-year company buys equipment on April 1 for $120,000 (no salvage, 10-year straight-line life). What is year 1 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$12,000",
+     "explanation": "Prorate for 9 months.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$6,000",
+     "explanation": "That's a half-year.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$3,000",
+     "explanation": "That's 3 months.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$9,000",
+     "explanation": "Correct. $12,000 × 9/12."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Depreciation is prorated from the date the asset is placed in service.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-25",
+   "pool": "practice",
+   "stem": "Equipment cost $80,000 and had $50,000 of accumulated depreciation on January 1. Depreciation through the June 30 sale is $5,000. It sells for $28,000. What is the gain or loss?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A $3,000 gain",
+     "explanation": "Correct. Book value is $25,000 after current depreciation."
+    },
+    {
+     "id": "b",
+     "text": "A $2,000 loss",
+     "explanation": "Record current-year depreciation.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A $3,000 loss",
+     "explanation": "Proceeds exceed book value.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "A $28,000 gain",
+     "explanation": "Subtract book value.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Depreciation is recorded to the disposal date before computing the gain or loss.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-26",
+   "pool": "practice",
+   "stem": "Under the composite method, an asset costing $10,000 is retired for $2,000 cash. What is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An $8,000 loss",
+     "explanation": "Composite methods record no loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No gain or loss",
+     "explanation": "Correct. The difference goes to accumulated depreciation."
+    },
+    {
+     "id": "c",
+     "text": "A $2,000 gain",
+     "explanation": "No gain is recognized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A loss for the book value",
+     "explanation": "No gain or loss.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Under group and composite depreciation, retirements are charged to accumulated depreciation with no gain or loss.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-27",
+   "pool": "practice",
+   "stem": "An asset costing $40,000 (salvage $4,000, 9-year straight-line life) has $12,000 of accumulated depreciation after 3 years. Salvage is revised to $1,000 with 6 years left. What is year 4 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$4,000",
+     "explanation": "Revise for the new salvage.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$4,333",
+     "explanation": "Use book value.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$4,500",
+     "explanation": "Correct. ($28,000 − $1,000) ÷ 6."
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Revised estimates are applied prospectively to remaining book value less the new salvage value.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-dep-28",
+   "pool": "practice",
+   "stem": "An asset costs $10,000, with a $2,000 salvage value and a 3-year life. Under double-declining balance, what is year 2 depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,222",
+     "explanation": "Book value can't drop below salvage.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$2,667",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$1,111",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$1,333",
+     "explanation": "Correct. DDB stops at salvage: $3,333 − $2,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Declining-balance depreciation stops when book value reaches salvage.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/questions.json"
+  },
+  {
+   "id": "far-x2-08",
+   "moduleId": "far-depreciation",
+   "pool": "exam",
+   "stem": "Equipment costing $100,000 with a $20,000 salvage value and a 5-year life was acquired January 1, Year 1. What is Year 2 depreciation under the **double-declining-balance** method?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$19,200",
+     "explanation": "Deducts salvage before applying the rate; DDB ignores salvage until the floor is reached.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$21,333",
+     "explanation": "That is sum-of-the-years'-digits (4/15 × $80,000).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$24,000",
+     "explanation": "Correct. ($100,000 − $40,000) × 40% = $24,000."
+    },
+    {
+     "id": "d",
+     "text": "$16,000",
+     "explanation": "That is straight-line depreciation.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "DDB rate = 2 ÷ 5 = 40%. Year 1: 100,000 × 40% = 40,000. Year 2: (100,000 − 40,000) × 40% = **$24,000**; carrying amount 36,000 is still above the 20,000 salvage value.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-09",
+   "moduleId": "far-depreciation",
+   "pool": "exam",
+   "stem": "Old equipment (cost $80,000, accumulated depreciation $50,000, fair value $36,000) plus $10,000 cash is exchanged for new equipment. The exchange has commercial substance. What gain is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "None ($0)",
+     "explanation": "Gains are deferred only when the exchange lacks commercial substance.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$6,000",
+     "explanation": "Correct. $36,000 fair value − $30,000 carrying amount."
+    },
+    {
+     "id": "c",
+     "text": "$16,000",
+     "explanation": "Adds the cash paid to the gain; boot paid is part of the new asset's cost.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$10,000",
+     "explanation": "That is the cash paid, not the gain.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "With commercial substance, gain = FV given up − carrying amount = 36,000 − 30,000 = **$6,000**. New asset = 36,000 + 10,000 = 46,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-28",
+   "moduleId": "far-depreciation",
+   "pool": "exam",
+   "stem": "Equipment costs $50,000, with a 5-year life and a $5,000 salvage value. Using double-declining balance, what is depreciation in year 2?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$12,000",
+     "explanation": "Correct. Year 1: 40% × 50,000 = 20,000; year 2: 40% × 30,000 = 12,000."
+    },
+    {
+     "id": "b",
+     "text": "$10,800",
+     "explanation": "Salvage value isn't subtracted when applying the DDB rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$18,000",
+     "explanation": "That is year 1 computed on cost less salvage.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$9,000",
+     "explanation": "That is straight-line depreciation.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "DDB rate = 2 ÷ 5 = 40% of the beginning carrying amount, ignoring salvage until the floor is reached.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-dep-fc1",
+   "front": "Double-declining balance",
+   "back": "Beginning **carrying amount** × (2 ÷ life). Ignore salvage in the base, but never go below salvage.",
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/flashcards.json"
+  },
+  {
+   "id": "far-dep-fc2",
+   "front": "Sum-of-the-years'-digits",
+   "back": "(Cost − salvage) × remaining life ÷ [n(n+1)/2]. 5-year SYD = 15.",
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/flashcards.json"
+  },
+  {
+   "id": "far-dep-fc3",
+   "front": "Change in useful life or salvage",
+   "back": "Change in estimate → **prospective**: (carrying amount − new salvage) ÷ remaining life. No catch-up.",
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/flashcards.json"
+  },
+  {
+   "id": "far-dep-fc4",
+   "front": "Change in depreciation method",
+   "back": "Change in estimate **effected by a change in principle** → prospective.",
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/flashcards.json"
+  },
+  {
+   "id": "far-dep-fc5",
+   "front": "Depletion base",
+   "back": "Cost + development + restoration − residual value; rate × units **extracted**; units sold → COGS, unsold → inventory.",
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/flashcards.json"
+  },
+  {
+   "id": "far-dep-fc6",
+   "front": "Exchange WITH commercial substance",
+   "back": "New asset = **FV given up** + cash paid (− cash received). Recognize full gain or loss.",
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/flashcards.json"
+  },
+  {
+   "id": "far-dep-fc7",
+   "front": "Exchange WITHOUT commercial substance",
+   "back": "Losses: recognize. Gains: **defer** (new asset = carrying amount + cash paid), unless boot received → proportional gain; boot ≥ 25% → monetary exchange.",
+   "moduleId": "far-depreciation",
+   "_file": "content/far/modules/far-depreciation/flashcards.json"
+  }
+ ],
+ "tbs_files": []
+}

@@ -1,0 +1,1299 @@
+{
+ "mcqs": [
+  {
+   "id": "far-lsf-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: under current GAAP, which lessee leases appear on the balance sheet?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only finance (formerly capital) leases",
+     "explanation": "Operating leases are recognized too under ASC 842.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "Both types, except elected short-term leases",
+     "explanation": "Correct. ASC 842 requires lessees to recognize ROU assets and lease liabilities for all leases other than short-term leases for which the policy election is made."
+    },
+    {
+     "id": "c",
+     "text": "None; leases are disclosed only",
+     "explanation": "Leases create ROU assets and lease liabilities.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "Only leases longer than 5 years",
+     "explanation": "The threshold is 12 months (short-term exemption).",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "ASC 842 requires lessees to recognize ROU assets and lease liabilities for all leases other than short-term leases for which the policy election is made.",
+   "skill": "remembering",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-chk1",
+   "pool": "lesson",
+   "stem": "A lessee leases a machine for 4 years. The machine's remaining economic life is 10 years; the PV of payments is 70% of fair value; no ownership transfer or purchase option; the machine is standard. How is the lease classified?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Finance lease, because the term exceeds 12 months",
+     "explanation": "Length over 12 months only means it's not short-term.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Finance lease, because PV exceeds 50% of fair value",
+     "explanation": "The threshold is substantially all (≈90%).",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "Operating lease",
+     "explanation": "Correct. None of the five criteria is met."
+    },
+    {
+     "id": "d",
+     "text": "Short-term lease",
+     "explanation": "The term is 4 years.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Ownership: no. Purchase option: no. PV 70% < ~90%. Term 40% < ~75% of life. Not specialized. → **Operating**.",
+   "skill": "application",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-chk2",
+   "pool": "lesson",
+   "stem": "How does a lessee classify the principal portion of finance lease payments in the statement of cash flows?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Operating activities",
+     "explanation": "Operating classification applies to the interest portion (and to operating lease payments).",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "Investing activities",
+     "explanation": "The ROU asset was obtained through financing, not a cash purchase.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Financing activities",
+     "explanation": "Correct. Finance leases: principal repayments → financing; interest → operating."
+    },
+    {
+     "id": "d",
+     "text": "Noncash disclosure only",
+     "explanation": "Payments are cash outflows.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Finance leases: principal repayments → financing; interest → operating. Obtaining the ROU asset itself is a noncash disclosure.",
+   "skill": "remembering",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-01",
+   "pool": "practice",
+   "stem": "Which feature alone makes a lease a **finance** lease for the lessee?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The lease term is 3 years for an asset with a 20-year life",
+     "explanation": "15% isn't a major part of the life.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "The lease includes a purchase option priced so low that exercise is reasonably certain",
+     "explanation": "Correct. A purchase option the lessee is reasonably certain to exercise is one of the five finance lease criteria."
+    },
+    {
+     "id": "c",
+     "text": "The lessee pays property taxes and insurance",
+     "explanation": "Executory cost arrangements don't affect classification.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "Payments increase each year with inflation (CPI)",
+     "explanation": "Index-based payments don't determine classification by themselves.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A purchase option the lessee is reasonably certain to exercise is one of the five finance lease criteria.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-02",
+   "pool": "practice",
+   "stem": "A lessee's lease payments are $80,000 per year for 5 years, paid at the **end** of each year. The rate implicit in the lease isn't readily determinable; the incremental borrowing rate is 7% (PV of ordinary annuity, 7%, 5 = 4.10020). What is the initial lease liability?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$400,000",
+     "explanation": "Payments must be discounted.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$350,977",
+     "explanation": "This uses an annuity-due factor (4.38721), but payments are at the end of each year.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$328,016",
+     "explanation": "Correct. 80,000 × 4.10020."
+    },
+    {
+     "id": "d",
+     "text": "$248,016",
+     "explanation": "This subtracts the first payment even though payments are in arrears.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Ordinary annuity (payments in arrears): 80,000 × 4.10020 = **328,016**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-03",
+   "pool": "practice",
+   "stem": "At commencement, a lessee's lease liability is $200,000. It paid $5,000 of initial direct costs and received a $3,000 lease incentive from the lessor. No payments were made at commencement. What is the ROU asset?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$202,000",
+     "explanation": "Correct. 200,000 + 5,000 − 3,000."
+    },
+    {
+     "id": "b",
+     "text": "$200,000",
+     "explanation": "IDC and incentives adjust the ROU asset.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$208,000",
+     "explanation": "Incentives received reduce, not increase, the ROU asset.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$198,000",
+     "explanation": "IDC increase the ROU asset.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ROU asset = liability 200,000 + IDC 5,000 − incentives 3,000 (+ prepaid lease payments, none) = **202,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-04",
+   "pool": "practice",
+   "stem": "Which discount rate should a public company lessee use when the rate implicit in the lease is not readily determinable?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The risk-free rate",
+     "explanation": "That's an election available to private companies only.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "The prime rate",
+     "explanation": "Not specified by the standard.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "c",
+     "text": "The lessee's weighted-average cost of capital",
+     "explanation": "Not the prescribed rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The lessee's incremental borrowing rate",
+     "explanation": "Correct. Use the rate implicit in the lease if readily determinable; otherwise the incremental borrowing rate."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Use the rate implicit in the lease if readily determinable; otherwise the incremental borrowing rate. Non-PBEs may elect a risk-free rate by asset class.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-05",
+   "pool": "practice",
+   "stem": "A finance lease ROU asset of $150,000 relates to a 5-year lease of equipment with an 8-year useful life. Ownership transfers to the lessee at the end of the lease. What is annual amortization (straight-line, no residual)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "Use useful life when ownership transfers.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$18,750",
+     "explanation": "Correct. 150,000 ÷ 8."
+    },
+    {
+     "id": "c",
+     "text": "$21,429",
+     "explanation": "Averaging the two periods has no basis.",
+     "trap": "other"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Finance lease ROU assets are amortized.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "When ownership transfers (or a purchase option is reasonably certain), amortize over the asset's useful life: 150,000 ÷ 8 = **18,750**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-06",
+   "pool": "practice",
+   "stem": "A lease requires variable payments equal to 2% of the lessee's store sales in addition to fixed rent. How are the variable payments treated at commencement?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Included in the lease liability at estimated future sales",
+     "explanation": "Usage/performance-based variable payments are excluded.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Excluded from the liability and expensed as incurred",
+     "explanation": "Correct. Only variable payments that depend on an index or rate are included (at the commencement index)."
+    },
+    {
+     "id": "c",
+     "text": "Included at the maximum possible amount",
+     "explanation": "No maximum is used.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Recorded as a separate derivative",
+     "explanation": "Not a derivative under these facts.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Only variable payments that depend on an index or rate are included (at the commencement index). Sales- or usage-based payments are expensed when incurred.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-07",
+   "pool": "practice",
+   "stem": "Year 1 of a finance lease: interest expense $12,000; ROU amortization $40,000; cash payment $45,000. What is the total Year 1 expense on the income statement?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$45,000",
+     "explanation": "That's the cash paid; finance leases report interest and amortization.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "Interest is also expensed.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$52,000",
+     "explanation": "Correct. 12,000 + 40,000."
+    },
+    {
+     "id": "d",
+     "text": "$97,000",
+     "explanation": "Cash payments aren't added to expenses.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Finance lease expense = interest 12,000 + amortization 40,000 = **52,000** (front-loaded compared with the cash paid).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-08",
+   "pool": "practice",
+   "stem": "A company rents a warehouse for 10 months with no purchase option and elects the short-term lease exemption. How does it account for the rent?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Recognize an ROU asset and a lease liability",
+     "explanation": "The short-term exemption avoids recognition.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Straight-line rent expense, no ROU asset or liability",
+     "explanation": "Correct. Short-term leases (≤ 12 months, no purchase option reasonably certain) may be expensed straight-line if the lessee elects the exemption by asset class."
+    },
+    {
+     "id": "c",
+     "text": "Treat the arrangement as a finance lease",
+     "explanation": "Short-term leases aren't capitalized under the election.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Disclose only; no expense until the end",
+     "explanation": "Rent is expensed over the term.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Short-term leases (≤ 12 months, no purchase option reasonably certain) may be expensed straight-line if the lessee elects the exemption by asset class.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-09",
+   "pool": "practice",
+   "stem": "A lessee guarantees the lessor that the leased asset will be worth at least $20,000 at the end of the lease. It expects the asset to be worth $15,000. What amount related to the guarantee is included in lease payments?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Only the amount probable of being owed is included.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$15,000",
+     "explanation": "That's the expected value of the asset, not the shortfall.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$5,000",
+     "explanation": "Correct. The expected shortfall 20,000 − 15,000."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Amounts probable of being owed under a guarantee are included.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ASC 842 includes amounts probable of being owed under residual value guarantees: 20,000 − 15,000 = **5,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-10",
+   "pool": "practice",
+   "stem": "A company contracts for data-center capacity. The supplier may move the company's servers to any of its identical racks at any time at negligible cost and would benefit from doing so. Does the contract contain a lease?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, because the company uses physical equipment",
+     "explanation": "There must be an identified asset; substantive substitution rights prevent that.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "No, because the supplier has a substantive right to substitute the asset",
+     "explanation": "Correct. Without an identified asset there is no lease — it's a service contract."
+    },
+    {
+     "id": "c",
+     "text": "Yes, if the contract exceeds 12 months",
+     "explanation": "Term length doesn't create an identified asset.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "No, because data-center contracts are always service contracts",
+     "explanation": "Some capacity arrangements are leases when a specific asset is identified and controlled.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A lease requires an identified asset. If the supplier has the practical ability to substitute alternative assets and would benefit economically from doing so, the right is substantive and there's no lease (ASC 842-10-15-10).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-11",
+   "pool": "practice",
+   "stem": "How does a lessee's total finance lease expense typically change over the lease term?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Higher early, declining later",
+     "explanation": "Correct. Interest is front-loaded while amortization is often straight-line."
+    },
+    {
+     "id": "b",
+     "text": "Constant each year",
+     "explanation": "That describes an operating lease.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Lower early, rising later",
+     "explanation": "Interest declines as the liability falls.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "Recognized at commencement",
+     "explanation": "Expense is recognized over the term.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Finance leases recognize interest (declining) plus amortization, so total expense is front-loaded.",
+   "skill": "application",
+   "difficulty": 1,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-12",
+   "pool": "practice",
+   "stem": "A lessee pays $50,000 at the beginning of each year for four years. The discount rate is 6%; the present value factor for an annuity due is 3.67301. What is the initial lease liability?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$173,255",
+     "explanation": "That uses an ordinary annuity factor.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$183,651",
+     "explanation": "Correct. 50,000 × 3.67301."
+    },
+    {
+     "id": "c",
+     "text": "$200,000",
+     "explanation": "Payments are discounted.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$133,651",
+     "explanation": "The first payment is part of the liability.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Lease liability = present value of the remaining lease payments at commencement.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-13",
+   "pool": "practice",
+   "stem": "A lessee's initial lease liability is $183,651. It pays $3,000 of initial direct costs and receives a $5,000 incentive from the lessor. What is the initial right-of-use asset?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$191,651",
+     "explanation": "Lease incentives reduce the ROU asset.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$183,651",
+     "explanation": "Initial direct costs and incentives adjust the asset.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$181,651",
+     "explanation": "Correct. 183,651 + 3,000 − 5,000."
+    },
+    {
+     "id": "d",
+     "text": "$186,651",
+     "explanation": "Incentives must also be deducted.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ROU asset = lease liability + prepaid lease payments + initial direct costs − lease incentives received.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-14",
+   "pool": "practice",
+   "stem": "A dealer-lessor classifies a lease as a sales-type lease. When is selling profit recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Over the lease term",
+     "explanation": "That applies to operating leases' income.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "When the final payment is received",
+     "explanation": "Profit isn't deferred to the end.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "Never; only interest income",
+     "explanation": "Selling profit is recognized for sales-type leases.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "At lease commencement",
+     "explanation": "Correct. Sales-type leases recognize selling profit at commencement."
+    }
+   ],
+   "answer": "d",
+   "explanation": "ASC 842-30: a sales-type lessor derecognizes the asset and recognizes selling profit or loss at commencement.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-15",
+   "pool": "practice",
+   "stem": "Which discount rate may a private company lessee elect when the implicit rate isn't readily determinable?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A risk-free rate, by class of asset",
+     "explanation": "Correct. Non-public entities may elect a risk-free rate."
+    },
+    {
+     "id": "b",
+     "text": "The lessor's cost of capital",
+     "explanation": "That isn't an allowed rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "The rate on its savings account",
+     "explanation": "That isn't the risk-free election.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Any rate it chooses",
+     "explanation": "The options are specified.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 842-20-30-3: lessees that aren't public business entities may elect a risk-free rate by class of underlying asset.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-16",
+   "pool": "practice",
+   "stem": "A lease transfers ownership at the end of its 5-year term. The asset's useful life is 8 years, and the ROU asset is $400,000. What is annual ROU amortization?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$80,000",
+     "explanation": "Use the useful life.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$50,000",
+     "explanation": "Correct. Over the 8-year useful life."
+    },
+    {
+     "id": "c",
+     "text": "$40,000",
+     "explanation": "Divide by the 8-year life.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "It's amortized.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "When ownership transfers (or a purchase option is reasonably certain), the ROU asset is amortized over the asset's useful life.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-17",
+   "pool": "practice",
+   "stem": "A lessee is reasonably certain to exercise a $20,000 purchase option. How does it affect the lease liability?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It's excluded",
+     "explanation": "It's included when reasonably certain.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It's disclosed only",
+     "explanation": "It's included in measurement.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "The exercise price is included",
+     "explanation": "Correct. It's a lease payment."
+    },
+    {
+     "id": "d",
+     "text": "It's expensed at exercise",
+     "explanation": "It's in the liability.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A purchase option the lessee is reasonably certain to exercise is included in lease payments.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-18",
+   "pool": "practice",
+   "stem": "A finance lease liability starts at $379,079 (five $100,000 year-end payments at 10%). How much is the liability reduced by the first payment?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "Part is interest.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$37,908",
+     "explanation": "That is the interest.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$75,816",
+     "explanation": "Use the effective interest.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$62,092",
+     "explanation": "Correct. $100,000 − $37,908 interest."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Principal reduction = payment − interest (10% × $379,079).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-19",
+   "pool": "practice",
+   "stem": "The present value of lease payments is 92% of the asset's fair value. Using the common 90% guideline, how is the lease classified?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a finance lease",
+     "explanation": "Correct. It's substantially all of the fair value."
+    },
+    {
+     "id": "b",
+     "text": "As an operating lease",
+     "explanation": "92% exceeds substantially all.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As a short-term lease",
+     "explanation": "The term isn't the test.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "As a service contract",
+     "explanation": "It's a lease, not a service.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "A lease is a finance lease when the PV of payments equals or exceeds substantially all (commonly 90%) of fair value.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-20",
+   "pool": "practice",
+   "stem": "A lessee leases custom equipment that has no alternative use to the lessor at lease end. How is it classified?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As an operating lease",
+     "explanation": "The criterion is met.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "As a finance lease",
+     "explanation": "Correct. Specialized assets meet a classification criterion."
+    },
+    {
+     "id": "c",
+     "text": "Short-term by default",
+     "explanation": "The term isn't the test here.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Off balance sheet",
+     "explanation": "Leases are recognized.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A lease of a specialized asset with no alternative use to the lessor is a finance lease.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-21",
+   "pool": "practice",
+   "stem": "A lessee's finance lease has 5 annual payments of $100,000 in arrears, with a present value of $379,079 at 10%. What is year 1 interest expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$37,908",
+     "explanation": "Correct. $379,079 × 10%."
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "That's the payment.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$75,816",
+     "explanation": "That's amortization.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$62,092",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Finance lease interest is the liability balance times the discount rate.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-22",
+   "pool": "practice",
+   "stem": "Using the finance lease above ($379,079 liability, $37,908 interest, $100,000 payment), what is the liability at the end of year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$279,079",
+     "explanation": "Add the interest accrued.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$316,987",
+     "explanation": "Correct. 379,079 + 37,908 − 100,000."
+    },
+    {
+     "id": "c",
+     "text": "$303,263",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$379,079",
+     "explanation": "The payment reduces it.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The liability grows by interest and falls by payments.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-23",
+   "pool": "practice",
+   "stem": "The finance lease ROU asset of $379,079 is amortized straight-line over the 5-year term. What is total year 1 lease expense, including $37,908 of interest?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "That's operating lease cost.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$75,816",
+     "explanation": "Add the interest accrued.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$113,724",
+     "explanation": "Correct. $75,816 amortization + $37,908 interest."
+    },
+    {
+     "id": "d",
+     "text": "$37,908",
+     "explanation": "Add amortization.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Finance leases report amortization and interest separately, front-loading total expense.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-24",
+   "pool": "practice",
+   "stem": "A lease runs 6 years on an asset with an 8-year economic life. There's no purchase option or transfer of title. How is it classified?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Operating lease",
+     "explanation": "The term is a major part of life.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Short-term lease",
+     "explanation": "It's longer than 12 months.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Not a lease",
+     "explanation": "It conveys control.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Finance lease",
+     "explanation": "Correct. 75% of the life is a major part."
+    }
+   ],
+   "answer": "d",
+   "explanation": "A lease is a finance lease if its term is a major part (often 75% or more) of the asset's economic life.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-25",
+   "pool": "practice",
+   "stem": "A finance lease has 5 annual payments of $100,000, with the first at commencement. The PV at 10% is $416,987. What is year 1 interest?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$31,699",
+     "explanation": "Correct. ($416,987 − $100,000) × 10%."
+    },
+    {
+     "id": "b",
+     "text": "$41,699",
+     "explanation": "Deduct the first payment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$37,908",
+     "explanation": "That's an arrears lease.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Interest accrues.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "With payments in advance, the first payment immediately reduces the liability before interest accrues.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-26",
+   "pool": "practice",
+   "stem": "A lessee guarantees a $20,000 residual value but expects the asset to be worth $15,000. What is included in lease payments?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Only the expected shortfall.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$5,000",
+     "explanation": "Correct. Only the amount probable of being owed."
+    },
+    {
+     "id": "c",
+     "text": "$15,000",
+     "explanation": "Not the amount.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "A shortfall is expected.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Lessees include amounts probable of being owed under residual value guarantees.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-27",
+   "pool": "practice",
+   "stem": "A lessor's sales-type lease has a fair value and PV of payments of $400,000. The asset's carrying amount is $300,000. What is recognized at commencement?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No profit until collected",
+     "explanation": "Not for a sales-type lease.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$100,000 deferred",
+     "explanation": "It's recognized now.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$100,000 selling profit",
+     "explanation": "Correct. Profit is recognized at commencement."
+    },
+    {
+     "id": "d",
+     "text": "$400,000 of revenue only",
+     "explanation": "Profit is $100,000.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Sales-type leases recognize selling profit at commencement.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-lsf-28",
+   "pool": "practice",
+   "stem": "In a sales-type lease where fair value differs from carrying amount, how are the lessor's initial direct costs treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Deferred over the term",
+     "explanation": "Not for sales-type with profit.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Added to the receivable",
+     "explanation": "Not in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Charged to equity",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Expensed at the start",
+     "explanation": "Correct. They're expensed when there's selling profit."
+    }
+   ],
+   "answer": "d",
+   "explanation": "When fair value differs from carrying amount, a sales-type lessor expenses initial direct costs at commencement.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/questions.json"
+  },
+  {
+   "id": "far-x3-10",
+   "moduleId": "far-leases-finance",
+   "pool": "exam",
+   "stem": "A lessee signs a 5-year finance lease with annual payments of $50,000 due at the **beginning** of each year. The discount rate is 6%. PV factors: annuity due (5, 6%) = 4.4651; ordinary annuity (5, 6%) = 4.2124. What lease liability is recognized at commencement (before the first payment)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$210,620",
+     "explanation": "Uses the ordinary-annuity factor, but payments are at the beginning of each year.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$250,000",
+     "explanation": "Ignores discounting.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$173,255",
+     "explanation": "That is the balance after the first payment.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$223,255",
+     "explanation": "Correct. $50,000 × 4.4651."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Lease liability = PV of lease payments = 50,000 × 4.4651 = **$223,255**. The first payment immediately reduces it to 173,255.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-12",
+   "moduleId": "far-leases-finance",
+   "pool": "exam",
+   "stem": "Which condition, by itself, requires a lessee to classify a lease as a **finance** lease?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The lessee pays maintenance and insurance",
+     "explanation": "Executory costs do not affect classification.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "b",
+     "text": "The PV of payments equals 70% of the asset's fair value",
+     "explanation": "70% is not 'substantially all' (commonly 90% or more).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "The lease term is for the major part of the asset's remaining economic life",
+     "explanation": "Correct. This is one of the five classification criteria (75% is a common threshold)."
+    },
+    {
+     "id": "d",
+     "text": "A renewal option exists that the lessee is not reasonably certain to exercise",
+     "explanation": "Options not reasonably certain are excluded from the lease term.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Finance-lease criteria (any one): transfer of ownership; purchase option reasonably certain to be exercised; term is a major part of economic life; PV of payments is substantially all of fair value; specialized asset with no alternative use to the lessor.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "calc": false,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-27",
+   "moduleId": "far-leases-finance",
+   "pool": "exam",
+   "stem": "At lease commencement, a lessee records a finance lease liability of $100,000 at an implicit rate of 6%. The first annual payment of $25,000 is made at the end of year 1. What interest expense is recognized in year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,500",
+     "explanation": "Interest isn't computed on the payment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$4,500",
+     "explanation": "The payment is made at year-end, so the full liability earns interest.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "$25,000",
+     "explanation": "The payment includes principal; only 6,000 is interest.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$6,000",
+     "explanation": "Correct. 100,000 × 6% = 6,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Finance leases use the effective interest method on the lease liability; the payment reduces the liability by $19,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-lsf-fc1",
+   "front": "Finance lease criteria (OWNES)",
+   "back": "**O**wnership transfers · **W**ritten purchase option reasonably certain · **N**PV ≥ substantially all (≈90%) of FV · **E**conomic life major part (≈75%) · **S**pecialized asset.",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/flashcards.json"
+  },
+  {
+   "id": "far-lsf-fc2",
+   "front": "Lease liability measurement",
+   "back": "PV of unpaid lease payments at the **implicit rate** if readily determinable, else the **incremental borrowing rate**.",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/flashcards.json"
+  },
+  {
+   "id": "far-lsf-fc3",
+   "front": "ROU asset at commencement",
+   "back": "Lease liability + prepaid payments + initial direct costs − lease incentives received.",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/flashcards.json"
+  },
+  {
+   "id": "far-lsf-fc4",
+   "front": "Finance lease expense pattern",
+   "back": "Interest (effective interest) + ROU amortization (usually straight-line) → **front-loaded**.",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/flashcards.json"
+  },
+  {
+   "id": "far-lsf-fc5",
+   "front": "ROU amortization period (finance lease)",
+   "back": "Shorter of lease term and useful life — **useful life** if ownership transfers or purchase option reasonably certain.",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/flashcards.json"
+  },
+  {
+   "id": "far-lsf-fc6",
+   "front": "Variable lease payments",
+   "back": "**Index/rate-based**: include (at commencement index). **Usage/sales-based**: exclude, expense as incurred.",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/flashcards.json"
+  },
+  {
+   "id": "far-lsf-fc7",
+   "front": "Residual value guarantee (lessee)",
+   "back": "Include the amount **probable of being owed** (guarantee − expected residual).",
+   "moduleId": "far-leases-finance",
+   "_file": "content/far/modules/far-leases-finance/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-r3-sales-type-lease.json",
+  "content/far/tbs/far-tbs-u11-finance-lease.json",
+  "content/far/tbs/far-tbs-x3-lease.json"
+ ]
+}

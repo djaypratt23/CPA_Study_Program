@@ -1,0 +1,1443 @@
+{
+ "mcqs": [
+  {
+   "id": "aud-rm-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: which component of audit risk can the auditor directly control?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Detection risk",
+     "explanation": "Correct. The auditor sets it by choosing the nature, timing, and extent of substantive procedures."
+    },
+    {
+     "id": "b",
+     "text": "Control risk",
+     "explanation": "Control risk depends on the entity's controls; the auditor assesses it but cannot change it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Inherent risk",
+     "explanation": "Inherent risk comes from the entity's accounts and circumstances; the auditor only assesses it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Business risk",
+     "explanation": "Business risk is the entity's operating risk, not a component of the audit risk model.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Only detection risk is controlled by the auditor.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-chk1",
+   "pool": "lesson",
+   "stem": "The auditor raises its assessment of the risk of material misstatement for an assertion. What happens to acceptable detection risk?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It increases",
+     "explanation": "Reverses the inverse relationship between RMM and detection risk.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "It decreases",
+     "explanation": "Correct. With audit risk held constant, higher RMM means lower acceptable detection risk."
+    },
+    {
+     "id": "c",
+     "text": "It is unchanged",
+     "explanation": "Detection risk must adjust to keep audit risk acceptably low.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "It is eliminated",
+     "explanation": "Detection risk can never be zero — an audit gives reasonable, not absolute, assurance.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "AR = RMM × DR. Holding AR constant, DR falls as RMM rises, so more persuasive substantive evidence is needed.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-chk2",
+   "pool": "lesson",
+   "stem": "Why is performance materiality set lower than overall materiality?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "To limit the risk that total misstatements exceed materiality",
+     "explanation": "Correct. It creates a buffer for aggregation and for misstatements that go undetected."
+    },
+    {
+     "id": "b",
+     "text": "Because the standards require exactly 75% of overall materiality",
+     "explanation": "The standards prescribe no percentage; it is a matter of judgment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "To define which misstatements need not be accumulated",
+     "explanation": "That is the clearly trivial threshold.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "To report a lower materiality amount in the auditor's report",
+     "explanation": "Materiality amounts are not disclosed in the auditor's report.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Performance materiality (AU-C 320) lowers the threshold used for designing procedures so that aggregate misstatement stays below overall materiality.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-01",
+   "pool": "practice",
+   "stem": "Inherent risk is best described as the susceptibility of an assertion to a material misstatement:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "That the auditor's procedures fail to detect",
+     "explanation": "That is detection risk.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "That the entity's controls fail to prevent or detect",
+     "explanation": "That is control risk.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Before considering any related controls",
+     "explanation": "Correct. Inherent risk is assessed before considering controls."
+    },
+    {
+     "id": "d",
+     "text": "After considering controls but before substantive procedures",
+     "explanation": "That is the combined risk of material misstatement (IR × CR).",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "IR: susceptibility before controls. CR: the risk that controls fail. RMM = IR × CR. DR: the risk that the auditor's procedures fail.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-02",
+   "pool": "practice",
+   "stem": "Planned audit risk is 4%, inherent risk is assessed at 80%, and control risk at 50%. Using the audit risk model, what is acceptable detection risk?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "1.6%",
+     "explanation": "Multiplies all three risks instead of solving for detection risk.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "5%",
+     "explanation": "Divides audit risk by inherent risk only, ignoring control risk.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "8%",
+     "explanation": "Divides audit risk by control risk only, ignoring inherent risk.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "10%",
+     "explanation": "Correct. 0.04 ÷ (0.80 × 0.50) = 0.10."
+    }
+   ],
+   "answer": "d",
+   "explanation": "DR = AR ÷ (IR × CR) = 0.04 ÷ 0.40 = **10%**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-03",
+   "pool": "practice",
+   "stem": "Acceptable detection risk for inventory existence has been lowered. Which change to the audit plan is appropriate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Perform the inventory test counts at an interim date instead of year-end",
+     "explanation": "Moving work to interim increases detection risk; lower DR calls for year-end timing.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "Perform the test counts at year-end and increase the number of items counted",
+     "explanation": "Correct. Better timing and greater extent give more persuasive evidence."
+    },
+    {
+     "id": "c",
+     "text": "Rely more on inquiry of the warehouse manager",
+     "explanation": "Inquiry alone is weak evidence and cannot respond to a lower detection risk.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Reduce the sample size to save time for other areas",
+     "explanation": "Lower detection risk requires more evidence, not less.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Lower acceptable DR → change the nature (more reliable), timing (at or near year-end), and extent (larger samples) of substantive procedures.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-04",
+   "pool": "practice",
+   "stem": "For a stable, consistently profitable manufacturer, which benchmark is most commonly used to determine overall materiality?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Pretax income from continuing operations",
+     "explanation": "Correct. For stable, profitable entities, earnings-based benchmarks are most common."
+    },
+    {
+     "id": "b",
+     "text": "Total cash and cash equivalents at year-end",
+     "explanation": "Cash is rarely an appropriate benchmark for the statements as a whole.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "c",
+     "text": "Total liabilities at the balance-sheet date",
+     "explanation": "Liabilities rarely reflect what users focus on for a profitable entity.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "Net income after dividends to shareholders",
+     "explanation": "Dividends are distributions, not a performance measure; this is not a standard benchmark.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "AU-C 320 lists benchmarks such as profit before tax, revenue, gross profit, total expenses, equity, or net assets. Revenue or assets are used when earnings are volatile or near breakeven, or for asset-based entities.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-05",
+   "pool": "practice",
+   "stem": "Pretax income from continuing operations is $3,000,000. The engagement team sets overall materiality at 5% of that benchmark and performance materiality at 70% of overall materiality. What is performance materiality?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$150,000",
+     "explanation": "That is overall materiality.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$45,000",
+     "explanation": "Uses 30% instead of 70% of overall materiality.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$105,000",
+     "explanation": "Correct. $3,000,000 × 5% × 70% = $105,000."
+    },
+    {
+     "id": "d",
+     "text": "$7,500",
+     "explanation": "That would be a clearly trivial threshold at 5% of overall.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Overall = 3,000,000 × 5% = 150,000. Performance = 150,000 × 70% = **$105,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-06",
+   "pool": "practice",
+   "stem": "A misstatement is well below overall materiality. Which circumstance would most likely make it material anyway?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It was found during interim testing rather than at year-end",
+     "explanation": "The timing of detection does not affect materiality.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "b",
+     "text": "It is just below the clearly trivial threshold",
+     "explanation": "Clearly trivial items are, by definition, inconsequential.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "It lets the company meet a loan covenant",
+     "explanation": "Correct. Covenant compliance is a qualitative factor that can make a small misstatement material."
+    },
+    {
+     "id": "d",
+     "text": "It arose from a computer processing error",
+     "explanation": "The source of an unintentional error does not by itself make it material.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Qualitative factors include covenant compliance, turning a loss into income, masking trends, meeting expectations, fraud or illegal acts, and effects on compensation.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-07",
+   "pool": "practice",
+   "stem": "Materiality was set using forecasted pretax income of $4,000,000. Late in the audit, actual pretax income is $2,500,000. What should the auditor do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Keep the original materiality, since planning is complete",
+     "explanation": "Materiality must be revised when new information would have changed the original amount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Lower materiality and consider whether more procedures are needed",
+     "explanation": "Correct. AU-C 320 requires revision, and the nature, timing, and extent of procedures may need to change."
+    },
+    {
+     "id": "c",
+     "text": "Revise materiality upward to reduce remaining work",
+     "explanation": "Lower actual earnings point to a lower materiality, not a higher one.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "Withdraw from the engagement",
+     "explanation": "A change in materiality is a normal audit adjustment, not grounds to withdraw.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Materiality is revised as the audit progresses. A lower amount can mean the procedures already performed were not extensive enough.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-08",
+   "pool": "practice",
+   "stem": "The auditor has identified a significant risk and plans to address it using only substantive procedures. Which requirement applies?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The procedures must include tests of details",
+     "explanation": "Correct. Substantive analytical procedures alone are insufficient for a significant risk."
+    },
+    {
+     "id": "b",
+     "text": "Substantive analytical procedures alone are sufficient",
+     "explanation": "For a significant risk addressed only substantively, tests of details are required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Controls must be tested in the current year",
+     "explanation": "Controls over significant risks must be tested in the current period only if the auditor plans to rely on them.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "No special response is required once the risk is documented",
+     "explanation": "Significant risks require a specifically responsive approach.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "AU-C 330: when the approach to a significant risk consists only of substantive procedures, those procedures include tests of details.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-09",
+   "pool": "practice",
+   "stem": "An auditor assesses control risk at the maximum for all assertions about revenue. Which statement is correct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The auditor need not obtain any understanding of internal control",
+     "explanation": "An understanding of the components of internal control is required in every audit.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "The auditor must test the operating effectiveness of controls",
+     "explanation": "Controls are tested only when the auditor plans to rely on them.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "The auditor can reduce substantive procedures because controls are not relied on",
+     "explanation": "With no control reliance, substantive procedures must carry the full load.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "The auditor must still obtain an understanding of internal control relevant to the audit",
+     "explanation": "Correct. The understanding is required even when control risk is at maximum."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Assessing CR at maximum means no planned reliance (no tests of controls). The understanding of internal control is still required, and substantive procedures must respond to the higher RMM.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-10",
+   "pool": "practice",
+   "stem": "How are detection risk and the amount of substantive evidence related?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Directly: a lower detection risk requires less substantive evidence",
+     "explanation": "Reverses the relationship.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "Inversely: lower detection risk requires more evidence",
+     "explanation": "Correct. Less acceptable detection risk means more persuasive substantive evidence."
+    },
+    {
+     "id": "c",
+     "text": "They are unrelated; evidence depends on control risk",
+     "explanation": "Detection risk is managed specifically through substantive evidence.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Only through the tests of controls performed",
+     "explanation": "Tests of controls support the control risk assessment, not detection risk directly.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The less detection risk the auditor can accept, the more persuasive the substantive evidence must be.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-11",
+   "pool": "practice",
+   "stem": "Which misstatements identified during the audit may the auditor choose **not** to accumulate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Misstatements below performance materiality",
+     "explanation": "Items between clearly trivial and performance materiality must still be accumulated.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Misstatements management has agreed to correct",
+     "explanation": "All misstatements above clearly trivial are accumulated, whether or not they are corrected.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Misstatements that are clearly trivial",
+     "explanation": "Correct. Clearly trivial misstatements need not be accumulated."
+    },
+    {
+     "id": "d",
+     "text": "Misstatements in disclosures",
+     "explanation": "Disclosure misstatements are accumulated and evaluated like any others.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "AU-C 450: accumulate all identified misstatements other than those that are clearly trivial.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-12",
+   "pool": "practice",
+   "stem": "Overall materiality is $100,000. Management refuses to correct known misstatements of $60,000, and projected misstatement from sampling is $30,000. What is the auditor's best course of action?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Issue an unmodified opinion, because $90,000 is below materiality",
+     "explanation": "When the aggregate approaches materiality, undetected misstatement could push it over; stopping here is premature.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Issue an adverse opinion on the financial statements",
+     "explanation": "Nothing yet indicates misstatements that are material and pervasive.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Withdraw from the engagement immediately",
+     "explanation": "Withdrawal is not the first response to an evaluation that is close to materiality.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Do more procedures or ask again for correction",
+     "explanation": "Correct. The risk that undetected misstatements push the total over materiality is too high."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Known 60,000 + projected 30,000 = 90,000, which approaches 100,000. The auditor reduces audit risk by obtaining more evidence or by having management correct misstatements, then re-evaluates (AU-C 450).",
+   "skill": "evaluation",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-13",
+   "pool": "practice",
+   "stem": "Users are especially sensitive to related party disclosures. How might the auditor reflect this?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Exclude them from materiality",
+     "explanation": "Disclosures are subject to materiality.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Use overall materiality only",
+     "explanation": "Specific materiality may be warranted.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Raise overall materiality",
+     "explanation": "That would reduce sensitivity.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "Set lower materiality for them",
+     "explanation": "Correct. Materiality for particular classes can be lower than overall materiality."
+    }
+   ],
+   "answer": "d",
+   "explanation": "AU-C 320.10: the auditor may set lower materiality levels for particular classes, balances or disclosures.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-14",
+   "pool": "practice",
+   "stem": "Materiality was planned at 5% of forecast pretax income of $2,000,000. Actual pretax income is $1,200,000. What should the auditor do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Revise it to $60,000 and reassess",
+     "explanation": "Correct. Materiality is revised when actual results differ significantly."
+    },
+    {
+     "id": "b",
+     "text": "Keep $100,000, because planning is done",
+     "explanation": "Materiality must be revised.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Increase materiality to $120,000",
+     "explanation": "Lower income lowers materiality.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "Ignore it unless misstatements are found",
+     "explanation": "The procedures may no longer be sufficient.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "AU-C 320.12: revise materiality when information would have caused a different amount; consider whether further procedures are appropriate.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-15",
+   "pool": "practice",
+   "stem": "A $15,000 misstatement is well below overall materiality but turns a reported net loss into net income. It is most likely:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Clearly trivial",
+     "explanation": "Its qualitative effect matters.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Material for qualitative reasons",
+     "explanation": "Correct. Changing a loss to income is a qualitative factor."
+    },
+    {
+     "id": "c",
+     "text": "Immaterial because of its size",
+     "explanation": "Size isn't the only consideration.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Material only if fraud is involved",
+     "explanation": "Qualitative factors include trend reversals.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "AU-C 450: qualitative factors, such as turning a loss into income, can make small misstatements material.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-16",
+   "pool": "practice",
+   "stem": "Why does the auditor set performance materiality below overall materiality?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "To set the clearly trivial threshold",
+     "explanation": "That's a separate amount.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "To reduce aggregation risk",
+     "explanation": "Correct. Undetected misstatements may add up."
+    },
+    {
+     "id": "c",
+     "text": "To satisfy the client's request",
+     "explanation": "It's the auditor's judgment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "To raise the audit fee",
+     "explanation": "That isn't a valid reason.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Performance materiality reduces the risk that uncorrected and undetected misstatements together exceed materiality.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-17",
+   "pool": "practice",
+   "stem": "Must the auditor accumulate misstatements below the clearly trivial threshold?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, every one",
+     "explanation": "That isn't required.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Yes, if they're errors",
+     "explanation": "That isn't required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "No",
+     "explanation": "Correct. Clearly trivial items needn't be accumulated."
+    },
+    {
+     "id": "d",
+     "text": "Only for issuers",
+     "explanation": "That isn't what the rule says.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "AU-C 450: misstatements that are clearly trivial needn't be accumulated.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-18",
+   "pool": "practice",
+   "stem": "Which benchmark is most commonly used to set materiality for a not-for-profit organization?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Pretax income for the year",
+     "explanation": "NFPs don't focus on profit.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Basic earnings per share",
+     "explanation": "NFPs don't report EPS.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Market capitalization",
+     "explanation": "NFPs have no shares.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Total revenue or expenses",
+     "explanation": "Correct. Profit isn't the focus."
+    }
+   ],
+   "answer": "d",
+   "explanation": "For NFPs, total revenue or total expenses are common materiality benchmarks.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-19",
+   "pool": "practice",
+   "stem": "A company's earnings swing between small profits and losses each year. Which materiality benchmark is most appropriate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Revenue or total assets",
+     "explanation": "Correct. A more stable base."
+    },
+    {
+     "id": "b",
+     "text": "Pretax income, whatever its sign",
+     "explanation": "It's too volatile.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Current-year net loss",
+     "explanation": "A loss is too volatile.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Cash balance",
+     "explanation": "Not representative.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "a",
+   "explanation": "When earnings are volatile, a more stable benchmark such as revenue or total assets is usually better.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-20",
+   "pool": "practice",
+   "stem": "What is tolerable misstatement for a sampling application usually based on?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Overall materiality",
+     "explanation": "It's lower than overall.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Performance materiality",
+     "explanation": "Correct. It may be set at or below it."
+    },
+    {
+     "id": "c",
+     "text": "The clearly trivial amount",
+     "explanation": "That's too low.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "The client's preference",
+     "explanation": "It's the auditor's judgment.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Tolerable misstatement is usually set at or below performance materiality.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-21",
+   "pool": "practice",
+   "stem": "How is audit risk expressed in the audit risk model?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "RMM × detection risk",
+     "explanation": "Correct. RMM includes inherent and control risk."
+    },
+    {
+     "id": "b",
+     "text": "Inherent risk + control risk",
+     "explanation": "That is not the model.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Materiality × sampling risk",
+     "explanation": "That is not the model.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Business risk × fraud risk",
+     "explanation": "That is not the model.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Audit risk equals the risk of material misstatement times detection risk.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-22",
+   "pool": "practice",
+   "stem": "Which risks make up the risk of material misstatement?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Detection and sampling risk",
+     "explanation": "Those relate to procedures.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Inherent and control risk",
+     "explanation": "Correct. Both exist independently of the audit."
+    },
+    {
+     "id": "c",
+     "text": "Business and legal risk",
+     "explanation": "Not the components.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Fraud and error risk",
+     "explanation": "Not the components.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "RMM combines inherent risk and control risk at the assertion level.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-23",
+   "pool": "practice",
+   "stem": "Which risk can the auditor directly control?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Inherent risk",
+     "explanation": "It's the entity's.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Control risk",
+     "explanation": "It's the entity's.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Detection risk",
+     "explanation": "Correct. Through nature, timing and extent."
+    },
+    {
+     "id": "d",
+     "text": "The client's business risk",
+     "explanation": "It's the entity's.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The auditor manages detection risk by changing procedures.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-24",
+   "pool": "practice",
+   "stem": "Inherent risk and control risk are both assessed high for an assertion. What follows?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Detection risk can be high",
+     "explanation": "It suggests the opposite.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "No substantive tests",
+     "explanation": "Substantive work is required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Materiality must rise",
+     "explanation": "That is not related.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Detection risk must be low",
+     "explanation": "Correct. More substantive work is needed."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Higher RMM requires lower detection risk and more persuasive substantive evidence.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-25",
+   "pool": "practice",
+   "stem": "Overall materiality is $100,000 and performance materiality $75,000. What tolerable misstatement may be used for a sample?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Up to $75,000",
+     "explanation": "Correct. It can't exceed performance materiality."
+    },
+    {
+     "id": "b",
+     "text": "Up to $100,000",
+     "explanation": "Use performance materiality.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Exactly $25,000",
+     "explanation": "That is not the limit.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "Up to $175,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Tolerable misstatement applied in sampling is no higher than performance materiality.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-26",
+   "pool": "practice",
+   "stem": "New evidence during fieldwork raises the assessed RMM for inventory. What should the auditor do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Keep the original plan",
+     "explanation": "Plans must respond.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Modify planned procedures",
+     "explanation": "Correct. Respond to the revised risk."
+    },
+    {
+     "id": "c",
+     "text": "Lower materiality to zero",
+     "explanation": "Not appropriate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Withdraw from the audit",
+     "explanation": "That is not required.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "When risk assessments change, the auditor revises the nature, timing and extent of further procedures.",
+   "skill": "evaluation",
+   "difficulty": 3,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-rm-27",
+   "pool": "practice",
+   "stem": "The auditor plans to rely on controls over a significant risk. When must those controls be tested?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Every third year",
+     "explanation": "Not for significant risks.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Only at interim",
+     "explanation": "Testing must cover the period.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "In the current period",
+     "explanation": "Correct. No reliance on prior-year tests."
+    },
+    {
+     "id": "d",
+     "text": "Never; trust last year",
+     "explanation": "Not for significant risks.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Controls over significant risks must be tested in the current period if the auditor plans to rely on them.",
+   "skill": "evaluation",
+   "difficulty": 3,
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/questions.json"
+  },
+  {
+   "id": "aud-x2-05",
+   "moduleId": "aud-risk-materiality",
+   "pool": "exam",
+   "stem": "Planned audit risk is 5%. Inherent risk is 60% and control risk is 50%. What is acceptable detection risk (rounded)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "1.5%",
+     "explanation": "Multiplies the three risks.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "8.3%",
+     "explanation": "Divides by inherent risk only.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "16.7%",
+     "explanation": "Correct. 0.05 ÷ (0.60 × 0.50) = 0.167."
+    },
+    {
+     "id": "d",
+     "text": "10.0%",
+     "explanation": "Divides by control risk only.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "DR = AR ÷ (IR × CR) = 0.05 ÷ 0.30 = **16.7%**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/aud/exam-questions/aud-exam-area2.json"
+  },
+  {
+   "id": "aud-x2-06",
+   "moduleId": "aud-risk-materiality",
+   "pool": "exam",
+   "stem": "Which item most likely increases the planned level of materiality?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Greater volatility in the entity's earnings",
+     "explanation": "Volatility might change the benchmark but doesn't increase materiality.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A first-year audit of a new client",
+     "explanation": "First-year audits don't increase materiality.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "c",
+     "text": "Debt covenants based on reported net income",
+     "explanation": "Covenants tend to lower materiality.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "A larger benchmark at the same percentage",
+     "explanation": "Correct. Materiality is a percentage of a benchmark; a larger benchmark produces a larger amount."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Materiality is a percentage of a benchmark; a larger benchmark produces a larger amount.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/aud/exam-questions/aud-exam-area2.json"
+  },
+  {
+   "id": "aud-x2-07",
+   "moduleId": "aud-risk-materiality",
+   "pool": "exam",
+   "stem": "Why might the auditor set a lower materiality for a particular class of transactions, such as related-party transactions?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Because the standards require 1% of revenue for them",
+     "explanation": "Standards don't prescribe that percentage.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Because related-party transactions are presumed to be fraudulent",
+     "explanation": "Related-party transactions aren't inherently fraudulent.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Smaller misstatements there could influence users' decisions",
+     "explanation": "Correct. AU-C 320 permits lower materiality levels for particular classes, balances, or disclosures where users' expectations warrant."
+    },
+    {
+     "id": "d",
+     "text": "To reduce the audit fee for the engagement",
+     "explanation": "Lower materiality increases work.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "c",
+   "explanation": "AU-C 320 permits lower materiality levels for particular classes, balances, or disclosures where users' expectations warrant.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/aud/exam-questions/aud-exam-area2.json"
+  },
+  {
+   "id": "aud-x2-08",
+   "moduleId": "aud-risk-materiality",
+   "pool": "exam",
+   "stem": "An auditor assesses inherent risk as high and control risk as low for an assertion. Compared with a high/high assessment, the auditor can:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Ignore the control risk assessment",
+     "explanation": "The assessment affects the plan.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Skip substantive procedures entirely",
+     "explanation": "Substantive procedures are always required for material items.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Accept a lower level of detection risk overall",
+     "explanation": "Reverses the relationship.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "Accept a higher level of detection risk",
+     "explanation": "Correct. Lower RMM permits higher detection risk."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Lower RMM → higher acceptable detection risk → less extensive substantive work.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/aud/exam-questions/aud-exam-area2.json"
+  },
+  {
+   "id": "aud-x2-25",
+   "moduleId": "aud-risk-materiality",
+   "pool": "exam",
+   "stem": "An auditor sets materiality at 5% of pretax income of $2,000,000 and performance materiality at 75% of materiality. What is performance materiality?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "That is overall materiality.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$75,000",
+     "explanation": "Correct. Materiality 100,000 × 75% = 75,000."
+    },
+    {
+     "id": "c",
+     "text": "$150,000",
+     "explanation": "Performance materiality is less than materiality.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "That is closer to a clearly trivial threshold.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Materiality: 5% × $2,000,000 = $100,000; performance materiality: 75% × $100,000 = $75,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/aud/exam-questions/aud-exam-area2.json"
+  },
+  {
+   "id": "aud-x2-26",
+   "moduleId": "aud-risk-materiality",
+   "pool": "exam",
+   "stem": "Under the AICPA's risk assessment standard (SAS No. 145), a significant risk is:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Any risk relating to an account that is material in amount",
+     "explanation": "Materiality of the account alone doesn't make a risk significant.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "A risk that controls fully mitigate",
+     "explanation": "Significance is assessed on inherent risk, before controls.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A risk near the upper end of the inherent risk spectrum",
+     "explanation": "Correct. Significant risks are those at the upper end of the inherent risk spectrum, or so designated by other standards."
+    },
+    {
+     "id": "d",
+     "text": "A risk assessed at the lowest level of control risk",
+     "explanation": "Significant risk depends on inherent risk.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "SAS 145 (AU-C 315): a significant risk is assessed close to the upper end of the spectrum of inherent risk based on likelihood and magnitude, or is required to be treated as significant by another AU-C section.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/aud/exam-questions/aud-exam-area2.json"
+  },
+  {
+   "id": "aud-x2-37",
+   "moduleId": "aud-risk-materiality",
+   "pool": "exam",
+   "stem": "Under AU-C 450, an auditor need not accumulate identified misstatements that are:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Below performance materiality",
+     "explanation": "Misstatements below performance materiality are still accumulated.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Clearly trivial",
+     "explanation": "Correct. Clearly trivial misstatements are inconsequential individually and in aggregate."
+    },
+    {
+     "id": "c",
+     "text": "Below overall materiality",
+     "explanation": "Accumulation applies to all misstatements that aren't clearly trivial.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Corrected by management during the audit",
+     "explanation": "Corrected misstatements are accumulated and communicated.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The auditor accumulates misstatements identified during the audit, other than those that are clearly trivial.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/aud/exam-questions/aud-exam-area2.json"
+  },
+  {
+   "id": "aud-x2-38",
+   "moduleId": "aud-risk-materiality",
+   "pool": "exam",
+   "stem": "In the audit risk model, if the assessed risk of material misstatement increases, the acceptable level of detection risk:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Increases",
+     "explanation": "An increase would raise overall audit risk.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "Stays the same, because audit risk is fixed",
+     "explanation": "Detection risk adjusts to keep audit risk acceptable.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Decreases",
+     "explanation": "Correct. Detection risk varies inversely with the risk of material misstatement to hold audit risk constant."
+    },
+    {
+     "id": "d",
+     "text": "Becomes zero, requiring a 100% examination",
+     "explanation": "Detection risk can be reduced but rarely to zero.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Audit risk = RMM × detection risk; to keep audit risk acceptably low, a higher RMM requires a lower detection risk.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/aud/exam-questions/aud-exam-area2.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "aud-rm-f1",
+   "front": "Audit risk model (formula)",
+   "back": "AR = RMM × DR, where RMM = IR × CR. RMM is assessed at the assertion level.",
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/flashcards.json"
+  },
+  {
+   "id": "aud-rm-f2",
+   "front": "Which audit risk component does the auditor control?",
+   "back": "**Detection risk** — through the nature, timing, and extent of substantive procedures.",
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/flashcards.json"
+  },
+  {
+   "id": "aud-rm-f3",
+   "front": "Assessed RMM increases → effect on acceptable detection risk?",
+   "back": "It **decreases** → more persuasive substantive evidence (tests of details, year-end timing, larger samples).",
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/flashcards.json"
+  },
+  {
+   "id": "aud-rm-f4",
+   "front": "Why set performance materiality below overall materiality?",
+   "back": "To reduce to an appropriately low level the probability that aggregate uncorrected and undetected misstatements exceed overall materiality.",
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/flashcards.json"
+  },
+  {
+   "id": "aud-rm-f5",
+   "front": "Clearly trivial threshold",
+   "back": "Misstatements below it are clearly inconsequential, individually and in aggregate, and need not be accumulated.",
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/flashcards.json"
+  },
+  {
+   "id": "aud-rm-f6",
+   "front": "Significant risk addressed only with substantive procedures — requirement?",
+   "back": "The procedures must include **tests of details** (analytics alone are not enough).",
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/flashcards.json"
+  },
+  {
+   "id": "aud-rm-f7",
+   "front": "When must materiality be revised?",
+   "back": "When the auditor becomes aware of information that would have caused a different amount initially — e.g., actual results differ significantly from the forecast used.",
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/flashcards.json"
+  },
+  {
+   "id": "aud-rm-f8",
+   "front": "Name three qualitative factors that make a small misstatement material",
+   "back": "Turns a loss into income; causes a covenant to be met; masks an earnings trend; involves fraud or illegal acts; raises management compensation.",
+   "moduleId": "aud-risk-materiality",
+   "_file": "content/aud/modules/aud-risk-materiality/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/aud/tbs/aud-tbs-r3-detection-risk.json",
+  "content/aud/tbs/aud-tbs-u3-risk-materiality.json",
+  "content/aud/tbs/aud-tbs-x3-risk.json",
+  "content/aud/tbs/aud-tbs-x8-materiality.json"
+ ]
+}

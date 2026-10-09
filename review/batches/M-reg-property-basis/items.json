@@ -1,0 +1,1640 @@
+{
+ "mcqs": [
+  {
+   "id": "reg-pb-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: stock with a donor basis of $10,000 is gifted when its FMV is $6,000. The donee sells it for $8,000. What gain or loss results?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,000 loss",
+     "explanation": "Uses the donor's basis for a loss; when FMV is below basis, the loss basis is FMV.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$2,000 gain",
+     "explanation": "Uses FMV as the gain basis; the gain basis is the donor's $10,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "No gain or loss",
+     "explanation": "Correct. The sale price falls between the loss basis ($6,000) and the gain basis ($10,000)."
+    },
+    {
+     "id": "d",
+     "text": "$4,000 loss",
+     "explanation": "That is the donor's unrealized loss, which cannot be transferred to the donee.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Dual basis: gain basis 10,000 (no gain at 8,000); loss basis 6,000 (no loss at 8,000). Result: no gain or loss.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-chk1",
+   "pool": "lesson",
+   "stem": "Maria inherited land her father bought for $50,000; its FMV at his death was $120,000. She sold it 6 months later for $125,000. What is her gain and its character?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$75,000 long-term",
+     "explanation": "Uses the decedent's cost; inherited property gets a FMV basis.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "$5,000 short-term",
+     "explanation": "Inherited property is always treated as held long-term.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "$5,000 long-term",
+     "explanation": "Correct. $125,000 − $120,000 FMV basis; always long-term."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "The sale price exceeds her FMV basis, so there is a gain.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§1014: basis = FMV at death (120,000). Gain = 5,000, automatically long-term.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-chk2",
+   "pool": "lesson",
+   "stem": "Kim sells a building for $300,000 cash; the buyer also assumes Kim's $100,000 mortgage. Kim pays $20,000 of commissions. What is Kim's amount realized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$280,000",
+     "explanation": "Omits the liability assumed by the buyer, which counts as amount realized.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$400,000",
+     "explanation": "Does not subtract the selling commissions.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$420,000",
+     "explanation": "Adds the commissions instead of subtracting them.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$380,000",
+     "explanation": "Correct. $300,000 + $100,000 − $20,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Amount realized = 300,000 cash + 100,000 debt relief − 20,000 selling costs = **$380,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-01",
+   "pool": "practice",
+   "stem": "A donor's basis in stock is $20,000; its FMV at the gift date is $15,000. The donee later sells it for $25,000. What is the donee's recognized gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,000",
+     "explanation": "Correct. $25,000 − $20,000 donor's basis."
+    },
+    {
+     "id": "b",
+     "text": "$10,000",
+     "explanation": "Uses FMV at the gift date; for a gain, the donor's basis is used.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "The sale price exceeds the gain basis, so a gain is recognized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$25,000",
+     "explanation": "Ignores basis entirely.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Gain basis = donor's basis 20,000 → gain = **$5,000**; the holding period includes the donor's.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-02",
+   "pool": "practice",
+   "stem": "Same gift as before (donor's basis $20,000, FMV at gift $15,000), but the donee sells for $12,000. What is the recognized loss?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$8,000",
+     "explanation": "Uses the donor's basis; for a loss, the basis is FMV at the gift date when FMV is lower.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$5,000",
+     "explanation": "That is the decline while the donor held the stock, which is not deductible by the donee.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$3,000",
+     "explanation": "Correct. $12,000 − $15,000 FMV loss basis."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "The price is below the loss basis, so a loss exists.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Loss basis = min(donor's basis, FMV at gift) = 15,000. Loss = **$3,000**. The holding period starts on the gift date.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-03",
+   "pool": "practice",
+   "stem": "In 2025, a donor with a $39,000 basis gives property worth $99,000. The taxable gift after the $19,000 annual exclusion is $80,000, and the donor pays $12,000 of gift tax. What is the donee's basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$51,000",
+     "explanation": "Adds the full gift tax; only the portion attributable to net appreciation is added.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$48,000",
+     "explanation": "Correct. $39,000 + $12,000 × ($60,000 ÷ $80,000)."
+    },
+    {
+     "id": "c",
+     "text": "$39,000",
+     "explanation": "Omits the gift tax adjustment.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$99,000",
+     "explanation": "Uses FMV; appreciated gifts take the donor's carryover basis.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Net appreciation = 99,000 − 39,000 = 60,000. Adjustment = 12,000 × 60,000 ÷ 80,000 = 9,000. Basis = 39,000 + 9,000 = **$48,000**.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-04",
+   "pool": "practice",
+   "optional": true,
+   "stem": "Alan sells stock with a $45,000 basis to his brother for $30,000. Two years later the brother sells it to an unrelated party for $50,000. What gain does the brother recognize?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Ignores the brother's right to reduce his gain by Alan's disallowed loss.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$5,000",
+     "explanation": "Correct. $20,000 gain − $15,000 disallowed loss."
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "The disallowed loss offsets only $15,000 of the $20,000 gain.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$35,000",
+     "explanation": "Adds the disallowed loss instead of subtracting it.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§267 disallows Alan's 15,000 loss (brothers are related). The brother's gain = 50,000 − 30,000 = 20,000, reduced by 15,000 = **$5,000**.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-05",
+   "pool": "practice",
+   "stem": "On December 15, an investor sells 100 shares (basis $10,000) for $7,000. On January 5, she buys 100 shares of the same stock for $7,500. What is her basis in the new shares?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,500",
+     "explanation": "Ignores the wash-sale basis adjustment.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$10,000",
+     "explanation": "Carries over the old basis instead of adding the disallowed loss to the new cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$4,500",
+     "explanation": "Subtracts the disallowed loss instead of adding it.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$10,500",
+     "explanation": "Correct. $7,500 cost + $3,000 disallowed loss."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Repurchase within 30 days → the 3,000 loss is disallowed and added to the new basis: 7,500 + 3,000 = **$10,500**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-06",
+   "pool": "practice",
+   "stem": "A building cost $500,000 plus $20,000 of closing costs. The owner added $50,000 of improvements and has taken $80,000 of depreciation. What is its adjusted basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$490,000",
+     "explanation": "Correct. 500,000 + 20,000 + 50,000 − 80,000."
+    },
+    {
+     "id": "b",
+     "text": "$470,000",
+     "explanation": "Omits the capitalized closing costs.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$570,000",
+     "explanation": "Ignores depreciation, which reduces basis.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$650,000",
+     "explanation": "Adds depreciation instead of subtracting it.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Adjusted basis = cost 520,000 + improvements 50,000 − depreciation 80,000 = **$490,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-07",
+   "pool": "practice",
+   "stem": "A taxpayer sells stock inherited 2 months earlier. The decedent held it for 20 years. What is the holding period?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Short-term, because the heir held it for only 2 months",
+     "explanation": "Inherited property is automatically long-term.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Long-term, but only because the decedent held it more than a year",
+     "explanation": "Long-term treatment applies regardless of how long the decedent held it.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Long-term automatically",
+     "explanation": "Correct. §1223 treats inherited property as held more than one year."
+    },
+    {
+     "id": "d",
+     "text": "It depends on whether the alternate valuation date was elected",
+     "explanation": "The election affects basis, not the holding period.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Inherited property is always long-term, whatever the actual holding period.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-08",
+   "pool": "practice",
+   "stem": "A donee sells gifted stock at a loss, using the FMV at the gift date as basis. When does the donee's holding period begin?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "On the donor's acquisition date",
+     "explanation": "Tacking applies when the donor's basis is used, not the FMV basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "On the date of the gift",
+     "explanation": "Correct. When FMV is the basis, the holding period starts at the gift date."
+    },
+    {
+     "id": "c",
+     "text": "On the date the donee sells",
+     "explanation": "The holding period starts at acquisition, not at sale.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "It is automatically long-term",
+     "explanation": "The automatic long-term rule applies to inherited property, not gifts.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Holding period tacks only when the donee's basis is determined by the donor's basis.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-09",
+   "pool": "practice",
+   "stem": "A personal residence cost $300,000. It was converted to a rental when its FMV was $250,000. The owner then took $20,000 of depreciation and sold it for $200,000. What is the deductible loss?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$80,000",
+     "explanation": "Uses the original cost; for a loss, the basis is the lower of cost or FMV at conversion.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$50,000",
+     "explanation": "Ignores the depreciation taken after conversion.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "A loss on business property is deductible to the extent of the post-conversion decline.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$30,000",
+     "explanation": "Correct. ($250,000 − $20,000) − $200,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Loss basis = lower of 300,000 or FMV 250,000, less 20,000 depreciation = 230,000. Loss = 230,000 − 200,000 = **$30,000**. The pre-conversion personal decline is not deductible.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-10",
+   "pool": "practice",
+   "stem": "A consultant receives land worth $40,000 as payment for services. What is her basis in the land?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "Correct. The FMV included in gross income becomes basis."
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "The income she recognized creates basis; it is not zero.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "The client's basis in the land",
+     "explanation": "Carryover basis applies to gifts, not to compensation.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$20,000",
+     "explanation": "No rule halves the basis of compensation property.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Property received for services is income at FMV, and the basis equals the amount included in income.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-11",
+   "pool": "practice",
+   "stem": "An employee buys land from her employer for $60,000 when its FMV is $90,000. The bargain element is compensation. What is her basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$60,000",
+     "explanation": "Omits the $30,000 of compensation income, which is added to basis.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$90,000",
+     "explanation": "Correct. $60,000 paid + $30,000 included in income."
+    },
+    {
+     "id": "c",
+     "text": "$30,000",
+     "explanation": "That is only the income recognized.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$120,000",
+     "explanation": "Double-counts the bargain element.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Basis = cost + amount taxed as income = 60,000 + 30,000 = **$90,000** (equal to FMV).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-12",
+   "pool": "practice",
+   "stem": "A decedent's basis in land was $50,000; its FMV at death was $200,000 (no alternate valuation). What is the heir's basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Carryover basis doesn't apply.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$200,000",
+     "explanation": "Correct. Basis is FMV at death."
+    },
+    {
+     "id": "c",
+     "text": "$150,000",
+     "explanation": "That is the appreciation.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Basis is stepped up.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§1014: inherited property generally takes a basis equal to its FMV at death.",
+   "skill": "application",
+   "difficulty": 1,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-13",
+   "pool": "practice",
+   "stem": "A taxpayer buys land for $50,000 cash plus a $150,000 mortgage. What is her basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "The mortgage is included.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$150,000",
+     "explanation": "Cash paid is included.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$200,000",
+     "explanation": "Correct. Debt is part of cost."
+    },
+    {
+     "id": "d",
+     "text": "$100,000",
+     "explanation": "Not a computation that applies.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Cost basis includes cash paid and debt incurred to acquire the property.",
+   "skill": "application",
+   "difficulty": 1,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-14",
+   "pool": "practice",
+   "stem": "A father sells stock (basis $10,000) to his son for $6,000. The son later sells it to an outsider for $9,000. What does the son recognize?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$3,000 gain",
+     "explanation": "The father's disallowed loss offsets it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$1,000 loss",
+     "explanation": "The offset can't create a loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$4,000 loss",
+     "explanation": "The loss was disallowed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "No gain or loss",
+     "explanation": "Correct. The disallowed loss offsets his gain."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§267: the father's $4,000 loss is disallowed; the son may use it to offset his $3,000 gain, but not to create a loss.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-15",
+   "pool": "practice",
+   "stem": "An investor sells part of her shares in a company without identifying which lots. Which shares are deemed sold?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The earliest acquired (FIFO)",
+     "explanation": "Correct. FIFO applies absent identification."
+    },
+    {
+     "id": "b",
+     "text": "The most recent (LIFO)",
+     "explanation": "LIFO isn't the default.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Those with the highest basis",
+     "explanation": "That requires identification.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "An average of all lots",
+     "explanation": "That applies to mutual funds.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Without adequate identification, stock sold is deemed to be from the earliest lots acquired (FIFO).",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-16",
+   "pool": "practice",
+   "stem": "An investor owns 100 shares with a $3,000 basis and receives a nontaxable 50% stock dividend. What is the basis of each share?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30",
+     "explanation": "Basis spreads over 150 shares.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$20",
+     "explanation": "Correct. $3,000 ÷ 150 shares."
+    },
+    {
+     "id": "c",
+     "text": "$10",
+     "explanation": "Old shares keep part.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$15",
+     "explanation": "Not the allocation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A nontaxable stock dividend allocates the original basis across all shares: $3,000 ÷ 150 = $20.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-17",
+   "pool": "practice",
+   "stem": "Under a divorce decree, a husband transfers stock (basis $40,000; FMV $90,000) to his ex-wife. What is her basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$90,000",
+     "explanation": "No step-up for divorce transfers.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "Correct. §1041 carryover basis."
+    },
+    {
+     "id": "c",
+     "text": "$50,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Basis carries over.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§1041 transfers between spouses or incident to divorce are nontaxable, and the recipient takes a carryover basis.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-18",
+   "pool": "practice",
+   "stem": "An executor elects the alternate valuation date. What is the heir's basis in stock not sold before then?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "FMV at death",
+     "explanation": "Not with the election.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "The decedent's basis",
+     "explanation": "No carryover basis.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "FMV 6 months after death",
+     "explanation": "Correct. The alternate date value."
+    },
+    {
+     "id": "d",
+     "text": "FMV when the heir sells",
+     "explanation": "That isn't what the rule says.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "c",
+   "explanation": "With the alternate valuation election, inherited property not disposed of earlier takes its FMV 6 months after death.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-19",
+   "pool": "practice",
+   "stem": "An investor reinvests $3,000 of taxable dividends in more shares through a DRIP. What is the effect on basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No effect",
+     "explanation": "Reinvested dividends add basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It decreases by $3,000",
+     "explanation": "Basis increases, not decreases.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "It increases by half",
+     "explanation": "The full amount adds.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "It increases by $3,000",
+     "explanation": "Correct. The dividend was taxed."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Reinvested dividends are taxed and become part of the basis of the new shares.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-20",
+   "pool": "practice",
+   "stem": "A donee sells gifted stock at a loss using the donor's FMV at the gift date as basis (FMV was below the donor's basis). When does the holding period begin?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "On the gift date",
+     "explanation": "Correct. The donor's period doesn't tack."
+    },
+    {
+     "id": "b",
+     "text": "When the donor bought it",
+     "explanation": "Not when FMV basis is used.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "When the donee sells it",
+     "explanation": "It runs from the gift date.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "At year-end",
+     "explanation": "That isn't what the rule says.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "a",
+   "explanation": "When the FMV at the gift date is used as basis for a loss, the holding period starts on the gift date.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-21",
+   "pool": "practice",
+   "stem": "A husband dies in a community property state. The couple's community property home had a $200,000 basis and is worth $600,000. What is the widow's basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$400,000",
+     "explanation": "Both halves step up.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$600,000",
+     "explanation": "Correct. Both halves are stepped up."
+    },
+    {
+     "id": "c",
+     "text": "$200,000",
+     "explanation": "Basis is stepped up.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$300,000",
+     "explanation": "That isn't what the rule says.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Community property receives a full step-up for both halves at the first spouse's death.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-22",
+   "pool": "practice",
+   "stem": "An investor owns 100 shares with a $6,000 basis and receives a 2-for-1 stock split. What is the basis of each share afterward?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$60",
+     "explanation": "Spread basis over 200 shares.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$0 for the new shares",
+     "explanation": "Basis is allocated to all.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$30",
+     "explanation": "Correct. $6,000 ÷ 200 shares."
+    },
+    {
+     "id": "d",
+     "text": "$15",
+     "explanation": "Recompute the ratio.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A nontaxable stock split spreads the original basis across all shares.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-23",
+   "pool": "practice",
+   "stem": "An investor sells shares at a loss and buys identical shares 10 days later, triggering the wash sale rule. What is the holding period of the new shares?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It starts on the new purchase",
+     "explanation": "The period tacks.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It's short-term regardless of dates",
+     "explanation": "The holding period tacks.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "It's long-term regardless of dates",
+     "explanation": "It depends on the combined period.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "It includes the old shares' period",
+     "explanation": "Correct. Wash sale replacement shares tack."
+    }
+   ],
+   "answer": "d",
+   "explanation": "In a wash sale, the replacement shares take the old shares' holding period and the disallowed loss is added to basis.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-24",
+   "pool": "practice",
+   "stem": "A son gives appreciated stock to his dying father, who dies 8 months later and leaves it back to the son. What is the son's basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The father's basis",
+     "explanation": "Correct. §1014(e) denies a step-up when property returns to the donor within 1 year."
+    },
+    {
+     "id": "b",
+     "text": "FMV at the father's death",
+     "explanation": "§1014(e) applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Zero, since he paid nothing",
+     "explanation": "Basis carries over.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "FMV at the gift date",
+     "explanation": "That isn't what the rule says.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "If appreciated property is given to a decedent within 1 year of death and passes back to the donor, the donor takes the decedent's basis.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-25",
+   "pool": "practice",
+   "stem": "A taxpayer trades land (basis $40,000) for a boat worth $55,000 in a taxable exchange. What is her basis in the boat?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "The exchange is taxable.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$55,000",
+     "explanation": "Correct. The FMV of property received in a taxable exchange."
+    },
+    {
+     "id": "c",
+     "text": "$15,000",
+     "explanation": "That's the gain.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$95,000",
+     "explanation": "Basis is not additive here.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "In a taxable exchange, the basis of property received is its FMV.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-26",
+   "pool": "practice",
+   "stem": "A buyer pays $200,000 for land, plus $3,000 of title insurance, $2,000 of legal fees and $4,000 of the seller's back property taxes. What is her basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$200,000",
+     "explanation": "Add the acquisition costs.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$205,000",
+     "explanation": "Include the back taxes.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$209,000",
+     "explanation": "Correct. All are part of cost."
+    },
+    {
+     "id": "d",
+     "text": "$203,000",
+     "explanation": "Include all the costs.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Basis includes the price, title and legal costs, and the seller's taxes the buyer pays.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-27",
+   "pool": "practice",
+   "stem": "A home (cost $300,000) is converted to a rental when worth $250,000. After $20,000 of depreciation, it's sold for $200,000. What is the deductible loss?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$80,000",
+     "explanation": "Use the lower FMV for loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$50,000",
+     "explanation": "Subtract depreciation from FMV.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "The rental loss is deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$30,000",
+     "explanation": "Correct. Loss basis is the lower FMV, less depreciation: $230,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "For converted property, basis for loss is the lower of adjusted basis or FMV at conversion, adjusted afterward.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-28",
+   "pool": "practice",
+   "stem": "A corporation distributes a dividend in property (FMV $12,000) to an individual shareholder. What is her basis in the property?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$12,000",
+     "explanation": "Correct. Basis equals FMV."
+    },
+    {
+     "id": "b",
+     "text": "The corporation's basis",
+     "explanation": "No carryover for shareholders.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "She has a basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Half of FMV",
+     "explanation": "That isn't what the rule says.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "A shareholder's basis in property received as a distribution is its FMV.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-29",
+   "pool": "practice",
+   "stem": "A buyer pays $500,000 for land and a building. Appraised values: land $150,000; building $450,000. What is the building's basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$450,000",
+     "explanation": "Allocate the actual price.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$375,000",
+     "explanation": "Correct. Allocate by relative FMV: 450/600."
+    },
+    {
+     "id": "c",
+     "text": "$350,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$125,000",
+     "explanation": "That's the land.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A lump-sum purchase price is allocated by relative fair market values.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-30",
+   "pool": "practice",
+   "stem": "An investor sells mutual fund shares and has bought shares at different prices over time. Which basis method may she use?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only FIFO",
+     "explanation": "Average cost is permitted.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "Only LIFO",
+     "explanation": "That isn't permitted.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Average cost, if elected",
+     "explanation": "Correct. Average cost is allowed for fund shares."
+    },
+    {
+     "id": "d",
+     "text": "The highest-cost shares, always",
+     "explanation": "Requires identification.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "For mutual fund shares, taxpayers may use average cost, FIFO or specific identification.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-31",
+   "pool": "practice",
+   "stem": "A father sells land (basis $30,000; FMV $100,000) to his daughter for $20,000. What is the daughter's basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "The donor's basis is higher.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "No FMV basis in a part-gift.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$50,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$30,000",
+     "explanation": "Correct. The greater of what she paid or the father's basis."
+    }
+   ],
+   "answer": "d",
+   "explanation": "In a part-gift, part-sale, the donee's basis is the greater of the amount paid or the donor's basis (plus any gift tax adjustment).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-32",
+   "pool": "practice",
+   "stem": "What is the general basis of inherited property?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The decedent's adjusted basis",
+     "explanation": "That's for gifts.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "FMV at the date of death",
+     "explanation": "Correct. Inherited property gets a stepped-up basis."
+    },
+    {
+     "id": "c",
+     "text": "Zero",
+     "explanation": "It has a basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Probate value less any debts",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Inherited property generally takes a basis equal to its fair market value at the date of death (or alternate valuation date).",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-33",
+   "pool": "practice",
+   "stem": "What is the holding period of inherited property?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It starts at the date of death",
+     "explanation": "It's automatically long-term.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It starts when it's distributed",
+     "explanation": "It's automatically long-term.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Always long-term",
+     "explanation": "Correct. Inherited property is always long-term."
+    },
+    {
+     "id": "d",
+     "text": "It includes the decedent's period",
+     "explanation": "Long-term regardless.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Inherited property is treated as held more than 1 year.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-34",
+   "pool": "practice",
+   "stem": "Gift property is sold at a loss, and its FMV at the gift was below the donor's basis. What is the basis for loss?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The donor's adjusted basis",
+     "explanation": "That's for gain.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Zero",
+     "explanation": "It has a basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "The amount realized on the sale",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "FMV at the gift date",
+     "explanation": "Correct. The lower FMV applies for loss."
+    }
+   ],
+   "answer": "d",
+   "explanation": "When FMV at the gift is below the donor's basis, the donee's basis for loss is that FMV.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-pb-35",
+   "pool": "practice",
+   "stem": "When is the estate tax alternate valuation date?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "6 months after death",
+     "explanation": "Correct. Alternate valuation is 6 months after death."
+    },
+    {
+     "id": "b",
+     "text": "3 months after death",
+     "explanation": "That is not the date.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "9 months after death",
+     "explanation": "That's the return due date.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "1 year after death",
+     "explanation": "That is not the date.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "An executor may elect to value the estate 6 months after death if it lowers both value and tax.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/questions.json"
+  },
+  {
+   "id": "reg-x3-01",
+   "moduleId": "reg-property-basis",
+   "pool": "exam",
+   "stem": "A taxpayer inherits stock (decedent's basis $20,000; FMV at death $70,000) and sells it 3 months later for $65,000. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$45,000 long-term gain",
+     "explanation": "Basis is FMV at death.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "$5,000 long-term loss",
+     "explanation": "Correct. Inherited property is always long-term."
+    },
+    {
+     "id": "c",
+     "text": "$5,000 short-term loss",
+     "explanation": "Inherited property is long-term.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "No gain or loss",
+     "explanation": "A loss results.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Basis = 70,000; loss = 5,000, long-term.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas1-3.json"
+  },
+  {
+   "id": "reg-x3-02",
+   "moduleId": "reg-property-basis",
+   "pool": "exam",
+   "stem": "A donee receives property (donor's basis $12,000; FMV $10,000) and sells it for $11,000. What is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,000 recognized loss",
+     "explanation": "Use FMV for loss; $11,000 exceeds $10,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$1,000 recognized gain",
+     "explanation": "Use donor's basis for gain; $11,000 is below $12,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "No gain or loss",
+     "explanation": "Correct. Dual basis: the sale price is between the loss basis and the gain basis."
+    },
+    {
+     "id": "d",
+     "text": "$2,000 recognized loss",
+     "explanation": "The donor's decline isn't the donee's loss.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Dual basis: the sale price is between the loss basis and the gain basis.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/reg/exam-questions/reg-exam-areas1-3.json"
+  },
+  {
+   "id": "reg-x3-09",
+   "moduleId": "reg-property-basis",
+   "pool": "exam",
+   "stem": "A donor gives stock with a basis of $10,000 and a fair value of $7,000 at the gift date. The donee later sells it for $8,000. What gain or loss does the donee recognize?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A $1,000 capital gain",
+     "explanation": "Gain uses the donor's 10,000 basis, so there is no gain.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No gain or loss",
+     "explanation": "Correct. The sale price falls between the loss basis (7,000) and the gain basis (10,000)."
+    },
+    {
+     "id": "c",
+     "text": "A $2,000 loss",
+     "explanation": "Loss uses the 7,000 fair value, so there is no loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A $3,000 loss",
+     "explanation": "The donor's unrealized loss doesn't carry over.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "IRC §1015 dual basis: gain basis is the donor's basis; loss basis is the lower fair value. A price between the two gives no gain or loss.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas1-3.json"
+  },
+  {
+   "id": "reg-x3-10",
+   "moduleId": "reg-property-basis",
+   "pool": "exam",
+   "stem": "A taxpayer inherits land that the decedent bought for $40,000. Fair value at death was $90,000. She sells it two months later for $95,000. Her gain is:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,000 short-term",
+     "explanation": "Inherited property is always treated as long-term.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$55,000 long-term",
+     "explanation": "Basis steps up to fair value at death.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "$5,000 long-term",
+     "explanation": "Correct. Basis is the $90,000 date-of-death value, and inherited property is automatically long-term."
+    },
+    {
+     "id": "d",
+     "text": "$50,000 long-term",
+     "explanation": "That uses the decedent's basis.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "IRC §1014: inherited basis is fair value at death; §1223(9) treats the holding period as long-term.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas1-3.json"
+  },
+  {
+   "id": "reg-x3-12",
+   "moduleId": "reg-property-basis",
+   "pool": "exam",
+   "stem": "An investor sells 100 shares with a basis of $5,000 for $3,000 and buys 100 shares of the same stock 10 days later for $3,200. What is the basis of the new shares?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,200",
+     "explanation": "Correct. The $2,000 wash-sale loss is disallowed and added to the new shares' basis."
+    },
+    {
+     "id": "b",
+     "text": "$3,200",
+     "explanation": "The disallowed loss increases basis.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$3,000",
+     "explanation": "Basis starts from the new purchase price.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "The new purchase price, not the old basis, starts the computation.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "IRC §1091: a loss is disallowed when substantially identical stock is bought within 30 days; the loss is added to the new basis: 3,200 + 2,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas1-3.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "reg-pb-f1",
+   "front": "Amount realized",
+   "back": "Cash + FMV of property received + liabilities assumed by the buyer − selling expenses.",
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/flashcards.json"
+  },
+  {
+   "id": "reg-pb-f2",
+   "front": "Gift basis when FMV ≥ donor's basis",
+   "back": "Donor's basis + gift tax attributable to net appreciation. Holding period tacks.",
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/flashcards.json"
+  },
+  {
+   "id": "reg-pb-f3",
+   "front": "Gift basis when FMV < donor's basis (dual basis)",
+   "back": "Gain: donor's basis. Loss: FMV at gift date. Sale in between: no gain or loss.",
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/flashcards.json"
+  },
+  {
+   "id": "reg-pb-f4",
+   "front": "Basis and holding period of inherited property",
+   "back": "FMV at date of death (or alternate valuation date if elected). Always long-term.",
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/flashcards.json"
+  },
+  {
+   "id": "reg-pb-f5",
+   "front": "§267 related-party loss",
+   "back": "Seller's loss is disallowed; the buyer may use it only to reduce a later gain on resale.",
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/flashcards.json"
+  },
+  {
+   "id": "reg-pb-f6",
+   "front": "Wash sale window and effect",
+   "back": "30 days before or after the sale (61-day window). The disallowed loss is added to the basis of the replacement shares.",
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/flashcards.json"
+  },
+  {
+   "id": "reg-pb-f7",
+   "front": "Basis of property received for services",
+   "back": "FMV — the amount included in gross income.",
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/flashcards.json"
+  },
+  {
+   "id": "reg-pb-f8",
+   "front": "Personal-use property converted to business use — basis for loss",
+   "back": "Lower of adjusted basis or FMV at conversion, reduced by later depreciation.",
+   "moduleId": "reg-property-basis",
+   "_file": "content/reg/modules/reg-property-basis/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/reg/tbs/reg-tbs-r3-basis.json",
+  "content/reg/tbs/reg-tbs-x3-basis.json"
+ ]
+}

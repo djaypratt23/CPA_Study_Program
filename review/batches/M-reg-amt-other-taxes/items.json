@@ -1,0 +1,1739 @@
+{
+ "mcqs": [
+  {
+   "id": "reg-ot-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: what is the combined self-employment tax rate (before the wage base cap)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "7.65%",
+     "explanation": "That's the employee share of FICA.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "12.4%",
+     "explanation": "That's only the Social Security portion.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "15.3%",
+     "explanation": "Correct. SE tax = 12.4% Social Security + 2.9% Medicare."
+    },
+    {
+     "id": "d",
+     "text": "2.9%",
+     "explanation": "That's only the Medicare portion.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "SE tax = 12.4% Social Security + 2.9% Medicare.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-chk1",
+   "pool": "lesson",
+   "stem": "A self-employed taxpayer has net profit of $50,000 and no wages. What is the SE tax (rounded)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,650",
+     "explanation": "Omits the 92.35% factor.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$6,200",
+     "explanation": "Uses only the Social Security rate.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$3,825",
+     "explanation": "Uses only half the rate.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$7,065",
+     "explanation": "Correct. $50,000 × 92.35% × 15.3%."
+    }
+   ],
+   "answer": "d",
+   "explanation": "50,000 × 0.9235 × 0.153 = **7,065**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-chk2",
+   "pool": "lesson",
+   "stem": "A single taxpayer has MAGI of $230,000, including $40,000 of net investment income. What is the net investment income tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,140",
+     "explanation": "Correct. 3.8% × lesser of $40,000 or $30,000."
+    },
+    {
+     "id": "b",
+     "text": "$1,520",
+     "explanation": "Uses all net investment income.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$8,740",
+     "explanation": "Applies 3.8% to all MAGI.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "MAGI exceeds $200,000.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "NIIT = 3.8% × lesser of NII (40,000) or excess MAGI (30,000) = **1,140**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-01",
+   "pool": "practice",
+   "optional": true,
+   "stem": "Which item is added back in computing AMTI?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Qualified residence interest on acquisition debt",
+     "explanation": "Acquisition-debt interest is allowed for AMT.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Charitable contributions to public charities",
+     "explanation": "Charity is allowed for AMT.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "State income taxes deducted as an itemized deduction",
+     "explanation": "Correct. Taxes deducted for regular tax aren't allowed for AMT."
+    },
+    {
+     "id": "d",
+     "text": "Municipal interest on general obligation bonds",
+     "explanation": "Only private activity bond interest is a preference.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Taxes deducted for regular tax aren't allowed for AMT.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-02",
+   "pool": "practice",
+   "optional": true,
+   "stem": "An employee exercises incentive stock options with a $40,000 bargain element and holds the shares. What is the tax effect in the year of exercise?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000 of ordinary income for regular tax",
+     "explanation": "ISOs don't create regular-tax income at exercise.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Nothing for regular or AMT purposes",
+     "explanation": "The spread is an AMT adjustment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$40,000 of capital gain in that year",
+     "explanation": "No sale has occurred.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "No regular tax, but a $40,000 AMT adjustment",
+     "explanation": "Correct. The ISO bargain element is an AMT adjustment at exercise."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The ISO bargain element is an AMT adjustment at exercise.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-03",
+   "pool": "practice",
+   "optional": true,
+   "stem": "For 2025 the single AMT exemption is $88,100, reduced by 25% of AMTI over $626,350. Single taxpayer, 2025 AMTI of $700,000. What is the AMT exemption after the phase-out?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$88,100",
+     "explanation": "The exemption is phased out.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "Not fully phased out.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$69,688",
+     "explanation": "Correct. $88,100 − 25% × ($700,000 − $626,350)."
+    },
+    {
+     "id": "d",
+     "text": "$137,000",
+     "explanation": "That's the joint exemption.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Reduction = 25% × 73,650 = 18,412.50; exemption = 88,100 − 18,412.50 = **69,687.50**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-04",
+   "pool": "practice",
+   "optional": true,
+   "stem": "For 2025 the kiddie-tax threshold is $2,700. A 12-year-old has $5,000 of interest income and no earned income in 2025. How much is taxed at the parents' rate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,000",
+     "explanation": "The first $2,700 isn't.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "The kiddie tax applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$2,700",
+     "explanation": "That's the threshold.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$2,300",
+     "explanation": "Correct. $5,000 − $2,700."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Unearned income above $2,700 is taxed at the parents' rate.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-05",
+   "pool": "practice",
+   "stem": "A taxpayer's prior-year AGI was $120,000 and prior-year tax was $18,000. What minimum total of withholding and estimates avoids the underpayment penalty this year (using the prior-year safe harbor)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$16,200",
+     "explanation": "That's 90% of the prior year; the prior-year safe harbor is 100%.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$18,000",
+     "explanation": "Correct. 100% of prior-year tax."
+    },
+    {
+     "id": "c",
+     "text": "$19,800",
+     "explanation": "110% applies only if prior-year AGI exceeded $150,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$1,000",
+     "explanation": "That's the de minimis threshold.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Safe harbor: 100% of prior-year tax (110% if prior-year AGI > $150,000).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-06",
+   "pool": "practice",
+   "stem": "A married couple filing jointly has combined wages of $300,000. How much additional Medicare tax applies?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$450",
+     "explanation": "Correct. 0.9% × ($300,000 − $250,000)."
+    },
+    {
+     "id": "b",
+     "text": "$900",
+     "explanation": "Uses the $200,000 single threshold.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$2,700",
+     "explanation": "Applies 0.9% to all wages.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Wages exceed the threshold.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "0.9% × 50,000 = **450** (employers withhold only on wages over $200,000 per employee; the return reconciles).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-07",
+   "pool": "practice",
+   "stem": "The 2025 Social Security wage base is $176,100. A taxpayer has $150,000 of wages and $60,000 of net self-employment income in 2025. On what amount of net SE earnings does the 12.4% Social Security portion apply?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$55,410 (all of net SE earnings)",
+     "explanation": "Only up to the remaining wage base.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$26,100",
+     "explanation": "Correct. $176,100 − $150,000 remaining wage base (less than $55,410)."
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "Wages are below the wage base.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$60,000",
+     "explanation": "Uses net profit before the 92.35% factor and ignores the cap.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Net SE earnings = 60,000 × 92.35% = 55,410; Social Security applies only to the 26,100 of wage base remaining. Medicare (2.9%) applies to all 55,410.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-08",
+   "pool": "practice",
+   "stem": "When is the fourth-quarter estimated tax payment for 2025 due for an individual?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "December 15, 2025",
+     "explanation": "That's a corporate due date.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "January 15, 2026",
+     "explanation": "Correct. Individual estimates: April 15, June 15, September 15, and January 15 of the following year."
+    },
+    {
+     "id": "c",
+     "text": "April 15, 2026",
+     "explanation": "That's the return due date.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "December 31, 2025",
+     "explanation": "That isn't an estimated tax due date.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Individual estimates: April 15, June 15, September 15, and January 15 of the following year.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-09",
+   "pool": "practice",
+   "optional": true,
+   "stem": "Why does AMT paid because of ISO exercises create a minimum tax credit?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Because ISO gains are permanently excluded from income",
+     "explanation": "ISO gain is eventually taxed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It's a timing item; the credit prevents double taxation",
+     "explanation": "Correct. AMT from deferral items (ISOs, depreciation) generates a credit usable in later years; exclusion items (SALT) don't."
+    },
+    {
+     "id": "c",
+     "text": "Because all AMT paid is refundable in later years",
+     "explanation": "AMT isn't generally refundable.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Because the credit is required for municipal bond interest",
+     "explanation": "Private activity bond interest is an exclusion item.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "AMT from deferral items (ISOs, depreciation) generates a credit usable in later years; exclusion items (SALT) don't.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-10",
+   "pool": "practice",
+   "stem": "Net earnings from self-employment are $350. How much SE tax is due?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$0, below the $400 threshold",
+     "explanation": "Correct. No SE tax is due when net SE earnings are under $400."
+    },
+    {
+     "id": "b",
+     "text": "$53.55 (15.3% of $350)",
+     "explanation": "The $400 threshold isn't met.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$49.45 (15.3% of 92.35%)",
+     "explanation": "The $400 threshold isn't met.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$26.78 (half of $53.55)",
+     "explanation": "The $400 threshold isn't met.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "No SE tax is due when net SE earnings are under $400.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-11",
+   "pool": "practice",
+   "stem": "For 2025, a single taxpayer has taxable income of $60,000, including $10,000 of qualified dividends. Use these given 2025 amounts: ordinary rates of 10% up to $11,925, 12% up to $48,475 and 22% up to $103,350; the 0% rate on qualified dividends applies only to taxable income up to $48,350, and 15% applies above that. What is the regular tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$8,114",
+     "explanation": "This taxes the dividends at ordinary rates.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$7,414",
+     "explanation": "Correct. Ordinary income of 50,000: 1,192.50 + 4,386 + 22% × 1,525 (335.50) = 5,914. The dividends stack from 50,000 to 60,000, all above 48,350, so 15% × 10,000 = 1,500. Total 7,414."
+    },
+    {
+     "id": "c",
+     "text": "$5,914",
+     "explanation": "This taxes the dividends at 0%; they sit above the 0% breakpoint.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$7,914",
+     "explanation": "This taxes the dividends at 20%.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Tax ordinary income on the schedule, then stack preferential income on top to find its rate.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-12",
+   "pool": "practice",
+   "stem": "A sole proprietor has net earnings of $50,000 from self-employment for 2025 and no wages. What is the SE tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,065",
+     "explanation": "Correct. $50,000 × 92.35% × 15.3%."
+    },
+    {
+     "id": "b",
+     "text": "$7,650",
+     "explanation": "Apply the 92.35% factor first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$3,532",
+     "explanation": "That is half the tax.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$6,200",
+     "explanation": "Medicare tax applies too.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "SE tax = net earnings × 92.35% × 15.3% = $46,175 × 15.3% ≈ $7,065.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-13",
+   "pool": "practice",
+   "stem": "How does a self-employed individual treat the deductible half of her SE tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As an itemized deduction",
+     "explanation": "It is above the line.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As a deduction for AGI",
+     "explanation": "Correct. It is an adjustment to income."
+    },
+    {
+     "id": "c",
+     "text": "As a credit",
+     "explanation": "It is a deduction.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "On Schedule C as an expense",
+     "explanation": "It isn't a business expense.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§164(f): half of SE tax is deductible as an adjustment in arriving at AGI.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-14",
+   "pool": "practice",
+   "stem": "A single taxpayer's MAGI is $260,000, including $40,000 of net investment income. What is the NIIT?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,280",
+     "explanation": "Use the lesser amount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$9,880",
+     "explanation": "Only part of MAGI is taxed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$1,520",
+     "explanation": "Correct. 3.8% × the lesser of $40,000 or $60,000."
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "MAGI exceeds $200,000.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "NIIT = 3.8% × the lesser of NII or MAGI over $200,000 (single).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-15",
+   "pool": "practice",
+   "stem": "A single taxpayer's MAGI is $215,000, including $50,000 of net investment income. What is the NIIT?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,900",
+     "explanation": "The lesser amount is $15,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$0",
+     "explanation": "MAGI exceeds the threshold.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$450",
+     "explanation": "That uses the 3% rate.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$570",
+     "explanation": "Correct. 3.8% × the $15,000 excess over $200,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "NIIT = 3.8% × lesser of NII ($50,000) or excess MAGI ($15,000) = $570.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-16",
+   "pool": "practice",
+   "stem": "Which item is excluded from net investment income for the NIIT?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A traditional IRA distribution",
+     "explanation": "Correct. Qualified plan and IRA distributions are excluded."
+    },
+    {
+     "id": "b",
+     "text": "Interest on a bank account",
+     "explanation": "That is included in NII.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Rents from a passive rental",
+     "explanation": "That is included in NII.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Dividends on public stock",
+     "explanation": "That is included in NII.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "NII excludes distributions from qualified plans and IRAs, wages and active trade or business income.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-17",
+   "pool": "practice",
+   "stem": "An employer pays $230,000 of wages to a single employee in 2025. How much additional Medicare tax must the employer withhold?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$0",
+     "explanation": "Withholding starts above $200,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$270",
+     "explanation": "Correct. 0.9% × the $30,000 over $200,000."
+    },
+    {
+     "id": "c",
+     "text": "$2,070",
+     "explanation": "Only the excess is taxed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$435",
+     "explanation": "The employer withholds 0.9%.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Employers withhold the 0.9% additional Medicare tax on wages over $200,000 paid to an employee, regardless of filing status.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-18",
+   "pool": "practice",
+   "stem": "Prior-year AGI was $200,000 and prior-year tax was $30,000. Current-year tax will be $50,000. What is the minimum timely payment to avoid the estimated-tax penalty?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "110% applies when prior AGI exceeds $150,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$45,000",
+     "explanation": "The prior-year safe harbor is lower.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$33,000",
+     "explanation": "Correct. The lesser of 90% × $50,000 and 110% × $30,000."
+    },
+    {
+     "id": "d",
+     "text": "$50,000",
+     "explanation": "100% of current tax isn't required.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The required annual payment is the lesser of 90% of current tax or 100% of prior tax (110% if prior AGI exceeded $150,000).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-19",
+   "pool": "practice",
+   "stem": "No estimated-tax penalty applies if the tax due after withholding and credits is less than:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$500",
+     "explanation": "The threshold is $1,000.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "$5,000",
+     "explanation": "The threshold is $1,000.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$100",
+     "explanation": "The threshold is $1,000.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$1,000",
+     "explanation": "Correct. A de minimis exception applies."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§6654(e)(1): no penalty applies if the tax shown, less withholding, is under $1,000.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-20",
+   "pool": "practice",
+   "stem": "Which income is taxed at the preferential capital gains rates in the regular tax computation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Qualified dividends",
+     "explanation": "Correct. They share the 0/15/20% rates."
+    },
+    {
+     "id": "b",
+     "text": "Interest on corporate bonds",
+     "explanation": "Interest is ordinary income.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Short-term capital gains",
+     "explanation": "They are taxed at ordinary rates.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Nonqualified dividends",
+     "explanation": "They are taxed at ordinary rates.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Qualified dividends are taxed at the same 0%, 15% and 20% rates as net long-term capital gain.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-21",
+   "pool": "practice",
+   "stem": "A single taxpayer has $250,000 of net earnings from self-employment (after the 92.35% factor) and no wages. How much additional Medicare tax applies?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,250",
+     "explanation": "Only the excess over $200,000 is taxed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$0",
+     "explanation": "The tax applies to SE income too.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$1,900",
+     "explanation": "That uses the NIIT rate.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$450",
+     "explanation": "Correct. 0.9% × $50,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The 0.9% additional Medicare tax applies to SE income above $200,000 for single filers.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-22",
+   "pool": "practice",
+   "stem": "A married couple filing jointly has MAGI of $300,000, including $80,000 of net investment income. What is the NIIT?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,900",
+     "explanation": "Correct. 3.8% × $50,000 excess MAGI."
+    },
+    {
+     "id": "b",
+     "text": "$3,040",
+     "explanation": "Use the lesser amount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$11,400",
+     "explanation": "Only part of MAGI is taxed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "MAGI exceeds $250,000.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "NIIT = 3.8% × lesser of NII ($80,000) or MAGI over $250,000 ($50,000).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-23",
+   "pool": "practice",
+   "stem": "A single taxpayer sells her home at a $300,000 gain, excluding $250,000 under §121. Her other income is $210,000 (no other NII). What is the NIIT?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$11,400",
+     "explanation": "The excluded gain isn't NII.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$1,900",
+     "explanation": "Correct. 3.8% × the $50,000 taxable gain."
+    },
+    {
+     "id": "c",
+     "text": "$2,280",
+     "explanation": "Use the lesser of NII and excess MAGI.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "The taxable gain is NII.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Only the taxable portion of the home sale gain is NII. MAGI is $260,000; NIIT = 3.8% × lesser of $50,000 or $60,000.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-24",
+   "pool": "practice",
+   "stem": "When is an individual's second-quarter estimated tax payment for 2025 due?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "July 15, 2025",
+     "explanation": "Not the second installment date.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "May 15, 2025",
+     "explanation": "Not the second installment date.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "June 16, 2025",
+     "explanation": "Correct. June 15 fell on a Sunday."
+    },
+    {
+     "id": "d",
+     "text": "September 15, 2025",
+     "explanation": "That is the third installment.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Individual estimated payments are due April 15, June 15, September 15 and January 15, moved to the next business day when they fall on a weekend.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-25",
+   "pool": "practice",
+   "stem": "In December, a taxpayer realizes she underpaid estimated tax all year. Which step can best avoid the penalty for earlier quarters?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Make a large January estimated payment",
+     "explanation": "It only covers the last quarter.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "File the return early in January",
+     "explanation": "Filing doesn't cure earlier quarters.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Request a filing extension",
+     "explanation": "Extensions don't affect estimates.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Increase wage withholding",
+     "explanation": "Correct. Withholding is treated as paid evenly."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Withholding is treated as paid ratably through the year unless the taxpayer elects otherwise, so late-year withholding can cure earlier shortfalls.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-26",
+   "pool": "practice",
+   "stem": "A self-employed author earns most of her 2025 income in December. Which approach can reduce or eliminate penalties for earlier estimated tax installments?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Equal quarterly payments",
+     "explanation": "That front-loads payments.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Paying it all with the return",
+     "explanation": "Penalties would apply.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "The annualized installment method",
+     "explanation": "Correct. Installments are based on income earned to date."
+    },
+    {
+     "id": "d",
+     "text": "Filing an extension of time to file",
+     "explanation": "Extensions don't affect estimates.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The annualized method matches required installments to when income is earned.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-27",
+   "pool": "practice",
+   "stem": "A taxpayer's 2024 AGI was $160,000 and 2024 tax $20,000. His 2025 tax will be $40,000. What is his prior-year safe harbor amount?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "110% is required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$36,000",
+     "explanation": "That's 90% of current tax.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$40,000",
+     "explanation": "That isn't required.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$22,000",
+     "explanation": "Correct. 110% applies when prior AGI exceeds $150,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Taxpayers with prior-year AGI over $150,000 must pay 110% of prior-year tax for the safe harbor.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-28",
+   "pool": "practice",
+   "stem": "A taxpayer owns a manufacturing business in which he works full time and also has a passive rental. Which income is subject to the NIIT?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only the rental income",
+     "explanation": "Correct. Active business income isn't NII."
+    },
+    {
+     "id": "b",
+     "text": "Both incomes",
+     "explanation": "The business is nonpassive.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Only the business income",
+     "explanation": "The amounts are reversed.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "Neither",
+     "explanation": "Passive rental income is NII.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "NII includes passive trade or business income and rents, not income from a business in which the taxpayer materially participates.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-29",
+   "pool": "practice",
+   "stem": "Which item is included in net investment income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Wages from an employer",
+     "explanation": "That isn't NII.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Mutual fund capital gain payouts",
+     "explanation": "Correct. They're investment income."
+    },
+    {
+     "id": "c",
+     "text": "Traditional IRA distributions",
+     "explanation": "Retirement distributions are excluded.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Active self-employment income",
+     "explanation": "That isn't NII.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "NII includes interest, dividends, capital gains (including fund distributions), rents and nonqualified annuities.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-30",
+   "pool": "practice",
+   "stem": "A married taxpayer filing separately earns $150,000 of wages. How much additional Medicare tax does she owe?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$0",
+     "explanation": "Her threshold is $125,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$1,350",
+     "explanation": "Only the excess is taxed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$225",
+     "explanation": "Correct. The MFS threshold is $125,000."
+    },
+    {
+     "id": "d",
+     "text": "$450",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The additional Medicare tax threshold is $125,000 for married filing separately.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-31",
+   "pool": "practice",
+   "stem": "A taxpayer runs two sole proprietorships: one earns $50,000 and the other loses $20,000. What net earnings are used for SE tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$46,175",
+     "explanation": "The loss offsets the profit.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Apply the 92.35% factor.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$50,000",
+     "explanation": "Combine the businesses first.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$27,705",
+     "explanation": "Correct. Combine the businesses, then apply 92.35%."
+    }
+   ],
+   "answer": "d",
+   "explanation": "SE income is figured on the combined net profit of all trades or businesses.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-32",
+   "pool": "practice",
+   "stem": "A general partner receives a $40,000 guaranteed payment and a $60,000 share of ordinary business income. What are her net earnings from self-employment before the 92.35% factor?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "Correct. Both are SE income for a general partner."
+    },
+    {
+     "id": "b",
+     "text": "$60,000",
+     "explanation": "Guaranteed payments count.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$40,000",
+     "explanation": "Her share counts too.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "General partners have SE income.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "A general partner's SE income includes guaranteed payments for services and the distributive share of ordinary income.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-33",
+   "pool": "practice",
+   "stem": "A single filer has $40,000 of ordinary taxable income and $20,000 of qualified dividends (total $60,000). The 0% rate applies up to $48,350. How are the dividends taxed?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "All $20,000 at the 0% rate",
+     "explanation": "Only part fits under $48,350.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Part at 0%, part at 15%",
+     "explanation": "Correct. Ordinary income fills the brackets first."
+    },
+    {
+     "id": "c",
+     "text": "All $20,000 at the 15% rate",
+     "explanation": "Part falls in the 0% band.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "All at ordinary income rates",
+     "explanation": "Qualified dividends get preferential rates.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Qualified dividends stack on top of ordinary income for the preferential rate brackets.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-34",
+   "pool": "practice",
+   "stem": "A 64-year-old who retired this year underpaid estimated tax because of reasonable cause. Can the penalty be waived?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No, penalties can't be waived",
+     "explanation": "Penalty waivers exist.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Only if tax is under $1,000",
+     "explanation": "That's a separate exception.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Yes",
+     "explanation": "Correct. Waivers apply to retirees 62+ with reasonable cause."
+    },
+    {
+     "id": "d",
+     "text": "Only for disasters",
+     "explanation": "Retirement can qualify.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The IRS may waive the penalty for taxpayers who retired after age 62 or became disabled, if the underpayment was due to reasonable cause.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-35",
+   "pool": "practice",
+   "stem": "A single taxpayer has $150,000 of wages and $100,000 of net SE income (after the 92.35% factor). How much additional Medicare tax applies to the SE income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$900",
+     "explanation": "The threshold is reduced only by wages.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$0",
+     "explanation": "Combined income exceeds $200,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$1,350",
+     "explanation": "Wages under $200,000 aren't taxed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$450",
+     "explanation": "Correct. The $200,000 threshold is reduced by wages: 0.9% × ($100,000 − $50,000)."
+    }
+   ],
+   "answer": "d",
+   "explanation": "For SE income, the threshold is reduced (not below zero) by wages subject to the additional Medicare tax.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-36",
+   "pool": "practice",
+   "stem": "What is the combined self-employment tax rate on net earnings up to the Social Security wage base?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "12.4%",
+     "explanation": "Add the Medicare portion.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "15.3%",
+     "explanation": "Correct. 12.4% Social Security plus 2.9% Medicare."
+    },
+    {
+     "id": "c",
+     "text": "2.9%",
+     "explanation": "Add the Social Security portion.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "7.65%",
+     "explanation": "That's the employee share.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Self-employment tax is 15.3% up to the wage base and 2.9% above it.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-37",
+   "pool": "practice",
+   "stem": "What is the net investment income tax rate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "0.9%",
+     "explanation": "That's the additional Medicare tax.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "2.9%",
+     "explanation": "That's the Medicare rate.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "3.8%",
+     "explanation": "Correct. The NIIT rate is 3.8%."
+    },
+    {
+     "id": "d",
+     "text": "5.0%",
+     "explanation": "That is not the rate.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The net investment income tax is 3.8% of the lesser of net investment income or MAGI above the threshold.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-ot-38",
+   "pool": "practice",
+   "stem": "For a single filer, at what wage level does the 0.9% additional Medicare tax begin?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$250,000",
+     "explanation": "That's for joint filers.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$125,000",
+     "explanation": "That's for MFS filers.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$150,000",
+     "explanation": "Not a threshold.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$200,000",
+     "explanation": "Correct. The single threshold is $200,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The additional Medicare tax applies above $200,000 (single), $250,000 (joint) or $125,000 (MFS).",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/questions.json"
+  },
+  {
+   "id": "reg-x4-19",
+   "moduleId": "reg-amt-other-taxes",
+   "pool": "exam",
+   "stem": "A self-employed individual has $100,000 of net SE income and no wages. What is the deduction for half of SE tax (rounded)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,650",
+     "explanation": "Omits the 92.35% factor.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$6,200",
+     "explanation": "Uses only the Social Security rate.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$14,130",
+     "explanation": "That's the full SE tax.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$7,065",
+     "explanation": "Correct. ($100,000 × 92.35% × 15.3%) ÷ 2."
+    }
+   ],
+   "answer": "d",
+   "explanation": "SE tax = 14,129.55; half = **7,065**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-21",
+   "moduleId": "reg-amt-other-taxes",
+   "pool": "exam",
+   "stem": "A single taxpayer has 2025 modified AGI of $260,000, including $30,000 of net investment income. What is her net investment income tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,140",
+     "explanation": "Correct. 3.8% × the lesser of NII (30,000) or MAGI over $200,000 (60,000)."
+    },
+    {
+     "id": "b",
+     "text": "$2,280",
+     "explanation": "That applies 3.8% to the 60,000 excess of MAGI over the threshold.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$9,880",
+     "explanation": "That applies 3.8% to all of MAGI.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$  270",
+     "explanation": "0.9% is the additional Medicare tax rate, not the NIIT rate.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "NIIT = 3.8% × the lesser of net investment income or MAGI above $200,000 (single): 3.8% × $30,000 = $1,140.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-22",
+   "moduleId": "reg-amt-other-taxes",
+   "pool": "exam",
+   "stem": "A taxpayer's 2024 AGI was $180,000 and his 2024 tax was $30,000. His 2025 tax is expected to be $40,000. What is the minimum he must pay through withholding and timely estimates to avoid an underpayment penalty?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "100% of prior-year tax is enough only if prior-year AGI was $150,000 or less.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$36,000",
+     "explanation": "90% of current-year tax works but isn't the minimum here.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$33,000",
+     "explanation": "Correct. Prior-year AGI over $150,000 requires 110% of prior-year tax (33,000), which is less than 90% of current-year tax (36,000)."
+    },
+    {
+     "id": "d",
+     "text": "$40,000",
+     "explanation": "Paying 100% of current-year tax isn't required.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Safe harbor: the lesser of 90% of current-year tax or 100% of prior-year tax (110% when prior-year AGI exceeded $150,000). Lesser of $36,000 and $33,000 = $33,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-32",
+   "moduleId": "reg-amt-other-taxes",
+   "pool": "exam",
+   "stem": "A sole proprietor has 2025 net self-employment income of $50,000 and no wages. What is the self-employment tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,650",
+     "explanation": "That omits the 92.35% factor.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$7,065",
+     "explanation": "Correct. 50,000 × 92.35% × 15.3% = 7,065."
+    },
+    {
+     "id": "c",
+     "text": "$3,532",
+     "explanation": "That is the deductible half.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$6,200",
+     "explanation": "That applies only the 12.4% Social Security rate.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "SE tax = net earnings × 92.35% × 15.3% (below the wage base); half is deductible for AGI.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-42",
+   "moduleId": "reg-amt-other-taxes",
+   "pool": "exam",
+   "stem": "A single employee earns $260,000 of wages in 2025. What additional Medicare tax applies?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,340",
+     "explanation": "It applies only above $200,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$2,280",
+     "explanation": "3.8% is the NIIT rate.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$1,080",
+     "explanation": "The single threshold is $200,000.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$540",
+     "explanation": "Correct. 0.9% × (260,000 − 200,000)."
+    }
+   ],
+   "answer": "d",
+   "explanation": "IRC §3101(b)(2): 0.9% of wages above $200,000 (single).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "reg-ot-f1",
+   "front": "SE tax computation",
+   "back": "Net profit × 92.35% × 15.3% (SS portion capped at the wage base); deduct half for AGI.",
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/flashcards.json"
+  },
+  {
+   "id": "reg-ot-f2",
+   "front": "Social Security wage base and SE tax",
+   "back": "The 12.4% portion applies only up to the annual wage base, reduced by W-2 Social Security wages; the 2.9% Medicare portion has no cap. (The exam gives the dollar amount.)",
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/flashcards.json"
+  },
+  {
+   "id": "reg-ot-f3",
+   "front": "NIIT",
+   "back": "3.8% × lesser of NII or MAGI over $200,000 / $250,000.",
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/flashcards.json"
+  },
+  {
+   "id": "reg-ot-f4",
+   "front": "Additional Medicare tax",
+   "back": "0.9% of wages + SE income over $200,000 / $250,000.",
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/flashcards.json"
+  },
+  {
+   "id": "reg-ot-f5",
+   "front": "AMT exemption — structure",
+   "back": "An exemption by filing status, reduced by 25% of AMTI above a threshold, is subtracted before applying the 26%/28% rates. (The exam gives the dollar amount.)",
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/flashcards.json"
+  },
+  {
+   "id": "reg-ot-f6",
+   "front": "Kiddie tax — who and what",
+   "back": "A child's unearned income above the threshold is taxed at the parents' rate (under 19, or under 24 if a full-time student). (The exam gives the dollar amount.)",
+   "moduleId": "reg-amt-other-taxes",
+   "_file": "content/reg/modules/reg-amt-other-taxes/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/reg/tbs/reg-tbs-x4-self-employed.json"
+ ]
+}

@@ -1,0 +1,1278 @@
+{
+ "mcqs": [
+  {
+   "id": "aud-da-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: before relying on a client-prepared data extract for an analytic, what should the auditor do first?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Perform the analytic immediately and investigate outliers later",
+     "explanation": "Data reliability must be evaluated first.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "Evaluate its completeness and accuracy, e.g., reconcile it to the GL",
+     "explanation": "Correct. Information produced by the entity must be tested for completeness and accuracy."
+    },
+    {
+     "id": "c",
+     "text": "Obtain a written management representation that it is correct",
+     "explanation": "A representation alone isn't sufficient.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Ask the client's IT department to certify the data",
+     "explanation": "Certification alone isn't sufficient.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Information produced by the entity must be tested for completeness and accuracy.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-chk1",
+   "pool": "lesson",
+   "stem": "Which ADA would best detect duplicate payments to vendors?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Gap detection on the sequence of check numbers",
+     "explanation": "Gaps detect missing items, not duplicates.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Matching payments on vendor, amount, and invoice number",
+     "explanation": "Correct. Duplicate detection compares key fields (vendor, invoice number, amount, date) across the whole population."
+    },
+    {
+     "id": "c",
+     "text": "Regression of monthly sales on advertising spend",
+     "explanation": "Unrelated to payments.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "Benford's Law analysis of the payroll data",
+     "explanation": "Unrelated to vendor duplicates.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Duplicate detection compares key fields (vendor, invoice number, amount, date) across the whole population.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-chk2",
+   "pool": "lesson",
+   "stem": "Final analytical procedures reveal an unexpected increase in gross margin not previously identified. What should the auditor do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing more, because fieldwork is already complete",
+     "explanation": "New risks must be addressed.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "Revise the risk assessment and do more procedures as needed",
+     "explanation": "Correct. AU-C 520: if the overall review identifies a previously unrecognized risk, the auditor revises the assessment and modifies procedures."
+    },
+    {
+     "id": "c",
+     "text": "Issue a qualified opinion for the unexplained change",
+     "explanation": "The auditor investigates before any opinion decision.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "Propose an adjustment to bring the margin back to prior levels",
+     "explanation": "No misstatement has been established yet.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "AU-C 520: if the overall review identifies a previously unrecognized risk, the auditor revises the assessment and modifies procedures.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-01",
+   "pool": "practice",
+   "stem": "Which is the **last** step in the ADA cycle before (possibly) repeating it?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Access the data and prepare it for analysis",
+     "explanation": "This comes earlier.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "Assess the data's relevance and reliability",
+     "explanation": "This comes before performing the ADA.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "Plan the ADA and define its objective",
+     "explanation": "This is the first step.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "Evaluate the results and investigate outliers",
+     "explanation": "Correct. Plan → access and prepare → assess relevance and reliability → perform → evaluate results."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Plan → access and prepare → assess relevance and reliability → perform → evaluate results.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-02",
+   "pool": "practice",
+   "stem": "An ADA identifies 15 outliers in a population of 90,000 transactions. What is the appropriate next step?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Conclude that the population is misstated by the outliers' total",
+     "explanation": "Outliers aren't necessarily misstatements.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Remove them from the population and rerun the ADA",
+     "explanation": "Excluding outliers defeats the purpose.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Ignore them, because 15 items is immaterial relative to 90,000",
+     "explanation": "The count doesn't establish immateriality.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Investigate whether they are misstatements, deviations, or valid",
+     "explanation": "Correct. Each outlier is investigated; results may reveal misstatements, deficiencies, or risks."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Each outlier is investigated; results may reveal misstatements, deficiencies, or risks.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-03",
+   "pool": "practice",
+   "stem": "An ADA compares employee addresses with vendor addresses in the master file. Which risk does it address?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Inventory obsolescence at remote warehouses",
+     "explanation": "Address matching doesn't address obsolescence.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "b",
+     "text": "Revenue cutoff at the end of the period",
+     "explanation": "Vendor-employee matches don't bear on revenue timing.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "c",
+     "text": "Fictitious vendors used to misappropriate cash",
+     "explanation": "Correct. Matching employee and vendor data (addresses, bank accounts, tax IDs) detects fictitious vendor schemes."
+    },
+    {
+     "id": "d",
+     "text": "Misclassification of leases by the lessee",
+     "explanation": "Address matching doesn't address lease accounting.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Matching employee and vendor data (addresses, bank accounts, tax IDs) detects fictitious vendor schemes.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-04",
+   "pool": "practice",
+   "stem": "Benford's Law is most useful for:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Spotting digit patterns that suggest fabricated numbers",
+     "explanation": "Correct. In many natural datasets, leading digits follow a predictable distribution (1 appears ~30% of the time)."
+    },
+    {
+     "id": "b",
+     "text": "Calculating sample sizes for tests of details",
+     "explanation": "Benford's Law doesn't determine sample sizes.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Testing logical access controls over the ledger",
+     "explanation": "Benford's Law doesn't test access controls.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Estimating the allowance for expected credit losses",
+     "explanation": "Benford's Law doesn't estimate allowances.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "In many natural datasets, leading digits follow a predictable distribution (1 appears ~30% of the time). Fabricated numbers often don't.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-05",
+   "pool": "practice",
+   "stem": "Which procedure best tests the **completeness** of a data extract used for an ADA?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Reconcile its totals and record counts to the general ledger",
+     "explanation": "Correct. Reconciling to independent control totals tests completeness; agreeing lines to source tests accuracy."
+    },
+    {
+     "id": "b",
+     "text": "Agree a sample of extract lines to source documents",
+     "explanation": "That tests accuracy.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Ask the client's IT manager whether the extract is complete and final",
+     "explanation": "Inquiry alone is insufficient.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Review the extract for formatting and data-type errors",
+     "explanation": "Formatting isn't completeness.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Reconciling to independent control totals tests completeness; agreeing lines to source tests accuracy.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-06",
+   "pool": "practice",
+   "stem": "When are analytical procedures required near the end of the audit?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only when material misstatements were found during fieldwork",
+     "explanation": "They are always required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Only in audits of issuers under PCAOB standards",
+     "explanation": "Also required for nonissuers.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "In every audit, to help form an overall conclusion",
+     "explanation": "Correct. AU-C 520 requires overall-review analytics near the end of every audit."
+    },
+    {
+     "id": "d",
+     "text": "Never; final analytics are optional under AU-C 520",
+     "explanation": "Required under AU-C 520.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "AU-C 520 requires overall-review analytics near the end of every audit.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-07",
+   "pool": "practice",
+   "stem": "An auditor uses an ADA to test every sales invoice for the correct price. The ADA finds no exceptions. What else is needed for the ADA to provide substantive evidence?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing, because no exceptions means no remaining risk",
+     "explanation": "Data reliability and ADA design must also be appropriate.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Management's written approval of the ADA results",
+     "explanation": "Client approval adds nothing to the evidence.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A second ADA using the same data to confirm the result",
+     "explanation": "Repeating it doesn't add assurance.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Evidence that the data, including the price master, is reliable",
+     "explanation": "Correct. An ADA is only as reliable as its data; test the completeness and accuracy of the inputs."
+    }
+   ],
+   "answer": "d",
+   "explanation": "An ADA is only as reliable as its data; test the completeness and accuracy of the inputs.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-08",
+   "pool": "practice",
+   "stem": "Which visualization would best help identify unusual revenue at quarter-ends during risk assessment?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A line chart of daily revenue for the year",
+     "explanation": "Correct. Spikes at period-ends become visible."
+    },
+    {
+     "id": "b",
+     "text": "A pie chart of total revenue by region for the year",
+     "explanation": "Annual totals hide timing patterns.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A table of total assets",
+     "explanation": "Total assets don't show revenue timing.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "A list of board members",
+     "explanation": "Board membership doesn't show revenue timing.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Time-series visualizations reveal period-end spikes that may indicate improper cut-off or channel stuffing.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-09",
+   "pool": "practice",
+   "stem": "Which statement about ADAs is correct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "They eliminate the need for professional judgment in the audit",
+     "explanation": "Judgment is still required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "They can be used only in the risk assessment phase of the audit",
+     "explanation": "They can serve many purposes.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "They can serve risk assessment, controls, substantive tests, and review",
+     "explanation": "Correct. ADAs are flexible tools; their evidence depends on their design, the data, and the follow-up of results."
+    },
+    {
+     "id": "d",
+     "text": "They always provide more reliable evidence than any external confirmation",
+     "explanation": "It depends on design and data.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ADAs are flexible tools; their evidence depends on their design, the data, and the follow-up of results.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-10",
+   "pool": "practice",
+   "stem": "A gap-detection ADA finds missing numbers in the sequence of shipping documents. Which assertion is at risk?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Completeness of sales",
+     "explanation": "Correct. Missing shipping documents may be unbilled or unrecorded shipments."
+    },
+    {
+     "id": "b",
+     "text": "Existence of receivables",
+     "explanation": "Gaps suggest omissions, not fictitious items.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Valuation of inventory",
+     "explanation": "Gaps in shipping numbers don't bear on inventory valuation.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "Classification of expenses",
+     "explanation": "Shipping gaps don't affect expense classification.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Gaps in prenumbered documents can mean transactions were not recorded.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-11",
+   "pool": "practice",
+   "stem": "An auditor's expectation of interest expense is $500,000 and the recorded amount is $548,000. The threshold for investigating differences is $30,000. Management explains $25,000 of the difference, and the auditor corroborates it with the loan agreement. What should the auditor conclude?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Propose an adjustment for $48,000",
+     "explanation": "Part of the difference has been corroborated, and the remainder is below the threshold.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Investigate only the $18,000 over the threshold",
+     "explanation": "When a difference exceeds the threshold, the whole difference is investigated.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "The procedure supports the balance",
+     "explanation": "Correct. The remaining unexplained difference (48,000 − 25,000 = 23,000) is below the 30,000 threshold."
+    },
+    {
+     "id": "d",
+     "text": "Perform more work; $23,000 remains unexplained",
+     "explanation": "An unexplained difference below the threshold is acceptable.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Investigate the whole difference, accept only corroborated explanations, then compare what remains with the threshold (AU-C 520).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-12",
+   "pool": "practice",
+   "stem": "A journal-entry test flags 14 entries posted on weekends. All were posted by the user SYS-BATCH, a scheduled nightly job. What is the most appropriate next step?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Inspect support for all 14 flagged entries",
+     "explanation": "The flags are explained by expected automated activity; refining the test is more effective.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Conclude that there are no weekend-entry risks",
+     "explanation": "Refining the test may still reveal manual weekend entries.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Report a significant deficiency in IT controls",
+     "explanation": "A scheduled batch job is not in itself a control deficiency.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Exclude system entries and rerun the test",
+     "explanation": "Correct. The test was not designed to separate expected automated activity from manual weekend entries."
+    }
+   ],
+   "answer": "d",
+   "explanation": "When analytics output is dominated by expected items, refine the parameters before investigating.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-13",
+   "pool": "practice",
+   "stem": "In a sales database, the Invoice table contains a CustomerID field that matches the unique identifier in the Customer table. In the Invoice table, CustomerID is best described as which of the following?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A foreign key",
+     "explanation": "Correct. A foreign key in one table refers to the primary key of another table, linking the records."
+    },
+    {
+     "id": "b",
+     "text": "A primary key",
+     "explanation": "CustomerID uniquely identifies customers in the Customer table, not invoices in the Invoice table.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "A calculated field",
+     "explanation": "CustomerID is stored data, not a calculation.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A normalization error",
+     "explanation": "Linking tables by keys is the purpose of normalization.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Primary keys identify records within a table; foreign keys link tables.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-14",
+   "pool": "practice",
+   "stem": "Which data field is measured on a ratio scale?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Customer credit rating (A, B, C)",
+     "explanation": "Credit ratings are ranked categories: an ordinal scale.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Invoice amount in dollars",
+     "explanation": "Correct. Dollar amounts have equal intervals and a true zero: a ratio scale."
+    },
+    {
+     "id": "c",
+     "text": "Sales region code",
+     "explanation": "Region codes are unordered categories: a nominal scale.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Invoice date",
+     "explanation": "Dates have equal intervals but no true zero: an interval scale.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Nominal, ordinal, interval, ratio: only ratio data have a true zero.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-15",
+   "pool": "practice",
+   "stem": "After extracting a full year of journal entries from a client's ERP system, what should the auditor do before running analytics on the data?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Delete entries with blank descriptions",
+     "explanation": "Blank descriptions may be exactly what the analysis should flag.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Ask management to confirm the results",
+     "explanation": "Management confirmation does not test the completeness of the data.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Agree counts and totals to the GL",
+     "explanation": "Correct. Agreeing the extracted data to control totals establishes that the data set is complete before it is analyzed."
+    },
+    {
+     "id": "d",
+     "text": "Select a random sample of entries",
+     "explanation": "The point of full-population analytics is to test all entries once the data are validated.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Validate completeness and accuracy of extracted data against control totals before analysis.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-16",
+   "pool": "practice",
+   "stem": "An auditor groups all invoices by dollar range to focus on large items. Which ADA technique is this?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Stratification",
+     "explanation": "Correct. The population is divided into groups."
+    },
+    {
+     "id": "b",
+     "text": "Regression",
+     "explanation": "That models relationships.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Benford analysis",
+     "explanation": "That tests digit frequency.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Gap detection",
+     "explanation": "That finds missing numbers.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Stratification divides a population into subgroups, often by amount.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-17",
+   "pool": "practice",
+   "stem": "An auditor models monthly utility expense against production hours to set an expectation. Which technique is this?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Ratio analysis",
+     "explanation": "Regression models the relationship.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Regression",
+     "explanation": "Correct. It builds an expectation from a related driver."
+    },
+    {
+     "id": "c",
+     "text": "Trend analysis",
+     "explanation": "Not a model on a driver.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Stratification",
+     "explanation": "It groups data.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Regression develops a precise expectation from relationships between variables, useful in substantive analytics.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-18",
+   "pool": "practice",
+   "stem": "Which ADA best detects duplicate vendor payments?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Sorting all payments by date",
+     "explanation": "It doesn't match payments.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "Totaling payments by month",
+     "explanation": "It hides duplicates.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Matching key payment fields",
+     "explanation": "Correct. Duplicates share these fields."
+    },
+    {
+     "id": "d",
+     "text": "Benford's first-digit test",
+     "explanation": "Not designed for duplicates.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A duplicate-payment test looks for matching vendor, amount, invoice number or date.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-19",
+   "pool": "practice",
+   "stem": "A full-population ADA on revenue finds no exceptions. What should the auditor still consider?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing; the test covered everything",
+     "explanation": "Data integrity still matters.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Only the remaining sampling risk",
+     "explanation": "There's no sampling risk.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Only the ADA tool's vendor",
+     "explanation": "Data reliability matters more.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "The data's completeness and accuracy",
+     "explanation": "Correct. The result depends on data integrity."
+    }
+   ],
+   "answer": "d",
+   "explanation": "An ADA's conclusions are only as good as the underlying data, so the auditor evaluates its completeness and accuracy.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-20",
+   "pool": "practice",
+   "stem": "Process mining of the purchasing system shows some orders were paid before goods were received. What does this indicate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Possible control bypasses",
+     "explanation": "Correct. The expected sequence was skipped."
+    },
+    {
+     "id": "b",
+     "text": "Nothing, if amounts agree",
+     "explanation": "Sequence matters for controls.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A data-extraction error only",
+     "explanation": "It may reflect real bypasses.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "Revenue overstatement",
+     "explanation": "It's a purchasing issue.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Process mining compares actual transaction flows with expected sequences to identify control deviations.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-21",
+   "pool": "practice",
+   "stem": "Which ADA technique flags all journal entries posted on weekends or by unusual users?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Filtering all entries",
+     "explanation": "Correct. Criteria are applied to every entry."
+    },
+    {
+     "id": "b",
+     "text": "Statistical sampling",
+     "explanation": "It tests a subset.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Regression analysis",
+     "explanation": "Not for attributes.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Benford's analysis",
+     "explanation": "That tests digits.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Filtering applies criteria to an entire population to identify items for follow-up.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-22",
+   "pool": "practice",
+   "stem": "What does a Benford's Law analysis test?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Duplicate invoice numbers",
+     "explanation": "That's a duplicate test.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Leading-digit frequencies",
+     "explanation": "Correct. Natural data follow a predictable pattern."
+    },
+    {
+     "id": "c",
+     "text": "Gaps in check sequences",
+     "explanation": "That's a gap test.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Year-over-year trends",
+     "explanation": "That's trend analysis.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Benford's Law compares the distribution of leading digits to an expected pattern.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-23",
+   "pool": "practice",
+   "stem": "Before relying on client data for analytics, what must the auditor evaluate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only its file format",
+     "explanation": "Reliability matters.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "Only the volume of records",
+     "explanation": "Reliability matters.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "The data's reliability",
+     "explanation": "Correct. Including source, completeness and accuracy."
+    },
+    {
+     "id": "d",
+     "text": "Nothing; client data is trusted",
+     "explanation": "It must be evaluated.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The auditor evaluates the relevance and reliability of information used as evidence.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-24",
+   "pool": "practice",
+   "stem": "A regression of sales on store square footage shows one store far above its predicted range. What should the auditor do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Ignore it; one store",
+     "explanation": "Outliers need investigation.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Accept the sales as reasonable",
+     "explanation": "It's outside expectations.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Remove it from the model",
+     "explanation": "Investigate first.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Investigate that store's sales",
+     "explanation": "Correct. It's an outlier needing follow-up."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Significant differences from an expectation must be investigated.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-25",
+   "pool": "practice",
+   "stem": "A Benford test of vendor payments shows a spike in amounts just under the $5,000 approval threshold. What does it suggest?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Payments split to avoid limits",
+     "explanation": "Correct. Clustering below a threshold is a red flag."
+    },
+    {
+     "id": "b",
+     "text": "Normal purchasing patterns",
+     "explanation": "It deviates from expectation.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Random data entry errors only",
+     "explanation": "It suggests a pattern.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Correct application of controls",
+     "explanation": "It suggests circumvention.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Clustering just below authorization limits may indicate split transactions designed to avoid controls.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-26",
+   "pool": "practice",
+   "stem": "An analytics routine flags 120 exceptions in a 50,000-entry population. How should the auditor evaluate them?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Treat them all as misstatements",
+     "explanation": "They need investigation.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Investigate each one",
+     "explanation": "Correct. Exceptions aren't automatically errors."
+    },
+    {
+     "id": "c",
+     "text": "Ignore them as a small share",
+     "explanation": "They must be evaluated.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Sample 25 and stop testing",
+     "explanation": "Investigate as needed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Exceptions from analytics require follow-up to determine whether they represent misstatements or control deviations.",
+   "skill": "evaluation",
+   "difficulty": 3,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-da-27",
+   "pool": "practice",
+   "stem": "Client data for an ADA comes from a system with ineffective IT general controls. What is the auditor's best response?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Rely on the data as it is",
+     "explanation": "Reliability is in doubt.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Skip the procedure entirely",
+     "explanation": "Alternative testing is possible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Test the data directly",
+     "explanation": "Correct. Weak ITGCs undermine reliance."
+    },
+    {
+     "id": "d",
+     "text": "Disclaim an opinion on the audit",
+     "explanation": "Not necessarily required.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "When ITGCs are ineffective, the auditor performs additional procedures to test the completeness and accuracy of the data.",
+   "skill": "evaluation",
+   "difficulty": 3,
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/questions.json"
+  },
+  {
+   "id": "aud-x3-09",
+   "moduleId": "aud-data-analytics",
+   "pool": "exam",
+   "stem": "An ADA on 100% of payroll identifies two employees sharing the same bank account. What should the auditor do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Ignore it, because ADAs often produce false positives",
+     "explanation": "Outliers must be investigated.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Conclude that payroll controls are operating effectively",
+     "explanation": "The result suggests the opposite.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Propose an adjustment to payroll expense",
+     "explanation": "No misstatement is established yet.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Investigate for a ghost employee or other theft",
+     "explanation": "Correct. Shared bank accounts are a common indicator of ghost employees."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Shared bank accounts are a common indicator of ghost employees.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/aud/exam-questions/aud-exam-area3.json"
+  },
+  {
+   "id": "aud-x3-10",
+   "moduleId": "aud-data-analytics",
+   "pool": "exam",
+   "stem": "Before using a client-generated report of all sales transactions in an ADA, the auditor should:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Obtain evidence about its completeness and accuracy",
+     "explanation": "Correct. AU-C 500: evaluate whether information produced by the entity is sufficiently reliable."
+    },
+    {
+     "id": "b",
+     "text": "Assume it is accurate because it's system-generated",
+     "explanation": "System reports still need testing.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Ask management to sign each page",
+     "explanation": "A signature doesn't test reliability.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Have the IT department certify it",
+     "explanation": "Certification alone isn't sufficient.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "AU-C 500: evaluate whether information produced by the entity is sufficiently reliable.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/aud/exam-questions/aud-exam-area3.json"
+  },
+  {
+   "id": "aud-x3-32",
+   "moduleId": "aud-data-analytics",
+   "pool": "exam",
+   "stem": "An auditor uses a data analytics tool to test the entire population of vendor payments and identifies 14 possible duplicate payments. The auditor should:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Conclude that payments are misstated by the total of the 14 items",
+     "explanation": "Flagged items are exceptions to investigate, not confirmed misstatements.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Ignore the results because analytics aren't audit procedures",
+     "explanation": "Analytics can be risk assessment or substantive procedures.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Project the 14 items to the population as in sampling",
+     "explanation": "The whole population was tested; there is nothing to project.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Investigate the flagged items to see if they are errors",
+     "explanation": "Correct. Analytics flag items; the auditor must follow up to obtain evidence."
+    }
+   ],
+   "answer": "d",
+   "explanation": "When analytics identify items for further consideration, the auditor investigates them to determine whether they represent misstatements or control deviations.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/aud/exam-questions/aud-exam-area3.json"
+  },
+  {
+   "id": "aud-x3-45",
+   "moduleId": "aud-data-analytics",
+   "pool": "exam",
+   "stem": "Before relying on a client-generated report of all sales transactions for a data analytics procedure, the auditor should:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Evaluate whether the information is complete and accurate",
+     "explanation": "Correct. Information produced by the entity must be evaluated for completeness and accuracy."
+    },
+    {
+     "id": "b",
+     "text": "Assume it is reliable because it came from the accounting system",
+     "explanation": "Reliability must be evaluated.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Obtain a written representation instead of testing it",
+     "explanation": "Representations don't substitute for evidence about data.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Use it only if management prepared it manually",
+     "explanation": "System-generated reports are also evaluated.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "a",
+   "explanation": "AU-C 500: when using information produced by the entity, the auditor evaluates whether it is sufficiently reliable, including its completeness and accuracy.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/aud/exam-questions/aud-exam-area3.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "aud-da-f1",
+   "front": "ADA steps",
+   "back": "Plan → access and prepare data → assess relevance and reliability → perform → evaluate results.",
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/flashcards.json"
+  },
+  {
+   "id": "aud-da-f2",
+   "front": "Testing completeness of a data extract",
+   "back": "Reconcile totals and record counts to the general ledger and system reports.",
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/flashcards.json"
+  },
+  {
+   "id": "aud-da-f3",
+   "front": "Testing accuracy of a data extract",
+   "back": "Agree lines to source documents; test controls over the report.",
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/flashcards.json"
+  },
+  {
+   "id": "aud-da-f4",
+   "front": "Final analytical procedures",
+   "back": "Required in every audit to help form an overall conclusion.",
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/flashcards.json"
+  },
+  {
+   "id": "aud-da-f5",
+   "front": "Benford's Law",
+   "back": "The expected distribution of leading digits; departures may signal fabricated numbers.",
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/flashcards.json"
+  },
+  {
+   "id": "aud-da-f6",
+   "front": "Gap detection",
+   "back": "Missing numbers in a sequence may indicate unrecorded transactions (completeness).",
+   "moduleId": "aud-data-analytics",
+   "_file": "content/aud/modules/aud-data-analytics/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/aud/tbs/aud-tbs-r3-journal-entries.json",
+  "content/aud/tbs/aud-tbs-u6-ada-review.json",
+  "content/aud/tbs/aud-tbs-u6-analytics-evaluation.json"
+ ]
+}

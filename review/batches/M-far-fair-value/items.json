@@ -1,0 +1,1291 @@
+{
+ "mcqs": [
+  {
+   "id": "far-fv-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: under ASC 820, fair value is best described as:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The price paid to acquire the asset (an entry price)",
+     "explanation": "Fair value is an exit price.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "The exit price in an orderly market transaction",
+     "explanation": "Correct. Fair value is a market-based exit price in an orderly transaction between market participants at the measurement date."
+    },
+    {
+     "id": "c",
+     "text": "The asset's value to the company, given its specific plans",
+     "explanation": "Entity-specific value isn't fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The price obtainable in a forced liquidation sale",
+     "explanation": "Distress sales aren't orderly transactions.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Fair value is a market-based exit price in an orderly transaction between market participants at the measurement date.",
+   "skill": "remembering",
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-chk1",
+   "pool": "lesson",
+   "stem": "An asset is sold in its principal market at a quoted price of $50. Transaction costs would be $4 and transport costs to that market would be $3. What is fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50",
+     "explanation": "Transport costs reduce fair value when location is a characteristic.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$43",
+     "explanation": "Transaction costs are not deducted from fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$46",
+     "explanation": "This deducts transaction costs instead of transport costs.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$47",
+     "explanation": "Correct. 50 − 3 transport."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Fair value = price in the principal market − transport costs = 50 − 3 = **47**. Transaction costs are excluded.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-chk2",
+   "pool": "lesson",
+   "stem": "A company elects the fair value option for its bonds payable. Their fair value falls by $400,000, of which $150,000 is due to deterioration in the company's own credit. How is the change reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$400,000 gain in net income",
+     "explanation": "The own-credit portion goes to OCI.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$250,000 gain in NI; $150,000 in OCI",
+     "explanation": "Correct. Under the FVO for liabilities, changes due to instrument-specific credit risk go to OCI; the rest goes to earnings."
+    },
+    {
+     "id": "c",
+     "text": "$400,000 gain in OCI",
+     "explanation": "Only the own-credit portion goes to OCI.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "No entry; the debt stays at amortized cost",
+     "explanation": "The FVO was elected.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Under the FVO for liabilities, changes due to instrument-specific credit risk go to OCI; the rest goes to earnings.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-01",
+   "pool": "practice",
+   "stem": "Which input is Level 2 in the fair value hierarchy?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A quoted price in an active market for the identical stock",
+     "explanation": "That is Level 1.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Management's projected cash flows for a private company",
+     "explanation": "That is Level 3.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Quoted prices for similar assets in active markets",
+     "explanation": "Correct. Level 2 includes quoted prices for similar items in active markets, quoted prices in inactive markets, and other observable inputs such as interest rates and yield curves."
+    },
+    {
+     "id": "d",
+     "text": "An internal model with unobservable volatility assumptions",
+     "explanation": "Significant unobservable inputs → Level 3.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Level 2 includes quoted prices for similar items in active markets, quoted prices in inactive markets, and other observable inputs such as interest rates and yield curves.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-02",
+   "pool": "practice",
+   "stem": "An asset trades in two markets; neither is the principal market. Market X: price $100, transaction costs $10, transport $5. Market Y: price $97, transaction costs $4, transport $6. What is fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$95",
+     "explanation": "This uses Market X, but Market Y yields the higher net amount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$87",
+     "explanation": "This deducts transaction costs from fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$91",
+     "explanation": "Correct. Most advantageous market Y (net 87 vs. 85); FV = 97 − 6 transport."
+    },
+    {
+     "id": "d",
+     "text": "$97",
+     "explanation": "Transport costs must be deducted.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Net amounts: X = 100 − 10 − 5 = 85; Y = 97 − 4 − 6 = 87 → Y is most advantageous. Fair value = 97 − 6 = **91**.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-03",
+   "pool": "practice",
+   "stem": "A company owns land used as a parking lot. Market participants would develop it as a residential tower, which is legally permitted and financially feasible. How is the land's fair value determined?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Based on its current use as a parking lot",
+     "explanation": "Fair value reflects highest and best use by market participants.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Highest and best use: residential development",
+     "explanation": "Correct. For nonfinancial assets, fair value assumes the highest and best use by market participants that is physically possible, legally permissible, and financially feasible — even if the entity uses it differently."
+    },
+    {
+     "id": "c",
+     "text": "At its historical cost to the company",
+     "explanation": "Fair value isn't historical cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "At the average value of the two uses",
+     "explanation": "Fair value uses one highest-and-best-use premise; values aren't averaged.",
+     "trap": "other"
+    }
+   ],
+   "answer": "b",
+   "explanation": "For nonfinancial assets, fair value assumes the highest and best use by market participants that is physically possible, legally permissible, and financially feasible — even if the entity uses it differently.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-04",
+   "pool": "practice",
+   "stem": "A fair value measurement uses a Level 1 input and a Level 3 input; the Level 3 input is significant to the measurement. At which level is the measurement categorized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Level 1",
+     "explanation": "Categorization is based on the lowest level significant input.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "Level 2",
+     "explanation": "There's no averaging of levels.",
+     "trap": "other"
+    },
+    {
+     "id": "c",
+     "text": "Level 3",
+     "explanation": "Correct. The entire measurement is classified at the lowest level of any input that is significant to it."
+    },
+    {
+     "id": "d",
+     "text": "It must be split between levels",
+     "explanation": "The whole measurement is categorized at one level.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The entire measurement is classified at the lowest level of any input that is significant to it.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-05",
+   "pool": "practice",
+   "stem": "Which valuation approach uses current replacement cost adjusted for obsolescence?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Market approach",
+     "explanation": "Uses prices of identical or comparable items.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Income approach",
+     "explanation": "Discounts future amounts.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Cost approach",
+     "explanation": "Correct. The cost approach reflects the amount required currently to replace an asset's service capacity (current replacement cost)."
+    },
+    {
+     "id": "d",
+     "text": "Residual approach",
+     "explanation": "That's a revenue allocation technique.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The cost approach reflects the amount required currently to replace an asset's service capacity (current replacement cost).",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-06",
+   "pool": "practice",
+   "stem": "Which statement about the fair value option is correct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It can be revoked if fair values become volatile",
+     "explanation": "The election is irrevocable.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It must be applied to all similar instruments held",
+     "explanation": "It's elected instrument by instrument.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "It's available for PP&E and inventory as well",
+     "explanation": "Those aren't eligible financial items.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "It is elected by instrument and irrevocable",
+     "explanation": "Correct. ASC 825-10: the FVO may be elected for eligible items on an instrument-by-instrument basis at specified election dates; once elected, it's irrevocable."
+    }
+   ],
+   "answer": "d",
+   "explanation": "ASC 825-10: the FVO may be elected for eligible items on an instrument-by-instrument basis at specified election dates; once elected, it's irrevocable.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-07",
+   "pool": "practice",
+   "stem": "A company must value a liability at fair value. Which concept applies?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The amount the company would pay to settle with the creditor today",
+     "explanation": "Fair value assumes transfer to a market participant, not settlement.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "The transfer price, reflecting nonperformance risk",
+     "explanation": "Correct. Fair value of a liability is a transfer price, and it reflects nonperformance risk (including the entity's own credit risk)."
+    },
+    {
+     "id": "c",
+     "text": "The undiscounted contractual payments remaining",
+     "explanation": "Fair value is a market-based present value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The original proceeds received on the loan",
+     "explanation": "That's historical, not fair value.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Fair value of a liability is a transfer price, and it reflects nonperformance risk (including the entity's own credit risk).",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-08",
+   "pool": "practice",
+   "stem": "Which Level 3 disclosure is required but not required for Level 1 recurring measurements?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A reconciliation of opening and closing balances",
+     "explanation": "Correct. Level 3 recurring measurements require a roll-forward (reconciliation) and quantitative information about significant unobservable inputs."
+    },
+    {
+     "id": "b",
+     "text": "The fair value amount at the reporting date",
+     "explanation": "Required for all levels.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "The level of the hierarchy used",
+     "explanation": "Required for all levels.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "The measurement date of the fair value",
+     "explanation": "Implicit for all.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Level 3 recurring measurements require a roll-forward (reconciliation) and quantitative information about significant unobservable inputs.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-09",
+   "pool": "practice",
+   "stem": "Just before year-end, a company is forced by its lender to sell a block of shares within one day at a steep discount. Is that price fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, because it's an actual transaction price",
+     "explanation": "A forced or distressed sale isn't an orderly transaction.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "No; it wasn't an orderly transaction",
+     "explanation": "Correct. Fair value assumes an orderly transaction with usual marketing activities; forced liquidations or distress sales don't represent fair value."
+    },
+    {
+     "id": "c",
+     "text": "Yes, if the shares are Level 1 securities",
+     "explanation": "Level doesn't cure a forced sale.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "No, because fair value is based on entry prices",
+     "explanation": "Fair value is an exit price.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Fair value assumes an orderly transaction with usual marketing activities; forced liquidations or distress sales don't represent fair value.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-10",
+   "pool": "practice",
+   "stem": "A company holds 10,000 shares of a stock listed on an active exchange, closing at $42. The company believes the block is worth $45 per share to a strategic buyer, and a sale of the whole block would depress the price. What is the fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$420,000",
+     "explanation": "Correct. Level 1 fair value = quoted price × quantity, with no blockage adjustment."
+    },
+    {
+     "id": "b",
+     "text": "$450,000",
+     "explanation": "Entity-specific views of a strategic buyer's price aren't market participant exit prices.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "c",
+     "text": "Less than $420,000, reflecting a blockage discount",
+     "explanation": "ASC 820 prohibits blockage factors for Level 1 measurements.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Cost of the shares",
+     "explanation": "Listed equity securities are measured at fair value.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "For Level 1 inputs, fair value is the quoted price times the quantity held (P × Q) — no blockage discount or premium: 10,000 × 42 = **420,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-11",
+   "pool": "practice",
+   "stem": "A company bought equipment for $100,000. A market participant would pay $92,000 for it today in an orderly transaction. What is its fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "Entry price isn't fair value.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$96,000",
+     "explanation": "Prices aren't averaged.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Depreciated cost",
+     "explanation": "Cost isn't fair value.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$92,000",
+     "explanation": "Correct. Fair value is an exit price."
+    }
+   ],
+   "answer": "d",
+   "explanation": "ASC 820: fair value is the price received to sell an asset in an orderly transaction between market participants.",
+   "skill": "application",
+   "difficulty": 1,
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-12",
+   "pool": "practice",
+   "stem": "An asset's quoted price in its principal market is $50. Transaction costs to sell are $3, and costs to transport the asset to that market are $2. What is its fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$48",
+     "explanation": "Correct. Fair value is reduced for transport costs but not transaction costs."
+    },
+    {
+     "id": "b",
+     "text": "$45",
+     "explanation": "Transaction costs aren't deducted.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$50",
+     "explanation": "Transport costs reduce fair value.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$47",
+     "explanation": "Transaction costs aren't deducted.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 820-10-35-9B: fair value excludes transaction costs but is adjusted for transportation costs.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-13",
+   "pool": "practice",
+   "stem": "An asset's principal market price is $40 (transaction costs $4). In another market the price is $42 (transaction costs $7). What is its fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$42",
+     "explanation": "The principal market takes priority.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40",
+     "explanation": "Correct. Fair value uses the principal market, without deducting transaction costs."
+    },
+    {
+     "id": "c",
+     "text": "$36",
+     "explanation": "Transaction costs aren't deducted from fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$35",
+     "explanation": "The other market isn't used when there is a principal market.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "ASC 820-10-35-5: fair value is measured in the principal market if one exists, even if another market offers a better net price.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-14",
+   "pool": "practice",
+   "stem": "A company holds 1,000,000 shares of a listed stock trading at $10. Selling the whole block at once would depress the price. What is the Level 1 fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Less than $10,000,000, with a blockage discount",
+     "explanation": "Blockage discounts aren't allowed for Level 1.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "More than $10,000,000, with a control premium",
+     "explanation": "No premium applies to a Level 1 measurement.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$10,000,000",
+     "explanation": "Correct. Level 1 uses quoted price × quantity; blockage factors are prohibited."
+    },
+    {
+     "id": "d",
+     "text": "The cost of the shares",
+     "explanation": "Fair value isn't cost.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ASC 820-10-35-44: a Level 1 measurement is quoted price × quantity, without adjustment for size.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-15",
+   "pool": "practice",
+   "stem": "A company elects the fair value option for its own bonds payable. Part of the fair value change is caused by a change in its own credit risk. Where is that part reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "In net income",
+     "explanation": "Own-credit changes are separated into OCI.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Not recognized",
+     "explanation": "The change is recognized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As an adjustment to retained earnings",
+     "explanation": "It goes through OCI.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "In other comprehensive income",
+     "explanation": "Correct. Instrument-specific credit risk changes on FVO liabilities go to OCI."
+    }
+   ],
+   "answer": "d",
+   "explanation": "ASC 825-10-45-5: changes in fair value from instrument-specific credit risk of FVO liabilities are presented in OCI.",
+   "skill": "application",
+   "difficulty": 3,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-16",
+   "pool": "practice",
+   "stem": "A company values shares of a private company using its own projected cash flows and discount rate. Which level is the measurement?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Level 1",
+     "explanation": "No quoted price exists.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Level 3",
+     "explanation": "Correct. The key inputs are unobservable."
+    },
+    {
+     "id": "c",
+     "text": "Level 2",
+     "explanation": "The inputs aren't observable.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "It can't be measured",
+     "explanation": "Level 3 inputs are allowed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Measurements relying on significant unobservable inputs, such as internal projections, are Level 3.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-17",
+   "pool": "practice",
+   "stem": "For which item does the highest-and-best-use concept apply in measuring fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A corporate bond",
+     "explanation": "Not for financial assets.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "A note payable",
+     "explanation": "Not for liabilities.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A building",
+     "explanation": "Correct. It applies only to nonfinancial assets."
+    },
+    {
+     "id": "d",
+     "text": "Listed shares",
+     "explanation": "Not for financial assets.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Highest and best use applies only to nonfinancial assets.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-18",
+   "pool": "practice",
+   "stem": "How does ASC 820 define fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An entry price",
+     "explanation": "FV is an exit price.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "Historical cost",
+     "explanation": "Fair value is a current price.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Entity-specific value",
+     "explanation": "FV is market-based.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "An exit price",
+     "explanation": "Correct. The price to sell or transfer, not to buy."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Fair value is the price received to sell an asset or paid to transfer a liability in an orderly transaction between market participants.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-19",
+   "pool": "practice",
+   "stem": "An asset's price in its principal market is $50. Transport costs to that market are $3, and transaction costs are $2. What is fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$47",
+     "explanation": "Correct. Deduct transport but not transaction costs."
+    },
+    {
+     "id": "b",
+     "text": "$45",
+     "explanation": "Transaction costs aren't deducted.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$50",
+     "explanation": "Deduct transport costs.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$48",
+     "explanation": "Transport costs, not transaction costs.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Fair value is adjusted for transport costs when location is a characteristic, but not for transaction costs.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-20",
+   "pool": "practice",
+   "stem": "A company values a purchased royalty stream by discounting expected future royalties. Which valuation approach is it using?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The market approach",
+     "explanation": "That uses comparable prices.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "The income approach",
+     "explanation": "Correct. It converts future amounts to a present value."
+    },
+    {
+     "id": "c",
+     "text": "The cost approach",
+     "explanation": "That uses replacement cost.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "The equity method",
+     "explanation": "Not a valuation approach.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The income approach uses present value techniques on future cash flows.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-21",
+   "pool": "practice",
+   "stem": "A bond is valued using quoted prices for similar bonds in active markets. What fair value level is this?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Level 2",
+     "explanation": "Correct. Similar-asset prices are Level 2."
+    },
+    {
+     "id": "b",
+     "text": "Level 1",
+     "explanation": "That's identical assets.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Level 3",
+     "explanation": "The inputs are observable.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Not a fair value measure",
+     "explanation": "It is a fair value measure.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Level 2 inputs are observable, other than quoted prices for identical assets.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-22",
+   "pool": "practice",
+   "stem": "No principal market exists. Market A: price $100, transaction costs $6, transport $2. Market B: price $98, transaction costs $2, transport $2. What is fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$94",
+     "explanation": "Don't deduct transaction costs.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$96",
+     "explanation": "Correct. B is most advantageous (net $94); FV = $98 − $2 transport."
+    },
+    {
+     "id": "c",
+     "text": "$98",
+     "explanation": "Deduct transport.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$92",
+     "explanation": "B is most advantageous.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "With no principal market, use the most advantageous market; fair value deducts transport costs but not transaction costs.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-23",
+   "pool": "practice",
+   "stem": "Market A (price $100, transaction costs $6, transport $2) is the principal market. Market B is $98, $2 and $2. What is fair value?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$96",
+     "explanation": "Use the principal market.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$92",
+     "explanation": "Don't deduct transaction costs.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$98",
+     "explanation": "Correct. Principal market price less transport."
+    },
+    {
+     "id": "d",
+     "text": "$100",
+     "explanation": "Deduct transport.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Fair value uses the principal market when one exists, adjusted for transport but not transaction costs.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-24",
+   "pool": "practice",
+   "stem": "Land used as a factory site would be worth more to market participants as residential land. How is its fair value measured?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "At current-use value",
+     "explanation": "Use highest and best use.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "At historical cost",
+     "explanation": "Fair value is required.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "At the lower of the two",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "At residential-use value",
+     "explanation": "Correct. Fair value uses highest and best use."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Nonfinancial assets are measured at their highest and best use from a market participant's view.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-25",
+   "pool": "practice",
+   "stem": "In measuring fair value, how are transaction costs treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "They aren't deducted from the price",
+     "explanation": "Correct. They're specific to the transaction."
+    },
+    {
+     "id": "b",
+     "text": "They're deducted from the price",
+     "explanation": "They are not deducted.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "They're added to the price",
+     "explanation": "They are not added.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "They're deducted only for Level 3",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Transaction costs aren't part of fair value, though they're used to find the most advantageous market.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-26",
+   "pool": "practice",
+   "stem": "A valuation relies mainly on the entity's own cash flow projections, with no market data. What level is this?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Level 1",
+     "explanation": "No quoted prices.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Level 3",
+     "explanation": "Correct. Significant unobservable inputs mean Level 3."
+    },
+    {
+     "id": "c",
+     "text": "Level 2",
+     "explanation": "The inputs aren't observable.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Not permitted",
+     "explanation": "It is permitted.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Level 3 inputs are unobservable, such as the entity's own assumptions.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-27",
+   "pool": "practice",
+   "stem": "A measurement uses Level 1 and Level 2 inputs and one significant Level 3 input. How is it categorized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Level 1",
+     "explanation": "Not the highest level.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Level 2",
+     "explanation": "A significant Level 3 input exists.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Level 3",
+     "explanation": "Correct. The lowest significant input controls."
+    },
+    {
+     "id": "d",
+     "text": "Split across levels",
+     "explanation": "It's classified once.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A fair value measurement is categorized at the lowest level input significant to it.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-fv-28",
+   "pool": "practice",
+   "stem": "How is the fair value of a liability measured?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As the cost to settle it",
+     "explanation": "It's a transfer price.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "As its face amount owed",
+     "explanation": "Not fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Ignoring credit risk",
+     "explanation": "Nonperformance risk is included.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "As its transfer price",
+     "explanation": "Correct. Fair value assumes a transfer to a participant."
+    }
+   ],
+   "answer": "d",
+   "explanation": "A liability's fair value is the price to transfer it to a market participant, including nonperformance risk.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/questions.json"
+  },
+  {
+   "id": "far-x3-09",
+   "moduleId": "far-fair-value",
+   "pool": "exam",
+   "stem": "Which of the following is a **Level 2** input in the fair value hierarchy?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Quoted prices in active markets for identical assets",
+     "explanation": "That is Level 1.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Quoted prices in active markets for similar assets",
+     "explanation": "Correct. Observable inputs other than Level 1 prices are Level 2."
+    },
+    {
+     "id": "c",
+     "text": "The entity's own cash-flow projections",
+     "explanation": "Unobservable inputs are Level 3.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "The historical cost of the asset",
+     "explanation": "Historical cost is not a fair value input.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Level 1: quoted prices for identical items in active markets. Level 2: other observable inputs (similar items, inactive markets, observable rates). Level 3: unobservable inputs.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "calc": false,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-19",
+   "moduleId": "far-fair-value",
+   "pool": "exam",
+   "stem": "Which input is a Level 2 input under ASC 820?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A quoted price for the identical asset in an active market",
+     "explanation": "That is Level 1.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Management's own projections of future cash flows",
+     "explanation": "Unobservable inputs are Level 3.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "The historical cost paid for the asset several years ago",
+     "explanation": "Historical cost isn't a fair value input.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A quoted price for a similar asset in an active market",
+     "explanation": "Correct. Level 2 includes quoted prices for similar items and other observable inputs."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Level 1: quoted prices for identical items in active markets. Level 2: other observable inputs (similar items, inactive markets, observable rates). Level 3: unobservable inputs.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-28",
+   "moduleId": "far-fair-value",
+   "pool": "exam",
+   "stem": "Measuring the fair value of a nonfinancial asset, such as land, is based on:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Its highest and best use by market participants",
+     "explanation": "Correct. Fair value of nonfinancial assets assumes the highest and best use that is physically possible, legally permissible and financially feasible."
+    },
+    {
+     "id": "b",
+     "text": "The entity's current use, whatever market participants would do",
+     "explanation": "The market participant view governs, not the entity's own intent.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "The price the entity originally paid for it",
+     "explanation": "Historical cost isn't fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The entity's own value in use from its projections",
+     "explanation": "Entity-specific value isn't fair value.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 820-10-35-10A: fair value of a nonfinancial asset considers a market participant's highest and best use.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-fv-fc1",
+   "front": "Fair value definition (ASC 820)",
+   "back": "**Exit price** in an **orderly** transaction between **market participants** at the measurement date.",
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/flashcards.json"
+  },
+  {
+   "id": "far-fv-fc2",
+   "front": "Principal vs. most advantageous market",
+   "back": "Use the **principal** market (most volume). If none, the **most advantageous** (best net after transaction & transport costs).",
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/flashcards.json"
+  },
+  {
+   "id": "far-fv-fc3",
+   "front": "Transaction vs. transport costs",
+   "back": "**Transaction** costs: not deducted (only used to pick the market). **Transport** costs: deducted.",
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/flashcards.json"
+  },
+  {
+   "id": "far-fv-fc4",
+   "front": "Fair value hierarchy",
+   "back": "**L1** quoted prices, identical, active markets. **L2** other observable inputs. **L3** unobservable inputs. Categorize at the lowest significant input.",
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/flashcards.json"
+  },
+  {
+   "id": "far-fv-fc5",
+   "front": "Three valuation approaches",
+   "back": "**Market**, **income** (PV/DCF), **cost** (replacement cost).",
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/flashcards.json"
+  },
+  {
+   "id": "far-fv-fc6",
+   "front": "Fair value option",
+   "back": "Instrument by instrument, **irrevocable**; changes to **earnings**; liabilities' own-credit changes to **OCI**.",
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/flashcards.json"
+  },
+  {
+   "id": "far-fv-fc7",
+   "front": "Highest and best use",
+   "back": "Nonfinancial assets: physically possible, legally permissible, financially feasible use that maximizes value to market participants.",
+   "moduleId": "far-fair-value",
+   "_file": "content/far/modules/far-fair-value/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-u10-fair-value.json"
+ ]
+}

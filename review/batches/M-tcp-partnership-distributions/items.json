@@ -1,0 +1,2035 @@
+{
+ "mcqs": [
+  {
+   "id": "tcp-pd-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a partner with a $30,000 outside basis receives a current distribution of $12,000 cash. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$12,000 capital gain",
+     "explanation": "Cash doesn't exceed basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$12,000 ordinary income",
+     "explanation": "Distributions aren't income here.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "No gain; basis becomes $18,000",
+     "explanation": "Correct. §731: gain only when cash exceeds basis; the distribution reduces basis."
+    },
+    {
+     "id": "d",
+     "text": "$18,000 capital loss",
+     "explanation": "No loss on a current distribution.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§731: gain only when cash exceeds basis; the distribution reduces basis.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-chk1",
+   "pool": "lesson",
+   "stem": "A partner's outside basis is $25,000. She receives a current distribution of $30,000 cash. What is her gain and ending basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No gain; basis $(5,000)",
+     "explanation": "Basis can't be negative.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$5,000 ordinary income; basis $0",
+     "explanation": "The gain is capital (absent §751 shifts).",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$30,000 gain; basis $25,000",
+     "explanation": "Only the excess is gain.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$5,000 capital gain; basis $0",
+     "explanation": "Correct. Cash in excess of basis is gain from the sale of the interest — generally capital."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Cash in excess of basis is gain from the sale of the interest — generally capital.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-chk2",
+   "pool": "lesson",
+   "stem": "In complete liquidation, a partner with $40,000 of outside basis receives only $25,000 cash. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No loss; basis disappears",
+     "explanation": "A loss is recognized when only cash is received.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$15,000 ordinary loss",
+     "explanation": "The loss is capital.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$15,000 capital loss",
+     "explanation": "Correct. §731(a)(2): a loss is allowed when only money, receivables, and inventory are received."
+    },
+    {
+     "id": "d",
+     "text": "$25,000 gain",
+     "explanation": "Cash is less than basis.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§731(a)(2): a loss is allowed when only money, receivables, and inventory are received.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-01",
+   "pool": "practice",
+   "stem": "A partner (outside basis $60,000) receives a current distribution of $15,000 cash and inventory with a partnership basis of $20,000 (FMV $30,000). What is his basis in the inventory and his ending outside basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000; $25,000",
+     "explanation": "Correct. 60,000 − 15,000 − 20,000 = 25,000 remaining outside basis."
+    },
+    {
+     "id": "b",
+     "text": "$30,000; $15,000",
+     "explanation": "Inventory takes carryover basis, not FMV.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$45,000; $0",
+     "explanation": "Current distributions don't step up property.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$20,000; $40,000",
+     "explanation": "Omits the cash.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "60,000 − 15,000 − 20,000 = 25,000 remaining outside basis.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-02",
+   "pool": "practice",
+   "stem": "A partner with outside basis of $10,000 receives a current distribution of land (partnership basis $25,000; FMV $40,000). What is the land's basis to the partner?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000",
+     "explanation": "Limited to outside basis.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "The land takes the remaining basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$40,000",
+     "explanation": "FMV isn't used.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$10,000",
+     "explanation": "Correct. §732(a)(2): carryover basis limited to the partner's remaining outside basis; no gain recognized."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§732(a)(2): carryover basis limited to the partner's remaining outside basis; no gain recognized.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-03",
+   "pool": "practice",
+   "stem": "In complete liquidation, a partner with outside basis of $50,000 receives $10,000 cash and a building with a partnership basis of $20,000. What is the building's basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "Correct. 50,000 − 10,000."
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "In a liquidation, other property absorbs remaining basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$30,000",
+     "explanation": "Subtracts the building's partnership basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$50,000",
+     "explanation": "Cash reduces basis first.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Remaining basis after cash (40,000) is assigned to the building; no loss is recognized.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-04",
+   "pool": "practice",
+   "stem": "Which asset is a §751 hot asset?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Land held for investment",
+     "explanation": "Investment land is a capital asset.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Partnership goodwill",
+     "explanation": "Goodwill isn't a hot asset.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Cash-basis accounts receivable",
+     "explanation": "Correct. Unrealized receivables (including zero-basis receivables and depreciation recapture) and inventory are hot assets."
+    },
+    {
+     "id": "d",
+     "text": "Cash and cash equivalents",
+     "explanation": "Cash isn't a hot asset.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Unrealized receivables (including zero-basis receivables and depreciation recapture) and inventory are hot assets.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-05",
+   "pool": "practice",
+   "stem": "Fay sells her 25% interest for $80,000 cash; the buyer also assumes her $20,000 share of liabilities. Her outside basis (including the liabilities) is $60,000. Her share of the partnership's cash-basis receivables is FMV $12,000, basis $0. What is her ordinary income and capital gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$12,000 ordinary; $28,000 capital",
+     "explanation": "Correct. Total gain 100,000 − 60,000 = 40,000."
+    },
+    {
+     "id": "b",
+     "text": "$0 ordinary; $40,000 capital",
+     "explanation": "Hot assets produce ordinary income.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$12,000 ordinary; $8,000 capital",
+     "explanation": "Omits the liability relief from the amount realized.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$40,000 ordinary",
+     "explanation": "Only the hot-asset portion is ordinary.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Amount realized includes liabilities; §751 carves out 12,000 ordinary; the remaining 28,000 is capital.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-06",
+   "pool": "practice",
+   "stem": "When is a §743(b) basis adjustment mandatory even without a §754 election?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Whenever an interest is sold at a gain",
+     "explanation": "It's optional for gains.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Never, without a §754 election",
+     "explanation": "It can be mandatory.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "When a partner dies during the year",
+     "explanation": "Only with an election or substantial built-in loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "With a built-in loss over $250,000",
+     "explanation": "Correct. §743(d): substantial built-in loss requires the adjustment."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§743(d): substantial built-in loss requires the adjustment.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-07",
+   "pool": "practice",
+   "stem": "A buyer pays $300,000 for a 1/3 interest. The partnership's assets have an inside basis of $600,000 and FMV of $900,000; it has a §754 election. What is the buyer's §743(b) adjustment?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$300,000",
+     "explanation": "That's the buyer's price.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "Correct. 300,000 − 1/3 × 600,000."
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "The election allows an adjustment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$200,000",
+     "explanation": "Wrong share of the inside basis.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Adjustment = outside basis (price) − share of inside basis = 300,000 − 200,000.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-08",
+   "pool": "practice",
+   "stem": "A partner sells his interest on June 30. His share of partnership income from January 1 to June 30 is $15,000. How does this affect the sale?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It's ignored; the income is allocated to the buyer",
+     "explanation": "The seller's year closes on the sale date.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It increases his outside basis before computing gain",
+     "explanation": "Correct. §706(c)(2): the partnership year closes for the seller; his share of income increases basis and is reported by him."
+    },
+    {
+     "id": "c",
+     "text": "It is added to his amount realized on the sale",
+     "explanation": "It increases basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "It is taxed as capital gain on the sale",
+     "explanation": "His share of operating income is ordinary.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§706(c)(2): the partnership year closes for the seller; his share of income increases basis and is reported by him.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-09",
+   "pool": "practice",
+   "stem": "A partner receives a current distribution of marketable securities (FMV $30,000) and has an outside basis of $20,000. Absent an exception, what is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No gain; basis in securities $20,000",
+     "explanation": "Marketable securities are treated as money.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$10,000 gain",
+     "explanation": "Correct. §731(c): marketable securities are generally treated as money at FMV."
+    },
+    {
+     "id": "c",
+     "text": "$30,000 gain",
+     "explanation": "Only the excess over basis.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$10,000 loss",
+     "explanation": "A distribution in excess of basis is gain.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§731(c): marketable securities are generally treated as money at FMV.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-10",
+   "pool": "practice",
+   "stem": "A partner receives inventory (basis $8,000) in a current distribution and sells it 2 years later for $12,000. What is the character of the $4,000 gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Capital, because she held it more than 1 year",
+     "explanation": "Distributed inventory is ordinary for 5 years.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Ordinary income",
+     "explanation": "Correct. §735(a)(2): distributed inventory keeps its ordinary character if sold within 5 years."
+    },
+    {
+     "id": "c",
+     "text": "§1231 gain",
+     "explanation": "Inventory isn't §1231 property.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Not taxable",
+     "explanation": "The sale is taxable.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§735(a)(2): distributed inventory keeps its ordinary character if sold within 5 years.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-11",
+   "pool": "practice",
+   "stem": "A partner with an outside basis of $20,000 receives a $25,000 current cash distribution. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No gain",
+     "explanation": "Cash over basis is gain.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$25,000 gain",
+     "explanation": "Only the excess is gain.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$5,000 loss",
+     "explanation": "The result is a gain, not a loss.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$5,000 gain",
+     "explanation": "Correct. Cash beyond basis is gain."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§731(a)(1): gain is recognized when cash distributed exceeds outside basis.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-12",
+   "pool": "practice",
+   "stem": "A partner with an outside basis of $50,000 receives $30,000 cash in complete liquidation of her interest. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000 loss",
+     "explanation": "Correct. Only cash was received."
+    },
+    {
+     "id": "b",
+     "text": "No loss",
+     "explanation": "A loss is recognized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$30,000 loss",
+     "explanation": "Loss is basis less cash.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$20,000 gain",
+     "explanation": "The result is a loss, not a gain.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "a",
+   "explanation": "§731(a)(2): a loss is recognized in a liquidating distribution of only cash, unrealized receivables and inventory.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-13",
+   "pool": "practice",
+   "stem": "In liquidation, a partner (outside basis $40,000) receives $10,000 cash and inventory with a partnership basis of $15,000. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No loss; basis $30,000",
+     "explanation": "Inventory can't be stepped up.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$15,000 loss; basis $15,000",
+     "explanation": "Correct. Inventory keeps its basis."
+    },
+    {
+     "id": "c",
+     "text": "$15,000 gain; basis $15,000",
+     "explanation": "The result is a loss, not a gain.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "No loss; basis $25,000",
+     "explanation": "Inventory can't be stepped up.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Inventory takes no more than the partnership's basis; the remaining $15,000 basis is a recognized loss.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-14",
+   "pool": "practice",
+   "stem": "A partner receives land in a current distribution. How does the holding period work?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It starts on the distribution date",
+     "explanation": "The partnership's period tacks.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It's always short-term at first",
+     "explanation": "The partnership's period tacks.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "It includes the partnership's",
+     "explanation": "Correct. The holding period tacks."
+    },
+    {
+     "id": "d",
+     "text": "It uses the partner's interest period",
+     "explanation": "That isn't how the rule works.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§735(b): a partner's holding period for distributed property includes the partnership's holding period.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-15",
+   "pool": "practice",
+   "stem": "A partner's outside basis is $5,000. Her share of partnership liabilities decreases by $8,000, and there are no other items. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No gain",
+     "explanation": "Liability relief is a deemed distribution.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$8,000 gain",
+     "explanation": "Only the excess is gain.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$3,000 loss",
+     "explanation": "The result is a gain, not a loss.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$3,000 gain",
+     "explanation": "Correct. The deemed cash distribution exceeds basis."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§752(b): a decrease in a partner's share of liabilities is a deemed cash distribution.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-16",
+   "pool": "practice",
+   "stem": "In complete liquidation, a partner with an outside basis of $40,000 receives only land with a partnership basis of $25,000. What is her basis in the land?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000",
+     "explanation": "Liquidations use the outside basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "Correct. A substituted basis in liquidation."
+    },
+    {
+     "id": "c",
+     "text": "$15,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$65,000",
+     "explanation": "Basis isn't added.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "In a liquidating distribution of property other than cash, receivables or inventory, the partner's remaining basis is assigned to the property.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-17",
+   "pool": "practice",
+   "stem": "A partner contributed appreciated land 3 years ago. The partnership now distributes it to a different partner. What is the effect on the contributing partner?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No effect on her",
+     "explanation": "The mixing bowl rule applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "The distributee recognizes it",
+     "explanation": "The contributor does.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "She recognizes her built-in gain",
+     "explanation": "Correct. The 7-year mixing bowl rule."
+    },
+    {
+     "id": "d",
+     "text": "The partnership recognizes it",
+     "explanation": "The contributor does.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§704(c)(1)(B): if contributed property is distributed to another partner within 7 years, the contributor recognizes the precontribution gain.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-18",
+   "pool": "practice",
+   "stem": "A partner recognizes gain on a cash distribution, and the partnership has a §754 election. What adjustment follows?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A §743(b) adjustment",
+     "explanation": "That's for transfers of interests.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "A decrease to inside basis",
+     "explanation": "It's an increase.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "No adjustment at all",
+     "explanation": "The election requires one.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A §734(b) basis increase",
+     "explanation": "Correct. It reflects the gain."
+    }
+   ],
+   "answer": "d",
+   "explanation": "With a §754 election, a distribution in which the partner recognizes gain increases the basis of partnership property under §734(b).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-19",
+   "pool": "practice",
+   "stem": "In liquidation, a partner (basis $50,000) receives inventory (inside basis $20,000), land A (inside basis $20,000; FMV $30,000) and land B (inside basis $40,000; FMV $10,000). What is her basis in land B?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "Correct. The $30,000 decrease goes first to depreciated land B."
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "Basis must be reduced.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$20,000",
+     "explanation": "Allocate the decrease to depreciation first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$15,000",
+     "explanation": "Not the method.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Inventory takes $20,000; the remaining $30,000 is less than the lands' $60,000 inside basis, so the $30,000 decrease goes first to property with unrealized depreciation.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-20",
+   "pool": "practice",
+   "stem": "A partner recognizes gain because a current cash distribution exceeds her outside basis. How is the gain characterized, absent §751 assets?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Ordinary income",
+     "explanation": "Not absent hot assets.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Capital gain",
+     "explanation": "Correct. It's treated as sale of the interest."
+    },
+    {
+     "id": "c",
+     "text": "Tax-exempt",
+     "explanation": "Jury pay is taxable.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "§1231 gain",
+     "explanation": "The gain is capital.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Gain on a distribution in excess of basis is treated as gain from sale of the partnership interest, generally capital.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-21",
+   "pool": "practice",
+   "stem": "Ann contributed appreciated land (built-in gain $30,000) to a partnership 3 years ago. The partnership now distributes other property to Ann, worth $50,000 more than her outside basis. What does she recognize?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000 gain",
+     "explanation": "Correct. §737 limits gain to the lesser of the excess or her net precontribution gain."
+    },
+    {
+     "id": "b",
+     "text": "$50,000 gain",
+     "explanation": "Limited to precontribution gain.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "No gain",
+     "explanation": "§737 applies here.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$20,000 gain",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Under §737, a contributing partner who receives other property within 7 years recognizes gain up to her net precontribution gain.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-22",
+   "pool": "practice",
+   "stem": "In complete liquidation, a partner (outside basis $100,000) receives $10,000 cash, land A (inside basis $20,000; FMV $50,000) and land B (inside basis $30,000; FMV $40,000). What is her basis in land A?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Basis must be increased.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$50,000",
+     "explanation": "Correct. The $40,000 increase goes first to unrealized appreciation: A $30,000, B $10,000."
+    },
+    {
+     "id": "c",
+     "text": "$54,000",
+     "explanation": "Allocate appreciation first.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$45,000",
+     "explanation": "Not the method.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§732(c): increases are allocated first to properties with unrealized appreciation, up to that appreciation.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-23",
+   "pool": "practice",
+   "stem": "A partner (basis $30,000) receives land (inside basis $25,000) in a current distribution, and her share of partnership liabilities falls by $10,000. What is her basis in the land?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000",
+     "explanation": "Cash is applied first.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Basis is limited.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$20,000",
+     "explanation": "Correct. The liability relief is treated as cash first."
+    },
+    {
+     "id": "d",
+     "text": "$15,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Deemed cash of $10,000 reduces outside basis to $20,000, which limits the land's basis.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-24",
+   "pool": "practice",
+   "stem": "When does a current cash distribution cause gain to a partner?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Always",
+     "explanation": "Only above basis.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Never",
+     "explanation": "Excess cash is gain.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "When it exceeds outside basis",
+     "explanation": "Correct. The excess is gain."
+    },
+    {
+     "id": "d",
+     "text": "When the partnership has income",
+     "explanation": "That is not the test.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Gain is recognized only when money distributed exceeds outside basis.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-25",
+   "pool": "practice",
+   "stem": "What are §751 hot assets?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Cash and securities",
+     "explanation": "Not hot assets.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Land and buildings",
+     "explanation": "Not hot assets.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Goodwill and going concern value",
+     "explanation": "Not hot assets.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Receivables and inventory",
+     "explanation": "Correct. They produce ordinary income."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Hot assets include unrealized receivables (with recapture) and inventory items.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-26",
+   "pool": "practice",
+   "stem": "What does a §754 election allow?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Basis adjustments",
+     "explanation": "Correct. On transfers and distributions."
+    },
+    {
+     "id": "b",
+     "text": "Tax-free distributions",
+     "explanation": "That is not the purpose.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A change in tax year",
+     "explanation": "That is not the purpose.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Opting out of BBA audits",
+     "explanation": "That is not the purpose.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "A §754 election permits §743(b) and §734(b) adjustments to inside basis.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-27",
+   "pool": "practice",
+   "stem": "A partner with $30,000 of outside basis receives $10,000 cash and land (inside basis $25,000, FMV $40,000) in a current distribution. What is her basis in the land?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000",
+     "explanation": "Limited by outside basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "Correct. Limited to remaining basis."
+    },
+    {
+     "id": "c",
+     "text": "$40,000",
+     "explanation": "Not FMV in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$30,000",
+     "explanation": "Subtract the cash.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "In a current distribution, property basis is limited to outside basis remaining after cash.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-28",
+   "pool": "practice",
+   "stem": "A partner with $30,000 of outside basis receives a $50,000 cash distribution. What results?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000 of income",
+     "explanation": "Only the excess.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No gain",
+     "explanation": "It exceeds basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$20,000 capital gain",
+     "explanation": "Correct. The excess over basis."
+    },
+    {
+     "id": "d",
+     "text": "$20,000 ordinary income",
+     "explanation": "It's capital in this case.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Cash in excess of basis produces capital gain (absent §751).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-29",
+   "pool": "practice",
+   "stem": "In liquidation, a partner (basis $60,000) receives $10,000 cash, inventory (inside basis $20,000) and land (inside basis $10,000). What is her land basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "Basis is allocated up.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$60,000",
+     "explanation": "Subtract cash and inventory.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$30,000",
+     "explanation": "Correct. Remaining basis goes to the land."
+    }
+   ],
+   "answer": "d",
+   "explanation": "In a liquidation, remaining basis is allocated to non-hot property after cash and hot assets.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-30",
+   "pool": "practice",
+   "stem": "In liquidation, a partner (basis $25,000) receives $5,000 cash and inventory with a $30,000 inside basis. What is her inventory basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Correct. Limited to remaining basis."
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Limited by basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$25,000",
+     "explanation": "Subtract cash in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Hot asset basis can be reduced to remaining outside basis in a liquidation.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-31",
+   "pool": "practice",
+   "stem": "In liquidation, a partner (basis $50,000) receives $10,000 cash and inventory with a $15,000 inside basis. What does she recognize?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No loss",
+     "explanation": "A loss is allowed here.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A $25,000 capital loss",
+     "explanation": "Correct. Only cash and hot assets were received."
+    },
+    {
+     "id": "c",
+     "text": "A $25,000 ordinary loss",
+     "explanation": "It's capital in this case.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A $35,000 loss",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A loss is recognized when only cash, receivables and inventory are received in liquidation.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-32",
+   "pool": "practice",
+   "stem": "A partner's share of partnership liabilities falls by $40,000. Her outside basis was $30,000. What results?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No effect",
+     "explanation": "It's a deemed distribution.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40,000 of gain",
+     "explanation": "Only the excess.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$10,000 of gain",
+     "explanation": "Correct. Debt relief is a deemed distribution."
+    },
+    {
+     "id": "d",
+     "text": "A $10,000 loss",
+     "explanation": "It's gain in this case.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A decrease in liability share is a deemed cash distribution.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-33",
+   "pool": "practice",
+   "stem": "A partner sells her interest for $100,000. Basis is $60,000, and her share of hot asset appreciation is $15,000. How is the gain treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000 capital",
+     "explanation": "Part is ordinary.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$40,000 ordinary",
+     "explanation": "Only the hot share.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$25,000 ordinary; $15,000 capital",
+     "explanation": "That's backward.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$15,000 ordinary; $25,000 capital",
+     "explanation": "Correct. §751(a) applies."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Gain on a partnership interest sale is ordinary to the extent of the seller's share of hot asset appreciation.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-34",
+   "pool": "practice",
+   "stem": "A buyer pays $100,000 for a partnership interest whose share of inside basis is $70,000. The partnership has a §754 election. What adjustment results?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A $30,000 §743(b) step-up",
+     "explanation": "Correct. For the buyer only."
+    },
+    {
+     "id": "b",
+     "text": "A $30,000 step-up for all partners",
+     "explanation": "Only the buyer.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "No adjustment",
+     "explanation": "§754 is in effect.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A $70,000 step-up",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "A §743(b) adjustment equals the buyer's outside basis less her share of inside basis.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-35",
+   "pool": "practice",
+   "stem": "When is a §743(b) adjustment required even without a §754 election?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Never; it's elective",
+     "explanation": "It can be mandatory.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A big built-in loss",
+     "explanation": "Correct. A substantial built-in loss."
+    },
+    {
+     "id": "c",
+     "text": "On every transfer",
+     "explanation": "Only for large losses.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Only on a partner's death",
+     "explanation": "Not the trigger.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Adjustments are mandatory if the partnership has a substantial built-in loss.",
+   "skill": "application",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-36",
+   "pool": "practice",
+   "stem": "A service partnership pays a retiring general partner for her share of unrealized receivables. How is it treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Long-term capital gain",
+     "explanation": "Unrealized receivables are ordinary.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Tax-free",
+     "explanation": "It is taxable income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Ordinary income",
+     "explanation": "Correct. Not a payment for property."
+    },
+    {
+     "id": "d",
+     "text": "A tax-free gift",
+     "explanation": "Not a gift in this case.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§736(a) payments for unrealized receivables of a service partnership are ordinary income.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-37",
+   "pool": "practice",
+   "stem": "A partnership distributes marketable securities worth $20,000 to a partner with $15,000 of basis. How are they generally treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As property with carryover basis",
+     "explanation": "Treated as cash.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "As a tax-free gift",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As a sale",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "As cash",
+     "explanation": "Correct. §731(c)."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Marketable securities are generally treated as money for distribution gain purposes.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-38",
+   "pool": "practice",
+   "stem": "A partner receives distributed inventory and sells it 3 years later. How is the gain treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Ordinary",
+     "explanation": "Correct. Within 5 years."
+    },
+    {
+     "id": "b",
+     "text": "Capital",
+     "explanation": "The 5-year rule applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "§1231",
+     "explanation": "Not here in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Tax-free",
+     "explanation": "It is taxable income.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Distributed inventory stays ordinary if sold within 5 years of distribution.",
+   "skill": "application",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-39",
+   "pool": "practice",
+   "stem": "Within 7 years of a contribution, contributed property is distributed to another partner. What happens?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing at all",
+     "explanation": "§704(c)(1)(B) applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Contributor's gain",
+     "explanation": "Correct. The mixing bowl rule."
+    },
+    {
+     "id": "c",
+     "text": "The recipient recognizes gain",
+     "explanation": "The contributor does.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "The partnership is taxed",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Distributing contributed property to another partner within 7 years triggers the contributor's built-in gain.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-40",
+   "pool": "practice",
+   "stem": "A buyer is paying more than her share of inside basis for an interest. What should she ask the partnership to do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Liquidate the partnership",
+     "explanation": "Not needed in this case.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Change its tax year",
+     "explanation": "That is not related.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Elect §754",
+     "explanation": "Correct. She gets a step-up."
+    },
+    {
+     "id": "d",
+     "text": "Elect out of BBA",
+     "explanation": "That is not related.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A §754 election lets the buyer step up her share of inside basis.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-41",
+   "pool": "practice",
+   "stem": "A partner contributed appreciated property 5 years ago and now receives a distribution of other property. What may apply?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No gain",
+     "explanation": "§737 may apply.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A disguised sale",
+     "explanation": "Too late for the presumption.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "§751(a)",
+     "explanation": "That's for sales.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "§737 gain",
+     "explanation": "Correct. Up to the net precontribution gain."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§737 taxes the contributor on precontribution gain when she receives other property within 7 years.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-42",
+   "pool": "practice",
+   "stem": "A partner with high outside basis expects to receive only cash and inventory in liquidation. What can she recognize?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A capital loss",
+     "explanation": "Correct. Unused basis creates a loss."
+    },
+    {
+     "id": "b",
+     "text": "Nothing",
+     "explanation": "A loss is allowed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "An ordinary loss",
+     "explanation": "It's capital in this case.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A step-up only",
+     "explanation": "A loss is recognized.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Unrecovered basis after cash and hot assets is a capital loss.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-43",
+   "pool": "practice",
+   "stem": "A partner can sell her interest or be liquidated out. Why might the choice change the tax result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "They're identical",
+     "explanation": "Different rules apply.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Different rules apply",
+     "explanation": "Correct. §751(a) vs. §751(b) and §736."
+    },
+    {
+     "id": "c",
+     "text": "Liquidation is always tax-free",
+     "explanation": "Not always in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Sales are always ordinary",
+     "explanation": "Not always in this case.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Sales follow §741 and §751(a); liquidations follow §§731–736 and §751(b).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-pd-44",
+   "pool": "practice",
+   "stem": "A partnership with appreciated assets makes a §754 election. What is a downside?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It taxes all partners",
+     "explanation": "Not the effect.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It ends the partnership",
+     "explanation": "Not the effect.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "It's hard to revoke",
+     "explanation": "Correct. And requires ongoing tracking."
+    },
+    {
+     "id": "d",
+     "text": "It has no downside",
+     "explanation": "Timing does matter here.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A §754 election applies to all future transfers and distributions, including step-downs.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/questions.json"
+  },
+  {
+   "id": "tcp-x2-11",
+   "moduleId": "tcp-partnership-distributions",
+   "pool": "exam",
+   "stem": "A partner (outside basis $45,000) receives a current distribution of $10,000 cash and property with a partnership basis of $50,000. What is the property's basis to the partner?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Limited to remaining outside basis.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$35,000",
+     "explanation": "Correct. 45,000 − 10,000 = 35,000."
+    },
+    {
+     "id": "c",
+     "text": "$45,000",
+     "explanation": "Cash reduces basis first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Remaining basis is assigned.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "45,000 − 10,000 = 35,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas1-2.json"
+  },
+  {
+   "id": "tcp-x2-12",
+   "moduleId": "tcp-partnership-distributions",
+   "pool": "exam",
+   "stem": "In a liquidating distribution, a partner with $60,000 of outside basis receives $15,000 cash and inventory with a partnership basis of $20,000. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000 capital loss",
+     "explanation": "Correct. 60,000 − 15,000 − 20,000 = 25,000 capital loss."
+    },
+    {
+     "id": "b",
+     "text": "Inventory basis $45,000",
+     "explanation": "Inventory can't be stepped up.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "No loss; basis disappears",
+     "explanation": "A loss is allowed with only cash and inventory.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$25,000 ordinary loss",
+     "explanation": "The loss is capital.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "60,000 − 15,000 − 20,000 = 25,000 capital loss.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas1-2.json"
+  },
+  {
+   "id": "tcp-x2-13",
+   "moduleId": "tcp-partnership-distributions",
+   "pool": "exam",
+   "stem": "A partner sells her interest for $90,000; outside basis is $50,000. Her share of the partnership's depreciation recapture potential on equipment is $15,000. What is her ordinary income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "None ($0)",
+     "explanation": "Recapture is a §751 hot asset.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$15,000",
+     "explanation": "Correct. Depreciation recapture is an unrealized receivable under §751(c)."
+    },
+    {
+     "id": "c",
+     "text": "$40,000",
+     "explanation": "Only the §751 share is ordinary.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$25,000",
+     "explanation": "That's the capital portion.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Depreciation recapture is an unrealized receivable under §751(c).",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas1-2.json"
+  },
+  {
+   "id": "reg-x5-14",
+   "moduleId": "tcp-partnership-distributions",
+   "pool": "exam",
+   "stem": "A partner with a $15,000 basis receives a current distribution of $5,000 cash and inventory with a partnership basis of $12,000. What is her basis in the inventory?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$12,000",
+     "explanation": "Limited by remaining outside basis.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$10,000",
+     "explanation": "Correct. $15,000 − $5,000 cash."
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "Outside basis remains after the cash distribution.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$17,000",
+     "explanation": "Adds instead of limiting.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Cash first reduces basis to 10,000; inventory takes the lesser of 12,000 or 10,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas1-2.json"
+  },
+  {
+   "id": "tcp-x2-33",
+   "moduleId": "tcp-partnership-distributions",
+   "pool": "exam",
+   "stem": "In complete liquidation of her interest, a partner with an outside basis of $40,000 receives $30,000 cash only. The partnership has no hot assets. What results?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No loss; the remaining basis carries to nothing",
+     "explanation": "The loss is recognized in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A $10,000 capital loss",
+     "explanation": "Correct. A loss is recognized when only cash (and hot assets) is received in liquidation."
+    },
+    {
+     "id": "c",
+     "text": "A $10,000 ordinary loss",
+     "explanation": "The loss is capital.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A $30,000 capital gain",
+     "explanation": "Cash is less than basis.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "IRC §731(a)(2): a partner recognizes loss in a liquidating distribution consisting only of money, unrealized receivables and inventory.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas1-2.json"
+  },
+  {
+   "id": "tcp-x2-40",
+   "moduleId": "tcp-partnership-distributions",
+   "pool": "exam",
+   "stem": "Purchasing a partnership interest when the partnership's assets have appreciated, the buyer wants a basis step-up in her share of those assets. The partnership should have in effect:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A §754 election",
+     "explanation": "Correct. It enables a §743(b) adjustment for the purchaser."
+    },
+    {
+     "id": "b",
+     "text": "An S corporation election",
+     "explanation": "That is a corporate election.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A §179 election",
+     "explanation": "That concerns expensing.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "A §83(b) election",
+     "explanation": "That concerns property received for services.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "a",
+   "explanation": "With a §754 election (or a substantial built-in loss), the partnership adjusts the purchaser's share of inside basis under §743(b).",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas1-2.json"
+  },
+  {
+   "id": "tcp-x2-41",
+   "moduleId": "tcp-partnership-distributions",
+   "pool": "exam",
+   "stem": "A partner sells her interest at a $50,000 gain; her share of the partnership's unrealized receivables would produce $15,000 of ordinary income. How is the gain characterized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000 capital gain",
+     "explanation": "§751 carves out ordinary income.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$15,000 ordinary; $35,000 capital",
+     "explanation": "Correct. §751 makes the portion tied to hot assets ordinary."
+    },
+    {
+     "id": "c",
+     "text": "$50,000 ordinary income",
+     "explanation": "Only the hot-asset portion is ordinary.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$35,000 ordinary; $15,000 capital",
+     "explanation": "That reverses the split.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "IRC §751(a): gain on the sale of a partnership interest is ordinary to the extent attributable to unrealized receivables and inventory.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas1-2.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "tcp-pd-f1",
+   "front": "Current distribution gain",
+   "back": "Only if money (incl. liability relief, marketable securities) > outside basis.",
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/flashcards.json"
+  },
+  {
+   "id": "tcp-pd-f2",
+   "front": "Current distribution property basis",
+   "back": "Carryover, limited to remaining outside basis; receivables/inventory first.",
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/flashcards.json"
+  },
+  {
+   "id": "tcp-pd-f3",
+   "front": "Liquidating distribution loss",
+   "back": "Only if the partner receives just money, receivables, and inventory.",
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/flashcards.json"
+  },
+  {
+   "id": "tcp-pd-f4",
+   "front": "Liquidation: other property",
+   "back": "Absorbs all remaining outside basis (can be stepped up).",
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/flashcards.json"
+  },
+  {
+   "id": "tcp-pd-f5",
+   "front": "§751 hot assets",
+   "back": "Unrealized receivables (incl. recapture) and inventory → ordinary on sale of an interest.",
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/flashcards.json"
+  },
+  {
+   "id": "tcp-pd-f6",
+   "front": "§743(b) adjustment",
+   "back": "Price paid − share of inside basis; needs §754 election or substantial built-in loss > $250,000.",
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/flashcards.json"
+  },
+  {
+   "id": "tcp-pd-f7",
+   "front": "Distributed inventory",
+   "back": "Ordinary if sold within 5 years.",
+   "moduleId": "tcp-partnership-distributions",
+   "_file": "content/tcp/modules/tcp-partnership-distributions/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/tcp/tbs/tcp-tbs-r3-distributions.json",
+  "content/tcp/tbs/tcp-tbs-r3-sale-interest.json",
+  "content/tcp/tbs/tcp-tbs-u4-distributions-sale.json"
+ ]
+}

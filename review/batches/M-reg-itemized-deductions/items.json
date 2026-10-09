@@ -1,0 +1,1628 @@
+{
+ "mcqs": [
+  {
+   "id": "reg-id-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: medical expenses are deductible to the extent they exceed what percentage of AGI?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "7.5%",
+     "explanation": "Correct. §213: unreimbursed medical expenses above 7.5% of AGI."
+    },
+    {
+     "id": "b",
+     "text": "2%",
+     "explanation": "That was the floor for miscellaneous deductions.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "10%",
+     "explanation": "10% is the casualty loss floor.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "50%",
+     "explanation": "That isn't the medical floor.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "§213: unreimbursed medical expenses above 7.5% of AGI.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-chk1",
+   "pool": "lesson",
+   "stem": "For 2025 the SALT deduction cap is $40,000, reduced only when MAGI exceeds $500,000. A single taxpayer (MAGI $120,000) paid $9,000 of state income tax and $14,000 of property tax in 2025. What is the SALT deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "The pre-2025 cap.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "The cap isn't a deduction amount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$23,000",
+     "explanation": "Correct. Under the $40,000 cap for 2025."
+    },
+    {
+     "id": "d",
+     "text": "$14,000",
+     "explanation": "Both taxes are deductible.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "For 2025 the SALT cap is $40,000 (MAGI under $500,000), so the full $23,000 is deductible.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "needsReview": true,
+   "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount for 2025. Verify against current IRS guidance and exam materials.",
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-chk2",
+   "pool": "lesson",
+   "stem": "A single taxpayer has QBI of $60,000 and taxable income before the QBI deduction of $70,000 (no capital gains). What is the QBI deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$14,000",
+     "explanation": "The QBI component is smaller.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "The taxpayer qualifies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$60,000",
+     "explanation": "It's a percentage deduction.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$12,000",
+     "explanation": "Correct. Lesser of 20% × $60,000 or 20% × $70,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Below the threshold: lesser of 20% of QBI (12,000) or 20% of taxable income (14,000).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-01",
+   "pool": "practice",
+   "stem": "AGI is $80,000. Unreimbursed medical expenses are $9,500. What is the medical deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$3,500",
+     "explanation": "Correct. $9,500 − $6,000."
+    },
+    {
+     "id": "b",
+     "text": "$9,500",
+     "explanation": "The 7.5% floor applies.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$1,500",
+     "explanation": "Uses a 10% floor.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Expenses exceed the floor.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "7.5% × 80,000 = 6,000; 9,500 − 6,000 = **3,500**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-02",
+   "pool": "practice",
+   "stem": "In 2025, an itemizing taxpayer donates stock held 3 years (basis $4,000; FMV $15,000) to a public charity. AGI is $100,000. What is the deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$4,000",
+     "explanation": "Long-term capital gain property is deducted at FMV.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$11,000",
+     "explanation": "That's the appreciation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$15,000",
+     "explanation": "Correct. Within the 30% limit ($30,000)."
+    },
+    {
+     "id": "d",
+     "text": "$30,000",
+     "explanation": "That's the limit, not the deduction.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "LTCG property to a public charity: FMV, limited to 30% of AGI.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-03",
+   "pool": "practice",
+   "stem": "Which tax is **not** deductible as an itemized deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "State income tax",
+     "explanation": "Deductible (subject to the SALT cap).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Real property tax on a U.S. home",
+     "explanation": "U.S. real property tax is deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Local personal property tax based on a car's value",
+     "explanation": "Ad valorem personal property tax is deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Real property tax on a vacation home in France",
+     "explanation": "Correct. Foreign real property taxes aren't deductible."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Foreign real property taxes are nondeductible for individuals (except in a trade or business).",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-04",
+   "pool": "practice",
+   "stem": "A taxpayer has $12,000 of investment interest expense and $8,000 of net investment income. What is deductible this year?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$8,000; $4,000 carried forward",
+     "explanation": "Correct. §163(d): investment interest is deductible up to net investment income; the excess carries forward."
+    },
+    {
+     "id": "b",
+     "text": "$12,000, all deductible now",
+     "explanation": "Limited to net investment income.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$0; all carried forward",
+     "explanation": "Up to net investment income is deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$4,000; $8,000 carried forward",
+     "explanation": "That's the carryforward.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "a",
+   "explanation": "§163(d): investment interest is deductible up to net investment income; the excess carries forward.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-05",
+   "pool": "practice",
+   "stem": "In 2025, an itemizing taxpayer pays $500 for a charity dinner worth $120. What is the charitable deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$500",
+     "explanation": "The value received must be subtracted.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$120",
+     "explanation": "That's the value received.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$380",
+     "explanation": "Correct. Quid pro quo contributions: deduct the payment minus the FMV of goods or services received."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "The excess over value received is deductible.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Quid pro quo contributions: deduct the payment minus the FMV of goods or services received.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-06",
+   "pool": "practice",
+   "stem": "A home in a federally declared disaster area is damaged: loss after insurance $30,000; AGI $100,000. What is the casualty deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "The $100 and 10%-of-AGI floors apply.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "Federally declared disaster losses are deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$20,000",
+     "explanation": "Omits the $100 floor.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$19,900",
+     "explanation": "Correct. $30,000 − $100 − $10,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "(30,000 − 100) − 10% × 100,000 = **19,900**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-07",
+   "pool": "practice",
+   "stem": "A taxpayer's home mortgage (acquisition debt taken in 2020) is $900,000. What portion of the interest is deductible?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "All of the interest",
+     "explanation": "The $750,000 limit applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "750/900 of the interest",
+     "explanation": "Correct. Acquisition debt incurred after December 15, 2017 is limited to $750,000."
+    },
+    {
+     "id": "c",
+     "text": "None of the interest",
+     "explanation": "Some is deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Interest on $1 million of debt",
+     "explanation": "That's the pre-2018 limit for older loans.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Acquisition debt incurred after December 15, 2017 is limited to $750,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-08",
+   "pool": "practice",
+   "stem": "Which statement about the QBI deduction is correct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It is available only to taxpayers who itemize",
+     "explanation": "It's available regardless.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It reduces taxable income, not AGI, even with the standard deduction",
+     "explanation": "Correct. §199A is a below-the-line deduction available to itemizers and non-itemizers."
+    },
+    {
+     "id": "c",
+     "text": "It is a refundable credit against income tax",
+     "explanation": "It's a deduction.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "It applies to W-2 wages earned as an employee",
+     "explanation": "Wages aren't QBI.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§199A is a below-the-line deduction available to itemizers and non-itemizers.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-09",
+   "pool": "practice",
+   "stem": "Which contribution requires a qualified appraisal to be deductible?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$6,000 of cash",
+     "explanation": "Cash never needs an appraisal.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A painting worth $8,000",
+     "explanation": "Correct. Noncash property over $5,000."
+    },
+    {
+     "id": "c",
+     "text": "Clothing worth $300",
+     "explanation": "Under the threshold.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Publicly traded stock worth $50,000",
+     "explanation": "Publicly traded securities are exempt from the appraisal rule.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Noncash contributions over $5,000 (other than publicly traded securities) need a qualified appraisal.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-10",
+   "pool": "practice",
+   "stem": "For 2025, a waiter with MAGI of $60,000 received $18,000 of qualified tips. How are they treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Excluded from gross income as a fringe benefit",
+     "explanation": "Tips remain in gross income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Included, with an $18,000 deduction, itemizing or not",
+     "explanation": "Correct. OBBBA: qualified tips are deductible up to $25,000 for 2025–2028 (phased out above $150,000 MAGI); they remain income and subject to payroll taxes."
+    },
+    {
+     "id": "c",
+     "text": "Included in gross income, with no deduction",
+     "explanation": "The 2025 tips deduction applies.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "Included, with a deduction capped at $10,000",
+     "explanation": "The cap is $25,000.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "OBBBA: qualified tips are deductible up to $25,000 for 2025–2028 (phased out above $150,000 MAGI); they remain income and subject to payroll taxes.",
+   "skill": "application",
+   "difficulty": 2,
+   "needsReview": true,
+   "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount for 2025. Verify against current IRS guidance and exam materials.",
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-11",
+   "pool": "practice",
+   "stem": "For 2025, the SALT cap is $40,000, reduced only for MAGI over $500,000. A joint return with MAGI of $300,000 shows $25,000 of state income tax and $20,000 of property tax. What is the SALT deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$45,000",
+     "explanation": "The cap applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "Correct. The cap limits the $45,000 total."
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "That was the pre-2025 cap.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "$20,000",
+     "explanation": "That is the MFS cap.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "For 2025, state and local taxes are deductible up to $40,000 ($20,000 MFS), with a reduction for MAGI above $500,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-12",
+   "pool": "practice",
+   "stem": "A taxpayer with AGI of $50,000 gives $35,000 cash to a public charity. What is the current deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$35,000",
+     "explanation": "The 60% limit applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$25,000",
+     "explanation": "Cash to public charities uses 60%.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$30,000",
+     "explanation": "Correct. 60% of AGI; $5,000 carries forward."
+    },
+    {
+     "id": "d",
+     "text": "$15,000",
+     "explanation": "The 30% limit is for other gifts.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Cash gifts to public charities are limited to 60% of AGI; the excess carries forward 5 years.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-13",
+   "pool": "practice",
+   "stem": "A taxpayer borrows against his home equity to buy a car. Is the interest deductible?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, up to $100,000 of debt",
+     "explanation": "That pre-2018 rule no longer applies.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "Yes, if he itemizes",
+     "explanation": "Itemizing doesn't help.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Yes, as personal interest",
+     "explanation": "Personal interest isn't deductible.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "No, it doesn't qualify",
+     "explanation": "Correct. The loan didn't buy or improve the home."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Only acquisition debt used to buy, build or improve the home qualifies; home equity debt used for other purposes doesn't.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-14",
+   "pool": "practice",
+   "stem": "In 2025, an itemizer has $5,000 of gambling winnings and $8,000 of gambling losses. What is the deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,000",
+     "explanation": "Correct. Losses are limited to winnings."
+    },
+    {
+     "id": "b",
+     "text": "$8,000",
+     "explanation": "Losses can't exceed winnings.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$3,000",
+     "explanation": "That is the excess loss.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Losses offset winnings.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Gambling losses are deductible as an itemized deduction only to the extent of gambling winnings.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-15",
+   "pool": "practice",
+   "stem": "Which expense qualifies as a medical expense for the itemized deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Health club dues",
+     "explanation": "General health isn't medical care.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Prescription drugs",
+     "explanation": "Correct. Prescribed drugs and insulin qualify."
+    },
+    {
+     "id": "c",
+     "text": "Cosmetic surgery",
+     "explanation": "Elective cosmetic surgery doesn't qualify.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Over-the-counter vitamins",
+     "explanation": "Nonprescription items don't qualify.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Medical expenses include prescribed drugs and insulin; cosmetic surgery and general health items don't qualify.",
+   "skill": "application",
+   "difficulty": 1,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-16",
+   "pool": "practice",
+   "stem": "For 2025 the SALT cap is $40,000, reduced by 30% of MAGI over $500,000 but not below $10,000. A joint return has MAGI of $550,000 and $45,000 of state and local taxes. What is the SALT deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "The cap phases down.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$25,000",
+     "explanation": "Correct. $40,000 − 30% × $50,000."
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "The floor isn't reached.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$45,000",
+     "explanation": "The cap applies.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The $40,000 cap is reduced by $15,000 (30% of $50,000 excess MAGI) to $25,000.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-17",
+   "pool": "practice",
+   "stem": "A volunteer spends 40 hours at a charity (her normal rate is $100/hour) and drives 500 miles for it. What may she deduct, at 14 cents a mile?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$4,070",
+     "explanation": "Services aren't deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$4,000",
+     "explanation": "Services aren't deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$70",
+     "explanation": "Correct. Mileage only; services aren't deductible."
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Mileage is deductible.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The value of donated services isn't deductible, but out-of-pocket costs and charitable mileage (14 cents) are.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-18",
+   "pool": "practice",
+   "stem": "A buyer pays $6,000 of points to obtain a mortgage on her principal residence. When are they deductible if she itemizes?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Over the loan's life",
+     "explanation": "Purchase points can be deducted when paid.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "Never",
+     "explanation": "They're deductible interest.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Only when the home is sold",
+     "explanation": "That isn't what the rule says.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "In the year paid",
+     "explanation": "Correct. Points on a home purchase loan."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Points paid to buy a principal residence are generally deductible in the year paid.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-19",
+   "pool": "practice",
+   "stem": "For 2025, can an employee deduct unreimbursed job-related expenses as itemized deductions?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No",
+     "explanation": "Correct. Miscellaneous itemized deductions are disallowed."
+    },
+    {
+     "id": "b",
+     "text": "Yes, above 2% of AGI",
+     "explanation": "That pre-2018 rule is suspended.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "Yes, up to $2,500",
+     "explanation": "No such allowance.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "Only for remote workers",
+     "explanation": "That isn't allowed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Unreimbursed employee expenses are miscellaneous itemized deductions, which aren't allowed.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-20",
+   "pool": "practice",
+   "stem": "A sole proprietor has $100,000 of qualified business income. Taxable income before the QBI deduction is $80,000, including $10,000 of net capital gain. Below the threshold, what is the QBI deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "The taxable income limit applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$14,000",
+     "explanation": "Correct. Limited to 20% × ($80,000 − $10,000)."
+    },
+    {
+     "id": "c",
+     "text": "$16,000",
+     "explanation": "Subtract net capital gain first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "A deduction is allowed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The QBI deduction is the lesser of 20% of QBI or 20% of taxable income less net capital gain.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-21",
+   "pool": "practice",
+   "stem": "On a doctor's advice, a taxpayer installs a $30,000 therapy pool that increases her home's value by $20,000. What medical expense counts (before the 7.5% floor)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "Correct. Only the cost above the value increase."
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Reduce by the value increase.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$20,000",
+     "explanation": "That's the value increase.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Part qualifies.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Capital expenses for medical care count to the extent they exceed the increase in the property's value.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-22",
+   "pool": "practice",
+   "stem": "A taxpayer travels for out-of-town medical treatment and pays $180 a night for 5 nights of lodging. How much lodging is a medical expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$900",
+     "explanation": "The $50 cap applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$250",
+     "explanation": "Correct. Lodging is limited to $50 per night per person."
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "Lodging can qualify.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$450",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Lodging for medical care away from home is deductible up to $50 per night per person.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-23",
+   "pool": "practice",
+   "stem": "A taxpayer with AGI of $100,000 gives publicly traded stock (FMV $30,000; held 5 years) to a private nonoperating foundation. What is the current deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "The 20% limit applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$8,000",
+     "explanation": "Basis isn't used for public stock.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$20,000",
+     "explanation": "Correct. Limited to 20% of AGI; $10,000 carries forward."
+    },
+    {
+     "id": "d",
+     "text": "$60,000",
+     "explanation": "That isn't the limit.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Qualified appreciated stock to a private foundation is deducted at FMV but limited to 20% of AGI.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-24",
+   "pool": "practice",
+   "stem": "A collector gives a painting (FMV $40,000; basis $15,000; held 6 years) to a hospital, which will sell it. What is the deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "Unrelated use limits it.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$25,000",
+     "explanation": "That's the appreciation.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "A deduction is allowed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$15,000",
+     "explanation": "Correct. Unrelated-use tangible property is limited to basis."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Tangible personal property put to an unrelated use is deducted at basis.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-25",
+   "pool": "practice",
+   "stem": "A taxpayer's charitable contributions exceed her AGI limit by $8,000 in 2025. What happens to the excess?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It carries forward 5 years",
+     "explanation": "Correct. Excess contributions carry forward."
+    },
+    {
+     "id": "b",
+     "text": "It's lost",
+     "explanation": "It carries forward.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "It carries back 2 years",
+     "explanation": "There's no carryback.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "It carries forward indefinitely",
+     "explanation": "The period is 5 years.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Charitable contributions above the AGI limits carry forward for 5 years.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-26",
+   "pool": "practice",
+   "stem": "A taxpayer's investment interest exceeds her net investment income, and she has qualified dividends. What may she elect?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Deduct all interest without limit",
+     "explanation": "The limit still applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Treat the dividends as investment income",
+     "explanation": "Correct. She gives up the preferential rate on them."
+    },
+    {
+     "id": "c",
+     "text": "Carry the interest back",
+     "explanation": "There's no carryback.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Treat the interest as business expense",
+     "explanation": "That isn't allowed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Taxpayers may elect to include qualified dividends and net capital gain in investment income, giving up preferential rates.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-27",
+   "pool": "practice",
+   "stem": "A homeowner borrows $80,000 on a home equity line and uses it to add a bedroom. Is the interest deductible if she itemizes?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No, home equity interest isn't deductible",
+     "explanation": "Use determines treatment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Only up to $10,000 of debt",
+     "explanation": "That isn't what the rule says.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "Yes, as acquisition debt",
+     "explanation": "Correct. Debt used to improve the home is acquisition debt."
+    },
+    {
+     "id": "d",
+     "text": "Only if a separate loan",
+     "explanation": "That isn't required.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Interest on debt used to buy, build or substantially improve the residence is deductible, within the $750,000 limit.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-28",
+   "pool": "practice",
+   "stem": "A joint return has 2025 MAGI of $700,000. The SALT cap is $40,000, reduced by 30% of MAGI over $500,000, but not below $10,000. What is the cap?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "The phase-down applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$0",
+     "explanation": "The floor is $10,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$20,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$10,000",
+     "explanation": "Correct. The reduction ($60,000) hits the floor."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The SALT cap phases down for high MAGI but not below $10,000.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-29",
+   "pool": "practice",
+   "stem": "A homeowner pays $3,000 of points to refinance her home mortgage (not for improvements). How are the points deducted?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Over the loan's term",
+     "explanation": "Correct. Refinancing points are amortized."
+    },
+    {
+     "id": "b",
+     "text": "All in the year paid",
+     "explanation": "That's for purchase loans.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "They aren't deductible at all",
+     "explanation": "They're amortized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Ratably over 5 years",
+     "explanation": "Over the loan term.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Points on a refinancing are generally deducted ratably over the loan's life.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-30",
+   "pool": "practice",
+   "stem": "A single doctor with taxable income well above the QBI phase-in range operates her own practice. What QBI deduction is available?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "20% of practice income",
+     "explanation": "SSTBs are excluded above the range.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "None",
+     "explanation": "Correct. SSTB income above the range gets no deduction."
+    },
+    {
+     "id": "c",
+     "text": "Limited by W-2 wages only",
+     "explanation": "Not for SSTBs above the range.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "10% of practice income",
+     "explanation": "That isn't what the rule says.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Specified service trade or business income doesn't qualify for QBI once taxable income exceeds the phase-in range.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-31",
+   "pool": "practice",
+   "stem": "Medical expenses are deductible to the extent they exceed what percentage of AGI?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "10%",
+     "explanation": "That was an earlier floor.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "7.5%",
+     "explanation": "Correct. The floor is 7.5% of AGI."
+    },
+    {
+     "id": "c",
+     "text": "2%",
+     "explanation": "Not the medical floor.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "5%",
+     "explanation": "That is not the floor.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Unreimbursed medical expenses are deductible above 7.5% of AGI.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-32",
+   "pool": "practice",
+   "stem": "For 2025, what is the SALT deduction cap for a filer with MAGI under $500,000?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "That's the floor after the phase-down.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "That's for MFS filers.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$40,000",
+     "explanation": "Correct. The 2025 cap is $40,000."
+    },
+    {
+     "id": "d",
+     "text": "$50,000",
+     "explanation": "That is not the cap.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "For 2025, the SALT cap is $40,000 ($20,000 MFS), reduced by 30% of MAGI over $500,000 but not below $10,000.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-33",
+   "pool": "practice",
+   "stem": "What is the AGI limit for cash gifts to public charities?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "50%",
+     "explanation": "That's for other gifts to public charities.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "30%",
+     "explanation": "That's for capital gain property.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "20%",
+     "explanation": "That's for some private foundation gifts.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "60%",
+     "explanation": "Correct. Cash gifts to public charities are limited to 60%."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Cash contributions to public charities are deductible up to 60% of AGI.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-id-34",
+   "pool": "practice",
+   "stem": "What is the acquisition debt limit for the mortgage interest deduction on debt incurred after 2017?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$750,000",
+     "explanation": "Correct. The limit is $750,000."
+    },
+    {
+     "id": "b",
+     "text": "$1,000,000",
+     "explanation": "That's for pre-2018 debt.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "$500,000",
+     "explanation": "That is not the limit.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$100,000",
+     "explanation": "That was home equity debt.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Interest is deductible on up to $750,000 of acquisition debt incurred after December 15, 2017.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/questions.json"
+  },
+  {
+   "id": "reg-x4-13",
+   "moduleId": "reg-itemized-deductions",
+   "pool": "exam",
+   "stem": "In 2025, an itemizing taxpayer with AGI of $60,000 gives $40,000 cash to a public charity. What is the 2025 deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000, all deductible",
+     "explanation": "Limited to 60% of AGI.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$30,000; $10,000 carried",
+     "explanation": "Miscomputes the 60% limit.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$18,000; $22,000 carried",
+     "explanation": "That's the 30% limit.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$36,000; $4,000 carried",
+     "explanation": "Correct. Cash to public charities: 60% × 60,000 = 36,000; 5-year carryforward."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Cash to public charities: 60% × 60,000 = 36,000; 5-year carryforward.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-14",
+   "moduleId": "reg-itemized-deductions",
+   "pool": "exam",
+   "stem": "Which is deductible as an itemized deduction for 2025?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Real estate taxes on a principal residence",
+     "explanation": "Correct. Real property taxes are deductible subject to the SALT limit."
+    },
+    {
+     "id": "b",
+     "text": "Tax preparation fees for a personal return",
+     "explanation": "Miscellaneous itemized deductions are eliminated.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "Foreign real property taxes on a vacation home",
+     "explanation": "Not deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Interest on personal credit card balances",
+     "explanation": "Personal interest isn't deductible.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Real property taxes are deductible subject to the SALT limit.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-15",
+   "moduleId": "reg-itemized-deductions",
+   "pool": "exam",
+   "stem": "A single taxpayer has QBI of $100,000 from a non-service business and taxable income before QBI of $90,000 (no capital gains). The taxpayer is below the threshold. What is the QBI deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Limited to 20% of taxable income.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "The taxpayer qualifies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$18,000",
+     "explanation": "Correct. Lesser of 20% × 100,000 or 20% × 90,000."
+    },
+    {
+     "id": "d",
+     "text": "$38,000",
+     "explanation": "Adds the components instead of taking the lesser.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Lesser of 20% × 100,000 or 20% × 90,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-30",
+   "moduleId": "reg-itemized-deductions",
+   "pool": "exam",
+   "stem": "A taxpayer with AGI of $80,000 itemizes and paid $9,000 of unreimbursed medical expenses in 2025. What medical deduction is allowed?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$9,000",
+     "explanation": "Only the excess over 7.5% of AGI is deductible.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$1,000",
+     "explanation": "The floor is 7.5%, not 10%.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "$6,000",
+     "explanation": "The floor is 6,000; the deduction is the excess.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$3,000",
+     "explanation": "Correct. 9,000 − 7.5% × 80,000 = 3,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "IRC §213: medical expenses are deductible to the extent they exceed 7.5% of AGI.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-39",
+   "moduleId": "reg-itemized-deductions",
+   "pool": "exam",
+   "stem": "For 2025, the itemized deduction for state and local taxes is limited to $40,000 for taxpayers with MAGI of $500,000 or less. A married couple with MAGI of $300,000 pays $25,000 of state income tax and $20,000 of real property tax. What is their SALT deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "Correct. 45,000 of taxes, limited to 40,000."
+    },
+    {
+     "id": "b",
+     "text": "$45,000",
+     "explanation": "The cap applies to the total.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "$10,000 was the cap before 2025.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "$20,000",
+     "explanation": "Both income and property taxes count.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "IRC §164(b)(6) as amended by P.L. 119-21: for 2025, state and local taxes are deductible up to $40,000 ($20,000 MFS), reduced above $500,000 of MAGI.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "needsReview": true,
+   "reviewNote": "Uses the 2025 SALT cap of $40,000 set by P.L. 119-21; confirm against current IRS guidance.",
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-40",
+   "moduleId": "reg-itemized-deductions",
+   "pool": "exam",
+   "stem": "An itemizer with AGI of $80,000 donates long-term stock (fair value $30,000; basis $10,000) to a public charity in 2025. What is the deduction for 2025?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "The 30% AGI limit applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$24,000; $6,000 carries over",
+     "explanation": "Correct. Capital gain property at fair value is limited to 30% of AGI."
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "Appreciated long-term stock is deducted at fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$30,000, under the 60% AGI limit",
+     "explanation": "The 60% limit is for cash gifts.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "IRC §170(b)(1)(C): gifts of capital gain property to public charities are deducted at fair value, limited to 30% of AGI (24,000), with a five-year carryforward.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "reg-id-f1",
+   "front": "Medical expense floor",
+   "back": "7.5% of AGI.",
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/flashcards.json"
+  },
+  {
+   "id": "reg-id-f2",
+   "front": "2025 SALT cap",
+   "back": "$40,000 ($20,000 MFS), phased down above $500,000 MAGI to no less than $10,000.",
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/flashcards.json"
+  },
+  {
+   "id": "reg-id-f3",
+   "front": "Mortgage interest limit",
+   "back": "Acquisition debt up to $750,000.",
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/flashcards.json"
+  },
+  {
+   "id": "reg-id-f4",
+   "front": "Charitable limits — public charity",
+   "back": "Cash 60% of AGI; LTCG property at FMV 30%.",
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/flashcards.json"
+  },
+  {
+   "id": "reg-id-f5",
+   "front": "Personal casualty losses",
+   "back": "Federally declared disasters: $100 per event, then 10% of AGI.",
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/flashcards.json"
+  },
+  {
+   "id": "reg-id-f6",
+   "front": "QBI deduction",
+   "back": "20% of QBI, limited to 20% of taxable income less net capital gain; above an indexed threshold, wage/UBIA limits and SSTB rules phase in. (The exam gives the dollar amount.)",
+   "moduleId": "reg-itemized-deductions",
+   "_file": "content/reg/modules/reg-itemized-deductions/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/reg/tbs/reg-tbs-r3-itemized-review.json"
+ ]
+}

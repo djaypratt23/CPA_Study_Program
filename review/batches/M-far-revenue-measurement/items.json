@@ -1,0 +1,1384 @@
+{
+ "mcqs": [
+  {
+   "id": "far-rev2-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a company sells a $900 bundle of two items that sell separately for $600 and $400. How much revenue is allocated to the $600 item?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$600",
+     "explanation": "The bundle discount must be allocated.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$500",
+     "explanation": "That splits the price evenly.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$540",
+     "explanation": "Correct. 600 ÷ 1,000 × 900."
+    },
+    {
+     "id": "d",
+     "text": "$500 plus the $100 discount",
+     "explanation": "The discount is spread proportionally.",
+     "trap": "other"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Allocate by relative standalone selling prices: 600 / (600 + 400) × 900 = **540**; the other item gets 360.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-chk1",
+   "pool": "lesson",
+   "stem": "A seller offers a volume rebate. Based on extensive experience, there's a wide range of possible rebate amounts. Which method should it use to estimate the variable consideration?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Most likely amount",
+     "explanation": "Best when there are only two possible outcomes.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Ignore variable consideration until the rebate is paid",
+     "explanation": "Variable consideration is estimated at inception.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "Minimum possible amount always",
+     "explanation": "The constraint limits estimates; it isn't a required 'minimum' method.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Expected value",
+     "explanation": "Correct. Best for many possible outcomes with experience to weight them."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Use the method that better predicts the amount: expected value for a large number of similar contracts/outcomes; most likely amount for binary outcomes.",
+   "skill": "application",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-chk2",
+   "pool": "lesson",
+   "stem": "A company is building custom equipment with no alternative use to the company; the contract gives it an enforceable right to payment for work performed to date plus a reasonable margin. How is revenue recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Over time, measuring progress toward completion",
+     "explanation": "Correct. No alternative use + enforceable right to payment for performance to date → over-time recognition."
+    },
+    {
+     "id": "b",
+     "text": "At a point in time, when the equipment is delivered",
+     "explanation": "The third over-time criterion is met.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "When the customer pays in full",
+     "explanation": "Cash timing doesn't determine recognition.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Only when the contract is completed",
+     "explanation": "Completed-contract isn't the model under ASC 606.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "No alternative use + enforceable right to payment for performance to date → over-time recognition.",
+   "skill": "analysis",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-01",
+   "pool": "practice",
+   "stem": "A contractor can earn a $50,000 bonus only if a project finishes by June 30; otherwise it earns nothing extra. It estimates an 80% chance of finishing on time and concludes a significant reversal is not probable. Base fee: $400,000. What is the transaction price?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$440,000",
+     "explanation": "This uses the expected value (80% × 50,000), but a binary outcome calls for the most likely amount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$400,000",
+     "explanation": "The constraint doesn't apply here.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$450,000",
+     "explanation": "Correct. Most likely amount: bonus earned."
+    },
+    {
+     "id": "d",
+     "text": "$410,000",
+     "explanation": "This uses the 20% probability of missing.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Two possible outcomes → most likely amount (50,000). Not constrained → transaction price = 400,000 + 50,000 = **450,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-02",
+   "pool": "practice",
+   "stem": "A company sells goods for $242,000 payable in two years (a significant financing component exists). The cash selling price is $200,000 (implicit rate 10%). How much revenue is recognized when the goods are delivered?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$242,000",
+     "explanation": "The financing element is interest, not revenue from the goods.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$200,000",
+     "explanation": "Correct. Revenue at the cash selling price; 42,000 is interest income over two years."
+    },
+    {
+     "id": "c",
+     "text": "$220,000",
+     "explanation": "This discounts for only one year.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$0 until payment",
+     "explanation": "Revenue is recognized when control transfers.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Adjust for the significant financing component: revenue = present value = 242,000 ÷ 1.10² = **200,000**; interest income is recognized over the payment period.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-03",
+   "pool": "practice",
+   "stem": "A retailer sells 2,000 units at $50 each (cost $30) with a right of return and expects 4% to be returned. What revenue and refund liability are recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Revenue $100,000; refund liability $0",
+     "explanation": "Expected returns reduce revenue.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "Revenue $96,000; refund liability $2,400",
+     "explanation": "The refund liability is at the selling price, not cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Revenue $98,000; refund liability $2,000",
+     "explanation": "This uses 2% instead of 4%.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "Revenue $96,000; refund liability $4,000",
+     "explanation": "Correct. Gross sales 100,000; expected returns 4% = 4,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Gross sales 100,000; expected returns 4% = 4,000. Revenue **96,000**; refund liability **4,000**; asset for recovery of goods 2,400 (80 units × $30).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-04",
+   "pool": "practice",
+   "stem": "A company sells a bundle for $1,500: product A (SSP $1,000), product B (SSP $600), and a service C (SSP $400). What is allocated to service C?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$300",
+     "explanation": "Correct. 400 ÷ 2,000 × 1,500."
+    },
+    {
+     "id": "b",
+     "text": "$400",
+     "explanation": "This ignores the bundle discount.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$500",
+     "explanation": "Equal split has no basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$0 (residual)",
+     "explanation": "The residual approach applies only when SSP is highly variable or uncertain.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Total SSP = 2,000; discount 25%. C = 400 / 2,000 × 1,500 = **300**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-05",
+   "pool": "practice",
+   "stem": "Which situation requires revenue to be recognized **over time**?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A retailer sells a television to a customer in a store",
+     "explanation": "Control transfers at a point in time.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "A cleaning company provides monthly office cleaning",
+     "explanation": "Correct. The customer simultaneously receives and consumes the benefit."
+    },
+    {
+     "id": "c",
+     "text": "A manufacturer ships standard parts FOB shipping point",
+     "explanation": "Point in time at shipment.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A developer sells a finished condominium unit",
+     "explanation": "Point in time when control passes.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Routine services consumed as performed meet the first over-time criterion.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-06",
+   "pool": "practice",
+   "stem": "A contractor uses cost-to-cost. Contract price $8,000,000. Year 1 costs $2,000,000; estimated total costs $6,400,000. What is Year 1 gross profit?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$500,000",
+     "explanation": "Correct. 31.25% × 8,000,000 = 2,500,000 revenue − 2,000,000 cost."
+    },
+    {
+     "id": "b",
+     "text": "$1,600,000",
+     "explanation": "That's the total expected gross profit.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$2,500,000",
+     "explanation": "That's revenue, not gross profit.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Profit is recognized as progress occurs.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Progress = 2,000,000 / 6,400,000 = 31.25%. Revenue = 2,500,000. Gross profit = **500,000** (= 31.25% × 1,600,000).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-07",
+   "pool": "practice",
+   "stem": "At the end of Year 2, a fixed-price contract of $3,000,000 has revised estimated total costs of $3,200,000. Cumulative costs to date are $2,400,000, and $150,000 of gross profit was recognized in Year 1. What loss is recognized in Year 2?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$200,000",
+     "explanation": "This ignores that 150,000 of profit was already recognized.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$50,000",
+     "explanation": "This recognizes only the proportional loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$350,000",
+     "explanation": "Correct. Reverse the 150,000 profit and recognize the entire 200,000 expected loss."
+    },
+    {
+     "id": "d",
+     "text": "$150,000",
+     "explanation": "This only reverses prior profit.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "An expected loss on a contract is recognized in full immediately. Cumulative loss to recognize by end of Year 2 = 200,000; Year 1 recognized +150,000 → Year 2 loss = **350,000**.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-08",
+   "pool": "practice",
+   "stem": "A company pays a 5% sales commission ($30,000) to obtain a 3-year service contract. How is the commission accounted for?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Expensed immediately as incurred",
+     "explanation": "Incremental costs of obtaining a contract longer than one year are capitalized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Capitalized; amortized over the 3-year contract",
+     "explanation": "Correct. ASC 340-40: incremental costs of obtaining a contract are capitalized if expected to be recovered and amortized systematically; the expedient to expense applies only when amortization would be ≤ 1 year."
+    },
+    {
+     "id": "c",
+     "text": "Deducted from contract revenue",
+     "explanation": "Commissions to employees aren't consideration payable to the customer.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Capitalized and never amortized",
+     "explanation": "The asset is amortized as services transfer.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "ASC 340-40: incremental costs of obtaining a contract are capitalized if expected to be recovered and amortized systematically; the expedient to expense applies only when amortization would be ≤ 1 year.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-09",
+   "pool": "practice",
+   "stem": "A company has performed work and recognized $60,000 of revenue, but it can bill the customer only after completing a second milestone. What is recognized on the balance sheet?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Accounts receivable of $60,000",
+     "explanation": "The right to payment is conditional on further performance.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Contract liability of $60,000",
+     "explanation": "A liability arises when the customer pays before performance.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Contract asset of $60,000",
+     "explanation": "Correct. A contract asset represents a right to consideration that is conditional on something other than the passage of time; it becomes a receivable when unconditional."
+    },
+    {
+     "id": "d",
+     "text": "Nothing until billed",
+     "explanation": "Revenue recognized creates an asset.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A contract asset represents a right to consideration that is conditional on something other than the passage of time; it becomes a receivable when unconditional.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-10",
+   "pool": "practice",
+   "stem": "A software company sells a license bundled with 1 year of support for a total price of $56,000. The license has a $50,000 list price, but it is never sold alone and negotiated prices vary widely, so its SSP is highly uncertain. The support's SSP is observable at $10,000. Using the residual approach, how much of the $56,000 is allocated to the license?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "That is the license's list price, which isn't a reliable SSP here; the residual approach allocates what remains after the support's observable SSP.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "b",
+     "text": "$46,000",
+     "explanation": "Correct. 56,000 − 10,000."
+    },
+    {
+     "id": "c",
+     "text": "$56,000",
+     "explanation": "Support must receive its observable SSP.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$28,000",
+     "explanation": "Equal split has no basis.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Residual approach: total price − observable SSP of other obligations = 56,000 − 10,000 = **46,000** to the license.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-11",
+   "pool": "practice",
+   "stem": "A contractor expects consideration of $100,000 (60% likely) or $120,000 (40% likely). Using the expected value method, what variable consideration is estimated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "That is the most likely amount.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$108,000",
+     "explanation": "Correct. 60% × 100,000 + 40% × 120,000 = 108,000."
+    },
+    {
+     "id": "c",
+     "text": "$110,000",
+     "explanation": "The outcomes aren't equally likely.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$120,000",
+     "explanation": "The higher outcome is less likely.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Expected value: probability-weighted sum of possible amounts.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-12",
+   "pool": "practice",
+   "stem": "A customer pays $100,000 two years before delivery of goods. The contract has a significant financing component at 5%. What revenue is recognized at delivery?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "The financing component accretes interest.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$90,703",
+     "explanation": "That discounts rather than accretes an advance payment.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$110,250",
+     "explanation": "Correct. 100,000 × 1.05² = 110,250, with 10,250 of interest expense over two years."
+    },
+    {
+     "id": "d",
+     "text": "$105,000",
+     "explanation": "Interest compounds for two years.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "When the customer pays in advance and there is a significant financing component, the seller accretes interest expense on the contract liability.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-13",
+   "pool": "practice",
+   "stem": "A manufacturer pays a retailer a $20,000 slotting fee for shelf space, receiving no distinct good or service. How is the fee accounted for?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As advertising expense",
+     "explanation": "A slotting fee isn't a distinct service.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As an intangible asset",
+     "explanation": "Shelf space isn't an asset the manufacturer controls.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "As cost of goods sold",
+     "explanation": "It reduces revenue, not cost.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "As a reduction of revenue",
+     "explanation": "Correct. Consideration payable to a customer without a distinct good is a reduction of the transaction price."
+    }
+   ],
+   "answer": "d",
+   "explanation": "ASC 606-10-32-25: consideration payable to a customer reduces the transaction price unless it pays for a distinct good or service.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-14",
+   "pool": "practice",
+   "stem": "A contract to deliver 10,000 units for $500,000 is recognized over time using units delivered. At year-end, 3,000 units have been delivered. How much revenue is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$150,000",
+     "explanation": "Correct. 3,000 ÷ 10,000 × 500,000."
+    },
+    {
+     "id": "b",
+     "text": "$500,000",
+     "explanation": "Revenue is recognized as units are delivered.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "$350,000",
+     "explanation": "That is the remaining revenue.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Over-time recognition applies.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Output method: progress = units delivered ÷ total units.",
+   "skill": "application",
+   "difficulty": 1,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-15",
+   "pool": "practice",
+   "stem": "A fixed-price contract of $1,000,000 is recognized over time. At the end of Year 1, estimated total costs are $1,100,000. What total loss is recognized on the contract by the end of Year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000, in proportion to progress",
+     "explanation": "Expected losses aren't spread by progress.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "Correct. The full expected loss on an onerous contract is recognized immediately."
+    },
+    {
+     "id": "c",
+     "text": "$0 until the contract ends",
+     "explanation": "Losses are recognized when expected.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$1,100,000",
+     "explanation": "Only the excess of cost over price is a loss.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Under ASC 605-35, the entire anticipated loss on a contract is recognized when it becomes evident.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-16",
+   "pool": "practice",
+   "stem": "Products A, B and C have standalone prices of $40, $25 and $45 and are sold together for $100. B and C are regularly sold together for $60. How much is allocated to A?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$36.36",
+     "explanation": "The discount isn't allocated to A.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$30",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$50",
+     "explanation": "A gets its standalone price.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$40",
+     "explanation": "Correct. The discount belongs to B and C."
+    }
+   ],
+   "answer": "d",
+   "explanation": "A discount is allocated to specific obligations when there's observable evidence it relates to them.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-17",
+   "pool": "practice",
+   "stem": "A customer agrees to pay with its shares, worth $50,000 at contract inception and $60,000 at delivery. What revenue is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Correct. Measured at inception."
+    },
+    {
+     "id": "b",
+     "text": "$60,000",
+     "explanation": "Measure at contract inception.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "$55,000",
+     "explanation": "Values aren't averaged.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Noncash consideration is revenue.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Noncash consideration is measured at fair value at contract inception.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-18",
+   "pool": "practice",
+   "stem": "A bundle sells for $1,000. Product A's observable standalone price is $600; product B's is highly variable. Under the residual approach, what is B's standalone price?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$600",
+     "explanation": "That's A's price.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "$400",
+     "explanation": "Correct. $1,000 − $600."
+    },
+    {
+     "id": "c",
+     "text": "$500",
+     "explanation": "No equal split.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$1,000",
+     "explanation": "Subtract A's price.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The residual approach subtracts observable standalone prices from the total price when one price is highly variable or uncertain.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-19",
+   "pool": "practice",
+   "stem": "A customer pays 6 months after delivery. Must the seller adjust for a financing component?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, always",
+     "explanation": "The expedient applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Yes, if rates are high",
+     "explanation": "The expedient applies regardless.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "No, under the 1-year expedient",
+     "explanation": "Correct. One year or less may be ignored."
+    },
+    {
+     "id": "d",
+     "text": "Only for public entities",
+     "explanation": "It's available to all.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The practical expedient lets entities ignore a financing component if the gap between payment and transfer is a year or less.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-20",
+   "pool": "practice",
+   "stem": "A company licenses IP for a royalty of 5% of the licensee's sales. When is royalty revenue recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "At license inception, estimated",
+     "explanation": "Royalties aren't estimated upfront.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "At year-end only",
+     "explanation": "As sales occur.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "When cash is received",
+     "explanation": "As sales occur.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "As the licensee's sales occur",
+     "explanation": "Correct. The sales-based royalty exception applies."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Sales- or usage-based royalties on IP licenses are recognized when the later of the sale or usage occurs or the obligation is satisfied.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-21",
+   "pool": "practice",
+   "stem": "A contract has a $10,000 bonus with a 60% chance of being earned and 40% of nothing. Which amount best predicts the variable consideration?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "Correct. With two outcomes, use the most likely amount."
+    },
+    {
+     "id": "b",
+     "text": "$6,000 (expected value)",
+     "explanation": "Expected value suits many outcomes.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$0 until it's earned",
+     "explanation": "Recognize what's likely.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$4,000 (the shortfall)",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Variable consideration uses the most likely amount for binary outcomes, subject to the constraint.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-22",
+   "pool": "practice",
+   "stem": "A customer prepays $100,000 two years before delivery. There's a significant financing component at 5%. What revenue is recognized at delivery?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "Accrue the financing component.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$110,250",
+     "explanation": "Correct. $100,000 × 1.05²."
+    },
+    {
+     "id": "c",
+     "text": "$110,000",
+     "explanation": "Compound the interest.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$105,000",
+     "explanation": "That is only 1 year.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A significant financing component adjusts revenue for the time value of money.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-23",
+   "pool": "practice",
+   "stem": "A manufacturer pays a retailer a $5,000 slotting fee with no distinct good or service in return. How is it treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As marketing expense",
+     "explanation": "No distinct service.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As a prepaid asset",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As a revenue reduction",
+     "explanation": "Correct. It's consideration payable to a customer."
+    },
+    {
+     "id": "d",
+     "text": "As a nonoperating loss",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Consideration payable to a customer reduces revenue unless it's for a distinct good or service.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-24",
+   "pool": "practice",
+   "stem": "A customer pays with shares worth $50,000 at contract inception. What revenue is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$0, since no cash is paid",
+     "explanation": "It's consideration.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "The shares' par value",
+     "explanation": "Use fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Later value at delivery",
+     "explanation": "Use inception value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$50,000",
+     "explanation": "Correct. Noncash consideration at fair value."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Noncash consideration is measured at fair value at contract inception.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-25",
+   "pool": "practice",
+   "stem": "The price is $100 a unit, but it drops retroactively to $90 if annual purchases exceed 1,000 units, which is expected. Q1 sales are 300 units. What Q1 revenue is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$27,000",
+     "explanation": "Correct. Expect the rebate: 300 × $90."
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Expect the volume rebate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$3,000",
+     "explanation": "That's the rebate.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$0 until year-end",
+     "explanation": "Revenue is recognized.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Expected volume rebates are variable consideration that reduces revenue as sales occur.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-26",
+   "pool": "practice",
+   "stem": "A $1,000 sale includes a voucher for 40% off up to $500 of future purchases, with 80% expected redemption. How much of the $1,000 is allocated to the product?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,000",
+     "explanation": "The voucher is a material right.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$862",
+     "explanation": "Correct. Voucher SSP $160; $1,000 × 1,000/1,160."
+    },
+    {
+     "id": "c",
+     "text": "$800",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$840",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A material right is a separate performance obligation allocated a share of the price.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-27",
+   "pool": "practice",
+   "stem": "A retailer sells a $300 extended 3-year warranty separately. How is the revenue recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "At the sale",
+     "explanation": "It's a service.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "As a cost accrual only",
+     "explanation": "It's a separate obligation.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Over 3 years",
+     "explanation": "Correct. It's a service-type warranty."
+    },
+    {
+     "id": "d",
+     "text": "At expiration",
+     "explanation": "Recognize it over time.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Service-type warranties are separate performance obligations recognized over the coverage period.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-rev2-28",
+   "pool": "practice",
+   "stem": "A software company grants a license to use functional software as it exists. When is revenue recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Over the license term",
+     "explanation": "That's a right to access.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "When cash is received",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "At the license's end",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "At a point in time",
+     "explanation": "Correct. A right to use is satisfied at transfer."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Licenses to functional IP are rights to use, recognized when control transfers.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/questions.json"
+  },
+  {
+   "id": "far-x3-03",
+   "moduleId": "far-revenue-measurement",
+   "pool": "exam",
+   "stem": "A bundle of product A (standalone selling price $600) and service B (standalone selling price $400) sells for $900. How much of the transaction price is allocated to product A?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$540",
+     "explanation": "Correct. $900 × 600/1,000."
+    },
+    {
+     "id": "b",
+     "text": "$600",
+     "explanation": "Uses the standalone price; the $100 discount is allocated proportionately.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$500",
+     "explanation": "Assigns the whole $100 discount to A.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$450",
+     "explanation": "Splits the price equally rather than by relative standalone selling prices.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Relative standalone selling price: 900 × 600 ÷ (600 + 400) = **$540**; B gets 360.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-04",
+   "moduleId": "far-revenue-measurement",
+   "pool": "exam",
+   "stem": "A contract includes a $50,000 bonus if a project finishes by June 30; management assesses a 70% probability, and there are only two outcomes. Assuming the constraint does not limit the estimate, what amount of variable consideration is included in the transaction price?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Correct. The most likely amount method best predicts a binary outcome."
+    },
+    {
+     "id": "b",
+     "text": "$35,000",
+     "explanation": "The expected-value method is poorly suited to a binary outcome.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "Variable consideration is estimated, subject to the constraint, not ignored.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$15,000",
+     "explanation": "That is the probability-weighted amount of *not* earning the bonus.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "a",
+   "explanation": "For a binary outcome, the most likely amount (here $50,000) is the better predictor. The constraint then asks whether a significant reversal is probable; the stem says it does not limit the amount.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": false,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-05",
+   "moduleId": "far-revenue-measurement",
+   "pool": "exam",
+   "stem": "A $5,000,000 construction contract is satisfied over time using cost-to-cost. Year 1 costs incurred were $1,200,000, with $2,800,000 estimated to complete. What gross profit is recognized in Year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,000,000",
+     "explanation": "That is total estimated gross profit, not Year 1's share.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$300,000",
+     "explanation": "Correct. 30% × $1,000,000 total gross profit."
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "Revenue over time is recognized as progress occurs.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "$1,500,000",
+     "explanation": "That is Year 1 revenue, not gross profit.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Progress = 1,200,000 ÷ 4,000,000 = 30%. Revenue = 30% × 5,000,000 = 1,500,000; gross profit = 1,500,000 − 1,200,000 = **$300,000**.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-17",
+   "moduleId": "far-revenue-measurement",
+   "pool": "exam",
+   "stem": "A retailer sells goods for $100,000 with a right of return and expects, based on experience, that 5% will be returned. How much revenue does it recognize at the point of sale?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "Expected returns are variable consideration and are excluded.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$95,000",
+     "explanation": "Correct. Revenue excludes expected returns; a refund liability of 5,000 is recorded."
+    },
+    {
+     "id": "c",
+     "text": "$0, until the return period expires",
+     "explanation": "Revenue is recognized net of estimated returns at transfer of control.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$90,000",
+     "explanation": "Only the 5% expected returns are excluded.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Sales with a right of return: recognize revenue for the consideration expected to be retained, a refund liability, and an asset for goods expected back.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  },
+  {
+   "id": "far-x3-25",
+   "moduleId": "far-revenue-measurement",
+   "pool": "exam",
+   "stem": "A contractor recognizes revenue over time using costs incurred to date. The contract price is $1,400,000; estimated total costs are $1,000,000; costs to date are $300,000. What cumulative revenue is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$300,000",
+     "explanation": "That is cost incurred, not revenue.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$420,000",
+     "explanation": "Correct. 300,000 ÷ 1,000,000 = 30% × 1,400,000."
+    },
+    {
+     "id": "c",
+     "text": "$120,000",
+     "explanation": "That is gross profit to date.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$1,400,000",
+     "explanation": "Revenue over time is recognized by progress.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Input method: progress = costs to date ÷ estimated total costs (30%); revenue = 30% × $1,400,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area3.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-rev2-fc1",
+   "front": "Expected value vs. most likely amount",
+   "back": "**Expected value**: many outcomes (probability-weighted). **Most likely amount**: two outcomes (e.g., bonus or no bonus).",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/flashcards.json"
+  },
+  {
+   "id": "far-rev2-fc2",
+   "front": "The constraint on variable consideration",
+   "back": "Include only the amount for which a **significant revenue reversal is not probable**.",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/flashcards.json"
+  },
+  {
+   "id": "far-rev2-fc3",
+   "front": "Significant financing component",
+   "back": "Adjust to the **cash selling price**; practical expedient if payment is within **one year** of transfer.",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/flashcards.json"
+  },
+  {
+   "id": "far-rev2-fc4",
+   "front": "Right of return accounting",
+   "back": "Revenue net of expected returns; **refund liability** (selling price); **asset** for recovery of goods (cost).",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/flashcards.json"
+  },
+  {
+   "id": "far-rev2-fc5",
+   "front": "Three over-time criteria",
+   "back": "1) Customer receives & consumes as performed; 2) customer controls the asset as created; 3) **no alternative use + enforceable right to payment** for work to date.",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/flashcards.json"
+  },
+  {
+   "id": "far-rev2-fc6",
+   "front": "Loss on an over-time contract",
+   "back": "Recognize the **entire expected loss** immediately (reversing prior profit).",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/flashcards.json"
+  },
+  {
+   "id": "far-rev2-fc7",
+   "front": "Contract asset vs. receivable vs. contract liability",
+   "back": "**Contract asset**: conditional right. **Receivable**: unconditional. **Contract liability**: paid before performance.",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/flashcards.json"
+  },
+  {
+   "id": "far-rev2-fc8",
+   "front": "Incremental costs of obtaining a contract",
+   "back": "Capitalize and amortize; expense if amortization period ≤ **1 year**.",
+   "moduleId": "far-revenue-measurement",
+   "_file": "content/far/modules/far-revenue-measurement/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-r3-revenue-allocation.json",
+  "content/far/tbs/far-tbs-u9-construction.json"
+ ]
+}

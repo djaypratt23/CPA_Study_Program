@@ -1,0 +1,1220 @@
+{
+ "mcqs": [
+  {
+   "id": "far-spf-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a small company collected $500,000 from customers this year. Receivables rose from $40,000 to $70,000. What was accrual-basis revenue?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$470,000",
+     "explanation": "Rising receivables mean revenue exceeded collections, not the reverse.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$500,000",
+     "explanation": "That is cash-basis revenue.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$570,000",
+     "explanation": "This adds the whole ending balance without subtracting the beginning balance.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$530,000",
+     "explanation": "Correct. 500,000 + 70,000 − 40,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Accrual revenue = cash collected + ending AR − beginning AR = 500,000 + 70,000 − 40,000 = **530,000**.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-chk1",
+   "pool": "lesson",
+   "stem": "Which title is appropriate for a cash-basis operating statement?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Income statement",
+     "explanation": "That title implies accrual GAAP.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Statement of revenues collected and expenses paid",
+     "explanation": "Correct. The title signals the cash basis."
+    },
+    {
+     "id": "c",
+     "text": "Statement of comprehensive income",
+     "explanation": "A GAAP title that would mislead users.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Statement of operations (GAAP basis)",
+     "explanation": "The statements are not GAAP.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Special-purpose statements use titles that avoid implying GAAP; cash-basis operating statements are typically titled 'statement of revenues collected and expenses paid.'",
+   "skill": "remembering",
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-chk2",
+   "pool": "lesson",
+   "stem": "A company preparing income-tax-basis statements wrote off $12,000 of uncollectible accounts this year and estimates another $8,000 of current receivables will be uncollectible. What bad debt expense is reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$12,000",
+     "explanation": "Correct. The tax basis uses the direct write-off method."
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "This adds an allowance-based estimate, which the tax basis does not use.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$8,000",
+     "explanation": "The estimate is not deductible until written off.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Actual write-offs are deductible.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Under the income tax basis, bad debts are deducted when specific accounts are written off (direct write-off method). The $8,000 estimate is not recorded.",
+   "skill": "application",
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-01",
+   "pool": "practice",
+   "stem": "Which of the following is **not** a special purpose framework?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Income tax basis",
+     "explanation": "A special purpose framework.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "Modified cash basis",
+     "explanation": "A special purpose framework.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "U.S. GAAP for private companies with PCC alternatives",
+     "explanation": "Correct. PCC alternatives are part of U.S. GAAP, a general purpose framework."
+    },
+    {
+     "id": "d",
+     "text": "A regulatory basis required by a state insurance commission",
+     "explanation": "A special purpose framework.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Special purpose frameworks include cash, modified cash, tax, regulatory, contractual, and other bases. Private-company GAAP alternatives are still GAAP.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-02",
+   "pool": "practice",
+   "stem": "Cash paid for rent was $36,000. Prepaid rent was $6,000 at the beginning of the year and $9,000 at the end. What is accrual-basis rent expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$39,000",
+     "explanation": "This adds the increase in prepaid rent; an increase means cash was paid ahead, so expense is lower.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$33,000",
+     "explanation": "Correct. 36,000 + 6,000 − 9,000 = 33,000."
+    },
+    {
+     "id": "c",
+     "text": "$36,000",
+     "explanation": "That is cash-basis expense.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$27,000",
+     "explanation": "This subtracts the ending balance without adding the beginning.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Expense = cash paid + beginning prepaid (used this year) − ending prepaid (for next year) = 36,000 + 6,000 − 9,000 = **33,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-03",
+   "pool": "practice",
+   "stem": "A physician's cash receipts from patients were $620,000. Accounts receivable were $70,000 at the beginning and $55,000 at the end of the year; $4,000 of receivables were written off during the year. What is accrual-basis revenue (gross, before any allowance)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$601,000",
+     "explanation": "This subtracts the write-offs, but written-off amounts were billed revenue.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$605,000",
+     "explanation": "This ignores the write-offs, which reduced receivables without cash.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$609,000",
+     "explanation": "Correct. 620,000 + 55,000 + 4,000 − 70,000 = 609,000."
+    },
+    {
+     "id": "d",
+     "text": "$635,000",
+     "explanation": "This reverses the receivable change.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Receivable roll-forward: beginning 70,000 + revenue − collections 620,000 − write-offs 4,000 = ending 55,000 → revenue = 55,000 + 620,000 + 4,000 − 70,000 = **609,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-04",
+   "pool": "practice",
+   "stem": "Which modification to the cash basis is generally considered to have substantial support under a modified cash basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Recording revenue when services are performed",
+     "explanation": "Recognizing receivables broadly converts the statements to accrual, beyond a modification.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Deferring rent expense arbitrarily to smooth income",
+     "explanation": "Arbitrary deferrals have no support.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Recording estimated future warranty costs",
+     "explanation": "Estimated accruals are accrual-basis features, not typical modifications.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Capitalizing equipment purchases and recording depreciation",
+     "explanation": "Correct. A common, well-supported modification."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Modifications with substantial support include capitalizing and depreciating long-lived assets, recording long-term debt, and accruing income taxes. Pervasive accruals would make it an accrual basis.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-05",
+   "pool": "practice",
+   "stem": "In income-tax-basis financial statements, how is interest income on municipal bonds (exempt from federal tax) presented?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Excluded entirely because it is not taxable",
+     "explanation": "Tax-basis statements present all revenues; nontaxable items are still reported.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Included as revenue, often shown or disclosed as nontaxable",
+     "explanation": "Correct. Tax-basis statements include nontaxable revenues and nondeductible expenses, typically as separate line items or with disclosure, so the statements remain complete."
+    },
+    {
+     "id": "c",
+     "text": "Recorded directly in equity",
+     "explanation": "It is revenue of the period.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Presented only in the notes",
+     "explanation": "It belongs in the statement of revenues and expenses.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Tax-basis statements include nontaxable revenues and nondeductible expenses, typically as separate line items or with disclosure, so the statements remain complete.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-06",
+   "pool": "practice",
+   "stem": "Which disclosure is required in financial statements prepared using a special purpose framework?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A reconciliation quantifying every difference from GAAP net income",
+     "explanation": "Differences must be described, but their effects need not be quantified.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "A statement that the statements comply with GAAP",
+     "explanation": "They do not comply with GAAP.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A description of the basis of accounting and how it differs from GAAP",
+     "explanation": "Correct. Special-purpose statements describe the basis and the primary differences from GAAP (without quantifying), and include informative disclosures similar to GAAP where applicable."
+    },
+    {
+     "id": "d",
+     "text": "No disclosures are required",
+     "explanation": "Disclosures comparable to GAAP for similar items are expected.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Special-purpose statements describe the basis and the primary differences from GAAP (without quantifying), and include informative disclosures similar to GAAP where applicable.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-07",
+   "pool": "practice",
+   "stem": "Cash paid for utilities was $24,000. Utilities payable was $3,000 at the beginning of the year and $1,000 at the end. What is accrual utilities expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$22,000",
+     "explanation": "Correct. 24,000 + 1,000 − 3,000 = 22,000."
+    },
+    {
+     "id": "b",
+     "text": "$26,000",
+     "explanation": "This reverses the effect of the decrease in payables.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$24,000",
+     "explanation": "That is the cash amount.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$25,000",
+     "explanation": "This adds only the ending payable.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Some of the 24,000 paid settled last year's 3,000 bill. Expense = 24,000 + ending payable 1,000 − beginning payable 3,000 = **22,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-08",
+   "pool": "practice",
+   "stem": "Which title is appropriate for the balance sheet of an entity reporting on the income tax basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Balance sheet",
+     "explanation": "'Balance sheet' implies GAAP; tax-basis titles must signal the basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Statement of financial position",
+     "explanation": "Also a GAAP-style title without a basis qualifier.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Statement of assets and liabilities arising from cash transactions",
+     "explanation": "That is a cash-basis title.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Statement of assets, liabilities, and equity — income tax basis",
+     "explanation": "Correct. Titles should reflect the special purpose framework: 'Statement of assets, liabilities, and equity — income tax basis.'"
+    }
+   ],
+   "answer": "d",
+   "explanation": "Titles should reflect the special purpose framework: 'Statement of assets, liabilities, and equity — income tax basis.'",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-09",
+   "pool": "practice",
+   "stem": "A cash-basis entity received $48,000 in advance for a 12-month service contract on October 1. What revenue would be recognized for the calendar year under the accrual basis versus the cash basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Accrual $12,000; cash $48,000",
+     "explanation": "Correct. Accrual: 48,000 × 3/12 = 12,000 earned; cash basis records the full receipt."
+    },
+    {
+     "id": "b",
+     "text": "Accrual $48,000; cash $12,000",
+     "explanation": "Reversed — the cash basis records what was received.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Both $12,000",
+     "explanation": "The cash basis recognizes all cash received.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Both $48,000",
+     "explanation": "Accrual recognizes only the 3 months earned.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Accrual: revenue earned Oct–Dec = 48,000 × 3/12 = **12,000**, with 36,000 unearned. Cash basis: all **48,000** received is revenue.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-10",
+   "pool": "practice",
+   "stem": "Why might a closely held company choose income-tax-basis statements instead of GAAP?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Tax-basis statements are required for all private companies",
+     "explanation": "No such requirement exists.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Tax-basis statements eliminate the need for any disclosures",
+     "explanation": "Disclosures are still required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Its users accept the tax basis, which is cheaper and ties to the return",
+     "explanation": "Correct. Special purpose frameworks are appropriate when users agree to them."
+    },
+    {
+     "id": "d",
+     "text": "Tax-basis statements always report higher net income",
+     "explanation": "Tax basis may report higher or lower income depending on differences.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Special purpose frameworks are appropriate when users agree to them. The tax basis leverages records the company already keeps, reducing cost.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-11",
+   "pool": "practice",
+   "stem": "A business on the cash basis collected $500,000 from customers. Accounts receivable rose from $40,000 to $55,000, and unearned revenue fell from $10,000 to $6,000. What is accrual-basis revenue?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$519,000",
+     "explanation": "Correct. 500,000 + 15,000 AR increase + 4,000 unearned revenue decrease."
+    },
+    {
+     "id": "b",
+     "text": "$515,000",
+     "explanation": "The decrease in unearned revenue also adds to revenue.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$504,000",
+     "explanation": "The increase in receivables adds to revenue.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$481,000",
+     "explanation": "Both adjustments increase revenue.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Accrual revenue = cash collected + increase in receivables + decrease in unearned revenue.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-12",
+   "pool": "practice",
+   "stem": "A company paid $300,000 of salaries in cash. Accrued salaries were $12,000 at the beginning of the year and $8,000 at the end. What is accrual-basis salaries expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$304,000",
+     "explanation": "A decrease in accrued salaries reduces expense.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$296,000",
+     "explanation": "Correct. 300,000 − 12,000 + 8,000 = 296,000."
+    },
+    {
+     "id": "c",
+     "text": "$300,000",
+     "explanation": "Cash paid must be adjusted for the accrual change.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$320,000",
+     "explanation": "Accruals are netted, not added.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Accrual expense = cash paid − beginning accrued liability + ending accrued liability.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-13",
+   "pool": "practice",
+   "stem": "In financial statements prepared on the pure cash basis, depreciation on equipment is:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Recorded using straight-line",
+     "explanation": "Depreciation is a modification of the cash basis, not pure cash basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Recorded using tax MACRS",
+     "explanation": "That would be the income tax basis.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Not recorded",
+     "explanation": "Correct. The pure cash basis records only cash receipts and disbursements; the equipment cost was a disbursement."
+    },
+    {
+     "id": "d",
+     "text": "Recorded only for assets bought on credit",
+     "explanation": "Pure cash basis ignores noncash expenses.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Under the pure cash basis, the purchase is a cash disbursement; depreciation appears only if the cash basis is modified.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-14",
+   "pool": "practice",
+   "stem": "A company paid $24,000 of insurance premiums. Prepaid insurance was $6,000 at the beginning of the year and $9,000 at the end. What is accrual-basis insurance expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$27,000",
+     "explanation": "An increase in prepaid insurance reduces expense.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$24,000",
+     "explanation": "Cash paid must be adjusted for prepaid changes.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$15,000",
+     "explanation": "Only the change (3,000) adjusts cash paid.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$21,000",
+     "explanation": "Correct. 24,000 + 6,000 − 9,000 = 21,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Accrual expense = cash paid + beginning prepaid − ending prepaid.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-15",
+   "pool": "practice",
+   "stem": "Statements prepared under a special purpose framework contain items that are the same as, or similar to, items in GAAP statements. What disclosures are required?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Disclosures similar to GAAP's",
+     "explanation": "Correct. Informative disclosures similar to GAAP are needed for similar items."
+    },
+    {
+     "id": "b",
+     "text": "No disclosures beyond the basis of accounting",
+     "explanation": "Similar items require similar disclosures.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "All disclosures GAAP requires, without exception",
+     "explanation": "The requirement is for similar informative disclosures.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Only disclosures required by the tax law",
+     "explanation": "The framework still needs informative disclosures.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Under special purpose frameworks, statements include a description of the basis and informative disclosures similar to GAAP for similar items.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-16",
+   "pool": "practice",
+   "stem": "In income-tax-basis statements, how is depreciation usually computed?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Using GAAP useful lives",
+     "explanation": "Tax basis uses tax rules.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Using tax methods",
+     "explanation": "Correct. The statements follow tax rules."
+    },
+    {
+     "id": "c",
+     "text": "It isn't recorded at all",
+     "explanation": "Depreciation is recorded.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "At current fair value",
+     "explanation": "Fair value isn't the basis.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Income-tax-basis statements measure items using the methods used for the tax return.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-17",
+   "pool": "practice",
+   "stem": "Under the pure cash basis, how is interest accrued but unpaid on a loan treated at year-end?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a liability",
+     "explanation": "Accruals aren't recorded.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As an expense",
+     "explanation": "Only paid interest.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "It isn't recorded at all",
+     "explanation": "Correct. Only cash payments are recorded."
+    },
+    {
+     "id": "d",
+     "text": "In the notes as a liability",
+     "explanation": "Unpaid interest isn't recorded.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The cash basis records transactions only when cash is received or paid.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-18",
+   "pool": "practice",
+   "stem": "An insurer prepares statements for its state insurance department under statutory accounting. Which framework is this?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "U.S. GAAP",
+     "explanation": "Statutory accounting differs.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "The income tax basis",
+     "explanation": "Not the framework.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A contractual basis",
+     "explanation": "Not the framework.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A regulatory basis",
+     "explanation": "Correct. It's a special purpose framework."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Statutory accounting prescribed by a regulator is a regulatory-basis special purpose framework.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-19",
+   "pool": "practice",
+   "stem": "Accrual revenue is $400,000. Accounts receivable rose $30,000, and unearned revenue rose $10,000. What were cash receipts from customers?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$380,000",
+     "explanation": "Correct. 400 − 30 + 10."
+    },
+    {
+     "id": "b",
+     "text": "$420,000",
+     "explanation": "A receivable increase reduces cash.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$360,000",
+     "explanation": "Unearned revenue adds cash.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$400,000",
+     "explanation": "Adjust for both changes.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Cash receipts = revenue − increase in receivables + increase in unearned revenue.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-20",
+   "pool": "practice",
+   "stem": "Cash paid for supplies was $50,000. Supplies on hand rose $4,000, and accounts payable for supplies fell $2,000. What is accrual supplies expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$52,000",
+     "explanation": "A payables decrease lowers expense.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$44,000",
+     "explanation": "Correct. 50 − 4 − 2."
+    },
+    {
+     "id": "c",
+     "text": "$48,000",
+     "explanation": "Subtract both changes.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$56,000",
+     "explanation": "Both changes lower expense.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Expense = cash paid − increase in supplies − decrease in payables.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-21",
+   "pool": "practice",
+   "stem": "Under the cash basis, $400,000 was collected from customers, and AR rose by $30,000. What is accrual-basis revenue?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$430,000",
+     "explanation": "Correct. Collections plus the AR increase."
+    },
+    {
+     "id": "b",
+     "text": "$370,000",
+     "explanation": "Add the increase.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$400,000",
+     "explanation": "Adjust for the AR change.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$460,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Converting to accrual, revenue equals cash collected plus the increase in receivables.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-22",
+   "pool": "practice",
+   "stem": "$200,000 was paid for expenses. Prepaid expenses rose $5,000 and accrued liabilities rose $8,000. What is accrual-basis expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$213,000",
+     "explanation": "Higher prepaids reduce expense.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$203,000",
+     "explanation": "Correct. 200 − 5 + 8."
+    },
+    {
+     "id": "c",
+     "text": "$187,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$197,000",
+     "explanation": "Higher accruals add expense.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Accrual expense equals cash paid, less the prepaid increase, plus the accrued liability increase.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-23",
+   "pool": "practice",
+   "stem": "Which adjustment is typical of the modified cash basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Accruing all revenue",
+     "explanation": "That's accrual.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Expensing all asset purchases",
+     "explanation": "That's pure cash basis.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Depreciating capital assets",
+     "explanation": "Correct. Modifications with substantial support."
+    },
+    {
+     "id": "d",
+     "text": "Recording deferred taxes",
+     "explanation": "That is not typical.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The modified cash basis adds items with substantial support, such as depreciation of capital assets.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-24",
+   "pool": "practice",
+   "stem": "How are assets presented in personal financial statements?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "At historical cost",
+     "explanation": "That is not used for PFS.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "At tax basis",
+     "explanation": "That is not used for PFS.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "At the lower of cost or market",
+     "explanation": "That is not used for PFS.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "At estimated current value",
+     "explanation": "Correct. PFS use current values."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Personal financial statements present assets at estimated current values and liabilities at current amounts.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-25",
+   "pool": "practice",
+   "stem": "In personal financial statements, how are taxes on unrealized appreciation presented?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As estimated taxes owed",
+     "explanation": "Correct. Shown between liabilities and net worth."
+    },
+    {
+     "id": "b",
+     "text": "Not presented at all",
+     "explanation": "They're presented.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As a current liability",
+     "explanation": "They're shown separately.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Netted against each asset",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "PFS show estimated income taxes on differences between current values and tax bases.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-26",
+   "pool": "practice",
+   "stem": "When must an entity use the liquidation basis of accounting?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Whenever going concern is in doubt",
+     "explanation": "Doubt alone isn't enough.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "When liquidation is imminent",
+     "explanation": "Correct. It applies when liquidation is imminent."
+    },
+    {
+     "id": "c",
+     "text": "When it reports losses",
+     "explanation": "Not the trigger.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "At management's option",
+     "explanation": "It is not optional.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The liquidation basis applies when liquidation is imminent, unless under a plan from inception.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-27",
+   "pool": "practice",
+   "stem": "A cash-basis entity receives a $10,000 customer deposit for work next year. How is it reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As deferred revenue",
+     "explanation": "That's accrual.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As a liability",
+     "explanation": "That's accrual.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "As revenue now",
+     "explanation": "Correct. The cash basis records receipts."
+    },
+    {
+     "id": "d",
+     "text": "Next year",
+     "explanation": "Cash basis records it now.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Under the pure cash basis, revenue is recognized when cash is received.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-spf-28",
+   "pool": "practice",
+   "stem": "An individual owns 100% of a business. How is it presented in personal financial statements?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Consolidated line by line",
+     "explanation": "That is not done in PFS.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "At historical cost",
+     "explanation": "Use current value.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Excluded from the statements",
+     "explanation": "It is a personal asset.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "As one current-value asset",
+     "explanation": "Correct. A closely held business is presented as a single net amount."
+    }
+   ],
+   "answer": "d",
+   "explanation": "A business interest in PFS is shown as a single investment at estimated current value.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/questions.json"
+  },
+  {
+   "id": "far-x1-15",
+   "moduleId": "far-special-purpose",
+   "pool": "exam",
+   "stem": "A company reports on the **modified cash basis**. Which modification is generally acceptable?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Accruing revenue and receivables for all credit sales",
+     "explanation": "That is a full accrual adjustment; it turns the statements into GAAP rather than a modified cash basis.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Capitalizing purchased equipment and recording depreciation",
+     "explanation": "Correct. This is a common modification with substantial support."
+    },
+    {
+     "id": "c",
+     "text": "Recognizing unrealized gains on land",
+     "explanation": "Upward revaluation of land is not generally accepted.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Omitting all disclosures",
+     "explanation": "Special purpose framework statements still need adequate disclosure.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Modifications to the cash basis must have substantial support — for example, capitalizing and depreciating long-lived assets or accruing income taxes. Modifications that amount to full accrual accounting are not appropriate.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "calc": false,
+   "_file": "content/far/exam-questions/far-exam-area1.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-spf-fc1",
+   "front": "Six special purpose frameworks",
+   "back": "Cash · Modified cash · Income tax · Regulatory · Contractual · Other (e.g., FRF for SMEs).",
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/flashcards.json"
+  },
+  {
+   "id": "far-spf-fc2",
+   "front": "Cash-basis statement titles",
+   "back": "Statement of **assets and liabilities arising from cash transactions**; statement of **revenues collected and expenses paid**.",
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/flashcards.json"
+  },
+  {
+   "id": "far-spf-fc3",
+   "front": "Cash → accrual revenue",
+   "back": "Cash collected + ending AR − beginning AR (+ write-offs if using gross AR) + beginning unearned − ending unearned.",
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/flashcards.json"
+  },
+  {
+   "id": "far-spf-fc4",
+   "front": "Cash → accrual expense",
+   "back": "Cash paid + ending accrued liability − beginning accrued liability + beginning prepaid − ending prepaid.",
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/flashcards.json"
+  },
+  {
+   "id": "far-spf-fc5",
+   "front": "Bad debts under the income tax basis",
+   "back": "**Direct write-off** method — no allowance.",
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/flashcards.json"
+  },
+  {
+   "id": "far-spf-fc6",
+   "front": "Required disclosure for special purpose frameworks",
+   "back": "Describe the basis and how it **differs from GAAP** (effects need not be quantified), plus GAAP-like informative disclosures.",
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/flashcards.json"
+  },
+  {
+   "id": "far-spf-fc7",
+   "front": "Common modified-cash modifications",
+   "back": "Capitalize & depreciate fixed assets, record long-term debt, accrue income taxes.",
+   "moduleId": "far-special-purpose",
+   "_file": "content/far/modules/far-special-purpose/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-u3-special-purpose.json"
+ ]
+}

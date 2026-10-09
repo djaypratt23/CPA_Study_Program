@@ -1,0 +1,1339 @@
+{
+ "mcqs": [
+  {
+   "id": "far-ppe-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a company buys land with an old warehouse on it, intending to build a new store. It pays $15,000 to demolish the warehouse and sells scrap for $2,000. How is the $13,000 net cost treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Capitalized as a land improvement and depreciated",
+     "explanation": "Land preparation costs are part of nondepreciable land.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Added to the cost of the new building",
+     "explanation": "Demolition relates to preparing the land, not constructing the building.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Expensed as a loss",
+     "explanation": "The old warehouse was never used by the company; its removal is part of acquiring usable land.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Added to the cost of the land",
+     "explanation": "Correct. Demolition prepares the land for its intended use."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Costs to remove an unwanted structure from newly acquired land (net of salvage) are part of the land's cost.",
+   "skill": "application",
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-chk1",
+   "pool": "lesson",
+   "stem": "A company bought a machine for $50,000 (terms 2/10, n/30, paid within 10 days). It paid $1,500 freight, $400 insurance in transit, $2,100 installation, and $800 to repair damage caused when its own employees dropped the machine during installation. What is the machine's cost?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$53,000",
+     "explanation": "Correct. 49,000 + 1,500 + 400 + 2,100."
+    },
+    {
+     "id": "b",
+     "text": "$54,000",
+     "explanation": "This uses the gross price and ignores the cash discount taken.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$53,800",
+     "explanation": "The repair of self-inflicted damage is not a necessary cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$49,000",
+     "explanation": "This omits freight, transit insurance, and installation.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Net price 50,000 × 98% = 49,000 + freight 1,500 + transit insurance 400 + installation 2,100 = **53,000**. The 800 repair of accidental damage is expensed.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-chk2",
+   "pool": "lesson",
+   "stem": "Which expenditure on a delivery truck already in service should be **capitalized**?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Replacing worn tires with similar tires",
+     "explanation": "Routine maintenance — expense.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Annual oil changes and tune-ups",
+     "explanation": "Ordinary maintenance — expense.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Repainting the truck in the company's colors",
+     "explanation": "Cosmetic and recurring — expense.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A larger engine that extends the useful life",
+     "explanation": "Correct. It extends useful life."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Expenditures that extend useful life, increase capacity, or improve efficiency are capitalized; ordinary repairs and maintenance are expensed.",
+   "skill": "application",
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-01",
+   "pool": "practice",
+   "stem": "A company paid $400,000 for land and an old building it planned to raze. Additional costs: title insurance $3,000; demolition $25,000; proceeds from salvaged materials $5,000; grading $8,000; architect fees for the new building $40,000; new parking lot $60,000. What is the cost of the land?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$431,000",
+     "explanation": "Correct. 400,000 + 3,000 + 25,000 − 5,000 + 8,000."
+    },
+    {
+     "id": "b",
+     "text": "$436,000",
+     "explanation": "This ignores the salvage proceeds.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$491,000",
+     "explanation": "The parking lot is a depreciable land improvement.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$471,000",
+     "explanation": "Architect fees belong to the building.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Land = 400,000 + 3,000 title + 25,000 demolition − 5,000 salvage + 8,000 grading = **431,000**. Architect fees → building; parking lot → land improvements.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-02",
+   "pool": "practice",
+   "stem": "A company purchased land, a building, and equipment for $1,200,000. Appraised values: land $400,000; building $900,000; equipment $200,000. What cost is assigned to the building?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$900,000",
+     "explanation": "This uses the appraisal rather than allocating the actual price.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$720,000",
+     "explanation": "Correct. 900,000 ÷ 1,500,000 × 1,200,000."
+    },
+    {
+     "id": "c",
+     "text": "$400,000",
+     "explanation": "That is equal-split thinking (1,200,000 ÷ 3).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$600,000",
+     "explanation": "This allocates half the price to the building without using relative values.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Building share = 900,000 ÷ 1,500,000 = 60%. 60% × 1,200,000 = **720,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-03",
+   "pool": "practice",
+   "stem": "Which asset qualifies for capitalization of interest during construction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Inventory that a winery routinely produces in large quantities",
+     "explanation": "Routinely produced inventory does not qualify.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A building already in use that is being repainted",
+     "explanation": "Assets in use do not qualify.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A corporate headquarters the company is constructing for its own use",
+     "explanation": "Correct. Qualifying assets include those constructed for an entity's own use and discrete projects built for sale or lease."
+    },
+    {
+     "id": "d",
+     "text": "Land held for future development with no development activities under way",
+     "explanation": "Land doesn't qualify unless it is being developed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Qualifying assets include those constructed for an entity's own use and discrete projects built for sale or lease.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-04",
+   "pool": "practice",
+   "stem": "Weighted-average accumulated expenditures on a qualifying asset were $2,000,000. The company has a $1,500,000 specific construction loan at 7% and other debt of $4,000,000 at a weighted-average rate of 10%. Actual interest incurred was $505,000. How much interest is capitalized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$140,000",
+     "explanation": "This applies the 7% specific rate to all 2,000,000 of WAAE.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$200,000",
+     "explanation": "This applies the 10% general rate to all 2,000,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$505,000",
+     "explanation": "Only avoidable interest is capitalized, capped at actual interest.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$155,000",
+     "explanation": "Correct. 1,500,000 × 7% + 500,000 × 10%."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Specific loan: 1,500,000 × 7% = 105,000. Excess WAAE 500,000 × 10% = 50,000. Avoidable = **155,000** (< actual 505,000), so capitalize 155,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-05",
+   "pool": "practice",
+   "stem": "Construction expenditures (calendar year, project continues into next year): $300,000 on March 1 and $480,000 on September 1. What are weighted-average accumulated expenditures for the year?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$780,000",
+     "explanation": "This ignores how long each amount was outstanding.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$410,000",
+     "explanation": "Correct. 300,000 × 10/12 + 480,000 × 4/12 = 250,000 + 160,000."
+    },
+    {
+     "id": "c",
+     "text": "$385,000",
+     "explanation": "This counts March 1 as 9 months outstanding (300,000 × 9/12 + 160,000); March through December is 10 months.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$390,000",
+     "explanation": "This is a simple average of the two amounts.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "March 1 → 10 months outstanding: 250,000. September 1 → 4 months: 160,000. WAAE = **410,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-06",
+   "pool": "practice",
+   "stem": "When does a company stop capitalizing interest on a building it is constructing for its own use?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "When the building is substantially complete and ready for its intended use",
+     "explanation": "Correct. The capitalization period ends when the asset is substantially complete and ready for its intended use (ASC 835-20-25-5)."
+    },
+    {
+     "id": "b",
+     "text": "When the construction loan is fully repaid",
+     "explanation": "Capitalization depends on the asset's readiness, not the loan balance.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "c",
+     "text": "At the end of the fiscal year in which construction began",
+     "explanation": "Capitalization continues across years while construction is in progress.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "When the first expenditure is made",
+     "explanation": "That is when capitalization begins, not ends.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "a",
+   "explanation": "The capitalization period ends when the asset is substantially complete and ready for its intended use (ASC 835-20-25-5). Brief interruptions don't stop it; substantial suspensions do.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-07",
+   "pool": "practice",
+   "stem": "A company incurs these costs related to a new factory building: construction contract $2,000,000; architect fees $120,000; building permit $8,000; excavation for the foundation $45,000; interest capitalized $60,000; landscaping of the grounds with a limited life $30,000. What is the building's cost?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,263,000",
+     "explanation": "This includes the landscaping, a land improvement.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$2,173,000",
+     "explanation": "This omits the capitalized interest.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$2,233,000",
+     "explanation": "Correct. 2,000,000 + 120,000 + 8,000 + 45,000 + 60,000."
+    },
+    {
+     "id": "d",
+     "text": "$2,128,000",
+     "explanation": "This omits excavation and capitalized interest.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Building = contract 2,000,000 + architect 120,000 + permit 8,000 + excavation 45,000 + capitalized interest 60,000 = **2,233,000**. Limited-life landscaping is a land improvement.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-08",
+   "pool": "practice",
+   "stem": "A company is legally required to dismantle an offshore platform at the end of its 20-year life. The present value of the estimated dismantling cost is $3,000,000. At installation, how is this recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Expense of $3,000,000 in the current year",
+     "explanation": "The cost is capitalized into the asset, not expensed immediately.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Add to the platform's cost and record an ARO",
+     "explanation": "Correct. ASC 410-20: recognize the ARO at fair value when incurred and capitalize the same amount as part of the asset."
+    },
+    {
+     "id": "c",
+     "text": "Disclose only, since the cost occurs in 20 years",
+     "explanation": "A legal obligation is recognized at fair value when incurred.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "Record the undiscounted future cost as a liability",
+     "explanation": "AROs are measured at fair value, typically a present value.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "ASC 410-20: recognize the ARO at fair value when incurred and capitalize the same amount as part of the asset. Depreciate the asset; accrete the liability over time.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-09",
+   "pool": "practice",
+   "stem": "A company replaced the roof of its warehouse at a cost of $180,000; the new roof extends the building's life by 10 years. The old roof's cost and accumulated depreciation are known: $90,000 and $70,000. What is the correct accounting?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Expense $180,000 as a repair",
+     "explanation": "The expenditure extends useful life — capitalize.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Capitalize $180,000 and keep the old roof on the books",
+     "explanation": "Leaving the replaced component overstates the asset.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "Capitalize $180,000; remove the old roof with a $20,000 loss",
+     "explanation": "Correct. Substitution approach: capitalize the new component (180,000) and derecognize the old one (cost 90,000, accumulated depreciation 70,000) → loss on disposal 20,000."
+    },
+    {
+     "id": "d",
+     "text": "Capitalize $90,000, the difference between new and old roof costs",
+     "explanation": "The full cost of the new roof is capitalized.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Substitution approach: capitalize the new component (180,000) and derecognize the old one (cost 90,000, accumulated depreciation 70,000) → loss on disposal **20,000**.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-10",
+   "pool": "practice",
+   "stem": "A retail company received a warehouse as an unconditional donation from a private foundation that holds no ownership interest in the company. The warehouse's fair value is $2,500,000. How does the company record the donation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Warehouse at $2,500,000 and contribution revenue (gain) of $2,500,000",
+     "explanation": "Correct. An unconditional contribution received from a non-owner is recognized at fair value as revenue or gain in the period received."
+    },
+    {
+     "id": "b",
+     "text": "Warehouse at $0, because the company paid nothing to acquire it",
+     "explanation": "Nonreciprocal transfers received are recognized at fair value, not at the (zero) cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Warehouse at $2,500,000 and additional paid-in capital of $2,500,000",
+     "explanation": "The foundation is not an owner, so the transfer is not a capital contribution; it goes through income.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "No entry; disclose the donated warehouse and its fair value in the notes only",
+     "explanation": "An unconditional contribution of an asset must be recognized, not just disclosed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 958-605 applies to contributions received by all entities, including business entities (only transfers from governments to businesses are excluded from its scope). An unconditional contribution is recognized when received, measured at fair value, as revenue or gain: Dr Warehouse 2,500,000; Cr Contribution revenue (gain) 2,500,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-11",
+   "pool": "practice",
+   "stem": "Which cost is capitalized as part of new equipment?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Annual maintenance",
+     "explanation": "Maintenance is expensed as incurred.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Installation costs",
+     "explanation": "Correct. Costs to get the asset ready for its intended use are capitalized."
+    },
+    {
+     "id": "c",
+     "text": "Operator training",
+     "explanation": "Training is expensed.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Insurance after it is in use",
+     "explanation": "Ongoing insurance is expensed.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Equipment cost includes the price, taxes, freight, installation and testing.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-12",
+   "pool": "practice",
+   "stem": "A company pays $900,000 for land and a building. Appraised values are land $300,000 and building $700,000. At what amount is the land recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$300,000",
+     "explanation": "A lump-sum price is allocated by relative fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$200,000",
+     "explanation": "That deducts the building's appraisal from the price.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$270,000",
+     "explanation": "Correct. 900,000 × 300 ÷ 1,000 = 270,000."
+    },
+    {
+     "id": "d",
+     "text": "$450,000",
+     "explanation": "Allocation isn't equal.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Allocate a lump-sum purchase price in proportion to relative fair values.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-13",
+   "pool": "practice",
+   "stem": "A company builds equipment for its own use: materials $200,000; direct labor $150,000; incremental overhead $40,000; avoidable interest $12,000; and $10,000 to redo work after a design error. What is the equipment's cost?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$412,000",
+     "explanation": "Abnormal rework costs are expensed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$390,000",
+     "explanation": "Avoidable interest is capitalized during construction.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$362,000",
+     "explanation": "Incremental overhead is part of cost.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$402,000",
+     "explanation": "Correct. Materials, labor, incremental overhead and avoidable interest; abnormal rework is expensed."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Self-constructed assets include direct costs, incremental overhead and capitalized interest; abnormal costs such as rework are expensed.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-14",
+   "pool": "practice",
+   "stem": "A company installs a storage tank it must remove at the end of its life. The present value of the removal obligation is $80,000. What is the initial entry?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Debit the asset; credit an ARO liability",
+     "explanation": "Correct. The ARO is added to the asset's carrying amount."
+    },
+    {
+     "id": "b",
+     "text": "Debit expense; credit an ARO liability",
+     "explanation": "The cost is capitalized, not expensed.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "No entry until removal",
+     "explanation": "AROs are recognized when incurred.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "Debit the asset; credit cash",
+     "explanation": "No cash is paid at inception.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 410-20: recognize an ARO at fair value when incurred and capitalize the same amount as part of the asset.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-15",
+   "pool": "practice",
+   "stem": "A company replaces its delivery truck's engine, extending the truck's useful life by three years. The cost is:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Expensed as a repair",
+     "explanation": "Ordinary repairs keep the asset in condition; this extends its life.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Capitalized",
+     "explanation": "Correct. Costs that extend useful life or improve capacity are capitalized."
+    },
+    {
+     "id": "c",
+     "text": "Expensed over three years",
+     "explanation": "Capitalized costs are depreciated, not expensed ratably.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Charged to retained earnings",
+     "explanation": "Expenditures aren't charged to equity.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Expenditures that extend useful life, increase capacity or improve efficiency are capitalized.",
+   "skill": "application",
+   "difficulty": 1,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-16",
+   "pool": "practice",
+   "stem": "A company paves a parking lot and installs lighting on land it owns. How are the costs treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Added to land, not depreciated",
+     "explanation": "They wear out over time.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Expensed",
+     "explanation": "They benefit future periods.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Added to the building",
+     "explanation": "They're separate.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "As land improvements, depreciated",
+     "explanation": "Correct. They have limited lives."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Land improvements such as paving and lighting are capitalized separately and depreciated.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-17",
+   "pool": "practice",
+   "stem": "A company issues 10,000 shares ($1 par; market price $25) for land with no reliable appraisal. At what amount is the land recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$250,000",
+     "explanation": "Correct. The stock's fair value is more evident."
+    },
+    {
+     "id": "b",
+     "text": "$10,000",
+     "explanation": "Par isn't the measure.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$240,000",
+     "explanation": "That is the APIC.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "The land is an asset.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Assets acquired for stock are recorded at the fair value of the stock or the asset, whichever is more clearly evident.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-18",
+   "pool": "practice",
+   "stem": "A company demolishes a building it has used for 20 years to make way for a new one. How are the old building's carrying amount and demolition costs treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Added to the new building",
+     "explanation": "Not for a used building.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Expensed as a loss",
+     "explanation": "Correct. They aren't new building costs."
+    },
+    {
+     "id": "c",
+     "text": "Added to the land",
+     "explanation": "That applies to land bought to raze.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Deferred",
+     "explanation": "They're expensed.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Demolishing a company's own used building results in a loss; only buildings bought to raze add to land cost.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-19",
+   "pool": "practice",
+   "stem": "A company borrows to build a plant and invests the unspent proceeds temporarily. Under U.S. GAAP, how is the interest earned generally treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Netted against capitalized interest",
+     "explanation": "Generally not under U.S. GAAP.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "As a reduction of the plant",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "As income, not netted",
+     "explanation": "Correct. Only certain tax-exempt borrowings net."
+    },
+    {
+     "id": "d",
+     "text": "Deferred",
+     "explanation": "It's investment income.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Interest earned generally isn't offset against capitalized interest, except for certain restricted tax-exempt borrowings.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-20",
+   "pool": "practice",
+   "stem": "When does capitalization of interest begin on a qualifying asset?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "When the board approves the project",
+     "explanation": "Activity must be under way.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "When the asset is finished",
+     "explanation": "Capitalization stops then.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "When project debt is first issued",
+     "explanation": "Expenditures must occur.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "When three conditions are met",
+     "explanation": "Correct. All three must be present."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Capitalization begins when expenditures have been made, activities are in progress and interest is being incurred.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-21",
+   "pool": "practice",
+   "stem": "A machine lists at $100,000, and a 2% cash discount is taken. Freight is $3,000, installation $5,000, and repairs for damage in transit $1,500. What is the machine's cost?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$106,000",
+     "explanation": "Correct. 98,000 + 3,000 + 5,000."
+    },
+    {
+     "id": "b",
+     "text": "$107,500",
+     "explanation": "Transit damage repairs are expensed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$108,000",
+     "explanation": "Deduct the discount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$109,500",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Asset cost includes the net price and costs to bring it to working condition, not repairs of avoidable damage.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-22",
+   "pool": "practice",
+   "stem": "A company buys land with an old building for $200,000 and demolishes the building for $15,000, recovering $3,000 of salvage. Title costs are $2,000. What is the land's cost?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$217,000",
+     "explanation": "Salvage reduces the cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$214,000",
+     "explanation": "Correct. 200 + 15 − 3 + 2."
+    },
+    {
+     "id": "c",
+     "text": "$200,000",
+     "explanation": "Include demolition and title.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$215,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Net demolition costs to prepare land for use are part of the land's cost.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-23",
+   "pool": "practice",
+   "stem": "Weighted average accumulated construction expenditures are $1,000,000. A specific $600,000 construction loan carries 8%, and other debt averages 10%. Actual interest exceeds the result. What interest is capitalized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$80,000",
+     "explanation": "Use the specific rate first.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$88,000",
+     "explanation": "Correct. $48,000 + $400,000 × 10%."
+    },
+    {
+     "id": "d",
+     "text": "$48,000",
+     "explanation": "Include the excess at 10%.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Avoidable interest applies the specific borrowing rate first, then the weighted rate on the excess.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-24",
+   "pool": "practice",
+   "stem": "An asset with a $30,000 book value and a $40,000 fair value is exchanged, plus $10,000 cash, for a new asset. The exchange has commercial substance. What is recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "New asset $40,000; no gain",
+     "explanation": "It has commercial substance.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "New asset $50,000; no gain",
+     "explanation": "A gain is recognized.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "New asset $40,000; $10,000 gain",
+     "explanation": "Add the cash paid.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "New asset $50,000; $10,000 gain",
+     "explanation": "Correct. Fair value given plus cash."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Exchanges with commercial substance are recorded at fair value, with gains and losses recognized.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-25",
+   "pool": "practice",
+   "stem": "The same exchange ($30,000 book value, $40,000 fair value, $10,000 cash paid) lacks commercial substance. At what amount is the new asset recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000",
+     "explanation": "Correct. Book value plus cash; no gain."
+    },
+    {
+     "id": "b",
+     "text": "$50,000",
+     "explanation": "No gain is recognized.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$30,000",
+     "explanation": "Add the cash paid.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$20,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Without commercial substance, gains aren't recognized when cash is paid, so the new asset is book value plus cash.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-26",
+   "pool": "practice",
+   "stem": "A company installs equipment with a legal removal obligation. The ARO's present value is $55,839. How is it recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Expense $55,839 at installation",
+     "explanation": "It's capitalized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Capitalize it with a liability",
+     "explanation": "Correct. AROs are capitalized."
+    },
+    {
+     "id": "c",
+     "text": "Disclose it only",
+     "explanation": "It's recognized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Record it only at removal",
+     "explanation": "Recognize it at installation.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "An ARO is recognized at fair value with an equal increase in the asset's carrying amount.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-27",
+   "pool": "practice",
+   "stem": "A company replaces a roof for $80,000, extending the building's life by 10 years. How is the cost treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Expensed as a repair",
+     "explanation": "It extends the life.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Charged to retained earnings",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Capitalized",
+     "explanation": "Correct. It extends the useful life."
+    },
+    {
+     "id": "d",
+     "text": "Split evenly",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Expenditures that extend useful life or improve capacity are capitalized.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-ppe-28",
+   "pool": "practice",
+   "stem": "A company pays $450,000 for land (FV $150,000), a building (FV $300,000) and equipment (FV $50,000). What is the building's cost?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$300,000",
+     "explanation": "Allocate the actual price.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$250,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$225,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$270,000",
+     "explanation": "Correct. $450,000 × 300/500."
+    }
+   ],
+   "answer": "d",
+   "explanation": "A lump-sum purchase is allocated by relative fair values.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/questions.json"
+  },
+  {
+   "id": "far-x2-06",
+   "moduleId": "far-ppe-acquisition",
+   "pool": "exam",
+   "stem": "A company paid $1,000,000 for land with an old building that it immediately razed. Demolition cost $50,000, and salvaged materials sold for $5,000. Legal fees for title were $10,000. What is the cost of the land?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,055,000",
+     "explanation": "Correct. 1,000,000 + 50,000 − 5,000 + 10,000."
+    },
+    {
+     "id": "b",
+     "text": "$1,060,000",
+     "explanation": "Ignores the salvage proceeds, which reduce the cost of the land.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$1,010,000",
+     "explanation": "Omits the net demolition cost, which is a land cost when the building is razed.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$1,005,000",
+     "explanation": "Omits the legal fees, which are capitalized as part of the land.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "When a purchased building is razed, the full purchase price plus net demolition cost goes to land: 1,000,000 + (50,000 − 5,000) + 10,000 = **$1,055,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-07",
+   "moduleId": "far-ppe-acquisition",
+   "pool": "exam",
+   "stem": "Weighted-average accumulated expenditures on a qualifying asset were $2,000,000. A specific construction loan of $1,000,000 bears 8%; other debt averages 10%. Actual interest incurred for the year was $400,000. What interest is capitalized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$200,000",
+     "explanation": "Applies the 10% rate to all expenditures, ignoring the specific borrowing rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$160,000",
+     "explanation": "Applies 8% to all expenditures; only $1,000,000 is covered by the specific loan.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$400,000",
+     "explanation": "Capitalized interest is limited to avoidable interest, not total interest incurred.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$180,000",
+     "explanation": "Correct. $1,000,000 × 8% + $1,000,000 × 10% = $180,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Avoidable interest = 1,000,000 × 8% + (2,000,000 − 1,000,000) × 10% = 80,000 + 100,000 = **$180,000**, which is less than the 400,000 incurred.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-21",
+   "moduleId": "far-ppe-acquisition",
+   "pool": "exam",
+   "stem": "During construction of its own plant, a company's weighted-average accumulated expenditures are $1,000,000. It has a $600,000 construction loan at 8% and other general debt at 10%. Actual interest incurred is $150,000. How much interest is capitalized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$150,000",
+     "explanation": "Capitalized interest is limited to avoidable interest.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$88,000",
+     "explanation": "Correct. 600,000 × 8% + 400,000 × 10% = 48,000 + 40,000 = 88,000, which is less than actual interest."
+    },
+    {
+     "id": "c",
+     "text": "$48,000",
+     "explanation": "Expenditures above the specific loan use the weighted rate on other debt.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$100,000",
+     "explanation": "The specific borrowing's rate applies to the first 600,000.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Avoidable interest: specific borrowing rate on expenditures up to that loan, then the weighted-average rate on other debt for the excess, limited to actual interest.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-34",
+   "moduleId": "far-ppe-acquisition",
+   "pool": "exam",
+   "stem": "In an exchange with commercial substance, a company gives equipment with a carrying amount of $40,000 and a fair value of $50,000, plus $10,000 cash, for new equipment. At what amount is the new equipment recorded, and what gain is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000; no gain",
+     "explanation": "Exchanges with commercial substance are measured at fair value with gains recognized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$50,000; gain $10,000",
+     "explanation": "The cash paid is also part of the cost.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$60,000; gain $10,000",
+     "explanation": "Correct. New asset = fair value given (50,000) + cash (10,000); gain = 50,000 − 40,000."
+    },
+    {
+     "id": "d",
+     "text": "$60,000; gain $20,000",
+     "explanation": "The gain compares the old asset's fair value with its carrying amount.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ASC 845: with commercial substance, record the new asset at the fair value of what is given and recognize the gain or loss on the old asset.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-ppe-fc1",
+   "front": "General rule for PP&E cost",
+   "back": "All costs **necessary** to acquire the asset and bring it to the **condition and location** for its intended use.",
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/flashcards.json"
+  },
+  {
+   "id": "far-ppe-fc2",
+   "front": "Land vs. land improvements",
+   "back": "**Land** (not depreciated): price, closing costs, title, survey, clearing, demolition of old building (net of salvage). **Land improvements** (depreciated): paving, fences, lighting.",
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/flashcards.json"
+  },
+  {
+   "id": "far-ppe-fc3",
+   "front": "Lump-sum purchase allocation",
+   "back": "Allocate the total price by **relative fair values**.",
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/flashcards.json"
+  },
+  {
+   "id": "far-ppe-fc4",
+   "front": "Capitalized interest formula",
+   "back": "WAAE × specific loan rate (up to loan amount) + excess WAAE × weighted-average rate on other debt. **Cap: actual interest incurred.**",
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/flashcards.json"
+  },
+  {
+   "id": "far-ppe-fc5",
+   "front": "Assets that do NOT qualify for interest capitalization",
+   "back": "Routinely produced inventory, assets already in use/ready for use, land not being developed.",
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/flashcards.json"
+  },
+  {
+   "id": "far-ppe-fc6",
+   "front": "Asset retirement obligation",
+   "back": "Record ARO liability at **fair value** (PV) and **add the same amount to the asset**; depreciate asset, accrete liability.",
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/flashcards.json"
+  },
+  {
+   "id": "far-ppe-fc7",
+   "front": "Capitalize or expense after acquisition?",
+   "back": "**Capitalize**: additions, improvements, life-extending repairs. **Expense**: ordinary repairs and maintenance.",
+   "moduleId": "far-ppe-acquisition",
+   "_file": "content/far/modules/far-ppe-acquisition/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-u6-ppe-rollforward.json",
+  "content/far/tbs/far-tbs-u6-ppe-subledger.json",
+  "content/far/tbs/far-tbs-u6-ppe.json",
+  "content/far/tbs/far-tbs-x2-ppe.json"
+ ]
+}

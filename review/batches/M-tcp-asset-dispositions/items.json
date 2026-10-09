@@ -1,0 +1,2181 @@
+{
+ "mcqs": [
+  {
+   "id": "tcp-ad-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a business sells equipment it held 3 years at a gain smaller than the depreciation it took. What is the character of the gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Long-term capital gain",
+     "explanation": "Depreciation is recaptured first.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Ordinary income",
+     "explanation": "Correct. §1245 recaptures depreciation as ordinary income up to the gain."
+    },
+    {
+     "id": "c",
+     "text": "§1231 gain",
+     "explanation": "Recapture takes priority.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Tax-free",
+     "explanation": "Gain is taxable.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§1245 recaptures depreciation as ordinary income up to the gain.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-chk1",
+   "pool": "lesson",
+   "stem": "Equipment cost $80,000; depreciation $30,000; sold for $95,000. What is the §1245 ordinary income and §1231 gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$0 ordinary; $45,000 §1231",
+     "explanation": "§1245 recapture applies.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$30,000 ordinary; $15,000 §1231",
+     "explanation": "Correct. Gain 45,000."
+    },
+    {
+     "id": "c",
+     "text": "$45,000 ordinary",
+     "explanation": "Recapture is limited to depreciation.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$15,000 ordinary; $30,000 §1231",
+     "explanation": "The two amounts are reversed.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Gain = 95,000 − 50,000 = 45,000; ordinary = lesser of 45,000 or 30,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-chk2",
+   "pool": "lesson",
+   "stem": "What is the purpose of the §1231 lookback rule?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "To extend the holding period of §1231 assets",
+     "explanation": "Holding periods aren't affected.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "b",
+     "text": "To stop mixing ordinary losses and later capital gains",
+     "explanation": "Correct. Net §1231 gains are ordinary to the extent of net §1231 losses deducted in the prior 5 years."
+    },
+    {
+     "id": "c",
+     "text": "To recapture accelerated depreciation as ordinary",
+     "explanation": "That's §1245/§1250.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "To allow capital losses to offset ordinary income",
+     "explanation": "That's not what the lookback does.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Net §1231 gains are ordinary to the extent of net §1231 losses deducted in the prior 5 years.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-01",
+   "pool": "practice",
+   "stem": "An individual sells a rental building held 8 years: cost $500,000, straight-line depreciation $120,000, sold for $600,000. How much is unrecaptured §1250 gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$220,000",
+     "explanation": "Only the depreciation portion.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "Individuals have unrecaptured §1250 gain.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$100,000",
+     "explanation": "That's the appreciation above cost.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$120,000",
+     "explanation": "Correct. Gain = 600,000 − 380,000 = 220,000; the 120,000 attributable to straight-line depreciation is taxed at max 25%."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Gain = 600,000 − 380,000 = 220,000; the 120,000 attributable to straight-line depreciation is taxed at max 25%.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-02",
+   "pool": "practice",
+   "stem": "A corporation sells the same building (cost $500,000, SL depreciation $120,000, price $600,000). What is the §291 ordinary income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$120,000",
+     "explanation": "That's all the depreciation.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$44,000",
+     "explanation": "Uses the total gain.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$24,000",
+     "explanation": "Correct. 20% × lesser of 220,000 or 120,000."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "§291 applies to corporations.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§291: 20% of the lesser of gain or straight-line depreciation.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-03",
+   "pool": "practice",
+   "stem": "A business sells a machine held 8 months at a $5,000 loss. What is the character?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "§1231 loss",
+     "explanation": "Requires a holding period over 1 year.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Nondeductible",
+     "explanation": "It's deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Short-term capital loss",
+     "explanation": "Business property isn't a capital asset.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Ordinary loss",
+     "explanation": "Correct. Business property held 1 year or less produces ordinary gain or loss."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Business property held 1 year or less produces ordinary gain or loss.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-04",
+   "pool": "practice",
+   "stem": "A taxpayer has §1231 gains of $30,000 and §1231 losses of $(45,000) in 2025. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$15,000 long-term capital loss",
+     "explanation": "Net §1231 losses are ordinary.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$3,000 deductible loss",
+     "explanation": "The capital loss limit doesn't apply.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$30,000 LTCG and $45,000 ordinary loss",
+     "explanation": "The items are netted.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$15,000 ordinary loss",
+     "explanation": "Correct. Net §1231 loss is fully ordinary."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Net §1231 loss is fully ordinary.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-05",
+   "pool": "practice",
+   "stem": "Which asset is §1231 property?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Inventory held for sale",
+     "explanation": "Inventory is ordinary-income property.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A car used only personally",
+     "explanation": "Personal-use property is a capital asset.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Stock held for investment",
+     "explanation": "Investment stock is a capital asset.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A warehouse used for 5 years",
+     "explanation": "Correct. Depreciable or real property used in a business and held more than 1 year."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Depreciable or real property used in a business and held more than 1 year.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-06",
+   "pool": "practice",
+   "stem": "Equipment that cost $60,000 was fully expensed under §179 and later sold for $25,000. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$35,000 ordinary loss",
+     "explanation": "It was sold at a gain.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "$25,000 §1231 gain",
+     "explanation": "§179 is recaptured under §1245.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$0 — §179 property isn't recaptured",
+     "explanation": "§179 is treated as depreciation.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$25,000 ordinary income",
+     "explanation": "Correct. Basis is 0; gain 25,000 is less than the 60,000 deducted → all §1245 ordinary."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Basis is 0; gain 25,000 is less than the 60,000 deducted → all §1245 ordinary.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-07",
+   "pool": "practice",
+   "stem": "In 2025, a taxpayer has a net §1231 gain of $20,000. In 2021 she had a net §1231 loss of $(12,000) and in 2023 a net §1231 gain of $5,000. How much of the 2025 gain is ordinary?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Only unrecaptured prior losses.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$12,000",
+     "explanation": "The 2023 gain already recaptured part.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$7,000",
+     "explanation": "Correct. 12,000 − 5,000 recaptured in 2023."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "The lookback applies.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Nonrecaptured net §1231 losses = 12,000 − 5,000 = 7,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-08",
+   "pool": "practice",
+   "stem": "A machine (cost $100,000; depreciation $40,000) is sold for $50,000. What is the result?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000 ordinary recapture",
+     "explanation": "Recapture applies only to gains.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$10,000 capital loss",
+     "explanation": "Business property isn't a capital asset.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$10,000 ordinary (§1231) loss",
+     "explanation": "Correct. Loss = 50,000 − 60,000 = (10,000), a §1231 loss (ordinary if net §1231 is a loss)."
+    },
+    {
+     "id": "d",
+     "text": "No loss is allowed on the sale",
+     "explanation": "Business losses are deductible.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Loss = 50,000 − 60,000 = (10,000), a §1231 loss (ordinary if net §1231 is a loss).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-09",
+   "pool": "practice",
+   "stem": "Why might an individual prefer to sell depreciable real property rather than equipment with the same gain and depreciation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Gains on equipment sales are tax-free to individuals",
+     "explanation": "Equipment gains are ordinary up to depreciation.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Real property has no depreciation recapture of any kind",
+     "explanation": "Unrecaptured §1250 gain is taxed at up to 25%.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Straight-line real property gain is capped at 25%",
+     "explanation": "Correct. §1245 recapture is ordinary (up to 37%); unrecaptured §1250 gain is capped at 25%."
+    },
+    {
+     "id": "d",
+     "text": "Real property gains are all taxed as ordinary income",
+     "explanation": "Most real property gain is §1231.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§1245 recapture is ordinary (up to 37%); unrecaptured §1250 gain is capped at 25%.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-10",
+   "pool": "practice",
+   "stem": "A §197 intangible (customer list) purchased for $150,000 with $50,000 of amortization is sold for $170,000. What is the character of the $70,000 gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000 ordinary; $50,000 §1231",
+     "explanation": "The two amounts are reversed.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "$70,000 long-term capital gain (§1231)",
+     "explanation": "Amortization is recaptured.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$70,000 ordinary income",
+     "explanation": "Only amortization is recaptured.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$50,000 ordinary; $20,000 §1231",
+     "explanation": "Correct. Amortizable §197 intangibles are §1245 property."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Amortizable §197 intangibles are §1245 property.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-11",
+   "pool": "practice",
+   "stem": "A disposition schedule shows equipment (cost $100,000; accumulated depreciation $70,000) sold for $90,000, and reports a $60,000 §1231 gain. What is the correct character of the gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$60,000 §1231 gain, as reported",
+     "explanation": "Depreciation recapture comes first for personal property.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$70,000 ordinary and a $10,000 §1231 loss",
+     "explanation": "Recapture is limited to the gain realized.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$60,000 ordinary income under §1245",
+     "explanation": "Correct. Gain is 90,000 − 30,000 = 60,000, all recaptured because it is less than the 70,000 of depreciation taken."
+    },
+    {
+     "id": "d",
+     "text": "$30,000 ordinary and $30,000 §1231 gain",
+     "explanation": "No §1231 gain remains when the gain is less than the depreciation taken.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§1245 recapture is the lesser of the gain or the depreciation taken; only gain above the depreciation is §1231 gain.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-cr2-09",
+   "pool": "practice",
+   "stem": "A profitable business in the 21% bracket expects to be subject to much higher effective rates in 3 years. It buys equipment eligible for 100% bonus. What should it consider?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Always take 100% bonus to get the deduction now",
+     "explanation": "Timing of deductions has value, but the rate matters.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Deducting nothing now or later on the equipment",
+     "explanation": "Depreciation can't be forgone like that.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Electing out, so depreciation falls in high-rate years",
+     "explanation": "Correct. Deferring deductions can increase their value when future rates are higher — compare the present value of the tax saved."
+    },
+    {
+     "id": "d",
+     "text": "Treating the equipment as inventory held for sale",
+     "explanation": "Equipment used in the business isn't inventory.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Deferring deductions can increase their value when future rates are higher — compare the present value of the tax saved.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-12",
+   "pool": "practice",
+   "stem": "Equipment (cost $100,000; depreciation $60,000) is sold for $90,000: $10,000 down and a note for the rest. How much gain is recognized in the year of sale?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Correct. All of the gain is §1245 recapture, recognized immediately."
+    },
+    {
+     "id": "b",
+     "text": "$6,250",
+     "explanation": "Recapture isn't deferred.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "Recapture isn't limited to cash received.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "The installment method doesn't defer recapture.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "§453(i): depreciation recapture is recognized in the year of sale even on an installment sale. Gain $50,000 ≤ depreciation $60,000, so it's all recapture.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-13",
+   "pool": "practice",
+   "stem": "A business has a $10,000 casualty gain and a $25,000 casualty loss on business property held over a year. How is the net result treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a $15,000 §1231 loss",
+     "explanation": "Net casualty losses don't enter §1231.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As a $15,000 ordinary loss",
+     "explanation": "Correct. Net casualty losses bypass §1231."
+    },
+    {
+     "id": "c",
+     "text": "As a $15,000 capital loss",
+     "explanation": "It is ordinary.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "As a $10,000 §1231 gain",
+     "explanation": "The items net first.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Casualty gains and losses on long-term business property are netted first; a net loss is ordinary and doesn't go into the main §1231 netting.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-14",
+   "pool": "practice",
+   "stem": "A machine used in a business for 3 years is sold at an $8,000 loss. With no other §1231 items, how is the loss treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a long-term capital loss",
+     "explanation": "§1231 losses net to ordinary.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As §1245 recapture income",
+     "explanation": "Recapture applies only to gains.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "As an ordinary loss",
+     "explanation": "Correct. A net §1231 loss is ordinary."
+    },
+    {
+     "id": "d",
+     "text": "It isn't deductible at all",
+     "explanation": "Business losses are deductible.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Depreciable business property held over a year is §1231 property; a net §1231 loss is ordinary. Recapture applies only to gains.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-15",
+   "pool": "practice",
+   "stem": "A business sells equipment it held 8 months at a $5,000 gain. How is the gain characterized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Ordinary income",
+     "explanation": "Correct. Business assets need a holding period over 1 year for §1231."
+    },
+    {
+     "id": "b",
+     "text": "§1231 gain",
+     "explanation": "§1231 requires a holding period over a year.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "Long-term capital gain",
+     "explanation": "It isn't a capital asset or long-term.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Unrecaptured §1250 gain",
+     "explanation": "It isn't real property.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Depreciable business property held one year or less produces ordinary gain or loss.",
+   "skill": "analysis",
+   "difficulty": 2,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-16",
+   "pool": "practice",
+   "stem": "A client with no prior §1231 losses will sell one asset at a $100,000 §1231 gain and another at a $100,000 §1231 loss over the next two years. Which order is better?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The loss asset first, the gain asset next year",
+     "explanation": "The lookback turns the later gain ordinary.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "The gain asset first, the loss asset next year",
+     "explanation": "Correct. The loss year stays ordinary and the gain stays capital."
+    },
+    {
+     "id": "c",
+     "text": "Both in the same year",
+     "explanation": "Netting wastes the ordinary loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The order doesn't matter",
+     "explanation": "The lookback rule makes it matter.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A net §1231 loss is ordinary, but it causes later net §1231 gains within 5 years to be recaptured as ordinary. Recognizing gains first avoids that.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-17",
+   "pool": "practice",
+   "stem": "A taxpayer expensed a car under §179 when business use was 80%. In Year 3 business use drops to 40%. What happens?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing; §179 was proper",
+     "explanation": "The 50% test continues.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "The car must be sold",
+     "explanation": "That isn't required.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Excess §179 is recaptured",
+     "explanation": "Correct. Listed property must stay above 50%."
+    },
+    {
+     "id": "d",
+     "text": "A capital loss is allowed",
+     "explanation": "Recapture is the result.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "If listed property's business use falls to 50% or less, the excess of §179 and accelerated depreciation over ADS straight-line is recaptured.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-18",
+   "pool": "practice",
+   "stem": "Equipment cost $50,000, has $30,000 of accumulated depreciation and is sold for $60,000. How is the $40,000 gain characterized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$40,000 ordinary",
+     "explanation": "Recapture is limited to depreciation.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$40,000 §1231",
+     "explanation": "Depreciation is recaptured first.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$10,000 ordinary; $30,000 §1231",
+     "explanation": "The amounts are reversed.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$30,000 ordinary; $10,000 §1231",
+     "explanation": "Correct. Recapture is limited to depreciation."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§1245 recapture is the lesser of gain or depreciation; gain above original cost is §1231 gain.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-19",
+   "pool": "practice",
+   "stem": "A business has a $15,000 casualty gain and a $10,000 casualty loss on long-term business property. Where does the net $5,000 go?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Into the main §1231 netting",
+     "explanation": "Correct. A net casualty gain enters §1231."
+    },
+    {
+     "id": "b",
+     "text": "It's ordinary income",
+     "explanation": "Net casualty gains enter §1231.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "It's a capital gain directly",
+     "explanation": "It goes through §1231.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "It's excluded from income",
+     "explanation": "Jury pay is taxable.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Casualty items are netted first; a net gain goes into the main §1231 netting, while a net loss is ordinary.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-20",
+   "pool": "practice",
+   "stem": "An individual sells a building (cost $800,000; straight-line depreciation $200,000) for $900,000 and land at a $50,000 §1231 loss. There are no prior §1231 losses. How much gain is taxed at the 25% maximum rate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$200,000",
+     "explanation": "Correct. Unrecaptured §1250 gain equals straight-line depreciation, within the $250,000 net §1231 gain."
+    },
+    {
+     "id": "b",
+     "text": "$250,000",
+     "explanation": "Only the depreciation portion is 25% gain.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$150,000",
+     "explanation": "The land loss doesn't reduce the 25% group here.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$300,000",
+     "explanation": "That's the building's total gain.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Net §1231 gain is $300,000 − $50,000 = $250,000; unrecaptured §1250 gain is $200,000.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-21",
+   "pool": "practice",
+   "stem": "A sole proprietor sells her business: equipment at a $30,000 gain (depreciation taken $40,000) and self-created goodwill for $200,000. How is the $230,000 characterized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$230,000 ordinary income",
+     "explanation": "Goodwill isn't recaptured.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$30,000 ordinary; $200,000 capital gain",
+     "explanation": "Correct. Self-created goodwill is a capital asset."
+    },
+    {
+     "id": "c",
+     "text": "$230,000 capital gain",
+     "explanation": "Equipment gain is §1245 recapture.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$30,000 capital; $200,000 ordinary",
+     "explanation": "The amounts are reversed.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Equipment gain up to depreciation is §1245 ordinary; self-created goodwill (never amortized) produces capital gain.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-22",
+   "pool": "practice",
+   "stem": "A donor gives equipment on which she took $40,000 of depreciation. The donee takes another $10,000 and sells it at a $60,000 gain. How much is ordinary income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "The donor's depreciation carries over.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$60,000",
+     "explanation": "Recapture is limited to depreciation.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$50,000",
+     "explanation": "Correct. Recapture includes the donor's depreciation."
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Gifts carry recapture potential.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§1245 recapture potential carries over to a donee with carryover basis.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-23",
+   "pool": "practice",
+   "stem": "What is the maximum §121 home sale exclusion for a married couple filing jointly?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$500,000",
+     "explanation": "Correct. Each spouse's $250,000 combined."
+    },
+    {
+     "id": "b",
+     "text": "$250,000",
+     "explanation": "That's for single filers.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$750,000",
+     "explanation": "That is not the limit.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$1,000,000",
+     "explanation": "That is not the limit.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Joint filers may exclude up to $500,000 of gain on a qualifying principal residence sale.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-24",
+   "pool": "practice",
+   "stem": "What ownership and use test applies to the §121 exclusion?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "1 of the last 3 years",
+     "explanation": "That period is too short.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "2 of the last 5 years",
+     "explanation": "Correct. Both ownership and use."
+    },
+    {
+     "id": "c",
+     "text": "3 of the last 5 years",
+     "explanation": "That period is too long.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "5 consecutive years",
+     "explanation": "That is not required.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The taxpayer must own and use the home as a principal residence for 2 of the 5 years before the sale.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-25",
+   "pool": "practice",
+   "stem": "How many prior years does the §1231 lookback rule cover?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "3 years",
+     "explanation": "Not the period.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "7 years",
+     "explanation": "Not the period.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "5 years",
+     "explanation": "Correct. Unrecaptured net §1231 losses."
+    },
+    {
+     "id": "d",
+     "text": "10 years",
+     "explanation": "Not the period.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Net §1231 gains are ordinary to the extent of unrecaptured net §1231 losses from the prior 5 years.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-26",
+   "pool": "practice",
+   "stem": "Equipment cost $100,000 and has $60,000 of accumulated depreciation. It's sold for $70,000. How is the gain characterized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000 §1231 gain",
+     "explanation": "Recapture comes first.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$10,000 ordinary; $20,000 §1231",
+     "explanation": "All is recapture.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$30,000 capital gain",
+     "explanation": "It's ordinary in this case.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$30,000 ordinary",
+     "explanation": "Correct. §1245 recapture covers all of it."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§1245 recaptures gain as ordinary to the extent of prior depreciation.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-27",
+   "pool": "practice",
+   "stem": "The same equipment (cost $100,000; $60,000 of depreciation) is sold for $120,000. How is the gain characterized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$60,000 ordinary; $20,000 §1231",
+     "explanation": "Correct. Recapture is limited to depreciation."
+    },
+    {
+     "id": "b",
+     "text": "$80,000 ordinary",
+     "explanation": "Recapture is limited.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$80,000 §1231",
+     "explanation": "Recapture comes first.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$60,000 §1231; $20,000 ordinary",
+     "explanation": "That's backward.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Gain above original cost is §1231 gain.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-28",
+   "pool": "practice",
+   "stem": "A residential rental building cost $500,000 with $150,000 of straight-line depreciation. It's sold for $600,000. How is the $250,000 gain taxed?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$250,000 ordinary",
+     "explanation": "Straight-line real property isn't fully recaptured.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$150,000 at 25%; $100,000 at 20%",
+     "explanation": "Correct. Unrecaptured §1250 gain is capped at 25%."
+    },
+    {
+     "id": "c",
+     "text": "$250,000 at 20%",
+     "explanation": "Part is unrecaptured §1250.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$150,000 ordinary; $100,000 at 20%",
+     "explanation": "It's not ordinary.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Gain from straight-line depreciation on real property is unrecaptured §1250 gain, taxed at up to 25%.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-29",
+   "pool": "practice",
+   "stem": "This year's net §1231 gain is $50,000. Unrecaptured net §1231 losses from the prior 5 years total $30,000. How is the gain treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000 LTCG",
+     "explanation": "The lookback applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$50,000 ordinary",
+     "explanation": "Only $30,000 in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$30,000 ordinary; $20,000 LTCG",
+     "explanation": "Correct. The lookback recaptures prior losses."
+    },
+    {
+     "id": "d",
+     "text": "$20,000 ordinary; $30,000 LTCG",
+     "explanation": "That's backward.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Net §1231 gain is recharacterized as ordinary to the extent of prior unrecaptured losses.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-30",
+   "pool": "practice",
+   "stem": "A taxpayer has a net §1231 loss of $40,000 for the year. How is it treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a capital loss, limited to $3,000",
+     "explanation": "It's ordinary in this case.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As a suspended loss",
+     "explanation": "It's deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As a 25% loss",
+     "explanation": "That is not the treatment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "As a $40,000 ordinary loss",
+     "explanation": "Correct. Net §1231 losses are ordinary."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Net §1231 losses are fully deductible ordinary losses.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-31",
+   "pool": "practice",
+   "stem": "Equipment (cost $150,000, depreciation $100,000) is sold for $200,000: $40,000 down, the rest later. What gain is recognized in the year of sale?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$110,000",
+     "explanation": "Correct. $100,000 recapture plus 25% of $40,000."
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "Recapture is recognized now.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$150,000",
+     "explanation": "Only recapture plus installment gain.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$100,000",
+     "explanation": "Add the installment gain.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Depreciation recapture is recognized in the year of sale; only remaining gain uses the installment method.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-32",
+   "pool": "practice",
+   "stem": "A single taxpayer owned and lived in a home for 1 year, then sold it for a new job at a $150,000 gain. How much is taxable?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$150,000",
+     "explanation": "A reduced exclusion applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$25,000",
+     "explanation": "Correct. A $125,000 reduced exclusion applies."
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "The exclusion is prorated.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$100,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A job move qualifies for a reduced exclusion prorated by the time requirement met.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-33",
+   "pool": "practice",
+   "stem": "A single taxpayer owned a home 10 years: she rented it for the first 2 years (after 2008), then lived in it 8 years. Her gain is $300,000, with no depreciation taken. How much is taxable?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Apply the nonqualified ratio.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$0",
+     "explanation": "Nonqualified use applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$60,000",
+     "explanation": "Correct. 2/10 of the gain is nonqualified use."
+    },
+    {
+     "id": "d",
+     "text": "$300,000",
+     "explanation": "Most is excluded.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Gain allocated to nonqualified use periods after 2008 isn't excludable.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-34",
+   "pool": "practice",
+   "stem": "A taxpayer sells stock (basis $40,000) to her brother for $30,000. He later sells it for $45,000. What gain does the brother recognize?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$15,000",
+     "explanation": "The disallowed loss reduces it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$0",
+     "explanation": "Some gain remains.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "Correct. His $15,000 gain is reduced by the disallowed $10,000 loss."
+    }
+   ],
+   "answer": "d",
+   "explanation": "A buyer from a related party may use the disallowed loss to reduce later gain.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-35",
+   "pool": "practice",
+   "stem": "An individual sells depreciable equipment at a $40,000 gain to a corporation she owns 60% of. How is the gain characterized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "All $40,000 is ordinary",
+     "explanation": "Correct. §1239 applies."
+    },
+    {
+     "id": "b",
+     "text": "$40,000 §1231 gain",
+     "explanation": "§1239 makes it ordinary.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$40,000 capital gain",
+     "explanation": "It's ordinary in this case.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Half ordinary",
+     "explanation": "All of it in this case.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Gain on sales of depreciable property to a controlled entity is ordinary under §1239.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-36",
+   "pool": "practice",
+   "stem": "A taxpayer sells shares at a $5,000 loss and buys identical shares 20 days later for $22,000. What is the new basis?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$22,000",
+     "explanation": "Add the disallowed loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$27,000",
+     "explanation": "Correct. The disallowed loss is added."
+    },
+    {
+     "id": "c",
+     "text": "$17,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A disallowed wash sale loss is added to the basis of the replacement shares.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-37",
+   "pool": "practice",
+   "stem": "Stock becomes worthless in August. When is the loss treated as occurring?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "In August",
+     "explanation": "Deemed at year-end.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "When written off",
+     "explanation": "Deemed at year-end.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "On December 31",
+     "explanation": "Correct. On the last day of the tax year."
+    },
+    {
+     "id": "d",
+     "text": "When the company liquidates",
+     "explanation": "Deemed at year-end.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Worthless securities are treated as sold on the last day of the tax year.",
+   "skill": "application",
+   "difficulty": 3,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-38",
+   "pool": "practice",
+   "stem": "A single taxpayer has a $70,000 loss on qualifying §1244 stock. How is it treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$70,000 ordinary",
+     "explanation": "Capped at $50,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$70,000 capital",
+     "explanation": "§1244 allows ordinary loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$3,000 deductible",
+     "explanation": "That is not the rule.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$50,000 ordinary",
+     "explanation": "Correct. The single cap is $50,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§1244 allows up to $50,000 ($100,000 joint) of ordinary loss on qualifying small business stock.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-39",
+   "pool": "practice",
+   "stem": "QSBS issued after July 4, 2025 is sold after exactly 4 years at a $1,000,000 gain. How much gain is excluded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$750,000",
+     "explanation": "Correct. 75% after 4 years."
+    },
+    {
+     "id": "b",
+     "text": "$1,000,000",
+     "explanation": "Full exclusion needs 5 years.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$500,000",
+     "explanation": "That's after 3 years.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "A partial exclusion applies.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "For stock issued after July 4, 2025, §1202 excludes 50%, 75% or 100% after 3, 4 or 5 years.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-40",
+   "pool": "practice",
+   "stem": "A business sale includes a building and heavily depreciated equipment. Why does the price allocation matter to the seller?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It doesn't matter",
+     "explanation": "Character differs by asset.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Equipment gain is ordinary",
+     "explanation": "Correct. §1245 recapture is ordinary."
+    },
+    {
+     "id": "c",
+     "text": "Building gain is ordinary",
+     "explanation": "It's mostly capital-type.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "Only the buyer cares",
+     "explanation": "Both care in this case.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Allocating more price to recaptured equipment increases the seller's ordinary income.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-41",
+   "pool": "practice",
+   "stem": "A taxpayer had net §1231 losses two years ago and expects a large §1231 gain this year. What should she anticipate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "All long-term capital gain",
+     "explanation": "The lookback applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No tax on the gain",
+     "explanation": "It is taxable income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Some is ordinary",
+     "explanation": "Correct. The lookback rule recaptures losses."
+    },
+    {
+     "id": "d",
+     "text": "A capital loss",
+     "explanation": "Not the effect.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Prior net §1231 losses within 5 years convert current §1231 gain to ordinary income.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-42",
+   "pool": "practice",
+   "stem": "An investor wants to harvest a loss on an index fund without breaking market exposure. What works?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Buy the same fund in 10 days",
+     "explanation": "That's a wash sale.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Buy calls on the same fund",
+     "explanation": "May be a wash sale.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Sell and rebuy the same day",
+     "explanation": "Wash sale in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Buy a different, similar fund",
+     "explanation": "Correct. Not substantially identical."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Buying a similar but not substantially identical fund avoids the wash sale rule.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-43",
+   "pool": "practice",
+   "stem": "A seller expects installment payments over 5 years on equipment with large recapture. What cash flow issue arises?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Recapture is taxed in year 1",
+     "explanation": "Correct. Payments come later."
+    },
+    {
+     "id": "b",
+     "text": "Nothing is taxed until paid",
+     "explanation": "Recapture is accelerated.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "All gain is deferred",
+     "explanation": "Recapture isn't.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The sale is tax-free",
+     "explanation": "It is taxable income.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Installment sales don't defer depreciation recapture, so tax may exceed early cash received.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-44",
+   "pool": "practice",
+   "stem": "A taxpayer converts a depreciated rental into her residence and plans to sell after 2 years. What limits her exclusion?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing limits it",
+     "explanation": "Limits apply in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Nonqualified use",
+     "explanation": "Correct. Both reduce the exclusion."
+    },
+    {
+     "id": "c",
+     "text": "Only the 2-year test",
+     "explanation": "Other limits apply.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "The kiddie tax",
+     "explanation": "That is not related.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Post-2008 nonqualified use reduces the exclusion, and post-May 1997 depreciation is always taxable.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-ad-45",
+   "pool": "practice",
+   "stem": "An elderly taxpayer owns highly appreciated stock. Should she give it to her children now or leave it to them at death?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Give it now",
+     "explanation": "Gifts carry over basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Sell it now",
+     "explanation": "Triggers gain in this case.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Leave it at death",
+     "explanation": "Correct. Heirs get a basis step-up."
+    },
+    {
+     "id": "d",
+     "text": "It makes no difference",
+     "explanation": "Basis rules differ.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Property received at death gets a stepped-up basis; gifts carry over the donor's basis.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/questions.json"
+  },
+  {
+   "id": "tcp-x4-01",
+   "moduleId": "tcp-asset-dispositions",
+   "pool": "exam",
+   "stem": "Equipment (cost $50,000; depreciation $50,000, all bonus) is sold for $60,000 after 3 years. What is the character of the gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000 ordinary; $10,000 §1231",
+     "explanation": "Correct. Basis 0; gain 60,000; recapture 50,000."
+    },
+    {
+     "id": "b",
+     "text": "$60,000 ordinary",
+     "explanation": "Only depreciation is recaptured.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$60,000 §1231",
+     "explanation": "Bonus is recaptured.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$10,000 ordinary; $50,000 §1231",
+     "explanation": "The two amounts are reversed.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Basis 0; gain 60,000; recapture 50,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x4-02",
+   "moduleId": "tcp-asset-dispositions",
+   "pool": "exam",
+   "stem": "An individual's net §1231 gain is $25,000 for 2025. Net §1231 losses were $(10,000) in 2019 and $(8,000) in 2022, with no gains since. How much is ordinary?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$18,000",
+     "explanation": "The 2019 loss is outside the 5-year lookback.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$8,000",
+     "explanation": "Correct. Only losses from the 5 preceding years (2020–2024) count, so the 2019 loss is excluded: 8,000."
+    },
+    {
+     "id": "c",
+     "text": "$25,000",
+     "explanation": "Only prior losses are recaptured.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "The lookback applies.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Only losses from the 5 preceding years (2020–2024) count, so the 2019 loss is excluded: 8,000.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x4-03",
+   "moduleId": "tcp-asset-dispositions",
+   "pool": "exam",
+   "stem": "A C corporation sells a warehouse (straight-line depreciation $300,000) at a $500,000 gain. How much is ordinary income under §291?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$60,000",
+     "explanation": "Correct. 20% × 300,000."
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "Applies 20% to the gain instead.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$300,000",
+     "explanation": "That's full recapture.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "§291 applies to corporations.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "20% × lesser of 500,000 or 300,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "reg-x3-04",
+   "moduleId": "tcp-asset-dispositions",
+   "pool": "exam",
+   "stem": "A business sells machinery (cost $70,000; accumulated depreciation $45,000) for $30,000. What is the character of the gain?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,000 §1231 gain",
+     "explanation": "Recapture first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$5,000 ordinary (§1245)",
+     "explanation": "Correct. Gain = 30,000 − 25,000 = 5,000; all §1245 recapture."
+    },
+    {
+     "id": "c",
+     "text": "$5,000 long-term capital gain",
+     "explanation": "Machinery isn't a capital asset.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$45,000 ordinary (§1245)",
+     "explanation": "Recapture is limited to the gain.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Gain = 30,000 − 25,000 = 5,000; all §1245 recapture.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "reg-x3-05",
+   "moduleId": "tcp-asset-dispositions",
+   "pool": "exam",
+   "stem": "What is the maximum federal rate on unrecaptured §1250 gain for an individual?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "15%",
+     "explanation": "Unrecaptured §1250 gain has a higher cap.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "25%",
+     "explanation": "Correct. Unrecaptured §1250 gain is taxed at a maximum of 25%."
+    },
+    {
+     "id": "c",
+     "text": "28%",
+     "explanation": "That's collectibles.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "37%",
+     "explanation": "That's the top ordinary rate.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Unrecaptured §1250 gain is taxed at a maximum of 25%.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x4-11",
+   "moduleId": "tcp-asset-dispositions",
+   "pool": "exam",
+   "stem": "Equipment cost $100,000, has $60,000 of accumulated depreciation and is sold for $70,000. How is the gain characterized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000 §1231 gain",
+     "explanation": "§1245 recapture comes first.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$60,000 ordinary income",
+     "explanation": "Recapture is limited to the gain.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$30,000 ordinary income under §1245",
+     "explanation": "Correct. All gain up to depreciation taken is recaptured as ordinary."
+    },
+    {
+     "id": "d",
+     "text": "$10,000 ordinary and $20,000 §1231 gain",
+     "explanation": "All 30,000 is within depreciation taken.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "IRC §1245: gain on depreciable personal property is ordinary to the extent of depreciation taken; any excess is §1231 gain.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x4-12",
+   "moduleId": "tcp-asset-dispositions",
+   "pool": "exam",
+   "stem": "A C corporation sells a building for a $200,000 gain; it took $150,000 of straight-line depreciation. How much is ordinary income under §291?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$150,000",
+     "explanation": "Corporations recapture only 20%.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "20% applies to the lesser amount, 150,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$     0",
+     "explanation": "§291 applies to corporations.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$30,000",
+     "explanation": "Correct. 20% × the lesser of the gain or the straight-line depreciation (150,000)."
+    }
+   ],
+   "answer": "d",
+   "explanation": "IRC §291(a)(1): a corporation treats 20% of the excess of what would be §1245 recapture over §1250 recapture as ordinary income.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x4-15",
+   "moduleId": "tcp-asset-dispositions",
+   "pool": "exam",
+   "stem": "A business has a 2025 net §1231 gain of $50,000. It had $20,000 of net §1231 losses in 2022 that haven't been recaptured. How is the 2025 gain treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000 ordinary; $30,000 capital gain",
+     "explanation": "Correct. The five-year lookback recaptures prior net §1231 losses."
+    },
+    {
+     "id": "b",
+     "text": "$50,000 long-term capital gain",
+     "explanation": "Prior unrecaptured losses must be recaptured.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$50,000 ordinary income",
+     "explanation": "Only the lookback amount is ordinary.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$30,000 ordinary and $20,000 capital gain",
+     "explanation": "That reverses the split.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "a",
+   "explanation": "IRC §1231(c): net §1231 gain is ordinary to the extent of nonrecaptured net §1231 losses of the prior five years.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x4-16",
+   "moduleId": "tcp-asset-dispositions",
+   "pool": "exam",
+   "stem": "An individual sells a rental building for a $150,000 gain; he took $90,000 of straight-line depreciation. How much is unrecaptured §1250 gain taxed at up to 25%?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$150,000",
+     "explanation": "Only the depreciation portion is unrecaptured §1250 gain.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$60,000",
+     "explanation": "That is the remaining §1231 gain.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$90,000",
+     "explanation": "Correct. Gain up to straight-line depreciation is unrecaptured §1250 gain."
+    },
+    {
+     "id": "d",
+     "text": "$     0",
+     "explanation": "Straight-line depreciation still creates unrecaptured §1250 gain.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "IRC §1(h)(6): unrecaptured §1250 gain (gain attributable to straight-line depreciation on real property) is taxed at a maximum 25% for individuals.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "tcp-ad-f1",
+   "front": "§1231 property",
+   "back": "Depreciable or real business property held > 1 year.",
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/flashcards.json"
+  },
+  {
+   "id": "tcp-ad-f2",
+   "front": "§1245 recapture",
+   "back": "Ordinary = lesser of gain or all depreciation (incl. §179, bonus).",
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/flashcards.json"
+  },
+  {
+   "id": "tcp-ad-f3",
+   "front": "Unrecaptured §1250 gain",
+   "back": "Individuals: straight-line depreciation portion of real property gain, max 25%.",
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/flashcards.json"
+  },
+  {
+   "id": "tcp-ad-f4",
+   "front": "§291 (corporations)",
+   "back": "20% × lesser of gain or SL depreciation on real property = ordinary.",
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/flashcards.json"
+  },
+  {
+   "id": "tcp-ad-f5",
+   "front": "§1231 netting",
+   "back": "Net gain → LTCG (after lookback); net loss → ordinary.",
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/flashcards.json"
+  },
+  {
+   "id": "tcp-ad-f6",
+   "front": "5-year lookback",
+   "back": "Net §1231 gain is ordinary to extent of prior 5 years' nonrecaptured net §1231 losses.",
+   "moduleId": "tcp-asset-dispositions",
+   "_file": "content/tcp/modules/tcp-asset-dispositions/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/tcp/tbs/reg-tbs-u3-property-sales.json",
+  "content/tcp/tbs/reg-tbs-x3-property.json",
+  "content/tcp/tbs/tcp-tbs-r3-form4797.json",
+  "content/tcp/tbs/tcp-tbs-u7-disposition-review.json",
+  "content/tcp/tbs/tcp-tbs-u7-form4797.json",
+  "content/tcp/tbs/tcp-tbs-x4-property.json"
+ ]
+}

@@ -1,0 +1,1335 @@
+{
+ "mcqs": [
+  {
+   "id": "far-rec-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a company writes off a $3,000 uncollectible account under the allowance method. What happens to net accounts receivable?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No change",
+     "explanation": "Correct. The loss was already anticipated in the allowance."
+    },
+    {
+     "id": "b",
+     "text": "Decreases by $3,000",
+     "explanation": "Both gross receivables and the allowance fall by $3,000, so the net is unchanged.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "Increases by $3,000",
+     "explanation": "Nothing increases net receivables here.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "Decreases, and credit loss expense increases by $3,000",
+     "explanation": "Expense was recorded when the allowance was estimated, not at write-off.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Dr Allowance 3,000 / Cr Accounts receivable 3,000. Gross AR and the contra account fall equally; net AR and expense are unchanged.",
+   "skill": "application",
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-chk1",
+   "pool": "lesson",
+   "stem": "The required ending allowance is $40,000. Before adjustment, the allowance has a $6,000 **debit** balance (write-offs exceeded the prior estimate). What is credit loss expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$34,000",
+     "explanation": "This treats the debit balance as if it were a credit balance.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "This ignores the existing debit balance.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$6,000",
+     "explanation": "That is only the existing balance.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$46,000",
+     "explanation": "Correct. Eliminate the 6,000 debit and build a 40,000 credit."
+    }
+   ],
+   "answer": "d",
+   "explanation": "To go from a 6,000 debit to a 40,000 credit, credit the allowance 46,000 → credit loss expense **46,000**.",
+   "skill": "application",
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-chk2",
+   "pool": "lesson",
+   "stem": "A company transfers receivables to a bank but keeps the right to repurchase them before maturity at will. How is the transfer accounted for?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Sale; derecognize the receivables",
+     "explanation": "Retaining effective control prevents sale accounting.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Sale, with a recourse liability",
+     "explanation": "Recourse doesn't cure retained control.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "No entry until the receivables are collected",
+     "explanation": "Cash was received and must be accounted for.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Secured borrowing; keep them and record a liability",
+     "explanation": "Correct. Effective control was retained."
+    }
+   ],
+   "answer": "d",
+   "explanation": "A unilateral right to reclaim specific assets is effective control. The sale criteria of ASC 860 are not met, so the transfer is a secured borrowing.",
+   "skill": "analysis",
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-01",
+   "pool": "practice",
+   "stem": "The allowance for credit losses had a $15,000 credit balance on January 1. During the year, $12,000 was written off and $1,500 was recovered. The aging analysis indicates a required ending allowance of $22,000. What is credit loss expense for the year?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$22,000",
+     "explanation": "This ignores the balance already in the allowance.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$17,500",
+     "explanation": "Correct. Unadjusted = 15,000 − 12,000 + 1,500 = 4,500; expense = 22,000 − 4,500."
+    },
+    {
+     "id": "c",
+     "text": "$20,500",
+     "explanation": "This ignores the recovery.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$7,000",
+     "explanation": "This subtracts the beginning balance without considering write-offs and recoveries.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Unadjusted allowance = 15,000 − 12,000 + 1,500 = 4,500 credit. Expense = 22,000 − 4,500 = **17,500**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-02",
+   "pool": "practice",
+   "stem": "Under the CECL model (ASC 326-20), when does an entity first recognize an allowance for expected credit losses on a trade receivable?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "When the receivable is initially recognized",
+     "explanation": "Correct. Expected lifetime losses are estimated from day one."
+    },
+    {
+     "id": "b",
+     "text": "When a credit loss becomes probable",
+     "explanation": "That was the incurred-loss model CECL replaced.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "When the customer files for bankruptcy",
+     "explanation": "CECL does not wait for a triggering event.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "Only when the account is written off",
+     "explanation": "That describes the direct write-off method.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "CECL requires recognizing expected lifetime credit losses at initial recognition, using historical experience, current conditions, and reasonable and supportable forecasts.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-03",
+   "pool": "practice",
+   "stem": "Accounts receivable aging at December 31: 0–30 days $300,000 (2% expected loss); 31–90 days $80,000 (10%); over 90 days $20,000 (50%). What is the required ending allowance for credit losses?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$8,000",
+     "explanation": "This applies the 2% rate to total receivables (400,000 × 2%) instead of using each bucket's rate.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$16,000",
+     "explanation": "This applies 4% (an average-looking rate) to all 400,000 of receivables rather than the bucket rates.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$24,000",
+     "explanation": "Correct. 6,000 + 8,000 + 10,000 = 24,000."
+    },
+    {
+     "id": "d",
+     "text": "$14,000",
+     "explanation": "This omits the over-90-day bucket (6,000 + 8,000).",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "300,000 × 2% = 6,000; 80,000 × 10% = 8,000; 20,000 × 50% = 10,000. Required allowance = **24,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-04",
+   "pool": "practice",
+   "stem": "A customer account of $2,400 written off last year is unexpectedly collected in full this year. Which entries are recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Dr Cash / Cr Credit loss expense, $2,400",
+     "explanation": "Under the allowance method the recovery restores the allowance; it does not reduce expense directly.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Reinstate the receivable and allowance, then record collection",
+     "explanation": "Correct. Reinstate, then collect."
+    },
+    {
+     "id": "c",
+     "text": "Dr Cash / Cr Accounts receivable, $2,400 only",
+     "explanation": "The receivable was already removed; it must be reinstated first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "Dr Cash / Cr Retained earnings, $2,400",
+     "explanation": "A recovery is not a prior-period adjustment.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Reinstating the receivable (and allowance) documents the customer's payment history; the second entry records the collection. Net effect: cash up, allowance up.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-05",
+   "pool": "practice",
+   "stem": "Gross accounts receivable were $750,000 and the allowance for credit losses was $30,000 before a $4,000 write-off. What are net receivables after the write-off?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$716,000",
+     "explanation": "This deducts the write-off from net receivables; the write-off affects both accounts equally.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$746,000",
+     "explanation": "This reduces gross AR but not the allowance.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$720,000",
+     "explanation": "Correct. (750,000 − 4,000) − (30,000 − 4,000) = 720,000 — unchanged."
+    },
+    {
+     "id": "d",
+     "text": "$724,000",
+     "explanation": "This reduces only the allowance.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Before: 750,000 − 30,000 = 720,000. After: 746,000 − 26,000 = **720,000**. Write-offs do not change net receivables.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-06",
+   "pool": "practice",
+   "stem": "When is the direct write-off method acceptable under GAAP?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Whenever the entity uses the income tax basis for its tax return",
+     "explanation": "Tax method choice doesn't make direct write-off GAAP.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "b",
+     "text": "Always, for trade receivables due within one year",
+     "explanation": "CECL applies to short-term trade receivables too.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Only when results don't differ materially from the allowance method",
+     "explanation": "Correct. It's a materiality exception only."
+    },
+    {
+     "id": "d",
+     "text": "Never, under any circumstances",
+     "explanation": "Immaterial differences are always acceptable.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The direct write-off method doesn't match expected losses to the period of sale and ignores CECL; it's acceptable only when the effect is immaterial.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-08",
+   "pool": "practice",
+   "stem": "A company assigns (pledges) its receivables as collateral for a bank loan. How are the receivables reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Removed from the balance sheet",
+     "explanation": "Pledging is not a transfer of ownership.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Offset against the related bank loan",
+     "explanation": "Collateral is not netted against the debt.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Reclassified as investments",
+     "explanation": "They remain trade receivables.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Kept on the balance sheet; pledge disclosed",
+     "explanation": "Correct. Pledged receivables remain the company's assets; the loan is recorded as a liability and the collateral arrangement is disclosed."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Pledged receivables remain the company's assets; the loan is recorded as a liability and the collateral arrangement is disclosed.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-09",
+   "pool": "practice",
+   "stem": "On January 1, a company sold equipment and accepted a 2-year, $100,000 noninterest-bearing note due in full on December 31, Year 2. The market rate for similar notes is 8% (PV factor 0.8573). At what amount is the note initially recorded, net?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$100,000",
+     "explanation": "A noninterest-bearing note must be recorded at present value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$85,730",
+     "explanation": "Correct. 100,000 × 0.8573."
+    },
+    {
+     "id": "c",
+     "text": "$92,000",
+     "explanation": "This deducts simple interest for only one year.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$84,000",
+     "explanation": "This deducts simple (not compound) interest for two years.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Notes with no stated interest are recorded at present value using the market rate (ASC 835-30): 100,000 × 0.8573 = **85,730**. The 14,270 discount is recognized as interest income over two years.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-10",
+   "pool": "practice",
+   "stem": "Which fact pattern is most likely to require a transfer of receivables to be accounted for as a secured borrowing?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The transferee may sell them, and the transferor has no repurchase rights",
+     "explanation": "These facts support sale accounting.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "The transfer is made with recourse for credit losses",
+     "explanation": "Recourse alone does not prevent sale accounting.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "The transferor is entitled and obligated to repurchase before maturity",
+     "explanation": "Correct. That is effective control retained."
+    },
+    {
+     "id": "d",
+     "text": "The factor charges a fee for the service",
+     "explanation": "Fees are normal in sales of receivables.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "c",
+   "explanation": "An agreement that entitles and obligates the transferor to repurchase before maturity means it keeps effective control — a secured borrowing under ASC 860.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-11",
+   "pool": "practice",
+   "stem": "Which information should an entity consider when estimating expected credit losses under CECL?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only the entity's historical loss experience",
+     "explanation": "CECL also requires current conditions and forecasts.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "History, current conditions, and supportable forecasts",
+     "explanation": "Correct. ASC 326-20-30: estimate expected credit losses using relevant information about past events, current conditions, and reasonable and supportable forecasts, reverting to history beyond the forecast period."
+    },
+    {
+     "id": "c",
+     "text": "Only losses that are probable at the reporting date",
+     "explanation": "That is the old incurred-loss threshold.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "Only the customer's credit rating at the sale date",
+     "explanation": "The estimate uses broader, updated information.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "ASC 326-20-30: estimate expected credit losses using relevant information about past events, current conditions, and reasonable and supportable forecasts, reverting to history beyond the forecast period.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-12",
+   "pool": "practice",
+   "stem": "Grove Co.'s customer subledger totals $512,300 and its general ledger control account shows $498,900. Investigation finds (1) a $6,200 customer payment posted to the general ledger but not to the customer's account and (2) a $7,200 credit sale posted to the subledger twice. The staff proposes increasing the general ledger by $13,400. What is the correct resolution?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Reduce the subledger by $13,400; no GL entry",
+     "explanation": "Correct. Both items are subledger errors: 512,300 − 6,200 − 7,200 = 498,900, which already agrees to the GL."
+    },
+    {
+     "id": "b",
+     "text": "Increase the GL by $13,400; no subledger entry",
+     "explanation": "This is the staff's proposal. It forces agreement by changing the record that is already right.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Reduce the subledger by $1,000; increase the GL",
+     "explanation": "This nets the two items against each other (7,200 − 6,200) instead of correcting each one.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "Increase the GL $6,200; cut the subledger $7,200",
+     "explanation": "The payment is already in the GL; only the subledger is missing it.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Reconcile by identifying which record each item affects: both items are missing from, or duplicated in, the subledger, so the GL needs no entry.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-13",
+   "pool": "practice",
+   "stem": "Under ASU 2025-05, which practical expedient is available to all entities for current accounts receivable arising from revenue contracts?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Skip the allowance for current receivables",
+     "explanation": "The expedient simplifies the forecast; an allowance is still required.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Assume current conditions at year-end persist",
+     "explanation": "Correct. Entities may assume conditions as of the balance sheet date do not change over the remaining life when forecasting expected credit losses."
+    },
+    {
+     "id": "c",
+     "text": "Use the direct write-off method instead",
+     "explanation": "The direct write-off method remains non-GAAP unless immaterial.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Use only historical loss rates",
+     "explanation": "Current conditions still must be considered.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "ASU 2025-05 simplifies the reasonable-and-supportable forecast for current receivables and contract assets; it does not eliminate the CECL allowance.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-14",
+   "pool": "practice",
+   "stem": "On October 1 a company accepts a $50,000, 9%, six-month note from a customer. What interest receivable is accrued at December 31?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,250",
+     "explanation": "Only three months have elapsed by December 31.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "$1,125",
+     "explanation": "Correct. 50,000 × 9% × 3/12 = 1,125."
+    },
+    {
+     "id": "c",
+     "text": "$4,500",
+     "explanation": "That is a full year of interest.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "$375",
+     "explanation": "That uses one month instead of three.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Accrued interest = principal × rate × time elapsed.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-15",
+   "pool": "practice",
+   "stem": "A company factors $200,000 of receivables with recourse in a transfer that qualifies as a sale. The factor charges a 4% fee and holds back 10%. The recourse obligation's fair value is $3,000. What loss on sale is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$8,000",
+     "explanation": "The recourse obligation is also part of the loss.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$28,000",
+     "explanation": "The holdback is a receivable from the factor, not a loss.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$11,000",
+     "explanation": "Correct. The 8,000 fee plus the 3,000 recourse liability."
+    },
+    {
+     "id": "d",
+     "text": "$31,000",
+     "explanation": "The holdback isn't a loss.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Loss on sale = proceeds (cash plus receivable from factor, less recourse liability) compared with the receivables' carrying amount: 200,000 − (172,000 + 20,000 − 3,000).",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-16",
+   "pool": "practice",
+   "stem": "How are trade receivables reported under ASC 326?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "At fair value through net income",
+     "explanation": "Trade receivables aren't measured at fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "At the gross amount billed only",
+     "explanation": "An allowance for expected losses is required.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "At the amount collected after year-end",
+     "explanation": "Subsequent collections are evidence, not the measure.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "At amortized cost, net of an allowance",
+     "explanation": "Correct. Receivables are shown net of the allowance for expected credit losses."
+    }
+   ],
+   "answer": "d",
+   "explanation": "CECL: financial assets at amortized cost are presented at the net amount expected to be collected.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-17",
+   "pool": "practice",
+   "stem": "The allowance for credit losses has a $3,000 debit balance before adjustment. The required ending allowance is $25,000. What is credit loss expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000",
+     "explanation": "Cover the debit balance.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$28,000",
+     "explanation": "Correct. $25,000 + $3,000."
+    },
+    {
+     "id": "c",
+     "text": "$22,000",
+     "explanation": "Add the debit balance.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$3,000",
+     "explanation": "That's the beginning balance.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Expense brings the allowance to the required balance; a debit balance adds to it.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-18",
+   "pool": "practice",
+   "stem": "A company holds a $60,000, 90-day, 8% note for 30 days and then discounts it at a bank at 10%. What are the proceeds (360-day year)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$61,200",
+     "explanation": "Deduct the bank discount.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$59,000",
+     "explanation": "Use the maturity value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$60,180",
+     "explanation": "Correct. $61,200 maturity − $1,020 discount."
+    },
+    {
+     "id": "d",
+     "text": "$60,400",
+     "explanation": "Use 60 remaining days.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Maturity value = $61,200; discount = $61,200 × 10% × 60/360 = $1,020.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-19",
+   "pool": "practice",
+   "stem": "A company factors $100,000 of receivables without recourse as a sale. The factor charges a 3% fee and holds back 5%. What cash is received?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$97,000",
+     "explanation": "The holdback is retained.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$95,000",
+     "explanation": "The fee is deducted.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$100,000",
+     "explanation": "Deduct the fee and holdback.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$92,000",
+     "explanation": "Correct. With a $3,000 loss and a $5,000 receivable."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Cash = face − fee − holdback; the fee is a loss, and the holdback is a receivable from the factor.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-20",
+   "pool": "practice",
+   "stem": "Receivables are $1,000,000. The historical loss rate is 2%, adjusted up 0.5% for current conditions and forecasts. What allowance is needed under CECL?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000",
+     "explanation": "Correct. 2.5% × $1,000,000."
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "Adjust for current conditions.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$5,000",
+     "explanation": "Apply the full rate.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "CECL needs an allowance.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "CECL uses historical loss information adjusted for current conditions and reasonable forecasts.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-21",
+   "pool": "practice",
+   "stem": "Under the allowance method, how does writing off a specific uncollectible account affect net receivables?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It decreases them",
+     "explanation": "The allowance falls too.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No effect",
+     "explanation": "Correct. Both gross receivables and the allowance fall."
+    },
+    {
+     "id": "c",
+     "text": "It increases them",
+     "explanation": "Both fall equally.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "It creates an expense",
+     "explanation": "Expense was already recorded.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A write-off reduces both gross receivables and the allowance, leaving net receivables unchanged.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-22",
+   "pool": "practice",
+   "stem": "Aged AR: $100,000 current at 2%, $40,000 at 31–60 days at 10%, $10,000 over 60 days at 40%. The allowance has a $3,000 credit balance before adjustment. What is credit loss expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,000",
+     "explanation": "Correct. Required $10,000 − $3,000."
+    },
+    {
+     "id": "b",
+     "text": "$10,000",
+     "explanation": "Adjust for the existing balance.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$13,000",
+     "explanation": "The balance is a credit.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "d",
+     "text": "$3,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Under an aging approach, expense brings the allowance to the required balance.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-23",
+   "pool": "practice",
+   "stem": "The required allowance is $10,000. Before adjustment, the allowance has a $1,000 debit balance. What is credit loss expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$9,000",
+     "explanation": "A debit balance adds to expense.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "b",
+     "text": "$11,000",
+     "explanation": "Correct. 10,000 + 1,000."
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "Adjust for the debit.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$1,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A debit balance in the allowance increases the adjustment needed.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-24",
+   "pool": "practice",
+   "stem": "A $2,000 receivable is written off under the allowance method. What is the effect on net AR?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A $2,000 decrease",
+     "explanation": "The allowance absorbs it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A $2,000 increase",
+     "explanation": "Not the effect.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "No effect",
+     "explanation": "Correct. AR and the allowance both fall."
+    },
+    {
+     "id": "d",
+     "text": "A $4,000 decrease",
+     "explanation": "Not the effect.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Write-offs reduce AR and the allowance equally, leaving net AR unchanged.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-25",
+   "pool": "practice",
+   "stem": "$100,000 of receivables is factored without recourse. The fee is 3%, and the factor holds back 5% for returns. What does the seller record?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$97,000 cash; $3,000 loss",
+     "explanation": "Deduct the holdback.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$95,000 cash; no loss",
+     "explanation": "The fee is a loss.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$92,000 cash; $8,000 loss",
+     "explanation": "The holdback is a receivable.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$92,000 cash; $3,000 loss",
+     "explanation": "Correct. $5,000 is due from the factor."
+    }
+   ],
+   "answer": "d",
+   "explanation": "In a sale of receivables, the fee is a loss and the holdback is a receivable from the factor.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-26",
+   "pool": "practice",
+   "stem": "A $10,000, 6-month, 6% note is discounted at the bank after 2 months at 12%. What are the proceeds?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$9,888",
+     "explanation": "Correct. Maturity $10,300 less $412 discount."
+    },
+    {
+     "id": "b",
+     "text": "$10,300",
+     "explanation": "That's maturity value.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$9,600",
+     "explanation": "Use maturity value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$10,100",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Proceeds equal maturity value less the bank discount for the remaining term.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-27",
+   "pool": "practice",
+   "stem": "Credit sales are $500,000, and the company estimates credit losses at 1.5% of credit sales. The allowance has a $2,000 credit balance. What is the expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,500",
+     "explanation": "Not with the sales method.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$7,500",
+     "explanation": "Correct. Percentage of sales ignores the balance."
+    },
+    {
+     "id": "c",
+     "text": "$9,500",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$2,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The percentage-of-sales method computes expense directly, without regard to the allowance balance.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-28",
+   "pool": "practice",
+   "stem": "Receivables are transferred with recourse, and the transferor keeps effective control. How is the transfer recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a sale with a loss",
+     "explanation": "Control wasn't surrendered.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As a sale with a gain",
+     "explanation": "It does not qualify as a sale.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "As a borrowing",
+     "explanation": "Correct. Sale criteria aren't met."
+    },
+    {
+     "id": "d",
+     "text": "Not recorded",
+     "explanation": "It's recorded as a borrowing.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Transfers that don't surrender control are recorded as secured borrowings.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-rec-29",
+   "pool": "practice",
+   "stem": "A previously written-off $1,500 account is collected under the allowance method. What is the net effect on net AR?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No effect on net AR",
+     "explanation": "The collection lowers AR.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A $1,500 increase",
+     "explanation": "Not the effect.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A $3,000 decrease",
+     "explanation": "Not the effect.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "A $1,500 decrease",
+     "explanation": "Correct. Reinstatement nets to zero; collection lowers AR."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Recovery reinstates AR and the allowance, then the collection reduces AR.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/questions.json"
+  },
+  {
+   "id": "far-x2-02",
+   "moduleId": "far-receivables",
+   "pool": "exam",
+   "stem": "The accounts receivable aging shows current $400,000 (2% expected loss), 31–60 days $100,000 (10%), and over 60 days $50,000 (40%). The allowance began the year at $30,000; write-offs were $12,000 and recoveries were $2,000. What is credit loss expense?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$38,000",
+     "explanation": "That is the required ending allowance, not the expense.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$8,000",
+     "explanation": "Ignores the write-offs and recoveries during the year.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$18,000",
+     "explanation": "Correct. $38,000 required − $20,000 unadjusted balance = $18,000."
+    },
+    {
+     "id": "d",
+     "text": "$20,000",
+     "explanation": "Ignores the $2,000 of recoveries that restored the allowance.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Required allowance = 8,000 + 10,000 + 20,000 = 38,000. Unadjusted balance = 30,000 − 12,000 + 2,000 = 20,000. Expense = 38,000 − 20,000 = **$18,000**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-rec-07",
+   "moduleId": "far-receivables",
+   "pool": "exam",
+   "stem": "A company factors $80,000 of receivables **without recourse**. The factor charges a 2% fee and withholds 4% for sales returns. The transfer qualifies as a sale. What loss on sale is recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,600",
+     "explanation": "Correct. Only the 2% fee is a loss; the 4% holdback is a receivable from the factor."
+    },
+    {
+     "id": "b",
+     "text": "$4,800",
+     "explanation": "This includes the holdback, which is expected to be returned.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$3,200",
+     "explanation": "That is the holdback amount.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "The factor's fee is a loss on the sale.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Fee = 80,000 × 2% = 1,600 (loss). Holdback = 80,000 × 4% = 3,200 (due from factor). Cash = 80,000 − 1,600 − 3,200 = 75,200.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-19",
+   "moduleId": "far-receivables",
+   "pool": "exam",
+   "stem": "At year-end, accounts receivable total $400,000, and the company estimates expected credit losses of 5%. Before adjustment, the allowance for credit losses has a $6,000 credit balance. What is credit loss expense for the year?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "The existing credit balance reduces the adjustment needed.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$26,000",
+     "explanation": "A credit balance is subtracted, not added.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$6,000",
+     "explanation": "That is the existing balance, not the expense.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$14,000",
+     "explanation": "Correct. Required allowance 20,000 − existing credit balance 6,000 = 14,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Under the balance-sheet approach, expense is the amount needed to bring the allowance to the expected credit loss (5% × $400,000 = $20,000).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-26",
+   "moduleId": "far-receivables",
+   "pool": "exam",
+   "stem": "Which transfer of receivables is accounted for as a sale?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Pledging receivables as collateral for a bank loan",
+     "explanation": "A pledge is a secured borrowing.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Assigning receivables to a lender while keeping collection rights",
+     "explanation": "A general assignment is a borrowing.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Factoring receivables without recourse, surrendering control",
+     "explanation": "Correct. When control is surrendered and the transferor has no continuing involvement, the transfer is a sale."
+    },
+    {
+     "id": "d",
+     "text": "Transferring receivables with an agreement to repurchase them",
+     "explanation": "Repurchase agreements keep control with the transferor.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ASC 860: a transfer is a sale if the assets are isolated from the transferor, the transferee can pledge or exchange them, and the transferor doesn't maintain effective control.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-rec-fc1",
+   "front": "CECL in one line",
+   "back": "Recognize **expected lifetime credit losses** from initial recognition, using history, current conditions, and reasonable & supportable forecasts.",
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/flashcards.json"
+  },
+  {
+   "id": "far-rec-fc2",
+   "front": "Credit loss expense (balance sheet approach)",
+   "back": "Required ending allowance − (beginning allowance − write-offs + recoveries). A debit unadjusted balance **adds** to expense.",
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/flashcards.json"
+  },
+  {
+   "id": "far-rec-fc3",
+   "front": "Effect of a write-off (allowance method)",
+   "back": "Dr Allowance / Cr AR — **no change** to net receivables or expense.",
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/flashcards.json"
+  },
+  {
+   "id": "far-rec-fc4",
+   "front": "Recovery of a written-off account",
+   "back": "Reinstate (Dr AR / Cr Allowance), then collect (Dr Cash / Cr AR).",
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/flashcards.json"
+  },
+  {
+   "id": "far-rec-fc5",
+   "front": "ASC 860 sale criteria for transfers",
+   "back": "Assets **legally isolated**; transferee can **pledge or exchange**; transferor keeps **no effective control**.",
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/flashcards.json"
+  },
+  {
+   "id": "far-rec-fc6",
+   "front": "Factoring as a sale — what's the loss?",
+   "back": "Factor's **fee** + fair value of any **recourse obligation**. Holdbacks are a **receivable** from the factor, not a loss.",
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/flashcards.json"
+  },
+  {
+   "id": "far-rec-fc7",
+   "front": "Noninterest-bearing note receivable",
+   "back": "Record at **present value** at the market rate; amortize the discount to interest income.",
+   "moduleId": "far-receivables",
+   "_file": "content/far/modules/far-receivables/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-u5-ar-review.json",
+  "content/far/tbs/far-tbs-x2-receivables-inventory.json"
+ ]
+}

@@ -1,0 +1,1513 @@
+{
+ "mcqs": [
+  {
+   "id": "reg-adj-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: which is a deduction for AGI (an adjustment)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Mortgage interest on a residence",
+     "explanation": "That's an itemized deduction.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "The deductible half of self-employment tax",
+     "explanation": "Correct. Half of SE tax is an above-the-line adjustment."
+    },
+    {
+     "id": "c",
+     "text": "Charitable contributions",
+     "explanation": "Generally itemized.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Medical expenses",
+     "explanation": "Itemized, subject to the 7.5% floor.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Half of SE tax is an above-the-line adjustment.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-chk1",
+   "pool": "lesson",
+   "stem": "The 2025 educator expense cap is $300. A public school teacher spent $450 on classroom supplies in 2025. What is the educator expense adjustment?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$450",
+     "explanation": "Limited to $300.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$300",
+     "explanation": "Correct. Educator expense deduction: up to $300 per eligible educator."
+    },
+    {
+     "id": "c",
+     "text": "$250",
+     "explanation": "The limit is $300.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Eligible educators may deduct up to $300.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Educator expense deduction: up to $300 per eligible educator.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-chk2",
+   "pool": "lesson",
+   "stem": "The 2025 phase-out range for a single filer is MAGI $85,000–$100,000. Single taxpayer, MAGI $95,000, paid $2,500 of student loan interest. What is the deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,500",
+     "explanation": "Partly phased out.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$833",
+     "explanation": "Correct. $2,500 × (1 − 10,000 ÷ 15,000)."
+    },
+    {
+     "id": "c",
+     "text": "$1,667",
+     "explanation": "Uses the wrong fraction.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Not fully phased out until $100,000.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Reduction fraction = (95,000 − 85,000) ÷ 15,000 = 2/3; deduction = 2,500 × 1/3 ≈ **$833**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-01",
+   "pool": "practice",
+   "stem": "For 2025 the HSA contribution limit for family coverage is $8,550, and an additional $1,000 catch-up is allowed at age 55 or older. What is the maximum contribution for a 45-year-old with family high-deductible coverage?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$4,300",
+     "explanation": "That's the self-only limit.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$7,000",
+     "explanation": "That's the IRA limit.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$9,550",
+     "explanation": "Includes a catch-up she isn't eligible for (55+).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$8,550",
+     "explanation": "Correct. 2025 HSA limits: $4,300 self-only, $8,550 family; +$1,000 catch-up at 55."
+    }
+   ],
+   "answer": "d",
+   "explanation": "2025 HSA limits: $4,300 self-only, $8,550 family; +$1,000 catch-up at 55.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-02",
+   "pool": "practice",
+   "stem": "The 2025 IRA contribution limit is $7,000, plus a $1,000 catch-up at age 50 or older. A 52-year-old single taxpayer not covered by any employer plan contributes to a traditional IRA in 2025. What is the maximum deduction (with enough earned income)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,000",
+     "explanation": "Omits the catch-up.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "No phase-out applies without plan coverage.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$8,000",
+     "explanation": "Correct. $7,000 + $1,000 catch-up."
+    },
+    {
+     "id": "d",
+     "text": "$23,500",
+     "explanation": "That's a 401(k) elective deferral limit.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Not an active participant → fully deductible at any income; 2025 limit $7,000 + $1,000 at 50+.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-03",
+   "pool": "practice",
+   "stem": "Which item is **not** an adjustment to income for 2025?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Moving expenses of a civilian employee",
+     "explanation": "Correct. Only Armed Forces members may deduct moving expenses."
+    },
+    {
+     "id": "b",
+     "text": "Penalty on early withdrawal of savings",
+     "explanation": "This is an adjustment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Self-employed health insurance",
+     "explanation": "This is an adjustment.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "HSA contributions made by the individual",
+     "explanation": "This is an adjustment.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Moving expense deductions are limited to active-duty military moving under orders.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-04",
+   "pool": "practice",
+   "stem": "A self-employed taxpayer has net SE income of $40,000 and pays $9,000 of health insurance premiums; she isn't eligible for any employer plan. What is the deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$9,000 for AGI",
+     "explanation": "Correct. §162(l): self-employed health insurance is deductible for AGI up to net SE income."
+    },
+    {
+     "id": "b",
+     "text": "$9,000 as an itemized medical expense only",
+     "explanation": "It's deductible above the line.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$4,500",
+     "explanation": "There is no 50% limit on this deduction.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "It's deductible.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "§162(l): self-employed health insurance is deductible for AGI up to net SE income.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-05",
+   "pool": "practice",
+   "stem": "For 2025 the IRA limit is $7,000, and the deduction phases out for joint filers who are both active participants between MAGI $126,000 and $146,000. A married couple filing jointly, both covered by workplace plans, has MAGI of $150,000. How much traditional IRA contribution can each deduct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,000 each",
+     "explanation": "Above the phase-out range.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$3,500 each",
+     "explanation": "Not partially phased out at $150,000.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "Correct. MAGI exceeds $146,000."
+    },
+    {
+     "id": "d",
+     "text": "$14,000 total",
+     "explanation": "Above the range.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Joint phase-out for active participants: $126,000–$146,000 in 2025.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-06",
+   "pool": "practice",
+   "stem": "Which taxpayer can't deduct student loan interest?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A single taxpayer with MAGI of $60,000",
+     "explanation": "Below the phase-out, so eligible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A joint filer with MAGI of $150,000",
+     "explanation": "Below the joint phase-out.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A married taxpayer filing separately",
+     "explanation": "Correct. MFS can't claim it."
+    },
+    {
+     "id": "d",
+     "text": "A taxpayer who paid $1,000 of interest",
+     "explanation": "The amount paid doesn't bar the deduction.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Married filing separately and dependents can't take the student loan interest deduction.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-07",
+   "pool": "practice",
+   "stem": "An individual withdraws a CD early and forfeits $300 of interest. How is the penalty treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As an adjustment to income",
+     "explanation": "Correct. The full interest is reported, and the forfeited penalty is an adjustment."
+    },
+    {
+     "id": "b",
+     "text": "As an itemized deduction",
+     "explanation": "It's above the line.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Not deductible",
+     "explanation": "It's deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "As a capital loss",
+     "explanation": "It isn't a capital loss.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "The full interest is reported, and the forfeited penalty is an adjustment.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-08",
+   "pool": "practice",
+   "stem": "Why is it usually better for a deduction to be an adjustment rather than an itemized deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Adjustments reduce AGI and are available even with the standard deduction",
+     "explanation": "Correct. Adjustments benefit all taxpayers and lower AGI-based limits."
+    },
+    {
+     "id": "b",
+     "text": "Adjustments are always larger",
+     "explanation": "Size isn't the reason.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "c",
+     "text": "Itemized deductions are never allowed",
+     "explanation": "They're allowed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Adjustments are refundable credits",
+     "explanation": "They're deductions, not credits.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Adjustments benefit all taxpayers and lower AGI-based limits.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-09",
+   "pool": "practice",
+   "stem": "For 2025 the deduction phases out for a single active participant between MAGI $79,000 and $89,000. A single taxpayer covered by an employer plan has MAGI of $84,000 and contributes $7,000 to a traditional IRA. What is the deductible amount?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,000",
+     "explanation": "Partly phased out.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$5,000",
+     "explanation": "Miscomputes the phase-out.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "Not fully phased out.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$3,500",
+     "explanation": "Correct. Halfway through the $79,000–$89,000 range."
+    }
+   ],
+   "answer": "d",
+   "explanation": "(84,000 − 79,000) ÷ 10,000 = 50% reduction; 7,000 × 50% = **3,500**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-10",
+   "pool": "practice",
+   "stem": "Employer HSA contributions for an employee are:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Included in wages and deductible by the employee",
+     "explanation": "Employer contributions are excluded.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Ignored for the annual limit",
+     "explanation": "They count toward it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Excluded from the employee's income and counted toward the annual limit",
+     "explanation": "Correct. Employer contributions are excluded from income but reduce the employee's remaining contribution room."
+    },
+    {
+     "id": "d",
+     "text": "Taxed at capital gains rates",
+     "explanation": "HSA contributions aren't taxed that way.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Employer contributions are excluded from income but reduce the employee's remaining contribution room.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-11",
+   "pool": "practice",
+   "stem": "A self-employed taxpayer with AGI of $80,000 (as prepared) paid $7,200 of health insurance premiums and was not eligible for an employer plan. The preparer included the premiums in itemized medical expenses. What is the effect of correcting the return?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "AGI decreases by $1,200",
+     "explanation": "1,200 is the medical deduction above the 7.5% floor (7,200 − 6,000); the adjustment is the full premium.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "AGI is unchanged; itemized deductions fall",
+     "explanation": "The premiums belong above the line, so AGI does change.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "AGI decreases by $3,600",
+     "explanation": "There is no 50% limit on the self-employed health insurance deduction.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "AGI decreases by $7,200",
+     "explanation": "Correct. Self-employed health insurance is deducted for AGI under §162(l), so the full 7,200 comes off AGI and is removed from itemized medical expenses."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Moving a deduction above the line also changes every AGI-based floor and phase-out computed afterward.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-12",
+   "pool": "practice",
+   "stem": "For 2025, eligible educators may deduct up to $300 of classroom expenses for AGI. A teacher spends $450. What is her adjustment?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$300",
+     "explanation": "Correct. The deduction is capped at $300."
+    },
+    {
+     "id": "b",
+     "text": "$450",
+     "explanation": "The cap is $300.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$150",
+     "explanation": "The excess isn't the deduction.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "An adjustment is allowed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Eligible educators deduct up to $300 of unreimbursed classroom expenses as an adjustment to income.",
+   "skill": "application",
+   "difficulty": 1,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-13",
+   "pool": "practice",
+   "stem": "Which alimony payment is deductible by the payer?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Payments under a 2020 decree",
+     "explanation": "Post-2018 alimony isn't deductible.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "Payments under a 2017 decree, unmodified",
+     "explanation": "Correct. Pre-2019 instruments keep the old rules."
+    },
+    {
+     "id": "c",
+     "text": "Child support under any decree",
+     "explanation": "Child support is never deductible.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Voluntary payments before a decree",
+     "explanation": "They must be required by an instrument.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Alimony is deductible only under divorce or separation instruments executed before 2019 (and not modified to adopt the new rules).",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-14",
+   "pool": "practice",
+   "stem": "A single taxpayer below the phaseout range paid $3,200 of qualified student loan interest. What is the adjustment?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$3,200",
+     "explanation": "The cap is $2,500.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$700",
+     "explanation": "That is the excess.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$2,500",
+     "explanation": "Correct. The deduction is capped at $2,500."
+    },
+    {
+     "id": "d",
+     "text": "$1,600",
+     "explanation": "The cap isn't half the interest.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The student loan interest deduction is limited to $2,500 per return, subject to an AGI phaseout.",
+   "skill": "application",
+   "difficulty": 1,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-15",
+   "pool": "practice",
+   "stem": "A sole proprietor contributes to her own SEP-IRA. Where is the contribution deducted?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As an expense on Schedule C",
+     "explanation": "Contributions for herself aren't on Schedule C.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As an itemized deduction",
+     "explanation": "It is above the line.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "It isn't deductible",
+     "explanation": "It is deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "As an adjustment on Form 1040",
+     "explanation": "Correct. It isn't a Schedule C expense."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Contributions to a self-employed person's own SEP are deducted as an adjustment to income, not on Schedule C (employee contributions are).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-16",
+   "pool": "practice",
+   "stem": "Which taxpayer may contribute to an HSA for 2025?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "One enrolled in Medicare Part A",
+     "explanation": "Medicare enrollment disqualifies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "One covered only by a high-deductible plan",
+     "explanation": "Correct. No other disqualifying coverage."
+    },
+    {
+     "id": "c",
+     "text": "One also covered by a low-deductible plan",
+     "explanation": "Other coverage disqualifies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "One claimed as another's dependent",
+     "explanation": "Dependents can't contribute.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "HSA eligibility requires HDHP coverage, no disqualifying other coverage, no Medicare enrollment and not being a dependent.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-17",
+   "pool": "practice",
+   "stem": "A self-employed taxpayer could have joined his spouse's employer-subsidized health plan all year but bought his own policy instead. Can he deduct the premiums as an adjustment?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, up to his SE earnings",
+     "explanation": "Eligibility for another plan bars it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Yes, as an itemized deduction only",
+     "explanation": "Not the issue here.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "No, eligibility for the spouse's plan bars it",
+     "explanation": "Correct. Monthly eligibility for a subsidized plan disallows it."
+    },
+    {
+     "id": "d",
+     "text": "Yes, if he pays with business funds",
+     "explanation": "Payment source doesn't matter.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The self-employed health insurance deduction isn't allowed for months the taxpayer is eligible for a subsidized employer plan, including a spouse's.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-18",
+   "pool": "practice",
+   "stem": "A single taxpayer with MAGI of $200,000 isn't covered by any workplace retirement plan. How much of a $7,000 traditional IRA contribution is deductible?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$0, because MAGI is too high",
+     "explanation": "The phaseout applies to active participants.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$3,500, after a partial phaseout",
+     "explanation": "No phaseout applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$2,000 under the old limit",
+     "explanation": "The 2025 limit is $7,000.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "All $7,000",
+     "explanation": "Correct. No phaseout applies without plan coverage."
+    }
+   ],
+   "answer": "d",
+   "explanation": "If neither the taxpayer nor a spouse is an active participant, the traditional IRA deduction isn't phased out.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-19",
+   "pool": "practice",
+   "stem": "A married couple filing jointly, both age 40, has $50,000 of wages earned by one spouse. What is their maximum combined IRA contribution for 2025?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$14,000",
+     "explanation": "Correct. A spousal IRA allows $7,000 each."
+    },
+    {
+     "id": "b",
+     "text": "$7,000",
+     "explanation": "The nonworking spouse can contribute too.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$16,000",
+     "explanation": "No catch-up below age 50.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$50,000",
+     "explanation": "The limit is per person.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "a",
+   "explanation": "A spousal IRA lets a nonworking spouse contribute up to the limit if joint earned income covers both contributions.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-20",
+   "pool": "practice",
+   "stem": "For 2025, who may deduct moving expenses as an adjustment to income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Any employee moving 50 miles for work",
+     "explanation": "That pre-2018 rule is suspended.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "Active-duty military moving under orders",
+     "explanation": "Correct. The deduction is otherwise suspended."
+    },
+    {
+     "id": "c",
+     "text": "Self-employed workers who relocate",
+     "explanation": "Suspended for them too.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "Retirees moving to a new state",
+     "explanation": "Retirees aren't eligible.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "For 2025, only members of the Armed Forces on active duty moving under military orders may deduct moving expenses.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-21",
+   "pool": "practice",
+   "stem": "In 2025 a married couple files jointly with MAGI of $241,000. Only the wife is covered by a workplace plan. The husband contributes $7,000 to a traditional IRA. The phaseout range for a noncovered spouse is $236,000–$246,000. How much can he deduct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,000",
+     "explanation": "A phaseout applies via his spouse.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$0",
+     "explanation": "He's mid-range.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$3,500",
+     "explanation": "Correct. He is halfway through the $10,000 range."
+    },
+    {
+     "id": "d",
+     "text": "$1,750",
+     "explanation": "Recompute the fraction.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A noncovered spouse's deduction phases out over $236,000–$246,000 when the other spouse is covered.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-22",
+   "pool": "practice",
+   "stem": "A single taxpayer pays $2,500 of student loan interest. Her 2025 MAGI is $92,500; the phaseout is $85,000–$100,000. What is her deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,500",
+     "explanation": "The phaseout applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$0",
+     "explanation": "She's mid-range.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$625",
+     "explanation": "Recompute the fraction.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$1,250",
+     "explanation": "Correct. Half of the range is exceeded."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The deduction is reduced proportionally across the MAGI range.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-23",
+   "pool": "practice",
+   "stem": "A self-employed taxpayer has $6,000 of net SE profit and $424 of deductible SE tax. He pays $9,000 of health insurance premiums. What is his SE health insurance deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,576",
+     "explanation": "Correct. Limited to net SE earnings less half the SE tax."
+    },
+    {
+     "id": "b",
+     "text": "$9,000",
+     "explanation": "The deduction is limited.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$6,000",
+     "explanation": "Subtract half the SE tax.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "A deduction is allowed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "The self-employed health insurance deduction can't exceed earned income from the business, net of the SE tax deduction.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-24",
+   "pool": "practice",
+   "stem": "A 2017 divorce decree was modified in 2022 and the modification expressly adopted the post-2018 alimony rules. Is the alimony deductible in 2025?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, the decree predates 2019",
+     "explanation": "The modification controls.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No",
+     "explanation": "Correct. The modification brought it under the new rules."
+    },
+    {
+     "id": "c",
+     "text": "Yes, half of it",
+     "explanation": "No partial rule.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "Only if paid monthly",
+     "explanation": "Timing isn't the test.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Pre-2019 instruments modified to expressly adopt the TCJA rules lose the deduction.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-25",
+   "pool": "practice",
+   "stem": "A taxpayer cashes a CD early, forfeiting $1,000 of interest; the CD earned $600 of interest that year. How much may she deduct as an early withdrawal penalty?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$600",
+     "explanation": "Not limited to interest.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$400",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$1,000",
+     "explanation": "Correct. The full penalty is deductible, even above the year's interest."
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "It's an adjustment.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Penalties on early withdrawal of savings are deductible for AGI in full.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-26",
+   "pool": "practice",
+   "stem": "A married couple filing jointly are both K–12 teachers. One spent $450 on classroom supplies and the other $100. What is their educator expense deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$550",
+     "explanation": "Each spouse is capped at $300.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$600",
+     "explanation": "Only actual expenses count.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$300",
+     "explanation": "Each spouse has a limit.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$400",
+     "explanation": "Correct. Each is limited to $300: $300 + $100."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The $300 educator expense limit applies per eligible educator.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-27",
+   "pool": "practice",
+   "stem": "An employee with $180,000 of wages (above the $176,100 wage base) also has $50,000 of net SE income. What is the deductible half of her SE tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$670",
+     "explanation": "Correct. Only the 2.9% Medicare portion applies: $46,175 × 2.9% ÷ 2."
+    },
+    {
+     "id": "b",
+     "text": "$3,532",
+     "explanation": "The Social Security portion is already maxed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$1,339",
+     "explanation": "Only half is deductible.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Medicare tax still applies.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Wages up to the base reduce the SE earnings subject to the 12.4% Social Security tax.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-28",
+   "pool": "practice",
+   "stem": "A taxpayer contributes to her traditional IRA on April 10, 2026 and designates it for 2025. When is it deductible?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "On her 2026 return",
+     "explanation": "She designated 2025.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "On her 2025 return",
+     "explanation": "Correct. Contributions by the filing due date count for the prior year."
+    },
+    {
+     "id": "c",
+     "text": "Split between the years",
+     "explanation": "It isn't split between years.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "Never; it was late",
+     "explanation": "The contribution was timely.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "IRA contributions made by the return due date (without extensions) may count for the prior year.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-29",
+   "pool": "practice",
+   "stem": "An employee's employer puts $3,000 into her family HSA in 2025 (family limit $8,550). How much can she deduct for her own contributions?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Up to $8,550",
+     "explanation": "The employer's share counts.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Up to $3,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "Up to $5,550",
+     "explanation": "Correct. Employer contributions count toward the limit."
+    },
+    {
+     "id": "d",
+     "text": "Nothing",
+     "explanation": "She may contribute the rest.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Employer HSA contributions are excluded from income and reduce the employee's remaining limit.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-30",
+   "pool": "practice",
+   "stem": "A sole proprietor has $100,000 of net SE profit and $7,065 of deductible SE tax. What is her maximum SEP contribution deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000",
+     "explanation": "The self-employed rate is effectively 20%.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "Subtract half the SE tax first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$7,000",
+     "explanation": "That's the IRA limit.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$18,587",
+     "explanation": "Correct. 20% of ($100,000 − $7,065)."
+    }
+   ],
+   "answer": "d",
+   "explanation": "For self-employed people, the 25% SEP limit works out to 20% of net SE earnings after the SE tax deduction.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-31",
+   "pool": "practice",
+   "stem": "For 2025, what is the maximum educator expense deduction for an eligible teacher?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$250",
+     "explanation": "The amount was raised.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "$500",
+     "explanation": "That amount is too high.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$600",
+     "explanation": "That's for two eligible spouses.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$300",
+     "explanation": "Correct. Educator expenses are capped at $300."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Eligible educators may deduct up to $300 of unreimbursed classroom expenses as an adjustment to income.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-32",
+   "pool": "practice",
+   "stem": "Where does a self-employed individual deduct health insurance premiums?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As an adjustment to income",
+     "explanation": "Correct. It's an above-the-line deduction."
+    },
+    {
+     "id": "b",
+     "text": "As an itemized medical expense",
+     "explanation": "It's an adjustment for the self-employed.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "As a Schedule C business expense",
+     "explanation": "It's taken on Schedule 1.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "As a refundable tax credit",
+     "explanation": "It's a deduction.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Self-employed health insurance is deducted above the line, limited to net self-employment earnings.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-adj-33",
+   "pool": "practice",
+   "stem": "What is the maximum annual student loan interest deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,000",
+     "explanation": "That amount is too low.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "$2,500",
+     "explanation": "Correct. The cap is $2,500."
+    },
+    {
+     "id": "c",
+     "text": "$3,000",
+     "explanation": "That amount is too high.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "That amount is too high.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Taxpayers may deduct up to $2,500 of student loan interest, subject to an income phase-out.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/questions.json"
+  },
+  {
+   "id": "reg-x4-11",
+   "moduleId": "reg-adjustments",
+   "pool": "exam",
+   "stem": "Which is a deduction for AGI in 2025?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Unreimbursed employee travel expenses",
+     "explanation": "These are no longer deductible.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "Home mortgage interest on a residence",
+     "explanation": "That's itemized.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Contributions to a health savings account",
+     "explanation": "Correct. HSA contributions made by the individual are above-the-line."
+    },
+    {
+     "id": "d",
+     "text": "Gambling losses up to gambling winnings",
+     "explanation": "Gambling losses are itemized.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "HSA contributions made by the individual are above-the-line.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-12",
+   "moduleId": "reg-adjustments",
+   "pool": "exam",
+   "stem": "For 2025 the deduction phases out for a single active participant between MAGI $79,000 and $89,000. A single taxpayer (MAGI $70,000) is covered by a 401(k) and contributes $7,000 to a traditional IRA in 2025. How much is deductible?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,000",
+     "explanation": "Correct. MAGI is below the $79,000 phase-out start."
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "MAGI is below the phase-out range.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$3,500",
+     "explanation": "No reduction applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$6,000",
+     "explanation": "That was an older contribution limit.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Active participants phase out at $79,000–$89,000 (single) for 2025.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-29",
+   "moduleId": "reg-adjustments",
+   "pool": "exam",
+   "stem": "What is the maximum student loan interest deduction for an eligible taxpayer?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,000 per student, without a phase-out",
+     "explanation": "The limit is per return, not per student.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "All interest paid, without limit",
+     "explanation": "A $2,500 cap applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$2,500, phased out at high AGI",
+     "explanation": "Correct. Up to $2,500 is deductible for AGI."
+    },
+    {
+     "id": "d",
+     "text": "$1,000 for single filers",
+     "explanation": "The cap is $2,500.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "IRC §221: student loan interest of up to $2,500 is deductible for AGI, phased out at higher modified AGI.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  },
+  {
+   "id": "reg-x4-38",
+   "moduleId": "reg-adjustments",
+   "pool": "exam",
+   "stem": "Which item is deductible for AGI by a self-employed individual?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The full amount of her self-employment tax",
+     "explanation": "Only half of SE tax is deductible.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "Personal federal income taxes paid",
+     "explanation": "Federal income tax isn't deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Charitable gifts made by her business",
+     "explanation": "Those are itemized deductions.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Self-employed health insurance premiums",
+     "explanation": "Correct. Self-employed health insurance is an adjustment to income."
+    }
+   ],
+   "answer": "d",
+   "explanation": "IRC §162(l): self-employed health insurance premiums are deductible for AGI (limited to net SE earnings); half of SE tax is also an adjustment.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "reg-adj-f1",
+   "front": "IRA contribution limit — rules",
+   "back": "Lesser of the annual limit or earned income; catch-up at 50 or older; deductibility then depends on active participation and MAGI. (The exam gives the dollar amount.)",
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/flashcards.json"
+  },
+  {
+   "id": "reg-adj-f2",
+   "front": "Traditional IRA deduction phase-out",
+   "back": "Applies only to active participants in an employer plan (or their spouses, over a higher range); the deduction phases out ratably across the MAGI range. (The exam gives the dollar amount.)",
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/flashcards.json"
+  },
+  {
+   "id": "reg-adj-f3",
+   "front": "HSA contributions — rules",
+   "back": "Requires high-deductible health plan coverage; separate self-only and family limits; extra catch-up at 55 or older; deductible for AGI. (The exam gives the dollar amount.)",
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/flashcards.json"
+  },
+  {
+   "id": "reg-adj-f4",
+   "front": "Student loan interest deduction",
+   "back": "Capped at $2,500 (a statutory amount); phases out over a MAGI range; not available to married filing separately or to dependents.",
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/flashcards.json"
+  },
+  {
+   "id": "reg-adj-f5",
+   "front": "Educator expenses",
+   "back": "K–12 educators working 900+ hours deduct unreimbursed classroom costs for AGI, up to a small annual cap per educator. (The exam gives the dollar amount.)",
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/flashcards.json"
+  },
+  {
+   "id": "reg-adj-f6",
+   "front": "Self-employed health insurance",
+   "back": "Deductible for AGI up to net SE income.",
+   "moduleId": "reg-adjustments",
+   "_file": "content/reg/modules/reg-adjustments/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/reg/tbs/reg-tbs-r3-agi.json",
+  "content/reg/tbs/reg-tbs-u5-agi-review.json",
+  "content/reg/tbs/reg-tbs-u5-taxable-income.json",
+  "content/reg/tbs/reg-tbs-x4-individual.json",
+  "content/reg/tbs/reg-tbs-x4-return-review.json"
+ ]
+}

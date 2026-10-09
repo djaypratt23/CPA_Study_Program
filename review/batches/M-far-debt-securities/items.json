@@ -1,0 +1,1293 @@
+{
+ "mcqs": [
+  {
+   "id": "far-dsec-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: a company holds a corporate bond classified as available-for-sale. Its fair value rose $5,000 this year (no credit issues). Where is the $5,000 reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Net income",
+     "explanation": "That applies to trading securities.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Other comprehensive income",
+     "explanation": "Correct. AFS unrealized gains go to OCI."
+    },
+    {
+     "id": "c",
+     "text": "Not recognized",
+     "explanation": "AFS securities are carried at fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Directly in retained earnings",
+     "explanation": "Fair value changes don't bypass comprehensive income.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "AFS debt securities are carried at fair value with unrealized (non-credit) gains and losses in OCI until sold.",
+   "skill": "application",
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-chk1",
+   "pool": "lesson",
+   "stem": "A bank buys Treasury notes intending to hold them to maturity but anticipates it may need to sell them if interest rates rise to manage liquidity. How should it classify them?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Held-to-maturity",
+     "explanation": "HTM requires the positive intent AND ability to hold to maturity; planned sales for rate or liquidity changes violate that.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Available-for-sale",
+     "explanation": "Correct. A security that might be sold in response to interest rate or liquidity changes fails the HTM test."
+    },
+    {
+     "id": "c",
+     "text": "Trading",
+     "explanation": "They weren't bought for near-term sale.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Equity method investment",
+     "explanation": "Debt securities aren't equity-method investments.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A security that might be sold in response to interest rate or liquidity changes fails the HTM test. Not bought for trading → AFS.",
+   "skill": "analysis",
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-chk2",
+   "pool": "lesson",
+   "stem": "An AFS debt security has amortized cost of $500,000 and fair value of $440,000. Management estimates $25,000 of the decline is due to credit losses and does not intend to sell. How is the decline recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$60,000 loss in net income",
+     "explanation": "Only the credit portion goes to net income when there's no intent to sell.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$60,000 loss in OCI",
+     "explanation": "The credit portion goes through an allowance to net income.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$25,000 credit loss in NI; $35,000 in OCI",
+     "explanation": "Correct. Credit loss (25,000) → allowance and net income, limited to 60,000 (amortized cost − fair value)."
+    },
+    {
+     "id": "d",
+     "text": "$25,000 in OCI; $35,000 in NI",
+     "explanation": "Reversed — the credit portion goes to net income and the rest to OCI.",
+     "trap": "reversed"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Credit loss (25,000) → allowance and net income, limited to 60,000 (amortized cost − fair value). Remaining 35,000 → OCI.",
+   "skill": "analysis",
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-01",
+   "pool": "practice",
+   "stem": "A company purchased a $50,000 bond at 96 (i.e., $48,000) as an investment. Which statement is true?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The discount is recognized as a loss at purchase",
+     "explanation": "A discount is not a loss; it's additional interest earned over time.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Interest income will be less than the cash coupon each period",
+     "explanation": "For a discount bond, income exceeds cash as the discount amortizes.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "The bond will be carried at $48,000 until maturity under all classifications",
+     "explanation": "Amortized cost rises toward face; AFS/trading also adjust to fair value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The market rate at purchase exceeded the bond's coupon rate",
+     "explanation": "Correct. A discount means buyers required a higher yield than the coupon."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Bonds sell at a discount when the market rate > coupon rate. The discount is amortized into interest income, so income > cash each period.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-02",
+   "pool": "practice",
+   "stem": "On January 1, a company bought a $300,000, 5% bond (annual interest December 31) for $288,000 to yield 6%. It is classified as HTM. What is interest income for the first year (effective interest method)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$15,000",
+     "explanation": "That is the cash coupon.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$18,000",
+     "explanation": "This applies 6% to face value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$17,280",
+     "explanation": "Correct. 288,000 × 6%."
+    },
+    {
+     "id": "d",
+     "text": "$14,400",
+     "explanation": "This applies the coupon rate to the price.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Interest income = carrying amount × effective rate = 288,000 × 6% = **17,280**. Discount amortization = 17,280 − 15,000 = 2,280.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-03",
+   "pool": "practice",
+   "stem": "Using the facts in the previous item (bond bought for $288,000, 5% coupon on $300,000 face, 6% yield), what is the amortized cost at the end of Year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$290,280",
+     "explanation": "Correct. 288,000 + 2,280."
+    },
+    {
+     "id": "b",
+     "text": "$285,720",
+     "explanation": "This subtracts the amortization; a discount increases carrying amount.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "$288,000",
+     "explanation": "Amortization changes the carrying amount.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$300,000",
+     "explanation": "Face value is reached only at maturity.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Interest income 17,280 − cash 15,000 = 2,280 amortized. Amortized cost = 288,000 + 2,280 = **290,280**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-04",
+   "pool": "practice",
+   "stem": "A company's trading debt securities had a fair value of $120,000 at the beginning of the year and $131,000 at year-end; there were no purchases or sales. How is the change reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$11,000 unrealized gain in OCI",
+     "explanation": "OCI is for AFS, not trading.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "No entry until the securities are sold",
+     "explanation": "Trading securities are marked to fair value each period.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$11,000 unrealized gain in net income",
+     "explanation": "Correct. Trading securities: fair value changes go to net income — 131,000 − 120,000 = 11,000 gain."
+    },
+    {
+     "id": "d",
+     "text": "$131,000 gain in net income",
+     "explanation": "The gain is the change in value.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Trading securities: fair value changes go to net income — 131,000 − 120,000 = **11,000** gain.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-05",
+   "pool": "practice",
+   "stem": "An AFS debt security bought for $80,000 (amortized cost unchanged) had an unrealized gain of $6,000 recorded in AOCI at the prior year-end. This year it is sold for $87,000. What gain is recognized in net income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,000",
+     "explanation": "This measures from last year's fair value (86,000), but the realized gain is measured from amortized cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$6,000",
+     "explanation": "That is the prior-year unrealized gain only.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$13,000",
+     "explanation": "This double counts the prior unrealized gain.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "$7,000",
+     "explanation": "Correct. 87,000 − 80,000; the 6,000 in AOCI is reclassified."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Realized gain = proceeds − amortized cost = 87,000 − 80,000 = **7,000** in net income. The 6,000 previously in AOCI is reclassified out of OCI (a −6,000 reclassification adjustment).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-06",
+   "pool": "practice",
+   "stem": "Which classification requires the entity to have both the positive intent and the ability to hold the security to maturity?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Trading",
+     "explanation": "Trading is for near-term sale.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Fair value option",
+     "explanation": "The FVO is an election, not an intent test.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "c",
+     "text": "Available-for-sale",
+     "explanation": "AFS is the residual category.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Held-to-maturity",
+     "explanation": "Correct. HTM is reserved for debt securities the entity has the positive intent and ability to hold to maturity."
+    }
+   ],
+   "answer": "d",
+   "explanation": "HTM is reserved for debt securities the entity has the positive intent and ability to hold to maturity.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-07",
+   "pool": "practice",
+   "stem": "A $500,000 bond classified as HTM was purchased at a premium. How does premium amortization affect interest income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Interest income is less than the cash coupon",
+     "explanation": "Correct. Premium amortization reduces income below the coupon."
+    },
+    {
+     "id": "b",
+     "text": "Interest income exceeds the cash coupon",
+     "explanation": "That's true of discounts.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "Interest income equals the cash coupon",
+     "explanation": "Only if bought at par.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Premium amortization is recorded in OCI",
+     "explanation": "Amortization affects interest income.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "For a premium bond, interest income = carrying amount × lower market rate; cash coupon exceeds it, and the difference reduces the carrying amount.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-08",
+   "pool": "practice",
+   "stem": "At year-end, an AFS debt security has amortized cost of $150,000 and fair value of $158,000. Before adjustment, the fair value adjustment account had a $3,000 debit balance. What entry is required?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Dr Fair value adjustment 8,000 / Cr OCI 8,000",
+     "explanation": "This ignores the existing 3,000 debit balance.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "Dr Fair value adjustment 5,000 / Cr OCI (unrealized gain) 5,000",
+     "explanation": "Correct. Required balance 8,000 debit − existing 3,000."
+    },
+    {
+     "id": "c",
+     "text": "Dr Fair value adjustment 5,000 / Cr Unrealized gain (net income) 5,000",
+     "explanation": "AFS changes go to OCI.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "No entry; HTM rules apply",
+     "explanation": "AFS securities are adjusted to fair value.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Required adjustment balance = 158,000 − 150,000 = 8,000 debit. Existing 3,000 debit → adjust 5,000, credited to OCI.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-09",
+   "pool": "practice",
+   "stem": "How are expected credit losses on held-to-maturity debt securities recognized under current GAAP?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Through an allowance for expected lifetime credit losses (CECL)",
+     "explanation": "Correct. ASC 326-20 applies CECL to HTM debt securities: an allowance for expected credit losses from day one, with changes in net income."
+    },
+    {
+     "id": "b",
+     "text": "Only when an other-than-temporary impairment is identified",
+     "explanation": "OTTI was replaced by CECL for HTM securities.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "In OCI",
+     "explanation": "Credit losses go to net income.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Not recognized, because HTM securities are carried at amortized cost",
+     "explanation": "Amortized cost is reduced by an allowance.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 326-20 applies CECL to HTM debt securities: an allowance for expected credit losses from day one, with changes in net income.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-10",
+   "pool": "practice",
+   "stem": "A company bought a 3-year $100,000 bond for $105,154 to yield 8% (coupon 10%, paid annually). Using the effective interest method, what is the Year 1 premium amortization?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$1,588",
+     "explanation": "Correct. 10,000 − 105,154 × 8% (8,412)."
+    },
+    {
+     "id": "b",
+     "text": "$1,718",
+     "explanation": "This uses straight-line amortization (5,154 ÷ 3).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$8,412",
+     "explanation": "That is interest income.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$2,000",
+     "explanation": "This is the coupon difference on face (10% − 8%) × 100,000.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Interest income = 105,154 × 8% = 8,412. Cash = 10,000. Premium amortization = 10,000 − 8,412 = **1,588**. (The price is the present value of the annual cash flows at 8%: 10,000 × 2.5771 + 100,000 × 0.7938 ≈ 105,154.)",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-11",
+   "pool": "practice",
+   "stem": "How is an unrealized holding gain on a trading debt security reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "In other comprehensive income",
+     "explanation": "That is the treatment for AFS securities.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Not recognized until sold",
+     "explanation": "Unrealized gains are recognized each period.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As a deferred credit",
+     "explanation": "Gains aren't deferred.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "In net income",
+     "explanation": "Correct. Trading securities are measured at fair value through earnings."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Trading debt securities: fair value changes go to net income.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-12",
+   "pool": "practice",
+   "stem": "An available-for-sale debt security has a fair value below amortized cost, and the company intends to sell it before recovery. How is the decline treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Written down to fair value through earnings",
+     "explanation": "Correct. When the entity intends to sell, the full decline is recognized in earnings."
+    },
+    {
+     "id": "b",
+     "text": "Recognized in OCI only",
+     "explanation": "Intent to sell requires recognition in earnings.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "An allowance for credit losses only",
+     "explanation": "The whole decline is recognized, not only credit losses.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "Ignored until the security is sold",
+     "explanation": "The decline is recognized now.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "a",
+   "explanation": "ASC 326-30-35-10: if the entity intends to sell (or more likely than not will be required to sell), it writes the security down to fair value through earnings.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-13",
+   "pool": "practice",
+   "stem": "A company buys a $100,000, 8% bond for $96,000 to yield 9% and classifies it as held to maturity. What interest income is reported in the first year?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$8,000",
+     "explanation": "That is cash interest only.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$8,640",
+     "explanation": "Correct. 96,000 × 9% = 8,640, including 640 of discount amortization."
+    },
+    {
+     "id": "c",
+     "text": "$9,000",
+     "explanation": "Effective interest applies to the carrying amount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$7,360",
+     "explanation": "Discount amortization increases income.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Effective interest method: income = carrying amount × effective rate.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-14",
+   "pool": "practice",
+   "stem": "An AFS debt security has an amortized cost of $200,000, a fair value of $170,000 and a present value of expected cash flows of $185,000. The company doesn't intend to sell. How is the decline reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000 in earnings",
+     "explanation": "Only the credit portion goes to earnings.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$30,000 in OCI",
+     "explanation": "The credit loss portion goes to earnings.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$15,000 credit loss in earnings; $15,000 in OCI",
+     "explanation": "Correct. The credit loss uses an allowance; the noncredit portion goes to OCI."
+    },
+    {
+     "id": "d",
+     "text": "$15,000 in earnings; nothing in OCI",
+     "explanation": "The remaining decline is recognized in OCI.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ASC 326-30: recognize an allowance for credit losses (limited to the decline below amortized cost) in earnings; the noncredit decline goes to OCI.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-15",
+   "pool": "practice",
+   "stem": "A trading debt security bought for $50,000 had a fair value of $55,000 at last year-end. It is sold this year for $58,000. What gain is reported this year?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$8,000",
+     "explanation": "5,000 of the gain was recognized last year.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "$5,000",
+     "explanation": "That is last year's unrealized gain.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "The sale above carrying amount produces a gain.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$3,000",
+     "explanation": "Correct. The carrying amount at last year-end was 55,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Trading securities are carried at fair value, so only changes since the last measurement are recognized.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-16",
+   "pool": "practice",
+   "stem": "An AFS debt security (amortized cost $100,000) was carried at $106,000 fair value with a $6,000 AOCI gain. It's sold for $108,000. What is recognized in net income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An $8,000 gain",
+     "explanation": "Correct. Including the $6,000 reclassified from AOCI."
+    },
+    {
+     "id": "b",
+     "text": "A $2,000 gain",
+     "explanation": "Include the AOCI reclassification.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "A $6,000 gain",
+     "explanation": "Use amortized cost.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "No gain; it goes to OCI",
+     "explanation": "Realized gains go to net income.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "On sale, the realized gain (proceeds − amortized cost) goes to net income, and the AOCI balance is reclassified.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-17",
+   "pool": "practice",
+   "stem": "A company transfers a debt security from held-to-maturity to trading. How is the unrealized gain at transfer treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "In OCI",
+     "explanation": "That applies to AFS.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "In earnings immediately",
+     "explanation": "Correct. Trading changes are in net income."
+    },
+    {
+     "id": "c",
+     "text": "It isn't recognized",
+     "explanation": "It's recognized at transfer.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Amortized over the term",
+     "explanation": "Not for trading.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "On transfer to trading, the unrealized gain or loss is recognized in earnings at once.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-18",
+   "pool": "practice",
+   "stem": "An AFS debt security has amortized cost of $200,000 and fair value of $185,000. Expected credit losses are $20,000. What allowance is recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "The fair value floor applies.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$5,000",
+     "explanation": "That is the excess.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$15,000",
+     "explanation": "Correct. It's limited to the fair value shortfall."
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "A credit loss exists.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "ASC 326-30: the AFS credit-loss allowance is limited to the amount by which fair value is below amortized cost.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-19",
+   "pool": "practice",
+   "stem": "An HTM bond has amortized cost of $98,000 and fair value of $102,000, with no expected credit losses. At what amount is it reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$102,000",
+     "explanation": "Fair value isn't used.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "Par isn't used.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$4,000 above cost",
+     "explanation": "No fair value step-up.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$98,000",
+     "explanation": "Correct. HTM is measured at amortized cost."
+    }
+   ],
+   "answer": "d",
+   "explanation": "HTM debt securities are carried at amortized cost, net of any allowance.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-20",
+   "pool": "practice",
+   "stem": "For which classification of debt securities do unrealized holding gains bypass net income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Available-for-sale",
+     "explanation": "Correct. They go to OCI."
+    },
+    {
+     "id": "b",
+     "text": "Trading",
+     "explanation": "They go to net income.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Held-to-maturity",
+     "explanation": "Unrealized gains aren't recognized.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Fair value option",
+     "explanation": "They go to net income.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "AFS unrealized holding gains and losses (other than credit losses) are reported in OCI.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-21",
+   "pool": "practice",
+   "stem": "An AFS debt security bought for $100,000 is worth $108,000 at year-end. How is the change reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An $8,000 gain in OCI",
+     "explanation": "Correct. AFS changes go to OCI."
+    },
+    {
+     "id": "b",
+     "text": "An $8,000 gain in income",
+     "explanation": "That's for trading.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "No entry; held at cost",
+     "explanation": "AFS is at fair value.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "An $8,000 credit to RE",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "AFS debt securities are carried at fair value with unrealized gains in OCI.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-22",
+   "pool": "practice",
+   "stem": "A trading debt security bought for $100,000 is worth $108,000 at year-end. How is the change reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An $8,000 gain in OCI",
+     "explanation": "That is the AFS treatment.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "An $8,000 gain in income",
+     "explanation": "Correct. Trading changes go to income."
+    },
+    {
+     "id": "c",
+     "text": "No entry; held at cost",
+     "explanation": "Trading is at fair value.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A deferred gain until it is sold",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Trading securities are carried at fair value with changes in net income.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-23",
+   "pool": "practice",
+   "stem": "A company buys a $100,000 bond for $96,000 and intends and is able to hold it to maturity. At year-end its fair value is $99,000. At what amount is it carried?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$99,000",
+     "explanation": "HTM isn't at fair value.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "Not face value.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "At amortized cost",
+     "explanation": "Correct. HTM isn't adjusted to fair value."
+    },
+    {
+     "id": "d",
+     "text": "$96,000, unchanged",
+     "explanation": "The discount amortizes.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "c",
+   "explanation": "HTM debt securities are carried at amortized cost, net of any credit loss allowance.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-24",
+   "pool": "practice",
+   "stem": "An AFS bond cost $50,000 and had a $5,000 unrealized gain in AOCI (fair value $55,000). It's sold for $57,000. What gain is in net income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$2,000",
+     "explanation": "Measure from cost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$5,000",
+     "explanation": "That's the reclassification.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$57,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$7,000",
+     "explanation": "Correct. Proceeds less amortized cost; $5,000 is reclassified."
+    }
+   ],
+   "answer": "d",
+   "explanation": "On sale, the realized gain is proceeds less amortized cost, and prior AOCI amounts are reclassified to income.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-25",
+   "pool": "practice",
+   "stem": "A company transfers a debt security from HTM to AFS when it has an unrealized gain. Where is the gain recognized at transfer?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "In OCI",
+     "explanation": "Correct. HTM to AFS gains go to OCI."
+    },
+    {
+     "id": "b",
+     "text": "In net income",
+     "explanation": "Not for transfers to AFS.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Nowhere",
+     "explanation": "It's recognized at transfer.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "In retained earnings",
+     "explanation": "Not the treatment.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Unrealized gains on transfers from HTM to AFS are recognized in OCI.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-26",
+   "pool": "practice",
+   "stem": "An AFS bond's amortized cost is $100,000 and its fair value is $85,000. $6,000 of the decline is due to credit losses, and the company doesn't intend to sell. How is it reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$15,000 in income",
+     "explanation": "Only the credit loss goes to income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$6,000 in income; $9,000 in OCI",
+     "explanation": "Correct. The credit loss goes through an allowance."
+    },
+    {
+     "id": "c",
+     "text": "$15,000 in OCI",
+     "explanation": "The credit loss goes to income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$6,000 in OCI; $9,000 in income",
+     "explanation": "That's backward.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "For AFS debt, credit losses are recognized in income through an allowance; the noncredit decline goes to OCI.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-27",
+   "pool": "practice",
+   "stem": "An AFS bond has $100,000 amortized cost and $97,000 fair value. Expected credit losses are $5,000. What allowance is recorded?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,000",
+     "explanation": "The fair value floor limits it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$0",
+     "explanation": "A credit loss exists.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$3,000",
+     "explanation": "Correct. The allowance can't exceed the fair value shortfall."
+    },
+    {
+     "id": "d",
+     "text": "$8,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "The AFS credit-loss allowance is limited to the amount by which fair value is below amortized cost.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-dsec-28",
+   "pool": "practice",
+   "stem": "A company buys an HTM bond with a $200,000 amortized cost and expects $4,000 of lifetime credit losses. When is the allowance recognized?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only when a loss is probable",
+     "explanation": "That's the old incurred model.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "At maturity",
+     "explanation": "That would be too late.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Never; HTM is at cost",
+     "explanation": "CECL applies to HTM.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "At purchase, $4,000",
+     "explanation": "Correct. CECL applies at purchase."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Under CECL, HTM securities carry an allowance for expected lifetime credit losses from purchase.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/questions.json"
+  },
+  {
+   "id": "far-x2-12",
+   "moduleId": "far-debt-securities",
+   "pool": "exam",
+   "stem": "On January 1, Year 1, an investor bought $100,000 face, 8% five-year bonds (interest paid annually December 31) for $96,000, a 9% effective yield, classified as held-to-maturity. What is the carrying amount at December 31, Year 1?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$96,800",
+     "explanation": "Uses straight-line amortization; the effective interest method is required when the result differs materially.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$96,640",
+     "explanation": "Correct. $96,000 + ($8,640 − $8,000)."
+    },
+    {
+     "id": "c",
+     "text": "$96,000",
+     "explanation": "Ignores the discount amortization.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "$95,360",
+     "explanation": "Subtracts the amortization; discount amortization increases the carrying amount.",
+     "trap": "wrong-sign"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Interest revenue = 96,000 × 9% = 8,640; cash = 100,000 × 8% = 8,000; amortization = 640. Carrying amount = **$96,640**.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-13",
+   "moduleId": "far-debt-securities",
+   "pool": "exam",
+   "stem": "An available-for-sale debt security has an amortized cost of $200,000 and a year-end fair value of $190,000. There is no credit loss and no intent to sell. How much of the decline is reported in **net income**?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$10,000",
+     "explanation": "AFS non-credit declines go to OCI, not net income.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "Correct. The $10,000 unrealized loss is reported in OCI."
+    },
+    {
+     "id": "c",
+     "text": "$190,000",
+     "explanation": "That is the fair value, not a loss.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$5,000",
+     "explanation": "There is no split; the entire non-credit decline goes to OCI.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "AFS debt: unrealized holding gains and losses (excluding credit losses) go to OCI. Only a credit loss (through an allowance) or an intent-to-sell impairment hits net income.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": false,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  },
+  {
+   "id": "far-x2-23",
+   "moduleId": "far-debt-securities",
+   "pool": "exam",
+   "stem": "A company classifies a debt security as held to maturity. At year-end its fair value has risen above amortized cost. How is the security reported?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "At fair value, with the gain in net income",
+     "explanation": "That is the treatment for trading securities.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "At fair value, with the gain in other comprehensive income",
+     "explanation": "That is the treatment for available-for-sale securities.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "At the lower of amortized cost or fair value",
+     "explanation": "Lower-of rules don't apply to HTM securities.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "At amortized cost, net of any allowance for credit losses",
+     "explanation": "Correct. HTM securities are carried at amortized cost; fair value changes aren't recognized."
+    }
+   ],
+   "answer": "d",
+   "explanation": "ASC 320: held-to-maturity debt securities are measured at amortized cost less an allowance for expected credit losses.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/far/exam-questions/far-exam-area2.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "far-dsec-fc1",
+   "front": "HTM / Trading / AFS — measurement and unrealized gains",
+   "back": "**HTM**: amortized cost, not recognized. **Trading**: FV, **net income**. **AFS**: FV, **OCI** (non-credit).",
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/flashcards.json"
+  },
+  {
+   "id": "far-dsec-fc2",
+   "front": "HTM requirement",
+   "back": "Positive **intent and ability** to hold to maturity.",
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/flashcards.json"
+  },
+  {
+   "id": "far-dsec-fc3",
+   "front": "Effective interest method",
+   "back": "Income = carrying amount × **market rate at purchase**. Cash = face × coupon. Difference = amortization.",
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/flashcards.json"
+  },
+  {
+   "id": "far-dsec-fc4",
+   "front": "Discount vs. premium effect on interest income",
+   "back": "**Discount**: income > cash, carrying amount ↑. **Premium**: income < cash, carrying amount ↓.",
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/flashcards.json"
+  },
+  {
+   "id": "far-dsec-fc5",
+   "front": "Selling an AFS security",
+   "back": "Gain/loss = proceeds − **amortized cost** in NI; **reclassify** related AOCI out.",
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/flashcards.json"
+  },
+  {
+   "id": "far-dsec-fc6",
+   "front": "AFS credit losses",
+   "back": "Allowance through NI, **capped** at amortized cost − FV; non-credit decline in OCI. Intent to sell → write down to FV through NI.",
+   "moduleId": "far-debt-securities",
+   "_file": "content/far/modules/far-debt-securities/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/far/tbs/far-tbs-r3-securities-review.json",
+  "content/far/tbs/far-tbs-u7-debt-securities.json"
+ ]
+}

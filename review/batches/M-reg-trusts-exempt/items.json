@@ -1,0 +1,1794 @@
+{
+ "mcqs": [
+  {
+   "id": "reg-te-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: the 2025 gift tax annual exclusion is $19,000 per donee. A donor gives a friend $25,000 in cash. How much is a taxable gift?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$25,000",
+     "explanation": "The annual exclusion applies first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "Only the first $19,000 is excluded.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "$19,000",
+     "explanation": "That is the excluded portion, not the taxable one.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$6,000",
+     "explanation": "Correct. 25,000 − 19,000 = 6,000 is a taxable gift (it uses lifetime exclusion; no tax is usually due)."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Taxable gifts are gifts in excess of the annual exclusion per donee. The exclusion amount is given on the exam.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-chk1",
+   "pool": "lesson",
+   "stem": "Which trust is a simple trust?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A trust that must distribute all income annually and makes no charitable gifts or principal distributions",
+     "explanation": "Correct. Simple trusts distribute all income currently and have no charitable or principal distributions."
+    },
+    {
+     "id": "b",
+     "text": "A trust that can accumulate income",
+     "explanation": "That's a complex trust.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A revocable trust taxed to the grantor",
+     "explanation": "That's a grantor trust.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A trust that distributed principal this year",
+     "explanation": "That makes it complex for the year.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Simple trusts distribute all income currently and have no charitable or principal distributions.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-chk2",
+   "pool": "lesson",
+   "stem": "A 501(c)(3) hospital earns rent from leasing an unmortgaged office building. Is the rent UBTI?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes — it isn't related to health care",
+     "explanation": "Rents from real property are excluded.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Yes — all rental income is taxable",
+     "explanation": "Real property rents are excluded.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "No — rents from real property are excluded (absent debt financing)",
+     "explanation": "Correct. §512(b): passive income such as dividends, interest, royalties, and most real property rents is excluded."
+    },
+    {
+     "id": "d",
+     "text": "Only if over $1,000",
+     "explanation": "The exclusion applies regardless.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§512(b): passive income such as dividends, interest, royalties, and most real property rents is excluded.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-01",
+   "pool": "practice",
+   "optional": true,
+   "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A single donor gives $25,000 to each of three nephews in 2025 (no gift splitting). What are the total taxable gifts?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$75,000",
+     "explanation": "Annual exclusions apply.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$57,000",
+     "explanation": "That's the total excluded amount.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "Each gift exceeds the exclusion.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$18,000",
+     "explanation": "Correct. 3 × ($25,000 − $19,000)."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Taxable gifts = 3 × 6,000 = **18,000** (sheltered by the lifetime exemption, but Form 709 is required).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-02",
+   "pool": "practice",
+   "optional": true,
+   "stem": "Which transfer is **not** a taxable gift?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Paying a friend's college tuition directly to the college",
+     "explanation": "Correct. §2503(e): tuition and medical expenses paid directly to the provider are excluded."
+    },
+    {
+     "id": "b",
+     "text": "Giving a friend $30,000 cash",
+     "explanation": "A gift; $11,000 is taxable after the exclusion.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Giving a nephew a car worth $40,000",
+     "explanation": "Taxable to the extent above the exclusion.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Forgiving a $50,000 loan to a sibling",
+     "explanation": "Forgiving a loan is a gift.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "§2503(e): tuition and medical expenses paid directly to the provider are excluded.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-03",
+   "pool": "practice",
+   "optional": true,
+   "stem": "A trust's DNI is $30,000, and it distributes $45,000 to its beneficiary. How much is taxable to the beneficiary?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$45,000",
+     "explanation": "Limited to DNI.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$15,000",
+     "explanation": "That's the excess (a tax-free principal distribution).",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "$30,000",
+     "explanation": "Correct. Distributions are taxable to beneficiaries only up to DNI."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "DNI is taxable to the beneficiary.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Distributions are taxable to beneficiaries only up to DNI.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-04",
+   "pool": "practice",
+   "optional": true,
+   "stem": "Who pays tax on the income of a revocable living trust?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The trust",
+     "explanation": "It's a grantor trust.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No one",
+     "explanation": "The income is taxed to the grantor.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "The beneficiaries only",
+     "explanation": "The grantor is taxed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "The grantor",
+     "explanation": "Correct. Grantor trust rules treat the grantor as owner."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Grantor trust rules treat the grantor as owner.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-05",
+   "pool": "practice",
+   "optional": true,
+   "stem": "The 2025 gift tax annual exclusion is $19,000 per donee. A married couple elects gift splitting. What is the maximum they can give one donee in 2025 without making a taxable gift?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$19,000",
+     "explanation": "That's per donor.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$38,000",
+     "explanation": "Correct. Gift splitting: 2 × $19,000."
+    },
+    {
+     "id": "c",
+     "text": "$13,990,000",
+     "explanation": "That's the lifetime exemption.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Unlimited",
+     "explanation": "Only gifts between spouses are unlimited.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Gift splitting: 2 × $19,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-06",
+   "pool": "practice",
+   "optional": true,
+   "stem": "A 501(c)(3) organization's thrift shop sells donated clothing, staffed by paid employees. Is the income UBTI?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes — the shop is run by paid employees",
+     "explanation": "The donated-goods exception applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No — sales of donated merchandise are excluded",
+     "explanation": "Correct. §513(a)(3): selling merchandise substantially all of which was donated isn't an unrelated trade or business."
+    },
+    {
+     "id": "c",
+     "text": "Only if sales exceed $1,000",
+     "explanation": "The exception applies regardless.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Yes — all retail activity is UBTI",
+     "explanation": "Not all retail activity is UBTI.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§513(a)(3): selling merchandise substantially all of which was donated isn't an unrelated trade or business.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-07",
+   "pool": "practice",
+   "optional": true,
+   "stem": "Which activity can cause a 501(c)(3) organization to lose its exempt status?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Earning interest on investments",
+     "explanation": "Passive income is allowed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Endorsing a candidate for public office",
+     "explanation": "Correct. 501(c)(3) organizations may not participate in political campaigns for or against candidates."
+    },
+    {
+     "id": "c",
+     "text": "Selling donated goods",
+     "explanation": "Selling donated goods is allowed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Paying reasonable salaries",
+     "explanation": "Reasonable compensation is allowed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "501(c)(3) organizations may not participate in political campaigns for or against candidates.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-08",
+   "pool": "practice",
+   "optional": true,
+   "stem": "A complex trust's personal exemption is:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$600",
+     "explanation": "That's for estates.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$300",
+     "explanation": "That's for simple trusts.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$100",
+     "explanation": "Correct. Estates $600; simple trusts $300; complex trusts $100."
+    },
+    {
+     "id": "d",
+     "text": "None ($0)",
+     "explanation": "Complex trusts have an exemption.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Estates $600; simple trusts $300; complex trusts $100.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-09",
+   "pool": "practice",
+   "optional": true,
+   "stem": "A museum's for-profit restaurant generates $30,000 of net income from the public. How much is taxable UBTI?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "The $1,000 specific deduction applies.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$29,000",
+     "explanation": "Correct. UBTI after the $1,000 specific deduction, taxed at corporate rates."
+    },
+    {
+     "id": "c",
+     "text": "None ($0)",
+     "explanation": "The restaurant isn't substantially related.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$15,000",
+     "explanation": "There's no 50% rule.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "UBTI after the $1,000 specific deduction, taxed at corporate rates.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-10",
+   "pool": "practice",
+   "optional": true,
+   "stem": "When is Form 709 for 2025 gifts due (without extension)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "April 15, 2026",
+     "explanation": "Correct. The gift tax return is due April 15 of the following year (extended with the income tax extension)."
+    },
+    {
+     "id": "b",
+     "text": "December 31, 2025",
+     "explanation": "The return isn't due at year-end.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "March 15, 2026",
+     "explanation": "That's for partnerships and S corporations.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Within 9 months of the gift",
+     "explanation": "That's the estate tax return deadline concept.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "The gift tax return is due April 15 of the following year (extended with the income tax extension).",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-11",
+   "pool": "practice",
+   "stem": "Which organization is most likely exempt under §501(c)(6)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A private school that operates exclusively for education",
+     "explanation": "Educational organizations are §501(c)(3).",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "A homeowners' social club open only to its members",
+     "explanation": "Social clubs are §501(c)(7).",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A regional chamber of commerce supported by member dues",
+     "explanation": "Correct. Business leagues, trade associations and chambers of commerce are §501(c)(6) organizations."
+    },
+    {
+     "id": "d",
+     "text": "A civic league that promotes community social welfare",
+     "explanation": "Social welfare organizations are §501(c)(4).",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§501(c)(3) charitable, educational and religious; §501(c)(4) social welfare; §501(c)(6) business leagues and chambers of commerce; §501(c)(7) social clubs.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-12",
+   "pool": "practice",
+   "stem": "A donor contributes $1,000 to each organization below. For which is the gift deductible as a charitable contribution?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A §501(c)(3) public charity that runs a food bank",
+     "explanation": "Correct. Contributions to §501(c)(3) organizations are deductible charitable contributions."
+    },
+    {
+     "id": "b",
+     "text": "A §501(c)(4) group that lobbies for local zoning",
+     "explanation": "Gifts to social welfare organizations generally aren't deductible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A §501(c)(6) trade association for local builders",
+     "explanation": "Dues may be business expenses, but gifts aren't charitable contributions.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A political action committee for a city council race",
+     "explanation": "Political contributions are not deductible.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Charitable deductions are allowed for gifts to §170(c) organizations, chiefly §501(c)(3) entities, not to social welfare groups, trade associations or political organizations.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-13",
+   "pool": "practice",
+   "stem": "Which statement correctly distinguishes a private foundation from a public charity under §501(c)(3)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A private foundation can't be tax-exempt, while a public charity always is",
+     "explanation": "Both are exempt under §501(c)(3).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A foundation has few funding sources; a public charity has broad support",
+     "explanation": "Correct. A §501(c)(3) organization is presumed a private foundation unless it meets a public-support or other public charity test."
+    },
+    {
+     "id": "c",
+     "text": "A public charity is any charity that files the short Form 990-N",
+     "explanation": "Filing form depends on size, not classification.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Gifts to a private foundation are never deductible by individuals",
+     "explanation": "Gifts to private foundations are deductible, with lower AGI limits.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A §501(c)(3) organization is a private foundation unless it qualifies as a public charity (broad public support, churches, schools, hospitals, or supporting organizations).",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-14",
+   "pool": "practice",
+   "stem": "A country club operated for members' recreation would most likely qualify under which section?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "§501(c)(3)",
+     "explanation": "Recreation for members isn't charitable.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "§501(c)(7)",
+     "explanation": "Correct. Social clubs qualify under §501(c)(7)."
+    },
+    {
+     "id": "c",
+     "text": "§501(c)(6)",
+     "explanation": "That is for business leagues.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "§501(c)(4)",
+     "explanation": "That is for social welfare groups.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§501(c)(7) covers social and recreational clubs organized for pleasure and recreation.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-15",
+   "pool": "practice",
+   "stem": "A labor union would most likely qualify for exemption under which section?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "§501(c)(6)",
+     "explanation": "That covers business leagues.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "§501(c)(7)",
+     "explanation": "That covers social clubs.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "§501(c)(5)",
+     "explanation": "Correct. Labor, agricultural and horticultural groups qualify under §501(c)(5)."
+    },
+    {
+     "id": "d",
+     "text": "§501(c)(3)",
+     "explanation": "Unions aren't charitable.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§501(c)(5) exempts labor, agricultural and horticultural organizations.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-16",
+   "pool": "practice",
+   "stem": "A civic league that promotes community welfare also spends most of its effort lobbying for local legislation. Which exemption fits best?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "§501(c)(3)",
+     "explanation": "Substantial lobbying bars §501(c)(3) status.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "§501(c)(7)",
+     "explanation": "It isn't a social club.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "No exemption is possible",
+     "explanation": "§501(c)(4) permits lobbying.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "§501(c)(4)",
+     "explanation": "Correct. Social welfare groups may lobby without limit if related to their purpose."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§501(c)(4) social welfare organizations may engage in substantial lobbying related to their exempt purpose; §501(c)(3) organizations may not.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-17",
+   "pool": "practice",
+   "stem": "Which organization is absolutely prohibited from campaigning for or against a candidate for public office?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A §501(c)(3) organization",
+     "explanation": "Correct. The prohibition on campaign intervention is absolute."
+    },
+    {
+     "id": "b",
+     "text": "A §501(c)(6) chamber of commerce",
+     "explanation": "It may engage in some political activity.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A §501(c)(5) labor union",
+     "explanation": "Unions may engage in some political activity.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A §501(c)(4) social welfare group",
+     "explanation": "It may do some, if not primary.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "§501(c)(3) organizations may not participate in any political campaign on behalf of or against a candidate.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-18",
+   "pool": "practice",
+   "stem": "Which provision satisfies the organizational test for §501(c)(3) status?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Bylaws allowing any lawful activity",
+     "explanation": "Purposes must be limited.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Articles limiting purposes to exempt ones",
+     "explanation": "Correct. The articles must also dedicate assets on dissolution."
+    },
+    {
+     "id": "c",
+     "text": "A mission statement on its website",
+     "explanation": "The governing documents control.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A board with a majority of donors",
+     "explanation": "Board makeup isn't the test.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The organizational test requires the governing documents to limit purposes to exempt purposes and dedicate assets to exempt purposes on dissolution.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-19",
+   "pool": "practice",
+   "stem": "Which form does an organization file to apply for recognition of exemption under §501(c)(3)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Form 990",
+     "explanation": "That is the annual return.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Form 1024",
+     "explanation": "That applies to other §501(c) groups.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Form 1023",
+     "explanation": "Correct. Smaller organizations may use Form 1023-EZ."
+    },
+    {
+     "id": "d",
+     "text": "Form 990-T",
+     "explanation": "That reports unrelated business income.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Form 1023 (or 1023-EZ for eligible small organizations) is the application for §501(c)(3) recognition.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-20",
+   "pool": "practice",
+   "stem": "Which organization may be treated as a §501(c)(3) without applying to the IRS?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A private foundation",
+     "explanation": "Foundations must apply.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A new hospital",
+     "explanation": "Hospitals must apply.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A university",
+     "explanation": "Universities must apply.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A church",
+     "explanation": "Correct. Churches are exempt without filing Form 1023."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Churches, their integrated auxiliaries and organizations with gross receipts normally of $5,000 or less needn't apply for recognition.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-21",
+   "pool": "practice",
+   "stem": "A small exempt organization's gross receipts are normally $40,000 a year. Which annual filing is required?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Form 990-N (e-Postcard)",
+     "explanation": "Correct. It applies when gross receipts are normally $50,000 or less."
+    },
+    {
+     "id": "b",
+     "text": "Form 990-EZ, at a minimum",
+     "explanation": "The 990-N is allowed at this level.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Full Form 990",
+     "explanation": "Not required at this level.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "No filing at all",
+     "explanation": "An annual e-Postcard is required.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Organizations with gross receipts normally $50,000 or less may file Form 990-N.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-22",
+   "pool": "practice",
+   "stem": "Which requirement must a §501(c)(3) organization meet?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It must be a trust",
+     "explanation": "Corporations and associations qualify.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "No net earnings may inure to insiders",
+     "explanation": "Correct. Private inurement is prohibited."
+    },
+    {
+     "id": "c",
+     "text": "It must have no paid employees",
+     "explanation": "Paying reasonable wages is allowed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "It must receive public support",
+     "explanation": "That distinguishes public charities.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "§501(c)(3) requires that no part of net earnings inure to the benefit of any private shareholder or individual.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-23",
+   "pool": "practice",
+   "stem": "A corporation runs a for-profit grocery business and pays all its profits to a church. Is it exempt?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, under §501(c)(3)",
+     "explanation": "Paying profits to charity doesn't confer exemption.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Yes, under §501(c)(4)",
+     "explanation": "It isn't a social welfare group.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "No, as a feeder organization",
+     "explanation": "Correct. A feeder isn't exempt because its profits go to a charity."
+    },
+    {
+     "id": "d",
+     "text": "Yes, if the church controls it",
+     "explanation": "Control doesn't change the result.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§502: an organization operated primarily to carry on a trade or business for profit isn't exempt merely because all profits go to exempt organizations.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-24",
+   "pool": "practice",
+   "stem": "A new §501(c)(3) organization gets 90% of its support each year from one founder's gifts. How is it most likely classified?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a public charity",
+     "explanation": "Broad public support is lacking.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "As a §501(c)(4) group",
+     "explanation": "Its classification stays within (c)(3).",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "As a social club",
+     "explanation": "Not related to the facts.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "d",
+     "text": "As a private foundation",
+     "explanation": "Correct. It fails the public support test."
+    }
+   ],
+   "answer": "d",
+   "explanation": "A §501(c)(3) organization is a private foundation unless it qualifies as a public charity, e.g., through broad public support (generally one-third).",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-25",
+   "pool": "practice",
+   "stem": "How much lobbying may a §501(c)(3) public charity do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only an insubstantial amount",
+     "explanation": "Correct. Or it may elect the §501(h) expenditure test."
+    },
+    {
+     "id": "b",
+     "text": "Unlimited, if it's related",
+     "explanation": "That is the §501(c)(4) rule.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "None at all",
+     "explanation": "Some lobbying is allowed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "d",
+     "text": "Up to 50% of its budget",
+     "explanation": "No such percentage applies.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "A public charity may lobby only to an insubstantial extent; under a §501(h) election, expenditure limits apply instead.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-26",
+   "pool": "practice",
+   "stem": "Which exempt organization may file Form 990-EZ instead of Form 990?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Receipts < $200,000; assets < $500,000",
+     "explanation": "Correct. Both tests apply."
+    },
+    {
+     "id": "b",
+     "text": "Any with receipts under $1 million",
+     "explanation": "Thresholds are lower.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "Only churches and their auxiliaries",
+     "explanation": "Churches needn't file.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Only private foundations",
+     "explanation": "They file Form 990-PF.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Form 990-EZ is available if gross receipts are under $200,000 and total assets under $500,000.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-27",
+   "pool": "practice",
+   "stem": "A donor gives $500 to a §501(c)(19) veterans' organization. Is it deductible as a charitable contribution?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No, only §501(c)(3) gifts are",
+     "explanation": "Veterans' organizations qualify.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "Yes",
+     "explanation": "Correct. Gifts to veterans' groups are deductible."
+    },
+    {
+     "id": "c",
+     "text": "Only if over $1,000",
+     "explanation": "There's no dollar threshold.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "Only for members",
+     "explanation": "That isn't what the rule says.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Contributions to qualifying war veterans' organizations are deductible charitable contributions.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-28",
+   "pool": "practice",
+   "stem": "Under which section is a political action committee generally exempt?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "§501(c)(3)",
+     "explanation": "Charities can't campaign.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "§501(c)(4)",
+     "explanation": "That's social welfare.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "§527",
+     "explanation": "Correct. Political organizations."
+    },
+    {
+     "id": "d",
+     "text": "§501(c)(6)",
+     "explanation": "That's business leagues.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§527 governs political organizations, such as PACs and campaign committees.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-29",
+   "pool": "practice",
+   "stem": "A new charity files Form 1023 within 27 months of formation. From when is its exemption effective?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "From the approval date",
+     "explanation": "It's retroactive.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "From the filing date",
+     "explanation": "It's retroactive.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "From the next tax year",
+     "explanation": "It's retroactive.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "From its formation date",
+     "explanation": "Correct. Retroactive if filed within 27 months."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Exemption is retroactive to formation when Form 1023 is filed within 27 months after the end of the formation month.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-30",
+   "pool": "practice",
+   "stem": "A member of the public asks a §501(c)(3) for its last three Forms 990. What must it do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Make them available",
+     "explanation": "Correct. Public disclosure is required."
+    },
+    {
+     "id": "b",
+     "text": "Refuse; they're confidential",
+     "explanation": "They're public.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Provide only Form 1023",
+     "explanation": "Forms 990 must be provided too.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "Provide them only to donors",
+     "explanation": "Anyone may request them.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Exempt organizations must make their annual returns (3 years) and exemption application available for public inspection.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-31",
+   "pool": "practice",
+   "stem": "A §501(c)(3) organization's charitable programs are its primary activity, but it also runs a small unrelated business. Does it meet the operational test?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, if the business is insubstantial",
+     "explanation": "Correct. Primarily exempt activities are required."
+    },
+    {
+     "id": "b",
+     "text": "No, any non-exempt activity disqualifies",
+     "explanation": "Only insubstantial activity is allowed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "c",
+     "text": "Only if it pays no UBIT",
+     "explanation": "That isn't the test.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Only if run by volunteers",
+     "explanation": "That isn't required.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "The operational test requires engaging primarily in exempt activities; insubstantial non-exempt activity is permitted.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-32",
+   "pool": "practice",
+   "stem": "A business pays $5,000 of dues to a §501(c)(6) trade association that tells members 30% is used for lobbying. How much can the business deduct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$5,000",
+     "explanation": "The lobbying share is disallowed.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "$3,500",
+     "explanation": "Correct. The lobbying share isn't deductible."
+    },
+    {
+     "id": "c",
+     "text": "$1,500",
+     "explanation": "That's the lobbying share.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Dues can be business expenses.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Dues to trade associations are deductible business expenses except the portion used for lobbying.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-33",
+   "pool": "practice",
+   "stem": "When is Form 990 due for a calendar-year exempt organization, without extension?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "April 15",
+     "explanation": "Not for Form 990.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "b",
+     "text": "March 15",
+     "explanation": "Not for Form 990.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "May 15",
+     "explanation": "Correct. The 15th day of the 5th month."
+    },
+    {
+     "id": "d",
+     "text": "June 15",
+     "explanation": "Not for Form 990.",
+     "trap": "wrong-period"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Form 990 is due on the 15th day of the 5th month after year-end, with a 6-month extension available.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-34",
+   "pool": "practice",
+   "stem": "An exempt organization fails to file its required annual return for 3 consecutive years. What happens?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only a warning letter from the IRS",
+     "explanation": "Revocation is automatic.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Only a small daily late-filing fine",
+     "explanation": "Revocation follows.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "Nothing, if it has no income",
+     "explanation": "Filing is still required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Exemption is automatically revoked",
+     "explanation": "Correct. Automatic revocation applies."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Organizations that fail to file a required return for 3 consecutive years lose exemption automatically.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-35",
+   "pool": "practice",
+   "stem": "A small private foundation has only $20,000 of gross receipts. Which annual return must it file?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Form 990-PF",
+     "explanation": "Correct. All private foundations file Form 990-PF."
+    },
+    {
+     "id": "b",
+     "text": "Form 990-N",
+     "explanation": "Not for private foundations.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Form 990-EZ",
+     "explanation": "Not for private foundations.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "None",
+     "explanation": "Foundations must file.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Private foundations must file Form 990-PF regardless of size.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-36",
+   "pool": "practice",
+   "stem": "A new charity receives 40% of its support from many small public donations and grants. How is it likely classified?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a private foundation",
+     "explanation": "It has broad support.",
+     "trap": "reversed"
+    },
+    {
+     "id": "b",
+     "text": "As a public charity",
+     "explanation": "Correct. It meets the one-third public support test."
+    },
+    {
+     "id": "c",
+     "text": "As a §501(c)(4)",
+     "explanation": "It's a §501(c)(3).",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "As a social club",
+     "explanation": "Not on these facts.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "b",
+   "explanation": "An organization normally receiving at least one-third of its support from the public is a publicly supported charity.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-37",
+   "pool": "practice",
+   "stem": "A corporation exists only to hold title to property and pay the income to an exempt organization. Under which section may it be exempt?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "§501(c)(3)",
+     "explanation": "It has no charitable activity itself.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "§502, as a feeder",
+     "explanation": "It doesn't run a business.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "§501(c)(2)",
+     "explanation": "Correct. Title-holding corporations qualify."
+    },
+    {
+     "id": "d",
+     "text": "§527",
+     "explanation": "It is not a political group.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A §501(c)(2) title-holding corporation collects income from property and turns it over to an exempt organization.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-38",
+   "pool": "practice",
+   "stem": "A new social welfare organization wants to operate as a §501(c)(4). What must it file with the IRS?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Form 1023 as an applicant charity",
+     "explanation": "That's for §501(c)(3).",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Nothing until it files a Form 990",
+     "explanation": "Notice is required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Form 990-PF",
+     "explanation": "That's for foundations.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Form 8976 within 60 days",
+     "explanation": "Correct. Notice is required; Form 1024-A is optional."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§501(c)(4) organizations must notify the IRS on Form 8976 within 60 days of forming.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-39",
+   "pool": "practice",
+   "stem": "A §501(c)(7) social club earns $20,000 of interest on its investments. How is it treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It's taxable",
+     "explanation": "Correct. Social clubs are taxed on investment income from nonmembers."
+    },
+    {
+     "id": "b",
+     "text": "It's exempt",
+     "explanation": "Investment income is taxable for social clubs.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Only half is taxable",
+     "explanation": "That isn't what the rule says.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "d",
+     "text": "It ends the club's exemption",
+     "explanation": "Not the effect.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Social clubs are taxed on nonmember income, including investment income.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-40",
+   "pool": "practice",
+   "stem": "A donor gives $500 in cash to a charity. What is required to deduct it?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only a bank record such as a canceled check",
+     "explanation": "Not enough at $250 or more.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "A written acknowledgment",
+     "explanation": "Correct. Gifts of $250 or more need one."
+    },
+    {
+     "id": "c",
+     "text": "A qualified appraisal of the gift's value",
+     "explanation": "Appraisals are not for cash.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Nothing",
+     "explanation": "Substantiation is required.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Contributions of $250 or more require a contemporaneous written acknowledgment from the charity.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-41",
+   "pool": "practice",
+   "stem": "Which form does an organization file to apply for §501(c)(3) exemption?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Form 1024",
+     "explanation": "That's for other exempt types.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Form 1023",
+     "explanation": "Correct. Charities apply on Form 1023."
+    },
+    {
+     "id": "c",
+     "text": "Form 990",
+     "explanation": "That's the annual return.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Form 8976",
+     "explanation": "That's the §501(c)(4) notice.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Organizations seeking §501(c)(3) status apply on Form 1023 (or 1023-EZ for small ones).",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-42",
+   "pool": "practice",
+   "stem": "An exempt organization may file the Form 990-N e-postcard if its gross receipts are normally what?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$200,000 or less",
+     "explanation": "That's for Form 990-EZ.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "$25,000 or less",
+     "explanation": "That was an earlier threshold.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "$50,000 or less",
+     "explanation": "Correct. The 990-N threshold is $50,000."
+    },
+    {
+     "id": "d",
+     "text": "$100,000 or less",
+     "explanation": "Not the threshold.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Small organizations with gross receipts normally $50,000 or less may file Form 990-N.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-43",
+   "pool": "practice",
+   "stem": "What specific deduction applies in computing unrelated business taxable income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$500",
+     "explanation": "Not the amount.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "$5,000",
+     "explanation": "Not the amount.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$10,000",
+     "explanation": "Not the amount.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$1,000",
+     "explanation": "Correct. The specific deduction is $1,000."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Exempt organizations get a $1,000 specific deduction against UBTI.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-te-44",
+   "pool": "practice",
+   "stem": "Which form does an exempt organization use to report unrelated business income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Form 990-T",
+     "explanation": "Correct. UBIT is reported on Form 990-T."
+    },
+    {
+     "id": "b",
+     "text": "Form 990",
+     "explanation": "That's the information return.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Form 990-PF",
+     "explanation": "That's for private foundations.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Form 1120",
+     "explanation": "That's for taxable corporations.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Exempt organizations with $1,000 or more of gross UBI file Form 990-T.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/questions.json"
+  },
+  {
+   "id": "reg-x5-45",
+   "moduleId": "reg-trusts-exempt",
+   "pool": "exam",
+   "stem": "Which organization may engage in substantial lobbying related to its exempt purpose without losing its exemption?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A §501(c)(3) public charity",
+     "explanation": "Substantial lobbying can cost a charity its exemption.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A §501(c)(3) private foundation",
+     "explanation": "Foundations face taxes on lobbying.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A §501(c)(4) social welfare group",
+     "explanation": "Correct. Social welfare organizations may lobby extensively for their purposes."
+    },
+    {
+     "id": "d",
+     "text": "A church organized under §501(c)(3)",
+     "explanation": "Churches are §501(c)(3) organizations with the same limit.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "§501(c)(3) organizations may not devote a substantial part of activities to lobbying; §501(c)(4) organizations may lobby as a primary activity.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/reg/exam-questions/reg-exam-areas4-5.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "reg-te-f1",
+   "front": "Gift annual exclusion — how it works",
+   "back": "Per donee, per year, present interests only; doubled with gift splitting; tuition and medical payments made directly are excluded without limit. (The exam gives the dollar amount.)",
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/flashcards.json"
+  },
+  {
+   "id": "reg-te-f2",
+   "front": "Unified credit — how it works",
+   "back": "One lifetime exclusion shelters taxable gifts and the taxable estate together; each taxable gift reduces what remains. (The exam gives the dollar amount.)",
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/flashcards.json"
+  },
+  {
+   "id": "reg-te-f3",
+   "front": "Excluded gift transfers",
+   "back": "Tuition and medical paid directly; gifts to a U.S. citizen spouse; gifts to charity.",
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/flashcards.json"
+  },
+  {
+   "id": "reg-te-f4",
+   "front": "Trust/estate exemptions",
+   "back": "Estate $600; simple trust $300; complex trust $100.",
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/flashcards.json"
+  },
+  {
+   "id": "reg-te-f5",
+   "front": "DNI",
+   "back": "Caps the distribution deduction and the beneficiary's taxable amount.",
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/flashcards.json"
+  },
+  {
+   "id": "reg-te-f6",
+   "front": "UBTI test",
+   "back": "Trade or business, regularly carried on, not substantially related; $1,000 specific deduction.",
+   "moduleId": "reg-trusts-exempt",
+   "_file": "content/reg/modules/reg-trusts-exempt/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/reg/tbs/reg-tbs-r3-exempt-types.json"
+ ]
+}

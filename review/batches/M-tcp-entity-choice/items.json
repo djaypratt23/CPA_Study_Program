@@ -1,0 +1,2020 @@
+{
+ "mcqs": [
+  {
+   "id": "tcp-ec-pre1",
+   "pool": "lesson",
+   "stem": "Best guess: which entity's income is taxed twice when distributed to owners?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "C corporation",
+     "explanation": "Correct. C corporations pay entity tax, and shareholders pay tax on dividends."
+    },
+    {
+     "id": "b",
+     "text": "LLC taxed as a partnership",
+     "explanation": "Pass-through; one level of tax.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "S corporation",
+     "explanation": "S corporations are pass-throughs.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Sole proprietorship",
+     "explanation": "One level of tax.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "C corporations pay entity tax, and shareholders pay tax on dividends.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-chk1",
+   "pool": "lesson",
+   "stem": "A C corporation earns $100 of taxable income and distributes everything left as a qualified dividend to a shareholder who pays 20% plus 3.8% NIIT. What is the combined tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$39.80",
+     "explanation": "Correct. 21 + 23.8% × 79."
+    },
+    {
+     "id": "b",
+     "text": "$37.00",
+     "explanation": "That's the top individual rate on pass-through income.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$44.80",
+     "explanation": "Applies 23.8% to the full $100.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$21.00",
+     "explanation": "Ignores the dividend tax.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "a",
+   "explanation": "21.00 + 18.80 = 39.80.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-chk2",
+   "pool": "lesson",
+   "stem": "An LLC with one individual member makes no election. How is it taxed?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a C corporation by default",
+     "explanation": "Default for a single-member LLC is disregarded.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "As a disregarded entity",
+     "explanation": "Correct. Reg. §301.7701-3(b): single-owner eligible entities default to disregarded status."
+    },
+    {
+     "id": "c",
+     "text": "As a partnership by default",
+     "explanation": "A partnership needs two or more owners.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "As an S corporation",
+     "explanation": "S status requires an election.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Reg. §301.7701-3(b): single-owner eligible entities default to disregarded status.",
+   "skill": "remembering",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-01",
+   "pool": "practice",
+   "stem": "Founders plan to reinvest all profits for 8 years and then sell the company's stock. Which entity likely produces the lowest tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "C corporation, possibly with the §1202 exclusion",
+     "explanation": "Correct. Retained profits bear only 21%, and qualifying stock gain may be excluded under §1202."
+    },
+    {
+     "id": "b",
+     "text": "Partnership, because there is one level of tax",
+     "explanation": "Owners are taxed on reinvested profits every year at up to 37%.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "S corporation, to avoid double taxation",
+     "explanation": "Same annual pass-through tax on reinvested profits and no §1202.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Sole proprietorship owned by one founder",
+     "explanation": "Unlimited liability and the full individual rate on reinvested profits.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Retained profits bear only 21%, and qualifying stock gain may be excluded under §1202.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-02",
+   "pool": "practice",
+   "stem": "Which fact would prevent a business from operating as an S corporation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It has 80 individual shareholders",
+     "explanation": "The limit is 100.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Its shareholders are all U.S. citizens",
+     "explanation": "That's permitted.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "It has voting and nonvoting common stock",
+     "explanation": "Voting differences are allowed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A VC partnership will buy preferred stock",
+     "explanation": "Correct. Partnership shareholders and a second class of stock (preferred) both violate S requirements."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Partnership shareholders and a second class of stock (preferred) both violate S requirements.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-03",
+   "pool": "practice",
+   "stem": "A new business expects large losses for 3 years and its owners have high income from other active businesses where they will materially participate. Which entity best uses the losses?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "C corporation, to retain the losses",
+     "explanation": "Losses are trapped as NOLs.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Personal holding company",
+     "explanation": "PHC status is a penalty-tax trap, not an entity choice.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Partnership or S corporation",
+     "explanation": "Correct. Pass-through losses flow to owners, subject to basis, at-risk, passive, and excess business loss limits."
+    },
+    {
+     "id": "d",
+     "text": "It makes no difference",
+     "explanation": "Pass-through losses offset other income.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Pass-through losses flow to owners, subject to basis, at-risk, passive, and excess business loss limits.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-04",
+   "pool": "practice",
+   "stem": "An LLC with two members wants to be taxed as an S corporation. What must it do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing, because LLCs are S corporations by default",
+     "explanation": "Default is a partnership.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Reincorporate as a corporation under state law",
+     "explanation": "A state-law conversion isn't required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "File Form 1065 marked \"S corporation\"",
+     "explanation": "That isn't a valid election.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "File Form 2553, which also elects association status",
+     "explanation": "Correct. An eligible entity that timely files Form 2553 is deemed to have elected to be an association."
+    }
+   ],
+   "answer": "d",
+   "explanation": "An eligible entity that timely files Form 2553 is deemed to have elected to be an association.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-05",
+   "pool": "practice",
+   "stem": "An owner in the 32% bracket runs a profitable service business as a sole proprietorship with $150,000 of net earnings. Which change most likely reduces self-employment/payroll taxes?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Convert to an S corporation and pay a reasonable salary",
+     "explanation": "Correct. S corporation distributions above reasonable wages aren't subject to payroll or SE tax."
+    },
+    {
+     "id": "b",
+     "text": "Form a single-member LLC with no election",
+     "explanation": "Still a disregarded entity subject to SE tax.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "Form a general partnership with a spouse",
+     "explanation": "General partners pay SE tax on their shares.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Increase the owner's draws during the year",
+     "explanation": "Draws don't change SE tax.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "S corporation distributions above reasonable wages aren't subject to payroll or SE tax.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-06",
+   "pool": "practice",
+   "stem": "An investor acquired qualified small business stock at original issue in 2018 (basis $1 million) and sells it in 2025 for $9 million. How much gain can she exclude?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$4,000,000",
+     "explanation": "The exclusion is 100% for stock acquired after September 27, 2010.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "None ($0)",
+     "explanation": "The stock was held more than 5 years.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$10,000,000",
+     "explanation": "The gain is only $8 million.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$8,000,000",
+     "explanation": "Correct. 100% of the gain, within the greater of $10 million or 10 × basis."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§1202: 100% exclusion for pre-July 5, 2025 stock held more than 5 years, capped at the greater of $10 million or 10 × basis.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "needsReview": true,
+   "reviewNote": "Uses a One Big Beautiful Bill Act (P.L. 119-21) amount or effective date. Verify against current IRS guidance and exam materials.",
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-07",
+   "pool": "practice",
+   "stem": "What is the maximum combined federal rate on C corporation income that is distributed as a qualified dividend to a top-bracket shareholder subject to NIIT?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "21%, the corporate rate only",
+     "explanation": "That's only the entity tax.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "44.8%",
+     "explanation": "Adds the rates without reducing the base.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "39.8%",
+     "explanation": "Correct. 21% + (79% × 23.8%) = 39.8%."
+    },
+    {
+     "id": "d",
+     "text": "37%, the top individual rate",
+     "explanation": "That's the top individual ordinary rate.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "21% + (79% × 23.8%) = 39.8%.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-08",
+   "pool": "practice",
+   "stem": "A two-member LLC taxed as a partnership changed to corporate classification by election in 2023. When can it generally elect to change classification again?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Immediately, by filing",
+     "explanation": "A 60-month waiting period applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "After 12 months",
+     "explanation": "The waiting period is 60 months.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "After 60 months",
+     "explanation": "Correct. Reg. §301.7701-3(c)(1)(iv): 60-month limitation after an elective change."
+    },
+    {
+     "id": "d",
+     "text": "Never again",
+     "explanation": "It can change after 60 months (or with IRS consent).",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Reg. §301.7701-3(c)(1)(iv): 60-month limitation after an elective change.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-09",
+   "pool": "practice",
+   "stem": "Owners of a pass-through expect to sell the business's assets in 5 years. Why might a buyer prefer to buy the assets of an S corporation instead of the stock of a C corporation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The buyer gets stepped-up asset basis, no double tax",
+     "explanation": "Correct. An asset purchase steps up basis; for a pass-through, the gain is taxed once at the owner level."
+    },
+    {
+     "id": "b",
+     "text": "Stock purchases give the buyer a stepped-up basis",
+     "explanation": "A stock purchase keeps the old inside basis.",
+     "trap": "reversed"
+    },
+    {
+     "id": "c",
+     "text": "C corporations can't sell their assets directly",
+     "explanation": "They can, but double tax applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "S corporation asset sales are always tax-free",
+     "explanation": "Gain passes through and is taxed once.",
+     "trap": "overgeneralization"
+    }
+   ],
+   "answer": "a",
+   "explanation": "An asset purchase steps up basis; for a pass-through, the gain is taxed once at the owner level.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-10",
+   "pool": "practice",
+   "stem": "Which entity allows owners to specially allocate depreciation to one owner and increase basis for entity-level debt?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "S corporation",
+     "explanation": "No special allocations; entity debt doesn't create shareholder basis.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Sole proprietorship",
+     "explanation": "A sole proprietorship has only one owner.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "C corporation",
+     "explanation": "No pass-through of items.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Partnership (or LLC)",
+     "explanation": "Correct. §704(b) special allocations and §752 liability sharing are partnership features."
+    }
+   ],
+   "answer": "d",
+   "explanation": "§704(b) special allocations and §752 liability sharing are partnership features.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-11",
+   "pool": "practice",
+   "stem": "Which owner can claim the §199A QBI deduction on business income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A C corporation",
+     "explanation": "Corporations can't claim it.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "A C corporation shareholder on dividends",
+     "explanation": "Dividends aren't QBI.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "An employee on wages",
+     "explanation": "Wages aren't QBI.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "An S corporation shareholder",
+     "explanation": "Correct. Pass-through income can qualify."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The QBI deduction is available to individuals, trusts and estates on qualified income from pass-throughs, not to C corporations.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-12",
+   "pool": "practice",
+   "stem": "An owner wants employer-paid health insurance excluded from her income. Which entity provides that for an owner-employee?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A C corporation",
+     "explanation": "Correct. C corporation shareholder-employees can exclude it."
+    },
+    {
+     "id": "b",
+     "text": "An S corporation, as a 50% owner",
+     "explanation": "More-than-2% shareholders include it.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A partnership, as a partner",
+     "explanation": "Partners include it.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A single-member LLC",
+     "explanation": "She's treated as self-employed.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Shareholder-employees of a C corporation can receive tax-free health benefits; partners and more-than-2% S shareholders can't.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-13",
+   "pool": "practice",
+   "stem": "A venture capital fund organized as a partnership plans to buy shares in a startup. Which entity should the startup be?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An S corporation",
+     "explanation": "Partnerships are ineligible shareholders.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A C corporation",
+     "explanation": "Correct. Partnerships can't hold S corporation stock."
+    },
+    {
+     "id": "c",
+     "text": "A sole proprietorship",
+     "explanation": "It can't issue shares.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "Any entity; it doesn't matter",
+     "explanation": "S status would terminate.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "S corporation shareholders must be individuals, estates or certain trusts and exempt organizations; partnerships are ineligible.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-14",
+   "pool": "practice",
+   "stem": "How is a single-member LLC classified by default for federal tax purposes?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a C corporation",
+     "explanation": "That requires an election.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As an S corporation",
+     "explanation": "That requires an election.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "As a disregarded entity",
+     "explanation": "Correct. It's treated like a sole proprietorship."
+    },
+    {
+     "id": "d",
+     "text": "As a partnership by default",
+     "explanation": "Partnerships need two members.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Under check-the-box rules, a single-member LLC is disregarded unless it elects corporate classification.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-15",
+   "pool": "practice",
+   "stem": "An owner wants to withdraw each year's profits with only one level of federal income tax and no SE tax on distributions. Which entity fits best?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A C corporation",
+     "explanation": "Dividends face double tax.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "A general partnership",
+     "explanation": "Shares are SE income.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A sole proprietorship",
+     "explanation": "Profits are SE income.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "An S corporation",
+     "explanation": "Correct. Distributions avoid SE tax, with reasonable salary."
+    }
+   ],
+   "answer": "d",
+   "explanation": "S corporation income is taxed once; distributions (beyond reasonable compensation) aren't subject to SE or payroll taxes.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-16",
+   "pool": "practice",
+   "stem": "An investor holds QSBS issued in August 2025 for 4 years and sells at a gain. What exclusion applies?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "75%",
+     "explanation": "Correct. Post-July 4, 2025 stock uses tiers: 50%, 75%, 100%."
+    },
+    {
+     "id": "b",
+     "text": "100%",
+     "explanation": "That needs 5 years.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "c",
+     "text": "50%",
+     "explanation": "That's the 3-year tier.",
+     "trap": "wrong-period"
+    },
+    {
+     "id": "d",
+     "text": "0%",
+     "explanation": "A partial exclusion applies.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "For QSBS issued after July 4, 2025, the exclusion is 50% after 3 years, 75% after 4 and 100% after 5 years.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-17",
+   "pool": "practice",
+   "stem": "An owner will distribute all profits and qualifies for the full QBI deduction at the top bracket. Which structure gives the lower combined federal income tax rate?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A C corporation paying dividends",
+     "explanation": "Double tax raises it to 39.8%.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A pass-through entity",
+     "explanation": "Correct. About 29.6% versus 39.8%."
+    },
+    {
+     "id": "c",
+     "text": "They're equal",
+     "explanation": "The rates differ.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A C corporation with no salary",
+     "explanation": "Dividends are still taxed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A C corporation's 21% plus 23.8% on dividends is about 39.8%; 37% with a 20% QBI deduction is about 29.6%.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-18",
+   "pool": "practice",
+   "stem": "A C corporation converts to S status. Its assets have built-in gains. When is the built-in gains tax a risk?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only in the first S year",
+     "explanation": "The period is 5 years.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "b",
+     "text": "For 10 years after converting",
+     "explanation": "The period is 5 years.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "On sales within 5 years",
+     "explanation": "Correct. The recognition period."
+    },
+    {
+     "id": "d",
+     "text": "Never, for S corporations",
+     "explanation": "It applies after conversion.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Built-in gains recognized within 5 years after conversion are taxed at the corporate level.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-19",
+   "pool": "practice",
+   "stem": "Investors expect large depreciation losses from a property financed with nonrecourse debt. Which entity best lets them use the losses?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An S corporation with debt",
+     "explanation": "Shareholders get no basis for entity debt.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A C corporation with debt",
+     "explanation": "Losses stay in the entity.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A sole proprietorship",
+     "explanation": "They're multiple investors.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "A partnership-taxed LLC",
+     "explanation": "Correct. Partners' basis includes entity debt."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Partners include their share of partnership liabilities in basis; S shareholders don't include corporate debt.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-20",
+   "pool": "practice",
+   "stem": "What federal rate applies to a personal service C corporation's taxable income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "21%",
+     "explanation": "Correct. The flat corporate rate applies."
+    },
+    {
+     "id": "b",
+     "text": "35%",
+     "explanation": "That flat PSC rate was repealed.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "c",
+     "text": "37%",
+     "explanation": "That's the top individual rate.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "15%",
+     "explanation": "Graduated rates were repealed.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Personal service corporations pay the same flat 21% rate as other C corporations.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-21",
+   "pool": "practice",
+   "stem": "A sole proprietor with $200,000 of profit forms an S corporation and pays herself a $90,000 reasonable salary. Ignoring the SE tax deduction, about how much employment tax does she save? (2025 wage base $176,100.)",
+   "choices": [
+    {
+     "id": "a",
+     "text": "About $13,400",
+     "explanation": "Correct. SE tax ≈ $27,190 versus payroll tax of $13,770 on salary."
+    },
+    {
+     "id": "b",
+     "text": "About $27,200",
+     "explanation": "Payroll tax is still due on salary.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "About $3,500",
+     "explanation": "That estimate is too low.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "Nothing",
+     "explanation": "Distributions avoid payroll tax.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "SE tax: 12.4% × 176,100 + 2.9% × 184,700 ≈ 27,190; payroll tax on 90,000 × 15.3% = 13,770.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-22",
+   "pool": "practice",
+   "stem": "A C corporation with large accumulated E&P and mostly rental and interest income plans to elect S status. What is the main tax risk?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Losing limited liability protection",
+     "explanation": "Not a tax issue.",
+     "trap": "irrelevant-fact"
+    },
+    {
+     "id": "b",
+     "text": "Passive income tax and termination",
+     "explanation": "Correct. Excess passive investment income with E&P triggers tax and, after 3 years, termination."
+    },
+    {
+     "id": "c",
+     "text": "Double tax on all of its income",
+     "explanation": "S status removes that.",
+     "trap": "reversed"
+    },
+    {
+     "id": "d",
+     "text": "No risk at all from the election",
+     "explanation": "Passive income rules apply.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "An S corporation with C-corporation E&P and passive income above 25% of gross receipts faces the ENPI tax and possible termination.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-23",
+   "pool": "practice",
+   "stem": "A foreign individual investor wants to own part of a U.S. operating business with pass-through taxation. Which entity works?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An S corporation",
+     "explanation": "Nonresident aliens are ineligible.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A sole proprietorship",
+     "explanation": "She's one of several owners.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "A partnership-taxed LLC",
+     "explanation": "Correct. Nonresident aliens can't own S corporation stock."
+    },
+    {
+     "id": "d",
+     "text": "A §501(c)(3) organization",
+     "explanation": "It's a business.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "A partnership-taxed LLC allows foreign owners; S corporations don't.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-24",
+   "pool": "practice",
+   "stem": "What is the rate of the qualified business income deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "20%",
+     "explanation": "Correct. Section 199A allows 20% of QBI."
+    },
+    {
+     "id": "b",
+     "text": "21%",
+     "explanation": "That's the corporate rate.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "23%",
+     "explanation": "That was proposed, not enacted.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "d",
+     "text": "15%",
+     "explanation": "That is not the rate.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "The §199A deduction is generally 20% of qualified business income, now permanent.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-25",
+   "pool": "practice",
+   "stem": "What is the 2025 taxable income threshold where QBI wage and SSTB limits begin for a single filer?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$191,950",
+     "explanation": "That was the 2024 threshold.",
+     "trap": "outdated-rule"
+    },
+    {
+     "id": "b",
+     "text": "$197,300",
+     "explanation": "Correct. The joint threshold is $394,600."
+    },
+    {
+     "id": "c",
+     "text": "$394,600",
+     "explanation": "That's the joint threshold.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$157,500",
+     "explanation": "That was the 2018 threshold.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "For 2025, the QBI limits phase in above $197,300 (single) and $394,600 (joint).",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-26",
+   "pool": "practice",
+   "stem": "Which entity can't have a nonresident alien owner?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "An LLC taxed as a partnership",
+     "explanation": "Any owner is allowed.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "A C corporation",
+     "explanation": "Any owner is allowed.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "An S corporation",
+     "explanation": "Correct. Nonresident aliens are ineligible shareholders."
+    },
+    {
+     "id": "d",
+     "text": "A limited partnership",
+     "explanation": "Any partner is allowed.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "S corporation shareholders must be U.S. citizens or residents, certain trusts or estates.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-27",
+   "pool": "practice",
+   "stem": "A C corporation earns $100,000 and distributes all after-tax profit as a qualified dividend to an owner taxed at 23.8%. What is the total tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$21,000",
+     "explanation": "Add the dividend tax.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$23,800",
+     "explanation": "Include the corporate tax.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$44,800",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$39,802",
+     "explanation": "Correct. $21,000 + $79,000 × 23.8%."
+    }
+   ],
+   "answer": "d",
+   "explanation": "C corporation earnings are taxed at the entity level and again as dividends.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-28",
+   "pool": "practice",
+   "stem": "An S corporation earns $100,000 before salary. The owner takes a $60,000 reasonable salary. What are total FICA taxes on the salary (employer and employee)?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$9,180",
+     "explanation": "Correct. 15.3% × $60,000."
+    },
+    {
+     "id": "b",
+     "text": "$15,300",
+     "explanation": "Only the salary bears FICA.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$14,130",
+     "explanation": "That's SE tax on $100,000.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Salary bears FICA.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "S corporation distributions aren't subject to payroll tax; reasonable salary is.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-29",
+   "pool": "practice",
+   "stem": "A sole proprietor has $100,000 of net profit. What self-employment tax applies?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$15,300",
+     "explanation": "Apply the 92.35% factor.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$14,130",
+     "explanation": "Correct. $100,000 × 92.35% × 15.3%."
+    },
+    {
+     "id": "c",
+     "text": "$9,180",
+     "explanation": "That's FICA on $60,000.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "$7,650",
+     "explanation": "That is only half of it.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "SE tax applies 15.3% to 92.35% of net SE earnings up to the wage base.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-30",
+   "pool": "practice",
+   "stem": "A single taxpayer has $80,000 of QBI and $90,000 of taxable income before the QBI deduction, with no capital gains. What is the deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$18,000",
+     "explanation": "Use the lesser amount.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$16,000",
+     "explanation": "Correct. Lesser of 20% of QBI or 20% of taxable income."
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "Below the threshold, it's allowed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Below the threshold, the deduction is the lesser of 20% of QBI or 20% of taxable income less net capital gain.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-31",
+   "pool": "practice",
+   "stem": "QBI is $100,000, but taxable income before the QBI deduction is $70,000. What is the deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$20,000",
+     "explanation": "Taxable income limits it.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$30,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "It's limited, not lost.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$14,000",
+     "explanation": "Correct. Limited to 20% of taxable income."
+    }
+   ],
+   "answer": "d",
+   "explanation": "The QBI deduction can't exceed 20% of taxable income (less net capital gain).",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-32",
+   "pool": "practice",
+   "stem": "A non-SSTB owner above the phase-in range has $500,000 of QBI, $100,000 of W-2 wages and no qualified property. What is the deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$50,000",
+     "explanation": "Correct. 50% of W-2 wages is less than 20% of QBI."
+    },
+    {
+     "id": "b",
+     "text": "$100,000",
+     "explanation": "The wage limit applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$25,000",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    },
+    {
+     "id": "d",
+     "text": "$0",
+     "explanation": "It's a non-SSTB.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Above the range, the deduction is limited to the greater of 50% of wages or 25% of wages plus 2.5% of UBIA.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-33",
+   "pool": "practice",
+   "stem": "Above the range, QBI is $400,000. W-2 wages are $60,000, and UBIA of qualified property is $1,000,000. What is the deduction?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$30,000",
+     "explanation": "Use the greater limit.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "$40,000",
+     "explanation": "Correct. 25% × $60,000 + 2.5% × $1,000,000."
+    },
+    {
+     "id": "c",
+     "text": "$80,000",
+     "explanation": "The limit applies.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$25,000",
+     "explanation": "Add the wage piece.",
+     "trap": "partial-computation"
+    }
+   ],
+   "answer": "b",
+   "explanation": "The limit is the greater of 50% of wages or 25% of wages plus 2.5% of UBIA.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-34",
+   "pool": "practice",
+   "stem": "A single consultant (an SSTB) has 2025 taxable income well above the phase-in range. What QBI deduction applies?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "20% of QBI",
+     "explanation": "Not above the range.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "50% of wages",
+     "explanation": "That doesn't apply to SSTBs.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "Correct. SSTBs lose the deduction above the range."
+    },
+    {
+     "id": "d",
+     "text": "10% of QBI",
+     "explanation": "That is not the rule.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Specified service businesses get no QBI deduction once taxable income exceeds the phase-in range.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-35",
+   "pool": "practice",
+   "stem": "An S corporation pays $50,000 of elective pass-through entity tax to its state. What is the federal effect for its owner?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A $50,000 itemized deduction",
+     "explanation": "It bypasses the SALT cap.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "No federal effect",
+     "explanation": "It reduces K-1 income.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A $50,000 credit",
+     "explanation": "It's a deduction.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "K-1 income falls by $50,000",
+     "explanation": "Correct. PTET is deducted at the entity level."
+    }
+   ],
+   "answer": "d",
+   "explanation": "PTET is deductible by the entity, reducing owners' income outside the SALT cap.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-36",
+   "pool": "practice",
+   "stem": "A C corporation elects S status when an asset has a $300,000 FMV and a $200,000 basis. It sells the asset for $350,000 in year 3. What built-in gains tax applies?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$21,000",
+     "explanation": "Correct. 21% × the $100,000 built-in gain."
+    },
+    {
+     "id": "b",
+     "text": "$31,500",
+     "explanation": "Only the built-in gain at conversion.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "$0",
+     "explanation": "It's within 5 years.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "$10,500",
+     "explanation": "Not the computation.",
+     "trap": "distractor-number"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Gain built in at conversion and recognized within 5 years is taxed at 21% at the entity level.",
+   "skill": "application",
+   "difficulty": 2,
+   "calc": true,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-37",
+   "pool": "practice",
+   "stem": "A single-member LLC makes no entity election. How is it classified?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As a partnership",
+     "explanation": "It needs two members.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "As a disregarded entity",
+     "explanation": "Correct. It's treated as part of its owner."
+    },
+    {
+     "id": "c",
+     "text": "As a C corporation",
+     "explanation": "Not by default.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "As an S corporation",
+     "explanation": "Requires an election.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "A single-member LLC is disregarded by default unless it elects corporate status.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-38",
+   "pool": "practice",
+   "stem": "A two-member LLC wants to be taxed as a corporation. What must it file?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Form 2553 only",
+     "explanation": "That's the S election.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "Form 1065",
+     "explanation": "That's the partnership return.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "Form 8832",
+     "explanation": "Correct. The check-the-box election."
+    },
+    {
+     "id": "d",
+     "text": "Nothing; it's automatic",
+     "explanation": "An election is needed.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "An eligible entity elects corporate classification on Form 8832 (or Form 2553 for S status, which deems it).",
+   "skill": "application",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-39",
+   "pool": "practice",
+   "stem": "An LLC taxed as a partnership wants to allocate all depreciation to one member. Is this allowed?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No, allocations follow ownership",
+     "explanation": "Special allocations are allowed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Only in S corporations",
+     "explanation": "S corporations can't.",
+     "trap": "wrong-sign"
+    },
+    {
+     "id": "c",
+     "text": "Only with IRS approval",
+     "explanation": "That is not required.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Yes, with substantial economic effect",
+     "explanation": "Correct. Special allocations must have it."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Partnership special allocations are respected if they have substantial economic effect.",
+   "skill": "application",
+   "difficulty": 2,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-40",
+   "pool": "practice",
+   "stem": "Founders plan to reinvest all earnings and sell the company after 6 years. Which entity may offer the biggest tax benefit?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A C corporation",
+     "explanation": "Correct. §1202 can exclude gain on sale."
+    },
+    {
+     "id": "b",
+     "text": "An S corporation",
+     "explanation": "QSBS requires a C corporation.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "A partnership",
+     "explanation": "QSBS is not available.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A sole proprietorship",
+     "explanation": "QSBS is not available.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "Qualified small business stock in a C corporation can exclude gain on sale, up to the cap.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-41",
+   "pool": "practice",
+   "stem": "A business wants foreign investors and several classes of preferred equity. Which entity should it avoid?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A C corporation",
+     "explanation": "It allows both.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "An S corporation",
+     "explanation": "Correct. It allows one class and no NRAs."
+    },
+    {
+     "id": "c",
+     "text": "An LLC taxed as a partnership",
+     "explanation": "It allows both.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A limited partnership",
+     "explanation": "It allows both.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "b",
+   "explanation": "S corporations are limited to one class of stock and eligible shareholders.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-42",
+   "pool": "practice",
+   "stem": "A startup expects large losses for 3 years, and its investors want to use them. Which structure fits?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A C corporation",
+     "explanation": "Losses stay inside.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "An S corporation with 2 classes",
+     "explanation": "That is not allowed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "An LLC taxed as a partnership",
+     "explanation": "Correct. Losses flow to members."
+    },
+    {
+     "id": "d",
+     "text": "A trust",
+     "explanation": "That is not suitable.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Partnerships pass losses through, with flexible allocations, subject to basis and other limits.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-43",
+   "pool": "practice",
+   "stem": "An S corporation owner pays herself a $10,000 salary and takes $200,000 of distributions. What is the main risk?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Termination of the election",
+     "explanation": "That is not the main risk.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "A built-in gains tax",
+     "explanation": "That is not related.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "No risk",
+     "explanation": "The IRS scrutinizes this.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Reclassification as wages",
+     "explanation": "Correct. Salary must be reasonable."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Unreasonably low salary invites reclassification of distributions as wages subject to payroll tax.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-44",
+   "pool": "practice",
+   "stem": "A high-income lawyer's practice is an SSTB above the QBI phase-in range. What should drive the entity choice?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Payroll tax and PTET",
+     "explanation": "Correct. QBI won't help."
+    },
+    {
+     "id": "b",
+     "text": "The QBI deduction",
+     "explanation": "It's unavailable.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "The dividends received deduction",
+     "explanation": "That is not relevant.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "d",
+     "text": "§1202 stock exclusion",
+     "explanation": "Not available for law practices.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "a",
+   "explanation": "When QBI is unavailable, payroll tax savings and state PTET benefits drive the choice.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-ec-45",
+   "pool": "practice",
+   "stem": "Owners expect to sell appreciated business assets later. Why might an LLC beat a C corporation?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Lower rates on all income",
+     "explanation": "Not necessarily required.",
+     "trap": "overgeneralization"
+    },
+    {
+     "id": "b",
+     "text": "It avoids double tax",
+     "explanation": "Correct. One level of tax applies."
+    },
+    {
+     "id": "c",
+     "text": "No tax on the sale",
+     "explanation": "It's taxed once.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "A larger DRD for the owners",
+     "explanation": "That is not relevant.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "b",
+   "explanation": "Asset sales by a C corporation and liquidation produce two levels of tax; partnerships pay one.",
+   "skill": "analysis",
+   "difficulty": 3,
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/questions.json"
+  },
+  {
+   "id": "tcp-x3-01",
+   "moduleId": "tcp-entity-choice",
+   "pool": "exam",
+   "stem": "A two-owner business expects losses for several years, wants to allocate most depreciation to one owner, and plans to bring in a corporate investor. Which entity best fits?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "S corporation",
+     "explanation": "No corporate owners and no special allocations.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "C corporation",
+     "explanation": "Losses would be trapped.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "LLC taxed as a partnership",
+     "explanation": "Correct. Partnerships allow corporate partners, special allocations, and pass-through losses."
+    },
+    {
+     "id": "d",
+     "text": "Sole proprietorship",
+     "explanation": "There are two owners.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Partnerships allow corporate partners, special allocations, and pass-through losses.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x3-02",
+   "moduleId": "tcp-entity-choice",
+   "pool": "exam",
+   "stem": "A single-member LLC owned by a C corporation makes no election. How is it treated?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "As an S corporation owned by the parent",
+     "explanation": "A corporation can't own an S corporation's stock (except a QSub).",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "As a partnership with the parent",
+     "explanation": "A partnership needs two or more owners.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "As a separate C corporation",
+     "explanation": "Corporate status requires an election.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "As a disregarded division of the parent",
+     "explanation": "Correct. Single-owner eligible entities default to disregarded status."
+    }
+   ],
+   "answer": "d",
+   "explanation": "Single-owner eligible entities default to disregarded status.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x3-03",
+   "moduleId": "tcp-entity-choice",
+   "pool": "exam",
+   "stem": "Which statement about the §199A QBI deduction in entity planning is correct?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It is available to C corporations on their taxable income",
+     "explanation": "It's for noncorporate taxpayers.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "It applies to wages that an S corporation pays its owner",
+     "explanation": "Wages aren't QBI.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "c",
+     "text": "It can cut the top rate on pass-through income to 29.6%",
+     "explanation": "Correct. 37% × (1 − 20%) = 29.6%."
+    },
+    {
+     "id": "d",
+     "text": "It expired for tax years beginning after 2025",
+     "explanation": "It was made permanent by P.L. 119-21.",
+     "trap": "outdated-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "37% × (1 − 20%) = 29.6%.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x3-11",
+   "moduleId": "tcp-entity-choice",
+   "pool": "exam",
+   "stem": "An owner-operator's business earns $200,000. Compared with operating as a single-member LLC, electing S corporation status mainly reduces:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Income tax, because S income is tax-exempt",
+     "explanation": "S income passes through and is taxed.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "b",
+     "text": "Employment taxes on profit above a reasonable salary",
+     "explanation": "Correct. S distributions above reasonable compensation aren't subject to payroll taxes."
+    },
+    {
+     "id": "c",
+     "text": "Payroll tax on the owner's reasonable salary",
+     "explanation": "Reasonable salary is subject to FICA.",
+     "trap": "wrong-rule"
+    },
+    {
+     "id": "d",
+     "text": "Tax on capital gains from a later sale of the business",
+     "explanation": "The election mainly affects employment taxes.",
+     "trap": "irrelevant-fact"
+    }
+   ],
+   "answer": "b",
+   "explanation": "An S shareholder-employee pays FICA on reasonable compensation; remaining profit flows through without self-employment tax, unlike an LLC member.",
+   "skill": "application",
+   "difficulty": 2,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x3-12",
+   "moduleId": "tcp-entity-choice",
+   "pool": "exam",
+   "stem": "Which business owner is not eligible for the §199A qualified business income deduction on that business's income?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A partner in a manufacturing partnership",
+     "explanation": "Partnership income can be QBI.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "b",
+     "text": "An S corporation shareholder",
+     "explanation": "S income can be QBI.",
+     "trap": "wrong-classification"
+    },
+    {
+     "id": "c",
+     "text": "The sole shareholder of a C corporation",
+     "explanation": "Correct. QBI applies to pass-through income, not C corporations."
+    },
+    {
+     "id": "d",
+     "text": "A sole proprietor with a retail store",
+     "explanation": "Schedule C income can be QBI.",
+     "trap": "wrong-classification"
+    }
+   ],
+   "answer": "c",
+   "explanation": "IRC §199A allows the deduction for qualified business income from sole proprietorships, partnerships and S corporations, not C corporations.",
+   "skill": "remembering",
+   "difficulty": 1,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  },
+  {
+   "id": "tcp-x3-16",
+   "moduleId": "tcp-entity-choice",
+   "pool": "exam",
+   "stem": "A C corporation earns $100,000 and distributes all of its after-tax income as a qualified dividend to a shareholder taxed at 20% on dividends. Ignoring the NIIT, what is the combined tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$21,000",
+     "explanation": "The dividend is also taxed.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "b",
+     "text": "$20,000",
+     "explanation": "Corporate tax is imposed first.",
+     "trap": "partial-computation"
+    },
+    {
+     "id": "c",
+     "text": "$36,800",
+     "explanation": "Correct. 21,000 corporate tax + 20% × 79,000 dividend = 36,800."
+    },
+    {
+     "id": "d",
+     "text": "$41,000",
+     "explanation": "The dividend is the after-tax 79,000.",
+     "trap": "wrong-rule"
+    }
+   ],
+   "answer": "c",
+   "explanation": "Double taxation: 21% at the corporate level, then the shareholder's dividend rate on the after-tax distribution.",
+   "skill": "application",
+   "difficulty": 3,
+   "calc": true,
+   "_file": "content/tcp/exam-questions/tcp-exam-areas3-4.json"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "tcp-ec-f1",
+   "front": "C corp distributed combined rate",
+   "back": "21% + 23.8% × 79% ≈ 39.8%.",
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/flashcards.json"
+  },
+  {
+   "id": "tcp-ec-f2",
+   "front": "Top pass-through rate with QBI",
+   "back": "37% × 80% = 29.6% (plus SE tax or NIIT).",
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/flashcards.json"
+  },
+  {
+   "id": "tcp-ec-f3",
+   "front": "Check-the-box defaults",
+   "back": "One owner → disregarded; two+ owners → partnership; per se corporations can't elect out.",
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/flashcards.json"
+  },
+  {
+   "id": "tcp-ec-f4",
+   "front": "Change of classification",
+   "back": "Generally 60 months before another elective change.",
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/flashcards.json"
+  },
+  {
+   "id": "tcp-ec-f5",
+   "front": "§1202 (pre-July 5, 2025 stock)",
+   "back": "100% exclusion after 5 years; greater of $10M or 10 × basis.",
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/flashcards.json"
+  },
+  {
+   "id": "tcp-ec-f6",
+   "front": "S corp payroll planning",
+   "back": "Reasonable salary; distributions above it avoid payroll/SE tax.",
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/flashcards.json"
+  },
+  {
+   "id": "tcp-ec-f7",
+   "front": "Partnership advantages",
+   "back": "Special allocations, debt in basis, tax-free property distributions.",
+   "moduleId": "tcp-entity-choice",
+   "_file": "content/tcp/modules/tcp-entity-choice/flashcards.json"
+  }
+ ],
+ "tbs_files": [
+  "content/tcp/tbs/tcp-tbs-r3-entity-tax.json",
+  "content/tcp/tbs/tcp-tbs-u6-entity-choice.json",
+  "content/tcp/tbs/tcp-tbs-u6-liquidation-compare.json"
+ ]
+}
