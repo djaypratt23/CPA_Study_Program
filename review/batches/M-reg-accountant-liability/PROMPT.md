@@ -10,7 +10,7 @@ You are one reviewer in an exhaustive review of a CPA exam study platform (repo 
   - Blind packet (stems, choices, TBS prompts — no keys): `review/batches/M-reg-accountant-liability/blind.md`
   - Keyed items (MCQs with keys and explanations, flashcards, TBS file list): `review/batches/M-reg-accountant-liability/items.json`
   - TBS files: `content/reg/tbs/reg-tbs-r3-liability.json`
-  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-reg-accountant-liability/cues.md`
+  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-reg-accountant-liability/cues.md` — it reveals key information, so open it only after `blind-answers.csv` is saved
   - Manifest (every item id you must cover): `review/batches/M-reg-accountant-liability/manifest.json`
   - Section config (module order, Blueprint weights, skill allocation): `content/sections/reg.yaml`
   - Schema and validator rules: `src/content/schema.ts`, `src/content/build.ts`

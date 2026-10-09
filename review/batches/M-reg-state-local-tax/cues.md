@@ -1,24 +1,24 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-slt-04 | d | absolutes only in distractors a |
-| reg-slt-05 | a | key much shortest |
-| reg-slt-06 | b | absolutes only in distractors c |
-| reg-slt-09 | a | absolutes only in distractors b |
-| reg-slt-12 | c | key longest; absolutes only in distractors a,b,d |
-| reg-slt-14 | a | key longest; absolutes only in distractors b |
-| reg-slt-15 | b | absolutes only in distractors d |
-| reg-slt-16 | d | absolutes only in distractors c |
-| reg-slt-20 | d | key much shortest; absolutes only in distractors a |
-| reg-slt-25 | c | absolutes only in distractors a |
-| reg-slt-27 | a | absolutes only in distractors c,d |
-| reg-slt-29 | c | key much shortest; absolutes only in distractors a,d |
-| reg-slt-30 | d | key much shortest |
-| reg-slt-32 | c | key much longest |
-| reg-slt-34 | a | key longest |
-| reg-x5-26 | d | absolutes only in distractors a,c |
-| reg-x5-46 | d | absolutes only in distractors a,b,c |
+| id | flags |
+|---|---|
+| reg-slt-04 | absolutes only in distractors a |
+| reg-slt-05 | key much shortest |
+| reg-slt-06 | absolutes only in distractors c |
+| reg-slt-09 | absolutes only in distractors b |
+| reg-slt-12 | key longest; absolutes only in distractors a,b,d |
+| reg-slt-14 | key longest; absolutes only in distractors b |
+| reg-slt-15 | absolutes only in distractors d |
+| reg-slt-16 | absolutes only in distractors c |
+| reg-slt-20 | key much shortest; absolutes only in distractors a |
+| reg-slt-25 | absolutes only in distractors a |
+| reg-slt-27 | absolutes only in distractors c,d |
+| reg-slt-29 | key much shortest; absolutes only in distractors a,d |
+| reg-slt-30 | key much shortest |
+| reg-slt-32 | key much longest |
+| reg-slt-34 | key longest |
+| reg-x5-26 | absolutes only in distractors a,c |
+| reg-x5-46 | absolutes only in distractors a,b,c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

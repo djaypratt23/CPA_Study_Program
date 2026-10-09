@@ -1,21 +1,21 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| far-gov-04 | c | key longest |
-| far-gov-05 | a | key much longest; key repeats most stem words (3) |
-| far-gov-06 | b | key longest |
-| far-gov-07 | c | absolutes only in distractors b |
-| far-gov-08 | d | key much shortest |
-| far-gov-12 | d | absolutes only in distractors b |
-| far-gov-13 | a | key longest |
-| far-gov-14 | b | key longest |
-| far-gov-16 | d | key longest |
-| far-gov-21 | a | absolutes only in distractors c |
-| far-gov-22 | b | key much longest; absolutes only in distractors c |
-| far-gov-26 | c | absolutes only in distractors d |
-| far-gov-29 | b | absolutes only in distractors c |
-| far-gov-31 | d | key longest |
+| id | flags |
+|---|---|
+| far-gov-04 | key longest |
+| far-gov-05 | key much longest; key repeats most stem words (3) |
+| far-gov-06 | key longest |
+| far-gov-07 | absolutes only in distractors b |
+| far-gov-08 | key much shortest |
+| far-gov-12 | absolutes only in distractors b |
+| far-gov-13 | key longest |
+| far-gov-14 | key longest |
+| far-gov-16 | key longest |
+| far-gov-21 | absolutes only in distractors c |
+| far-gov-22 | key much longest; absolutes only in distractors c |
+| far-gov-26 | absolutes only in distractors d |
+| far-gov-29 | absolutes only in distractors c |
+| far-gov-31 | key longest |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

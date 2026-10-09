@@ -1,24 +1,24 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-irs-pre1 | a | key much shortest; key repeats most stem words (2) |
-| reg-irs-03 | d | absolutes only in distractors b |
-| reg-irs-05 | b | absolutes only in distractors d |
-| reg-irs-06 | b | key much longest |
-| reg-irs-09 | b | key much longest |
-| reg-irs-13 | d | key longest |
-| reg-irs-14 | a | key repeats most stem words (2) |
-| reg-irs-17 | b | absolutes only in distractors a,d |
-| reg-irs-21 | c | key longest; absolutes only in distractors d; key repeats most stem words (3) |
-| reg-irs-22 | d | absolutes only in distractors a,c |
-| reg-irs-23 | a | key much shortest; absolutes only in distractors b,c,d |
-| reg-irs-28 | b | absolutes only in distractors a,d |
-| reg-irs-29 | c | absolutes only in distractors b |
-| reg-irs-30 | d | absolutes only in distractors c |
-| reg-x1-08 | c | absolutes only in distractors a,d |
-| reg-x1-17 | a | absolutes only in distractors d |
-| reg-x1-23 | c | absolutes only in distractors a; key repeats most stem words (2) |
+| id | flags |
+|---|---|
+| reg-irs-pre1 | key much shortest; key repeats most stem words (2) |
+| reg-irs-03 | absolutes only in distractors b |
+| reg-irs-05 | absolutes only in distractors d |
+| reg-irs-06 | key much longest |
+| reg-irs-09 | key much longest |
+| reg-irs-13 | key longest |
+| reg-irs-14 | key repeats most stem words (2) |
+| reg-irs-17 | absolutes only in distractors a,d |
+| reg-irs-21 | key longest; absolutes only in distractors d; key repeats most stem words (3) |
+| reg-irs-22 | absolutes only in distractors a,c |
+| reg-irs-23 | key much shortest; absolutes only in distractors b,c,d |
+| reg-irs-28 | absolutes only in distractors a,d |
+| reg-irs-29 | absolutes only in distractors b |
+| reg-irs-30 | absolutes only in distractors c |
+| reg-x1-08 | absolutes only in distractors a,d |
+| reg-x1-17 | absolutes only in distractors d |
+| reg-x1-23 | absolutes only in distractors a; key repeats most stem words (2) |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

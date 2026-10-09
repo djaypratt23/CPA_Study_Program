@@ -1,30 +1,30 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| far-imp-pre1 | b | key longest |
-| far-imp-chk1 | c | absolutes only in distractors d |
-| far-imp-chk2 | c | key much longest |
-| far-imp-02 | b | key much longest |
-| far-imp-04 | a | absolutes only in distractors d |
-| far-imp-05 | b | absolutes only in distractors d |
-| far-imp-06 | c | absolutes only in distractors a |
-| far-imp-08 | a | absolutes only in distractors c |
-| far-imp-09 | d | absolutes only in distractors c |
-| far-imp-11 | d | key much shortest |
-| far-imp-12 | a | key much longest |
-| far-imp-15 | d | key longest |
-| far-imp-16 | a | key much shortest |
-| far-imp-18 | c | key much longest; absolutes only in distractors a,b,d |
-| far-imp-19 | d | key longest; absolutes only in distractors a,c |
-| far-imp-20 | a | key longest |
-| far-imp-21 | b | key much shortest; absolutes only in distractors d |
-| far-imp-22 | c | key much shortest |
-| far-imp-23 | d | absolutes only in distractors a,b,c |
-| far-imp-24 | a | key longest |
-| far-imp-25 | b | key much shortest |
-| far-imp-27 | d | key much shortest |
-| far-x2-10 | d | absolutes only in distractors b |
+| id | flags |
+|---|---|
+| far-imp-pre1 | key longest |
+| far-imp-chk1 | absolutes only in distractors d |
+| far-imp-chk2 | key much longest |
+| far-imp-02 | key much longest |
+| far-imp-04 | absolutes only in distractors d |
+| far-imp-05 | absolutes only in distractors d |
+| far-imp-06 | absolutes only in distractors a |
+| far-imp-08 | absolutes only in distractors c |
+| far-imp-09 | absolutes only in distractors c |
+| far-imp-11 | key much shortest |
+| far-imp-12 | key much longest |
+| far-imp-15 | key longest |
+| far-imp-16 | key much shortest |
+| far-imp-18 | key much longest; absolutes only in distractors a,b,d |
+| far-imp-19 | key longest; absolutes only in distractors a,c |
+| far-imp-20 | key longest |
+| far-imp-21 | key much shortest; absolutes only in distractors d |
+| far-imp-22 | key much shortest |
+| far-imp-23 | absolutes only in distractors a,b,c |
+| far-imp-24 | key longest |
+| far-imp-25 | key much shortest |
+| far-imp-27 | key much shortest |
+| far-x2-10 | absolutes only in distractors b |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

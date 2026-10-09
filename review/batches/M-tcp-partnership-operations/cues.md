@@ -1,36 +1,36 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| tcp-po-chk2 | c | key longest |
-| tcp-po-02 | c | key longest |
-| tcp-po-03 | a | key longest; absolutes only in distractors b,c,d; key repeats most stem words (3) |
-| tcp-po-05 | d | absolutes only in distractors c |
-| tcp-po-07 | a | key much longest |
-| tcp-po-08 | b | absolutes only in distractors a,c,d |
-| tcp-po-09 | b | absolutes only in distractors a; key repeats most stem words (3) |
-| tcp-po-10 | b | key much longest |
-| tcp-po-11 | b | key much longest; absolutes only in distractors d; key repeats most stem words (2) |
-| tcp-po-13 | d | key much shortest |
-| tcp-po-18 | d | key much shortest |
-| tcp-po-19 | a | key much shortest |
-| tcp-po-20 | b | key much shortest; absolutes only in distractors c,d |
-| tcp-po-21 | c | key much longest; absolutes only in distractors b |
-| tcp-po-22 | d | absolutes only in distractors a,c |
-| tcp-po-24 | d | key much shortest |
-| tcp-po-27 | c | absolutes only in distractors b |
-| tcp-po-35 | c | absolutes only in distractors d |
-| tcp-po-36 | d | key much shortest |
-| tcp-po-38 | b | key much shortest |
-| tcp-po-39 | c | absolutes only in distractors a |
-| tcp-po-40 | d | absolutes only in distractors a,b |
-| tcp-po-43 | c | absolutes only in distractors a |
-| tcp-po-44 | d | key longest |
-| tcp-po-45 | a | key much shortest |
-| tcp-po-46 | b | absolutes only in distractors a,c |
-| tcp-x2-08 | b | key much shortest; absolutes only in distractors d |
-| tcp-x2-10 | a | key longest; absolutes only in distractors d |
-| tcp-x2-39 | d | absolutes only in distractors b,c |
+| id | flags |
+|---|---|
+| tcp-po-chk2 | key longest |
+| tcp-po-02 | key longest |
+| tcp-po-03 | key longest; absolutes only in distractors b,c,d; key repeats most stem words (3) |
+| tcp-po-05 | absolutes only in distractors c |
+| tcp-po-07 | key much longest |
+| tcp-po-08 | absolutes only in distractors a,c,d |
+| tcp-po-09 | absolutes only in distractors a; key repeats most stem words (3) |
+| tcp-po-10 | key much longest |
+| tcp-po-11 | key much longest; absolutes only in distractors d; key repeats most stem words (2) |
+| tcp-po-13 | key much shortest |
+| tcp-po-18 | key much shortest |
+| tcp-po-19 | key much shortest |
+| tcp-po-20 | key much shortest; absolutes only in distractors c,d |
+| tcp-po-21 | key much longest; absolutes only in distractors b |
+| tcp-po-22 | absolutes only in distractors a,c |
+| tcp-po-24 | key much shortest |
+| tcp-po-27 | absolutes only in distractors b |
+| tcp-po-35 | absolutes only in distractors d |
+| tcp-po-36 | key much shortest |
+| tcp-po-38 | key much shortest |
+| tcp-po-39 | absolutes only in distractors a |
+| tcp-po-40 | absolutes only in distractors a,b |
+| tcp-po-43 | absolutes only in distractors a |
+| tcp-po-44 | key longest |
+| tcp-po-45 | key much shortest |
+| tcp-po-46 | absolutes only in distractors a,c |
+| tcp-x2-08 | key much shortest; absolutes only in distractors d |
+| tcp-x2-10 | key longest; absolutes only in distractors d |
+| tcp-x2-39 | absolutes only in distractors b,c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

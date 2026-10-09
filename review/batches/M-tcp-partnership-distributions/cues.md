@@ -1,43 +1,43 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| tcp-pd-pre1 | c | key much longest |
-| tcp-pd-chk1 | d | absolutes only in distractors a |
-| tcp-pd-chk2 | c | absolutes only in distractors a |
-| tcp-pd-02 | d | absolutes only in distractors b |
-| tcp-pd-04 | c | key longest |
-| tcp-pd-05 | a | key longest |
-| tcp-pd-06 | d | absolutes only in distractors b |
-| tcp-pd-07 | b | absolutes only in distractors c |
-| tcp-pd-08 | b | key longest |
-| tcp-pd-09 | b | absolutes only in distractors a |
-| tcp-pd-11 | d | absolutes only in distractors a |
-| tcp-pd-12 | a | absolutes only in distractors b |
-| tcp-pd-13 | b | absolutes only in distractors a,d |
-| tcp-pd-14 | c | absolutes only in distractors b |
-| tcp-pd-15 | d | absolutes only in distractors a |
-| tcp-pd-17 | c | key longest; absolutes only in distractors a |
-| tcp-pd-18 | d | absolutes only in distractors c |
-| tcp-pd-21 | a | absolutes only in distractors c |
-| tcp-pd-24 | c | absolutes only in distractors a,b |
-| tcp-pd-28 | c | absolutes only in distractors b |
-| tcp-pd-31 | b | absolutes only in distractors a |
-| tcp-pd-32 | c | absolutes only in distractors a |
-| tcp-pd-34 | a | absolutes only in distractors b,c |
-| tcp-pd-35 | b | absolutes only in distractors a,c,d |
-| tcp-pd-37 | d | key much shortest |
-| tcp-pd-39 | b | absolutes only in distractors a |
-| tcp-pd-40 | c | key much shortest |
-| tcp-pd-41 | d | absolutes only in distractors a |
-| tcp-pd-42 | a | absolutes only in distractors d |
-| tcp-pd-43 | b | absolutes only in distractors c,d |
-| tcp-pd-44 | c | absolutes only in distractors a,d |
-| tcp-x2-11 | b | absolutes only in distractors d |
-| tcp-x2-12 | a | absolutes only in distractors c |
-| tcp-x2-13 | b | absolutes only in distractors a |
-| reg-x5-14 | b | absolutes only in distractors c |
-| tcp-x2-33 | b | absolutes only in distractors a |
+| id | flags |
+|---|---|
+| tcp-pd-pre1 | key much longest |
+| tcp-pd-chk1 | absolutes only in distractors a |
+| tcp-pd-chk2 | absolutes only in distractors a |
+| tcp-pd-02 | absolutes only in distractors b |
+| tcp-pd-04 | key longest |
+| tcp-pd-05 | key longest |
+| tcp-pd-06 | absolutes only in distractors b |
+| tcp-pd-07 | absolutes only in distractors c |
+| tcp-pd-08 | key longest |
+| tcp-pd-09 | absolutes only in distractors a |
+| tcp-pd-11 | absolutes only in distractors a |
+| tcp-pd-12 | absolutes only in distractors b |
+| tcp-pd-13 | absolutes only in distractors a,d |
+| tcp-pd-14 | absolutes only in distractors b |
+| tcp-pd-15 | absolutes only in distractors a |
+| tcp-pd-17 | key longest; absolutes only in distractors a |
+| tcp-pd-18 | absolutes only in distractors c |
+| tcp-pd-21 | absolutes only in distractors c |
+| tcp-pd-24 | absolutes only in distractors a,b |
+| tcp-pd-28 | absolutes only in distractors b |
+| tcp-pd-31 | absolutes only in distractors a |
+| tcp-pd-32 | absolutes only in distractors a |
+| tcp-pd-34 | absolutes only in distractors b,c |
+| tcp-pd-35 | absolutes only in distractors a,c,d |
+| tcp-pd-37 | key much shortest |
+| tcp-pd-39 | absolutes only in distractors a |
+| tcp-pd-40 | key much shortest |
+| tcp-pd-41 | absolutes only in distractors a |
+| tcp-pd-42 | absolutes only in distractors d |
+| tcp-pd-43 | absolutes only in distractors c,d |
+| tcp-pd-44 | absolutes only in distractors a,d |
+| tcp-x2-11 | absolutes only in distractors d |
+| tcp-x2-12 | absolutes only in distractors c |
+| tcp-x2-13 | absolutes only in distractors a |
+| reg-x5-14 | absolutes only in distractors c |
+| tcp-x2-33 | absolutes only in distractors a |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

@@ -1,27 +1,27 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-bri-chk1 | b | absolutes only in distractors d |
-| reg-bri-chk2 | b | key much longest |
-| reg-bri-01 | d | key much shortest |
-| reg-bri-02 | a | absolutes only in distractors d |
-| reg-bri-04 | c | absolutes only in distractors b |
-| reg-bri-05 | d | absolutes only in distractors b |
-| reg-bri-06 | c | key longest; absolutes only in distractors d |
-| reg-bri-07 | a | key longest; absolutes only in distractors c,d |
-| reg-bri-09 | d | absolutes only in distractors b |
-| reg-bri-12 | a | absolutes only in distractors d |
-| reg-bri-17 | b | absolutes only in distractors d |
-| reg-bri-18 | c | key longest |
-| reg-bri-19 | a | key longest |
-| reg-bri-23 | a | absolutes only in distractors c |
-| reg-bri-26 | c | key longest; absolutes only in distractors a,b,d; key repeats most stem words (2) |
-| reg-bri-28 | a | absolutes only in distractors c |
-| reg-bri-30 | c | absolutes only in distractors d |
-| reg-bri-32 | a | key longest; absolutes only in distractors b,c |
-| reg-x4-08 | c | key longest |
-| reg-x4-28 | b | key repeats most stem words (2) |
+| id | flags |
+|---|---|
+| reg-bri-chk1 | absolutes only in distractors d |
+| reg-bri-chk2 | key much longest |
+| reg-bri-01 | key much shortest |
+| reg-bri-02 | absolutes only in distractors d |
+| reg-bri-04 | absolutes only in distractors b |
+| reg-bri-05 | absolutes only in distractors b |
+| reg-bri-06 | key longest; absolutes only in distractors d |
+| reg-bri-07 | key longest; absolutes only in distractors c,d |
+| reg-bri-09 | absolutes only in distractors b |
+| reg-bri-12 | absolutes only in distractors d |
+| reg-bri-17 | absolutes only in distractors d |
+| reg-bri-18 | key longest |
+| reg-bri-19 | key longest |
+| reg-bri-23 | absolutes only in distractors c |
+| reg-bri-26 | key longest; absolutes only in distractors a,b,d; key repeats most stem words (2) |
+| reg-bri-28 | absolutes only in distractors c |
+| reg-bri-30 | absolutes only in distractors d |
+| reg-bri-32 | key longest; absolutes only in distractors b,c |
+| reg-x4-08 | key longest |
+| reg-x4-28 | key repeats most stem words (2) |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

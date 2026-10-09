@@ -159,7 +159,7 @@ def toks(s):
     return [w for w in re.findall(r"[a-z0-9§%$.,']+", s.lower()) if w not in STOP]
 
 def write_cues(d, qs):
-    lines = ['# Automated cue hints (heuristics only — judge each)', '', '| id | key | flags |', '|---|---|---|']
+    lines = ['# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.', '', '| id | flags |', '|---|---|']
     for q in qs:
         ch = {c['id']: c['text'] for c in q['choices']}
         L = {k: len(v) for k, v in ch.items()}
@@ -175,7 +175,7 @@ def write_cues(d, qs):
         st = set(toks(q['stem']))
         ov = {k: len(set(toks(v)) & st) for k, v in ch.items()}
         if ov[key] >= 2 and ov[key] > max(ov[k] for k in ov if k != key): flags.append(f'key repeats most stem words ({ov[key]})')
-        if flags: lines.append(f"| {q['id']} | {key} | {'; '.join(flags)} |")
+        if flags: lines.append(f"| {q['id']} | {'; '.join(flags)} |")
     # within-module near duplicates
     lines += ['', '## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)', '']
     for a, b in itertools.combinations(qs, 2):

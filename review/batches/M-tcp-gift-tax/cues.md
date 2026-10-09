@@ -1,37 +1,37 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| tcp-gt-pre1 | c | absolutes only in distractors d |
-| tcp-gt-chk1 | d | absolutes only in distractors b |
-| tcp-gt-chk2 | a | key much longest; key repeats most stem words (2) |
-| tcp-gt-01 | a | absolutes only in distractors d |
-| tcp-gt-02 | c | key longest |
-| tcp-gt-03 | d | absolutes only in distractors b |
-| tcp-gt-06 | d | absolutes only in distractors b |
-| tcp-gt-08 | b | key longest |
-| tcp-gt-09 | b | key longest |
-| tcp-gt-10 | b | key much longest |
-| tcp-gt-16 | d | key much shortest |
-| tcp-gt-18 | b | key longest |
-| tcp-gt-20 | d | key longest |
-| tcp-gt-21 | a | absolutes only in distractors b,c |
-| tcp-gt-23 | c | key much shortest |
-| tcp-gt-28 | a | key much shortest |
-| tcp-gt-29 | b | key much shortest |
-| tcp-gt-34 | c | key much shortest |
-| tcp-gt-36 | a | key much shortest |
-| tcp-gt-37 | b | key much shortest |
-| tcp-gt-39 | d | key much longest; absolutes only in distractors b,c |
-| tcp-gt-40 | a | key much shortest; absolutes only in distractors c,d |
-| tcp-gt-41 | b | absolutes only in distractors a |
-| tcp-gt-42 | c | key longest; absolutes only in distractors d |
-| tcp-x1-13 | c | absolutes only in distractors d |
-| tcp-x1-16 | d | key longest |
-| tcp-x1-24 | a | key longest; absolutes only in distractors d; key repeats most stem words (3) |
-| reg-x5-19 | b | absolutes only in distractors d |
-| tcp-x1-42 | b | absolutes only in distractors a |
-| tcp-x1-43 | c | key much shortest |
+| id | flags |
+|---|---|
+| tcp-gt-pre1 | absolutes only in distractors d |
+| tcp-gt-chk1 | absolutes only in distractors b |
+| tcp-gt-chk2 | key much longest; key repeats most stem words (2) |
+| tcp-gt-01 | absolutes only in distractors d |
+| tcp-gt-02 | key longest |
+| tcp-gt-03 | absolutes only in distractors b |
+| tcp-gt-06 | absolutes only in distractors b |
+| tcp-gt-08 | key longest |
+| tcp-gt-09 | key longest |
+| tcp-gt-10 | key much longest |
+| tcp-gt-16 | key much shortest |
+| tcp-gt-18 | key longest |
+| tcp-gt-20 | key longest |
+| tcp-gt-21 | absolutes only in distractors b,c |
+| tcp-gt-23 | key much shortest |
+| tcp-gt-28 | key much shortest |
+| tcp-gt-29 | key much shortest |
+| tcp-gt-34 | key much shortest |
+| tcp-gt-36 | key much shortest |
+| tcp-gt-37 | key much shortest |
+| tcp-gt-39 | key much longest; absolutes only in distractors b,c |
+| tcp-gt-40 | key much shortest; absolutes only in distractors c,d |
+| tcp-gt-41 | absolutes only in distractors a |
+| tcp-gt-42 | key longest; absolutes only in distractors d |
+| tcp-x1-13 | absolutes only in distractors d |
+| tcp-x1-16 | key longest |
+| tcp-x1-24 | key longest; absolutes only in distractors d; key repeats most stem words (3) |
+| reg-x5-19 | absolutes only in distractors d |
+| tcp-x1-42 | absolutes only in distractors a |
+| tcp-x1-43 | key much shortest |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

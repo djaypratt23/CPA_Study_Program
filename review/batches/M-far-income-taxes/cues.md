@@ -1,23 +1,23 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| far-tax-chk1 | d | key much longest |
-| far-tax-chk2 | c | absolutes only in distractors a |
-| far-tax-03 | b | key much longest; absolutes only in distractors a |
-| far-tax-05 | a | absolutes only in distractors c |
-| far-tax-06 | b | key longest |
-| far-tax-08 | b | absolutes only in distractors d |
-| far-tax-10 | c | key longest; absolutes only in distractors b |
-| far-tax-11 | c | absolutes only in distractors d |
-| far-tax-12 | d | key much longest; absolutes only in distractors a |
-| far-tax-14 | b | absolutes only in distractors a,c |
-| far-tax-15 | c | key repeats most stem words (2) |
-| far-tax-20 | b | key much shortest |
-| far-x3-06 | c | absolutes only in distractors d |
-| far-x3-07 | c | absolutes only in distractors d |
-| far-x3-18 | c | absolutes only in distractors d |
-| far-x3-26 | c | absolutes only in distractors b,d |
+| id | flags |
+|---|---|
+| far-tax-chk1 | key much longest |
+| far-tax-chk2 | absolutes only in distractors a |
+| far-tax-03 | key much longest; absolutes only in distractors a |
+| far-tax-05 | absolutes only in distractors c |
+| far-tax-06 | key longest |
+| far-tax-08 | absolutes only in distractors d |
+| far-tax-10 | key longest; absolutes only in distractors b |
+| far-tax-11 | absolutes only in distractors d |
+| far-tax-12 | key much longest; absolutes only in distractors a |
+| far-tax-14 | absolutes only in distractors a,c |
+| far-tax-15 | key repeats most stem words (2) |
+| far-tax-20 | key much shortest |
+| far-x3-06 | absolutes only in distractors d |
+| far-x3-07 | absolutes only in distractors d |
+| far-x3-18 | absolutes only in distractors d |
+| far-x3-26 | absolutes only in distractors b,d |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

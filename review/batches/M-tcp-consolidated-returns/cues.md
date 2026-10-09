@@ -1,32 +1,32 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| tcp-cr-pre1 | b | key longest; absolutes only in distractors d |
-| tcp-cr-chk1 | b | key longest |
-| tcp-cr-chk2 | a | key longest |
-| tcp-cr-01 | c | key longest |
-| tcp-cr-02 | a | absolutes only in distractors d |
-| tcp-cr-05 | c | absolutes only in distractors d |
-| tcp-cr-07 | c | key longest |
-| tcp-cr-08 | d | key longest; all/none/both-of-above option |
-| tcp-cr-09 | d | key longest |
-| tcp-cr-10 | c | absolutes only in distractors d |
-| tcp-cr-14 | c | absolutes only in distractors d |
-| tcp-cr-17 | d | key much shortest |
-| tcp-cr-19 | b | key longest |
-| tcp-cr-20 | c | key much longest |
-| tcp-cr-23 | a | key longest; absolutes only in distractors b,c |
-| tcp-cr-24 | b | key much longest; absolutes only in distractors a,c |
-| tcp-cr-37 | c | absolutes only in distractors a,b |
-| tcp-cr-38 | d | key much longest |
-| tcp-cr-39 | a | absolutes only in distractors c |
-| tcp-cr-41 | c | key much shortest |
-| tcp-cr-42 | d | absolutes only in distractors b |
-| tcp-cr-44 | b | all/none/both-of-above option |
-| tcp-x2-05 | b | key longest; absolutes only in distractors a,c,d; key repeats most stem words (2) |
-| tcp-x2-27 | d | absolutes only in distractors b,c |
-| tcp-x2-28 | a | key repeats most stem words (2) |
+| id | flags |
+|---|---|
+| tcp-cr-pre1 | key longest; absolutes only in distractors d |
+| tcp-cr-chk1 | key longest |
+| tcp-cr-chk2 | key longest |
+| tcp-cr-01 | key longest |
+| tcp-cr-02 | absolutes only in distractors d |
+| tcp-cr-05 | absolutes only in distractors d |
+| tcp-cr-07 | key longest |
+| tcp-cr-08 | key longest; all/none/both-of-above option |
+| tcp-cr-09 | key longest |
+| tcp-cr-10 | absolutes only in distractors d |
+| tcp-cr-14 | absolutes only in distractors d |
+| tcp-cr-17 | key much shortest |
+| tcp-cr-19 | key longest |
+| tcp-cr-20 | key much longest |
+| tcp-cr-23 | key longest; absolutes only in distractors b,c |
+| tcp-cr-24 | key much longest; absolutes only in distractors a,c |
+| tcp-cr-37 | absolutes only in distractors a,b |
+| tcp-cr-38 | key much longest |
+| tcp-cr-39 | absolutes only in distractors c |
+| tcp-cr-41 | key much shortest |
+| tcp-cr-42 | absolutes only in distractors b |
+| tcp-cr-44 | all/none/both-of-above option |
+| tcp-x2-05 | key longest; absolutes only in distractors a,c,d; key repeats most stem words (2) |
+| tcp-x2-27 | absolutes only in distractors b,c |
+| tcp-x2-28 | key repeats most stem words (2) |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

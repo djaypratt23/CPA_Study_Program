@@ -1,20 +1,20 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| far-iso-chk1 | c | key much shortest |
-| far-iso-chk2 | a | absolutes only in distractors c |
-| far-iso-02 | c | key longest; absolutes only in distractors d |
-| far-iso-05 | b | absolutes only in distractors a |
-| far-iso-07 | c | key much longest; absolutes only in distractors a,b,d |
-| far-iso-10 | d | absolutes only in distractors c |
-| far-iso-11 | b | key much longest; absolutes only in distractors c |
-| far-iso-15 | c | absolutes only in distractors d |
-| far-iso-20 | d | key longest |
-| far-iso-21 | a | key longest; absolutes only in distractors b,c,d |
-| far-iso-23 | b | key much shortest |
-| far-iso-26 | a | absolutes only in distractors b,c; key repeats most stem words (2) |
-| far-iso-29 | d | absolutes only in distractors a,c |
+| id | flags |
+|---|---|
+| far-iso-chk1 | key much shortest |
+| far-iso-chk2 | absolutes only in distractors c |
+| far-iso-02 | key longest; absolutes only in distractors d |
+| far-iso-05 | absolutes only in distractors a |
+| far-iso-07 | key much longest; absolutes only in distractors a,b,d |
+| far-iso-10 | absolutes only in distractors c |
+| far-iso-11 | key much longest; absolutes only in distractors c |
+| far-iso-15 | absolutes only in distractors d |
+| far-iso-20 | key longest |
+| far-iso-21 | key longest; absolutes only in distractors b,c,d |
+| far-iso-23 | key much shortest |
+| far-iso-26 | absolutes only in distractors b,c; key repeats most stem words (2) |
+| far-iso-29 | absolutes only in distractors a,c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

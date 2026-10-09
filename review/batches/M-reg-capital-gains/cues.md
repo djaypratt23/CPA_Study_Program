@@ -1,21 +1,21 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-cg-pre1 | a | absolutes only in distractors c |
-| reg-cg-01 | c | key longest |
-| reg-cg-04 | a | absolutes only in distractors d |
-| reg-cg-05 | c | absolutes only in distractors d |
-| reg-cg-06 | d | absolutes only in distractors b |
-| reg-cg-08 | a | absolutes only in distractors b |
-| reg-cg-09 | c | key longest |
-| reg-cg-12 | c | key longest; key repeats most stem words (2) |
-| reg-cg-14 | a | key much longest |
-| reg-cg-16 | c | key much longest; absolutes only in distractors b |
-| reg-cg-18 | a | key much shortest |
-| reg-cg-27 | a | absolutes only in distractors d |
-| reg-cg-33 | c | key longest |
-| reg-x3-03 | b | absolutes only in distractors a,d |
+| id | flags |
+|---|---|
+| reg-cg-pre1 | absolutes only in distractors c |
+| reg-cg-01 | key longest |
+| reg-cg-04 | absolutes only in distractors d |
+| reg-cg-05 | absolutes only in distractors d |
+| reg-cg-06 | absolutes only in distractors b |
+| reg-cg-08 | absolutes only in distractors b |
+| reg-cg-09 | key longest |
+| reg-cg-12 | key longest; key repeats most stem words (2) |
+| reg-cg-14 | key much longest |
+| reg-cg-16 | key much longest; absolutes only in distractors b |
+| reg-cg-18 | key much shortest |
+| reg-cg-27 | absolutes only in distractors d |
+| reg-cg-33 | key longest |
+| reg-x3-03 | absolutes only in distractors a,d |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

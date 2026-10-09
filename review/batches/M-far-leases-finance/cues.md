@@ -1,19 +1,19 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| far-lsf-pre1 | b | key longest; absolutes only in distractors a,c,d |
-| far-lsf-chk2 | c | absolutes only in distractors d |
-| far-lsf-01 | b | key much longest |
-| far-lsf-05 | b | absolutes only in distractors d |
-| far-lsf-08 | b | key longest |
-| far-lsf-09 | c | absolutes only in distractors d |
-| far-lsf-10 | b | key longest |
-| far-lsf-11 | a | key longest |
-| far-lsf-14 | d | absolutes only in distractors c |
-| far-lsf-15 | a | key longest; absolutes only in distractors d |
-| far-lsf-17 | c | key longest; absolutes only in distractors b |
-| far-lsf-27 | c | absolutes only in distractors a,d |
+| id | flags |
+|---|---|
+| far-lsf-pre1 | key longest; absolutes only in distractors a,c,d |
+| far-lsf-chk2 | absolutes only in distractors d |
+| far-lsf-01 | key much longest |
+| far-lsf-05 | absolutes only in distractors d |
+| far-lsf-08 | key longest |
+| far-lsf-09 | absolutes only in distractors d |
+| far-lsf-10 | key longest |
+| far-lsf-11 | key longest |
+| far-lsf-14 | absolutes only in distractors c |
+| far-lsf-15 | key longest; absolutes only in distractors d |
+| far-lsf-17 | key longest; absolutes only in distractors b |
+| far-lsf-27 | absolutes only in distractors a,d |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

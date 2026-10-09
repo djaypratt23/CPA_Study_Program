@@ -1,29 +1,29 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-spi-01 | d | key longest; key repeats most stem words (2) |
-| aud-spi-02 | c | absolutes only in distractors d |
-| aud-spi-03 | a | absolutes only in distractors b,c |
-| aud-spi-04 | b | key longest; absolutes only in distractors a,c,d |
-| aud-spi-06 | b | absolutes only in distractors c,d |
-| aud-spi-07 | b | absolutes only in distractors a,d |
-| aud-spi-08 | c | absolutes only in distractors a |
-| aud-spi-09 | b | key longest; absolutes only in distractors c; key repeats most stem words (2) |
-| aud-spi-12 | b | key much shortest; absolutes only in distractors c,d |
-| aud-spi-13 | c | key much shortest; absolutes only in distractors d |
-| aud-spi-14 | d | key much shortest; absolutes only in distractors c |
-| aud-spi-16 | b | absolutes only in distractors d |
-| aud-spi-18 | d | absolutes only in distractors b,c |
-| aud-spi-19 | a | absolutes only in distractors b,c,d |
-| aud-spi-20 | b | key much shortest |
-| aud-spi-25 | b | absolutes only in distractors a |
-| aud-spi-27 | d | absolutes only in distractors a |
-| aud-x1-07 | a | absolutes only in distractors d |
-| aud-x1-08 | a | key much shortest |
-| aud-x1-09 | c | absolutes only in distractors a,d |
-| aud-x1-27 | c | absolutes only in distractors a,b,d |
-| aud-x1-28 | d | absolutes only in distractors a |
+| id | flags |
+|---|---|
+| aud-spi-01 | key longest; key repeats most stem words (2) |
+| aud-spi-02 | absolutes only in distractors d |
+| aud-spi-03 | absolutes only in distractors b,c |
+| aud-spi-04 | key longest; absolutes only in distractors a,c,d |
+| aud-spi-06 | absolutes only in distractors c,d |
+| aud-spi-07 | absolutes only in distractors a,d |
+| aud-spi-08 | absolutes only in distractors a |
+| aud-spi-09 | key longest; absolutes only in distractors c; key repeats most stem words (2) |
+| aud-spi-12 | key much shortest; absolutes only in distractors c,d |
+| aud-spi-13 | key much shortest; absolutes only in distractors d |
+| aud-spi-14 | key much shortest; absolutes only in distractors c |
+| aud-spi-16 | absolutes only in distractors d |
+| aud-spi-18 | absolutes only in distractors b,c |
+| aud-spi-19 | absolutes only in distractors b,c,d |
+| aud-spi-20 | key much shortest |
+| aud-spi-25 | absolutes only in distractors a |
+| aud-spi-27 | absolutes only in distractors a |
+| aud-x1-07 | absolutes only in distractors d |
+| aud-x1-08 | key much shortest |
+| aud-x1-09 | absolutes only in distractors a,d |
+| aud-x1-27 | absolutes only in distractors a,b,d |
+| aud-x1-28 | absolutes only in distractors a |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

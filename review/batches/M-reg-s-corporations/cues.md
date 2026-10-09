@@ -1,31 +1,31 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-sc-chk2 | d | absolutes only in distractors c |
-| reg-sc-03 | a | key much longest; absolutes only in distractors b; key repeats most stem words (3) |
-| reg-sc-05 | d | key much longest; key repeats most stem words (4) |
-| reg-sc-06 | b | absolutes only in distractors c |
-| reg-sc-07 | b | key much longest |
-| reg-sc-08 | b | key much longest; absolutes only in distractors d |
-| reg-sc-14 | c | key longest; absolutes only in distractors d |
-| reg-sc-15 | d | absolutes only in distractors a |
-| reg-sc-16 | a | absolutes only in distractors d |
-| reg-sc-17 | b | key much longest |
-| reg-sc-18 | c | key much shortest |
-| reg-sc-20 | a | absolutes only in distractors b,d |
-| reg-sc-21 | b | key longest; absolutes only in distractors d |
-| reg-sc-22 | c | key repeats most stem words (2) |
-| reg-sc-24 | b | key much shortest |
-| reg-sc-26 | d | absolutes only in distractors a |
-| reg-sc-27 | a | key much shortest |
-| reg-sc-29 | c | key much shortest; absolutes only in distractors d |
-| reg-sc-30 | d | absolutes only in distractors a,c |
-| reg-sc-31 | a | absolutes only in distractors b; key repeats most stem words (2) |
-| reg-sc-32 | b | absolutes only in distractors a,c,d |
-| reg-sc-35 | d | key longest |
-| reg-x5-17 | b | absolutes only in distractors d |
-| reg-x5-18 | b | key much longest |
+| id | flags |
+|---|---|
+| reg-sc-chk2 | absolutes only in distractors c |
+| reg-sc-03 | key much longest; absolutes only in distractors b; key repeats most stem words (3) |
+| reg-sc-05 | key much longest; key repeats most stem words (4) |
+| reg-sc-06 | absolutes only in distractors c |
+| reg-sc-07 | key much longest |
+| reg-sc-08 | key much longest; absolutes only in distractors d |
+| reg-sc-14 | key longest; absolutes only in distractors d |
+| reg-sc-15 | absolutes only in distractors a |
+| reg-sc-16 | absolutes only in distractors d |
+| reg-sc-17 | key much longest |
+| reg-sc-18 | key much shortest |
+| reg-sc-20 | absolutes only in distractors b,d |
+| reg-sc-21 | key longest; absolutes only in distractors d |
+| reg-sc-22 | key repeats most stem words (2) |
+| reg-sc-24 | key much shortest |
+| reg-sc-26 | absolutes only in distractors a |
+| reg-sc-27 | key much shortest |
+| reg-sc-29 | key much shortest; absolutes only in distractors d |
+| reg-sc-30 | absolutes only in distractors a,c |
+| reg-sc-31 | absolutes only in distractors b; key repeats most stem words (2) |
+| reg-sc-32 | absolutes only in distractors a,c,d |
+| reg-sc-35 | key longest |
+| reg-x5-17 | absolutes only in distractors d |
+| reg-x5-18 | key much longest |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

@@ -1,30 +1,30 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-se-pre1 | c | key longest |
-| aud-se-03 | a | absolutes only in distractors b |
-| aud-se-04 | c | key longest |
-| aud-se-05 | d | key longest; absolutes only in distractors c |
-| aud-se-07 | b | absolutes only in distractors a,d |
-| aud-se-08 | b | absolutes only in distractors a |
-| aud-se-09 | a | key much longest; absolutes only in distractors b; key repeats most stem words (2) |
-| aud-se-10 | b | absolutes only in distractors c |
-| aud-se-11 | b | absolutes only in distractors c |
-| aud-se-12 | a | key longest |
-| aud-se-14 | c | key longest |
-| aud-se-15 | d | key longest |
-| aud-se-17 | c | absolutes only in distractors b |
-| aud-se-19 | a | absolutes only in distractors b,d; key repeats most stem words (2) |
-| aud-se-20 | b | key longest |
-| aud-se-21 | b | absolutes only in distractors c |
-| aud-se-22 | c | absolutes only in distractors a |
-| aud-se-23 | d | absolutes only in distractors b,c |
-| aud-se-26 | c | absolutes only in distractors b |
-| aud-x3-24 | b | key much shortest |
-| aud-x3-25 | b | key longest; absolutes only in distractors a |
-| aud-x3-40 | d | absolutes only in distractors a |
-| aud-x3-53 | a | key much shortest; absolutes only in distractors b |
+| id | flags |
+|---|---|
+| aud-se-pre1 | key longest |
+| aud-se-03 | absolutes only in distractors b |
+| aud-se-04 | key longest |
+| aud-se-05 | key longest; absolutes only in distractors c |
+| aud-se-07 | absolutes only in distractors a,d |
+| aud-se-08 | absolutes only in distractors a |
+| aud-se-09 | key much longest; absolutes only in distractors b; key repeats most stem words (2) |
+| aud-se-10 | absolutes only in distractors c |
+| aud-se-11 | absolutes only in distractors c |
+| aud-se-12 | key longest |
+| aud-se-14 | key longest |
+| aud-se-15 | key longest |
+| aud-se-17 | absolutes only in distractors b |
+| aud-se-19 | absolutes only in distractors b,d; key repeats most stem words (2) |
+| aud-se-20 | key longest |
+| aud-se-21 | absolutes only in distractors c |
+| aud-se-22 | absolutes only in distractors a |
+| aud-se-23 | absolutes only in distractors b,c |
+| aud-se-26 | absolutes only in distractors b |
+| aud-x3-24 | key much shortest |
+| aud-x3-25 | key longest; absolutes only in distractors a |
+| aud-x3-40 | absolutes only in distractors a |
+| aud-x3-53 | key much shortest; absolutes only in distractors b |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

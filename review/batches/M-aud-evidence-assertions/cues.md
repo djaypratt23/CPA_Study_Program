@@ -1,21 +1,21 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-ev-01 | d | absolutes only in distractors c |
-| aud-ev-02 | a | absolutes only in distractors b |
-| aud-ev-03 | c | key longest |
-| aud-ev-04 | a | key much shortest |
-| aud-ev-05 | d | absolutes only in distractors a,b |
-| aud-ev-10 | d | key longest |
-| aud-ev-11 | d | key longest |
-| aud-ev-12 | a | key longest |
-| aud-ev-13 | a | key much longest |
-| aud-ev-14 | b | key much shortest |
-| aud-ev-15 | c | key longest |
-| aud-ev-17 | d | absolutes only in distractors c |
-| aud-ev-23 | a | absolutes only in distractors c |
-| aud-x3-41 | a | absolutes only in distractors b,c,d |
+| id | flags |
+|---|---|
+| aud-ev-01 | absolutes only in distractors c |
+| aud-ev-02 | absolutes only in distractors b |
+| aud-ev-03 | key longest |
+| aud-ev-04 | key much shortest |
+| aud-ev-05 | absolutes only in distractors a,b |
+| aud-ev-10 | key longest |
+| aud-ev-11 | key longest |
+| aud-ev-12 | key longest |
+| aud-ev-13 | key much longest |
+| aud-ev-14 | key much shortest |
+| aud-ev-15 | key longest |
+| aud-ev-17 | absolutes only in distractors c |
+| aud-ev-23 | absolutes only in distractors c |
+| aud-x3-41 | absolutes only in distractors b,c,d |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

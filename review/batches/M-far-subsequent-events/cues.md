@@ -1,30 +1,30 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| far-se-chk1 | c | key much longest |
-| far-se-chk2 | a | absolutes only in distractors b,d; key repeats most stem words (3) |
-| far-se-01 | b | absolutes only in distractors a; key repeats most stem words (3) |
-| far-se-04 | a | absolutes only in distractors b |
-| far-se-05 | b | absolutes only in distractors a |
-| far-se-06 | c | key much shortest |
-| far-se-07 | b | key longest; absolutes only in distractors a,d; key repeats most stem words (3) |
-| far-se-08 | a | key longest; absolutes only in distractors b,d |
-| far-se-09 | b | absolutes only in distractors a; key repeats most stem words (2) |
-| far-se-10 | b | absolutes only in distractors a |
-| far-se-13 | b | key much shortest; absolutes only in distractors d |
-| far-se-14 | c | absolutes only in distractors d |
-| far-se-15 | d | key much longest; absolutes only in distractors a,b,c |
-| far-se-17 | d | absolutes only in distractors a; key repeats most stem words (2) |
-| far-se-18 | a | absolutes only in distractors b |
-| far-se-20 | c | key repeats most stem words (3) |
-| far-se-21 | a | absolutes only in distractors b,c,d |
-| far-se-23 | c | key repeats most stem words (3) |
-| far-se-24 | d | key much shortest; absolutes only in distractors c |
-| far-se-26 | b | absolutes only in distractors d |
-| far-se-27 | c | absolutes only in distractors a,d |
-| far-x3-15 | a | key much shortest |
-| far-x3-23 | d | absolutes only in distractors a |
+| id | flags |
+|---|---|
+| far-se-chk1 | key much longest |
+| far-se-chk2 | absolutes only in distractors b,d; key repeats most stem words (3) |
+| far-se-01 | absolutes only in distractors a; key repeats most stem words (3) |
+| far-se-04 | absolutes only in distractors b |
+| far-se-05 | absolutes only in distractors a |
+| far-se-06 | key much shortest |
+| far-se-07 | key longest; absolutes only in distractors a,d; key repeats most stem words (3) |
+| far-se-08 | key longest; absolutes only in distractors b,d |
+| far-se-09 | absolutes only in distractors a; key repeats most stem words (2) |
+| far-se-10 | absolutes only in distractors a |
+| far-se-13 | key much shortest; absolutes only in distractors d |
+| far-se-14 | absolutes only in distractors d |
+| far-se-15 | key much longest; absolutes only in distractors a,b,c |
+| far-se-17 | absolutes only in distractors a; key repeats most stem words (2) |
+| far-se-18 | absolutes only in distractors b |
+| far-se-20 | key repeats most stem words (3) |
+| far-se-21 | absolutes only in distractors b,c,d |
+| far-se-23 | key repeats most stem words (3) |
+| far-se-24 | key much shortest; absolutes only in distractors c |
+| far-se-26 | absolutes only in distractors d |
+| far-se-27 | absolutes only in distractors a,d |
+| far-x3-15 | key much shortest |
+| far-x3-23 | absolutes only in distractors a |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

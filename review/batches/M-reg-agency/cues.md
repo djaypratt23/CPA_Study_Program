@@ -1,44 +1,44 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-ag-pre1 | b | key longest |
-| reg-ag-chk1 | b | absolutes only in distractors c |
-| reg-ag-01 | c | absolutes only in distractors a,b |
-| reg-ag-02 | c | absolutes only in distractors a |
-| reg-ag-04 | a | key much shortest |
-| reg-ag-05 | c | absolutes only in distractors a,b |
-| reg-ag-06 | d | key longest |
-| reg-ag-07 | d | key longest; absolutes only in distractors a |
-| reg-ag-08 | c | absolutes only in distractors a,b |
-| reg-ag-09 | a | key much longest |
-| reg-ag-10 | d | absolutes only in distractors a,b,c |
-| reg-ag-12 | d | key much shortest |
-| reg-ag-13 | a | absolutes only in distractors b,c,d |
-| reg-ag-14 | b | absolutes only in distractors d |
-| reg-ag-15 | c | key longest; absolutes only in distractors b |
-| reg-ag-16 | c | absolutes only in distractors a,b,d |
-| reg-ag-17 | d | absolutes only in distractors a,c |
-| reg-ag-18 | a | key much shortest |
-| reg-ag-19 | b | absolutes only in distractors a,c,d |
-| reg-ag-21 | a | key much shortest; absolutes only in distractors b,c |
-| reg-ag-22 | b | absolutes only in distractors a,c,d |
-| reg-ag-23 | c | all/none/both-of-above option; absolutes only in distractors d |
-| reg-ag-24 | d | key much shortest; absolutes only in distractors a,b,c |
-| reg-ag-25 | a | absolutes only in distractors b,c,d |
-| reg-ag-26 | b | absolutes only in distractors a,c; key repeats most stem words (2) |
-| reg-ag-27 | c | absolutes only in distractors a |
-| reg-ag-29 | a | absolutes only in distractors b,d |
-| reg-ag-30 | b | key longest; absolutes only in distractors a,c,d |
-| reg-ag-31 | c | absolutes only in distractors d |
-| reg-ag-32 | d | key much shortest |
-| reg-ag-33 | a | key much shortest |
-| reg-x2-01 | c | absolutes only in distractors a,b,d |
-| reg-x2-02 | d | key much longest |
-| reg-x2-03 | a | key much shortest |
-| reg-x2-17 | d | absolutes only in distractors b |
-| reg-x2-18 | a | absolutes only in distractors b,c |
-| reg-x2-24 | c | absolutes only in distractors a |
+| id | flags |
+|---|---|
+| reg-ag-pre1 | key longest |
+| reg-ag-chk1 | absolutes only in distractors c |
+| reg-ag-01 | absolutes only in distractors a,b |
+| reg-ag-02 | absolutes only in distractors a |
+| reg-ag-04 | key much shortest |
+| reg-ag-05 | absolutes only in distractors a,b |
+| reg-ag-06 | key longest |
+| reg-ag-07 | key longest; absolutes only in distractors a |
+| reg-ag-08 | absolutes only in distractors a,b |
+| reg-ag-09 | key much longest |
+| reg-ag-10 | absolutes only in distractors a,b,c |
+| reg-ag-12 | key much shortest |
+| reg-ag-13 | absolutes only in distractors b,c,d |
+| reg-ag-14 | absolutes only in distractors d |
+| reg-ag-15 | key longest; absolutes only in distractors b |
+| reg-ag-16 | absolutes only in distractors a,b,d |
+| reg-ag-17 | absolutes only in distractors a,c |
+| reg-ag-18 | key much shortest |
+| reg-ag-19 | absolutes only in distractors a,c,d |
+| reg-ag-21 | key much shortest; absolutes only in distractors b,c |
+| reg-ag-22 | absolutes only in distractors a,c,d |
+| reg-ag-23 | all/none/both-of-above option; absolutes only in distractors d |
+| reg-ag-24 | key much shortest; absolutes only in distractors a,b,c |
+| reg-ag-25 | absolutes only in distractors b,c,d |
+| reg-ag-26 | absolutes only in distractors a,c; key repeats most stem words (2) |
+| reg-ag-27 | absolutes only in distractors a |
+| reg-ag-29 | absolutes only in distractors b,d |
+| reg-ag-30 | key longest; absolutes only in distractors a,c,d |
+| reg-ag-31 | absolutes only in distractors d |
+| reg-ag-32 | key much shortest |
+| reg-ag-33 | key much shortest |
+| reg-x2-01 | absolutes only in distractors a,b,d |
+| reg-x2-02 | key much longest |
+| reg-x2-03 | key much shortest |
+| reg-x2-17 | absolutes only in distractors b |
+| reg-x2-18 | absolutes only in distractors b,c |
+| reg-x2-24 | absolutes only in distractors a |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

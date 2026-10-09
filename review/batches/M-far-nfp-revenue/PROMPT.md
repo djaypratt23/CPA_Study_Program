@@ -10,7 +10,7 @@ You are one reviewer in an exhaustive review of a CPA exam study platform (repo 
   - Blind packet (stems, choices, TBS prompts — no keys): `review/batches/M-far-nfp-revenue/blind.md`
   - Keyed items (MCQs with keys and explanations, flashcards, TBS file list): `review/batches/M-far-nfp-revenue/items.json`
   - TBS files: `content/far/tbs/far-tbs-u4-nfp.json`, `content/far/tbs/far-tbs-x1-nfp.json`
-  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-far-nfp-revenue/cues.md`
+  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-far-nfp-revenue/cues.md` — it reveals key information, so open it only after `blind-answers.csv` is saved
   - Manifest (every item id you must cover): `review/batches/M-far-nfp-revenue/manifest.json`
   - Section config (module order, Blueprint weights, skill allocation): `content/sections/far.yaml`
   - Schema and validator rules: `src/content/schema.ts`, `src/content/build.ts`
@@ -46,6 +46,7 @@ Read files in large chunks (whole files, or 400–800 lines at a time), not item
 Use `category` from: content-correctness, item-quality, tbs, lesson, currency, coverage, flow, pedagogy. Be precise and evidence-based; don't pad with trivia, and don't hold back real issues. Low-confidence suspicions go in with `"confidence":"low"`.
 
 ## Review standards (verbatim from the review brief, sections 2–4; sections 3–4 apply to you only as far as your module's lesson and items are concerned — the app itself is reviewed separately)
+
 
 ## 2. Content correctness
 

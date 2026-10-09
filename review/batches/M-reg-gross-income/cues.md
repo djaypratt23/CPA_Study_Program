@@ -1,31 +1,31 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-gi-chk1 | c | absolutes only in distractors a |
-| reg-gi-chk2 | d | absolutes only in distractors b |
-| reg-gi-01 | d | key much longest |
-| reg-gi-03 | c | absolutes only in distractors a |
-| reg-gi-05 | b | key much shortest; absolutes only in distractors d |
-| reg-gi-07 | a | key much longest |
-| reg-gi-08 | b | absolutes only in distractors d |
-| reg-gi-09 | b | absolutes only in distractors d |
-| reg-gi-10 | c | key much longest |
-| reg-gi-11 | c | key longest |
-| reg-gi-12 | a | key much longest |
-| reg-gi-13 | b | absolutes only in distractors c,d |
-| reg-gi-14 | c | absolutes only in distractors d |
-| reg-gi-17 | d | key longest; absolutes only in distractors a |
-| reg-gi-21 | a | key longest |
-| reg-gi-22 | b | absolutes only in distractors c |
-| reg-gi-25 | a | key much shortest; absolutes only in distractors d |
-| reg-gi-26 | b | key much shortest; absolutes only in distractors d |
-| reg-gi-28 | d | key longest |
-| reg-gi-29 | a | absolutes only in distractors c |
-| reg-gi-30 | b | absolutes only in distractors c |
-| reg-x4-05 | d | key much shortest; absolutes only in distractors a,b |
-| reg-x4-06 | c | absolutes only in distractors d |
-| reg-x4-07 | d | absolutes only in distractors b |
+| id | flags |
+|---|---|
+| reg-gi-chk1 | absolutes only in distractors a |
+| reg-gi-chk2 | absolutes only in distractors b |
+| reg-gi-01 | key much longest |
+| reg-gi-03 | absolutes only in distractors a |
+| reg-gi-05 | key much shortest; absolutes only in distractors d |
+| reg-gi-07 | key much longest |
+| reg-gi-08 | absolutes only in distractors d |
+| reg-gi-09 | absolutes only in distractors d |
+| reg-gi-10 | key much longest |
+| reg-gi-11 | key longest |
+| reg-gi-12 | key much longest |
+| reg-gi-13 | absolutes only in distractors c,d |
+| reg-gi-14 | absolutes only in distractors d |
+| reg-gi-17 | key longest; absolutes only in distractors a |
+| reg-gi-21 | key longest |
+| reg-gi-22 | absolutes only in distractors c |
+| reg-gi-25 | key much shortest; absolutes only in distractors d |
+| reg-gi-26 | key much shortest; absolutes only in distractors d |
+| reg-gi-28 | key longest |
+| reg-gi-29 | absolutes only in distractors c |
+| reg-gi-30 | absolutes only in distractors c |
+| reg-x4-05 | key much shortest; absolutes only in distractors a,b |
+| reg-x4-06 | absolutes only in distractors d |
+| reg-x4-07 | absolutes only in distractors b |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

@@ -1,24 +1,24 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-toc-chk1 | c | absolutes only in distractors d |
-| aud-toc-chk2 | d | absolutes only in distractors a,b |
-| aud-toc-02 | c | key longest |
-| aud-toc-04 | a | absolutes only in distractors d |
-| aud-toc-07 | b | key longest |
-| aud-toc-09 | b | key longest |
-| aud-toc-10 | a | absolutes only in distractors b,c,d |
-| aud-toc-14 | a | absolutes only in distractors b,c,d |
-| aud-toc-16 | c | absolutes only in distractors b,d |
-| aud-toc-17 | d | absolutes only in distractors b,c |
-| aud-toc-18 | a | absolutes only in distractors c,d |
-| aud-toc-19 | b | key much shortest; absolutes only in distractors c,d |
-| aud-toc-20 | c | absolutes only in distractors a |
-| aud-toc-25 | a | absolutes only in distractors c,d |
-| aud-toc-26 | b | absolutes only in distractors a,d |
-| aud-x2-22 | b | key longest |
-| aud-x2-34 | c | absolutes only in distractors b |
+| id | flags |
+|---|---|
+| aud-toc-chk1 | absolutes only in distractors d |
+| aud-toc-chk2 | absolutes only in distractors a,b |
+| aud-toc-02 | key longest |
+| aud-toc-04 | absolutes only in distractors d |
+| aud-toc-07 | key longest |
+| aud-toc-09 | key longest |
+| aud-toc-10 | absolutes only in distractors b,c,d |
+| aud-toc-14 | absolutes only in distractors b,c,d |
+| aud-toc-16 | absolutes only in distractors b,d |
+| aud-toc-17 | absolutes only in distractors b,c |
+| aud-toc-18 | absolutes only in distractors c,d |
+| aud-toc-19 | key much shortest; absolutes only in distractors c,d |
+| aud-toc-20 | absolutes only in distractors a |
+| aud-toc-25 | absolutes only in distractors c,d |
+| aud-toc-26 | absolutes only in distractors a,d |
+| aud-x2-22 | key longest |
+| aud-x2-34 | absolutes only in distractors b |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

@@ -1,25 +1,25 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-rp-pre1 | c | key longest |
-| aud-rp-chk1 | d | key longest |
-| aud-rp-chk2 | a | key much longest; absolutes only in distractors b,c,d |
-| aud-rp-02 | d | key longest |
-| aud-rp-04 | c | key longest; absolutes only in distractors a,b,d |
-| aud-rp-05 | d | key longest |
-| aud-rp-07 | b | key much longest; absolutes only in distractors a |
-| aud-rp-09 | b | absolutes only in distractors c |
-| aud-rp-10 | b | absolutes only in distractors a,d |
-| aud-rp-11 | a | absolutes only in distractors c,d |
-| aud-rp-14 | d | absolutes only in distractors b |
-| aud-rp-15 | a | key longest |
-| aud-rp-16 | d | key longest; absolutes only in distractors c |
-| aud-rp-17 | a | absolutes only in distractors c |
-| aud-rp-18 | b | absolutes only in distractors c |
-| aud-rp-23 | a | key repeats most stem words (2) |
-| aud-rp-25 | c | key longest; absolutes only in distractors d |
-| aud-x4-07 | a | key much longest |
+| id | flags |
+|---|---|
+| aud-rp-pre1 | key longest |
+| aud-rp-chk1 | key longest |
+| aud-rp-chk2 | key much longest; absolutes only in distractors b,c,d |
+| aud-rp-02 | key longest |
+| aud-rp-04 | key longest; absolutes only in distractors a,b,d |
+| aud-rp-05 | key longest |
+| aud-rp-07 | key much longest; absolutes only in distractors a |
+| aud-rp-09 | absolutes only in distractors c |
+| aud-rp-10 | absolutes only in distractors a,d |
+| aud-rp-11 | absolutes only in distractors c,d |
+| aud-rp-14 | absolutes only in distractors b |
+| aud-rp-15 | key longest |
+| aud-rp-16 | key longest; absolutes only in distractors c |
+| aud-rp-17 | absolutes only in distractors c |
+| aud-rp-18 | absolutes only in distractors c |
+| aud-rp-23 | key repeats most stem words (2) |
+| aud-rp-25 | key longest; absolutes only in distractors d |
+| aud-x4-07 | key much longest |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

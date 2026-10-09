@@ -1,25 +1,25 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-pl-pre1 | c | key much shortest |
-| aud-pl-chk1 | c | key longest |
-| aud-pl-01 | d | absolutes only in distractors a,b,c |
-| aud-pl-04 | a | key longest |
-| aud-pl-06 | b | key longest |
-| aud-pl-07 | b | key longest; absolutes only in distractors d |
-| aud-pl-08 | b | key longest; absolutes only in distractors a,c,d |
-| aud-pl-11 | c | absolutes only in distractors a |
-| aud-pl-12 | d | key longest; absolutes only in distractors b |
-| aud-pl-14 | b | key longest |
-| aud-pl-15 | c | key longest |
-| aud-pl-16 | a | key longest; absolutes only in distractors c |
-| aud-pl-17 | b | key longest; absolutes only in distractors a,d |
-| aud-pl-18 | c | key longest; absolutes only in distractors a |
-| aud-pl-19 | d | absolutes only in distractors b,c |
-| aud-pl-23 | d | absolutes only in distractors a |
-| aud-x2-02 | d | absolutes only in distractors a,c |
-| aud-x2-04 | d | key longest; absolutes only in distractors b,c |
+| id | flags |
+|---|---|
+| aud-pl-pre1 | key much shortest |
+| aud-pl-chk1 | key longest |
+| aud-pl-01 | absolutes only in distractors a,b,c |
+| aud-pl-04 | key longest |
+| aud-pl-06 | key longest |
+| aud-pl-07 | key longest; absolutes only in distractors d |
+| aud-pl-08 | key longest; absolutes only in distractors a,c,d |
+| aud-pl-11 | absolutes only in distractors a |
+| aud-pl-12 | key longest; absolutes only in distractors b |
+| aud-pl-14 | key longest |
+| aud-pl-15 | key longest |
+| aud-pl-16 | key longest; absolutes only in distractors c |
+| aud-pl-17 | key longest; absolutes only in distractors a,d |
+| aud-pl-18 | key longest; absolutes only in distractors a |
+| aud-pl-19 | absolutes only in distractors b,c |
+| aud-pl-23 | absolutes only in distractors a |
+| aud-x2-02 | absolutes only in distractors a,c |
+| aud-x2-04 | key longest; absolutes only in distractors b,c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

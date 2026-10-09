@@ -1,25 +1,25 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-pb-pre1 | c | key much longest; key repeats most stem words (2) |
-| reg-pb-chk1 | c | absolutes only in distractors d |
-| reg-pb-01 | a | absolutes only in distractors c |
-| reg-pb-02 | c | absolutes only in distractors d |
-| reg-pb-04 | b | absolutes only in distractors c |
-| reg-pb-07 | c | key much shortest; absolutes only in distractors a,b |
-| reg-pb-09 | d | absolutes only in distractors c |
-| reg-pb-10 | a | absolutes only in distractors b |
-| reg-pb-14 | d | key much longest |
-| reg-pb-15 | a | absolutes only in distractors d |
-| reg-pb-18 | c | key longest |
-| reg-pb-19 | d | absolutes only in distractors a |
-| reg-pb-30 | c | absolutes only in distractors a,b,d |
-| reg-pb-32 | b | absolutes only in distractors d |
-| reg-pb-33 | c | key much shortest |
-| reg-x3-01 | b | absolutes only in distractors d |
-| reg-x3-02 | c | key much shortest |
-| reg-x3-09 | b | key repeats most stem words (2) |
+| id | flags |
+|---|---|
+| reg-pb-pre1 | key much longest; key repeats most stem words (2) |
+| reg-pb-chk1 | absolutes only in distractors d |
+| reg-pb-01 | absolutes only in distractors c |
+| reg-pb-02 | absolutes only in distractors d |
+| reg-pb-04 | absolutes only in distractors c |
+| reg-pb-07 | key much shortest; absolutes only in distractors a,b |
+| reg-pb-09 | absolutes only in distractors c |
+| reg-pb-10 | absolutes only in distractors b |
+| reg-pb-14 | key much longest |
+| reg-pb-15 | absolutes only in distractors d |
+| reg-pb-18 | key longest |
+| reg-pb-19 | absolutes only in distractors a |
+| reg-pb-30 | absolutes only in distractors a,b,d |
+| reg-pb-32 | absolutes only in distractors d |
+| reg-pb-33 | key much shortest |
+| reg-x3-01 | absolutes only in distractors d |
+| reg-x3-02 | key much shortest |
+| reg-x3-09 | key repeats most stem words (2) |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

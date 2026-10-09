@@ -1,23 +1,23 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-ot-chk2 | a | absolutes only in distractors d |
-| reg-ot-01 | c | key longest |
-| reg-ot-02 | d | key longest |
-| reg-ot-03 | c | absolutes only in distractors b |
-| reg-ot-04 | d | absolutes only in distractors b |
-| reg-ot-06 | a | absolutes only in distractors d |
-| reg-ot-07 | b | absolutes only in distractors a,c |
-| reg-ot-09 | b | absolutes only in distractors c |
-| reg-ot-10 | a | key longest |
-| reg-ot-16 | a | key longest |
-| reg-ot-26 | c | absolutes only in distractors b |
-| reg-ot-29 | b | key longest |
-| reg-ot-32 | a | key longest |
-| reg-ot-33 | b | absolutes only in distractors a,c,d |
-| reg-ot-34 | c | key much shortest; absolutes only in distractors a,b,d |
-| reg-x4-42 | d | key much shortest |
+| id | flags |
+|---|---|
+| reg-ot-chk2 | absolutes only in distractors d |
+| reg-ot-01 | key longest |
+| reg-ot-02 | key longest |
+| reg-ot-03 | absolutes only in distractors b |
+| reg-ot-04 | absolutes only in distractors b |
+| reg-ot-06 | absolutes only in distractors d |
+| reg-ot-07 | absolutes only in distractors a,c |
+| reg-ot-09 | absolutes only in distractors c |
+| reg-ot-10 | key longest |
+| reg-ot-16 | key longest |
+| reg-ot-26 | absolutes only in distractors b |
+| reg-ot-29 | key longest |
+| reg-ot-32 | key longest |
+| reg-ot-33 | absolutes only in distractors a,c,d |
+| reg-ot-34 | key much shortest; absolutes only in distractors a,b,d |
+| reg-x4-42 | key much shortest |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

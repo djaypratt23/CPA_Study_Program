@@ -1,25 +1,25 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-id-pre1 | a | key much longest |
-| reg-id-chk2 | d | absolutes only in distractors b |
-| reg-id-01 | a | absolutes only in distractors d |
-| reg-id-04 | a | absolutes only in distractors b,c |
-| reg-id-05 | c | absolutes only in distractors d |
-| reg-id-06 | d | absolutes only in distractors b |
-| reg-id-07 | b | absolutes only in distractors a,c |
-| reg-id-08 | b | key much longest; absolutes only in distractors a |
-| reg-id-10 | b | key longest; absolutes only in distractors c |
-| reg-id-18 | d | absolutes only in distractors b,c |
-| reg-id-19 | a | key much shortest |
-| reg-id-26 | b | key longest; absolutes only in distractors a |
-| reg-id-27 | c | absolutes only in distractors a,b,d |
-| reg-id-29 | a | absolutes only in distractors b,c |
-| reg-id-30 | b | key much shortest |
-| reg-id-31 | b | key much longest |
-| reg-x4-13 | d | absolutes only in distractors a |
-| reg-x4-15 | c | absolutes only in distractors b |
+| id | flags |
+|---|---|
+| reg-id-pre1 | key much longest |
+| reg-id-chk2 | absolutes only in distractors b |
+| reg-id-01 | absolutes only in distractors d |
+| reg-id-04 | absolutes only in distractors b,c |
+| reg-id-05 | absolutes only in distractors d |
+| reg-id-06 | absolutes only in distractors b |
+| reg-id-07 | absolutes only in distractors a,c |
+| reg-id-08 | key much longest; absolutes only in distractors a |
+| reg-id-10 | key longest; absolutes only in distractors c |
+| reg-id-18 | absolutes only in distractors b,c |
+| reg-id-19 | key much shortest |
+| reg-id-26 | key longest; absolutes only in distractors a |
+| reg-id-27 | absolutes only in distractors a,b,d |
+| reg-id-29 | absolutes only in distractors b,c |
+| reg-id-30 | key much shortest |
+| reg-id-31 | key much longest |
+| reg-x4-13 | absolutes only in distractors a |
+| reg-x4-15 | absolutes only in distractors b |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

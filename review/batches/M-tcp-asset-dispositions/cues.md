@@ -1,29 +1,29 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| tcp-ad-chk2 | b | key longest |
-| tcp-ad-01 | d | absolutes only in distractors b |
-| tcp-ad-02 | c | absolutes only in distractors d |
-| tcp-ad-05 | d | key longest; absolutes only in distractors b |
-| tcp-ad-07 | c | absolutes only in distractors d |
-| tcp-ad-08 | c | absolutes only in distractors d |
-| tcp-ad-09 | c | absolutes only in distractors b,d |
-| tcp-cr2-09 | c | key longest; absolutes only in distractors a |
-| tcp-ad-13 | b | key longest |
-| tcp-ad-14 | c | key much shortest; absolutes only in distractors d |
-| tcp-ad-17 | c | absolutes only in distractors b |
-| tcp-ad-21 | b | key longest |
-| tcp-ad-30 | d | key repeats most stem words (2) |
-| tcp-ad-35 | a | key longest |
-| tcp-ad-40 | b | key longest; absolutes only in distractors d |
-| tcp-ad-41 | c | absolutes only in distractors a,b |
-| tcp-ad-42 | d | key longest |
-| tcp-ad-43 | a | key longest; absolutes only in distractors c |
-| tcp-ad-44 | b | absolutes only in distractors c |
-| tcp-ad-45 | c | absolutes only in distractors d |
-| tcp-x4-02 | b | absolutes only in distractors d |
-| tcp-x4-03 | a | absolutes only in distractors d |
+| id | flags |
+|---|---|
+| tcp-ad-chk2 | key longest |
+| tcp-ad-01 | absolutes only in distractors b |
+| tcp-ad-02 | absolutes only in distractors d |
+| tcp-ad-05 | key longest; absolutes only in distractors b |
+| tcp-ad-07 | absolutes only in distractors d |
+| tcp-ad-08 | absolutes only in distractors d |
+| tcp-ad-09 | absolutes only in distractors b,d |
+| tcp-cr2-09 | key longest; absolutes only in distractors a |
+| tcp-ad-13 | key longest |
+| tcp-ad-14 | key much shortest; absolutes only in distractors d |
+| tcp-ad-17 | absolutes only in distractors b |
+| tcp-ad-21 | key longest |
+| tcp-ad-30 | key repeats most stem words (2) |
+| tcp-ad-35 | key longest |
+| tcp-ad-40 | key longest; absolutes only in distractors d |
+| tcp-ad-41 | absolutes only in distractors a,b |
+| tcp-ad-42 | key longest |
+| tcp-ad-43 | key longest; absolutes only in distractors c |
+| tcp-ad-44 | absolutes only in distractors c |
+| tcp-ad-45 | absolutes only in distractors d |
+| tcp-x4-02 | absolutes only in distractors d |
+| tcp-x4-03 | absolutes only in distractors d |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

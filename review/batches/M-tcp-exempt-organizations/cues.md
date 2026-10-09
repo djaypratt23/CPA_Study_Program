@@ -1,37 +1,37 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| tcp-eo-chk1 | b | absolutes only in distractors d |
-| tcp-eo-chk2 | a | key longest |
-| tcp-eo-02 | d | key longest; absolutes only in distractors b |
-| tcp-eo-03 | a | absolutes only in distractors d |
-| tcp-eo-05 | a | absolutes only in distractors c,d |
-| tcp-eo-06 | d | absolutes only in distractors b |
-| tcp-eo-08 | c | absolutes only in distractors d |
-| tcp-eo-09 | b | absolutes only in distractors c |
-| tcp-eo-10 | b | absolutes only in distractors a |
-| tcp-eo-13 | c | absolutes only in distractors a,b,d |
-| tcp-eo-15 | a | absolutes only in distractors d |
-| tcp-eo-17 | c | key longest |
-| tcp-eo-18 | d | absolutes only in distractors c |
-| tcp-eo-19 | a | key longest; absolutes only in distractors b,c |
-| tcp-eo-21 | d | key longest |
-| tcp-eo-22 | a | absolutes only in distractors c |
-| tcp-eo-23 | b | absolutes only in distractors d |
-| tcp-eo-24 | b | key much longest |
-| tcp-eo-25 | c | absolutes only in distractors a,d |
-| tcp-eo-31 | a | key much shortest |
-| tcp-eo-32 | b | key much shortest |
-| tcp-eo-33 | c | key much shortest |
-| tcp-eo-37 | c | key repeats most stem words (2) |
-| tcp-eo-41 | c | all/none/both-of-above option |
-| tcp-eo-42 | d | key longest; absolutes only in distractors c |
-| tcp-eo-44 | b | absolutes only in distractors a,c |
-| tcp-eo-45 | c | key longest |
-| tcp-x2-21 | b | key much longest |
-| tcp-x2-22 | a | absolutes only in distractors d |
-| reg-x5-20 | b | key much longest |
+| id | flags |
+|---|---|
+| tcp-eo-chk1 | absolutes only in distractors d |
+| tcp-eo-chk2 | key longest |
+| tcp-eo-02 | key longest; absolutes only in distractors b |
+| tcp-eo-03 | absolutes only in distractors d |
+| tcp-eo-05 | absolutes only in distractors c,d |
+| tcp-eo-06 | absolutes only in distractors b |
+| tcp-eo-08 | absolutes only in distractors d |
+| tcp-eo-09 | absolutes only in distractors c |
+| tcp-eo-10 | absolutes only in distractors a |
+| tcp-eo-13 | absolutes only in distractors a,b,d |
+| tcp-eo-15 | absolutes only in distractors d |
+| tcp-eo-17 | key longest |
+| tcp-eo-18 | absolutes only in distractors c |
+| tcp-eo-19 | key longest; absolutes only in distractors b,c |
+| tcp-eo-21 | key longest |
+| tcp-eo-22 | absolutes only in distractors c |
+| tcp-eo-23 | absolutes only in distractors d |
+| tcp-eo-24 | key much longest |
+| tcp-eo-25 | absolutes only in distractors a,d |
+| tcp-eo-31 | key much shortest |
+| tcp-eo-32 | key much shortest |
+| tcp-eo-33 | key much shortest |
+| tcp-eo-37 | key repeats most stem words (2) |
+| tcp-eo-41 | all/none/both-of-above option |
+| tcp-eo-42 | key longest; absolutes only in distractors c |
+| tcp-eo-44 | absolutes only in distractors a,c |
+| tcp-eo-45 | key longest |
+| tcp-x2-21 | key much longest |
+| tcp-x2-22 | absolutes only in distractors d |
+| reg-x5-20 | key much longest |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

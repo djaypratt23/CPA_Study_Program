@@ -1,22 +1,22 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-gov-04 | d | absolutes only in distractors b |
-| aud-gov-06 | b | absolutes only in distractors c |
-| aud-gov-07 | c | key longest; absolutes only in distractors a |
-| aud-gov-08 | d | key much shortest |
-| aud-gov-10 | b | absolutes only in distractors c |
-| aud-gov-11 | c | absolutes only in distractors d |
-| aud-gov-12 | d | key longest |
-| aud-gov-13 | a | absolutes only in distractors c |
-| aud-gov-14 | b | absolutes only in distractors a,c,d |
-| aud-gov-15 | c | absolutes only in distractors a,d |
-| aud-gov-19 | a | absolutes only in distractors c |
-| aud-gov-24 | c | key longest; absolutes only in distractors a,b,d; key repeats most stem words (2) |
-| aud-gov-25 | d | absolutes only in distractors b |
-| aud-gov-27 | b | key much shortest; all/none/both-of-above option |
-| aud-x4-24 | b | absolutes only in distractors c |
+| id | flags |
+|---|---|
+| aud-gov-04 | absolutes only in distractors b |
+| aud-gov-06 | absolutes only in distractors c |
+| aud-gov-07 | key longest; absolutes only in distractors a |
+| aud-gov-08 | key much shortest |
+| aud-gov-10 | absolutes only in distractors c |
+| aud-gov-11 | absolutes only in distractors d |
+| aud-gov-12 | key longest |
+| aud-gov-13 | absolutes only in distractors c |
+| aud-gov-14 | absolutes only in distractors a,c,d |
+| aud-gov-15 | absolutes only in distractors a,d |
+| aud-gov-19 | absolutes only in distractors c |
+| aud-gov-24 | key longest; absolutes only in distractors a,b,d; key repeats most stem words (2) |
+| aud-gov-25 | absolutes only in distractors b |
+| aud-gov-27 | key much shortest; all/none/both-of-above option |
+| aud-x4-24 | absolutes only in distractors c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

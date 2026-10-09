@@ -1,23 +1,23 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-at-chk1 | b | absolutes only in distractors a,d |
-| aud-at-chk2 | b | key much shortest |
-| aud-at-02 | d | absolutes only in distractors a,b,c |
-| aud-at-04 | d | absolutes only in distractors b,c |
-| aud-at-08 | d | absolutes only in distractors c |
-| aud-at-10 | d | key repeats most stem words (2) |
-| aud-at-14 | d | absolutes only in distractors a |
-| aud-at-15 | a | absolutes only in distractors c |
-| aud-at-17 | b | absolutes only in distractors c |
-| aud-at-19 | d | key longest |
-| aud-at-20 | a | key longest |
-| aud-at-21 | a | absolutes only in distractors c |
-| aud-at-22 | b | absolutes only in distractors d |
-| aud-at-25 | a | absolutes only in distractors b,d |
-| aud-at-26 | b | absolutes only in distractors c,d |
-| aud-x4-10 | b | key longest |
+| id | flags |
+|---|---|
+| aud-at-chk1 | absolutes only in distractors a,d |
+| aud-at-chk2 | key much shortest |
+| aud-at-02 | absolutes only in distractors a,b,c |
+| aud-at-04 | absolutes only in distractors b,c |
+| aud-at-08 | absolutes only in distractors c |
+| aud-at-10 | key repeats most stem words (2) |
+| aud-at-14 | absolutes only in distractors a |
+| aud-at-15 | absolutes only in distractors c |
+| aud-at-17 | absolutes only in distractors c |
+| aud-at-19 | key longest |
+| aud-at-20 | key longest |
+| aud-at-21 | absolutes only in distractors c |
+| aud-at-22 | absolutes only in distractors d |
+| aud-at-25 | absolutes only in distractors b,d |
+| aud-at-26 | absolutes only in distractors c,d |
+| aud-x4-10 | key longest |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

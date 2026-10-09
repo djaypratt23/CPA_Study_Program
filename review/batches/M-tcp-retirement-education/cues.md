@@ -1,29 +1,29 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| tcp-re-pre1 | d | key much shortest; absolutes only in distractors b |
-| tcp-re-chk1 | d | absolutes only in distractors b |
-| tcp-re-chk2 | a | key much longest |
-| tcp-re-03 | a | absolutes only in distractors c |
-| tcp-re-04 | b | key much shortest |
-| tcp-re-06 | c | absolutes only in distractors d |
-| tcp-re-07 | a | absolutes only in distractors d |
-| tcp-re-08 | b | absolutes only in distractors c |
-| tcp-re-09 | b | key much longest; absolutes only in distractors d |
-| tcp-re-10 | b | absolutes only in distractors d |
-| tcp-re-14 | d | key longest |
-| tcp-re-15 | a | absolutes only in distractors b |
-| tcp-re-17 | c | key much shortest |
-| tcp-re-18 | d | absolutes only in distractors c |
-| tcp-re-22 | b | absolutes only in distractors a,c |
-| tcp-re-23 | c | absolutes only in distractors d |
-| tcp-re-38 | b | absolutes only in distractors c,d |
-| tcp-re-40 | d | absolutes only in distractors c |
-| tcp-re-42 | b | absolutes only in distractors a |
-| tcp-re-43 | c | absolutes only in distractors b |
-| tcp-x1-20 | d | absolutes only in distractors a,b |
-| tcp-x1-34 | b | key repeats most stem words (2) |
+| id | flags |
+|---|---|
+| tcp-re-pre1 | key much shortest; absolutes only in distractors b |
+| tcp-re-chk1 | absolutes only in distractors b |
+| tcp-re-chk2 | key much longest |
+| tcp-re-03 | absolutes only in distractors c |
+| tcp-re-04 | key much shortest |
+| tcp-re-06 | absolutes only in distractors d |
+| tcp-re-07 | absolutes only in distractors d |
+| tcp-re-08 | absolutes only in distractors c |
+| tcp-re-09 | key much longest; absolutes only in distractors d |
+| tcp-re-10 | absolutes only in distractors d |
+| tcp-re-14 | key longest |
+| tcp-re-15 | absolutes only in distractors b |
+| tcp-re-17 | key much shortest |
+| tcp-re-18 | absolutes only in distractors c |
+| tcp-re-22 | absolutes only in distractors a,c |
+| tcp-re-23 | absolutes only in distractors d |
+| tcp-re-38 | absolutes only in distractors c,d |
+| tcp-re-40 | absolutes only in distractors c |
+| tcp-re-42 | absolutes only in distractors a |
+| tcp-re-43 | absolutes only in distractors b |
+| tcp-x1-20 | absolutes only in distractors a,b |
+| tcp-x1-34 | key repeats most stem words (2) |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

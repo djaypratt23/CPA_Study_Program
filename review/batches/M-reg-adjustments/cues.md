@@ -1,29 +1,29 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-adj-pre1 | b | key much longest |
-| reg-adj-chk1 | b | absolutes only in distractors d |
-| reg-adj-chk2 | b | key much shortest; absolutes only in distractors d |
-| reg-adj-02 | c | absolutes only in distractors b |
-| reg-adj-04 | a | absolutes only in distractors b,d |
-| reg-adj-07 | a | key longest |
-| reg-adj-08 | a | key much longest; absolutes only in distractors b,c |
-| reg-adj-09 | d | absolutes only in distractors c |
-| reg-adj-10 | c | key much longest |
-| reg-adj-13 | b | key longest; absolutes only in distractors c |
-| reg-adj-15 | d | key longest |
-| reg-adj-16 | b | key longest |
-| reg-adj-17 | c | key much longest; key repeats most stem words (2) |
-| reg-adj-18 | d | key much shortest |
-| reg-adj-20 | b | key longest; absolutes only in distractors a |
-| reg-adj-24 | b | key much shortest |
-| reg-adj-25 | c | key much longest |
-| reg-adj-28 | b | absolutes only in distractors d |
-| reg-x4-11 | c | key longest |
-| reg-x4-12 | a | absolutes only in distractors b |
-| reg-x4-29 | c | absolutes only in distractors b |
-| reg-x4-38 | d | key repeats most stem words (2) |
+| id | flags |
+|---|---|
+| reg-adj-pre1 | key much longest |
+| reg-adj-chk1 | absolutes only in distractors d |
+| reg-adj-chk2 | key much shortest; absolutes only in distractors d |
+| reg-adj-02 | absolutes only in distractors b |
+| reg-adj-04 | absolutes only in distractors b,d |
+| reg-adj-07 | key longest |
+| reg-adj-08 | key much longest; absolutes only in distractors b,c |
+| reg-adj-09 | absolutes only in distractors c |
+| reg-adj-10 | key much longest |
+| reg-adj-13 | key longest; absolutes only in distractors c |
+| reg-adj-15 | key longest |
+| reg-adj-16 | key longest |
+| reg-adj-17 | key much longest; key repeats most stem words (2) |
+| reg-adj-18 | key much shortest |
+| reg-adj-20 | key longest; absolutes only in distractors a |
+| reg-adj-24 | key much shortest |
+| reg-adj-25 | key much longest |
+| reg-adj-28 | absolutes only in distractors d |
+| reg-x4-11 | key longest |
+| reg-x4-12 | absolutes only in distractors b |
+| reg-x4-29 | absolutes only in distractors b |
+| reg-x4-38 | key repeats most stem words (2) |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

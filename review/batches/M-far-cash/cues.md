@@ -1,19 +1,19 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| far-cash-pre1 | b | key longest |
-| far-cash-04 | d | absolutes only in distractors c |
-| far-cash-05 | d | key much longest; absolutes only in distractors a |
-| far-cash-06 | a | key longest |
-| far-cash-08 | c | absolutes only in distractors d |
-| far-cash-09 | d | key longest |
-| far-cash-11 | a | absolutes only in distractors c |
-| far-cash-14 | d | key longest |
-| far-cash-15 | a | absolutes only in distractors d |
-| far-cash-16 | d | absolutes only in distractors c |
-| far-cash-19 | c | absolutes only in distractors b |
-| far-cash-28 | d | absolutes only in distractors b |
+| id | flags |
+|---|---|
+| far-cash-pre1 | key longest |
+| far-cash-04 | absolutes only in distractors c |
+| far-cash-05 | key much longest; absolutes only in distractors a |
+| far-cash-06 | key longest |
+| far-cash-08 | absolutes only in distractors d |
+| far-cash-09 | key longest |
+| far-cash-11 | absolutes only in distractors c |
+| far-cash-14 | key longest |
+| far-cash-15 | absolutes only in distractors d |
+| far-cash-16 | absolutes only in distractors c |
+| far-cash-19 | absolutes only in distractors b |
+| far-cash-28 | absolutes only in distractors b |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

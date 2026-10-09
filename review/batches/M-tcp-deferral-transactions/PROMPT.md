@@ -10,7 +10,7 @@ You are one reviewer in an exhaustive review of a CPA exam study platform (repo 
   - Blind packet (stems, choices, TBS prompts — no keys): `review/batches/M-tcp-deferral-transactions/blind.md`
   - Keyed items (MCQs with keys and explanations, flashcards, TBS file list): `review/batches/M-tcp-deferral-transactions/items.json`
   - TBS files: `content/tcp/tbs/reg-tbs-u3-exchanges.json`, `content/tcp/tbs/tcp-tbs-r3-installment.json`, `content/tcp/tbs/tcp-tbs-r3-involuntary.json`, `content/tcp/tbs/tcp-tbs-r3-like-kind.json`, `content/tcp/tbs/tcp-tbs-u7-exchange-installment.json`
-  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-tcp-deferral-transactions/cues.md`
+  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-tcp-deferral-transactions/cues.md` — it reveals key information, so open it only after `blind-answers.csv` is saved
   - Manifest (every item id you must cover): `review/batches/M-tcp-deferral-transactions/manifest.json`
   - Section config (module order, Blueprint weights, skill allocation): `content/sections/tcp.yaml`
   - Schema and validator rules: `src/content/schema.ts`, `src/content/build.ts`

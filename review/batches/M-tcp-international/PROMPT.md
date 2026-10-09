@@ -10,7 +10,7 @@ You are one reviewer in an exhaustive review of a CPA exam study platform (repo 
   - Blind packet (stems, choices, TBS prompts — no keys): `review/batches/M-tcp-international/blind.md`
   - Keyed items (MCQs with keys and explanations, flashcards, TBS file list): `review/batches/M-tcp-international/items.json`
   - TBS files: `content/tcp/tbs/tcp-tbs-r3-ftc.json`
-  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-tcp-international/cues.md`
+  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-tcp-international/cues.md` — it reveals key information, so open it only after `blind-answers.csv` is saved
   - Manifest (every item id you must cover): `review/batches/M-tcp-international/manifest.json`
   - Section config (module order, Blueprint weights, skill allocation): `content/sections/tcp.yaml`
   - Schema and validator rules: `src/content/schema.ts`, `src/content/build.ts`

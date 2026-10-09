@@ -1,20 +1,20 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-cash-chk1 | b | key longest |
-| aud-cash-01 | d | absolutes only in distractors c |
-| aud-cash-04 | d | key repeats most stem words (2) |
-| aud-cash-05 | d | absolutes only in distractors b |
-| aud-cash-07 | d | absolutes only in distractors a |
-| aud-cash-09 | d | absolutes only in distractors b |
-| aud-cash-11 | b | key much shortest |
-| aud-cash-14 | a | absolutes only in distractors c |
-| aud-cash-19 | a | key longest |
-| aud-cash-24 | c | absolutes only in distractors b,d |
-| aud-cash-27 | b | key longest |
-| aud-x3-17 | a | absolutes only in distractors c |
-| aud-x3-18 | a | key longest; absolutes only in distractors c |
+| id | flags |
+|---|---|
+| aud-cash-chk1 | key longest |
+| aud-cash-01 | absolutes only in distractors c |
+| aud-cash-04 | key repeats most stem words (2) |
+| aud-cash-05 | absolutes only in distractors b |
+| aud-cash-07 | absolutes only in distractors a |
+| aud-cash-09 | absolutes only in distractors b |
+| aud-cash-11 | key much shortest |
+| aud-cash-14 | absolutes only in distractors c |
+| aud-cash-19 | key longest |
+| aud-cash-24 | absolutes only in distractors b,d |
+| aud-cash-27 | key longest |
+| aud-x3-17 | absolutes only in distractors c |
+| aud-x3-18 | key longest; absolutes only in distractors c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

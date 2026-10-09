@@ -1,22 +1,22 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| far-rev1-01 | c | absolutes only in distractors b |
-| far-rev1-02 | c | key much longest |
-| far-rev1-03 | a | key much shortest; absolutes only in distractors d |
-| far-rev1-07 | a | key much longest |
-| far-rev1-08 | b | absolutes only in distractors c |
-| far-rev1-09 | c | key longest; absolutes only in distractors d |
-| far-rev1-11 | a | key much shortest; absolutes only in distractors d |
-| far-rev1-19 | b | key much longest; absolutes only in distractors a |
-| far-rev1-20 | c | key much longest |
-| far-rev1-23 | c | absolutes only in distractors d |
-| far-rev1-27 | c | absolutes only in distractors d |
-| far-rev1-28 | d | absolutes only in distractors c |
-| far-x3-01 | a | key much longest |
-| far-x3-02 | d | key much shortest; absolutes only in distractors c |
-| far-x3-24 | a | absolutes only in distractors d |
+| id | flags |
+|---|---|
+| far-rev1-01 | absolutes only in distractors b |
+| far-rev1-02 | key much longest |
+| far-rev1-03 | key much shortest; absolutes only in distractors d |
+| far-rev1-07 | key much longest |
+| far-rev1-08 | absolutes only in distractors c |
+| far-rev1-09 | key longest; absolutes only in distractors d |
+| far-rev1-11 | key much shortest; absolutes only in distractors d |
+| far-rev1-19 | key much longest; absolutes only in distractors a |
+| far-rev1-20 | key much longest |
+| far-rev1-23 | absolutes only in distractors d |
+| far-rev1-27 | absolutes only in distractors d |
+| far-rev1-28 | absolutes only in distractors c |
+| far-x3-01 | key much longest |
+| far-x3-02 | key much shortest; absolutes only in distractors c |
+| far-x3-24 | absolutes only in distractors d |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

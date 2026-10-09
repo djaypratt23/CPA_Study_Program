@@ -1,17 +1,17 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| reg-fl-chk1 | d | absolutes only in distractors a |
-| reg-fl-chk2 | c | absolutes only in distractors b |
-| reg-fl-03 | a | key much longest |
-| reg-fl-04 | c | key much longest |
-| reg-fl-05 | d | key much longest |
-| reg-fl-08 | b | key longest |
-| reg-fl-09 | b | absolutes only in distractors c |
-| reg-fl-10 | a | absolutes only in distractors b |
-| reg-fl-14 | c | key much shortest |
-| reg-fl-15 | d | absolutes only in distractors c |
+| id | flags |
+|---|---|
+| reg-fl-chk1 | absolutes only in distractors a |
+| reg-fl-chk2 | absolutes only in distractors b |
+| reg-fl-03 | key much longest |
+| reg-fl-04 | key much longest |
+| reg-fl-05 | key much longest |
+| reg-fl-08 | key longest |
+| reg-fl-09 | absolutes only in distractors c |
+| reg-fl-10 | absolutes only in distractors b |
+| reg-fl-14 | key much shortest |
+| reg-fl-15 | absolutes only in distractors c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

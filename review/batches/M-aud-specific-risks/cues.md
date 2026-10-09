@@ -1,28 +1,28 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-sr-chk2 | c | key longest |
-| aud-sr-02 | d | key longest |
-| aud-sr-04 | c | key much shortest |
-| aud-sr-05 | d | key longest; absolutes only in distractors a |
-| aud-sr-06 | b | absolutes only in distractors c |
-| aud-sr-07 | b | key longest |
-| aud-sr-08 | b | key much longest |
-| aud-sr-10 | a | key longest |
-| aud-sr-13 | a | key longest; absolutes only in distractors d |
-| aud-sr-15 | c | absolutes only in distractors a,d |
-| aud-sr-16 | d | key longest |
-| aud-sr-18 | b | absolutes only in distractors a,c |
-| aud-sr-19 | c | absolutes only in distractors d |
-| aud-sr-20 | d | absolutes only in distractors b |
-| aud-sr-21 | d | absolutes only in distractors a,b |
-| aud-sr-22 | a | absolutes only in distractors b,c,d |
-| aud-sr-23 | b | absolutes only in distractors a,d |
-| aud-sr-24 | c | absolutes only in distractors d |
-| aud-sr-26 | a | absolutes only in distractors c |
-| aud-x2-23 | b | absolutes only in distractors a |
-| aud-x2-45 | b | absolutes only in distractors c |
+| id | flags |
+|---|---|
+| aud-sr-chk2 | key longest |
+| aud-sr-02 | key longest |
+| aud-sr-04 | key much shortest |
+| aud-sr-05 | key longest; absolutes only in distractors a |
+| aud-sr-06 | absolutes only in distractors c |
+| aud-sr-07 | key longest |
+| aud-sr-08 | key much longest |
+| aud-sr-10 | key longest |
+| aud-sr-13 | key longest; absolutes only in distractors d |
+| aud-sr-15 | absolutes only in distractors a,d |
+| aud-sr-16 | key longest |
+| aud-sr-18 | absolutes only in distractors a,c |
+| aud-sr-19 | absolutes only in distractors d |
+| aud-sr-20 | absolutes only in distractors b |
+| aud-sr-21 | absolutes only in distractors a,b |
+| aud-sr-22 | absolutes only in distractors b,c,d |
+| aud-sr-23 | absolutes only in distractors a,d |
+| aud-sr-24 | absolutes only in distractors d |
+| aud-sr-26 | absolutes only in distractors c |
+| aud-x2-23 | absolutes only in distractors a |
+| aud-x2-45 | absolutes only in distractors c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

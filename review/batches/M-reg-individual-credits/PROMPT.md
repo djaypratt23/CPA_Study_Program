@@ -10,7 +10,7 @@ You are one reviewer in an exhaustive review of a CPA exam study platform (repo 
   - Blind packet (stems, choices, TBS prompts — no keys): `review/batches/M-reg-individual-credits/blind.md`
   - Keyed items (MCQs with keys and explanations, flashcards, TBS file list): `review/batches/M-reg-individual-credits/items.json`
   - TBS files: `content/reg/tbs/reg-tbs-r3-credits-taxes.json`, `content/reg/tbs/reg-tbs-u5-credits-amt.json`
-  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-reg-individual-credits/cues.md`
+  - Automated cue hints, near-duplicate pairs, label distribution: `review/batches/M-reg-individual-credits/cues.md` — it reveals key information, so open it only after `blind-answers.csv` is saved
   - Manifest (every item id you must cover): `review/batches/M-reg-individual-credits/manifest.json`
   - Section config (module order, Blueprint weights, skill allocation): `content/sections/reg.yaml`
   - Schema and validator rules: `src/content/schema.ts`, `src/content/build.ts`

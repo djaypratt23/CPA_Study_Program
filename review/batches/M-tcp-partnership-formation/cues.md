@@ -1,32 +1,32 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| tcp-pf-pre1 | d | key much longest |
-| tcp-pf-chk2 | c | absolutes only in distractors d |
-| tcp-pf-01 | d | key longest |
-| tcp-pf-03 | c | absolutes only in distractors b |
-| tcp-pf-04 | b | all/none/both-of-above option; absolutes only in distractors c |
-| tcp-pf-05 | c | absolutes only in distractors d |
-| tcp-pf-08 | c | key longest |
-| tcp-pf-10 | a | key longest; absolutes only in distractors b,c |
-| tcp-pf-14 | a | key longest |
-| tcp-pf-16 | c | key much shortest |
-| tcp-pf-18 | a | absolutes only in distractors c |
-| tcp-pf-19 | b | absolutes only in distractors a,c |
-| tcp-pf-23 | b | key much shortest; absolutes only in distractors d |
-| tcp-pf-26 | c | key longest; absolutes only in distractors a,b |
-| tcp-pf-29 | b | absolutes only in distractors a,d |
-| tcp-pf-30 | c | key longest; absolutes only in distractors a,d |
-| tcp-pf-31 | d | key much shortest |
-| tcp-pf-32 | a | absolutes only in distractors c; key repeats most stem words (2) |
-| tcp-pf-33 | b | key much longest |
-| tcp-pf-36 | a | key longest |
-| tcp-pf-38 | c | absolutes only in distractors a,d |
-| tcp-pf-42 | c | absolutes only in distractors a |
-| tcp-pf-44 | a | absolutes only in distractors b |
-| tcp-x2-07 | b | absolutes only in distractors a |
-| tcp-x2-31 | d | absolutes only in distractors a,c |
+| id | flags |
+|---|---|
+| tcp-pf-pre1 | key much longest |
+| tcp-pf-chk2 | absolutes only in distractors d |
+| tcp-pf-01 | key longest |
+| tcp-pf-03 | absolutes only in distractors b |
+| tcp-pf-04 | all/none/both-of-above option; absolutes only in distractors c |
+| tcp-pf-05 | absolutes only in distractors d |
+| tcp-pf-08 | key longest |
+| tcp-pf-10 | key longest; absolutes only in distractors b,c |
+| tcp-pf-14 | key longest |
+| tcp-pf-16 | key much shortest |
+| tcp-pf-18 | absolutes only in distractors c |
+| tcp-pf-19 | absolutes only in distractors a,c |
+| tcp-pf-23 | key much shortest; absolutes only in distractors d |
+| tcp-pf-26 | key longest; absolutes only in distractors a,b |
+| tcp-pf-29 | absolutes only in distractors a,d |
+| tcp-pf-30 | key longest; absolutes only in distractors a,d |
+| tcp-pf-31 | key much shortest |
+| tcp-pf-32 | absolutes only in distractors c; key repeats most stem words (2) |
+| tcp-pf-33 | key much longest |
+| tcp-pf-36 | key longest |
+| tcp-pf-38 | absolutes only in distractors a,d |
+| tcp-pf-42 | absolutes only in distractors a |
+| tcp-pf-44 | absolutes only in distractors b |
+| tcp-x2-07 | absolutes only in distractors a |
+| tcp-x2-31 | absolutes only in distractors a,c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

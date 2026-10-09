@@ -1,23 +1,23 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-rr-03 | d | key longest; absolutes only in distractors b,c |
-| aud-rr-08 | b | key longest; absolutes only in distractors d |
-| aud-rr-11 | a | key much shortest; absolutes only in distractors d |
-| aud-rr-12 | b | key much shortest |
-| aud-rr-13 | c | absolutes only in distractors d |
-| aud-rr-15 | a | key longest; absolutes only in distractors c |
-| aud-rr-16 | c | absolutes only in distractors d |
-| aud-rr-17 | d | absolutes only in distractors a,b,c |
-| aud-rr-19 | b | key longest; absolutes only in distractors d |
-| aud-rr-21 | d | absolutes only in distractors a,b,c |
-| aud-rr-22 | a | key much shortest |
-| aud-rr-23 | b | absolutes only in distractors d |
-| aud-rr-24 | c | absolutes only in distractors b,d |
-| aud-rr-25 | d | absolutes only in distractors a,b,c |
-| aud-x2-21 | b | key longest |
-| aud-x2-43 | d | key much shortest; absolutes only in distractors b |
+| id | flags |
+|---|---|
+| aud-rr-03 | key longest; absolutes only in distractors b,c |
+| aud-rr-08 | key longest; absolutes only in distractors d |
+| aud-rr-11 | key much shortest; absolutes only in distractors d |
+| aud-rr-12 | key much shortest |
+| aud-rr-13 | absolutes only in distractors d |
+| aud-rr-15 | key longest; absolutes only in distractors c |
+| aud-rr-16 | absolutes only in distractors d |
+| aud-rr-17 | absolutes only in distractors a,b,c |
+| aud-rr-19 | key longest; absolutes only in distractors d |
+| aud-rr-21 | absolutes only in distractors a,b,c |
+| aud-rr-22 | key much shortest |
+| aud-rr-23 | absolutes only in distractors d |
+| aud-rr-24 | absolutes only in distractors b,d |
+| aud-rr-25 | absolutes only in distractors a,b,c |
+| aud-x2-21 | key longest |
+| aud-x2-43 | key much shortest; absolutes only in distractors b |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

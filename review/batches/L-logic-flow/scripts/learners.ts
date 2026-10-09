@@ -14,6 +14,7 @@ const { bundle } = loadContent()
 const SEC = process.argv[2] ?? 'FAR'
 const WEEKS = Number(process.argv[3] ?? 12)
 const HRS = Number(process.argv[4] ?? 10)
+const DIAG = process.argv[5] !== 'nodiag'
 const section = bundle.sections.find((s) => s.id === SEC)!
 const pool = Object.values(bundle.questions).filter((q) => q.pool === 'practice' && !q.optional && !bundle.modules.find((m) => m.id === q.moduleId)?.optional && bundle.modules.find((m) => m.id === q.moduleId)?.section === SEC)
 type Profile = { name: string; p: number; pre: number; conf: (correct: boolean, r: () => number) => Confidence; diag: boolean }
@@ -52,7 +53,7 @@ for (const prof of profiles) {
     rows.push(`${label.padEnd(16)} lessons ${String(Math.round(st.lessonsPct * 100)).padStart(3)}% | mastered ${String(mastered).padStart(2)}/${inScope} | readiness ${rd.overall === null ? '  —' : String(rd.overall).padStart(3)} ${rd.band ? `[${rd.band[0]}–${rd.band[1]}]` : '       '} "${rd.label}" | areas ${rd.areas.map((a) => (a.estimate === null ? '—' : Math.round(a.estimate * 100))).join('/')} | first-attempt n ${rd.areas.reduce((s, a) => s + a.n, 0)}`)
   }
   snap('start', START)
-  if (prof.diag) {
+  if (prof.diag && DIAG) {
     const areas = section.areas.map((a) => ({ id: a.id, weight: (a.allocation.min + a.allocation.max) / 2, moduleIds: a.units.flatMap((u) => u.modules.map((m) => m.id)).filter((id) => !bundle.modules.find((m) => m.id === id)?.optional) }))
     for (const q of buildDiagnostic(pool, areas, historyByItem(attempts), 40, 7)) answer(q.id, START, 'test', true, 'diag')
     snap('after diagnostic', START)
@@ -60,6 +61,9 @@ for (const prof of profiles) {
   let mockDone = false
   for (let day = START; day < examDate; day = addDays(day, 1)) {
     const st = state(day)
+    const mtasks = (st.plan.days[0]?.tasks ?? []).filter((t) => t.kind === 'mastery').length
+    const dI = Math.round((parseDay(day).getTime() - parseDay(START).getTime()) / 86400000)
+    if (dI === 27 || dI === 55) rows.push(`  day ${dI + 1} plan: ${mtasks} mastery checks, ${(st.plan.days[0]?.tasks ?? []).filter((t) => t.kind === 'lesson').length} lesson tasks; capacity ${st.plan.days[0]?.capacity} min; status: ${st.plan.status.message.slice(0, 90)}`)
     const studied = new Set([...progress.values()].filter((p) => p.lessonCompletedAt).map((p) => p.moduleId))
     for (const t of st.plan.days[0]?.tasks ?? []) {
       const hist = historyByItem(attempts)
@@ -106,6 +110,6 @@ for (const prof of profiles) {
     const dIdx = Math.round((parseDay(day).getTime() - parseDay(START).getTime()) / 86400000)
     if ((dIdx + 1) % 7 === 0) snap(`end of week ${(dIdx + 1) / 7}`, day)
   }
-  console.log(`\n### ${SEC} — ${prof.name} (p=${prof.p}), ${HRS} h/wk, exam ${examDate}`)
+  console.log(`\n### ${SEC} — ${DIAG ? 'with' : 'no'} diagnostic — ${prof.name} (p=${prof.p}), ${HRS} h/wk, exam ${examDate}`)
   for (const row of rows) console.log(row)
 }

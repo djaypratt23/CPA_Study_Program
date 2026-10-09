@@ -1,12 +1,12 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| far-rat-pre1 | a | absolutes only in distractors d |
-| far-rat-11 | b | absolutes only in distractors c |
-| far-rat-14 | a | key much shortest |
-| far-rat-20 | a | absolutes only in distractors c,d |
-| far-rat-26 | b | absolutes only in distractors c |
+| id | flags |
+|---|---|
+| far-rat-pre1 | absolutes only in distractors d |
+| far-rat-11 | absolutes only in distractors c |
+| far-rat-14 | key much shortest |
+| far-rat-20 | absolutes only in distractors c,d |
+| far-rat-26 | absolutes only in distractors c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

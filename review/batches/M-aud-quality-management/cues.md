@@ -1,29 +1,29 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-qm-pre1 | d | key much longest |
-| aud-qm-chk2 | d | key much shortest; absolutes only in distractors a,b,c |
-| aud-qm-01 | d | key longest |
-| aud-qm-02 | b | absolutes only in distractors a,d |
-| aud-qm-06 | b | absolutes only in distractors d |
-| aud-qm-07 | b | key longest |
-| aud-qm-08 | a | absolutes only in distractors b,c,d |
-| aud-qm-11 | b | key much shortest; absolutes only in distractors a,c,d |
-| aud-qm-12 | b | key longest |
-| aud-qm-13 | c | key longest; absolutes only in distractors a,b,d |
-| aud-qm-14 | d | absolutes only in distractors b,c |
-| aud-qm-15 | a | key longest |
-| aud-qm-17 | d | absolutes only in distractors a |
-| aud-qm-18 | a | absolutes only in distractors c |
-| aud-qm-22 | a | absolutes only in distractors b,c,d |
-| aud-qm-23 | b | absolutes only in distractors a,c,d |
-| aud-qm-24 | c | absolutes only in distractors b,d |
-| aud-qm-25 | d | absolutes only in distractors c |
-| aud-qm-26 | a | absolutes only in distractors d |
-| aud-qm-27 | b | key longest; absolutes only in distractors d |
-| aud-x1-14 | b | absolutes only in distractors d |
-| aud-x1-30 | b | absolutes only in distractors d |
+| id | flags |
+|---|---|
+| aud-qm-pre1 | key much longest |
+| aud-qm-chk2 | key much shortest; absolutes only in distractors a,b,c |
+| aud-qm-01 | key longest |
+| aud-qm-02 | absolutes only in distractors a,d |
+| aud-qm-06 | absolutes only in distractors d |
+| aud-qm-07 | key longest |
+| aud-qm-08 | absolutes only in distractors b,c,d |
+| aud-qm-11 | key much shortest; absolutes only in distractors a,c,d |
+| aud-qm-12 | key longest |
+| aud-qm-13 | key longest; absolutes only in distractors a,b,d |
+| aud-qm-14 | absolutes only in distractors b,c |
+| aud-qm-15 | key longest |
+| aud-qm-17 | absolutes only in distractors a |
+| aud-qm-18 | absolutes only in distractors c |
+| aud-qm-22 | absolutes only in distractors b,c,d |
+| aud-qm-23 | absolutes only in distractors a,c,d |
+| aud-qm-24 | absolutes only in distractors b,d |
+| aud-qm-25 | absolutes only in distractors c |
+| aud-qm-26 | absolutes only in distractors d |
+| aud-qm-27 | key longest; absolutes only in distractors d |
+| aud-x1-14 | absolutes only in distractors d |
+| aud-x1-30 | absolutes only in distractors d |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 

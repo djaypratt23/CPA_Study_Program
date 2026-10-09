@@ -1,31 +1,31 @@
-# Automated cue hints (heuristics only — judge each)
+# Automated cue hints (heuristics only — judge each). REVEALS KEY INFORMATION: open only after blind-answers.csv is saved.
 
-| id | key | flags |
-|---|---|---|
-| aud-cm-pre1 | b | key much shortest; absolutes only in distractors a,c,d |
-| aud-cm-chk1 | b | absolutes only in distractors c,d |
-| aud-cm-chk2 | b | absolutes only in distractors a,d |
-| aud-cm-01 | a | key longest |
-| aud-cm-02 | d | key longest |
-| aud-cm-04 | c | absolutes only in distractors d |
-| aud-cm-05 | d | absolutes only in distractors a,b,c |
-| aud-cm-06 | d | key longest |
-| aud-cm-07 | c | absolutes only in distractors a,b,d |
-| aud-cm-09 | c | absolutes only in distractors a,b,d; key repeats most stem words (4) |
-| aud-cm-10 | d | key repeats most stem words (2) |
-| aud-cm-11 | b | key longest |
-| aud-cm-13 | d | absolutes only in distractors a,b,c |
-| aud-cm-14 | a | absolutes only in distractors c,d |
-| aud-cm-15 | b | absolutes only in distractors d |
-| aud-cm-16 | d | absolutes only in distractors b,c |
-| aud-cm-18 | b | key longest |
-| aud-cm-19 | c | absolutes only in distractors b,d |
-| aud-cm-20 | d | key longest |
-| aud-cm-21 | b | absolutes only in distractors a,d |
-| aud-cm-24 | a | absolutes only in distractors c,d |
-| aud-cm-26 | c | absolutes only in distractors a,b,d |
-| aud-cm-27 | d | absolutes only in distractors b |
-| aud-x4-16 | b | absolutes only in distractors c |
+| id | flags |
+|---|---|
+| aud-cm-pre1 | key much shortest; absolutes only in distractors a,c,d |
+| aud-cm-chk1 | absolutes only in distractors c,d |
+| aud-cm-chk2 | absolutes only in distractors a,d |
+| aud-cm-01 | key longest |
+| aud-cm-02 | key longest |
+| aud-cm-04 | absolutes only in distractors d |
+| aud-cm-05 | absolutes only in distractors a,b,c |
+| aud-cm-06 | key longest |
+| aud-cm-07 | absolutes only in distractors a,b,d |
+| aud-cm-09 | absolutes only in distractors a,b,d; key repeats most stem words (4) |
+| aud-cm-10 | key repeats most stem words (2) |
+| aud-cm-11 | key longest |
+| aud-cm-13 | absolutes only in distractors a,b,c |
+| aud-cm-14 | absolutes only in distractors c,d |
+| aud-cm-15 | absolutes only in distractors d |
+| aud-cm-16 | absolutes only in distractors b,c |
+| aud-cm-18 | key longest |
+| aud-cm-19 | absolutes only in distractors b,d |
+| aud-cm-20 | key longest |
+| aud-cm-21 | absolutes only in distractors a,d |
+| aud-cm-24 | absolutes only in distractors c,d |
+| aud-cm-26 | absolutes only in distractors a,b,d |
+| aud-cm-27 | absolutes only in distractors b |
+| aud-x4-16 | absolutes only in distractors c |
 
 ## Near-duplicate stems within this batch (Jaccard ≥ 0.5 on word sets)
 
