@@ -65,7 +65,14 @@ const L = require('./lib.cjs');
     await focusBtn.click();
     await page.waitForTimeout(400);
     console.log('session size', await page.locator('text=/\\d+ left in this session/').innerText());
+    // Try to leave the session through the "Flashcard decks" navigation entry (same route)
+    if (vp === 'd') await page.locator('aside').getByRole('link', { name: 'Flashcard decks' }).click();
+    else { await page.getByRole('button', { name: 'More' }).click(); await page.locator('#more-menu').getByRole('link', { name: 'Flashcard decks' }).click(); }
+    await page.waitForTimeout(600);
+    console.log('after clicking Flashcard decks nav: url', page.url(), 'still in session?', await page.locator('text=/left in this session/').count());
+    await L.shot(page, `j4-${vp}-07-nav-decks-still-in-session`);
     // other deck with no lesson studied: Balance sheet
+    await page.goto(L.BASE + '#/');
     await page.goto(L.BASE + '#/flashcards');
     await page.waitForTimeout(800);
     const bs = page.locator('li', { hasText: 'Balance sheet' }).first();
