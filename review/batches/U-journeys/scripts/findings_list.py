@@ -5,3 +5,39 @@ add('S3', 'ALL', '#/welcome', 'src/pages/Onboarding.tsx',
     'Add a static name map (BAR = Business Analysis and Reporting, ISC = Information Systems and Controls) and suffix "(no content yet)" for sections not in content.sections.',
     expected='Full section names, with a note when a section has no content.', observed='"BAR — BAR", "ISC — ISC".',
     steps='Open #/welcome in a fresh context, click "Got it — set up my plan", open the discipline select.')
+
+# ---- Journey 2: course and lesson ----
+add('S3', 'ALL', '#/module/far-income-statement-oci', 'src/pages/ModulePage.tsx',
+    'The lesson completion button promises "Mark complete & practice (28 questions)" but opens a 10-question set. The count is every practice item in the module (questionsForModule), while PracticeStart builds the set with count: 10.',
+    'review/screens/uj-j2-d-09-before-complete.png (button label "Mark complete & practice (28 questions)"), review/screens/uj-j2-d-10-after-complete.png (quiz header "0/10 answered"). Steps: onboard FAR -> #/module/far-income-statement-oci -> scroll to "Finished reading?" -> click the button.',
+    'Label the button with the set size actually served, e.g. "Mark complete & practice (10 questions)" (Math.min(10, practiceCount)), or "practice 10 of 28 questions".',
+    expected='The button states the number of questions in the set it starts.', observed='Says 28; the set has 10.',
+    steps='Open a lesson, click "Mark complete & practice (N questions)", compare N with the quiz header.')
+add('S3', 'ALL', '#/module/far-income-statement-oci', 'src/hooks/useTextHighlights.ts',
+    'Inline lesson questions each show a "Highlight selection" tool, but every McqView writes to one global CSS highlight ("exam-highlight"), so highlighting text in the second check question silently erases the highlight in the first. These question highlights are also ephemeral, while the lesson\'s own "Save highlight" is persistent: two unrelated highlight behaviours on one page.',
+    'review/screens/uj-j2b-d-03-check1-highlight-after-check2.png. Steps (desktop): open #/module/far-income-statement-oci, select the first words of check 1\'s stem, click its "Highlight selection" (CSS.highlights.get("exam-highlight").size = 1), do the same in check 2 -> size is still 1 and check 1\'s highlight is gone.',
+    'Hide the ephemeral highlight tool on inline lesson questions (showTools=false should cover it), or key the CSS highlight name per question (e.g. `exam-highlight-${q.id}` registered in CSS) so instances do not overwrite each other.',
+    expected='Highlights in one inline question survive highlighting another, or the tool is not offered in lessons.', observed='Only the latest question keeps its highlight.',
+    steps='Highlight text in two different "Check your understanding" questions on one lesson.')
+add('S4', 'ALL', '#/module/far-income-statement-oci', 'src/pages/ModulePage.tsx',
+    'Saved lesson highlights appear only in a list at the bottom of the page; the highlighted passage is not marked in the lesson text, and text in the warm-up question, "big idea" box and key takeaways cannot be highlighted (selection there shows no "Save highlight" button) although the tip says "select any text in the lesson".',
+    'review/screens/uj-j2b-d-01-body-selection.png, review/screens/uj-j2b-d-02-highlight-list.png, review/screens/uj-j2-d-07-selection.png. Steps: select a sentence in the body -> "Save highlight" -> no <mark>/CSS highlight in the body (count 0); select text in the pre-question explanation -> no button.',
+    'Render saved highlights inline (CSS Custom Highlight API or <mark>) and widen bodyRef to the big idea and takeaways, or reword the tip to "select text in the lesson body".')
+
+# ---- Journey 3: practice ----
+add('S3', 'ALL', '#/quiz/:id (results)', 'src/pages/QuizPlayer.tsx',
+    'The results page miscounts what entered spaced review. It reports missed + guessed-right, but needsRequeue() also queues correct answers rated "Unsure"; and when nothing was missed it says "Clean sweep. These will stay out of your review queue." even when Unsure answers were queued, or when half the test-mode set was unanswered and scored wrong (50%).',
+    'Tutor set: 1 wrong-Unsure, 1 wrong-Confident, 1 right-Guess, 1 right-Unsure -> IndexedDB srs table has 4 q: rows, page says "3 question(s) were added" (review/screens/uj-j3-d-06-results.png). Test set with 2 answered correctly and 2 unanswered -> "50% ... 2 questions were left unanswered and scored as wrong. Clean sweep." (review/screens/uj-j3-d-12-test-results.png).',
+    'Compute the count from the same rule as scheduling (answered && needsRequeue(correct, confidence ?? "confident")), and show "Clean sweep" only when every item was answered correctly with confidence; otherwise say e.g. "No questions were added to review; 2 unanswered questions were scored wrong."',
+    expected='The count matches the questions actually queued; "Clean sweep" only for a perfect set.', observed='Undercounts by the Unsure-correct items; "Clean sweep" at 50%.',
+    steps='Practice a module in tutor mode answering one item correctly with "Unsure"; then run a 4-question test-mode set leaving 2 unanswered.')
+add('S3', 'ALL', '#/quiz/:id (test mode)', 'src/pages/QuizPlayer.tsx',
+    'In test mode an answer chosen without a confidence rating is scored, and the question navigator marks it answered, but the header and Submit button count it as unanswered ("0/4 answered"). Submitting with unanswered questions gives no warning or confirmation.',
+    'review/screens/uj-j3-m-11-test-last.png, review/screens/uj-j3-d-11-test-last.png. Steps: #/practice -> tick Area I -> 4 questions -> Test -> Timed -> Start; pick a choice on Q1 only -> header shows "0/4 answered" while the navigator square 1 is filled; Q1 is later scored Correct. On Q4 "Submit set (1/4)" submits at once.',
+    'Count answeredCount by `choice` alone in test mode (confidence is optional there), and when unanswered items remain show a confirm step ("2 questions unanswered will be scored wrong. Submit anyway?") listing them.',
+    expected='One definition of "answered" across header, navigator and scoring; a confirmation before submitting with blanks.', observed='Header says 0 answered while the navigator and scoring treat the item as answered; no confirmation.',
+    steps='Run a test-mode custom set as above.')
+add('S4', 'ALL', '#/quiz/:id', 'src/components/McqView.tsx',
+    'Keyboard shortcut race: pressing a choice letter and then a confidence digit in quick succession (under ~50 ms, e.g. a fast typist or a key macro) drops the confidence key silently, because the hotkey handler checks the rendered `selected` prop, which updates only after the IndexedDB write round-trips.',
+    'Desktop: on a tutor-mode question press "d" then "2" with no delay -> choice D is selected but nothing is submitted (review/screens/uj-j3-d-03-q2-wrong.png from the first run shows D selected, no feedback). With a 150 ms gap it works.',
+    'Track the last chosen letter in a ref inside McqView (set on onSelect) and let the confidence key use it when `selected` has not caught up yet.')
