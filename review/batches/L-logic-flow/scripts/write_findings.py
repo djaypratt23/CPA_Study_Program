@@ -26,19 +26,12 @@ f('S2', 'flow', 'ALL', 'src/lib/planner.ts:buildQueue', 'src/lib/planner.ts',
   'src/lib/planner.ts buildQueue / readyOn (a mastery item with no `after` and no lastMasteryDay is ready immediately)',
   'Track the last mastery-check attempt per module (pass or fail) and pass it to the planner: after a failed check, schedule a remediation task (rework faded example + flashcards) and set notBefore = last attempt + 2 days for the retry. Cap mastery retries per day (e.g. 2) and never let retries of earlier units block first-pass lessons when the projected finish is after the final-review start. Count expected retries in requiredMinutes so the status is honest.',
   'high')
-f('S2', 'flow', 'AUD', 'src/lib/planner.ts:orderUnits', 'src/lib/studyState.ts',
+f('S2', 'flow', 'ALL', 'src/lib/planner.ts:orderUnits', 'src/lib/studyState.ts',
   'With no data at all, the adaptive unit order (area weight × default weakness 0.5) reorders AUD and REG for a new learner: AUD starts with Area III evidence, sampling and substantive procedures before ethics, planning, materiality, risk assessment and internal control; REG starts with C corporations and flow-through entities before individual taxation and property basis (REG-III comes last). There is no prerequisite metadata in the schema, so the reorder cannot respect dependencies, and lessons then rely on concepts taught later.',
   'scripts/planner.ts: AUD new-learner unit order aud-u6 → u7 → u8 → u3 → u9 → u4 → u5 → u1 → u2 → u10; REG reg-u6 → u7 → u4 → u5 → u2 → u1 → u3 (FAR and TCP keep course order only because area weights tie). Day-1 next action: AUD "Lesson: Sufficient appropriate evidence & assertions"; REG "Lesson: C corporation taxable income". Dependencies: aud-sampling lesson uses tolerable misstatement and risk of overreliance (taught in aud-risk-materiality u3, aud-tests-of-controls u5); reg-partnerships uses outside basis, §1231 and §179; reg-c-corp-income uses capital-loss and cost-recovery rules (reg-capital-gains, reg-cost-recovery, both u3).',
   'src/lib/studyState.ts unitPriority (weakness 0.5 when no estimate); src/lib/planner.ts orderUnits; src/content/schema.ts ModuleRef (no prerequisites field)',
   'Apply priority ordering only after a diagnostic or ≥5 answers per area, and only among units whose prerequisites are done. Add `prerequisites: [unitId|moduleId]` to UnitConfig/ModuleRef (e.g. aud-u6 after aud-u3, aud-u5; reg-u6/u7 after reg-u3, reg-u4) and topologically sort with priority as the tie-breaker. Until then, keep course order for untouched units.',
   'high')
-f('S2', 'flow', 'REG', 'src/lib/planner.ts:orderUnits', 'content/sections/reg.yaml',
-  'REG-specific consequence of the adaptive order: property basis, cost recovery and capital gains (REG-III, weight 10%) are the last unit for every new learner, yet partnership, S corporation and C corporation lessons (scheduled first) depend on them.',
-  'scripts/planner.ts: REG unit order ends with reg-u3 (REG-III); grep of reg-c-corp-income lesson: "net capital loss", "Cost recovery for 2025: §179 … bonus depreciation"; reg-partnerships: "outside basis = cash + basis of property − liabilities relieved", "§1231 items, §179 expense".',
-  'src/lib/studyState.ts unitPriority',
-  'Pin reg-u3 (and reg-u4) before reg-u6/reg-u7 via prerequisites, as in the previous finding.',
-  'high', module='')
-
 # ---------- Mock exams ----------
 f('S2', 'coverage', 'ALL', 'far-mock-1,far-mock-2,far-mock-3,aud-mock-1,aud-mock-2,aud-mock-3,reg-mock-1,reg-mock-2,reg-mock-3,tcp-mock-1,tcp-mock-2,tcp-mock-3', 'content/*/exams/*.json',
   'Every mock form tests far less Analysis than the Blueprint: the exam-pool MCQs are almost all Remembering/Application, so a form\'s score-weighted skill mix misses the Analysis range in all four sections. The validator only checks the pooled practice+exam+TBS mix, so it passes.',
@@ -54,7 +47,7 @@ f('S2', 'pedagogy', 'ALL', 'far-mock-1,far-mock-2,far-mock-3,aud-mock-1,aud-mock
   'medium')
 f('S2', 'pedagogy', 'ALL', 'far-mock-2,far-mock-3,aud-mock-2,aud-mock-3,reg-mock-2,reg-mock-3,tcp-mock-2,tcp-mock-3', 'content/*/exams/*.json',
   'Forms 2 and 3 each reuse half of form 1\'s MCQs, but nothing tells the learner, and the results page says mock items stay out of review "so later mocks stay fresh". After reviewing form 1\'s explanations, a learner\'s form-2 score is inflated, and readiness uses the latest mock.',
-  'scripts/forms.ts: shared with form 1 — FAR 25/50 on each later form, AUD 39/78, REG 36/72, TCP 34/68. Illustration: true accuracy 65% on new items and 90% on reviewed items → form-2 MCQ 77.5% instead of 65%; with TBS at 65% the weighted score rises 65% → 71% and approxScaledScore 75 → 78; readiness (50% mock blend) moves ~+3 points from recognition alone.',
+  'scripts/forms.ts: shared with form 1 — FAR 25/50 on each later form, AUD 39/78, REG 36/72, TCP 34/68. Illustration: true accuracy 65% on new items and 90% on reviewed items → form-2 MCQ 77.5% instead of 65%; with TBS at 65% the weighted score rises 65% → 71.25% and approxScaledScore 75 → 79; readiness (50% mock blend) moves ~+2–3 scaled points from recognition alone.',
   'src/pages/ExamPlayer.tsx ExamResults ("kept out of spaced review so later mocks stay fresh"); src/lib/studyState.ts lastMock blend',
   'Either build forms 2–3 from fresh items (≈50 more FAR exam MCQs, 78 AUD, 72 REG, 68 TCP), or mark reused items, report a "fresh items only" score next to the total, and blend only fresh-item performance into readiness. On ExamHome, say which forms overlap and recommend taking form 1 last if only one is used for readiness.',
   'high')
