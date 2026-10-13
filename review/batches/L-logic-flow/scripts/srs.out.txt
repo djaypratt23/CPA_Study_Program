@@ -1,0 +1,14 @@
+params: retention 0.9 max 365 learning_steps ["1m","10m"] relearning_steps ["10m"] short-term true
+missed, then confident-correct ×6                ✗c→1m  ✓c→10m  ✓c→1.0d  ✓c→2.0d  ✓c→7.0d  ✓c→19.0d  ✓c→48.0d | last review day 29.0, next due day 77.0; R on exam day 56 = 0.935 (S=48.3d)
+missed, then unsure-correct ×6                   ✗c→1m  ✓u→6m  ✓u→6m  ✓u→6m  ✓u→6m  ✓u→6m  ✓u→6m | last review day 0.0, next due day 0.0; R on exam day 56 = 0.424 (S=0.2d)
+correct guess, then confident ×5                 ✓g→1m  ✓c→10m  ✓c→1.0d  ✓c→2.0d  ✓c→7.0d  ✓c→19.0d | last review day 10.0, next due day 29.0; R on exam day 56 = 0.830 (S=19.2d)
+unsure-correct first, then confident ×5          ✓u→6m  ✓c→10m  ✓c→1.0d  ✓c→5.0d  ✓c→17.0d  ✓c→51.0d | last review day 23.0, next due day 74.0; R on exam day 56 = 0.927 (S=50.5d)
+confident-correct first (never queued)           (not queued)
+missed, confident ×3, lapse, confident ×3        ✗c→1m  ✓c→10m  ✓c→1.0d  ✓c→2.0d  ✗c→10m  ✓c→1.0d  ✓c→2.0d  ✓c→4.0d | last review day 6.0, next due day 10.0; R on exam day 56 = 0.666 (S=3.8d)
+lucky guess every time (correct+guess) ×6        ✓g→1m  ✓g→1m  ✓g→1m  ✓g→1m  ✓g→1m  ✓g→1m | last review day 0.0, next due day 0.0; R on exam day 56 = 0.226 (S=0.0d)
+exam in 28 d: a missed item answered confidently each time it is due gets 5 reviews; last on day 10.0, next due day 29.0 (after the exam); predicted recall on exam day 0.904
+exam in 56 d: a missed item answered confidently each time it is due gets 6 reviews; last on day 29.0, next due day 77.0 (after the exam); predicted recall on exam day 0.935
+exam in 84 d: a missed item answered confidently each time it is due gets 7 reviews; last on day 77.0, next due day 188.0 (after the exam); predicted recall on exam day 0.991
+exam in 112 d: a missed item answered confidently each time it is due gets 7 reviews; last on day 77.0, next due day 188.0 (after the exam); predicted recall on exam day 0.959
+new flashcard rated Good → due in 10m; then Good → 2.0d
+new flashcard rated Easy → due in 8.0d

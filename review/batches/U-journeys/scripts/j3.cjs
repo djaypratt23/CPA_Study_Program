@@ -107,7 +107,7 @@ async function answer(page, { right = true, conf = 'Confident', viaKeys = false 
     await page.getByRole('link', { name: /Mixed practice/ }).click();
     await page.waitForURL(/#\/quiz\//);
     await page.waitForTimeout(800);
-    console.log('mixed header', await page.locator('.sticky').first().innerText());
+    console.log('mixed header', await page.locator('div.sticky').first().innerText());
     const mixedIds = [];
     for (let i = 0; i < 20; i++) {
       const before = await L.currentQid(page);
@@ -145,12 +145,12 @@ async function answer(page, { right = true, conf = 'Confident', viaKeys = false 
     await page.locator(`[role=radio][data-choice="${Q[id].answer}"]`).click();
     console.log('test header after choose-no-confidence', await page.locator('.sticky .muted').first().innerText());
     await page.getByRole('button', { name: 'Next →' }).click();
-    id = await L.currentQid(page);
+    id = await waitQ(page, id);
     await page.locator(`[role=radio][data-choice="${Q[id].answer}"]`).click();
     await page.getByRole('button', { name: /^Confident/ }).click();
     await page.getByRole('button', { name: 'Next →' }).click();
     await page.getByRole('button', { name: 'Next →' }).click();
-    console.log('test header', await page.locator('.sticky').first().innerText());
+    console.log('test header', await page.locator('div.sticky').first().innerText());
     await L.shot(page, `j3-${vp}-11-test-last`);
     page.once('dialog', (d) => { console.log('DIALOG', d.message()); d.accept(); });
     await page.getByRole('button', { name: /Submit set/ }).click();
@@ -160,13 +160,14 @@ async function answer(page, { right = true, conf = 'Confident', viaKeys = false 
     // ---- Review queue: make srs due now ----
     await page.evaluate(() => new Promise((res) => { const rq = indexedDB.open('cpa-study'); rq.onsuccess = () => { const tx = rq.result.transaction('srs', 'readwrite'); const st = tx.objectStore('srs'); const g = st.getAll(); g.onsuccess = () => { for (const s of g.result) { s.due = '2026-01-01T00:00:00.000Z'; st.put(s); } }; tx.oncomplete = () => res(); }; }));
     await page.goto(L.BASE + '#/review');
-    await page.waitForTimeout(1000);
+    await page.reload();
+    await page.waitForTimeout(1500);
     await L.shot(page, `j3-${vp}-13-review-home`);
     console.log('review page:', (await L.text(page)).replace(/Skip to content[\s\S]*?Settings\n/, '').slice(0, 600));
     await page.getByRole('link', { name: /Review \d+ questions/ }).click();
     await page.waitForURL(/#\/quiz\//);
     await page.waitForTimeout(800);
-    console.log('review session header', await page.locator('.sticky').first().innerText());
+    console.log('review session header', await page.locator('div.sticky').first().innerText());
     const flagCheck = await page.getByRole('button', { name: /^Flag/ }).innerText();
     console.log('flag state on first review q', flagCheck);
     let cnt = 0;
