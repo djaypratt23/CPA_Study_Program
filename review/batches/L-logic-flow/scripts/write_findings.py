@@ -58,7 +58,161 @@ f('S2', 'pedagogy', 'ALL', 'reg-mock-1,reg-mock-2,reg-mock-3,tcp-mock-1,tcp-mock
   'Calibrate exam-pool TBS `minutes` so each form fits (e.g. REG ≈ 16 min, TCP/AUD ≈ 18–20, FAR ≈ 23), trimming parts where a TBS is genuinely longer than a real one; compute the results-page targets as the clock share actually available (remaining time ÷ TBS count) and add a validator check that MCQ×1.5 + Σ TBS minutes ≤ durationMinutes.',
   'medium')
 
+
+f('S3', 'flow', 'ALL', 'src/pages/ExamPlayer.tsx:ExamResults', 'src/lib/analytics.ts',
+  'Mock results do not reach the weak-area tools. The results page ends with "open Analytics for your full weak-area breakdown", but Analytics, the recommendations and the planner\'s unit priority all use scoringAttempts(), which drops mock (mode "exam") attempts. The only routes from a mock miss back to study are the opt-in "add missed questions to spaced review" button and the per-item error tagger.',
+  'src/lib/analytics.ts scoringAttempts filters a.mode !== "exam"; src/pages/Analytics.tsx byArea/bySkill use scoringAttempts; src/lib/studyState.ts weakestModules stats use scoringAttempts and unitPriority uses practice-only area estimates; ExamResults has no per-area or per-module links.',
+  'src/pages/ExamPlayer.tsx; src/pages/Analytics.tsx; src/lib/studyState.ts',
+  'Add a "Latest mock" panel to Analytics (by area and by module, MCQ and TBS), feed mock misses into weakestModules with their own reason ("Missed 4 of 6 on the mock"), and on ExamResults link each area to its weakest modules and each missed item to its lesson.',
+  'high')
+f('S2', 'pedagogy', 'ALL', 'src/lib/srs.ts:gradeFromAttempt', 'src/lib/srs.ts',
+  'A correct answer marked "Unsure" is graded Hard. In ts-fsrs 5 a Hard rating during the learning steps repeats the current step (~6 minutes) instead of advancing, so a question a learner keeps answering correctly but "Unsure" never graduates: it is due again minutes later after every review, forever, rather than being spaced. Flashcards rated Hard behave the same way while learning.',
+  'scripts/srs.ts (app parameters: retention 0.9, max 365 d, learning steps 1m/10m, fuzz off): missed, then unsure-correct ×6 → 1m, 6m, 6m, 6m, 6m, 6m, 6m — still in learning, stability 0.2 d, predicted recall on day 56 = 0.42. Missed, then confident ×6 → 1m, 10m, 1d, 2d, 7d, 19d, 48d.',
+  'ts-fsrs 5.4.2 basic scheduler (Hard on a learning step = same step); src/lib/srs.ts gradeFromAttempt',
+  'Grade unsure-correct as Good while the card is New/Learning/Relearning and as Hard only in the Review state (or map Unsure → Good and use the reduced stability via a lower desired retention for that item). Add a test that an unsure-correct path graduates to a ≥1-day interval within 3 answers.',
+  'high')
+f('S3', 'pedagogy', 'ALL', 'src/lib/srs.ts:scheduler', 'src/lib/srs.ts',
+  'Questions share the flashcard learning steps (1 m, 10 m). A missed question is "due" one minute later, so the dashboard immediately says "Review N due items" and the learner re-answers it minutes after reading its explanation; those near-immediate correct answers count as successful reviews and advance the schedule. True spacing starts only on the third answer.',
+  'scripts/srs.ts: missed → due in 1m → answered confidently → 10m → 1d → 2d → 7d … (the first two "reviews" happen within the same session). src/db/actions.ts scheduleQuestion schedules every missed/guessed/unsure practice answer, including lesson pre-questions answered before the lesson is read.',
+  'src/lib/srs.ts (generatorParameters defaults: learning_steps ["1m","10m"]); src/db/actions.ts scheduleQuestion',
+  'Use a separate FSRS instance for questions with learning_steps ["1d"] (or enable_short_term false) so the first re-ask is the next day; skip scheduling lesson pre-questions (or schedule them for the day after the lesson is completed).',
+  'high')
+f('S4', 'pedagogy', 'ALL', 'src/lib/srs.ts:scheduler', 'src/lib/srs.ts',
+  'The scheduler ignores the exam date: retention 0.9 and a 365-day maximum interval apply throughout, and nothing in the final-review window targets items whose predicted recall on exam day is low. Overshooting the exam is not itself harmful (an item due after the exam is still ≥0.90 on exam day under the model), but 0.90 per item is a modest target for the last two weeks.',
+  'scripts/srs.ts: a missed item answered confidently each time it is due reaches predicted recall 0.904 (exam in 28 d), 0.935 (56 d), 0.991 (84 d) on exam day, with the next due date after the exam. A lapsed item reviewed 3 more times is at 0.67 on day 56 only if not reviewed again — i.e. the model relies on the learner doing every due review.',
+  'src/lib/srs.ts generatorParameters; src/lib/planner.ts reviewMinutes',
+  'In the final-review window, raise request_retention for question cards to ~0.95 or add a "pre-exam sweep" task listing items with predicted recall on exam day < 0.95 (ts-fsrs get_retrievability at the exam date); cap maximum_interval at days-to-exam.',
+  'medium')
+f('S3', 'pedagogy', 'ALL', 'src/lib/analytics.ts:overallReadiness', 'src/lib/analytics.ts',
+  'The readiness label is taken from the point estimate (≥75 → "Likely ready") even when the plausible range dips well below 75, and the range itself is only the binomial error of first-attempt accuracy: it ignores the 0.30 assumption for unstudied material, the area weighting and, above all, the raw-to-scaled mapping, which the mock page itself calls a rule of thumb. The dashboard shows "≈ 80 Likely ready, likely range 76–84" with no caveat.',
+  'overallReadiness: se = sqrt(p(1−p)/n), band = approxScaledScore(raw ± 1.96 se), label from `overall` only. Simulation: 85% learner band 79–87 (±4 scaled) from 180 first attempts; at n=200, raw 0.66 → overall 76 "Likely ready" with band 69–81. The IRT caveat appears only on ExamResults.',
+  'src/lib/analytics.ts overallReadiness / approxScaledScore; src/pages/Dashboard.tsx',
+  'Label from the lower bound ("Likely ready" only if band[0] ≥ 75; "Borderline" if the band straddles 75), add a fixed mapping-uncertainty term (e.g. ±5 scaled) to the band, and repeat the one-line caveat under the dashboard readiness number.',
+  'high')
+f('S3', 'pedagogy', 'ALL', 'src/lib/analytics.ts:areaReadiness', 'src/lib/analytics.ts',
+  'Readiness treats confidence labels inconsistently, so honest labelling lowers it: a correct answer marked "Guess" counts as wrong, while unlabelled test-mode answers and mock answers count in full. Two learners with identical knowledge get very different readiness depending on how honestly they click.',
+  'scripts/learners.ts, FAR 10 h/wk: random guesser who marks every answer "Guess" sees readiness 12–18 (with diagnostic) or 28–30; the same guesser clicking "Confident" sees 29–38. QuizPlayer finishTest passes confidence undefined when not given, and isTrulyCorrect counts that as known.',
+  'src/lib/mastery.ts isTrulyCorrect; src/lib/analytics.ts rate(strict); src/pages/QuizPlayer.tsx finishTest',
+  'Keep "guess = miss" for mastery and spaced review, but for the readiness estimate (a prediction of exam score, where lucky guesses do score) count answers as answered, or use calibrated credit (correct guesses at the learner\'s own guess accuracy). Make the treatment of unlabelled answers explicit and identical across modes.',
+  'medium')
+f('S3', 'pedagogy', 'ALL', 'src/lib/analytics.ts:overallReadiness', 'src/lib/analytics.ts',
+  'Readiness disappears for long stretches: the whole estimate is withheld whenever any area has some coverage but fewer than 5 first attempts. The 40-item diagnostic gives small areas fewer than 5 items, and finishing the first lesson of a new area before its practice set also nulls the estimate.',
+  'scripts/learners.ts REG (10 h/wk): after the diagnostic REG-III has 4 items, so readiness reads "Not enough data yet" until week 8 for the 60% learner, week 4 for the 85% learner and for all 12 weeks for both random guessers, despite 89–300 first attempts. FAR 60% learner at 5 h/wk: readiness shown at week 4, then "Not enough data yet" again at week 8 (Area II n<5 after its first lesson). The message "Answer at least 15 new practice questions" is wrong in these cases.',
+  'src/lib/analytics.ts areaReadiness (estimate null when n<5 and coverage>0), overallReadiness (null if any area null); src/lib/quiz.ts buildDiagnostic quota rounding',
+  'Never null the whole estimate for one thin area: shrink the area\'s accuracy toward a prior (e.g. Beta(3,7) ≈ 0.30) and widen the band instead. Give every area at least 5 diagnostic items. Make the "not enough data" message name the area that is short.',
+  'high')
+f('S3', 'pedagogy', 'ALL', 'src/lib/analytics.ts:areaReadiness', 'src/lib/analytics.ts',
+  'Readiness evidence is the last 60 first attempts per area, which are mostly blocked practice answered minutes after reading the lesson. Retention is never measured: answers to already-seen items days or weeks later (mixed sets, mastery checks, the review queue) are excluded by design, and older modules drop out of the 60-item window.',
+  'firstAttempts keeps only each item\'s first sighting; areaReadiness slices the last 60 per area. FAR Area I has 12 in-scope modules × 10-item practice sets, so the window spans only the last ~6 modules studied; the estimate never reflects forgetting of the first ones.',
+  'src/lib/analytics.ts firstAttempts / areaReadiness',
+  'Weight first attempts by delay since the module\'s lesson (e.g. only items first seen ≥3 days after the lesson count fully), or add a retention term from mixed-set accuracy on items last seen ≥7 days earlier; sample the window per module rather than per area.',
+  'medium')
+f('S3', 'pedagogy', 'ALL', 'src/lib/mastery.ts:computeMastery', 'src/lib/mastery.ts',
+  '"Slipping" is triggered by a single day with ≥3 items under 60%, so mastered status flickers for strong learners.',
+  'scripts/learners.ts FAR 85% learner: mastered modules by week 5–12 = 33, 32, 34, 28, 32, 35, 31, 30 of 35 with constant true accuracy. P(≤1 of 3 correct | p=.85) = 0.061 per 3-item day.',
+  'src/lib/mastery.ts (last.acc < 0.6)',
+  'Mark slipping only when the last ≥8 mixed answers for the module (across days) fall below ~65%, or when two consecutive qualifying-size days fail.',
+  'high')
+f('S2', 'flow', 'ALL', 'src/lib/planner.ts:generatePlan', 'src/lib/planner.ts',
+  'The planner\'s model of the work is a small fraction of what passing takes, so it reports "On track" for plans that cannot prepare a candidate. Required work counts each lesson, one 10-question set, two 10-minute mastery checks, 15 minutes per practice TBS and one mock — about 33–46 hours per section — against the 300–400 hours a working adult needs, and even against the ~84–92 hours one pass through the app\'s own content takes.',
+  'scripts/planner.ts: planner\'s whole-course model FAR 46.0 h, AUD 43.6 h, REG 36.9 h, TCP 32.7 h (new-learning portion 42.0 / 39.6 / 32.9 / 28.7 h). One pass through the app content (lessons + all practice MCQs at 2.5 min incl. explanation + practice TBS at 1.5× suggested minutes + 3 mocks + 3 reviews): FAR 91.5 h, AUD 86.1 h, REG 83.5 h, TCP 85.5 h. "FAR exam in 12 wk, 5 h/wk" (60 h in total) → "On track: new material finishes by 2026-12-24". The plan budgets 15 min per TBS while practice TBS average 19–22 suggested minutes. At 5 h/wk the plan leaves 0.3–3 h for mixed practice, so 60–70% of each module\'s bank is never scheduled.',
+  'src/lib/planner.ts PRACTICE_MINUTES, MASTERY_MINUTES, TBS_MINUTES, buildQueue; docs (300–400 h per section is the brief\'s assumption and common review-course guidance)',
+  'Give each section a target-hours figure (data in the section YAML, e.g. FAR 350, AUD 300, REG 300, TCP 250) and show "Your plan provides X of ~Y recommended hours" whenever weekly hours × weeks falls short; schedule the whole practice bank (all MCQs in sets of ~15, every practice TBS at its own minutes, three mocks plus 2-hour reviews) so requiredMinutes reflects real work.',
+  'high')
+f('S3', 'flow', 'ALL', 'src/lib/planner.ts:generatePlan', 'src/lib/planner.ts',
+  'Mock-exam scheduling is thin: only one mock is planned although three forms exist, there is no review block after it, it always sits on the first day of the final-review window, and it is still scheduled when most of the syllabus is unstudied.',
+  'scripts/planner.ts: every dated scenario has exactly one 4-hour mock and none after mockTaken; "FAR exam in 4 wk, 5 h/wk": 21 of 35 lessons never scheduled but the mock is on day 23; "FAR exam in 4 days": lessons on day 1 and a 4-hour mock on day 2.',
+  'src/lib/planner.ts generatePlan (mockDay)',
+  'Plan form 1 about 3–4 weeks out (diagnostic of exam conditions), forms 2–3 in the final window, each followed by a 2-hour "review the mock" task; skip the mock (and say why) when the projected lesson coverage at that date is below ~70% or the exam is under a week away.',
+  'medium')
+f('S3', 'flow', 'ALL', 'src/lib/studyState.ts:computeStudyState', 'src/lib/studyState.ts',
+  'Each section is planned in isolation for the active section and assumes the learner\'s entire weekly budget, so a candidate with two exam dates (e.g. FAR in 6 weeks, AUD in 14) gets two plans that each consume all of their hours, and the AUD plan is invisible while FAR is active.',
+  'scripts/planner.ts [multi-section]: FAR (exam +6 wk) plan week 1 = 9.8 h; AUD (exam +14 wk) plan week 1 = 9.8 h; weekly budget = 10 h.',
+  'src/lib/studyState.ts (generatePlan called with settings.minutesByWeekday for the active section only)',
+  'Allocate the weekly budget across sections with upcoming dates (e.g. all to the nearest exam until it passes, or a user-set split), and show the next section\'s start date on the planner.',
+  'high')
+f('S3', 'pedagogy', 'FAR', 'content/sections/far.yaml', 'content/sections/far.yaml',
+  'FAR\'s course order follows the Blueprint areas, so Area I lessons that depend on later material come first: EPS (if-converted bonds, treasury stock method) in unit 2, consolidations (equity method, goodwill) in unit 3, the cash flow statement (finance leases, deferred tax, impairment) and OCI (AFS securities) in unit 1 — while bonds, equity investments, intangibles, leases and income taxes are taught in units 6–11.',
+  'grep of lesson bodies: far-eps mentions if-converted ×3, treasury stock method ×3, convertible bonds ×2 (taught in far-bonds/far-equity, unit 8); far-consolidations: equity method, goodwill ×4 (far-equity-investments unit 7, far-intangibles unit 6); far-cash-flows: finance lease, deferred tax expense, impairment, patent amortization; far-income-statement-oci: available-for-sale, fair value option.',
+  'content/sections/far.yaml module order; content/far/modules/*/lesson.md',
+  'Reorder the course (not the Blueprint mapping): statements basics → Area II accounts → Area III transactions → consolidations, EPS, cash flows, ratios as capstones; or add prerequisite metadata and a one-paragraph primer in each early lesson. Per-module reviewers should confirm how much each lesson actually assumes.',
+  'medium')
+f('S3', 'pedagogy', 'ALL', 'src/lib/quiz.ts:buildQuiz', 'src/lib/quiz.ts',
+  'Item difficulty is authored on every MCQ but never used: practice sets, mastery checks, mixed sets and the diagnostic ignore it, so there is no easy→hard progression. The first practice set right after a 15–20 minute lesson is a random draw from a bank that is up to 45% "hard".',
+  'grep: `difficulty` appears nowhere in src/ outside the schema. Practice difficulty 1/2/3: FAR 17/38/45%, AUD 27/40/32%, REG 23/37/40%, TCP 13/43/44%; five FAR modules are >50% hard (e.g. far-leases-operating 3/7/18). Authored file order is roughly easy→hard in only 11/37 FAR, 3/33 AUD, 4/27 REG, 2/19 TCP modules (scripts/practice.ts).',
+  'src/lib/quiz.ts buildQuiz / buildMasteryCheck; content/*/modules/*/questions.json',
+  'For the first blocked set after a lesson, draw ~4 easy, 4 medium, 2 hard in that order; for mastery checks draw medium/hard; for repeat sets prefer the difficulty band where the learner\'s accuracy is 60–85%.',
+  'high')
+f('S3', 'coverage', 'ALL', 'src/content/build.ts:skill-mix', 'src/content/build.ts',
+  'Skill-mix checks are pooled and lenient: the validator mixes practice MCQs, exam MCQs and TBS into one share per section, does not weight by score, and does not flag a skill level the section\'s Blueprint does not use. Pool-level gaps remain: FAR practice Application 43.9% (Blueprint 45–55%); REG practice Application 34.3% (35–45%) and Analysis 40.0% (25–35%); two TBS are tagged Evaluation in sections with no Evaluation level.',
+  'scripts/stats.ts: FAR practice R/Ap/An 14.7/43.9/41.4%; REG 25.7/34.3/40.0%; TCP 13.0/55.8/31.3%; AUD 31.1/37.3/21.5/10.1%. scripts/misc.ts: reg-tbs-r3-circular230 and tcp-tbs-r3-planning have skill "evaluation" (REG/TCP skillAllocation has no evaluation entry). The validator prints 0 warnings.',
+  'src/content/build.ts (skill mix warning); content/sections/reg.yaml, tcp.yaml skillAllocation',
+  'Check each pool separately and each mock form score-weighted; error on a skill level outside the section\'s allocation; relabel the two TBS (Analysis) and re-tag or add REG Application items.',
+  'high')
+f('S3', 'coverage', 'ALL', 'reg-mock-1,reg-mock-2,reg-mock-3,aud-mock-1,aud-mock-2,aud-mock-3', 'content/*/exams/*.json',
+  'The per-area check (tests/mockForms.test.ts) counts MCQs only. Counting the TBS half of the score, REG-III is over-weighted on every REG form, REG-V is under on reg-mock-3, and AUD-IV is over on every AUD form.',
+  'scripts/forms.ts, score-weighted area share (50% MCQ + 50% TBS by the TBS\'s first module): REG-III 17%, 17%, 24% vs Blueprint 5–15% (2–3 of 8 TBS are property transactions); REG-V on reg-mock-3 20% vs 23–33%; AUD-IV 22%, 22%, 22% vs 10–20% (2 of 7 TBS). FAR and TCP forms are within range.',
+  'tests/mockForms.test.ts (MCQ-only area check); content/sections/reg.yaml, aud.yaml allocations',
+  'Extend the area test to the score-weighted mix (±5 points) and swap one REG-III TBS for an REG-V entity TBS on each REG form and one AUD-IV TBS for an AUD-II/III TBS.',
+  'high')
+f('S3', 'pedagogy', 'ALL', 'far-x1-29,reg-x2-24,tcp-x4-08,tcp-x1-17', 'content/*/exam-questions/*.json',
+  'Four mock items are near-clones of practice items the learner will already have answered, which contaminates those forms.',
+  'scripts/misc.ts: far-x1-29 (far-mock-3) asks the same discontinued-operations question as far-iso-02 with the same key; reg-x2-24 (reg-mock-3) = reg-ag-14 ("Which duty does a principal owe an agent?"); tcp-x4-08 (reg-mock-1, reg-mock-3) has the same stem, numbers ($4,600,000 placed in service) and answer ($1,900,000) as practice item reg-dep-04; tcp-x1-17 (tcp-mock-1, tcp-mock-2) = tcp-re-01 with the age changed from 52 to 62.',
+  'content/far/exam-questions/far-exam-area1.json etc.',
+  'Rewrite the four exam items to test the same rule with a different scenario or different numbers (or replace them), and add a validator check for exam-pool stems that match a practice or lesson stem.',
+  'high')
+f('S3', 'flow', 'ALL', 'src/components/McqView.tsx:McqView', 'src/components/McqView.tsx',
+  'Misses do not route back to the specific lesson. After an answer is revealed (practice, review queue, mixed sets, mock review), the learner gets the explanation and an error-cause tagger, but no link to the module\'s lesson or the relevant worked example, and in mixed and review sets the module is not even named. The error-log advice for "Concept gap" says "Re-read the lesson\'s big idea" without saying which lesson.',
+  'src/components/McqView.tsx (revealed branch: explanation, ErrorTagger, report link only); src/pages/QuizPlayer.tsx QuizResults list has no module links; only the failed-mastery Remediation panel and Analytics\' recent tagged misses link to /module/:id.',
+  'src/components/McqView.tsx; src/pages/QuizPlayer.tsx; src/pages/ExamPlayer.tsx',
+  'After reveal, show "Review: <module title> → lesson" (deep-link to the heading or worked block that teaches the item, via an optional `lessonAnchor` on the MCQ); on results pages group misses by module with a "Review lesson" button.',
+  'high')
+f('S3', 'flow', 'ALL', 'src/lib/studyState.ts:computeStudyState', 'src/lib/studyState.ts',
+  'The dashboard\'s main "next step" can be hijacked: any lesson that has been opened but not completed becomes "Continue lesson" ahead of the plan, indefinitely, even if the learner only glanced at an upcoming or optional module. The fallback "Study next" uses course order rather than the plan\'s (reordered) order.',
+  'computeStudyState: inLesson = latest progress with lastVisitedAt and no lessonCompletedAt; ModulePage calls touchModule on every visit; `next` checks inLesson before the plan\'s first task. Fallback: available.find(m => !m.lessonDone) (course order).',
+  'src/lib/studyState.ts; src/pages/ModulePage.tsx touchModule',
+  'Use "Continue lesson" only when the lesson was scrolled past ~10% within the last few days and is in scope; otherwise show it in the secondary "Where you left off" line. Make the fallback follow orderUnits.',
+  'high')
+f('S2', 'coverage', 'REG', 'content/reg/review', 'content/reg/review/reg-formulas.md',
+  'The REG final-review docs leave out most of REG-I and REG-II (25–45% of the exam): nothing on Circular 230 duties beyond return-position standards and penalty thresholds, accountants\' legal liability, agency, contract formation and remedies beyond the statute of frauds and mailbox rule, business structures, federal regulation (ACA employer rules, worker classification, FCPA) or state and local tax. There is no REG high-yield summary at all, and the "Computation roadmap" spends much of its space on topics REG marks optional (like-kind, §1245/§1250/§291, installment sales, E&P, §351, redemption attribution).',
+  'grep across content/reg/review/*.md: no match for "Circular 230|§10.", "liab|privity|10b-5", "agency|agent", "nexus|apportion", "FCPA|ACA|worker". Docs: reg-exam-day (orientation), reg-formulas (condensed), reg-mnemonics, reg-numbers. FAR and AUD each have an area-by-area high-yield doc.',
+  'content/sections/reg.yaml (REG-I 10–20%, REG-II 15–25%); docs/BLUEPRINT_NOTES.md decision D1',
+  'Add reg-high-yield.md organised by Blueprint area (ethics and procedures, business law, property, individuals, entities, SALT) and mark or move the TCP-scope rows in reg-formulas.md (e.g. "TCP — optional in REG").',
+  'high')
+f('S3', 'coverage', 'TCP', 'content/tcp/review', 'content/tcp/review/tcp-formulas.md',
+  'TCP has no high-yield summary, and its review docs do not cover international tax (a whole module), consolidated returns or choice of entity (Area III).',
+  'grep across content/tcp/review/*.md: no match for "international|CFC|GILTI|FDAP|foreign tax credit", "consolidated", "entity choice|choice of entity".',
+  'content/sections/tcp.yaml (TCP-III 10–20%)',
+  'Add tcp-high-yield.md by Blueprint area, including an entity-choice comparison table, consolidated-return basics and the international rules taught in tcp-international.',
+  'high')
+f('S4', 'coverage', 'ALL', 'content/far/review,content/aud/review', 'content/far/review/far-high-yield.md',
+  'FAR and AUD final-review docs are solid but skip a few Blueprint topics: FAR special purpose frameworks and related-party disclosures; AUD data analytics, GAGAS/single audits and SSAE examination specifics beyond one line.',
+  'grep across content/far/review/*.md: no match for "special purpose|cash basis", "related part"; content/aud/review/*.md: no match for "data analytic|ADA", "single audit|GAGAS|Yellow".',
+  'content/sections/far.yaml, aud.yaml',
+  'Add one bullet block for each missing topic to the high-yield docs.',
+  'medium')
+f('S3', 'coverage', 'ALL', 'content/*/modules', 'content/sections/*.yaml',
+  'Lesson depth is modest for a 300–400 hour target: each module is one ~800–1,000-word lesson, so the whole section reads in 6–10 hours, and the app\'s content supports roughly 85–92 hours of study per section. The `minutes` values are realistic (if anything generous); the issue is total depth, which the app should state if it is meant as a companion to a full course.',
+  'scripts/lessons.ts: stated vs estimated reading time (130 wpm + 1.5 min per embedded/pre question + 2 min per faded example): FAR 636 vs 524 min, AUD 529 vs 354, REG 474 vs 313, TCP 369 vs 239; mean words per lesson 1,019 / 794 / 847 / 828. One-pass hours from scripts/planner.ts: 91.5 / 86.1 / 83.5 / 85.5.',
+  'content/*/modules/*/lesson.md',
+  'Either say plainly (README, onboarding, planner) that the app covers roughly a quarter of recommended study time and works best alongside a full review course, or deepen the highest-weight modules (multiple lessons per module for revenue, leases, consolidations, risk assessment, individual and entity tax).',
+  'medium')
+f('S4', 'pedagogy', 'ALL', 'content/aud/modules,content/reg/modules', 'content/reg/modules',
+  'The worked → faded → independent sequence promised in PLAN.md is missing in most AUD and REG lessons (no faded example), including computational REG modules.',
+  'scripts/lessons.ts: lessons with no faded block — AUD 30/33, REG 19/27, FAR 3/37, TCP 2/19.',
+  'PLAN.md "Worked → faded → independent"',
+  'Add a faded example to each computational REG module (gross income, adjustments, credits, AMT, C-corp income, partnerships, S corps) and a judgement-style faded walk-through (e.g. opinion selection) to key AUD modules.',
+  'high')
+f('S4', 'flow', 'ALL', 'src/pages/QuizPlayer.tsx:QuizResults', 'src/pages/QuizPlayer.tsx',
+  'The set-complete message says "N question(s) were added to your spaced review queue" counting only misses and lucky guesses; correct-but-unsure answers are also queued, and in review mode items are rescheduled rather than added.',
+  'QuizResults: `missed + guessedRight` vs src/lib/srs.ts needsRequeue (also true for unsure).',
+  'src/pages/QuizPlayer.tsx',
+  'Count unsure answers too, and word the review-mode message as "rescheduled".',
+  'high')
+
 def write():
     with open(OUT, 'w') as fh:
         for x in F: fh.write(json.dumps(x, ensure_ascii=False) + '\n')
     print('wrote', len(F), 'findings')
+
+write()
