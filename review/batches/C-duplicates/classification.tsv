@@ -1,0 +1,511 @@
+pair	id_a	id_b	class	note
+1	tcp-te-11	reg-te-chk1	b	REG<->TCP duplicate: simple-trust definition (TCP practice vs REG lesson check)
+2	tcp-sc2-pre1	reg-sc-pre1	b	REG<->TCP duplicate: identical pre-lesson S-corp eligibility item
+3	tcp-sc2-33	reg-sc-17	b	REG<->TCP duplicate: S-corp 2% shareholder health insurance (identical stem)
+4	tcp-po-26	reg-pt-08	b	REG<->TCP duplicate: Form 1065 due date (generic March 15)
+5	tcp-po-06	reg-x5-41	c	Contradiction: tcp-po-06 keys March 16, 2026 (weekend rule, correct); reg-x5-41 keys March 15, 2026 (a Sunday). Also TCP practice <-> REG exam leak
+6	tcp-ms-24	reg-slt-31	b	REG<->TCP duplicate: P.L. 86-272 protects solicitation of orders for goods
+7	reg-ag-14	reg-x2-24	b	Practice<->exam duplicate: principal owes agent reimbursement (identical stem, same answer)
+8	far-nfs-14	far-nfs-27	a	Exact duplicate within practice: NFP liquidity disclosure (identical stem and key)
+9	far-nd-11	far-nd-22	a	Exact duplicate within practice: inventory cost method in policies note
+10	far-iso-02	far-x1-29	b	Practice<->exam duplicate: discontinued operation = major line, strategic shift
+11	far-gov-01	far-gov-11	a	Exact duplicate within practice: government-wide statements = economic resources, full accrual
+12	aud-x2-03	aud-x2-39	d	Is vs is-not variants (both exam pool); different keyed fact
+13	aud-uo2-chk1	aud-uo2-16	a	Lesson<->practice near duplicate: basis-for-opinion includes independence statement
+14	aud-ue-16	aud-ue-21	a	Near duplicate within practice: risk assessment procedures (inquiry, analytics, inspection)
+15	aud-spi-chk2	aud-spi-16	a	Lesson<->practice near duplicate: lead partner 5-year rotation (lesson also asks 5-year time-out)
+16	far-fv-01	far-x3-09	b	Practice<->exam duplicate: Level 2 = quoted prices for similar assets in active markets
+17	reg-ag-04	reg-x2-24	d	Agent's duty vs principal's duty - different facts
+18	reg-ag-04	reg-ag-14	d	Agent's duty vs principal's duty - different facts
+19	reg-dep-04	tcp-x4-08	b	REG practice <-> TCP exam: identical Sec.179 phase-out stem and numbers ($4.6M -> $1.9M)
+20	far-imp-13	far-imp-14	d	Different numbers (goodwill impairment cap vs not capped); both keys recomputed correct
+21	far-fv-22	far-fv-23	d	Different angle (no principal market vs principal market); both recomputed correct ($96, $98)
+22	tcp-re-01	tcp-x1-17	d	Same template, different age tests different rule (regular vs 60-63 catch-up); both correct
+23	tcp-ad-26	tcp-x4-11	b	Practice<->exam duplicate: Sec.1245 recapture, identical numbers ($30,000 ordinary)
+24	aud-at-03	aud-at-13	a	Near duplicate within practice: responsible party refuses written assertion -> withdraw
+25	tcp-cr2-chk1	reg-dep-04	d	Different numbers ($4.3M vs $4.6M); both keys recomputed correct
+26	aud-spi-16	aud-spi-21	a	Near duplicate within practice: lead partner rotation 5 years
+27	aud-spi-chk2	aud-spi-21	a	Lesson<->practice near duplicate: lead partner rotation 5 years
+28	far-se-11	far-se-26	d	Different angle: SEC filer (issued date) vs non-SEC (available to be issued)
+29	far-rat-18	far-rat-24	d	Different ratio (debt ratio vs debt-to-equity)
+30	far-inv-14	far-inv-26	a	Near duplicate within practice: identical dollar-value LIFO numbers and answer ($122,000)
+31	tcp-sc2-06	tcp-sc2-26	a	Near duplicate within practice: S election terminates after 3 consecutive years of excess passive income
+32	reg-c230-02	reg-x1-21	d	Different contingent-fee exceptions (exam of original return vs 120-day refund claim); consistent
+33	far-inv-21	far-inv-23	d	Same data set, FIFO vs LIFO; both recomputed correct ($1,950; $1,600)
+34	far-iv-22	far-iv-23	d	Different numbers (LCM floor/ceiling); both recomputed correct
+35	far-imp-29	far-imp-30	d	Different numbers; both recomputed correct
+36	reg-nt-08	tcp-x4-18	b	REG practice <-> TCP exam: related-party like-kind exchange, 2-year disposition (consistent keys)
+37	far-x2-04	far-x2-20	a	Exact duplicate within exam pool: FIFO LCNRV $46,000, identical numbers
+38	tcp-cr2-chk1	tcp-x4-08	d	Different numbers ($4.3M vs $4.6M)
+39	tcp-cc-29	reg-cc-06	b	REG<->TCP duplicate: Form 1120 due April 15
+40	reg-pb-08	reg-pb-20	a	Near duplicate within practice: donee loss basis, holding period begins at gift date
+41	far-dep-21	far-x2-28	b	Practice<->exam duplicate: DDB year-2 depreciation, identical numbers ($12,000)
+42	tcp-sc2-24	reg-cc-06	d	Different forms (1120-S vs 1120)
+43	far-fv-12	far-fv-19	d	Transport/transaction cost swapped; both recomputed correct
+44	aud-cm-11	aud-x4-08	d	Different required communications keyed
+45	far-tax-07	far-tax-27	a	Near duplicate within practice: deferred taxes all noncurrent
+46	tcp-cc-11	reg-cc-29	d	Different numbers (80% NOL limit); both recomputed correct
+47	tcp-pf-04	tcp-pf-32	a	Near duplicate within practice: contributed capital asset holding period tacks
+48	tcp-ip-07	tcp-x1-37	d	Different numbers (kiddie tax); both recomputed correct
+49	reg-ot-04	tcp-x1-37	b	REG practice <-> TCP exam: kiddie tax $5,000 interest -> $2,300 (same numbers)
+50	far-inv-22	far-inv-23	d	Same data set, weighted average vs LIFO; both correct
+51	far-inv-21	far-inv-22	d	Same data set, FIFO vs weighted average; both correct
+52	far-dsec-21	far-dsec-22	d	AFS vs trading - different classification
+53	aud-ev-21	aud-x3-28	d	Different options; both keys defensible (direct auditor evidence vs external confirmation)
+54	far-imp-24	far-imp-25	d	Different numbers (recoverability passes/fails); both correct
+55	tcp-dt-03	tcp-dt-26	d	Can vs can't use installment method - different angle
+56	reg-dc-04	reg-dc-27	a	Near duplicate within practice: fewer than 12 creditors -> 1 creditor may file involuntary petition
+57	reg-te-19	reg-te-41	a	Near duplicate within practice: Form 1023
+58	reg-id-pre1	reg-id-31	a	Lesson<->practice near duplicate: medical 7.5% AGI floor
+59	reg-ag-06	reg-x2-03	d	Different keyed events (principal bankruptcy vs agent death); consistent
+60	far-iso-05	far-x1-04	d	Different keyed OCI items; consistent
+61	aud-x3-02	aud-x3-28	a	Near duplicate within exam pool: external confirmation most reliable
+62	tcp-pa-11	reg-x4-09	b	TCP practice <-> REG exam (mapped to tcp-passive-rental): $25,000 rental allowance phase-out at $130k MAGI -> $10,000
+63	tcp-cc-13	tcp-cc-40	d	Different numbers (20% AET); both correct
+64	reg-cc-02	reg-x5-37	d	Different ownership % (50% vs 65% DRD) and limitation; both correct
+65	far-eq-chk2	far-eq-13	a	Lesson<->practice near duplicate: equity-method dividends reduce investment
+66	tcp-sc2-04	reg-sc-02	b	REG<->TCP duplicate: shareholder loan guarantee does not create basis
+67	far-imp-24	far-x2-10	b	Practice<->exam duplicate: impairment test identical numbers ($120,000)
+68	tcp-te-01	reg-te-08	b	REG<->TCP duplicate: complex trust exemption $100
+69	aud-wr-21	aud-x3-52	b	Practice<->exam duplicate: representation letter dated as of report date
+70	reg-ep-chk1	reg-ep-11	d	Different numbers (current E&P vs deficit); both correct
+71	tcp-ip-07	reg-ot-04	d	Different numbers (kiddie tax)
+72	tcp-cr2-17	tcp-x4-10	d	Different numbers (27.5-year mid-month); both correct
+73	aud-uo2-13	aud-x4-02	b	Practice<->exam duplicate: PCAOB report requires auditor tenure
+74	tcp-x1-02	tcp-x1-26	d	Included vs excluded NIIT - different facts (both exam)
+75	reg-cg-05	tcp-x4-03	d	Different numbers (Sec.291 20%); both correct
+76	far-inv-16	far-inv-22	d	Different data (weighted average); both correct
+77	tcp-po-26	reg-x5-41	b	TCP practice <-> REG exam: Form 1065 due date (generic March 15 vs March 15, 2026)
+78	tcp-po-06	tcp-po-26	a	Near duplicate within module: Form 1065 due date (generic vs 2025-specific; consistent)
+79	tcp-po-06	reg-pt-08	b	REG<->TCP duplicate: Form 1065 due date
+80	reg-pt-08	reg-x5-41	b	Practice<->exam duplicate: Form 1065 due date (see contradiction pair 5)
+81	aud-cm-07	aud-cm-14	d	Different angle on misstatement communications; consistent
+82	tcp-sc2-24	tcp-cc-29	d	Different forms (1120-S vs 1120)
+83	far-inv-21	far-x2-27	d	Different numbers and measure (FIFO COGS vs ending); both correct
+84	tcp-intl-chk1	tcp-intl-32	d	Different foreign taxes paid (under vs over limit); both correct
+85	reg-ot-12	reg-x4-32	b	Practice<->exam duplicate: SE tax on $50,000 = $7,065 (identical numbers)
+86	tcp-sc2-24	reg-sc-10	b	REG<->TCP duplicate: Form 1120-S due March 15
+87	reg-c230-01	reg-c230-36	a	Near duplicate within practice: unlimited representation rights (CPA/attorney/EA)
+88	aud-uo2-22	aud-se-04	a	Cross-module AUD near duplicate: report dated no earlier than sufficient evidence obtained
+89	aud-ps-12	aud-gov-22	a	Cross-module AUD near duplicate: GAO issues the Yellow Book
+90	reg-pen-03	reg-pen-34	a	Near duplicate within practice: civil fraud penalty 75%
+91	reg-gi-04	reg-gi-10	d	Different exclusions (physical injury damages vs muni interest)
+92	far-spf-01	aud-sp-22	d	FAR vs AUD: not-SPF vs is-SPF, different keyed bases
+93	far-spf-01	aud-sp-01	d	FAR vs AUD: different angle (not-SPF vs SPF)
+94	tcp-ip-05	tcp-x1-26	b	Practice<->exam duplicate: retirement plan distributions excluded from NII
+95	tcp-ip-05	tcp-x1-02	d	Excluded vs included NII - different keyed item
+96	aud-sp-09	aud-sp-15	a	Near duplicate within practice: interim review = inquiry and analytics
+97	tcp-pa-chk1	reg-x4-09	d	Different numbers (rental allowance phase-out); both correct
+98	aud-rm-14	aud-pl-26	a	Cross-module AUD near duplicate: same $2,000,000 -> $1,200,000 materiality revision scenario
+99	tcp-gt-05	reg-te-10	b	REG<->TCP duplicate: Form 709 due April 15, 2026
+100	reg-ot-16	tcp-x1-26	b	REG practice <-> TCP exam: retirement distributions excluded from NII
+101	reg-dc-13	reg-x2-22	b	Practice<->exam duplicate: domestic support obligations highest priority
+102	aud-pl-chk2	aud-x2-39	b	Lesson<->exam duplicate: confirmation is not a risk assessment procedure (same options)
+103	aud-pl-chk2	aud-x2-03	d	Not-RAP vs is-RAP - different keyed item
+104	aud-fr-chk2	aud-fr-12	a	Lesson<->practice near duplicate: retrospective review of estimates required
+105	tcp-pd-19	tcp-pd-22	d	Different liquidation fact patterns (basis decrease vs increase); both recomputed correct
+106	aud-ev-02	aud-rev-27	a	Cross-module AUD near duplicate: no reply to positive confirmation -> alternative procedures
+107	far-sec-18	far-sec-23	d	Different ASU 2023-07 requirements
+108	reg-pt-14	reg-pt-20	d	Different separately stated items keyed
+109	tcp-intl-chk1	tcp-intl-09	d	Different numbers (excess FTC $90,000); correct
+110	reg-cg-05	tcp-x4-12	d	Different numbers (Sec.291 $30,000); correct
+111	tcp-gt-chk1	reg-x5-19	d	Different numbers (gift exclusion); both correct
+112	far-inv-01	far-inv-02	d	Same data set FIFO ending vs LIFO COGS; both correct
+113	aud-uo-14	aud-uo-26	a	Near duplicate within practice: component auditor work insufficient -> additional procedures
+114	tcp-pa-11	reg-bri-chk2	d	Different numbers (MAGI above $150,000 -> $0); correct
+115	tcp-ip-30	tcp-ip-31	d	Different numbers (OBBBA SALT cap phase-down); both correct
+116	reg-ot-22	tcp-x1-03	d	Different numbers (NIIT MFJ); both correct
+117	tcp-intl-chk1	tcp-x2-29	d	Different numbers (FTC limit $42,000); correct
+118	reg-cc-13	reg-x5-27	d	Different numbers (21% rate); both correct
+119	aud-gov-11	aud-gov-25	a	Near duplicate within practice: SEFA reported in relation to the statements
+120	reg-irs-chk1	reg-irs-34	a	Lesson<->practice near duplicate: 90 days to petition Tax Court
+121	aud-ea-chk1	aud-ea-24	a	Lesson<->practice near duplicate: management refuses ICFR responsibility -> decline
+122	far-eps-04	far-eps-16	d	Different numbers (treasury stock method); both correct
+123	reg-c230-35	reg-x1-21	d	Different contingent-fee angle (original return vs 120-day claim)
+124	reg-slt-chk1	reg-x5-36	d	Different numbers (double-weighted sales); both correct
+125	tcp-pf-18	tcp-pf-32	a	Near duplicate within practice: contributed capital asset holding period tacks
+126	reg-al-03	reg-x1-11	b	Practice<->exam duplicate: Rule 10b-5 requires scienter
+127	far-inv-21	far-x2-03	d	Different numbers (periodic FIFO); correct
+128	tcp-fl-15	tcp-fl-31	a	Near duplicate within practice: Sec.351 control fails when services-only shareholder holds 30%
+129	far-inv-01	far-inv-03	d	Same data set FIFO vs weighted average; both correct
+130	tcp-fl-35	reg-fl-15	b	REG<->TCP duplicate: 60-of-100 shares, 30 redeemed -> substantially disproportionate
+131	aud-cm-24	aud-ic-02	a	Cross-module AUD near duplicate: material weakness definition
+132	tcp-po-chk1	reg-pt-14	d	Different keyed separately stated items (Sec.179 vs charitable)
+133	reg-ct-chk2	reg-ct-29	a	Lesson<->practice near duplicate: seller's right to cure
+134	far-iso-05	far-x1-20	d	Different keyed OCI items
+135	reg-ot-14	reg-ot-15	d	Different numbers (NIIT single); both correct
+136	reg-cg-39	reg-x3-05	b	REG practice <-> exam (mapped to tcp-asset-dispositions): unrecaptured Sec.1250 max rate 25%
+137	aud-uo2-03	aud-se-04	a	Cross-module AUD near duplicate: report date = sufficient evidence obtained
+138	aud-rr-09	aud-x3-19	b	Practice<->exam duplicate: search for unrecorded liabilities via subsequent disbursements
+139	aud-ps-22	aud-ps-23	d	Must vs should - different facts
+140	aud-fr-12	aud-fr-23	d	Different required override procedures; both correct
+141	reg-gi-15	reg-x4-35	b	Practice<->exam duplicate: insolvency exclusion, identical numbers ($10,000)
+142	reg-fs-07	reg-fs-33	a	Near duplicate within practice: marital status determined on last day of year
+143	aud-inv-chk1	aud-inv-16	a	Lesson<->practice near duplicate: record last receiving/shipping numbers for cutoff
+144	far-int-20	far-int-23	d	Different numbers (patent amortization); both correct
+145	tcp-ec-30	reg-id-chk2	d	Different numbers (QBI 20%); both correct
+146	tcp-gt-28	tcp-x1-43	b	Practice<->exam duplicate: direct tuition payment is not a taxable gift
+147	aud-ss-07	aud-ss-26	c	Contradiction: aud-ss-07 (modified qualified/adverse review conclusion, SSARS 25) vs aud-ss-26 (just disclose in a paragraph - pre-SSARS 25 rule)
+148	tcp-pf-04	tcp-pf-18	a	Near duplicate within practice: contributed capital asset holding period tacks
+149	tcp-gt-26	reg-te-10	b	REG<->TCP duplicate: Form 709 due April 15, 2026
+150	tcp-gt-05	tcp-gt-26	a	Near duplicate within practice: Form 709 due April 15, 2026
+151	aud-mo-21	aud-mo-22	d	Material-not-pervasive vs material-and-pervasive
+152	aud-uo2-12	aud-uo2-22	a	Near duplicate within practice: earliest report date
+153	aud-uo2-12	aud-se-04	a	Cross-module AUD near duplicate: earliest report date
+154	reg-ot-08	reg-ot-24	d	Different installments (Q4 vs Q2 with weekend shift); both correct
+155	aud-gc-chk1	aud-gc-11	a	Lesson<->practice near duplicate: recurring losses raise going-concern doubt
+156	reg-adj-09	reg-x4-12	d	Different numbers (IRA phase-out); both correct
+157	far-ppe-24	far-ppe-25	d	Commercial substance vs lacks it; both correct
+158	tcp-pd-06	tcp-pd-35	a	Near duplicate within practice: mandatory 743(b) with substantial built-in loss
+159	tcp-eo-20	reg-te-33	d	Different forms (990-T vs 990), same date
+160	tcp-po-31	reg-ot-32	d	Different numbers (SE earnings); both correct
+161	reg-sc-09	reg-x5-35	b	Practice<->exam near duplicate: S-corp loss limited to stock+debt basis = $13,000 of $20,000 (bases swapped)
+162	tcp-gt-13	tcp-gt-30	a	Near duplicate within practice: non-citizen spouse gift $250,000 - $190,000 = $60,000
+163	tcp-eo-21	tcp-eo-32	a	Near duplicate within practice: university bookstore convenience exception
+164	aud-rp-04	aud-uo2-15	a	Cross-module AUD near duplicate: nonissuer KAMs only when engaged
+165	aud-mo-chk1	aud-mo-16	a	Lesson<->practice near duplicate: material not pervasive scope limitation -> qualified
+166	aud-se-26	aud-x3-53	d	Different stage (discuss with management vs audit revision once management agrees); consistent
+167	tcp-pa-chk1	tcp-pa-11	d	Different numbers (rental allowance); both correct
+168	tcp-pa-chk1	reg-bri-chk2	d	Different numbers (rental allowance); both correct
+169	tcp-cr2-chk1	tcp-cr2-19	a	Lesson<->practice near duplicate: identical Sec.179 numbers ($4.3M -> $2.2M)
+170	tcp-ad-27	tcp-x4-11	d	Different numbers (Sec.1245 partial recapture); correct
+171	reg-bri-chk2	reg-x4-09	d	Different numbers (rental allowance); both correct
+172	far-iv-16	far-iv-21	d	Different numbers (NRV write-down); both correct
+173	tcp-re-chk1	reg-x4-12	d	Different numbers (IRA phase-out); both correct
+174	tcp-eo-02	reg-te-34	b	REG<->TCP duplicate: exemption auto-revoked after 3 years of non-filing
+175	reg-ct-14	reg-x2-25	b	Practice<->exam duplicate: past consideration (retiree promise) unenforceable
+176	reg-cc-03	reg-x5-24	d	Different numbers (80% NOL limit); both correct
+177	reg-cc-21	reg-x5-37	d	Different ownership % and numbers (DRD); both correct
+178	aud-sa-04	aud-sa-25	d	Different numbers (MUS tainting); both correct
+179	reg-cg-02	reg-cg-24	d	Different capital gain netting facts
+180	far-rev2-12	far-rev2-22	a	Near duplicate within practice: identical significant financing component numbers ($110,250)
+181	aud-uo-04	aud-uo-11	a	Near duplicate within practice: SOC 1 Type 2 gap -> bridge letter / added evidence
+182	reg-id-16	reg-id-28	d	Different numbers (SALT cap phase-down); both correct
+183	far-seq-12	far-x2-25	d	Large (par) vs small (FV) stock dividend; both correct
+184	far-nfr-17	far-x1-34	b	Practice<->exam duplicate: conditional matching pledge not yet met -> $0 (identical numbers)
+185	far-inv-23	far-x2-27	d	Different data/measure
+186	far-nd-13	aud-x3-54	d	FAR disclosure vs AUD reporting angle; consistent
+187	aud-itc-pre1	aud-x2-30	b	Lesson<->exam near duplicate: program change controls are ITGCs
+188	tcp-eo-11	tcp-eo-31	a	Near duplicate within practice: volunteer-run thrift shop not UBTI
+189	tcp-dt-03	tcp-x4-07	b	Practice<->exam near duplicate: individual's installment sale of real property qualifies
+190	aud-wr-13	aud-wr-22	a	Near duplicate within practice: CEO and CFO sign representation letter
+191	aud-ev-21	aud-x3-02	d	Different options; both keys defensible
+192	reg-irs-pre1	reg-irs-14	a	Lesson<->practice near duplicate: Tax Court without prepayment
+193	reg-c230-02	reg-c230-35	d	Different contingent-fee angle
+194	aud-inv-04	aud-x3-47	b	Practice<->exam duplicate: public warehouse inventory -> confirm with custodian
+195	aud-gc-16	aud-gc-22	d	AICPA vs PCAOB going-concern look-forward periods; both correct
+196	reg-ct-01	reg-ct-23	a	Near duplicate within practice: mailbox rule (acceptance on dispatch beats later-received revocation)
+197	reg-pt-chk1	reg-pt-14	d	Different keyed separately stated items
+198	reg-dc-05	reg-x2-09	d	Different nondischargeable debts keyed
+199	tcp-cc-35	reg-cc-02	b	REG<->TCP duplicate: 50% DRD limited to 50% of $80,000 = $40,000 (same numbers)
+200	far-x1-10	far-x1-36	d	Different numbers (inventory turnover); both correct (both exam)
+201	aud-mo-19	aud-mo-27	d	Different step (ultimate response vs first step); consistent
+202	aud-ic-02	aud-x2-29	b	Practice<->exam duplicate: material weakness definition
+203	aud-rp-21	aud-rp-22	d	Emphasis-of-matter vs other-matter
+204	aud-inv-03	aud-inv-13	d	Existence vs obsolescence procedures
+205	far-imp-25	far-x2-10	d	Different numbers (recoverability)
+206	aud-spi-21	aud-x1-20	b	Practice<->exam duplicate: lead partner 5 years on (exam adds 5 off)
+207	tcp-x1-09	reg-x4-09	d	Different numbers (rental allowance); both correct
+208	tcp-pa-chk1	tcp-x1-09	d	Different numbers (rental allowance)
+209	tcp-eo-01	reg-te-33	b	REG<->TCP duplicate: Form 990 due May 15
+210	reg-dc-24	reg-x2-09	d	Different nondischargeable debts keyed
+211	aud-qm-13	aud-qm-23	c	Contradiction: aud-qm-13 keys EQR required for listed-entity audits (ISQM 1 wording); aud-qm-23 keys firm-designated engagements (AICPA SQMS 1 has no listed-entity criterion)
+212	tcp-eo-24	tcp-eo-40	d	Rate vs computation of PF excise tax; consistent (1.39%)
+213	far-sec-23	far-sec-31	a	Near duplicate within practice: ASU 2023-07 significant segment expenses
+214	aud-uo2-07	aud-uo2-24	a	Near duplicate within practice: opinion covers each period presented
+215	aud-ev-16	aud-ev-17	d	Directional testing: occurrence vs completeness
+216	tcp-pd-chk2	tcp-pd-16	d	Different liquidation outcomes (loss vs basis)
+217	reg-pen-chk2	reg-x1-15	b	Lesson<->exam duplicate: Sec.6694(a) on $3,000 fee (identical numbers)
+218	aud-inv-12	aud-x3-35	d	Directional testing: completeness vs existence; consistent
+219	reg-ct-02	reg-x2-19	b	Practice<->exam near duplicate: UCC statute of frauds $500 goods (same distractor set)
+220	far-fv-chk1	far-fv-12	d	Different numbers (fair value less transport); correct
+221	aud-ea-11	aud-ea-23	a	Near duplicate within practice: acceptable framework is a precondition
+222	far-ppe-04	far-x2-07	d	Different numbers (capitalized interest); both correct
+223	reg-fs-08	reg-x4-03	d	Different ages (two vs one additional amount); both correct
+224	far-imp-30	far-x2-11	d	Different numbers (goodwill impairment); correct
+225	far-imp-29	far-x2-11	d	Different numbers (goodwill impairment); correct
+226	reg-gi-chk1	reg-gi-16	d	Different numbers (scholarship); both correct
+227	reg-cg-18	reg-cg-26	d	Different numbers (0%/15% LTCG); both correct
+228	tcp-fl-05	tcp-fl-32	a	Near duplicate within practice: liquidation of land, identical numbers
+229	tcp-x4-03	tcp-x4-12	d	Different numbers (Sec.291); both correct (both exam)
+230	far-inv-22	far-x2-27	d	Different data/measure
+231	far-seq-12	far-seq-23	d	Different stock dividend sizes
+232	far-fv-chk1	far-fv-19	a	Lesson<->practice near duplicate: principal market $50 less $3 transport = $47 (same answer)
+233	tcp-pa-31	reg-bri-14	b	REG<->TCP duplicate: vacation home 90/30 days -> $9,000 (identical numbers)
+234	reg-fs-06	reg-fs-26	a	Near duplicate within practice: dependent standard deduction $3,450 (identical numbers)
+235	aud-ss-16	aud-ss-24	a	Near duplicate within practice: non-independent compilation must disclose impairment
+236	aud-rp-09	aud-rp-14	a	Near duplicate within practice: supplementary information in relation to statements
+237	aud-gc-chk1	aud-gc-24	a	Lesson<->practice near duplicate: covenant default/recurring losses raise going-concern doubt
+238	tcp-fl-03	reg-cg-08	b	REG<->TCP near duplicate: Sec.1244 MFJ $100,000 ordinary limit
+239	tcp-po-13	tcp-po-36	a	Near duplicate within practice: Sec.707(b) loss disallowed for >50% partner
+240	tcp-ad-26	tcp-ad-27	d	Different sale prices (full vs partial recapture)
+241	far-rev2-17	far-rev2-24	a	Near duplicate within practice: noncash consideration measured at inception
+242	tcp-ad-18	tcp-x4-11	d	Different numbers (Sec.1245); correct
+243	reg-ot-21	reg-ot-35	d	Different numbers (additional Medicare tax); both correct
+244	far-se-16	far-se-22	a	Near duplicate within practice: post-year-end fire = nonrecognized subsequent event, disclose
+245	far-cont-chk1	far-cont-19	a	Lesson<->practice near duplicate: probable but not estimable -> disclose only
+246	aud-se-14	aud-se-21	d	Different facts (duty after report date vs cutoff date); consistent
+247	far-cont-13	far-cont-21	d	Different numbers (best estimate accrued)
+248	far-tax-24	far-x3-08	d	Different numbers/rates (permanent difference); both correct
+249	far-cont-16	far-cont-22	a	Near duplicate within practice: no best estimate -> accrue low end ($100,000 both)
+250	tcp-re-21	tcp-re-33	a	Near duplicate within practice: 529-to-Roth rollover limited to $7,000
+251	aud-sp-25	aud-x4-17	b	Practice<->exam duplicate: special-purpose framework report must alert users to the basis (emphasis paragraph)
+252	far-inv-23	far-x2-03	d	Different data/method
+253	tcp-re-chk1	reg-adj-09	d	Different numbers (IRA phase-out); both correct
+254	far-x2-03	far-x2-27	d	Different data (both exam)
+255	far-imp-14	far-imp-30	d	Different numbers (goodwill impairment)
+256	far-imp-14	far-imp-29	d	Different numbers (goodwill impairment)
+257	reg-dep-04	tcp-cr2-19	d	Different numbers (Sec.179 phase-out)
+258	far-imp-05	far-imp-30	d	Different numbers (goodwill impairment); correct
+259	far-imp-05	far-imp-29	d	Different numbers (goodwill impairment)
+260	far-ppe-23	far-x2-07	d	Different numbers (capitalized interest); correct
+261	far-inv-16	far-inv-23	d	Different data/method
+262	far-inv-16	far-inv-21	d	Different data/method
+263	reg-bri-05	tcp-x1-41	b	REG practice <-> TCP exam: suspended passive losses freed on full taxable disposition
+264	tcp-re-31	reg-adj-30	b	REG<->TCP duplicate: SEP on $100,000 Schedule C profit = $18,587 (identical numbers)
+265	tcp-re-14	tcp-x1-19	b	Practice<->exam duplicate: IRA withdrawal for tuition - taxable, no 10% additional tax
+266	aud-cm-07	aud-x4-08	d	Different angle on communications to TCWG; consistent
+267	reg-al-16	aud-x1-18	b	REG practice <-> AUD exam (cross-section): subpoena exception to confidentiality
+268	reg-ag-pre1	reg-ag-31	a	Lesson<->practice near duplicate: apparent authority definition
+269	aud-uo-chk2	aud-x2-41	b	Lesson<->exam duplicate: user auditor reliance needs SOC 1 Type 2
+270	tcp-ad-35	tcp-dt-08	a	Cross-module TCP near duplicate: Sec.1239 gain on depreciable property to >50% corp is ordinary
+271	reg-pen-01	reg-x1-04	d	Different numbers (FTF/FTP 5%/month); both correct
+272	tcp-cc-35	reg-x5-37	d	Different ownership % (DRD)
+273	tcp-te-06	tcp-te-24	a	Near duplicate within practice: Form 1041 due April 15
+274	tcp-po-chk1	reg-pt-chk1	d	Different keyed separately stated items
+275	tcp-cc-34	reg-x5-37	d	Different ownership % (65% DRD); correct
+276	reg-adj-33	reg-x4-29	b	Practice<->exam duplicate: student loan interest maximum $2,500
+277	far-lso-13	far-lso-20	d	Different lessor operating-lease topics
+278	aud-x3-19	aud-x3-38	a	Near duplicate within exam pool: subsequent disbursements find unrecorded liabilities
+279	aud-rr-09	aud-x3-38	b	Practice<->exam duplicate: subsequent disbursements find unrecorded liabilities
+280	tcp-sc2-01	reg-sc-16	b	REG<->TCP duplicate: Form 2553 due 2 months 15 days (consistent: TCP applies weekend rule, March 17, 2025)
+281	aud-spi-chk2	aud-x1-20	b	Lesson<->exam duplicate: lead partner 5 years on, 5 years off (identical options)
+282	tcp-dt-13	reg-nt-42	b	REG<->TCP duplicate: condemned business real property 3-year replacement period
+283	far-pay-17	far-pay-22	a	Near duplicate within practice: employer payroll tax expense $9,650 (identical numbers)
+284	aud-qm-26	aud-x1-14	b	Practice<->exam duplicate: EQR disagreement must be resolved before report release
+285	aud-ev-17	aud-ev-24	a	Near duplicate within practice: shipping documents -> sales journal tests completeness
+286	tcp-x1-21	reg-x4-17	b	REG<->TCP exam-pool duplicate: AOTC on $3,000 tuition = $2,250
+287	aud-spi-16	aud-x1-20	b	Practice<->exam duplicate: lead partner rotation 5 years
+288	tcp-intl-09	tcp-intl-32	d	Different FTC facts
+289	far-spf-02	far-spf-14	d	Different numbers (prepaid conversion); both correct
+290	tcp-ad-38	tcp-x3-05	b	Practice<->exam duplicate: Sec.1244 $70,000 single loss -> $50,000 ordinary / $20,000 capital (identical numbers)
+291	tcp-te-28	tcp-x2-18	b	Practice<->exam duplicate: simple trust distributing all $30,000 income -> no taxable income
+292	tcp-sc-27	tcp-sc-29	d	NQSO vs ISO
+293	far-seq-23	far-x2-25	d	Different stock dividend sizes
+294	tcp-cr2-03	reg-x3-14	d	Different numbers (Sec.179 income limit carryforward)
+295	far-fv-04	far-fv-27	a	Near duplicate within practice: significant Level 3 input -> Level 3
+296	reg-x2-09	reg-x2-28	d	Not discharged vs discharged; different keyed debts (both exam)
+297	reg-id-08	tcp-x3-03	d	Different QBI statements
+298	far-rec-17	far-rec-23	d	Different numbers (allowance with debit balance); both correct
+299	reg-cc-06	reg-sc-10	d	Different forms (1120 vs 1120-S)
+300	reg-cc-02	reg-cc-21	d	Different numbers (DRD); both correct
+301	aud-cash-01	aud-x3-17	b	Practice<->exam near duplicate: interbank transfer recorded as receipt only -> cash overstated
+302	reg-ag-18	reg-x2-02	b	Practice<->exam duplicate: disclosed principal only is liable
+303	tcp-te-05	tcp-te-34	a	Near duplicate within practice: revocable (grantor) trust income taxed to grantor
+304	far-tax-16	far-tax-23	d	Different numbers (valuation allowance)
+305	reg-nt-06	reg-x3-15	d	Different numbers (Sec.121 $500,000); both correct
+306	far-x2-10	far-x2-29	d	Different numbers (impairment, both exam); correct
+307	reg-fl-chk1	tcp-x3-13	b	REG lesson <-> TCP exam: Sec.357(c) liabilities over basis, identical numbers ($15,000)
+308	far-dep-chk1	far-dep-16	a	Lesson<->practice duplicate: SYD year 2 $18,000 (identical numbers)
+309	tcp-pd-19	tcp-pd-29	d	Different liquidation facts; correct
+310	far-fv-15	far-bond-28	a	Cross-module FAR near duplicate: FVO own-credit-risk change in OCI
+311	far-seq-chk2	far-seq-12	d	Different numbers (small vs large stock dividend)
+312	tcp-ec-30	reg-x4-15	d	Different numbers (QBI); correct
+313	reg-slt-13	reg-slt-22	a	Near duplicate within practice: use tax owed to home state
+314	tcp-sc2-22	reg-sc-05	d	Different S-corp distribution numbers; both correct
+315	far-nfs-19	far-nfs-26	d	Different numbers (NFP net assets); both correct
+316	tcp-pa-11	tcp-x1-09	d	Different numbers (rental allowance)
+317	reg-bri-chk2	tcp-x1-09	d	Different numbers (rental allowance)
+318	far-rat-15	far-rat-27	d	Different numbers (DuPont); both correct
+319	reg-fs-chk1	reg-fs-18	a	Lesson<->practice near duplicate: HOH for dependent parent in separate home
+320	tcp-pa-11	tcp-x1-31	d	Different numbers (rental allowance); correct
+321	reg-bri-chk2	tcp-x1-31	d	Different numbers (rental allowance)
+322	reg-c230-36	reg-x1-13	b	Practice<->exam duplicate: unlimited representation rights
+323	reg-c230-01	reg-x1-13	b	Practice<->exam duplicate: enrolled agent has unlimited representation rights
+324	aud-cash-10	aud-x3-18	d	Different custody (broker vs client safe)
+325	tcp-ms-38	reg-slt-30	b	REG<->TCP duplicate: P.L. 86-272 does not protect against net-worth franchise tax
+326	reg-id-03	reg-x4-14	d	Not-deductible vs deductible; different keyed taxes
+327	aud-sp-01	aud-sp-22	a	Near duplicate within practice: special purpose framework identification
+328	tcp-dt-09	tcp-x4-18	b	Practice<->exam duplicate: related-party like-kind exchange, 2-year disposition
+329	tcp-dt-09	reg-nt-08	b	REG<->TCP duplicate: related-party like-kind exchange, 2-year disposition
+330	far-cont-21	far-cont-22	d	Best estimate vs no best estimate
+331	far-inv-22	far-x2-03	d	Different data/method
+332	aud-ev-17	aud-x3-29	b	Practice<->exam duplicate: shipping documents -> sales journal tests completeness
+333	reg-pt-35	reg-x5-33	b	Practice<->exam duplicate: guaranteed payments are ordinary income (deductible)
+334	reg-dc-05	reg-dc-24	d	Different nondischargeable debts keyed
+335	far-x1-12	far-x1-31	d	Not-required vs required related-party disclosure (both exam)
+336	aud-inv-08	aud-pl-17	a	Cross-module AUD near duplicate: initial audit opening balances evidence
+337	reg-nt-26	reg-nt-36	d	Inside vs outside 2-year window - different outcome
+338	far-imp-chk1	far-x2-10	d	Different numbers (asset group impairment); correct
+339	far-imp-13	far-imp-30	d	Different numbers (goodwill impairment)
+340	far-imp-13	far-imp-29	d	Different numbers (goodwill impairment)
+341	aud-x3-10	aud-x3-45	a	Near duplicate within exam pool: ADA client report - test completeness and accuracy
+342	aud-rp-11	aud-rp-24	a	Near duplicate within practice: justified accounting change -> emphasis-of-matter
+343	reg-cg-24	reg-cg-36	d	Different capital loss netting facts
+344	far-imp-05	far-imp-14	d	Different numbers (goodwill impairment)
+345	tcp-pd-23	tcp-pd-27	d	Deemed vs actual cash distribution; both $20,000; consistent
+346	tcp-cr-22	tcp-cr-28	a	Near duplicate within practice: intercompany sale gain $8,000/yr (identical numbers)
+347	tcp-cc-11	reg-x5-04	d	Different numbers (80% NOL); correct
+348	tcp-sc2-03	tcp-sc2-27	d	Different numbers (S-corp basis ordering); both correct
+349	tcp-gt-33	tcp-x1-15	d	Different numbers (gift-tax basis adjustment); both correct
+350	tcp-ad-18	tcp-ad-26	d	Different numbers (Sec.1245)
+351	tcp-ms-01	reg-slt-23	b	REG<->TCP duplicate: Wayfair economic nexus $150,000 vs $100,000 threshold (identical numbers)
+352	tcp-te-19	tcp-te-38	a	Near duplicate within practice: final-year excess deductions pass to beneficiaries
+353	tcp-eo-20	reg-cc-06	d	Different forms (990-T vs 1120)
+354	reg-bri-09	tcp-x1-09	b	REG practice <-> TCP exam: MAGI $110,000 rental allowance -> $20,000 (same answer)
+355	aud-qm-08	aud-qm-22	a	Near duplicate within practice: SQM evaluated at least annually
+356	reg-cc-29	reg-x5-04	d	Different numbers (NOL)
+357	tcp-cr-08	tcp-cr-44	a	Near duplicate within practice: brother-sister corps cannot consolidate
+358	tcp-po-28	reg-x5-33	b	TCP practice <-> REG exam: guaranteed payments deductible, ordinary to partner
+359	reg-gi-10	reg-gi-12	a	Near duplicate within practice: municipal GO bond interest excluded
+360	tcp-po-28	reg-pt-35	b	REG<->TCP duplicate: guaranteed payments ordinary income
+361	reg-ct-02	reg-ct-31	a	Near duplicate within practice: UCC statute of frauds $500 threshold
+362	far-inv-02	far-inv-03	d	Same data set LIFO COGS vs weighted average; both correct
+363	far-scf-pre1	far-scf-14	a	Lesson<->practice near duplicate: interest paid is operating (U.S. GAAP)
+364	far-gov-24	far-x1-17	b	Practice<->exam duplicate: property tax 60-day availability, identical numbers ($940,000)
+365	tcp-ms-02	tcp-ms-03	d	Equal vs double-weighted formula; both correct
+366	far-imp-22	far-x2-29	d	Different numbers (recoverability)
+367	tcp-pd-22	tcp-pd-27	d	Different distribution facts
+368	tcp-cr2-19	tcp-x4-08	d	Different numbers (Sec.179)
+369	tcp-cr-36	tcp-cc-43	d	Different numbers (80% NOL)
+370	tcp-ip-31	tcp-x1-22	d	Different filing status/numbers (SALT); correct
+371	reg-cc-01	reg-x5-37	d	Different ownership/numbers (DRD)
+372	far-imp-pre1	far-imp-24	d	Different numbers (recoverability)
+373	far-imp-24	far-x2-29	d	Different numbers (impairment)
+374	far-iv-04	far-iv-17	d	Different numbers (gross profit method); both correct
+375	far-iv-06	far-iv-25	d	Different numbers (conventional retail); both correct
+376	aud-mo-chk1	aud-x4-20	b	Lesson<->exam duplicate: material-not-pervasive inability to obtain evidence on investment -> qualified (same options)
+377	tcp-pa-29	tcp-x1-41	b	Practice<->exam duplicate: suspended passive losses freed on full disposition
+378	far-dep-21	far-dep-22	d	DDB vs SYD on same asset; both correct
+379	tcp-pd-12	tcp-x2-33	d	Different numbers (liquidating cash-only loss)
+380	far-nfr-18	far-nfr-24	a	Near duplicate within practice: unskilled volunteer services not recognized
+381	far-iso-23	far-bse-26	d	OCI vs ending AOCI computations; both correct
+382	tcp-fl-27	reg-x5-09	b	TCP practice <-> REG exam (mapped to tcp-formation-liquidation): Sec.351 boot, identical numbers ($60,000 basis)
+383	tcp-gt-chk1	reg-te-pre1	d	TCP adds direct medical payment exclusion; same $6,000 answer
+384	far-dep-21	far-dep-28	d	Different numbers (DDB with salvage floor); correct
+385	tcp-intl-09	tcp-x2-29	d	Different FTC facts
+386	tcp-gt-10	tcp-x1-42	d	Same 529 five-year election scenario, different question (taxable gift vs Form 709 requirement)
+387	tcp-re-05	tcp-re-25	a	Near duplicate within practice: RMD age 73
+388	reg-ct-31	reg-x2-19	b	Practice<->exam duplicate: UCC statute of frauds $500
+389	reg-cc-01	reg-x5-23	b	Practice<->exam near duplicate: 65% DRD on $100,000 with ample income (same answer and distractors)
+390	far-seq-chk2	far-x2-25	d	Different numbers (small stock dividend)
+391	far-eq-11	far-eq-23	a	Near duplicate within practice: measurement alternative for equity securities without RDFV
+392	aud-sa-22	aud-x3-05	b	Practice<->exam mirror: tolerable deviation rate inversely related to sample size
+393	reg-cr-chk2	reg-x4-31	d	Different numbers (AOTC); both correct
+394	tcp-pa-08	reg-bri-chk2	d	Different facts (passive income offsets); correct
+395	tcp-cr-10	tcp-cr-29	a	Near duplicate within practice: consolidated charitable 10% limit, identical numbers
+396	tcp-pd-16	tcp-x2-33	d	Different liquidation facts
+397	far-sec-18	far-sec-31	d	Different ASU 2023-07 requirements
+398	aud-coc-07	aud-x1-25	b	Practice<->exam mirror: AICPA contingent fee allowed for IRS exam of nonattest client (practice distractor = exam key)
+399	tcp-dt-11	reg-nt-04	b	REG<->TCP near duplicate: involuntary conversion, $500,000 proceeds, $450,000 replacement -> $50,000 gain
+400	tcp-ms-03	reg-slt-18	d	Different numbers (double-weighted sales); correct
+401	tcp-pa-chk1	tcp-x1-31	d	Different numbers (rental allowance)
+402	reg-x4-09	tcp-x1-31	d	Different numbers (rental allowance, both exam)
+403	reg-pt-14	reg-x5-13	b	Practice<->exam mirror: office rent not separately stated / charitable contributions separately stated
+404	aud-ue-04	aud-x2-09	d	Change vs uncertainty inherent risk factors
+405	aud-rev-06	aud-x3-13	b	Practice<->exam duplicate: subsequent collections and aging test receivable valuation
+406	aud-ev-13	aud-x3-02	d	Different evidence context
+407	far-nd-12	aud-x3-51	b	FAR practice <-> AUD exam (cross-section): going-concern look-forward one year after issuance
+408	far-x1-04	far-x1-20	a	Near duplicate within exam pool: AFS debt unrealized gain in OCI (same distractors)
+409	aud-at-20	aud-at-23	d	SOC 1 Type 1 scope vs SOC 1 purpose
+410	reg-pb-09	reg-pb-27	a	Near duplicate within practice: converted residence loss basis, identical numbers ($30,000)
+411	aud-x4-07	aud-x4-21	d	Different other-matter examples (both exam); consistent
+412	aud-rm-chk2	aud-pl-22	a	Lesson<->practice near duplicate: performance materiality set lower than overall
+413	aud-itc-06	aud-itc-13	a	Near duplicate within practice: benchmarking automated control (unchanged program, effective ITGCs)
+414	far-imp-05	far-imp-13	d	Different numbers (goodwill impairment)
+415	tcp-fl-21	reg-x5-09	d	Different question (boot allocation gain vs stock basis)
+416	reg-id-01	reg-x4-30	d	Different numbers (7.5% medical floor); both correct
+417	far-rat-chk1	far-x1-36	d	Different numbers (inventory turnover)
+418	tcp-pf-30	tcp-x2-07	b	Practice<->exam duplicate: 20% capital interest worth $50,000 for services
+419	aud-toc-15	aud-x3-30	d	Tests of controls vs substantive sample-size drivers
+420	reg-sc-03	tcp-x2-34	b	REG practice <-> TCP exam: built-in gains tax on 2022 conversion, $50,000 BIG sold in 2025
+421	tcp-dt-26	tcp-x4-07	b	Practice<->exam mirror: publicly traded stock excluded / rental building qualifies for installment method
+422	tcp-ad-30	reg-cg-07	b	REG<->TCP duplicate: net Sec.1231 loss is ordinary
+423	aud-ss-21	aud-ss-22	d	Compilation vs review assurance
+424	aud-pl-01	aud-da-06	d	Different angle on required analytics; consistent
+425	reg-fs-02	reg-fs-22	a	Near duplicate within practice: multiple support agreement (>10% contributors)
+426	reg-cg-02	reg-cg-36	d	Different capital netting facts
+427	far-rat-10	far-rat-19	a	Near duplicate within practice: payout ratio $1.20/$4.00 = 30% (identical numbers)
+428	aud-gc-14	aud-gc-27	a	Near duplicate within practice: inadequate going-concern disclosure -> qualified or adverse
+429	reg-x5-02	reg-x5-28	a	Exact duplicate within exam pool: corporate charitable 10% limit, identical numbers
+430	reg-adj-chk2	reg-adj-22	d	Different numbers (student loan interest phase-out); both correct
+431	far-bond-12	far-bond-24	a	Near duplicate within practice: bonds issued between interest dates, accrued interest $1,000
+432	reg-cr-chk2	reg-x4-17	d	Different numbers (AOTC)
+433	far-cash-17	far-cash-25	a	Exact duplicate within practice: petty cash replenishment $430
+434	tcp-te-29	tcp-x2-18	d	Complex vs simple trust; both correct
+435	reg-fs-chk2	reg-fs-17	a	Lesson<->practice duplicate: single 65+ standard deduction $17,750 (identical numbers)
+436	aud-toc-03	aud-toc-14	d	Non-significant vs significant-risk control testing frequency
+437	reg-sc-14	reg-sc-33	a	Near duplicate within practice: S corp up to 100 shareholders
+438	reg-ep-chk1	reg-ep-05	d	Different E&P facts; both correct
+439	far-chg-01	far-dep-06	a	Cross-module FAR near duplicate: depreciation method change = change in estimate effected by change in principle
+440	aud-rm-pre1	aud-rm-23	a	Lesson<->practice near duplicate: auditor controls detection risk
+441	aud-pl-07	aud-x4-08	d	Different required communications
+442	aud-cm-07	aud-cm-11	d	Different required communications
+443	aud-ev-24	aud-x3-29	b	Practice<->exam duplicate: shipping documents -> sales journal tests completeness
+444	tcp-sc-31	tcp-sc-32	d	Different ISO disqualifying dispositions; both correct
+445	tcp-eo-18	tcp-eo-36	a	Near duplicate within practice: excess business holdings (>20%)
+446	aud-ps-13	aud-ev-19	a	Cross-module AUD near duplicate: inconsistent evidence -> investigate/modify procedures
+447	reg-bri-chk1	tcp-cr2-07	d	Different question (start-up deduction with amortization)
+448	tcp-cc-35	reg-cc-01	d	Different ownership/numbers (DRD)
+449	far-rat-17	far-bse-22	d	Different numbers (current ratio); both correct
+450	tcp-sc2-27	tcp-po-04	d	S-corp vs partnership basis computations; both correct
+451	tcp-po-22	tcp-po-40	a	Near duplicate within practice: BBA election out for 100 or fewer eligible partners
+452	tcp-eo-03	tcp-eo-28	d	UBTI siloing with vs without specific deduction; consistent
+453	reg-dc-24	reg-x2-28	b	Practice<->exam mirror: Chapter 7 discharge (student loans not discharged / credit card discharged)
+454	reg-dc-05	reg-x2-28	b	Practice<->exam mirror: Chapter 7 discharge (child support not discharged / credit card discharged)
+455	aud-ss-13	aud-ss-15	d	Different review requirements
+456	aud-ps-14	aud-ps-25	a	Near duplicate within practice: report may cite both GAAS and PCAOB standards
+457	aud-fr-chk2	aud-fr-23	d	Different required override procedures
+458	aud-cash-02	aud-x3-48	b	Practice<->exam duplicate: schedule of interbank transfers detects kiting
+459	tcp-ip-07	tcp-x1-04	d	Different numbers (kiddie tax); correct
+460	reg-ot-04	tcp-x1-04	d	Different numbers (kiddie tax)
+461	tcp-cc-11	reg-x5-24	d	Different numbers (80% NOL)
+462	tcp-pf-01	tcp-x2-31	b	Practice<->exam duplicate: 20% capital interest worth $30,000 for services -> ordinary income
+463	tcp-cc-34	reg-cc-01	b	REG<->TCP near duplicate: 65% DRD with ample taxable income ($65,000)
+464	tcp-cc-11	reg-cc-03	d	Different numbers (80% NOL)
+465	tcp-cc-34	reg-cc-02	d	Different ownership/numbers (DRD)
+466	tcp-re-16	tcp-x1-17	b	Practice<->exam duplicate: age 60-63 enhanced catch-up -> $34,750
+467	tcp-re-01	tcp-re-16	d	Different ages (regular vs enhanced catch-up)
+468	far-nd-17	aud-x3-54	d	FAR disclosure vs AUD reporting; consistent
+469	reg-cc-03	reg-cc-29	d	Different numbers (80% NOL)
+470	far-eps-18	far-x1-22	d	Different share data (weighted shares); both correct
+471	tcp-re-28	reg-adj-09	b	REG<->TCP duplicate: IRA phase-out at $84,000 MAGI -> $3,500 (identical numbers)
+472	tcp-cc-34	reg-cc-21	d	Different ownership/numbers (DRD)
+473	reg-x3-06	tcp-x4-14	d	Different numbers (like-kind boot, both exam); both correct
+474	reg-nt-chk1	reg-nt-10	d	Gain with boot vs loss with boot
+475	reg-cg-chk2	reg-cg-10	d	Different numbers (Sec.1245); both correct
+476	reg-cc-29	reg-x5-24	d	Different numbers (80% NOL)
+477	tcp-po-33	reg-pt-02	d	Different numbers (partner loss limited to basis)
+478	tcp-pd-29	tcp-pd-30	d	Different liquidation facts; both correct
+479	reg-pen-chk2	reg-pen-13	a	Lesson<->practice duplicate: Sec.6694(a) on $3,000 fee = $1,500
+480	tcp-po-26	tcp-pf-11	a	Cross-module TCP near duplicate: Form 1065 due March 15 (identical options)
+481	tcp-po-26	reg-cc-06	d	Different forms (1065 vs 1120)
+482	tcp-pf-11	reg-pt-08	b	REG<->TCP duplicate: Form 1065 due March 15
+483	tcp-cr-24	tcp-cr-25	d	Ownership test vs Form 1122
+484	reg-pt-08	reg-cc-06	d	Different forms (1065 vs 1120)
+485	reg-ot-16	tcp-x1-02	d	Excluded vs included NII
+486	far-nfs-05	far-nfs-28	a	Near duplicate within practice: NFP investment return net of expenses
+487	aud-mo-23	aud-x4-20	d	Pervasive vs not pervasive scope limitation
+488	aud-gc-04	aud-x3-26	d	Most likely vs least likely mitigating plan; different options
+489	aud-ea-21	aud-x1-23	b	Practice<->exam duplicate: successor must seek (with permission) to communicate with predecessor
+490	tcp-pa-15	tcp-pa-37	d	Different numbers (excess business loss); both correct
+491	reg-c230-10	reg-x1-03	b	Practice<->exam duplicate: client refuses to correct prior-year error -> consider withdrawal, don't repeat
+492	tcp-cc-29	reg-sc-10	d	Different forms (1120 vs 1120-S)
+493	far-iso-19	far-iso-22	d	Different numbers (discontinued ops net of tax); both correct
+494	tcp-pd-chk2	tcp-pd-13	d	Cash-only vs cash+inventory liquidation; both correct
+495	aud-rm-chk2	aud-rm-16	a	Lesson<->practice near duplicate: performance materiality reduces aggregation risk
+496	far-cash-02	far-cash-18	d	Different numbers (bank reconciliation); both correct
+497	tcp-pd-chk2	tcp-pd-12	d	Different numbers (liquidating loss)
+498	reg-x1-06	reg-x1-15	a	Near duplicate within exam pool: Sec.6694(a) greater of $1,000 or 50% of fee (two REG exam items)
+499	aud-wr-pre1	aud-x3-52	b	Lesson<->exam duplicate: representation letter dated as of auditor's report date
+500	aud-at-12	aud-at-17	d	Review conclusion vs review procedures
+501	tcp-fl-35	tcp-x3-17	b	Practice<->exam duplicate: 60-of-100 shares, 30 redeemed -> substantially disproportionate (identical numbers)
+502	reg-pen-chk1	reg-pen-22	d	Different numbers (failure to pay 0.5%/month); both correct
+503	far-ppe-23	far-x2-21	b	Practice<->exam duplicate: capitalized interest, identical numbers ($88,000)
+504	far-dsec-18	far-dsec-27	d	Different numbers (AFS credit loss limited to FV shortfall); both correct
+505	tcp-ad-12	tcp-ad-31	d	Different numbers (installment sale with recapture); both correct
+506	reg-x4-17	reg-x4-31	a	Near duplicate within exam pool: AOTC on $3,000 tuition = $2,250 (same options)
+507	far-rat-22	far-x1-36	b	Practice<->exam duplicate: inventory turnover identical numbers and three identical options (4.0 times)
+508	reg-cr-11	reg-cr-31	d	CTC age vs amount
+509	aud-sp-10	aud-x4-17	d	Opinion wording vs required paragraph
+510	aud-cm-07	aud-cm-16	d	Different TCWG communications

@@ -1,0 +1,20 @@
+node:fs:1597
+  const result = binding.readdir(
+                         ^
+
+Error: ENOENT: no such file or directory, scandir '/home/user/CPA_Study_Program/review/batches/L-logic-flow/scripts/content'
+    at readdirSync (node:fs:1597:26)
+    at walk (/home/user/CPA_Study_Program/scripts/load-content.ts:8:24)
+    at readContentDir (/home/user/CPA_Study_Program/scripts/load-content.ts:14:3)
+    at loadContent (/home/user/CPA_Study_Program/scripts/load-content.ts:19:23)
+    at <anonymous> (/home/user/CPA_Study_Program/review/batches/L-logic-flow/scripts/forms.ts:3:20)
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/home/user/CPA_Study_Program/review/batches/L-logic-flow/scripts/content'
+}
+
+Node.js v22.22.0

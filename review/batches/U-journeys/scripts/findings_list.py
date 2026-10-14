@@ -41,3 +41,15 @@ add('S4', 'ALL', '#/quiz/:id', 'src/components/McqView.tsx',
     'Keyboard shortcut race: pressing a choice letter and then a confidence digit in quick succession (under ~50 ms, e.g. a fast typist or a key macro) drops the confidence key silently, because the hotkey handler checks the rendered `selected` prop, which updates only after the IndexedDB write round-trips.',
     'Desktop: on a tutor-mode question press "d" then "2" with no delay -> choice D is selected but nothing is submitted (review/screens/uj-j3-d-03-q2-wrong.png from the first run shows D selected, no feedback). With a 150 ms gap it works.',
     'Track the last chosen letter in a ref inside McqView (set on onSelect) and let the confidence key use it when `selected` has not caught up yet.')
+
+# ---- Journey 4: flashcards ----
+add('S3', 'ALL', '#/flashcards, #/review', 'src/components/FlashcardPlayer.tsx',
+    'A flashcard session has no way to stop early: there is no End/Exit button, Escape does nothing, and the "Flashcard decks" navigation entry (same route) keeps the learner inside the session because the session lives in component state. The only exit is to navigate to a different page.',
+    'review/screens/uj-j4-d-07-nav-decks-still-in-session.png, review/screens/uj-j4-m-07-nav-decks-still-in-session.png. Steps: complete a lesson -> #/flashcards?module=far-income-statement-oci -> "Study this deck" -> click "Flashcard decks" in the sidebar (desktop) or More > Flashcard decks (phone) -> still on the card ("8 left in this session"); press Escape -> still in session.',
+    'Add an "End session" button beside "N left in this session" that calls onDone (graded cards are already saved), and reset `session` when the location key changes (or put the session in the URL, e.g. ?study=1) so the nav entry returns to the deck list.',
+    expected='A visible way to end a session; the "Flashcard decks" link shows the deck list.', observed='No exit control; the nav link leaves the learner on the card.',
+    steps='Start any flashcard session and try to get back to the deck list.')
+add('S4', 'ALL', '#/review', 'src/components/FlashcardPlayer.tsx',
+    'Cards graded Again/Hard/Good on a new card are rescheduled minutes later (1m / 6m / 10m), but if the learner reloads or leaves, those cards are not in the resumed session and the review page says "0 due" until the minutes pass; the done screen never says they will return later today.',
+    'review/screens/uj-j4-d-03-card-back.png (grade labels "Again 1m, Hard 6m, Good 10m, Easy 8d"), review/screens/uj-j4-d-04-after-reload.png ("0 due · 4 new today" after grading 4 of 8). Steps: study 8 new cards, grade the first four Again/Hard/Good/Easy, reload.',
+    'On the done screen and the review page, show "N cards come back in a few minutes" (count of srs cards due later today), and offer a short "Study again" when they become due.')
