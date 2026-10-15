@@ -53,3 +53,15 @@ add('S4', 'ALL', '#/review', 'src/components/FlashcardPlayer.tsx',
     'Cards graded Again/Hard/Good on a new card are rescheduled minutes later (1m / 6m / 10m), but if the learner reloads or leaves, those cards are not in the resumed session and the review page says "0 due" until the minutes pass; the done screen never says they will return later today.',
     'review/screens/uj-j4-d-03-card-back.png (grade labels "Again 1m, Hard 6m, Good 10m, Easy 8d"), review/screens/uj-j4-d-04-after-reload.png ("0 due · 4 new today" after grading 4 of 8). Steps: study 8 new cards, grade the first four Again/Hard/Good/Easy, reload.',
     'On the done screen and the review page, show "N cards come back in a few minutes" (count of srs cards due later today), and offer a short "Study again" when they become due.')
+
+# ---- Journey 5: TBS ----
+add('S3', 'ALL', '#/tbs/aud-tbs-r3-conduct-rules', 'src/components/TbsView.tsx',
+    'Rows labelled only "1"…"7" (the situations live in an exhibit tab). On a phone there is no split view, so the learner must switch between the "Situations" tab and the "Task" tab for every row, and the results list shows "✗ 1 — You: Not a violation · Answer: Violation" without restating the situation. Same pattern in far-tbs-r3-property-tax, aud-tbs-r3-journal-entries and aud-tbs-r3-it-coso.',
+    'review/screens/uj-j5-m-aud-tbs-r3-conduct-rules-b-partial-full.png (phone: seven selects labelled 1–7, results "✗ 1"). Steps: phone viewport -> #/tbs/aud-tbs-r3-conduct-rules -> answer the 7 rows (each needs a trip to the "Situations" tab) -> submit with row 1 wrong.',
+    'Give each row a short descriptive label (e.g. "1. Contingent fee — original return"), or on narrow screens render the matching exhibit paragraph under each row label; in TbsResults show the row label text plus the situation excerpt.',
+    expected='Each row and each result cell identifies the situation it scores.', observed='Bare numbers; the phone layout forces tab switching per row.',
+    steps='Open the TBS on a 390px viewport.')
+add('S4', 'ALL', '#/tbs/:id', 'src/pages/TbsPage.tsx',
+    'Submitting a simulation scrolls to the very bottom of the page, past the "Score: x/y cells" heading, so on both viewports the learner first sees the last cell and the action buttons, not the score. "Submit" with blank cells and "Try again from scratch" (which deletes the saved run) both act without confirmation.',
+    'review/screens/uj-j5-d-far-tbs-u1-income-statement-b-partial-score.png (viewport after submit: last cells and buttons, no score heading). Code: TbsPage.submit() -> window.scrollTo({ top: document.body.scrollHeight }).',
+    'Scroll the #tbs-results heading into view and focus it; confirm "Submit with N blank cells?" and "Discard this attempt and start over?".')
