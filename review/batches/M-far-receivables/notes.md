@@ -4,7 +4,7 @@ Scope: lesson `far-receivables`, 35 MCQs (3 lesson, 28 practice, 4 exam), 7 flas
 
 ## (a) Blind vs. key
 
-All 35 MCQ keys and all 20 TBS cells agree with my blind answers. There are no S1 key errors.
+All 35 MCQ keys and all 20 TBS cells agree with my blind answers. There are no S1 key errors. A follow-up pass re-derived every numeric distractor from its stem; far-rec-01(c) and far-rec-05(b) explanations misstate their derivation (findings 006 and 011 extended).
 
 | id | My answer | Key | Resolution |
 |---|---|---|---|
@@ -47,7 +47,7 @@ All 35 MCQ keys and all 20 TBS cells agree with my blind answers. There are no S
 
 ## (d) Items with no issues found
 
-far-rec-01, far-rec-02, far-rec-06, far-rec-12, far-rec-13, far-rec-15, far-x2-02, far-rec-07, far-rec-fc1, far-rec-fc2, far-rec-fc3, far-rec-fc4, far-rec-fc5, far-rec-fc6.
+far-rec-02, far-rec-06, far-rec-12, far-rec-13, far-rec-15, far-x2-02, far-rec-07, far-rec-fc1, far-rec-fc2, far-rec-fc3, far-rec-fc4, far-rec-fc5, far-rec-fc6.
 
 ## (e) Needs expert verification
 
