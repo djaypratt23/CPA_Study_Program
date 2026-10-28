@@ -91,3 +91,21 @@ add('S4', 'ALL', '#/exam/:sessionId', 'src/hooks/useTextHighlights.ts',
     'Exam highlights are dropped whenever the candidate moves to another question or reloads (they reset per question by design). On the real exam, highlights stay on an item while the testlet is open, so returning to a flagged question loses the marks made the first time.',
     'review/screens/uj-j6-d-03-flag-strike-highlight.png (highlight on Q3) and review/screens/uj-j6-d-06-after-reload.png (after reload CSS.highlights size 0). Strike-outs are also reset.',
     'Persist highlight ranges (as text offsets) and strike-outs per item in the testlet state (ExamTestletState), restoring them when the item is shown again.')
+
+# ---- Journey 7a: planner edge cases ----
+add('S3', 'ALL', '#/plan', 'src/lib/planner.ts',
+    'When the exam is days away the planner contradicts its own advice. With the FAR exam in 3 days the status says "too close to cover everything left. Focus on spaced review, mixed practice and your weakest areas", yet the schedule puts a 4-hour mock exam today (before any lesson) and fills tomorrow with about 15 new lessons and practice sets (learning work "spills into final review if behind"). With the exam tomorrow, "Final review starts" shows Mon, Oct 26, a date already past.',
+    'review/screens/uj-j7a-d-3days-plan.png (exam 2026-10-31, 6 h/day: Today = "Full simulated exam (4 hours)"; Thu = 54 min review + Lesson/Practice set × 7…), review/screens/uj-j7a-d-tomorrow-plan.png ("Final review starts Mon, Oct 26" on Wed Oct 28). Steps: onboard FAR -> Settings -> FAR exam date = today + 3 (or + 1), all sliders 6 h -> #/plan.',
+    'When !onTrack && totalDays < 7, stop scheduling new lessons (or cap them to the highest-weight unstarted modules) and fill the days with review, mixed practice and weak-area work as the message says; skip the mock when fewer than ~5 days remain or no lesson is done; clamp finalReviewStart to today.',
+    expected='The schedule follows the stated strategy; no past dates in the summary.', observed='New lessons and a same-day mock scheduled under a "focus on review" message; final review "starts" two days ago.',
+    steps='Set an exam date 1 and 3 days out and open the study plan.')
+add('S3', 'ALL', '#/, #/plan', 'src/lib/planner.ts',
+    'An exam date in the past is shown as if it were still upcoming. The dashboard switches to "FAR study home" but still reads "Exam on Sunday, October 18, 2026" with no warning, and the plan card is headed "On track" (green on the dashboard) above "Your exam date (2026-10-18) has passed." The onboarding and Settings date fields accept past dates without comment (no min).',
+    'review/screens/uj-j7a-d-past-plan.png ("On track" + "has passed"), review/screens/uj-j7a-d-past-dashboard.png. Steps: Settings -> FAR exam date = today − 10 -> Home, then Study plan. Onboarding accepted 2026-01-01 the same way (journey 1).',
+    'Set onTrack=false (or a neutral status) when examPassed and title the card "Exam date passed"; on the dashboard show "Your FAR exam date has passed — set a new date" instead of "Exam on …"; add min={today} (or an inline warning) to the date inputs in Onboarding.tsx and SettingsPage.tsx.',
+    expected='A clear "date passed" state, not "On track".', observed='"On track" with a passed date; the dashboard shows the old date as the exam date.',
+    steps='Set a past exam date.')
+add('S4', 'ALL', '#/settings, #/welcome', 'src/pages/SettingsPage.tsx',
+    'Daily study time is capped at 6 h by the sliders (max=360), so the most a learner can enter is 42 h/week; a full-time candidate planning 60 h/week (8–9 h/day) cannot express it. Separately, a far-off exam (800 days) shows only the first 400 days of the plan (MAX_PLAN_DAYS) with no note that later days, the final-review weeks and exam day are not listed.',
+    'review/screens/uj-j7a-d-max-sliders.png (all seven sliders at 6 h), review/screens/uj-j7a-d-800days-plan.png (Final review starts Fri, Dec 22 [2028]; list ends after 400 days). Steps: Settings -> drag every slider to the right; then set the exam date 800 days out.',
+    'Raise the slider max to 600–720 min (or add a numeric hours field), and when the plan is truncated add a closing line "Plan shown through <date>; it extends as the exam approaches."')
