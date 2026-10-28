@@ -230,6 +230,10 @@ const readSession = (page) => page.evaluate(() => new Promise((res) => { const r
     console.log('tab2:', (await p2.locator('body').innerText()).slice(0, 200));
     await L.shot(p2, 'j6-m-04-second-tab');
     await p2.close();
+    await page.waitForTimeout(800);
+    console.log('tab1 after tab2 opened+closed:', (await page.locator('body').innerText()).slice(0, 200));
+    await L.shot(page, 'j6-m-04b-first-tab-after');
+    if (await page.getByRole('button', { name: 'Continue in this tab' }).count()) await page.getByRole('button', { name: 'Continue in this tab' }).tap();
     await page.waitForTimeout(500);
     // Save & exit
     await page.getByRole('link', { name: 'Save & exit' }).tap();

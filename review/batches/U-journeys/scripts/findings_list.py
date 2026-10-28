@@ -65,3 +65,29 @@ add('S4', 'ALL', '#/tbs/:id', 'src/pages/TbsPage.tsx',
     'Submitting a simulation scrolls to the very bottom of the page, past the "Score: x/y cells" heading, so on both viewports the learner first sees the last cell and the action buttons, not the score. "Submit" with blank cells and "Try again from scratch" (which deletes the saved run) both act without confirmation.',
     'review/screens/uj-j5-d-far-tbs-u1-income-statement-b-partial-score.png (viewport after submit: last cells and buttons, no score heading). Code: TbsPage.submit() -> window.scrollTo({ top: document.body.scrollHeight }).',
     'Scroll the #tbs-results heading into view and focus it; confirm "Submit with N blank cells?" and "Discard this attempt and start over?".')
+
+# ---- Journey 6: mock exam ----
+add('S3', 'FAR', '#/exam/:sessionId', 'src/pages/ExamPlayer.tsx',
+    'Submitting a testlet asks only "Submit testlet N? You will not be able to return to it." It does not say how many questions are unanswered or which are flagged for review, so the flag-for-review tool never pays off at the one moment it matters (the real exam shows a review summary before a testlet is submitted).',
+    'review/screens/uj-j6-d-07-submit-confirm.png (testlet 1 with Q3 flagged: confirm text has no mention of it). Testlet 2 submitted with 5 of 25 unanswered: same text, no warning. Steps: #/exam -> Start FAR Simulated Exam 1 -> flag Q3 -> answer 20 of 25 in testlet 2 -> "Submit testlet".',
+    'In the confirm card list "Unanswered: 21, 22, 23, 24, 25" and "Flagged: 3" as buttons that jump to the item, and make the primary action read "Submit with 5 unanswered" when any are blank.',
+    expected='A pre-submit summary of unanswered and flagged items.', observed='A generic confirmation only.',
+    steps='Flag an item, leave some blank, press "Submit testlet".')
+add('S3', 'ALL', '#/exam/:sessionId, #/quiz/:id, #/tbs/:id', 'src/components/Calculator.tsx',
+    'The calculator and spreadsheet open as fixed panels that cannot be moved. On a phone the calculator (256×344 px at y 404–748 of 844) covers the lower stem and choices A–B, and the spreadsheet covers most of the screen. The calculator also ignores Backspace and loses its display and memory each time it is closed and reopened.',
+    'review/screens/uj-j6-m-02-calculator-overlay.png, review/screens/uj-j6-m-03-spreadsheet-overlay.png, review/screens/uj-j6-d-04-calculator.png. Steps: phone viewport -> start a mock -> tap the calculator icon. Desktop: 100 / 3 = 33.3333333333, Backspace -> unchanged; close and reopen -> display "0", memory cleared.',
+    'Make the panels draggable (or dock them as a collapsible bottom sheet on narrow screens that pushes content up), handle Backspace to delete the last digit, and keep calculator state in the parent (ExamRunner/QuizPlayer) so closing only hides it.',
+    expected='Tools that can be moved off the item and keep their state while the item is open.', observed='Fixed overlays covering the question; state reset on close; no Backspace.',
+    steps='Open the calculator on a 390px viewport during a mock exam.')
+add('S4', 'FAR', '#/exam/:sessionId', 'src/pages/ExamPlayer.tsx',
+    'On the last testlet the button says "Submit exam", but the confirmation still reads "Submit testlet 5? You will not be able to return to it." with a "Submit testlet" button, so it is not clear that this ends the exam and shows the score.',
+    'review/screens/uj-j6-d-11-final-confirm.png. Steps: reach testlet 5 of FAR Simulated Exam 1 -> "Submit exam".',
+    'When testletIndex is the last, word the card "Submit the exam? This ends the exam and shows your results." with a "Submit exam" button.')
+add('S4', 'FAR', '#/exam/:sessionId', 'src/lib/examClock.ts',
+    'The exam clock is paused while the optional-break offer is on screen (isExamClockPaused returns true when breakOffered && !breakUsed), not only during the break itself. A candidate can sit on the offer, or "Save & exit" from it, and the 4-hour clock never runs.',
+    'review/screens/uj-j6-d-09-break-offer.png. Steps: submit testlet 3 -> on "Optional break" the clock reads 3:59:21 and still 3:59:21 three seconds later. The break itself paused correctly (break 14:59 -> 14:56, exam clock unchanged) and survived a reload (review/screens/uj-j6-d-10-break.png).',
+    'Start the break automatically when it is offered (the break timer runs; "Skip break" ends it), or let the exam clock run on the offer screen, so there is no state in which neither clock runs.')
+add('S4', 'ALL', '#/exam/:sessionId', 'src/hooks/useTextHighlights.ts',
+    'Exam highlights are dropped whenever the candidate moves to another question or reloads (they reset per question by design). On the real exam, highlights stay on an item while the testlet is open, so returning to a flagged question loses the marks made the first time.',
+    'review/screens/uj-j6-d-03-flag-strike-highlight.png (highlight on Q3) and review/screens/uj-j6-d-06-after-reload.png (after reload CSS.highlights size 0). Strike-outs are also reset.',
+    'Persist highlight ranges (as text offsets) and strike-outs per item in the testlet state (ExamTestletState), restoring them when the item is shown again.')
