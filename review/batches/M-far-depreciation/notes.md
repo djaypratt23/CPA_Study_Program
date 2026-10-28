@@ -1,6 +1,6 @@
 # M-far-depreciation — reviewer notes
 
-Scope: 42 items (lesson, 3 lesson MCQs, 28 practice MCQs, 3 exam MCQs, 7 flashcards; no TBS). Blind answers were saved in `blind-answers.csv` before `items.json` and `cues.md` were opened. 21 findings: S1 0, S2 2, S3 12, S4 7. No web searches were used: every rule involved is long-settled GAAP covered by the reference sheets or by solid knowledge.
+Scope: 42 items (lesson, 3 lesson MCQs, 28 practice MCQs, 3 exam MCQs, 7 flashcards; no TBS). Blind answers were saved in `blind-answers.csv` before `items.json` and `cues.md` were opened. 21 findings: S1 0, S2 2, S3 12, S4 7. After the distractor-reproduction pass there are still 21 findings; findings 011, 012 and 013 were extended. No web searches were used: every rule involved is long-settled GAAP covered by the reference sheets or by solid knowledge.
 
 ## (a) Blind vs key
 
@@ -61,9 +61,26 @@ All 34 MCQ keys match my blind answers. There are no key disagreements.
   - dep-06, dep-07, dep-10, x2-09: the "absolutes in distractors" hints ("for all contracts", "no gain or loss", "None ($0)") are not real absolutes. Not flagged.
 - **Currency.** FAR, no tax year; the lesson has no `taxYear`, correctly. No ASU in the 2026 window changes depreciation, depletion, disposals or ASC 845 exchanges. ASU 2024-03 (DISE) is not testable until 2027. ASU 2023-01 (common-control leasehold improvements) is testable and relevant to dep-19 (S4, finding 016). dep-06(d) uses superseded ASC 605-35 completed-contract/POC terminology (S3, finding 009).
 
+### Distractor-reproduction pass (added before merge)
+
+I reproduced every numeric distractor in all pools (31 numeric MCQs, 88 distractors) from its stem in python. Values that did not reproduce directly went through a brute-force search over two-step combinations of the stem numbers. There are no TBS in this batch.
+
+Results:
+- **Confirmed.** 74 distractors reproduce exactly the error their explanation describes.
+- **Unmodeled (no sensible error gives the value).** These were added to finding 012:
+  - chk2(c) $30,000 (newly added)
+  - dep-05(d) and dep-11(b)
+  - dep-18(b) and (c). dep-18(b)'s stated error (using the original cost) actually gives $250,000, which is option (a).
+  - dep-19(c)
+  - dep-23(b) and (d)
+  - dep-27(d) (newly added)
+- **Explanation wrong.** dep-02(d) (finding 010, already logged).
+- **Explanation non-diagnostic though the value is modeled.** dep-27(b) $4,333 = (40,000 − 1,000) ÷ 9. dep-28(b) $2,667 is straight-line. dep-28(c) $1,111 = 3,333 × 1/3, a 1× declining-balance rate. Finding 011's evidence was corrected and extended.
+- **Trap labels corrected.** dep-24(c), dep-27(b) and dep-28(c) were added to finding 013. dep-17(d)'s half-year error is handled in finding 001.
+
 ## (d) Items with no issues
 
-far-dep-chk2, far-dep-01, far-dep-04, far-dep-09, far-dep-10, far-x2-08, far-dep-fc1, far-dep-fc2, far-dep-fc3, far-dep-fc4, far-dep-fc6.
+far-dep-01, far-dep-04, far-dep-09, far-dep-10, far-x2-08, far-dep-fc1, far-dep-fc2, far-dep-fc3, far-dep-fc4, far-dep-fc6.
 
 ## (e) Needs expert verification
 
