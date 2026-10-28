@@ -51,9 +51,44 @@ All 33 MCQ keys and all 8 TBS cells matched my blind answers. Nothing to resolve
 
 ## (d) Items with no issues
 
-far-iv-02, far-iv-04, far-iv-06, far-iv-07, far-iv-08, far-iv-09, far-iv-10, far-iv-11, far-iv-fc1, far-iv-fc2, far-iv-fc3, far-iv-fc4, far-iv-fc5, far-iv-fc6.
+far-iv-02, far-iv-06, far-iv-07, far-iv-08, far-iv-09, far-iv-10, far-iv-11, far-iv-fc1, far-iv-fc2, far-iv-fc3, far-iv-fc4, far-iv-fc5, far-iv-fc6.
 
 All other keys are correct; their findings are S3/S4 quality issues only.
+
+### Second pass: reproducing every distractor (coordinator request)
+
+For every MCQ with numeric options (all pools), I reproduced each distractor's number from the stem in python. Where a number was hard to explain, I brute-forced 2–4-term combinations of the stem values. I then checked that each distractor's explanation and trap label describe the error that actually produces it.
+
+**Distractors whose explanation names the wrong error.** These were added to finding 006, which now covers far-iv-04, -13 and -21:
+
+| Item | Number | What actually produces it | Problem with the explanation |
+|---|---|---|---|
+| far-iv-13(d) | 175,000 | Gross profit 180,000 − salvage 5,000 | The explanation implies the 30% COGS-rate error, which gives 315,000 |
+| far-iv-21(c) | 5,000 | Selling price − cost | "Deduct costs to sell" would lead to a $0 write-down, not 5,000 |
+| far-iv-04(d) | 575,000 | 800,000 − 25% × sales | The true gross profit (180,000) would give 620,000 |
+
+**Distractor numbers that are derivable after all.** These corrections were made to finding 005; the numbers are fine, but the feedback still doesn't explain them:
+
+| Item | Number | Derivation |
+|---|---|---|
+| far-iv-25(c) | 17,500 | The purchases-only ratio, 70/100 × 25,000 |
+| far-iv-26(c) | 15,000 | Only 90/150 × 25,000, which counts markups twice |
+
+far-iv-17(c)'s 35,000 still has no derivation.
+
+**Trap labels.** These were added to finding 007:
+
+| Item | Change |
+|---|---|
+| chk1(b) | Floor taken although replacement cost is in range: label it wrong-rule |
+| 03(a), 12(a), 23(a) | The same "replacement cost without bounds" error carries different labels; use one consistent label |
+| 28(a), 28(b) | Each considers only one side of the omission: label them partial-computation |
+
+**Everything else reproduced exactly as explained:**
+- pre1, chk1(c, d), chk2, 01, 03, 06, 07, 09, 11, 12, 15, 16(b), 22, 23, 24, x2-04 and x2-20.
+- TBS: all 8 explanations reproduce (B 75,000 is the selling price, as "ignored selling costs" says). C's explanation doesn't name the staff error (carried at NRV 62,000, above cost), but its rule and amount are right, so I raised no finding.
+
+far-iv-04 has moved off the no-issues list.
 
 ## (e) Needs expert verification
 
