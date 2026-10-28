@@ -16,3 +16,36 @@ import bad.json -> Import failed: This file is not valid JSON.
 import other.json -> Import failed: This file is not a CPA Study Program backup.
 after reset url http://localhost:4173/#/welcome | dialogs so far 1
 settings before onboarding -> http://localhost:4173/#/welcome
+import dialog text: Restore this backup?
+
+  Settings: 1
+  Answered questions: 5
+  Error log: 0
+  Review queue: 5
+  Flags and item notes: 1
+  Module progress and notes: 2
+  Highlights: 1
+  Practice sets: 1
+  Simulations: 0
+  Mock exams: 0
+
+These tables will be replaced with the file's rows.
+
+A backup of your current data downloads first.
+import status: Backup restored. A copy of your previous data was downloaded first. | pre-import download [ 'cpa-study-before-import-2026-10-28.json' ]
+export2 counts {"settings":1,"attempts":5,"errors":0,"srs":5,"itemMeta":1,"moduleProgress":2,"highlights":1,"quizSessions":1,"tbsSessions":0,"examSessions":0}
+round-trip differing tables: [ 'attempts', 'itemMeta', 'moduleProgress', 'highlights' ]
+   attempts [{"itemId":"far-iso-18","itemType":"mcq","moduleId":"far-income-statement-oci","section":"FAR","correct":true,"score":1,"confidence":"unsure","choice":"b","timeMs":971,"mode":"tutor","mixed":false,"se  VS  [{"id":1,"itemId":"far-iso-18","itemType":"mcq","moduleId":"far-income-statement-oci","section":"FAR","correct":true,"score":1,"confidence":"unsure","choice":"b","timeMs":971,"mode":"tutor","mixed":fa
+   itemMeta [{"itemId":"far-iso-05","note":"Q-note far-iso-05","flagged":true}]  VS  [{"itemId":"far-iso-05","flagged":true,"note":"Q-note far-iso-05"}]
+   moduleProgress [{"moduleId":"far-income-statement-oci","section":"FAR","startedAt":"2026-10-28T15:57:42.059Z","lastVisitedAt":"2026-10-28T15:57:44.935Z","scrollPct":1,"notes":"Note: unusual items stay pretax.","less  VS  [{"moduleId":"far-income-statement-oci","section":"FAR","startedAt":"2026-10-28T15:57:42.059Z","lessonCompletedAt":"2026-10-28T15:57:44.935Z","scrollPct":1,"lastVisitedAt":"2026-10-28T15:57:44.935Z","
+   highlights [{"moduleId":"far-income-statement-oci","text":"Disposed of, or classified as held for sale?","at":"2026-10-28T15:57:43.258Z","id":1}]  VS  [{"id":1,"moduleId":"far-income-statement-oci","text":"Disposed of, or classified as held for sale?","at":"2026-10-28T15:57:43.258Z"}]
+dashboard after import:  | Financial Accounting and Reporting | 79 days to FAR | Exam on Friday, January 15, 2027 | Resume practice set → | Practice: Income statement, OCI & discontinued operations — question 6 of 10 | Where you left off: Accounting for income taxes | Today’s plan | Full schedule | Lesson: Balance sheet & statement of 
+notes after import: Notes & highlights | Everything you’ve written or saved, by module. | Income statement, OCI & discontinued operations | Note: unusual items stay pretax. | “Disposed of, or classified as held for sale?” | Question notes | Which item is reported in other comprehensive income?… | Q-note far-iso-05
+all dialogs: ["Erase ALL progress, notes, and settings on this device? This cannot be undone. Consider exporting a backup first.","Restore this backup?\n\n  Settings: 1\n  Answered questions: 5\n  Error log: 0\n  Review queue: 5\n  Flags and item notes: 1\n  Module progress and notes: 2\n  Highlights: 1\n  Practice sets: 1\n  Simulations: 0\n  Mock exams: 0\n\nThese tables will be replaced with the file's rows.\n\nA backup of your current data downloads first."]
+m ANALYTICS: Skip to content | CPA Study | Active exam section | FAR | AUD | REG | TCP | Performance analytics | FAR · guesses count as misses everywhere on this page | MCQ ACCURACY | 60% | 5 answered | TBS AVERAGE | — | 0 submitted | AVG TIME / MCQ | 1s | Exam pace ≈ 144s | READINESS (APPROX. SCALED) | — | Not enough data yet | Weakest areas — study these next | Income statement, OCI & discontinued operations | Accuracy 60% over 5 questions (guesses count as misses). | → Do a mixed mastery check. | By blueprint area | Area I: Financial Reporting (30–40%) | 60% · n=5 | Studied 8% of modules · mastered 0% | Area II: Select Balance Sheet Accounts (30–40%) | — · n=0 | Studied 0% of modules · mastered 0% | Area III: Select Transactions (25–35%) | — · n=0 | Studied 0% of modules · mastered 0% | By skill level | Remembering & Understanding | 67% · n=3 | Application | — · n=0 | Analysis | 50% · n=2 | Confidence calibration | How often you are right at each confidence level. Ideally “Confident” is 85%+. | You said	n	Right | Guess | Not enough data | 	0	— | Unsure | Reasonable | 	5	60% | Confident | Not enough data | 	0	— | Trend (weekly accuracy) | 9/3 | 9/10 | 9/17 | 9/24 | 10/1 | 10/8 | 10/15 | 60 | 10/22 | Bar height = accuracy; faint bars mean few questions that week. | Error log | When you miss a question you’ll be asked why. Those tags show up here and drive the recommendations above. | Modules | Conceptual framework & standard settingArea | — | Not started | Balance sheet & statement of changes in equityArea | — | Not started | Income statement, OCI & discontinued operationsArea | 60% | Learning | Statement of cash flowsArea | — | Not s
+overflow [ 390, 390 ]
+SEARCH "deferred tax": 50 result(s) | first: GLOSSARY / Deferred tax liability (DTL) / Future taxes payable from taxable temporary differences, measured at enacted rates.
+SEARCH "ASC 842": 12 result(s) | first: LESSON / Conceptual framework & standard setting / …lly for SEC registrants Not authoritative FASB Codification ASC SEC rules, regulations, interpretive release
+SEARCH "goodwill impairment": 20 result(s) | first: LESSON / Impairment of long-lived assets / …company will keep using the asset, sell it, or whether it's goodwill or an indefinite lived intangible. Depreciation
+SEARCH "zzqxv": 0 result(s) | first: (none)
+question hit QUESTION / Current tax expense is $47,500, and the deferred tax liability increased by $5,000. What i / Total tax expens -> url http://localhost:4173/#/module/far-income-taxes | page h1 Accounting for income taxes

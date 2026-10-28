@@ -14,6 +14,15 @@ None. All 35 MCQ keys matched my blind answers. All 46 TBS cells matched too: ro
 | far-tbs-u6-ppe ddb2 | 44,444 (rate × book value) | 44,444 (depreciation-year allocation) | The two methods are mathematically identical for DDB. Only the explanation's rounded addends are off (finding 012). |
 | far-tbs-u6-ppe-rollforward fx.inst | +18,000 | +18,000 | Agree. The exhibit says the 402,000 of depreciation already includes the installation. |
 
+### Distractor-reproduction pass (added before merge)
+
+I reproduced every numeric distractor from its stem in python. That covers 20 MCQs: chk1, ppe-01, 02, 04, 05, 07, 09, 12, 13, 17, 21, 22, 23, 24, 25, 28, x2-06, x2-07, x2-21 and x2-34. I also reproduced every figure in the TBS explanations. Results:
+
+- **New defect: far-x2-06 d.** The option is $1,005,000, but its explanation ('omits the legal fees') describes $1,045,000. The option's figure actually comes from omitting the demolition cost while still deducting the salvage. I added it to finding 004.
+- **Trap labels:** two inconsistent labels for identical errors (ppe-21 c and ppe-22 a). Added to finding 004.
+- **TBS explanation rounding:** the syd1 explanation shows 41,143 ÷ 2 = 20,571, which as displayed would round to 20,572. Added to finding 012.
+- **Everything else** reproduces exactly as its explanation states, apart from the 'Not the computation.' cases already covered in finding 003.
+
 ## (b) Lesson design
 
 - **Big idea:** clear and concrete. The bakery oven example is right: 60,000 + 2,000 + 3,000 = 65,000. The "why" (matching cost to benefit) is well chosen.
@@ -61,7 +70,7 @@ None. All 35 MCQ keys matched my blind answers. All 46 TBS cells matched too: ro
 
 ## (d) Items with no issues found
 
-far-ppe-pre1, far-ppe-chk1, far-ppe-chk2, far-ppe-01, far-ppe-02, far-ppe-03, far-ppe-04, far-ppe-05, far-ppe-07, far-ppe-08, far-ppe-11, far-ppe-14, far-ppe-16, far-x2-06, far-x2-07, far-ppe-fc1, far-ppe-fc3, far-ppe-fc4, far-ppe-fc5, far-ppe-fc6, far-ppe-fc7.
+far-ppe-pre1, far-ppe-chk1, far-ppe-chk2, far-ppe-01, far-ppe-02, far-ppe-03, far-ppe-04, far-ppe-05, far-ppe-07, far-ppe-08, far-ppe-11, far-ppe-14, far-ppe-16, far-x2-07, far-ppe-fc1, far-ppe-fc3, far-ppe-fc4, far-ppe-fc5, far-ppe-fc6, far-ppe-fc7.
 
 Two of these appear in other findings' evidence as cross-references, not as defects: chk1 in the lesson-alignment finding, and ppe-14 and ppe-08 in the redundancy finding.
 
