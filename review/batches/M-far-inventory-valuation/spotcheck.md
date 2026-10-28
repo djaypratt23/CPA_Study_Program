@@ -9,3 +9,5 @@ Sample: 3 of 14 no-finding items (21%).
 | far-iv-fc4 | GP% = m/(1+m): 25% → 20%; 50% → 33⅓%. | Agree |
 
 Outcome: no misses. The reviewer also ran the distractor-reproduction sweep before the merge. Batch accepted.
+
+Addendum: the reviewer's distractor sweep added far-iv-04(d) to finding 006. 575,000 = 800,000 − (900,000 × 25%) subtracts gross profit at the **wrong** rate, so "subtracts gross profit rather than COGS" is imprecise. I had judged it acceptable, and I accept the reviewer's stricter reading. Sweep also extended findings 006, 007 and 005.

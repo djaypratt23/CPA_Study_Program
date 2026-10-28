@@ -109,3 +109,21 @@ add('S4', 'ALL', '#/settings, #/welcome', 'src/pages/SettingsPage.tsx',
     'Daily study time is capped at 6 h by the sliders (max=360), so the most a learner can enter is 42 h/week; a full-time candidate planning 60 h/week (8–9 h/day) cannot express it. Separately, a far-off exam (800 days) shows only the first 400 days of the plan (MAX_PLAN_DAYS) with no note that later days, the final-review weeks and exam day are not listed.',
     'review/screens/uj-j7a-d-max-sliders.png (all seven sliders at 6 h), review/screens/uj-j7a-d-800days-plan.png (Final review starts Fri, Dec 22 [2028]; list ends after 400 days). Steps: Settings -> drag every slider to the right; then set the exam date 800 days out.',
     'Raise the slider max to 600–720 min (or add a numeric hours field), and when the plan is truncated add a closing line "Plan shown through <date>; it extends as the exam approaches."')
+
+# ---- Journey 7b: analytics, search, glossary, notes, settings, export/import ----
+add('S3', 'ALL', '#/welcome, #/settings', 'src/App.tsx',
+    'Restoring a backup on a new device (the documented way to move devices: "export here and import there") requires completing onboarding first. Until then every route, including #/settings, redirects to #/welcome, and onboarding has no "restore from backup" option; the answers given there are then overwritten by the import.',
+    'review/screens/uj-j7b-d-09-after-reset-settings-redirect.png. Steps: Settings -> Reset everything (confirm) -> open #/settings -> redirected to #/welcome; only after onboarding (AUD, no date) could the backup be imported, which then replaced the AUD choice with the backed-up FAR settings.',
+    'Add "Restore from a backup file" to the first onboarding step (reusing SettingsPage.doImport) and let the Gate allow #/settings before onboarding, or mark the restored settings as onboarded so the learner lands on the dashboard.',
+    expected='A restore option on the welcome screen.', observed='Restore is reachable only after a full onboarding whose answers are then discarded.',
+    steps='Reset everything (or use a fresh browser), then try to import a backup.')
+add('S3', 'FAR', '#/analytics', 'src/pages/Analytics.tsx',
+    'Two different pacing targets: Analytics shows "Exam pace ≈ 144s" per MCQ (half of 240 minutes over 50 MCQs), while the practice builder ("Timed (90 seconds per question — close to exam pace)"), the practice results ("target about 1:30") and the mock pacing table (90 s per MCQ) all use 90 s.',
+    'review/screens/uj-j7b-d-01-analytics.png (AVG TIME / MCQ tile: "Exam pace ≈ 144s"), review/screens/uj-j3-d-06-results.png ("target about 1:30"). Code: Analytics.tsx computes (durationMinutes*60)/2/mcqCount; pacing.ts MCQ_TARGET_MS = 90 000.',
+    'Use MCQ_TARGET_MS in the Analytics hint ("Target ≈ 90s"), or explain both numbers ("90 s target; the exam allows about 144 s if time is split evenly").',
+    expected='One pacing target across the app.', observed='144 s on Analytics, 90 s everywhere else.',
+    steps='Answer a few questions and open Analytics.')
+add('S4', 'ALL', '#/search', 'src/lib/search.ts',
+    'A "Question" search hit opens the module lesson page (to: /module/<moduleId>), not the question, so the learner cannot find the matched item there; the result count tops out at "50 result(s)" because of the result limit, without saying more exist.',
+    'review/screens/uj-j7b-d-04-search-question-hit.png (clicked a "Current tax expense is $47,500…" question hit -> landed on #/module/far-income-taxes, "Accounting for income taxes"). review/screens/uj-j7b-d-02-search.png ("deferred tax": "50 result(s)").',
+    'Link question hits to a one-question practice set (e.g. /practice/start?item=<id>) or show the question inline in the results; show "50+ results — refine your search" when the limit is hit.')
