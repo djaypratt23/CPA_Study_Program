@@ -1,0 +1,60 @@
+id,part_row,my_answer,computation_or_rationale
+far-inv-chk1,,a,"500,000 count - 15,000 consigned-in (consignor owns) + 30,000 FOB shipping point purchases in transit (buyer owns) + 20,000 sold FOB destination in transit (seller still owns) = 535,000"
+far-inv-chk2,,c,"LIFO reserve = FIFO - LIFO = 840,000 - 710,000 = 130,000 (a positive balance; contra-inventory)"
+far-inv-pre1,,a,"Rising prices: FIFO charges oldest/lowest costs to COGS -> lowest COGS, highest NI"
+far-inv-01,,b,"750 units available; 350 remain. FIFO EI = newest: 250x25 + 100x22 = 6,250 + 2,200 = 8,450"
+far-inv-02,,d,"GAFS = 4,000 + 6,600 + 6,250 = 16,850. LIFO EI = oldest: 200x20 + 150x22 = 7,300. COGS = 16,850 - 7,300 = 9,550"
+far-inv-03,,a,"Avg = 16,850 / 750 = 22.4667; x 350 = 7,863.33 -> 7,863"
+far-inv-04,,b,"Perpetual LIFO: Jan 15 sale of 150 takes 100@9 + 50@8; 50@8 = 400 left; + 100@10 = 1,000; EI = 1,400"
+far-inv-05,,c,"Freight-out is a selling expense (ASC 330-10-30-1 cost = expenditures to bring goods to existing condition and location); freight-in, duties, net price are inventoriable"
+far-inv-06,,d,"Seller owns FOB destination goods in transit (40,000) and consigned goods at Buyer (consignor owns, 25,000): 65,000"
+far-inv-07,,c,"99,000 / 1.10 = 90,000 base; layer 10,000 x 1.10 = 11,000; 80,000 + 11,000 = 91,000"
+far-inv-08,,a,"LIFO liquidation: old low-cost layers charged to COGS -> COGS lower, gross profit higher"
+far-inv-09,,b,"LIFO conformity (IRC 472(c)): LIFO for tax requires LIFO for book. IFRS prohibits LIFO; periodic vs perpetual LIFO can differ; LIFO leaves oldest costs on balance sheet"
+far-inv-10,,c,"COGS = GAFS - EI; EI understated 15,000 -> COGS overstated 15,000 -> NI understated 15,000 (current year only)"
+far-inv-11,,a,"FOB destination: title passes on arrival; seller owns at 12/31"
+far-inv-12,,b,"Consignor (manufacturer) retains title until sale to end customer"
+far-inv-13,,c,"After purchase: 200 units, 2,200, avg 11.00; sell 150 -> 50 @ 11 = 550; + 50 @ 14 = 700; EI = 1,250 (100 units @ 12.50)"
+far-inv-14,,d,"132,000 / 1.10 = 120,000 base; layer 20,000 x 1.10 = 22,000; 100,000 + 22,000 = 122,000"
+far-inv-15,,a,"Freight-in is a cost to bring goods to location; freight-out/commissions are selling; interest on purchase loan is period cost (not qualifying asset under ASC 835-20)"
+far-inv-16,,d,"GAFS = 1,000 + 2,600 + 1,600 = 5,200 / 400 = 13.00; 150 x 13 = 1,950"
+far-inv-17,,a,"FOB shipping point: title passes at shipment; buyer's inventory"
+far-inv-18,,b,"ASC 330-10-30-3: fixed overhead allocated on normal capacity; unallocated overhead expensed when production abnormally low"
+far-inv-19,,c,"Specific identification suits unique, high-value, individually identifiable items"
+far-inv-20,,d,"IRC 472(c) / Reg 1.472-2(e): LIFO for tax requires LIFO in financial statements to owners/creditors"
+far-inv-21,,a,"450 units available; 300 sold; 150 remain = 150 @ 13 = 1,950"
+far-inv-22,,b,"GAFS 1,000 + 2,400 + 1,950 = 5,350 / 450 = 11.8889 x 150 = 1,783.33 -> 1,783"
+far-inv-23,,c,"LIFO periodic EI = 100 @ 10 + 50 @ 12 = 1,600"
+far-inv-24,,d,"80,000 + 5,000 FOB shipping point purchases in transit (buyer owns) + 3,000 sold FOB destination in transit (seller owns) = 88,000"
+far-inv-25,,a,"50,000 - 4,000 consigned-in + 6,000 own goods out on consignment = 52,000"
+far-inv-26,,b,"Same as far-inv-14: 132,000/1.10 = 120,000; 100,000 + 20,000 x 1.10 = 122,000"
+far-inv-27,,c,"Net method records inventory/AP at 9,800; paying 10,000 after discount period -> Dr AP 9,800, Dr Purchase discounts lost 200, Cr Cash 10,000"
+far-inv-28,,d,"Est. COGS = 300,000 x (1 - 0.30) = 210,000; GAFS = 250,000; EI = 250,000 - 210,000 = 40,000"
+far-x2-03,,c,"400 units available; 250 sold; 150 remain. FIFO EI = 100 @ 15 + 50 @ 12 = 1,500 + 600 = 2,100"
+far-x2-27,,d,"FIFO COGS = first 300 units: 100 @ 10 + 200 @ 12 = 3,400 (check: GAFS 4,700 - EI 100 @ 13 = 1,300 -> 3,400)"
+far-tbs-u5-inventory-review,rf.beg,486000 (ok),Audited beginning inventory per exhibit
+far-tbs-u5-inventory-review,rf.pur,1920000 (ok),"Per purchases journal; includes 7,300 FOB shipping point goods correctly (title passed in Dec)"
+far-tbs-u5-inventory-review,rf.frt,42500 (WRONG; prepared 0),Freight-in is an inventoriable cost (ASC 330-10-30-1)
+far-tbs-u5-inventory-review,rf.ret,-31000 (ok),Purchase returns per debit memos
+far-tbs-u5-inventory-review,rf.cogs,-1874300 (ok),COGS per perpetual system per exhibit
+far-tbs-u5-inventory-review,rf.book,543200 (WRONG; prepared 500700),"486,000 + 1,920,000 + 42,500 - 31,000 - 1,874,300 = 543,200 (staff omitted freight-in)"
+far-tbs-u5-inventory-review,rf.shr,-12500 (WRONG; prepared 30000),"Count 530,700 - book 543,200 = -12,500 shrinkage (a decrease, entered negative)"
+far-tbs-u5-inventory-review,rf.end,530700 (ok),Physical count already includes owned goods in transit and excludes consigned-in goods
+far-tbs-u5-inventory-review,recon.sub,548900 (ok),Per exhibit
+far-tbs-u5-inventory-review,recon.git,7300 (WRONG; prepared 0),"Owned goods in transit FOB shipping point, missing from subledger -> add 7,300"
+far-tbs-u5-inventory-review,recon.con,-9600 (ok),Consigned-in goods are not Brightline's inventory -> remove
+far-tbs-u5-inventory-review,recon.dup,-3400 (ok),Duplicate posting -> remove
+far-tbs-u5-inventory-review,recon.adj,543200 (WRONG; prepared 535900),"548,900 + 7,300 - 9,600 - 3,400 = 543,200 (ties to GL)"
+far-tbs-u5-inventory-review,recon.gl,543200 (ok),Equals the corrected roll-forward book balance before count adjustment
+far-tbs-u5-inventory,cost.ga,30300,"400x15 + 600x16 + 500x18 + 300x19 = 6,000 + 9,600 + 9,000 + 5,700 = 30,300 (1,800 units)"
+far-tbs-u5-inventory,cost.fe,8400,"450 units remain: 300 @ 19 + 150 @ 18 = 5,700 + 2,700 = 8,400"
+far-tbs-u5-inventory,cost.le,6800,"400 @ 15 + 50 @ 16 = 6,000 + 800 = 6,800"
+far-tbs-u5-inventory,cost.lc,23500,"30,300 - 6,800 = 23,500"
+far-tbs-u5-inventory,cost.wa,7575,"30,300 / 1,800 = 16.8333 x 450 = 7,575"
+far-tbs-u5-inventory,cost.res,1600,"8,400 - 6,800 = 1,600"
+far-tbs-u5-inventory,val.v1,$16.50,"FIFO -> LCNRV (ASC 330-10-35-1B): cost 18.67 vs NRV 16.50 -> 16.50; replacement cost irrelevant"
+far-tbs-u5-inventory,val.v2,$16.20,"LIFO -> LCM: replacement 16.20 within ceiling NRV 16.50 and floor 16.50 - 2.00 = 14.50 -> market 16.20"
+far-tbs-u5-inventory,val.v3,No,"LIFO cost 6,800 / 450 = 15.11 per unit (layers @15 and @16) < market 16.20 -> no write-down"
+far-tbs-u5-inventory,memo.m1,LIFO reports higher cost of goods sold than FIFO,Rising prices -> LIFO COGS 23,500 vs FIFO 21,900 (draft wrong)
+far-tbs-u5-inventory,memo.m2,must also use LIFO in our financial statements,LIFO conformity rule IRC 472(c) (draft wrong)
+far-tbs-u5-inventory,memo.m3,may not be reversed in later years even if prices recover,ASC 330-10-35-14: written-down amount is new cost basis; no reversal in later annual periods (draft correct)
