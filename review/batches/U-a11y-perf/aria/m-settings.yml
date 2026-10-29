@@ -1,0 +1,62 @@
+- main:
+  - heading "Settings" [level=1]
+  - region "Exams & schedule":
+    - heading "Exams & schedule" [level=2]
+    - text: Active section
+    - combobox "Active section":
+      - option "FAR — Financial Accounting and Reporting" [selected]
+      - option "AUD — Auditing and Attestation"
+      - option "REG — Taxation and Regulation"
+      - option "TCP — Tax Compliance and Planning"
+    - text: FAR exam date
+    - textbox "FAR exam date": 2027-01-15
+    - text: AUD exam date
+    - textbox "AUD exam date"
+    - text: REG exam date
+    - textbox "REG exam date"
+    - text: TCP exam date
+    - textbox "TCP exam date"
+    - group "Study time per day":
+      - text: Study time per day Sun
+      - slider "Sun": "120"
+      - text: 2 h Mon
+      - slider "Mon": "45"
+      - text: 45 min Tue
+      - slider "Tue": "45"
+      - text: 45 min Wed
+      - slider "Wed": "45"
+      - text: 45 min Thu
+      - slider "Thu": "45"
+      - text: 45 min Fri
+      - slider "Fri": "30"
+      - text: 30 min Sat
+      - slider "Sat": "180"
+      - text: 3 h
+    - text: New flashcards per day
+    - spinbutton "New flashcards per day": "20"
+    - checkbox "Move to the next question automatically after a confident, correct answer Wrong, guessed or unsure answers always wait so you can read the explanation." [checked]
+    - text: Move to the next question automatically after a confident, correct answer Wrong, guessed or unsure answers always wait so you can read the explanation.
+    - checkbox "Include optional material outside the 2026 Blueprint in my plan, readiness and mixed practice For example the FAR conceptual framework and employee benefit plan modules. Mock exams never include it."
+    - text: Include optional material outside the 2026 Blueprint in my plan, readiness and mixed practice For example the FAR conceptual framework and employee benefit plan modules. Mock exams never include it.
+  - region "Display":
+    - heading "Display" [level=2]
+    - group "Theme":
+      - text: Theme
+      - button "System" [pressed]
+      - button "Light"
+      - button "Dark"
+    - text: "Text size: 100%"
+    - 'slider "Text size: 100%"': "1"
+  - region "Your data":
+    - heading "Your data" [level=2]
+    - paragraph: Everything is stored only on this device. Export a backup regularly, and to move to another device, export here and import there.
+    - paragraph: Storage is not marked persistent, so the browser may clear it under storage pressure. Export backups regularly.
+    - button "Export backup (JSON)"
+    - button "Export attempts (CSV)"
+    - button "Import backup"
+    - checkbox "Import replaces everything (erase data not in the file)"
+    - text: Import replaces everything (erase data not in the file)
+    - button "Replay walkthrough"
+    - button "Reset everything"
+  - paragraph: "Content: 116 modules · 4579 questions · 240 simulations · 753 flashcards"
+  - paragraph: All lessons, questions, and simulations are original and are not affiliated with or endorsed by the AICPA or any review provider.
