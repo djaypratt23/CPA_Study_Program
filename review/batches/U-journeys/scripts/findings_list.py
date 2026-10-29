@@ -39,7 +39,7 @@ add('S3', 'ALL', '#/quiz/:id (test mode)', 'src/pages/QuizPlayer.tsx',
     steps='Run a test-mode custom set as above.')
 add('S4', 'ALL', '#/quiz/:id', 'src/components/McqView.tsx',
     'Keyboard shortcut race: pressing a choice letter and then a confidence digit in quick succession (under ~50 ms, e.g. a fast typist or a key macro) drops the confidence key silently, because the hotkey handler checks the rendered `selected` prop, which updates only after the IndexedDB write round-trips.',
-    'Desktop: on a tutor-mode question press "d" then "2" with no delay -> choice D is selected but nothing is submitted (review/screens/uj-j3-d-03-q2-wrong.png from the first run shows D selected, no feedback). With a 150 ms gap it works.',
+    'review/screens/uj-j3c-d-keyboard-race.png. Steps (desktop): #/practice/start?module=far-bonds -> press "d" then "2" back-to-back -> D is selected (aria-checked=true) but no feedback appears; pressing "2" again submits. With a 150 ms gap it works first time.',
     'Track the last chosen letter in a ref inside McqView (set on onSelect) and let the confidence key use it when `selected` has not caught up yet.')
 
 # ---- Journey 4: flashcards ----
