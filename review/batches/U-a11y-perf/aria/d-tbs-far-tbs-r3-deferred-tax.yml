@@ -1,0 +1,147 @@
+- main:
+  - link "← Back":
+    - /url: "#/tbs?unit=far-u10"
+  - heading "Income tax provision — Garrick Corp." [level=1]
+  - paragraph: Income Taxes & Fair Value · suggested 20 min
+  - text: 00:00
+  - button "Calculator"
+  - button "Spreadsheet"
+  - paragraph:
+    - text: Prepare Garrick Corp.'s Year 1 income tax provision. The enacted rate is
+    - strong: 25%
+    - text: for all years. There were no deferred tax balances at the start of the year, and no valuation allowance is needed.
+  - paragraph: The exhibits are in the panel on the right.
+  - paragraph: Compute the following.
+  - text: Taxable income
+  - textbox "Taxable income":
+    - /placeholder: "0"
+  - text: Current tax expense
+  - textbox "Current tax expense":
+    - /placeholder: "0"
+  - text: Deferred tax liability at year-end
+  - textbox "Deferred tax liability at year-end":
+    - /placeholder: "0"
+  - text: Deferred tax asset at year-end
+  - textbox "Deferred tax asset at year-end":
+    - /placeholder: "0"
+  - text: Total income tax expense
+  - textbox "Total income tax expense":
+    - /placeholder: "0"
+  - text: Effective tax rate (percent points)
+  - textbox "Effective tax rate (percent points)":
+    - /placeholder: "0"
+  - text: "%"
+  - paragraph: Enter whole dollars unless the row shows another unit. Enter percentages as percent points (25 or 25% for 25%). Commas and $ are fine; use a minus sign or (parentheses) for negatives.
+  - paragraph: Record the Year 1 income tax provision.
+  - table:
+    - rowgroup:
+      - row "Account Debit Credit":
+        - cell "Account"
+        - cell "Debit"
+        - cell "Credit"
+    - rowgroup:
+      - row "—":
+        - cell "—":
+          - combobox "Line 1 account":
+            - option "—" [selected]
+            - option "Income tax expense"
+            - option "Deferred tax asset"
+            - option "Deferred tax liability"
+            - option "Income taxes payable"
+            - option "Retained earnings"
+        - cell:
+          - textbox "Line 1 debit"
+        - cell:
+          - textbox "Line 1 credit"
+      - row "—":
+        - cell "—":
+          - combobox "Line 2 account":
+            - option "—" [selected]
+            - option "Income tax expense"
+            - option "Deferred tax asset"
+            - option "Deferred tax liability"
+            - option "Income taxes payable"
+            - option "Retained earnings"
+        - cell:
+          - textbox "Line 2 debit"
+        - cell:
+          - textbox "Line 2 credit"
+      - row "—":
+        - cell "—":
+          - combobox "Line 3 account":
+            - option "—" [selected]
+            - option "Income tax expense"
+            - option "Deferred tax asset"
+            - option "Deferred tax liability"
+            - option "Income taxes payable"
+            - option "Retained earnings"
+        - cell:
+          - textbox "Line 3 debit"
+        - cell:
+          - textbox "Line 3 credit"
+      - row "—":
+        - cell "—":
+          - combobox "Line 4 account":
+            - option "—" [selected]
+            - option "Income tax expense"
+            - option "Deferred tax asset"
+            - option "Deferred tax liability"
+            - option "Income taxes payable"
+            - option "Retained earnings"
+        - cell:
+          - textbox "Line 4 debit"
+        - cell:
+          - textbox "Line 4 credit"
+      - row "—":
+        - cell "—":
+          - combobox "Line 5 account":
+            - option "—" [selected]
+            - option "Income tax expense"
+            - option "Deferred tax asset"
+            - option "Deferred tax liability"
+            - option "Income taxes payable"
+            - option "Retained earnings"
+        - cell:
+          - textbox "Line 5 debit"
+        - cell:
+          - textbox "Line 5 credit"
+      - row "—":
+        - cell "—":
+          - combobox "Line 6 account":
+            - option "—" [selected]
+            - option "Income tax expense"
+            - option "Deferred tax asset"
+            - option "Deferred tax liability"
+            - option "Income taxes payable"
+            - option "Retained earnings"
+        - cell:
+          - textbox "Line 6 debit"
+        - cell:
+          - textbox "Line 6 credit"
+  - paragraph: Use only the lines you need. Order does not matter; extra lines cost credit.
+  - complementary "Exhibits":
+    - tablist "Exhibits":
+      - tab "📎 Book–tax differences" [selected]
+    - tabpanel:
+      - heading "Book–tax differences" [level=2]
+      - paragraph:
+        - text: "Pretax book income:"
+        - strong: $500,000
+      - list:
+        - listitem:
+          - text: Tax depreciation exceeds book depreciation by
+          - strong: $60,000
+          - text: .
+        - listitem:
+          - text: "Warranty expense accrued for books but not yet deductible:"
+          - strong: $20,000
+          - text: .
+        - listitem:
+          - text: "Municipal bond interest included in book income:"
+          - strong: $10,000
+          - text: .
+        - listitem:
+          - text: "Nondeductible fines included in book expenses:"
+          - strong: $5,000
+          - text: .
+  - button "Submit & see explanations"
