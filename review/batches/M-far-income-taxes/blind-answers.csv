@@ -1,0 +1,63 @@
+id,part_row,my_answer,computation_or_rationale
+far-tax-chk1,,d,Warranty accrued for books and deducted when paid = future deductible amount -> DTA; (a)/(b) DTL; (c) permanent
+far-tax-chk2,,c,60% > 50% likely that 200000 will not be realized -> VA = 200000 (MLTN threshold applied to the portion; no probability weighting)
+far-tax-pre1,,c,Muni interest is never taxed -> permanent difference; no deferred tax
+far-tax-01,,b,TI = 600000 - 30000 + 12000 - 50000 = 532000 x 21% = 111720
+far-tax-02,,c,111720 current + 50000 x 21% = 10500 deferred = 122220 (= (600000-30000+12000) x 21%)
+far-tax-03,,b,ASC 740-10-30-8: enacted rate expected to apply when the differences reverse
+far-tax-04,,d,(45000-30000) - (14000-8000) = 15000 - 6000 = 9000 deferred tax expense
+far-tax-05,,a,Rent taxed when received but earned next year = future deductible amount; 120000 x 25% = 30000 DTA
+far-tax-06,,b,ASC 740-10-35-4 / 45-15: effect of enacted rate change recognized in income from continuing operations in period of enactment (Year 1)
+far-tax-07,,c,ASU 2015-17 / ASC 740-10-45-4: all noncurrent; offset within tax-paying component and jurisdiction
+far-tax-08,,b,Cumulative probability: 1000000 35%; 800000 65% > 50% -> 800000
+far-tax-09,,b,Premiums on life insurance where company is beneficiary are never deductible -> permanent
+far-tax-10,,c,NOL carryforward 1000000 x 21% = 210000 DTA; no VA needed; deferred benefit 210000. 80% limit affects timing of usage only (indefinite carryforward) - not DTA measurement
+far-tax-11,,c,50000 x 21% = 10500 DTA
+far-tax-12,,d,1000000 x 25% = 250000 - 210000 = 40000 increase in DTL and deferred tax expense in enactment period
+far-tax-13,,a,TI = 800000 + 20000 - 50000 = 770000 x 21% = 161700; deferred 50000 x 21% = 10500; total 172200
+far-tax-14,,b,ASC 740-10-45-25: interest may be classified as income taxes or interest expense and penalties as income taxes or other expense - accounting policy election consistently applied
+far-tax-15,,c,Intraperiod tax allocation (ASC 740-20-45): tax effect goes with discontinued operations; presented net of tax
+far-tax-16,,b,Realize 60% -> 40% x 200000 = 80000 VA
+far-tax-17,,c,50000 x 25% + 50000 x 21% = 12500 + 10500 = 23000
+far-tax-18,,d,120000 + 15000 - 5000 = 130000
+far-tax-19,,a,Cumulative: 100000 30%; 80000 60% > 50% -> 80000 (expected value 74000 is not the measure)
+far-tax-20,,b,ASC 805-740-25-9: no DTL for goodwill that is not deductible for tax
+far-tax-21,,a,30000 x 25% = 7500
+far-tax-22,,b,30000 x 21% (enacted rate at reversal) = 6300
+far-tax-23,,c,25% x 40000 = 10000
+far-tax-24,,d,(200000 - 10000) x 25% = 47500
+far-tax-25,,a,47500 + 5000 = 52500
+far-tax-26,,b,Cumulative: 100000 30%; 80000 55% > 50% -> 80000
+far-tax-27,,c,All noncurrent (ASC 740-10-45-4)
+far-tax-28,,d,Post-2017 NOL deduction limited to 80% x 90000 = 72000 (IRC 172(a)(2); tax years beginning after 2020)
+far-x3-06,,c,100000 x 21% + 200000 x 25% = 21000 + 50000 = 71000
+far-x3-07,,c,100000 - 30000 VA = 70000 net DTA
+far-x3-08,,c,(1000000 - 50000) x 21% = 199500 (no deferred; total = current)
+far-x3-18,,c,Book carrying amount > tax basis for an asset -> future taxable amount -> DTL 50000 x 21% = 10500
+far-x3-26,,c,ASC 740-10-30-5(e): VA when more likely than not (>50%) that some/all of DTA will not be realized
+far-tbs-r3-deferred-tax,n.ti,455000,500000 - 60000 + 20000 - 10000 + 5000
+far-tbs-r3-deferred-tax,n.cur,113750,455000 x 25%
+far-tbs-r3-deferred-tax,n.dtl,15000,60000 x 25%
+far-tbs-r3-deferred-tax,n.dta,5000,20000 x 25%
+far-tbs-r3-deferred-tax,n.tot,123750,113750 + 15000 - 5000 (= 495000 x 25%)
+far-tbs-r3-deferred-tax,n.etr,24.75,123750 / 500000
+far-tbs-r3-deferred-tax,j,Dr Income tax expense 123750; Dr Deferred tax asset 5000; Cr Income taxes payable 113750; Cr Deferred tax liability 15000,Balances 128750 = 128750
+far-tbs-u10-income-taxes,cls.c1,Permanent difference,Muni interest never taxed
+far-tbs-u10-income-taxes,cls.c2,Permanent difference,Fines never deductible (IRC 162(f))
+far-tbs-u10-income-taxes,cls.c3,Temporary — creates/increases DTL,Future taxable amount
+far-tbs-u10-income-taxes,cls.c4,Temporary — creates/increases DTA,Future deductible amount
+far-tbs-u10-income-taxes,cls.c5,Temporary — creates/increases DTA,Taxed before earned -> future deductible amount
+far-tbs-u10-income-taxes,cls.c6,Temporary — creates/increases DTL,Book gain now taxed later
+far-tbs-u10-income-taxes,prov.ti,1365000,1500000 - 40000 + 15000 - 120000 + 30000 + 60000 - 80000
+far-tbs-u10-income-taxes,prov.cur,286650,1365000 x 21%
+far-tbs-u10-income-taxes,prov.dtl,63000,(100000 + 120000 + 80000) x 21%
+far-tbs-u10-income-taxes,prov.dta,23100,(20000 + 30000 + 60000) x 21%
+far-tbs-u10-income-taxes,prov.def,23100,(63000 - 21000) - (23100 - 4200) = 42000 - 18900
+far-tbs-u10-income-taxes,prov.tot,309750,286650 + 23100 (= 1475000 x 21%)
+far-tbs-u10-income-taxes,je,Dr Income tax expense 309750; Dr Deferred tax asset 18900; Cr Income taxes payable 286650; Cr Deferred tax liability 42000,Balances 328650 = 328650
+far-tbs-x3-income-taxes,tax.ti,860000,900000 - 60000 + 30000 - 20000 + 10000
+far-tbs-x3-income-taxes,tax.cur,180600,860000 x 21%
+far-tbs-x3-income-taxes,tax.dtl,12600,60000 x 21%
+far-tbs-x3-income-taxes,tax.dta,6300,30000 x 21%
+far-tbs-x3-income-taxes,tax.tot,186900,180600 + 12600 - 6300 (= 890000 x 21%)
+far-tbs-x3-income-taxes,tax.etr,20.77,186900 / 900000 = 20.7667%
