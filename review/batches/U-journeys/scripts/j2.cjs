@@ -109,7 +109,7 @@ const L = require('./lib.cjs');
     // back to module
     await page.goto(L.BASE + '#/module/far-income-statement-oci');
     await page.waitForTimeout(1200);
-    console.log('module after complete has warmup?', await page.locator('text=Warm-up').count(), 'chip', (await page.locator('header').innerText()).slice(0, 200));
+    console.log('module after complete has warmup?', await page.locator('text=Warm-up').count(), 'chip', (await page.locator('article header').innerText()).slice(0, 200));
     // Course page status
     await page.goto(L.BASE + '#/course');
     await page.waitForTimeout(800);

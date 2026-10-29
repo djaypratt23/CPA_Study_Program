@@ -1,0 +1,20 @@
+d controlled true
+d bump -> v1
+d after update() {"waiting":true,"installing":false}
+d toast in quiz: A new version is ready. You can reload once you finish or leave this session. / Later
+d toast on dashboard: A new version of the app is ready. / Reload / Later
+d toast after Later + in-app navigation: 0
+d toast after a plain reload: 1 | waiting SW true
+d toast in mock exam: A new version is ready. You can reload once you finish or leave this session. / Later
+d after Reload: url http://localhost:4173/#/exam | toast 0 | waiting false | exam resumable 1
+m controlled true
+m bump -> v2
+m after update() {"waiting":true,"installing":false}
+m toast in quiz: A new version is ready. You can reload once you finish or leave this session. / Later
+  toast box {"x":16,"y":744,"width":358,"height":84} quiz controls {"x":0,"y":719,"width":390,"height":61} bottom nav {"x":0,"y":789,"width":390,"height":55}
+m toast on dashboard: A new version of the app is ready. / Reload / Later
+  toast box {"x":16,"y":760,"width":358,"height":68} bottom nav {"x":0,"y":789,"width":390,"height":55}
+m toast after Later + in-app navigation: 0
+m toast after a plain reload: 1 | waiting SW true
+m toast in mock exam: A new version is ready. You can reload once you finish or leave this session. / Later
+m after Reload: url http://localhost:4173/#/exam | toast 0 | waiting false | exam resumable 1
