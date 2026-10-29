@@ -23,15 +23,15 @@ All numeric distractors were reproduced in Python. Mismatched rationales or trap
   - the AFS fair-value illustration (95,000 − 93,376 = 1,624 to OCI)
   - the faded premium example (18,682 / 1,318 / 206,262 / 3,262). The default 0.5 tolerance accepts unrounded entries.
   - the sale and credit-loss rules (ASC 326-20 / 326-30, including the intent-to-sell and MLTN write-down)
-- **Body: problem.** The faded example's $207,580 price is not a PV for any term (finding 015).
+- **Body: problem.** The faded example's $207,580 price is not a PV for any term (finding 016).
 - **Takeaways.** The six key takeaways are accurate.
 - **Inline checks.** chk1 tests the ASC 320-10-25-4 HTM disqualifier, which the body never states. chk2 tests the credit/non-credit split, which the body does teach.
 - **Minutes.** The body is about 650 words plus a worked block, a JE, a 4-step faded block and 2 checks. That is about 4–5 min reading, 4–5 min faded and 2–3 min checks, or 11–13 min in total. `minutes: 18` is generous but acceptable.
 - **Lesson–item alignment.** These items test content the lesson never teaches:
   - far-dsec-chk1: HTM disqualified by possible sales for interest-rate or liquidity reasons
-  - far-dsec-17, far-dsec-25: transfers between categories (ASC 320-10-35-10). Finding 012.
-  - far-dsec-14: credit loss measured as AC − PV of expected cash flows. Finding 013.
-  - far-dsec-08 and far-tbs-u7-debt-securities (JE): the valuation-account adjustment is the change from the existing balance to the required balance. Finding 014.
+  - far-dsec-17, far-dsec-25: transfers between categories (ASC 320-10-35-10). Finding 013.
+  - far-dsec-14: credit loss measured as AC − PV of expected cash flows. Finding 014.
+  - far-dsec-08 and far-tbs-u7-debt-securities (JE): the valuation-account adjustment is the change from the existing balance to the required balance. Finding 015.
   - far-dsec-06, far-dsec-20: the fair value option appears as a distractor only. The lesson never mentions the FVO; this is minor.
   - far-dsec-15: the sale of a trading security is not shown, but it is derivable from FV-NI. This is acceptable.
 - **Sequencing.** This module (u7) comes before Bonds payable (u8). The lesson assumes PV pricing but gives prices instead of deriving them, so it does not depend on later content. dsec-10's explanation uses PV factors (2.5771, 0.7938) that are taught later in far-bonds. That is acceptable because the item doesn't require them. Equity securities are deferred to the next module (far-equity-investments) and flagged correctly.
@@ -53,12 +53,12 @@ All numeric distractors were reproduced in Python. Mismatched rationales or trap
 - **Redundancy.** Each of these facts is tested 3–5 times: trading → NI, AFS → OCI, HTM at amortized cost, and AFS sale gain = proceeds − AC (finding 009). The exam item x2-12 reuses practice item dsec-13's bond (finding 010).
 - **TBS.**
   - u7 (application, 18 min, 10 cells + JE): realistic and correct.
-  - r3 (analysis, 20 min, 8 cells): correct, but missing acquisition dates (finding 011). The 20 minutes is slightly long for 8 cells.
+  - r3 (analysis, 20 min, 8 cells): correct, but missing acquisition dates (finding 012). The 20 minutes is slightly long for 8 cells.
   - Scoring (src/lib/tbsScoring.ts): one point per cell, default tolerance 1. A review row in error scores only when it is flagged and the amount corrected, and correct rows must be left unflagged. A perfect response scores 100%. Unrounded entries (for example, 385,535.85 or 5,469.15) fall within tolerance.
 
 ## (d) Items with no issues found
 
-far-dsec-pre1, far-dsec-chk1 (item itself; its lesson support is covered by finding 012), far-dsec-01, far-dsec-06, far-dsec-07, far-dsec-08, far-dsec-10, far-dsec-fc2, far-dsec-fc3, far-dsec-fc4, far-dsec-fc5, far-tbs-u7-debt-securities.
+far-dsec-pre1, far-dsec-chk1 (item itself; its lesson support is covered by finding 013), far-dsec-01, far-dsec-06, far-dsec-07, far-dsec-08, far-dsec-10, far-dsec-fc2, far-dsec-fc3, far-dsec-fc4, far-dsec-fc5, far-tbs-u7-debt-securities.
 
 ## (e) Needs expert verification
 
