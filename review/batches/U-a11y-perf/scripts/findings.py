@@ -23,7 +23,7 @@ add('S3', 'accessibility', '/welcome (onboarding steps 1-3), /exam/:id results',
 
 add('S3', 'accessibility', '/exam/:id (MCQ testlet, TBS testlet, submit confirmation)', 'src/pages/ExamPlayer.tsx',
     'While an exam testlet is running the page has no h1 (and the MCQ testlet has no heading at all: "Question 1 of 25" is a <span>). Heading navigation, the most common way screen-reader users orient on a page, finds nothing during the MCQ testlets.',
-    'axe page-has-heading-one on exam-mcq, exam-tbs and exam-submit-confirm in all 4 runs. Screens: ' + S + 'ua-axe-d-l-27-exam-mcq.png, ' + S + 'ua-axe-d-l-30-exam-tbs.png. Accessibility tree of the MCQ testlet: review/batches/U-a11y-perf/aria/exam-mcq.yml (no heading nodes).',
+    'axe page-has-heading-one on exam-mcq, exam-tbs and exam-submit-confirm in all 4 runs. Screens: ' + S + 'ua-axe-d-l-27-exam-mcq.png, ' + S + 'ua-axe-d-l-30-exam-tbs.png. Accessibility tree of the MCQ testlet: review/batches/U-a11y-perf/aria/d-exam-mcq.yml (no heading nodes).',
     'Add a visually hidden <h1> such as "FAR simulated exam — testlet 1 of 5" to ExamRunner, and render "Question n of N" in McqView as an <h2> (or role="heading" aria-level=2) when index/total are given.',
     source='WCAG 2.2 SC 1.3.1, 2.4.6 (axe best-practice page-has-heading-one)')
 
@@ -45,6 +45,50 @@ add('S4', 'accessibility', 'dark theme: every btn-primary on hover (e.g. /welcom
     'axe color-contrast on ".btn-primary" "Build my plan" (fg #ffffff, bg #2b7fff, 3.76:1, expected 4.5:1), desktop dark run, mouse resting on the button. Screen: ' + S + 'ua-axe-d-d-03-onboarding-3.png.',
     'Use a darker hover in dark mode (dark:hover:bg-blue-700, or keep blue-600 and change only the border/shadow on hover).',
     source='WCAG 2.2 SC 1.4.3')
+
+
+# ---------------- keyboard pass (scripts/keyboard.cjs -> keyboard.json) ----------------
+add('S2', 'accessibility', '/quiz/:id tutor mode ("Next question" button)', 'src/pages/QuizPlayer.tsx',
+    'After a keyboard user presses Enter on "Next question →", React reuses the same <button> element for the next question\'s "Skip" button, so focus stays on it. A second Enter (a double press, or a screen-reader user re-activating what they think is still "Next") silently skips the new question unanswered. Nothing tells a screen-reader user that a new question loaded: focus stays at the bottom bar and the new stem is not announced.',
+    'keyboard.json, flow "quiz": Enter on "Next question" -> from "Question 1 of 10" to "Question 2 of 10", focus = button "Skip" (rect 1158,760); a second Enter -> "Question 3 of 10", focus still "Skip". Screens: ' + S + 'ua-kb-d-02-quiz-revealed-focus.png, ' + S + 'ua-kb-d-03-quiz-focus-after-next.png. Expected: focus moves to the new question (or at least does not land on a control with a different, destructive meaning). Steps: #/practice/start?module=far-income-statement-oci, answer with a letter + 2, Tab to "Next question →", Enter, Enter.',
+    'Give the bottom-bar buttons distinct keys (key="next" / key="skip" / key="submit") so React does not reuse the focused element, and after session.index changes move focus to the new question (e.g. make the "Question n of N" label an <h2 tabIndex={-1}> and focus it, which also announces it).',
+    source='WCAG 2.2 SC 2.4.3 Focus Order, 3.2.2 On Input, 4.1.3 Status Messages')
+
+add('S3', 'accessibility', '/welcome steps; /quiz/:id (arrow keys, auto-advance); /exam/:id (arrow keys, navigator, submit confirmation); /flashcards (flip, grade); /tbs/:id (submit)', 'src/pages/Onboarding.tsx; src/components/McqView.tsx; src/pages/QuizPlayer.tsx; src/pages/ExamPlayer.tsx; src/components/FlashcardPlayer.tsx; src/pages/TbsPage.tsx',
+    'Whenever the app swaps content, focus falls back to <body> and nothing is announced: onboarding Got it/Next, ←/→ between questions and quiz auto-advance (McqView remounts per question), the exam "Submit testlet" confirmation (the button is replaced by an unannounced card), flashcard "Show answer" and every grade, and TBS submit (page scrolls to the bottom, results not announced). Keyboard users lose their place and screen-reader users get no cue that the content changed.',
+    'keyboard.json: onboarding "after Enter on Got it" focus {body:true}, "after Enter on Next" {body:true}; quiz "ArrowRight" -> Question 2, focus body; "after auto-advance (1.5 s)" -> Question 4, focus body; exam "ArrowRight" focus body; "Enter on Submit testlet" focus body, confirm card shown without role/live region; flashcards "Enter on Show answer" focus body, "key 3" focus body; tbs "Enter on Submit & see explanations" focus body, scrollY 950. Screens: ' + S + 'ua-kb-d-06-exam-confirm-focus.png, ' + S + 'ua-kb-d-07-tbs-focus-after-submit.png.',
+    'Move focus to the new content\'s heading (tabIndex={-1}) after each swap: step <h2> in onboarding, question label in McqView when q.id changes, the confirmation card (role="alertdialog" or role="group" with focus on its first button) in ExamPlayer, the card group / grade buttons in FlashcardPlayer, and the "Score" <h2> (#tbs-results) after TBS submit (focus it instead of scrolling to the page bottom).',
+    source='WCAG 2.2 SC 2.4.3 Focus Order, 4.1.3 Status Messages')
+
+add('S3', 'accessibility', 'all routes (SPA navigation)', 'src/App.tsx; src/components/ui.tsx (PageHeader)',
+    'The document title is "CPA Study Program" on every route, and a route change leaves focus on the clicked nav link with no announcement. Screen-reader users get no confirmation that a page changed or which page they are on, and browser history/tab lists are indistinguishable.',
+    'aria/report.json "titles": all 33 captured states (dashboard, lesson, quiz, flashcards, 4 TBS, exam, analytics, planner, settings, search; desktop and phone) = "CPA Study Program". keyboard.json route-change: Enter on sidebar "Course" -> focus stays on link "Course", title "CPA Study Program", h1 "FAR: Financial Accounting and Reporting". No code sets document.title (grep).',
+    'Set document.title from each page (e.g. a useTitle(title) hook called by PageHeader: `${title} · CPA Study`), and on pathname change move focus to the page <h1> (tabIndex={-1}) or to <main>, so the new page is announced.',
+    source='WCAG 2.2 SC 2.4.2 Page Titled, 2.4.3 Focus Order')
+
+add('S3', 'accessibility', 'Calculator (exam, quiz, TBS)', 'src/components/Calculator.tsx; src/pages/ExamPlayer.tsx; src/pages/TbsPage.tsx',
+    'Keyboard operation of the on-screen calculator is broken for Enter: the dialog\'s onKeyDown maps Enter to "=" and calls preventDefault, so pressing Enter on a focused key (e.g. "7") does not press that key, it evaluates instead. Space works. The Calculator toggle in the exam header and on TBS pages exposes no state (no aria-pressed/aria-expanded), unlike the Spreadsheet toggle.',
+    'keyboard.json exam: typed "12*3" Enter -> display 36; Tab to key "7" (focus button "7") + Enter -> display still "36"; then Space -> "7". "Enter on Calculator toggle" -> aria-pressed null (exam header). Screen: ' + S + 'ua-kb-d-04-calculator-key-focus.png. (No Backspace support is already filed as U-journeys-013.)',
+    'In Calculator onKeyDown, handle Enter/"=" only when e.target is the dialog itself or not a <button> (`if (e.key === "Enter" && (e.target as HTMLElement).tagName === "BUTTON") return`); add aria-pressed={calc} to the Calculator toggles in ExamPlayer and TbsPage (QuizPlayer already has it).',
+    source='WCAG 2.2 SC 2.1.1 Keyboard, 4.1.2 Name, Role, Value')
+
+add('S3', 'accessibility', 'Spreadsheet tool (exam, quiz, TBS)', 'src/components/Spreadsheet.tsx',
+    'Spreadsheet cells use outline-none, so the only focus cue is a background tint: focused vs unfocused cell contrast is 1.09:1 in light and 1.22:1 in dark. A keyboard user moving with Tab/Enter/arrows cannot see which cell is active (only the small "A1:" status line says so).',
+    'contrast_extra.json: "spreadsheet: focused cell vs unfocused cell" light focused rgb(239,246,255) vs rgb(255,255,255) = 1.09:1, outline none; dark rgb(22,37,86) vs rgb(15,23,43) = 1.22:1. keyboard.json exam "Spreadsheet: focus on A1" outline "none 0px". Screen: ' + S + 'ua-kb-d-05-spreadsheet-cell-focus.png.',
+    'Replace outline-none with a visible inset ring on focus, e.g. `focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 dark:focus:outline-blue-400` (keep the tint).',
+    source='WCAG 2.2 SC 2.4.7 Focus Visible, 1.4.11 Non-text Contrast')
+
+add('S3', 'accessibility', 'phone layout: "More" menu (all routes)', 'src/components/Layout.tsx',
+    'The phone "More" sheet cannot be closed with Escape, focus is not moved into it, and it is not modal: Tab moves out of the sheet into page content that stays covered by the dimmed overlay, and the overlay stays open across navigation that does not come from a menu link (e.g. browser Back, a link reached by Tab). Keyboard and switch users end up operating hidden controls.',
+    'keyboard.json phone: Enter on "More" -> aria-expanded true, focus stays on "More"; Escape -> #more-menu still present (menuOpen 1); while it stayed open, 11 of 40 Tab stops on a quiz page and 39 of 60 on a lesson were under the "fixed inset-0 z-20 bg-black/30" overlay. Screen: ' + S + 'ua-kb-m-01-more-menu-after-escape.png.',
+    'Treat the sheet as a dialog: add an Escape handler that closes it and returns focus to "More", move focus to the first link on open, close it on pathname change (useEffect on location) and on focus leaving the sheet, and mark the rest of the page inert (or aria-modal="true" with a focus trap).',
+    source='WCAG 2.2 SC 2.1.2, 2.4.3, 2.4.11 Focus Not Obscured')
+
+add('S3', 'accessibility', '/tbs/:id exhibit and task tabs', 'src/components/TbsView.tsx',
+    'The Task/Exhibit tabs use role="tab" but not the tabs keyboard pattern: arrow keys do nothing, every tab is a separate Tab stop, tabs have no aria-controls and the tabpanel has no accessible name. The "📎" emoji is part of each tab name ("paperclip Pretax amounts, Year 2").',
+    'keyboard.json tbs: focus on first exhibit tab, ArrowRight -> focus and selection unchanged ("📎 Pretax amounts, Year 2"). aria/d-tbs-far-tbs-u1-income-statement.yml shows tab names with the emoji; report.json symbolButtons lists "📎 Memo from the CFO".',
+    'Implement the ARIA tabs pattern (roving tabIndex, Left/Right/Home/End, aria-controls/id pairs, aria-labelledby on the tabpanel), and wrap the 📎 in <span aria-hidden="true">.',
+    source='WAI-ARIA APG Tabs pattern; WCAG 2.2 SC 4.1.2')
 
 # ---- MORE ----
 
