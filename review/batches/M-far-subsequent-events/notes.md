@@ -27,7 +27,7 @@ One item was contested after the keyed pass, even though my blind answer matched
   - There is no GASB 105 contrast for governments (finding 012, S4).
 - **minutes = 12.** That is realistic: about 450 body words plus two tables, a flowchart, a faded example and three questions comes to roughly 9–12 minutes.
 - **Lesson–item alignment.** These items test something the lesson never teaches:
-  - **far-se-15:** reissued statements, ASC 855-10-25-4. Not taught anywhere in the platform's FAR lesson.
+  - **far-se-15:** reissued statements, ASC 855-10-25-4. No FAR lesson teaches it. The only other "reissu" hits in content/far are about treasury-stock reissuance.
   - **far-se-08:** the content of the disclosure (nature and estimate of effect).
   - **far-se-06(d):** settlement of a tax dispute. Not taught, and contestable.
   - **far-se-19:** a dividend declared after year-end. Not in this lesson; far-equity teaches that declaration creates the liability, so it is derivable.
