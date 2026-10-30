@@ -90,6 +90,51 @@ add('S3', 'accessibility', '/tbs/:id exhibit and task tabs', 'src/components/Tbs
     'Implement the ARIA tabs pattern (roving tabIndex, Left/Right/Home/End, aria-controls/id pairs, aria-labelledby on the tabpanel), and wrap the 📎 in <span aria-hidden="true">.',
     source='WAI-ARIA APG Tabs pattern; WCAG 2.2 SC 4.1.2')
 
+
+# ---------------- contrast beyond axe (scripts/contrast_extra.cjs -> contrast_extra.json) ----------------
+add('S3', 'accessibility', 'all forms and question screens: inputs, selects, textareas, answer-choice cards, confidence buttons, exam navigator, progress bars', 'src/index.css (.input, .btn-secondary); src/components/McqView.tsx; src/pages/ExamPlayer.tsx; src/components/ui.tsx (ProgressBar)',
+    'Component boundaries fall well below the 3:1 non-text contrast minimum in both themes: form-field borders (slate-300 / slate-700), unselected answer-choice cards and confidence buttons, unanswered exam-navigator buttons, and progress-bar tracks. Low-vision users cannot see where an input or an answer choice starts and ends; the exam navigator\'s unanswered squares nearly vanish.',
+    'contrast_extra.json (computed colours, composited backgrounds): .input/select/textarea border rgb(202,213,226) vs white 1.49:1 (dark rgb(49,65,88) vs rgb(15,23,43) 1.72:1); answer-choice card border vs page 1.42:1 (dark 1.95:1); confidence buttons 1.42:1 (dark 1.95:1); exam navigator unanswered button white on slate-100 1.10:1 (dark 1.38:1); progress fill vs track 2.96:1 light, track vs card 1.23:1. Selected states pass (blue border 5.01:1). Screens: ' + S + 'ua-axe-d-l-08-quiz-tutor.png, ' + S + 'ua-axe-d-l-27-exam-mcq.png, ' + S + 'ua-axe-d-d-20-tbs-numeric-journal.png.',
+    'Use slate-500 (#62748e on white is ~4.7:1) or slate-400 in dark mode for .input, .btn-secondary and unselected choice-card borders; give unanswered navigator buttons a slate-500 border; darken the progress fill to emerald-700 (or add a 1px slate-400 outline on the track).',
+    source='WCAG 2.2 SC 1.4.11 Non-text Contrast')
+
+add('S3', 'accessibility', '/exam/:id header controls (light theme)', 'src/index.css (:focus-visible); src/pages/ExamPlayer.tsx',
+    'In the light theme the global focus outline (blue-600) is drawn on the exam\'s dark slate-800 header bar at 2.79:1, so focus on Calculator, Spreadsheet and "Save & exit" is hard to see during the exam. (Dark theme uses blue-400: 5.54:1, fine.)',
+    'contrast_extra.json light: "focus ring: exam header Calculator button (on slate-800 bar)" outline rgb(21,93,252) vs rgb(29,41,61) = 2.79:1; elsewhere the same ring is 5.0-5.25:1 on light backgrounds.',
+    'Give the exam header its own focus colour, e.g. `focus-visible:outline-white` or `outline-blue-300` on the header buttons/link.',
+    source='WCAG 2.2 SC 2.4.7, 1.4.11 (focus indicator contrast; 2.4.13 AAA)')
+
+# ---------------- screen-reader semantics (scripts/sr_semantics.cjs -> aria/*.yml, aria/report.json) ----------------
+add('S2', 'accessibility', '/module/:id lessons with diagrams (74 lessons, 78 mermaid diagrams)', 'src/components/Mermaid.tsx; src/components/LessonMarkdown.tsx',
+    'Every lesson diagram is exposed as role="img" with the generic name "Diagram" (LessonMarkdown never passes a title and the content has no alt field). The decision trees and flows they carry (e.g. "Is it a component…? → Disposed of, or held for sale? …") have no text alternative, so screen-reader users miss content that the lesson text refers to ("Use the decision tree:"). Even the SVG text that Chromium leaks into the tree comes out in scrambled order (edge labels "No/Yes/No/Yes" first).',
+    'aria/d-lesson.yml lines ~152-165: paragraph "Use the decision tree:" followed by figure > img "Diagram" whose leaked children start "No","Yes","No","Yes",... before the node questions. grep: 78 ```mermaid blocks in 74 lesson.md files; Mermaid.tsx: role="img" aria-label={title ?? "Diagram"}, and LessonMarkdown renders <Mermaid code={code} /> with no title. Screen: ' + S + 'ua-axe-d-l-06-lesson.png.',
+    'Add a required text alternative to diagram blocks (e.g. a `%% alt: …` first line or an accTitle/accDescr in the mermaid source, validated at build time) and render it as the img name plus a "Text version" <details> under the figure; for flowcharts, the description can be generated as a nested list of node → edge label → node.',
+    source='WCAG 2.2 SC 1.1.1 Non-text Content (Level A)')
+
+add('S3', 'accessibility', '/exam/:id and /quiz/:id timers; /tbs/:id elapsed clock', 'src/components/Timer.tsx; src/pages/ExamPlayer.tsx; src/pages/QuizPlayer.tsx',
+    'The clocks are a <span aria-label="Time remaining …"> with no role, so the label is not exposed (the tree shows only "3:59:59" run into the header text), and no time warning is ever announced. The 15-minute (exam) and 1-minute (timed set) warnings are only a colour/bold change, and when time runs out the exam or set submits itself with no prior screen-reader notice.',
+    'aria/d-exam-mcq.yml: banner > text "FAR · Testlet 1 of 5 3:59:59" (no "Time remaining" label); aria/report.json clocks: span aria-label "Time remaining 3:59:59", role null; liveRegions on the exam page contain only the empty answer-feedback status. Code: Timer.tsx renders <span … aria-label>, ExamPlayer auto-calls finish() at remaining 0, QuizPlayer autoSubmit at the deadline.',
+    'Render the clock as <span role="timer" aria-label="Time remaining">…</span> (or visually hidden "Time remaining" text before it), and add a polite live region that announces fixed thresholds (e.g. 30, 15, 5 and 1 minutes left, and "Time is up, submitting") instead of every tick.',
+    source='WCAG 2.2 SC 1.3.1, 2.2.1 Timing Adjustable (warning), 4.1.3 Status Messages')
+
+add('S3', 'accessibility', '/analytics "Trend (weekly accuracy)" chart', 'src/pages/Analytics.tsx',
+    'The weekly-accuracy chart is a role="img" labelled only "Weekly accuracy bar chart"; the per-week percentages and dates printed above and below the bars become presentational children, so screen-reader users get no trend data at all.',
+    'aria/d-analytics.yml line 59: img "Weekly accuracy bar chart" (role=img makes its children presentational, so assistive tech gets only the name; the raw text Playwright lists inside it is just the date ticks and a lone "0"); Analytics.tsx line ~180: <div … role="img" aria-label="Weekly accuracy bar chart">. Screen: ' + S + 'ua-axe-d-l-37-analytics.png.',
+    'Drop role="img" and render the weeks as a list or a visually hidden <table> (week, questions, accuracy), or build an aria-label that states each week\'s value.',
+    source='WCAG 2.2 SC 1.1.1, 1.3.1')
+
+add('S4', 'accessibility', '/search result count', 'src/pages/Search.tsx',
+    'The "N result(s)" line updates as the user types but is not a live region, so screen-reader users are not told whether the query found anything.',
+    'Search.tsx: <p className="mb-3 text-sm muted">{hits.length} result(s)</p> (no aria-live); aria/report.json liveRegions for d-search: [].',
+    'Add role="status" (aria-live="polite") to the count paragraph.',
+    source='WCAG 2.2 SC 4.1.3 Status Messages')
+
+add('S4', 'accessibility', '/flashcards deck list ("Study" buttons), /exam forms ("Start")', 'src/pages/Flashcards.tsx; src/pages/ExamHome.tsx',
+    'Each deck row has an identical "Study" button (and each mock form an identical "Start"), so a screen reader\'s button list shows dozens of indistinguishable "Study" entries.',
+    'Flashcards.tsx renders <button>Study</button> per deck with no aria-label/aria-describedby; ExamHome renders <button>Start</button> per form. Screen: ' + S + 'ua-axe-d-l-16-flashcard-decks.png.',
+    'aria-label={`Study ${d.title}`} and aria-label={`Start ${f.title}`} (or aria-describedby pointing at the row title).',
+    source='WCAG 2.2 SC 2.4.6, 2.4.9 (AAA)')
+
 # ---- MORE ----
 
 
