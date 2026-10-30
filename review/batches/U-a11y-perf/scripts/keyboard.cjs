@@ -34,6 +34,11 @@ async function focus(page) {
     };
   });
 }
+const qNow = async (page) => ((await page.locator('main').innerText()).match(/Question \d+ of \d+/) || [''])[0];
+async function key(page, k, ms = 450) {
+  await page.keyboard.press(k);
+  await L.sleep(ms);
+}
 async function tabUntil(page, pred, max = 80, key = 'Tab') {
   for (let i = 0; i < max; i++) {
     await page.keyboard.press(key);
@@ -94,41 +99,40 @@ async function tabUntil(page, pred, max = 80, key = 'Tab') {
     await L.waitIdle(page);
     t = await tabUntil(page, (f) => f.role === 'radio');
     note('quiz', 'Tab to first radio', t);
-    await page.keyboard.press('ArrowDown');
+    await key(page, 'ArrowDown');
     note('quiz', 'ArrowDown in radiogroup', { focus: await focus(page), checked: await page.locator('[role=radio][aria-checked=true]').innerText().catch(() => null) });
-    await page.keyboard.press('ArrowRight');
-    note('quiz', 'ArrowRight inside radiogroup (app-wide next-question key)', { qText: await page.locator('text=/Question \\d+ of/').first().innerText() });
-    await page.keyboard.press('ArrowLeft');
-    await page.keyboard.press('c');
+    await key(page, 'ArrowRight');
+    note('quiz', 'ArrowRight inside radiogroup (app-wide next-question key)', { qText: await qNow(page), focus: await focus(page) });
+    await key(page, 'ArrowLeft');
+    await key(page, 'c');
     note('quiz', 'key "c"', { checked: (await page.locator('[role=radio][aria-checked=true]').innerText().catch(() => '')).slice(0, 40) });
-    await page.keyboard.press('2');
-    await L.sleep(500);
+    await key(page, '2', 800);
     note('quiz', 'key "2" (Unsure, submits)', { focus: await focus(page), status: await page.locator('[role=status]').first().innerText() });
     await L.shot(page, 'kb-d-02-quiz-revealed-focus');
     t = await tabUntil(page, (f) => /Next question/.test(f.name || ''));
     note('quiz', 'Tab to "Next question" from verdict', { presses: t.presses, f: t.f });
-    const q1 = await page.locator('text=/Question \\d+ of/').first().innerText();
+    const q1 = await qNow(page);
     await page.keyboard.press('Enter');
     await L.sleep(500);
-    const q2 = await page.locator('text=/Question \\d+ of/').first().innerText();
+    const q2 = await qNow(page);
     const fAfterNext = await focus(page);
     note('quiz', 'Enter on "Next question"', { from: q1, to: q2, focus: fAfterNext });
     await L.shot(page, 'kb-d-03-quiz-focus-after-next');
     await page.keyboard.press('Enter');
     await L.sleep(500);
-    note('quiz', 'second Enter (as a repeated keypress)', { now: await page.locator('text=/Question \\d+ of/').first().innerText(), focus: await focus(page) });
+    note('quiz', 'second Enter (as a repeated keypress)', { now: await qNow(page), focus: await focus(page) });
     // Auto-advance after a confident correct answer: read the key from the content JSON
     const qs = require('/home/user/CPA_Study_Program/content/far/modules/far-income-statement-oci/questions.json');
     const qid = (await page.locator('article[aria-labelledby^="stem-"]').getAttribute('aria-labelledby')).replace('stem-', '');
     const ans = qs.find((q) => q.id === qid)?.answer;
     if (ans) {
       await page.locator(`[data-choice="${ans}"]`).focus();
-      await page.keyboard.press('Space');
+      await key(page, 'Space', 600);
       await page.keyboard.press('3');
       await L.sleep(400);
       note('quiz', 'confident + correct -> status', { status: await page.locator('[role=status]').allInnerTexts(), focus: await focus(page) });
       await L.sleep(1800);
-      note('quiz', 'after auto-advance (1.5 s)', { q: await page.locator('text=/Question \\d+ of/').first().innerText(), focus: await focus(page) });
+      note('quiz', 'after auto-advance (1.5 s)', { q: await qNow(page), focus: await focus(page) });
     }
 
     // Exam: shortcuts, calculator, spreadsheet, submit confirmation
@@ -136,14 +140,14 @@ async function tabUntil(page, pred, max = 80, key = 'Tab') {
     await page.getByRole('button', { name: 'Start' }).first().click();
     await page.waitForURL(/#\/exam\/exam-/);
     await L.waitIdle(page);
-    await page.keyboard.press('b');
+    await key(page, 'b');
     note('exam', 'key "b"', { checked: (await page.locator('[role=radio][aria-checked=true]').innerText()).slice(0, 40) });
     await page.keyboard.press('ArrowRight');
     await L.sleep(400);
-    note('exam', 'ArrowRight', { q: await page.locator('text=/Question \\d+ of/').first().innerText(), focus: await focus(page) });
+    note('exam', 'ArrowRight', { q: await qNow(page), focus: await focus(page) });
     t = await tabUntil(page, (f) => f.name === 'Calculator');
     await page.keyboard.press('Enter');
-    note('exam', 'Enter on Calculator toggle', { focus: await focus(page), pressed: await page.getByRole('button', { name: 'Calculator' }).getAttribute('aria-pressed') });
+    note('exam', 'Enter on Calculator toggle', { focus: await focus(page), pressed: await page.getByRole('button', { name: 'Calculator', exact: true }).getAttribute('aria-pressed') });
     await page.keyboard.type('12*3');
     await page.keyboard.press('Enter');
     note('exam', 'typed 12*3 Enter', { display: await page.locator('[role=dialog] output').innerText() });
