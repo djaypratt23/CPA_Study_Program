@@ -1,0 +1,44 @@
+id,part_row,my_answer,computation_or_rationale
+aud-itc-chk1,,c,Prompt removal of access on termination is the access ITGC that prevents a terminated user from logging in; others are backup/batch/limit controls.
+aud-itc-chk2,,a,A check digit is recomputed from the other digits and fails on transpositions; limit test/record count/backup do not detect a transposed ID.
+aud-itc-pre1,,d,Program change approval and testing is an ITGC (change management); (a)(b)(c) are application controls within a process.
+aud-itc-01,,c,Hash total = sum of a field with no meaning (e.g. account numbers); detects changed/substituted numbers.
+aud-itc-02,,c,Weak change-management ITGC means programs could be altered; auditor cannot assume automated controls operated consistently through the period.
+aud-itc-03,,d,Reject above 70 hours = limit/reasonableness test.
+aud-itc-04,,a,Comparing vendor number to master file = validity check.
+aud-itc-05,,a,Programmers should not operate the live system or access production data (development vs operations segregation).
+aud-itc-06,,d,Automated control + effective change ITGCs + no change: confirm no change and ITGCs effective then rely (benchmarking / AU-C 330.14 continuing relevance). (a) wrong because continuing relevance must still be established.
+aud-itc-07,,a,Review/follow-up of exception report = output control; (b)(d) input; (c) access ITGC.
+aud-itc-08,,b,AU-C 315 as amended by SAS 145: identify IT applications subject to risks arising from IT and the general IT controls that address those risks.
+aud-itc-09,,b,"Record count same (40), dollar total differs by 58,420-58,240=180; 180/9=20 -> transposition signature (e.g. 820 keyed as 640? any pair of digits differing by 2 in tens/hundreds). Not lost (count same), not duplicate (count would be 41)."
+aud-itc-10,,a,Completeness of billing: account for prenumbered shipping docs and match to invoices.
+aud-itc-11,,d,SOC 1 type 2 report covers ICFR-relevant controls and their operating effectiveness over a period.
+aud-itc-12,,d,Active accounts of terminated employees -> risk of unauthorized access to data/transactions.
+aud-itc-13,,a,Benchmarking of automated controls when change controls effective and program unchanged.
+aud-itc-14,,b,Regular off-site backups address loss of data from server failure.
+aud-itc-15,,c,Cybersecurity incident: reassess risks of material misstatement related to data integrity and controls (AU-C 315 / risk assessment is iterative).
+aud-itc-16,,b,Check digit detects transposition.
+aud-itc-17,,c,Role-based access (preventive) to master file; others are detective or backup.
+aud-itc-18,,d,DBA self-granting access = SoD/access conflict -> unauthorized data changes.
+aud-itc-19,,a,Ineffective change ITGCs -> cannot rely on automated controls -> reduce reliance and increase substantive procedures.
+aud-itc-20,,b,Auditor's own software reprocessing client data and comparing = parallel simulation.
+aud-itc-21,,a,Change management is an ITGC; others are application controls.
+aud-itc-22,,b,Limit check = input validation (edit) control.
+aud-itc-23,,c,Hash total = sum of a nonfinancial (meaningless) field such as account numbers.
+aud-itc-24,,d,Unapproved code migration -> automated controls suspect.
+aud-itc-25,,a,Maintaining vendor master and approving payments = incompatible duties (SoD conflict).
+aud-itc-26,,b,Cannot rely on automated controls -> more substantive work (or test ITGC compensating controls).
+aud-itc-27,,c,Carve-out: user auditor obtains evidence about relevant subservice org controls (subservice SOC report or other procedures) per AU-C 402.
+aud-x2-16,,a,Change management (approval/testing/separate migration) prevents unauthorized program changes.
+aud-x2-17,,a,Customer number must exist in master file = validity check.
+aud-x2-30,,c,Restricting who can change production programs = ITGC (access/change).
+aud-x2-41,,b,SOC 1 type 2 tests operating effectiveness over a period -> supports reliance on controls.
+aud-tbs-r3-it-coso,t1,IT general control,Program change testing/approval = change management ITGC.
+aud-tbs-r3-it-coso,t2,Automated application control,Validity check against customer master file built into billing system.
+aud-tbs-r3-it-coso,t3,Entity-level (control environment) control,Audit committee oversight / private sessions with internal audit = control environment (governance).
+aud-tbs-r3-it-coso,t4,IT general control,Periodic user access review and removal of terminated users = access ITGC.
+aud-tbs-r3-it-coso,t5,Automated application control,System-performed three-way match = automated application control.
+aud-tbs-r3-it-coso,t6,Manual control,"Controller's monthly review of a system report of manual JEs > $50,000 = manual (IT-dependent manual) detective control. Slight ambiguity: AS 2201.24 lists period-end financial reporting controls among entity-level controls, but the option is labeled control environment."
+aud-tbs-r3-it-coso,p2,Preventive,System rejects invoice before it is recorded.
+aud-tbs-r3-it-coso,p5,Preventive,Match performed before payment is made.
+aud-tbs-r3-it-coso,p6,Detective,After-the-fact review of entries already posted.

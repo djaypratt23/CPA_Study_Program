@@ -90,14 +90,13 @@ async function visit(page, r) {
 (async () => {
   const browser = await L.launch();
 
-  // 1) Does the app honour the browser's default font size? (Chromium pref webkit.webprefs.default_font_size = 32)
+  // 1) Does the app honour the browser's default font size? (CDP Page.setFontSizes standard=32, like a user choosing "Very large")
   {
-    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'ua-prof-'));
-    fs.mkdirSync(path.join(dir, 'Default'), { recursive: true });
-    fs.writeFileSync(path.join(dir, 'Default', 'Preferences'), JSON.stringify({ webkit: { webprefs: { default_font_size: 32 } } }));
-    const ctx = await L.chromium.launchPersistentContext(dir, { headless: true, viewport: { width: 1366, height: 900 } });
-    const page = await ctx.newPage();
-    await page.goto('data:text/html,<p>x</p>');
+    const { ctx, page } = await L.newCtx(browser, L.DESKTOP, 'light');
+    const cdp = await ctx.newCDPSession(page);
+    await cdp.send('Page.enable');
+    await cdp.send('Page.setFontSizes', { fontSizes: { standard: 32, fixed: 26 } });
+    await page.goto(L.BASE + 'robots.txt');
     out.defaultFontSize.plainPage = await page.evaluate(() => getComputedStyle(document.documentElement).fontSize);
     await L.onboard(page);
     out.defaultFontSize.appHtml = await page.evaluate(() => ({ inline: document.documentElement.style.fontSize, computed: getComputedStyle(document.documentElement).fontSize, body: getComputedStyle(document.body).fontSize }));
@@ -121,9 +120,7 @@ async function visit(page, r) {
       await page.locator('#font').fill('1.4');
       await L.sleep(500);
     }
-    if (css) await ctx.addInitScript((c) => {
-      document.addEventListener('DOMContentLoaded', () => { const s = document.createElement('style'); s.textContent = c; document.head.appendChild(s); });
-    }, css);
+    if (css) await page.addStyleTag({ content: css });
     for (const r of ROUTES) {
       try {
         await visit(page, r);
@@ -194,7 +191,10 @@ async function visit(page, r) {
           const ov = Math.max(0, Math.min(r.bottom, q.bottom) - Math.max(r.top, q.top));
           if (ov > hiddenPx && Math.min(r.right, q.right) > Math.max(r.left, q.left)) { hiddenPx = ov; by = String(b.className).slice(0, 50); }
         }
-        return { name: (el.getAttribute('aria-label') || el.innerText || '').trim().slice(0, 40), h: Math.round(r.height), hiddenPx: Math.round(hiddenPx), fully: hiddenPx >= r.height - 1, by };
+        // z-order check: sample 5 points; count those where the topmost element is not the focused one
+        const pts = [[0.5, 0.5], [0.1, 0.1], [0.9, 0.1], [0.1, 0.9], [0.9, 0.9]].map(([fx, fy]) => [r.left + r.width * fx, r.top + r.height * fy]).filter(([x, y]) => y >= 0 && y < innerHeight);
+        const coveredPts = pts.filter(([x, y]) => { const t = document.elementFromPoint(x, y); return t && t !== el && !el.contains(t); }).length;
+        return { name: (el.getAttribute('aria-label') || el.innerText || '').trim().slice(0, 40), h: Math.round(r.height), hiddenPx: Math.round(hiddenPx), fully: coveredPts === 5, coveredPts, by };
       });
     for (const [route, label] of [['QUIZ', 'quiz'], ['/module/far-income-statement-oci', 'lesson'], ['/tbs/far-tbs-r3-deferred-tax', 'tbs']]) {
       if (route === 'QUIZ') {
@@ -211,7 +211,7 @@ async function visit(page, r) {
         const p = await probe();
         if (!p) continue;
         n++;
-        if (p.hiddenPx > 0) hits.push(p);
+        if (p.coveredPts > 0) hits.push(p);
       }
       out.obscured[label] = { stops: n, partlyHidden: hits.length, fullyHidden: hits.filter((h) => h.fully).length, samples: hits.slice(0, 8) };
       console.log('obscured', label, out.obscured[label].stops, out.obscured[label].partlyHidden, out.obscured[label].fullyHidden, JSON.stringify(hits.slice(0, 3)));
@@ -225,14 +225,15 @@ async function visit(page, r) {
     await page.getByRole('button', { name: 'More' }).focus();
     await page.keyboard.press('Enter');
     const seq = [];
-    for (let i = 0; i < 14; i++) {
+    for (let i = 0; i < 22; i++) {
       await page.keyboard.press('Tab');
       seq.push(await page.evaluate(() => {
         const el = document.activeElement;
         const inMenu = !!el.closest('#more-menu');
         const r = el.getBoundingClientRect();
         const top = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
-        return `${(el.innerText || el.getAttribute('aria-label') || el.tagName).trim().slice(0, 24)}${inMenu ? ' [menu]' : top && (top === el || el.contains(top)) ? '' : ' [under overlay]'}`;
+        if (el === document.body) return 'BODY';
+        return `${(el.getAttribute('aria-label') || el.innerText || el.tagName).trim().slice(0, 24)}${inMenu ? ' [menu]' : top && (top === el || el.contains(top)) ? '' : ' [under overlay]'}`;
       }));
     }
     out.moreMenu.tabSequence = seq;
