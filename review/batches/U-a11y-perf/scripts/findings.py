@@ -155,6 +155,20 @@ add('S3', 'accessibility', 'phone layout: quiz, lesson and TBS pages (keyboard f
     'Add scroll padding matching the bars, e.g. `html { scroll-padding-top: 4rem; scroll-padding-bottom: calc(8rem + env(safe-area-inset-bottom)) }` on the phone layout (and 4rem on quiz pages for the sticky bar), so focused elements scroll clear of them.',
     source='WCAG 2.2 SC 2.4.11 Focus Not Obscured (Minimum)')
 
+
+# ---------------- performance: loads on Fast 3G + 4x CPU (scripts/perf.cjs -> perf.json) ----------------
+add('S3', 'performance', 'app start (SectionLoader background loads) and service-worker install', 'src/App.tsx (SectionLoader); vite.config.ts (VitePWA workbox globPatterns)',
+    'Three seconds after every cold start the app downloads every other exam section in the background (loadAllSections), and the service worker\'s install precaches nearly the whole build. Neither checks the connection or Save-Data. On a phone on 3G this saturates the link right when the learner taps into their first lesson, and it spends mobile data on sections they may never open.',
+    'perf.json returningCold (390x844, Fast 3G 1.6 Mbps/750 Kbps/150 ms + 4x CPU, cold HTTP cache, SW blocked): dashboard usable 4,219 ms after 47 requests / 578 KB; then backgroundAfterDashboard60s = 82 requests / 866 KB (AUD-…js 79 KB, REG 70 KB, TCP 58 KB + their module chunks) — about 4.3 s of Fast-3G link time. Service-worker precache (dist/sw.js manifest): 346 entries, 8.55 MB raw / 2.12 MB gzip / 1.77 MB brotli (≈11 s at Fast-3G bandwidth); measured storage after install 8.7 MB (perf.json returningWarmSW.precache). The payoff is real: with the SW warm the dashboard is usable in 914 ms with 0 network bytes.',
+    'Start loadAllSections from requestIdleCallback and skip it when navigator.connection?.saveData is true or effectiveType is "2g"/"3g" (load a section when the learner switches to it instead); limit the precache globPatterns to the app shell + core + the active section and let the existing CacheFirst runtime rule pick up other sections as they are opened (or precache them only after onboarding on unmetered connections).',
+    conf='medium', source='web.dev "Save-Data" and Network Information API guidance; Workbox precaching guidance')
+
+add('S4', 'performance', 'critical path (index, db, content core) and first visit', 'vite.config.ts (contentBundle core); src/main.tsx; src/App.tsx',
+    'Before anything but the static splash appears, every visit parses 697 KB of JavaScript/CSS (204 KB gzip): the app entry (262 KB), the db chunk (201 KB, Dexie + zod backup schemas) and the content core (176 KB, of which ~47 KB is the full text of every final-review document and ~29 KB the glossary). A returning learner additionally waits for the whole active section (FAR: 87 KB gzip section chunk + its module chunks) because main.tsx awaits loadSection before the first render. A first-time visitor also downloads the FAR section during onboarding although onboarding uses no section content. Measured times are acceptable (first app render 1.95 s, dashboard 4.2 s on Fast 3G + 4x CPU), so this is headroom, not a defect.',
+    'perf.json firstVisit: splash 302 ms, FCP 592 ms, onboarding interactive 1,970 ms, 47 requests / 578 KB (incl. FAR + 37 module chunks), 2 long tasks (max 206 ms, TBT 176 ms). dist sizes (raw/gzip/brotli): index-BWQ-7OfY.js 262,483/82,335/71,563; db-D1ng6Sro.js 201,037/60,502/53,526; content-BgQ1-4Pz.js 176,399/49,179/41,828 (core JSON: sections 16.8 KB, modules 16.4 KB, glossary 29.0 KB, reviewDocs 46.7 KB); index-D1O-Wfax.css 56,820/9,434/7,952. Lesson open cold (far-income-statement-oci): header 959 ms, text 1,529 ms, mermaid diagram 3,721 ms (39 requests / 333 KB, mermaid core + flowchart chunks).',
+    'Move reviewDocs bodies (and optionally the glossary) to on-demand chunks like lesson bodies; import the zod backup schemas lazily from Settings import/export; in SectionLoader, skip loadSection while !settings.onboarded; render the dashboard shell while the section loads instead of holding the splash.',
+    conf='high', source='web.dev performance budgets (critical-path JS)')
+
 # ---- MORE ----
 
 
