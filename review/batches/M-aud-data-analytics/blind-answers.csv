@@ -1,0 +1,59 @@
+id,part_row,my_answer,computation_or_rationale
+aud-da-chk1,,b,"Duplicate payments detected by matching vendor+amount+invoice no.; gap detection finds missing items, not duplicates"
+aud-da-chk2,,b,AU-C 520.07: unexpected relationship in final analytics -> revise RMM assessment and perform further procedures
+aud-da-pre1,,b,"IPE must be evaluated for completeness and accuracy (AU-C 500.09) e.g., reconcile to GL; reps/IT certification are not substitutes"
+aud-da-01,,d,ADA cycle: plan -> access/prepare -> assess relevance/reliability -> perform -> evaluate results/investigate outliers (last)
+aud-da-02,,d,"Outliers are notable items to investigate; not automatically misstatements, cannot be removed or ignored"
+aud-da-03,,c,Employee-vendor address match targets fictitious vendors / asset misappropriation
+aud-da-04,,a,Benford: leading-digit frequency deviations suggest fabricated/manipulated numbers
+aud-da-05,,a,Completeness = reconcile extract totals and record counts to GL/system (direction from source to extract); agreeing lines to source tests accuracy/occurrence
+aud-da-06,,c,AU-C 520.06 requires analytical procedures near end of audit in every audit to form overall conclusion
+aud-da-07,,d,Substantive evidence from ADA depends on reliability of data incl. price master (AU-C 500.09)
+aud-da-08,,a,Line chart of daily revenue shows spikes at quarter-ends; other options irrelevant
+aud-da-09,,c,"ADAs usable in risk assessment, ToC, substantive, overall review; others absolute/false"
+aud-da-10,,a,Missing shipping document numbers -> shipments possibly not billed/recorded -> completeness of sales
+aud-da-11,,c,"Diff=548,000-500,000=48,000>30,000 threshold; investigate whole; corroborated 25,000; unexplained 23,000<30,000 -> procedure supports balance"
+aud-da-12,,d,All flags from SYS-BATCH scheduled job = expected activity; poorly designed test -> refine (exclude system entries) and rerun
+aud-da-13,,a,CustomerID in Invoice table referencing Customer table PK = foreign key
+aud-da-14,,b,"Dollar amount has true zero and equal intervals -> ratio; rating ordinal, region nominal, date interval"
+aud-da-15,,c,Reconcile record counts and totals to GL (completeness) before analyzing
+aud-da-16,,a,Grouping by dollar range = stratification
+aud-da-17,,b,Modeling expense as function of production hours = regression
+aud-da-18,,c,"Matching key payment fields (vendor, amount, invoice no.) detects duplicates"
+aud-da-19,,d,Full-population test still depends on completeness and accuracy of data
+aud-da-20,,a,Payment before receipt = three-way-match control bypass
+aud-da-21,,a,"Filtering on criteria (weekend date, user) flags all such entries"
+aud-da-22,,b,Benford tests leading-digit frequencies
+aud-da-23,,c,"Data reliability (relevance and reliability, completeness and accuracy)"
+aud-da-24,,d,Outlier from regression -> investigate
+aud-da-25,,a,Spike just below approval threshold -> split purchases/payments to avoid approval limit
+aud-da-26,,b,"Exceptions must be investigated (individually or in groups); not all misstatements, cannot ignore; sampling 25 and stopping leaves untested flags"
+aud-da-27,,c,Ineffective ITGCs -> cannot rely on controls over data; test completeness/accuracy of data directly (substantive)
+aud-x3-09,,d,Two employees sharing bank account = ghost employee/payroll fraud indicator -> investigate
+aud-x3-10,,a,IPE: obtain evidence about completeness and accuracy (AU-C 500.09)
+aud-x3-32,,d,Flagged possible duplicates are notable items to investigate; not sampling projection
+aud-x3-45,,a,Same as x3-10: evaluate completeness and accuracy
+aud-tbs-r3-journal-entries,d/e1,Select for testing,"Large manual revenue entry by CFO at year-end, no support: classic override indicator (AU-C 240.32)"
+aud-tbs-r3-journal-entries,d/e2,Low priority,Recurring automated depreciation; low risk
+aud-tbs-r3-journal-entries,d/e3,Select for testing,Weekend posting by non-accounting user: unusual user/time
+aud-tbs-r3-journal-entries,d/e4,Select for testing,Round-dollar large entries to suspense/intercompany account: fraud characteristic
+aud-tbs-r3-journal-entries,d/e5,Low priority,Automated recurring payroll accrual
+aud-tbs-r3-journal-entries,d/e6,Select for testing (medium confidence),Post-period reversal of a year-end sales accrual is a revenue cutoff / fictitious-revenue indicator (AU-C 240 appendix: period-end sales reversed after year-end); but routine auto-reversing accruals are common -> ambiguous
+aud-tbs-u6-ada-review,resp/r1,Investigate every flagged item,Post-close manual revenue entries by controller 'true-up' = override risk
+aud-tbs-u6-ada-review,resp/r2,Investigate every flagged item,Unauthorized users (warehouse) posting entries = access/override risk
+aud-tbs-u6-ada-review,resp/r3,Refine the test parameters and rerun,All flags from SYS-BATCH scheduled job -> poorly designed test
+aud-tbs-u6-ada-review,resp/r4,No further investigation,Round-dollar entries are depreciation/amortization from schedules already tested and agreed
+aud-tbs-u6-ada-review,resp/r5,Investigate every flagged item,December margin spike from bill-and-hold sales to new customer at Dec 28-30 = revenue recognition risk
+aud-tbs-u6-ada-review,asrt/a1,Occurrence and cutoff of revenue,Post-close manual revenue entries
+aud-tbs-u6-ada-review,asrt/a2,IT general controls over access,Users without posting authority
+aud-tbs-u6-ada-review,asrt/a3,Occurrence and cutoff of revenue,Bill-and-hold: control may not have transferred (ASC 606-10-55-83 criteria)
+aud-tbs-u6-analytics-evaluation,sap/exp,775000 (not wrong),"12,400,000 x 6.25% = 775,000"
+aud-tbs-u6-analytics-evaluation,sap/rec,842000 (not wrong),Given
+aud-tbs-u6-analytics-evaluation,sap/diff,67000 (not wrong),"842,000-775,000"
+aud-tbs-u6-analytics-evaluation,sap/inv,WRONG -> 67000,"Difference exceeds 40,000 threshold so the whole 67,000 is investigated, not 67,000-40,000=27,000"
+aud-tbs-u6-analytics-evaluation,sap/corr,WRONG -> 38000,"Only loan-fee amortization corroborated; 12,000 penalty is inquiry only"
+aud-tbs-u6-analytics-evaluation,sap/unex,WRONG -> 29000,"67,000-38,000"
+aud-tbs-u6-analytics-evaluation,ev/e1,Accept - corroborated by documentary evidence,Agreed to loan agreement and amortization schedule
+aud-tbs-u6-analytics-evaluation,ev/e2,Do not accept until corroborated,No documentation; inquiry alone insufficient (AU-C 520.07)
+aud-tbs-u6-analytics-evaluation,ev/e3,The procedure supports the recorded balance,"Remaining unexplained 29,000 < 40,000 threshold"
+aud-tbs-u6-analytics-evaluation,ev/e4,Reassess the risks for revenue and receivables and perform additional procedures,AU-C 520.07 / 315: previously unrecognized risk from final analytics
