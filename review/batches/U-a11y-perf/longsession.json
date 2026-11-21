@@ -110,5 +110,117 @@
         "over100ms": 0
       }
     ]
+  },
+  "B_idleClocks": {
+    "cpu": "4x",
+    "results": [
+      {
+        "label": "dashboard (no clock)",
+        "secs": 20,
+        "mainThreadBusyPct": 2.5,
+        "scriptPct": 1.1,
+        "longTasks": 3,
+        "longTaskMax": 86
+      },
+      {
+        "label": "quiz question, 1 s clock",
+        "secs": 20,
+        "mainThreadBusyPct": 3.4,
+        "scriptPct": 2.1,
+        "longTasks": 0,
+        "longTaskMax": 0
+      },
+      {
+        "label": "quiz after reveal (explanations shown), 1 s clock",
+        "secs": 20,
+        "mainThreadBusyPct": 3,
+        "scriptPct": 1.7,
+        "longTasks": 0,
+        "longTaskMax": 0
+      },
+      {
+        "label": "TBS page, 1 s elapsed clock",
+        "secs": 20,
+        "mainThreadBusyPct": 2.8,
+        "scriptPct": 1.6,
+        "longTasks": 0,
+        "longTaskMax": 0
+      },
+      {
+        "label": "exam MCQ, 0.5 s clock",
+        "secs": 20,
+        "mainThreadBusyPct": 4.1,
+        "scriptPct": 2.6,
+        "longTasks": 0,
+        "longTaskMax": 0
+      }
+    ],
+    "examProfileTopSelfTime6s": [
+      "ht actions-DvGpsLtg.js 11ms",
+      "s actions-DvGpsLtg.js 8ms",
+      "n actions-DvGpsLtg.js 8ms",
+      "postMessage  6ms",
+      "rl actions-DvGpsLtg.js 6ms",
+      "t actions-DvGpsLtg.js 5ms",
+      "Mu index-BQEaYoFB.js 4ms",
+      "Re actions-DvGpsLtg.js 4ms",
+      "_ index-BQEaYoFB.js 4ms",
+      "mt actions-DvGpsLtg.js 4ms",
+      "Xr actions-DvGpsLtg.js 3ms",
+      "Ir actions-DvGpsLtg.js 3ms"
+    ]
+  },
+  "C_40lessons": {
+    "cpu": "4x",
+    "lessonTextMs": {
+      "median": 147,
+      "p90": 373,
+      "max": 593,
+      "first10median": 198,
+      "last10median": 114
+    },
+    "series": [
+      {
+        "opened": 0,
+        "heapMB": 10.2,
+        "nodes": 460,
+        "listeners": 255,
+        "taskDur": 0.065034,
+        "scriptDur": 0
+      },
+      {
+        "opened": 10,
+        "heapMB": 29.8,
+        "nodes": 1343,
+        "listeners": 410,
+        "taskDur": 6.455508,
+        "scriptDur": 2.525779,
+        "longTasks": 26,
+        "longTaskMax": 386,
+        "over200ms": 5
+      },
+      {
+        "opened": 20,
+        "heapMB": 30.5,
+        "nodes": 1539,
+        "listeners": 395,
+        "taskDur": 12.485414,
+        "scriptDur": 4.872576,
+        "longTasks": 25,
+        "longTaskMax": 267,
+        "over200ms": 2
+      },
+      {
+        "opened": 30,
+        "heapMB": 30.7,
+        "nodes": 1443,
+        "listeners": 368,
+        "taskDur": 18.486813,
+        "scriptDur": 7.217656,
+        "longTasks": 24,
+        "longTaskMax": 372,
+        "over200ms": 1
+      }
+    ]
   }
 }

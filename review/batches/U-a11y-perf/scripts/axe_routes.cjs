@@ -3,7 +3,7 @@
 const L = require('./lib.cjs');
 const [vpKey = 'd', theme = 'light'] = process.argv.slice(2);
 const vp = vpKey === 'm' ? L.PHONE : L.DESKTOP;
-const tag = `${vpKey}-${theme[0]}`;
+const tag = `${vpKey}-${theme[0]}${process.env.AXE_SUFFIX || ''}`; // AXE_SUFFIX=-recheck writes a separate result file
 const results = [];
 let n = 0;
 
@@ -11,7 +11,7 @@ async function check(page, name, { full = false } = {}) {
   n += 1;
   await L.sleep(250);
   const r = await L.axe(page);
-  const shotPath = await L.shot(page, `axe-${tag}-${String(n).padStart(2, '0')}-${name}`, full);
+  const shotPath = process.env.AXE_NOSHOT ? null : await L.shot(page, `axe-${tag}-${String(n).padStart(2, '0')}-${name}`, full);
   const url = page.url().replace(L.BASE, '/');
   const summary = r.violations.map((v) => `${v.id}(${v.nodes.length})`).join(' ');
   console.log(`[${tag}] ${name} ${url} -> ${r.violations.length ? summary : 'clean'}`);
