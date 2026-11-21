@@ -270,5 +270,160 @@
       "taskDur": 4.757249,
       "scriptDur": 2.015495
     }
+  },
+  "E_retainedDom_tutor": {
+    "note": "no CPU throttling; metrics after two forced GCs; cdpNodes counts attached + detached DOM nodes",
+    "unit": "questions answered",
+    "series": [
+      {
+        "after": 0,
+        "where": "dashboard",
+        "heapMB": 10.2,
+        "cdpNodes": 460,
+        "attachedElements": 233,
+        "listeners": 255
+      },
+      {
+        "after": 20,
+        "where": "results page",
+        "heapMB": 25.4,
+        "cdpNodes": 3211,
+        "attachedElements": 232,
+        "listeners": 504
+      },
+      {
+        "after": 20,
+        "where": "dashboard",
+        "heapMB": 25.4,
+        "cdpNodes": 3389,
+        "attachedElements": 241,
+        "listeners": 524
+      },
+      {
+        "after": 40,
+        "where": "results page",
+        "heapMB": 26,
+        "cdpNodes": 6004,
+        "attachedElements": 232,
+        "listeners": 730
+      },
+      {
+        "after": 40,
+        "where": "dashboard",
+        "heapMB": 26.1,
+        "cdpNodes": 6216,
+        "attachedElements": 257,
+        "listeners": 753
+      },
+      {
+        "after": 60,
+        "where": "results page",
+        "heapMB": 26.6,
+        "cdpNodes": 8905,
+        "attachedElements": 232,
+        "listeners": 983
+      },
+      {
+        "after": 60,
+        "where": "dashboard",
+        "heapMB": 26.6,
+        "cdpNodes": 9117,
+        "attachedElements": 257,
+        "listeners": 1006
+      },
+      {
+        "after": 80,
+        "where": "results page",
+        "heapMB": 27,
+        "cdpNodes": 11798,
+        "attachedElements": 232,
+        "listeners": 1230
+      },
+      {
+        "after": 80,
+        "where": "dashboard",
+        "heapMB": 27,
+        "cdpNodes": 12010,
+        "attachedElements": 257,
+        "listeners": 1253
+      }
+    ],
+    "heapSnapshot": {
+      "nodeFields": "type,name,id,self_size,edge_count,detachedness",
+      "detachedTotal": 8786,
+      "detachedByName": [
+        [
+          "Text",
+          1552
+        ],
+        [
+          "<p>",
+          800
+        ],
+        [
+          "<div>",
+          352
+        ],
+        [
+          "<button class=\"chip min-h-9 border px-3 text-sm border-amber-300 bg-white dark:border-amber-800 dark:bg-slate-900\" aria-pressed=\"false\">",
+          342
+        ],
+        [
+          "<span class=\"mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-current text-xs font-bold uppercase\">",
+          320
+        ],
+        [
+          "<div class=\"prose-lesson [&amp;_p]:my-0\">",
+          320
+        ],
+        [
+          "<span class=\"min-w-0 flex-1 \">",
+          320
+        ],
+        [
+          "<div class=\"flex items-start gap-1\">",
+          320
+        ],
+        [
+          "<div class=\"prose-lesson text-sm [&amp;_p]:my-1\">",
+          320
+        ],
+        [
+          "<div class=\"mb-1 text-xs font-bold uppercase tracking-wide text-rose-700 dark:text-rose-400\">",
+          240
+        ],
+        [
+          "<div class=\"mt-1 ml-9 rounded-md px-3 py-2 text-sm bg-slate-50 dark:bg-slate-900/60\">",
+          240
+        ],
+        [
+          "SVGPathElement",
+          212
+        ],
+        [
+          "SVGSVGElement",
+          212
+        ],
+        [
+          "<span class=\"font-semibold\">",
+          164
+        ],
+        [
+          "<div class=\"prose-lesson\">",
+          160
+        ]
+      ],
+      "sampledElements": 424,
+      "holders": [
+        [
+          "object:SVGPathElement -[internal:cppgc_object]->",
+          212
+        ],
+        [
+          "object:SVGSVGElement -[internal:cppgc_object]->",
+          212
+        ]
+      ]
+    }
   }
 }

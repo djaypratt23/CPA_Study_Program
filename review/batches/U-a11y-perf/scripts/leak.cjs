@@ -16,7 +16,9 @@ async function snapshotDetached(cdp) {
   cdp.on('HeapProfiler.addHeapSnapshotChunk', onChunk);
   await cdp.send('HeapProfiler.takeHeapSnapshot', { reportProgress: false, captureNumericValue: false });
   cdp.off('HeapProfiler.addHeapSnapshotChunk', onChunk);
-  const snap = JSON.parse(chunks.join(''));
+  const raw = chunks.join('');
+  if (process.env.HEAP_OUT) fs.writeFileSync(process.env.HEAP_OUT, raw); // keep the snapshot outside the repo for retainer analysis (retainers.cjs)
+  const snap = JSON.parse(raw);
   const m = snap.snapshot.meta;
   const NF = m.node_fields.length;
   const EF = m.edge_fields.length;
@@ -24,6 +26,7 @@ async function snapshotDetached(cdp) {
   const nName = m.node_fields.indexOf('name');
   const nEdges = m.node_fields.indexOf('edge_count');
   const nSize = m.node_fields.indexOf('self_size');
+  const nDet = m.node_fields.indexOf('detachedness'); // 0 unknown, 1 attached, 2 detached (DevTools shows these as "Detached …")
   const eType = m.edge_fields.indexOf('type');
   const eName = m.edge_fields.indexOf('name_or_index');
   const eTo = m.edge_fields.indexOf('to_node');
@@ -55,16 +58,16 @@ async function snapshotDetached(cdp) {
   const byName = {};
   for (let i = 0; i < count; i++) {
     const n = name(i);
-    if (n.startsWith('Detached ')) {
+    if (n.startsWith('Detached ') || (nDet >= 0 && nodes[i * NF + nDet] === 2 && type(i) === 'native')) {
       detached.push(i);
       byName[n] = (byName[n] || 0) + 1;
     }
   }
   // For a sample of detached elements, walk up retainers (preferring non-detached, non-DOM-internal) to find
   // the first JS object/closure that holds the detached tree.
-  const isDetached = (i) => name(i).startsWith('Detached ');
+  const isDetached = (i) => name(i).startsWith('Detached ') || (nDet >= 0 && nodes[i * NF + nDet] === 2);
   const holders = {};
-  const sample = detached.filter((i) => /Detached (HTML|SVG)\w*Element/.test(name(i))).slice(0, 4000);
+  const sample = detached.filter((i) => /(HTML|SVG)\w*Element/.test(name(i))).slice(0, 4000);
   for (const start of sample) {
     // BFS limited depth through retainers, stop at the first non-detached node that is not an internal/hidden one
     const seen = new Set([start]);
@@ -91,7 +94,7 @@ async function snapshotDetached(cdp) {
     holders[key] = (holders[key] || 0) + 1;
   }
   const top = (o, k = 15) => Object.entries(o).sort((a, b) => b[1] - a[1]).slice(0, k);
-  return { detachedTotal: detached.length, detachedByName: top(byName), sampledElements: sample.length, holders: top(holders, 12) };
+  return { nodeFields: m.node_fields.join(','), detachedTotal: detached.length, detachedByName: top(byName), sampledElements: sample.length, holders: top(holders, 12) };
 }
 
 (async () => {
