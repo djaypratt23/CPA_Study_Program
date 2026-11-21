@@ -9,6 +9,11 @@ const L = require('./lib.cjs');
 const sets = Number(process.argv[2] || 4);
 const mode = process.argv[3] || 'tutor';
 const OUTF = path.join(L.OUT, 'longsession.json');
+// HANDLES=1 reproduces longsession.cjs A, which used page.waitForSelector (each call returns an ElementHandle that
+// Playwright never disposes, so the matched element and its whole detached tree stay reachable from the DevTools
+// handle table). Default: locator.waitFor(), which returns no handle.
+const HANDLES = process.env.HANDLES === '1';
+const waitSel = (page, sel, opts) => (HANDLES ? page.waitForSelector(sel, opts) : page.locator(sel).first().waitFor(opts));
 
 async function snapshotDetached(cdp) {
   const chunks = [];
@@ -115,7 +120,7 @@ async function snapshotDetached(cdp) {
   };
   const toDash = async () => {
     await page.evaluate(() => (location.hash = '#/'));
-    await page.waitForSelector('h1');
+    await waitSel(page, 'h1');
     await L.sleep(800);
   };
   const series = [];
@@ -125,18 +130,18 @@ async function snapshotDetached(cdp) {
     if (mode === 'tutor') {
       await page.evaluate(() => (location.hash = '#/practice/start?mixed=FAR'));
       await page.waitForURL(/#\/quiz\//, { timeout: 60000 });
-      await page.waitForSelector('[role=radio]', { timeout: 60000 });
+      await waitSel(page, '[role=radio]', { timeout: 60000 });
       for (let i = 0; i < 20; i++) {
         const n = await page.evaluate(() => Number(((document.querySelector('main')?.innerText || '').match(/Question (\d+) of/) || [])[1] || 0));
         await page.locator('[role=radio]').nth(i % 4).click();
         await page.getByRole('button', { name: /^Unsure/ }).click();
-        await page.waitForSelector('text=Explanation');
+        await waitSel(page, 'text=Explanation');
         if (i < 19) {
           await page.getByRole('button', { name: /Next question/ }).click();
           await page.waitForFunction((n) => Number(((document.querySelector('main')?.innerText || '').match(/Question (\d+) of/) || [])[1] || 0) === n + 1, n, { timeout: 30000 });
         } else {
           await page.getByRole('button', { name: /See results/ }).click();
-          await page.waitForSelector('text=Set complete', { timeout: 30000 });
+          await waitSel(page, 'text=Set complete', { timeout: 30000 });
         }
       }
       series.push({ after: (s + 1) * 20, where: 'results page', ...(await metrics()) });
@@ -156,7 +161,7 @@ async function snapshotDetached(cdp) {
   const det = await snapshotDetached(cdp);
   console.log(JSON.stringify(det, null, 1));
   const out = fs.existsSync(OUTF) ? JSON.parse(fs.readFileSync(OUTF)) : {};
-  out['E_retainedDom_' + mode] = { note: 'no CPU throttling; metrics after two forced GCs; cdpNodes counts attached + detached DOM nodes', unit: mode === 'tutor' ? 'questions answered' : 'lessons opened', series, heapSnapshot: det };
+  out['E_retainedDom_' + mode + (HANDLES ? '_withPlaywrightHandles' : '_handleFree')] = { note: 'no CPU throttling; metrics after two forced GCs; cdpNodes counts attached + detached DOM nodes; waits: ' + (HANDLES ? 'page.waitForSelector (handles kept, as in A)' : 'locator.waitFor (no handles)'), unit: mode === 'tutor' ? 'questions answered' : 'lessons opened', series, heapSnapshot: det };
   fs.writeFileSync(OUTF, JSON.stringify(out, null, 2));
   await browser.close();
 })();

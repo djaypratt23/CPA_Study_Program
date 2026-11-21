@@ -271,7 +271,7 @@
       "scriptDur": 2.015495
     }
   },
-  "E_retainedDom_tutor": {
+  "E_retainedDom_tutor_withPlaywrightHandles": {
     "note": "no CPU throttling; metrics after two forced GCs; cdpNodes counts attached + detached DOM nodes",
     "unit": "questions answered",
     "series": [
@@ -424,6 +424,7 @@
           212
         ]
       ]
-    }
+    },
+    "retainerPath": "scripts/retainers.cjs on a 20-question snapshot: (GC roots) > (Global handles) > \"DevTools console\" handle > <div class=\"mb-1 \u2026 muted\"> (the element returned by page.waitForSelector(\"text=Explanation\")) > its detached .card > radiogroup > choices. Harness artifact, not an app leak."
   }
 }
