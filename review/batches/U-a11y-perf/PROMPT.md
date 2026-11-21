@@ -35,3 +35,15 @@ Every S1 and S2 finding must have evidence (a computation, a citation or a scree
 Write findings to `review/batches/U-a11y-perf/findings.jsonl` (local ids `U-a11y-perf-001`…; `category` accessibility or performance; `section` "ALL" unless specific; `item` the route or component; `file` the source file; `evidence` must name screenshot path(s), the axe rule id(s) and node selectors or the measured numbers; include expected/observed/steps). Every S1/S2 needs evidence and a concrete fix. Group repeated instances of one axe rule into one finding listing the routes. Also write `ledger.csv` containing only the header `id,type,reviewed,findings_count,note`, and `notes.md` with the axe summary table per route/theme/viewport, the keyboard pass narrative, performance measurements, and anything you couldn't test and why. Run `python3 review/tools/merge_batch.py U-a11y-perf --check` at the end and fix any PROBLEM it reports.
 
 Final reply (under 200 words): counts by severity, the top 5 issues in one line each.
+
+## Continuation note (orchestrator, after a container rebuild)
+A previous reviewer did most of this work before its session was lost. Already in this folder:
+- `findings.jsonl` with 24 findings
+- axe results in `axe/`
+- `aria/`, `keyboard.json`, `contrast_extra.json`, `zoom_motion.json`, `perf.json`, `longsession.json`
+- scripts in `scripts/`
+- screenshots `review/screens/ua-*`
+
+Don't redo that work. Read these files first, verify the existing findings are well-formed, then complete whatever is missing from the scope above. Missing could mean: routes or themes not covered by axe, a keyboard pass, screen-reader semantics, performance on Fast 3G or a long session. Write `ledger.csv` (header only) and a complete `notes.md`.
+
+The environment changed. Chromium is now under `/opt/pw-browsers/chromium-1243`, axe-core must be reinstalled in a scratch folder outside the repo, and `dist/` has been rebuilt at HEAD. Serve it with `npx vite preview --port 4174 --strictPort` in the background.
